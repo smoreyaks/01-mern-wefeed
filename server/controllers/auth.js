@@ -41,7 +41,7 @@ export const register = async (req, res) => {
 
         // Understand Save() Function  & Res Status
         const savedUser = await newUser.save();
-        res.status(201).json(savedUser);
+        res.status(201).json(savedUser); // Send user back '201' - Something has been created
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
