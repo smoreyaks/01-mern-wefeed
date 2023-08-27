@@ -1,8 +1,9 @@
 import express from "express";
-import bodyParser from "body-parse";
+import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import multer from "multer";
 import helmet from "helmet";
 
@@ -19,6 +20,13 @@ import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
+
+// Models
+import User from "./models/User.js";
+import Post from "./models/Post.js";
+
+// Data
+import { users, posts } from "./data/index.js";
 
 // Configuration
 const __filename = fileURLToPath(import.meta.url);
@@ -60,14 +68,19 @@ app.post("/posts", verifyToken, upload.single("picture"), createPost);
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("./posts", postRoutes);
+
 /* Mongoose Setup */
 const PORT = process.env.PORT || 6001;
 mongoose
-    .connect(process.PORT.MONGO_URI, {
+    .connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
     .then(() => {
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+        // Data Only Added Once
+        // User.insertMany(users);
+        // Post.insertMany(posts);
     })
     .catch((error) => console.log(`{error} did not connect`));
