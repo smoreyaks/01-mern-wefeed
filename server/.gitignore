@@ -1,0 +1,12 @@
+
+
+# dependancies
+/node_modules
+
+# sensitive
+./.env
+./.env.local
+./.env.development.local
+./.env.test.local
+./.env.production.local
+.env
