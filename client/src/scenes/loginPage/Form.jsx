@@ -9,7 +9,6 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -19,7 +18,6 @@ import { setLogin } from "../../state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
 
-// Yup Schema
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("Required"),
     lastName: yup.string().required("Required"),
@@ -40,14 +38,14 @@ const initialValuesRegister = {
     lastName: "",
     email: "",
     password: "",
-    locations: "",
+    location: "",
     occupation: "",
     picture: "",
 };
 
 const initialValuesLogin = {
     email: "",
-    paassword: "",
+    password: "",
 };
 
 const Form = () => {
@@ -66,6 +64,7 @@ const Form = () => {
             formData.append(value, values[value]);
         }
         formData.append("picturePath", values.picture.name);
+
         const savedUserResponse = await fetch(
             "http://localhost:3001/auth/register",
             {
@@ -73,8 +72,10 @@ const Form = () => {
                 body: formData,
             }
         );
+
         const savedUser = await savedUserResponse.json();
         onSubmitProps.resetForm();
+
         if (savedUser) {
             setPageType("login");
         }
@@ -106,6 +107,7 @@ const Form = () => {
         if (isLogin) await login(values, onSubmitProps);
         if (isRegister) await register(values, onSubmitProps);
     };
+
     return (
         <Formik
             onSubmit={handleFormSubmit}
@@ -304,8 +306,8 @@ const Form = () => {
                             }}
                         >
                             {isLogin
-                                ? "Don't Have An Account? Sign Up Here!"
-                                : "Already Have An Account? Sign in!"}
+                                ? "Don't have an account? Sign up here!"
+                                : "Already have an account? Log in here!"}
                         </Typography>
                     </Box>
                 </form>
