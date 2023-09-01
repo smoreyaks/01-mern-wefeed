@@ -4,7 +4,6 @@ import {
     LocationOnOutlined,
     WorkOutlineOutlined,
 } from "@mui/icons-material";
-
 import { Box, Typography, Divider, useTheme } from "@mui/material";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
@@ -74,8 +73,7 @@ const UserWidget = ({ userId, picturePath }) => {
                                 },
                             }}
                         >
-                            {firstName}
-                            {lastName}
+                            {firstName} {lastName}
                         </Typography>
                         <Typography color={medium}>
                             {friends.length} friends
@@ -108,7 +106,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <Box p="1rem 0">
                 <FlexBetween mb="0.5rem">
                     <Typography color={medium}>
-                        Who's viewed your Profile
+                        Who's viewed your profile
                     </Typography>
                     <Typography color={main} fontWeight="500">
                         {viewedProfile}
@@ -139,7 +137,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
                 <FlexBetween gap="1rem" mb="0.5rem">
                     <FlexBetween gap="1rem">
-                        <img src="..'assets/twitter.png" alt="twitter" />
+                        <img src="../assets/twitter.png" alt="twitter" />
                         <Box>
                             <Typography color={main} fontWeight="500">
                                 Twitter
@@ -154,7 +152,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
                 <FlexBetween gap="1rem">
                     <FlexBetween gap="1rem">
-                        <img src="..'assets/linkedin.png" alt="linkedin" />
+                        <img src="../assets/linkedin.png" alt="linkedin" />
                         <Box>
                             <Typography color={main} fontWeight="500">
                                 LinkedIn
