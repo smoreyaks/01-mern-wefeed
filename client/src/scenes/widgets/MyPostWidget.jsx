@@ -82,7 +82,14 @@ const MyPostWidget = ({ picturePath }) => {
                     }}
                 />
             </FlexBetween>
-            {isImage && <Box></Box>}
+            {isImage && (
+                <Box
+                    borderRadius="5px"
+                    border={`1px solid ${medium}`}
+                    mt="1px"
+                    p="1rem"
+                ></Box>
+            )}
         </WidgetWrapper>
     );
 };
