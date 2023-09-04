@@ -33,7 +33,7 @@ const MyPostWidget = ({ picturePath }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
-    const [image, setImage] = useState(false);
+    const [image, setImage] = useState(null);
     const [post, setPost] = useState("");
 
     // Theme
