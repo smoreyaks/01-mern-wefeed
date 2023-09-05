@@ -51,8 +51,8 @@ const Navbar = () => {
     const alt = theme.palette.background.alt;
 
     // Swap Hard Code for Dynamic String
-    // const fullName = `${user.firstName} ${user.lastName}`;
-    const fullName = "Test Name";
+    const fullName = `${user.firstName} ${user.lastName}`;
+    // const fullName = "Test Name";
 
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
