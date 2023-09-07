@@ -31,8 +31,8 @@ const PostWidget = ({
     const likeCount = Object.keys(likes).length;
 
     const { palette } = useTheme();
-    const main = palette.neutral.main;
-    const primary = palette.primary.main;
+    const main = palette.default.neutral.main;
+    const primary = palette.default.primary.main;
 
     const patchLike = async () => {
         const response = await fetch(

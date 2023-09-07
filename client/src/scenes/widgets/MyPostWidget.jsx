@@ -43,8 +43,8 @@ const MyPostWidget = ({ picturePath }) => {
     const { _id } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
-    const mediumMain = palette.neutral.mediumMain;
-    const medium = palette.neutral.medium;
+    const mediumMain = palette.default.neutral.mediumMain;
+    const medium = palette.default.neutral.medium;
 
     const handlePost = async () => {
         const formData = new FormData();
@@ -76,7 +76,7 @@ const MyPostWidget = ({ picturePath }) => {
                     value={post}
                     sx={{
                         width: "100%",
-                        backgroundColor: palette.neutral.light,
+                        backgroundColor: palette.default.neutral.light,
                         borderRadius: "2rem",
                         padding: "1rem 2rem",
                     }}
@@ -98,7 +98,7 @@ const MyPostWidget = ({ picturePath }) => {
                             <FlexBetween>
                                 <Box
                                     {...getRootProps()}
-                                    border={`2px dashed ${palette.primary.main}`}
+                                    border={`2px dashed ${palette.default.primary.main}`}
                                     p="1rem"
                                     sx={{
                                         "&:hover": {
@@ -175,8 +175,8 @@ const MyPostWidget = ({ picturePath }) => {
                     disabled={!post}
                     onClick={handlePost}
                     sx={{
-                        color: palette.background.alt,
-                        backgroundColor: palette.primary.main,
+                        color: palette.default.background.alt,
+                        backgroundColor: palette.default.primary.main,
                         borderRadius: "3rem",
                     }}
                 >

@@ -19,9 +19,9 @@ const UserWidget = ({ userId, picturePath }) => {
 
     // Theme Colors
     const { palette } = useTheme();
-    const dark = palette.neutral.dark;
-    const medium = palette.neutral.medium;
-    const main = palette.neutral.main;
+    const dark = palette.default.neutral.dark;
+    const medium = palette.default.neutral.medium;
+    const main = palette.default.neutral.main;
 
     const getUser = async () => {
         const response = await fetch(`http://localhost:3001/users/${userId}`, {
@@ -68,7 +68,7 @@ const UserWidget = ({ userId, picturePath }) => {
                             fontWeight="500"
                             sx={{
                                 "&:hover": {
-                                    color: palette.primary.light,
+                                    color: palette.default.primary.light,
                                     cursor: "pointer",
                                 },
                             }}

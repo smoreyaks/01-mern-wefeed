@@ -44,11 +44,11 @@ const Navbar = () => {
 
     // Theme
     const theme = useTheme();
-    const neutralLight = theme.palette.neutral.light;
-    const dark = theme.palette.neutral.dark;
-    const background = theme.palette.background.default;
-    const primaryLight = theme.palette.primary.light;
-    const alt = theme.palette.background.alt;
+    const neutralLight = theme.palette.default.neutral.light;
+    const dark = theme.palette.default.neutral.dark;
+    const background = theme.palette.default.background.default;
+    const primaryLight = theme.palette.default.primary.light;
+    const alt = theme.palette.default.background.alt;
 
     // Swap Hard Code for Dynamic String
     const fullName = `${user.firstName} ${user.lastName}`;
@@ -90,7 +90,7 @@ const Navbar = () => {
             {isNonMobileScreens ? (
                 <FlexBetween gap="2rem">
                     <IconButton onClick={() => dispatch(setMode())}>
-                        {theme.palette.mode === "dark" ? (
+                        {theme.palette.default.mode === "dark" ? (
                             <DarkMode sx={{ fontSize: "25px" }} />
                         ) : (
                             <LightMode sx={{ color: dark, fontSize: "25px" }} />
@@ -169,7 +169,7 @@ const Navbar = () => {
                             onClick={() => dispatch(setMode())}
                             sx={{ fontSize: "25px" }}
                         >
-                            {theme.palette.mode === "dark" ? (
+                            {theme.palette.default.mode === "dark" ? (
                                 <DarkMode sx={{ fontSize: "25px" }} />
                             ) : (
                                 <LightMode

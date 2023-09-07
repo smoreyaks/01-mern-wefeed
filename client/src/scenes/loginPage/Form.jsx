@@ -199,7 +199,7 @@ const Form = () => {
                                 />
                                 <Box
                                     gridColumn="span 4"
-                                    border={`1px solid ${palette.neutral.medium}`}
+                                    border={`1px solid ${palette.default.neutral.medium}`}
                                     borderRadius="5px"
                                     p="1rem"
                                 >
@@ -216,7 +216,7 @@ const Form = () => {
                                         {({ getRootProps, getInputProps }) => (
                                             <Box
                                                 {...getRootProps()}
-                                                border={`2px dashed ${palette.primary.main}`}
+                                                border={`2px dashed ${palette.default.primary.main}`}
                                                 p="1rem"
                                                 sx={{
                                                     "&:hover": {
@@ -282,10 +282,10 @@ const Form = () => {
                             sx={{
                                 m: "2rem 0",
                                 p: "1rem",
-                                backgroundColor: palette.primary.main,
-                                color: palette.background.alt,
+                                backgroundColor: palette.default.primary.main,
+                                color: palette.default.background.alt,
                                 "&:hover": {
-                                    color: palette.primary.main,
+                                    color: palette.default.primary.main,
                                 },
                             }}
                         >
@@ -298,10 +298,10 @@ const Form = () => {
                             }}
                             sx={{
                                 textDecoration: "underline",
-                                color: palette.primary.main,
+                                color: palette.default.primary.main,
                                 "&:hover": {
                                     cursor: "pointer",
-                                    color: palette.primary.light,
+                                    color: palette.default.primary.light,
                                 },
                             }}
                         >

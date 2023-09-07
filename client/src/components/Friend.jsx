@@ -14,10 +14,10 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const friends = useSelector((state) => state.user.friends);
 
     const { palette } = useTheme();
-    const primaryLight = palette.primary.light;
-    const primaryDark = palette.primary.dark;
-    const main = palette.neutral.main;
-    const medium = palette.neutral.medium;
+    const primaryLight = palette.default.primary.light;
+    const primaryDark = palette.default.primary.dark;
+    const main = palette.default.neutral.main;
+    const medium = palette.default.neutral.medium;
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
@@ -52,7 +52,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                         fontWeight="500"
                         sx={{
                             "&:hover": {
-                                color: palette.primary.light,
+                                color: palette.default.primary.light,
                                 cursor: "pointer",
                             },
                         }}
