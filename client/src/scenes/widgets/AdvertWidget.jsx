@@ -4,9 +4,9 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 
 const AdvertWidget = () => {
     const { palette } = useTheme();
-    const dark = palette.neutral.dark;
-    const main = palette.neutral.main;
-    const medium = palette.neutral.medium;
+    const dark = palette.default.neutral.dark;
+    const main = palette.default.neutral.main;
+    const medium = palette.default.neutral.medium;
 
     return (
         <WidgetWrapper>
