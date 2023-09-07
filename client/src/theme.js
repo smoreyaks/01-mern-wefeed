@@ -1,5 +1,6 @@
 // Color Design Tokens
 export const colorTokens = {
+    // Default Theme
     grey: {
         0: "#FFFFFF",
         10: "#F6F6F6",
@@ -15,6 +16,7 @@ export const colorTokens = {
         900: "#0A0A0A",
         1000: "#000000",
     },
+
     primary: {
         50: "#E6FBFF",
         100: "#CCF7FE",
@@ -27,6 +29,66 @@ export const colorTokens = {
         800: "#00353F",
         900: "#001519",
     },
+
+    // Dessert Theme
+    dessertColor: {
+        50: "#E6FBFF",
+        100: "#CCF7FE",
+        200: "#99EEFD",
+        300: "#66E6FC",
+        400: "#33DDFB",
+        500: "#00D5FA",
+        600: "#00A0BC",
+        700: "#006B7D",
+        800: "#00353F",
+        900: "#001519",
+    },
+
+    dessertMono: {
+        0: "#FFFFFF",
+        10: "#F6F6F6",
+        50: "#F0F0F0",
+        100: "#E0E0E0",
+        200: "#C2C2C2",
+        300: "#A3A3A3",
+        400: "#858585",
+        500: "#666666",
+        600: "#4D4D4D",
+        700: "#333333",
+        800: "#1A1A1A",
+        900: "#0A0A0A",
+        1000: "#000000",
+    },
+
+    // Dinner Theme
+    dinnerColor: {
+        50: "#E6FBFF",
+        100: "#CCF7FE",
+        200: "#99EEFD",
+        300: "#66E6FC",
+        400: "#33DDFB",
+        500: "#00D5FA",
+        600: "#00A0BC",
+        700: "#006B7D",
+        800: "#00353F",
+        900: "#001519",
+    },
+
+    dinnerMono: {
+        0: "#FFFFFF",
+        10: "#F6F6F6",
+        50: "#F0F0F0",
+        100: "#E0E0E0",
+        200: "#C2C2C2",
+        300: "#A3A3A3",
+        400: "#858585",
+        500: "#666666",
+        600: "#4D4D4D",
+        700: "#333333",
+        800: "#1A1A1A",
+        900: "#0A0A0A",
+        1000: "#000000",
+    },
 };
 
 // MUI Theme Settings
@@ -36,73 +98,122 @@ export const themeSettings = (mode) => {
             mode: mode,
             ...(mode === "dark"
                 ? {
-                      // Dark Mode Palette
-                      primary: {
-                          dark: colorTokens.primary[200],
-                          main: colorTokens.primary[500],
-                          light: colorTokens.primary[800],
+                      // Default Dark Mode Palette
+                      default: {
+                          primary: {
+                              dark: colorTokens.primary[200],
+                              main: colorTokens.primary[500],
+                              light: colorTokens.primary[800],
+                          },
+                          neutral: {
+                              dark: colorTokens.grey[100],
+                              main: colorTokens.grey[200],
+                              mediumMain: colorTokens.grey[300],
+                              medium: colorTokens.grey[400],
+                              light: colorTokens.grey[700],
+                          },
+                          background: {
+                              default: colorTokens.grey[900],
+                              alt: colorTokens.grey[800],
+                          },
                       },
-                      neutral: {
-                          dark: colorTokens.grey[100],
-                          main: colorTokens.grey[200],
-                          mediumMain: colorTokens.grey[300],
-                          medium: colorTokens.grey[400],
-                          light: colorTokens.grey[700],
-                      },
-                      background: {
-                          default: colorTokens.grey[900],
-                          alt: colorTokens.grey[800],
-                      },
-                      // Dessert Theme Palette - Change Colours to Suit Theme
+
+                      // Dessert Theme Dark Mode Palette - Change Colours to Suit Theme
                       dessert: {
-                          dark: colorTokens.grey[1000],
-                          main: colorTokens.grey[1000],
-                          mediumMain: colorTokens.grey[1000],
-                          medium: colorTokens.grey[1000],
-                          light: colorTokens.grey[1000],
+                          primary: {
+                              dark: colorTokens.dessertColor[200],
+                              main: colorTokens.dessertColor[500],
+                              light: colorTokens.dessertColor[800],
+                          },
+                          neutral: {
+                              dark: colorTokens.dessertMono[100],
+                              main: colorTokens.dessertMono[200],
+                              mediumMain: colorTokens.dessertMono[300],
+                              medium: colorTokens.dessertMono[400],
+                              light: colorTokens.dessertMono[700],
+                          },
+                          background: {
+                              default: colorTokens.dessertMono[900],
+                              alt: colorTokens.dessertMono[800],
+                          },
                       },
-                      // Dinner Theme Palette - Change Colours to Suit Theme
+                      // Dinner Theme Dark Mode Palette - Change Colours to Suit Theme
                       dinner: {
-                          dark: colorTokens.grey[1000],
-                          main: colorTokens.grey[1000],
-                          mediumMain: colorTokens.grey[1000],
-                          medium: colorTokens.grey[1000],
-                          light: colorTokens.grey[1000],
+                          primary: {
+                              dark: colorTokens.dinnerColor[200],
+                              main: colorTokens.dinnerColor[500],
+                              light: colorTokens.dinnerColor[800],
+                          },
+                          neutral: {
+                              dark: colorTokens.dinnerMono[100],
+                              main: colorTokens.dinnerMono[200],
+                              mediumMain: colorTokens.dinnerMono[300],
+                              medium: colorTokens.dinnerMono[400],
+                              light: colorTokens.dinnerMono[700],
+                          },
+                          background: {
+                              default: colorTokens.dinnerMono[900],
+                              alt: colorTokens.dinnerMono[800],
+                          },
                       },
                   }
                 : {
                       // Light Mode Palette
-                      primary: {
-                          dark: colorTokens.primary[700],
-                          main: colorTokens.primary[500],
-                          light: colorTokens.primary[50],
+                      default: {
+                          primary: {
+                              dark: colorTokens.primary[700],
+                              main: colorTokens.primary[500],
+                              light: colorTokens.primary[50],
+                          },
+                          neutral: {
+                              dark: colorTokens.grey[700],
+                              main: colorTokens.grey[500],
+                              mediumMain: colorTokens.grey[400],
+                              medium: colorTokens.grey[300],
+                              light: colorTokens.grey[50],
+                          },
+                          background: {
+                              default: colorTokens.grey[10],
+                              alt: colorTokens.grey[0],
+                          },
                       },
-                      neutral: {
-                          dark: colorTokens.grey[700],
-                          main: colorTokens.grey[500],
-                          mediumMain: colorTokens.grey[400],
-                          medium: colorTokens.grey[300],
-                          light: colorTokens.grey[50],
-                      },
-                      background: {
-                          default: colorTokens.grey[10],
-                          alt: colorTokens.grey[0],
-                      },
-                      // Dessert Theme Palette - Change Colours to Suit Theme
+                      // Dessert Theme Light Mode Palette - Change Colours to Suit Theme
                       dessert: {
-                          dark: colorTokens.grey[0],
-                          main: colorTokens.grey[0],
-                          mediumMain: colorTokens.grey[0],
-                          medium: colorTokens.grey[0],
-                          light: colorTokens.grey[0],
+                          primary: {
+                              dark: colorTokens.dessertColor[700],
+                              main: colorTokens.dessertColor[500],
+                              light: colorTokens.dessertColor[50],
+                          },
+                          neutral: {
+                              dark: colorTokens.dessertMono[700],
+                              main: colorTokens.dessertMono[500],
+                              mediumMain: colorTokens.dessertMono[400],
+                              medium: colorTokens.dessertMono[300],
+                              light: colorTokens.dessertMono[50],
+                          },
+                          background: {
+                              default: colorTokens.dessertMono[10],
+                              alt: colorTokens.dessertMono[0],
+                          },
                       },
-                      // Dinner Theme Palette - Change Colours to Suit Theme
+                      // Dinner Theme Light Mode Palette - Change Colours to Suit Theme
                       dinner: {
-                          dark: colorTokens.grey[0],
-                          main: colorTokens.grey[0],
-                          mediumMain: colorTokens.grey[0],
-                          medium: colorTokens.grey[0],
-                          light: colorTokens.grey[0],
+                          primary: {
+                              dark: colorTokens.dinnerColor[700],
+                              main: colorTokens.dinnerColor[500],
+                              light: colorTokens.dinnerColor[50],
+                          },
+                          neutral: {
+                              dark: colorTokens.dinnerMono[700],
+                              main: colorTokens.dinnerMono[500],
+                              mediumMain: colorTokens.dinnerMono[400],
+                              medium: colorTokens.dinnerMono[300],
+                              light: colorTokens.dinnerMono[50],
+                          },
+                          background: {
+                              default: colorTokens.dinnerMono[10],
+                              alt: colorTokens.dinnerMono[0],
+                          },
                       },
                   }),
         },
