@@ -53,6 +53,22 @@ export const themeSettings = (mode) => {
                           default: colorTokens.grey[900],
                           alt: colorTokens.grey[800],
                       },
+                      // Dessert Theme Palette - Change Colours to Suit Theme
+                      dessert: {
+                          dark: colorTokens.grey[1000],
+                          main: colorTokens.grey[1000],
+                          mediumMain: colorTokens.grey[1000],
+                          medium: colorTokens.grey[1000],
+                          light: colorTokens.grey[1000],
+                      },
+                      // Dinner Theme Palette - Change Colours to Suit Theme
+                      dinner: {
+                          dark: colorTokens.grey[1000],
+                          main: colorTokens.grey[1000],
+                          mediumMain: colorTokens.grey[1000],
+                          medium: colorTokens.grey[1000],
+                          light: colorTokens.grey[1000],
+                      },
                   }
                 : {
                       // Light Mode Palette
@@ -71,6 +87,22 @@ export const themeSettings = (mode) => {
                       background: {
                           default: colorTokens.grey[10],
                           alt: colorTokens.grey[0],
+                      },
+                      // Dessert Theme Palette - Change Colours to Suit Theme
+                      dessert: {
+                          dark: colorTokens.grey[0],
+                          main: colorTokens.grey[0],
+                          mediumMain: colorTokens.grey[0],
+                          medium: colorTokens.grey[0],
+                          light: colorTokens.grey[0],
+                      },
+                      // Dinner Theme Palette - Change Colours to Suit Theme
+                      dinner: {
+                          dark: colorTokens.grey[0],
+                          main: colorTokens.grey[0],
+                          mediumMain: colorTokens.grey[0],
+                          medium: colorTokens.grey[0],
+                          light: colorTokens.grey[0],
                       },
                   }),
         },
