@@ -26,19 +26,24 @@ import {
     Menu,
     Close,
 } from "@mui/icons-material";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 // Redux Hooks
 import { useDispatch, useSelector } from "react-redux";
 
 // State
 import { setMode, setLogout } from "../../state";
-import FlexBetween from "../../components/FlexBetween";
 
-const Navbar = () => {
+// Local Components
+import FlexBetween from "../../components/FlexBetween";
+import UserImage from "../../components/UserImage";
+
+const Navbar = ({ picturePath }) => {
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     // State
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
+    // const picturePath = useSelector((state) => state.user);
     const navigate = useNavigate();
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
@@ -52,7 +57,7 @@ const Navbar = () => {
 
     // Swap Hard Code for Dynamic String
     const fullName = `${user.firstName} ${user.lastName}`;
-    // const fullName = "Test Name";
+    const firstName = user.firstName;
 
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -89,6 +94,7 @@ const Navbar = () => {
             {/* Desktop Navbar */}
             {isNonMobileScreens ? (
                 <FlexBetween gap="2rem">
+                    {/* Dark & Light Mode Button */}
                     <IconButton onClick={() => dispatch(setMode())}>
                         {theme.palette.default.mode === "dark" ? (
                             <DarkMode sx={{ fontSize: "25px" }} />
@@ -96,35 +102,33 @@ const Navbar = () => {
                             <LightMode sx={{ color: dark, fontSize: "25px" }} />
                         )}
                     </IconButton>
+
+                    {/* Message Icon */}
                     <Message sx={{ fontSize: "25px" }} />
+
+                    {/* Notification Icon */}
                     <Notifications sx={{ fontSize: "25px" }} />
+
+                    {/* Help Icon */}
                     <Help sx={{ fontSize: "25px" }} />
-                    <FormControl variant="standard" value={fullName}>
-                        <Select
-                            value={fullName}
+                    <IconButton>
+                        <UserImage
+                            // height="25px"
+                            size="30px"
+                            image={picturePath}
+                        />
+                    </IconButton>
+                    {/* LogOut Icon */}
+                    <IconButton
+                        // cursor="pointer"
+                        onClick={() => dispatch(setLogout())}
+                    >
+                        <LogoutIcon
                             sx={{
-                                backgroundColor: neutralLight,
-                                width: "150px",
-                                borderRadius: "0.25rem",
-                                p: "0.25rem 1rem",
-                                "& .MuiSvgIcon-root": {
-                                    pr: "0.25rem",
-                                    width: "3rem",
-                                },
-                                "& .MuiSelect-select:focus": {
-                                    backgroundColor: neutralLight,
-                                },
+                                fontSize: "25px",
                             }}
-                            input={<InputBase />}
-                        >
-                            <MenuItem value={fullName}>
-                                <Typography>{fullName}</Typography>
-                            </MenuItem>
-                            <MenuItem onClick={() => dispatch(setLogout())}>
-                                Log Out
-                            </MenuItem>
-                        </Select>
-                    </FormControl>
+                        />
+                    </IconButton>
                 </FlexBetween>
             ) : (
                 <IconButton
@@ -134,7 +138,7 @@ const Navbar = () => {
                 </IconButton>
             )}
 
-            {/* MOBILE NAV */}
+            {/* Mobile Nav */}
             {!isNonMobileScreens && isMobileMenuToggled && (
                 <Box
                     position="fixed"
@@ -146,7 +150,7 @@ const Navbar = () => {
                     minWidth="300px"
                     backgroundColor={background}
                 >
-                    {/* CLOSE ICON */}
+                    {/* Close Icon */}
                     <Box display="flex" justifyContent="flex-end" p="1rem">
                         <IconButton
                             onClick={() =>
@@ -157,7 +161,7 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
 
-                    {/* MENU ITEMS */}
+                    {/* Menu Items */}
                     <FlexBetween
                         display="flex"
                         flexDirection="column"
@@ -165,47 +169,42 @@ const Navbar = () => {
                         alignItems="center"
                         gap="3rem"
                     >
+                        {/* Dark & Light Mode */}
                         <IconButton
                             onClick={() => dispatch(setMode())}
                             sx={{ fontSize: "25px" }}
                         >
                             {theme.palette.default.mode === "dark" ? (
-                                <DarkMode sx={{ fontSize: "25px" }} />
+                                <DarkMode sx={{ fontSize: "25px" }}>
+                                    Dark Mode
+                                </DarkMode>
                             ) : (
                                 <LightMode
                                     sx={{ color: dark, fontSize: "25px" }}
                                 />
                             )}
                         </IconButton>
+
+                        {/* Messages Icon */}
                         <Message sx={{ fontSize: "25px" }} />
+
+                        {/* Notifications Icon */}
                         <Notifications sx={{ fontSize: "25px" }} />
+
+                        {/* Help Icon */}
                         <Help sx={{ fontSize: "25px" }} />
-                        <FormControl variant="standard" value={fullName}>
-                            <Select
-                                value={fullName}
+
+                        {/* LogOut Icon */}
+                        <IconButton
+                            cursor="pointer"
+                            onClick={() => dispatch(setLogout())}
+                        >
+                            <LogoutIcon
                                 sx={{
-                                    backgroundColor: neutralLight,
-                                    width: "150px",
-                                    borderRadius: "0.25rem",
-                                    p: "0.25rem 1rem",
-                                    "& .MuiSvgIcon-root": {
-                                        pr: "0.25rem",
-                                        width: "3rem",
-                                    },
-                                    "& .MuiSelect-select:focus": {
-                                        backgroundColor: neutralLight,
-                                    },
+                                    fontSize: "25px",
                                 }}
-                                input={<InputBase />}
-                            >
-                                <MenuItem value={fullName}>
-                                    <Typography>{fullName}</Typography>
-                                </MenuItem>
-                                <MenuItem onClick={() => dispatch(setLogout())}>
-                                    Log Out
-                                </MenuItem>
-                            </Select>
-                        </FormControl>
+                            />
+                        </IconButton>
                     </FlexBetween>
                 </Box>
             )}
