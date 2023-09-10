@@ -48,7 +48,7 @@ import {
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 
-const Navbar = ({ userId, picturePath }) => {
+const Navbar = ({ userId }) => {
     // Mobile Menu Toggle
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
 
@@ -225,7 +225,7 @@ const Navbar = ({ userId, picturePath }) => {
                             <UserImage
                                 // height="25px"
                                 size="30px"
-                                image={picturePath}
+                                image={user.picturePath}
                             />
                         </IconButton>
 
