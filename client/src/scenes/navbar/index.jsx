@@ -48,7 +48,7 @@ import {
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 
-const Navbar = ({ picturePath }) => {
+const Navbar = ({ userId, picturePath }) => {
     // Mobile Menu Toggle
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
 
@@ -219,18 +219,18 @@ const Navbar = ({ picturePath }) => {
                         </IconButton>
 
                         {/* User Profile */}
-                        <IconButton>
+                        <IconButton
+                            onClick={() => navigate(`/profile/${userId}`)}
+                        >
                             <UserImage
                                 // height="25px"
                                 size="30px"
                                 image={picturePath}
                             />
                         </IconButton>
-                        {/* LogOut Icon */}
-                        <IconButton
-                            // cursor="pointer"
-                            onClick={() => dispatch(setLogout())}
-                        >
+
+                        {/* Log Out Icon */}
+                        <IconButton onClick={() => dispatch(setLogout())}>
                             <LogoutIcon
                                 sx={{
                                     fontSize: "25px",
