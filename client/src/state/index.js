@@ -5,6 +5,7 @@ const initialState = {
     user: null,
     token: null,
     posts: [],
+    theme: "default",
 };
 
 export const authSlice = createSlice({
@@ -14,6 +15,18 @@ export const authSlice = createSlice({
         setMode: (state) => {
             state.mode = state.mode === "light" ? "dark" : "light";
         },
+        // Themes
+        setThemeDefault: (state, action) => {
+            state.theme = action.payload.theme;
+        },
+        setThemeDessert: (state, action) => {
+            state.theme = action.payload.theme;
+        },
+        setThemeDinner: (state, action) => {
+            state.theme = action.payload.theme;
+        },
+
+        // Login/Logout
         setLogin: (state, action) => {
             state.user = action.payload.user;
             state.token = action.payload.token;
@@ -22,6 +35,7 @@ export const authSlice = createSlice({
             state.user = null;
             state.token = null;
         },
+        // Get User Friends
         setFriends: (state, action) => {
             if (state.user) {
                 state.user.friends = action.payload.friends;
@@ -29,6 +43,7 @@ export const authSlice = createSlice({
                 console.error("user friends non-existent :(");
             }
         },
+        // Get User Posts
         setPosts: (state, action) => {
             state.posts = action.payload.posts;
         },
@@ -43,6 +58,15 @@ export const authSlice = createSlice({
     },
 });
 
-export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
-    authSlice.actions;
+export const {
+    setMode,
+    setThemeDefault,
+    setThemeDessert,
+    setThemeDinner,
+    setLogin,
+    setLogout,
+    setFriends,
+    setPosts,
+    setPost,
+} = authSlice.actions;
 export default authSlice.reducer;
