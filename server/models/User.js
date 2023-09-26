@@ -37,6 +37,11 @@ const UserSchema = new mongoose.Schema(
         occupation: String,
         viewedProfile: Number,
         impressions: Number,
+        recipesPosted: Number,
+        recipeList: {
+            type: Array,
+            default: [],
+        },
     },
     { timestamps: true }
 );
