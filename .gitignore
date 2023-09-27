@@ -1,21 +1,34 @@
 
 # Client Side
 # dependencies
+/client/node_modules
 client/node_modules
 
 # sensitive
 # dependencies
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
 client/node_modules
 client/.pnp
 client/.pnp.js
 
 # testing
+/client/coverage
 client/coverage
 
 # production
+/client/build
 client/build
 
 # misc
+/client/.DS_Store
+/client/.env.local
+/client/.env
+/client/./.env
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
 client/.DS_Store
 client/.env.local
 client/.env
@@ -24,6 +37,9 @@ client/.env.development.local
 client/.env.test.local
 client/.env.production.local
 
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
 client/npm-debug.log*
 client/yarn-debug.log*
 client/yarn-error.log*
@@ -31,9 +47,15 @@ client/yarn-error.log*
 
 # Server Side
 # dependencies
+/server/node_modules
 server/node_modules
 
 # sensitive
+/server/.env
+/server/.env.local
+/server/.env.development.local
+/server/.env.test.local
+/server/.env.production.local
 server/.env
 server/.env.local
 server/.env.development.local
