@@ -18,6 +18,12 @@ import { setLogin } from "../../state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
 
+// ENV
+import dotenv from "dotenv";
+require("dotenv").config();
+
+const PORT = process.env.PORT || 6001;
+
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("Required"),
     lastName: yup.string().required("Required"),
@@ -66,7 +72,7 @@ const Form = () => {
         formData.append("picturePath", values.picture.name);
 
         const savedUserResponse = await fetch(
-            "http://localhost:3005/auth/register",
+            `http://localhost:${PORT}/auth/register`,
             {
                 method: "POST",
                 body: formData,
@@ -83,7 +89,7 @@ const Form = () => {
 
     const login = async (values, onSubmitProps) => {
         const loggedInResponse = await fetch(
-            "http://localhost:3005/auth/login",
+            `http://localhost:${PORT}/auth/login`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
