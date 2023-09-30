@@ -6,10 +6,6 @@ import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
-// ENV
-import dotenv from "dotenv";
-require("dotenv").config();
-
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -25,11 +21,9 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
-    const PORT = process.env.PORT || 6001;
-
     const patchFriend = async () => {
         const response = await fetch(
-            `http://localhost:${PORT}/users/${_id}/${friendId}`,
+            `http://localhost:3005/users/${_id}/${friendId}`,
             {
                 method: "PATCH",
                 headers: {
