@@ -6,6 +6,8 @@ import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
+// ENV
+import dotenv from "dotenv";
 require("dotenv").config();
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
