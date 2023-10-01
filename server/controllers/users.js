@@ -45,7 +45,7 @@ export const getUserFriends = async (req, res) => {
 };
 
 // Get User Recipes API Call
-export const getUserRecipes = async (req, res) => {
+export const getTopUserRecipes = async (req, res) => {
     try {
         // Insert GET Recipe Method
     } catch (err) {
