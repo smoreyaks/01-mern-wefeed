@@ -8,7 +8,8 @@ import MyPostWidget from "../widgets/MyPostWidget";
 import PostsWidget from "../widgets/PostsWidget";
 import UserWidget from "../widgets/UserWidget";
 
-import MyRecipesWidget from "../widgets/MyRecipesWidget";
+import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
+
 const ProfilePage = () => {
     const [user, setUser] = useState(null);
     const { userId } = useParams();
@@ -59,7 +60,7 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "26%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    {/* <TopRecipes></TopRecipes> */}
+                    <TopUserRecipesWidget />
                 </Box>
             </Box>
         </Box>
