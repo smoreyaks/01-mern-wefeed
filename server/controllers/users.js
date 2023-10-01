@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-/* Read */
+/* --- Read --- */
 export const getUser = async (req, res) => {
     try {
         const { id } = req.params;
@@ -10,7 +10,7 @@ export const getUser = async (req, res) => {
         res.status(404).json({ message: err.message });
     }
 };
-// Get User Friends API CAll
+// Get User Friends API Call
 export const getUserFriends = async (req, res) => {
     try {
         const { id } = req.params;
@@ -44,7 +44,16 @@ export const getUserFriends = async (req, res) => {
     }
 };
 
-/* Update */
+// Get User Recipes API Call
+export const getUserRecipes = async (req, res) => {
+    try {
+        // Insert GET Recipe Method
+    } catch (err) {
+        res.status(404).json({ message: err.message });
+    }
+};
+
+/* --- Update --- */
 export const addRemoveFriend = async (req, res) => {
     try {
         const { id, friendId } = req.params;
