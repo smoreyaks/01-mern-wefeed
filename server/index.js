@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+
 // Route Imports
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
@@ -21,8 +22,10 @@ import { verifyToken } from "./middleware/auth.js";
 // Models
 import User from "./models/User.js";
 import Post from "./models/Post.js";
+
 // Data
 import { users, posts } from "./data/index.js";
+
 // Configuration
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
