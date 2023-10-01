@@ -1,3 +1,47 @@
+/* --- Colours to Add ---
+
+    - Cupcake Theme -
+    #FBE3F1     // Pale Purple      (Lightest Pink)
+    #FBD4E9     // Mimi Pink        (Light Pink)
+    #FDBADD     // Lavender Pink    (Medium Pink)
+    #C0E9E5     // Mint Green       (Light Teal)
+    #9FDDD8     // Tiffany Blue     (Medium Teal)
+
+    - Burger Theme -
+    #E4572E     // Flame            (Red/Orange)
+    #DCC38A     // Ecru             (Beige)
+    #FFC914     // Jonquil          (Yellow)
+    #56463C     // Umber            (Brown)
+    #76B041     // Kelly Green      (Green)
+    
+    - Banana & Blueberry French Toast Theme
+    #121824     // Rich Black       (Black)
+    #455D7A     // Payne's Gray     (Dark Blue)
+    #5D7795     // Slate Gray       (Light Blue)
+    #B39A6F     // Lion             (Light Brown)
+    #DFC970     // Citron           (Yellow)
+    #EBDDB8     // Dutch White      (Beige)
+
+    - Watermelon Theme - 
+    #FFACAC     // Melon            (Medium Pink)
+    #FFD6D6     // Tea Rose         (Light Pink)
+    #A2E7B0     // Celadon          (Medium Green)
+    #C9FCBB     // Tea Green        (Light Green)
+    #D8FFA6     // Mindaro          (Light Yellow/Green)
+
+    - Salmon Entree -
+    #E9D0BA     // Desert Sand      (Beige)
+    #F5B389     // Peach            (Light Orange)
+    #E9BBAE     // Melon            (Medium Ornage/Pink)
+    #F4D09C     // Sunset           (Medium Yellow)
+    #C7D0A0     // Sage             (Medium Green)
+
+
+
+
+
+*/
+
 // Color Design Tokens
 export const colorTokens = {
     // Default Theme
