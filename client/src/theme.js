@@ -61,6 +61,12 @@ export const colorTokens = {
         1000: "#000000",
     },
 
+    trophy: {
+        gold: "#FFD700",
+        silver: "#C0C0C0",
+        bronze: "#CD7F32",
+    },
+
     primary: {
         50: "#E6FBFF",
         100: "#CCF7FE",
@@ -160,6 +166,11 @@ export const themeSettings = (mode) => {
                               default: colorTokens.grey[900],
                               alt: colorTokens.grey[800],
                           },
+                      },
+                      trophy: {
+                          gold: colorTokens.trophy["gold"],
+                          silver: colorTokens.trophy["silver"],
+                          bronze: colorTokens.trophy["bronze"],
                       },
 
                       // Dessert Theme Dark Mode Palette - Change Colours to Suit Theme
