@@ -9,30 +9,52 @@ import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
 // MUI
-import { Box, Typography, Divider, useTheme } from "@mui/material";
+import { Box, Typography, Divider, Icon, useTheme } from "@mui/material";
+
+// MUI Icons
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 const TopUserRecipesWidget = () => {
+    // ID
     const { userId } = useParams();
+
+    // State
+    const [userRecipes, setUserRecipes] = useState(null);
+
+    // Token
+    const token = useSelector((state) => state.token);
 
     // Theme Colors
     const { palette } = useTheme();
     const dark = palette.default.neutral.dark;
     const medium = palette.default.neutral.medium;
+    const light = palette.default.primary.light;
+
+    const gold = palette.trophy.gold;
+    const silver = palette.trophy.silver;
+    const bronze = palette.trophy.bronze;
     const main = palette.default.neutral.main;
 
-    // getRecipes API Call
-    const getTopUserRecipes = async () => {
+    // getUserRecipes API Call
+    const getUserRecipes = async () => {
         const response = await fetch(
-            `http://localhost:3005/users/${userId}/recipes`
+            `http://localhost:3005/users/${userId}/recipes`,
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
         );
+        const data = await response.json();
+        setUserRecipes(data);
     };
 
     useEffect(() => {
-        getTopUserRecipes();
+        getUserRecipes();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <WidgetWrapper>
+            {/* Top Recipe Stat Title */}
             <FlexBetween gap="0.5rem" pb="1.1rem">
                 <FlexBetween gap="1rem">
                     <Box>
@@ -50,7 +72,7 @@ const TopUserRecipesWidget = () => {
                             Most Popular
                         </Typography>
                         <Typography color={medium}>
-                            Total Likes
+                            Total Recipe Likes
                             {/* {totalRecipesLikes} */}
                         </Typography>
                     </Box>
@@ -59,17 +81,34 @@ const TopUserRecipesWidget = () => {
 
             <Divider />
 
+            {/* Top Recipe Stats */}
             <Box p="1rem 0">
-                <FlexBetween>
-                    <Typography color={medium}>1. First Recipe</Typography>
+                {/* First Place */}
+                <FlexBetween pb="0.5rem">
+                    <FlexBetween gap="0.5rem">
+                        <Icon>
+                            <EmojiEventsIcon sx={{ color: gold }} />
+                        </Icon>
+                        <Typography color={medium}>First Recipe</Typography>
+                    </FlexBetween>
                     <Typography>1ST</Typography>
                 </FlexBetween>
-                <FlexBetween>
-                    <Typography color={medium}>2. Second Recipe 2ND</Typography>
+
+                {/* Second Place */}
+                <FlexBetween pb="0.5rem">
+                    <FlexBetween gap="0.5rem">
+                        <EmojiEventsIcon sx={{ color: silver }} />
+                        <Typography color={medium}>Second Recipe</Typography>
+                    </FlexBetween>
                     <Typography>2ND</Typography>
                 </FlexBetween>
-                <FlexBetween>
-                    <Typography color={medium}>3. Third Recipe 3RD</Typography>
+
+                {/* Third Place */}
+                <FlexBetween pb="0.5rem">
+                    <FlexBetween gap="0.5rem">
+                        <EmojiEventsIcon sx={{ color: bronze }} />
+                        <Typography color={medium}>Third Recipe </Typography>
+                    </FlexBetween>
                     <Typography>3RD</Typography>
                 </FlexBetween>
             </Box>
