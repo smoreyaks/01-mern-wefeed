@@ -39,8 +39,8 @@ export const register = async (req, res) => {
             occupation,
             viewedProfile: Math.floor(Math.random() * 10000),
             impressions: Math.floor(Math.random() * 10000),
-            recipesPosted: Math.floor(Math.random() * 100),
-            recipeLikes: Math.floor(Math.random() * 100),
+            recipesPosted: Math.floor(Math.random() * 20),
+            recipeLikes: Math.floor(Math.random() * 200),
         });
 
         // Understand Save() Function  & Res Status
