@@ -20,6 +20,7 @@ const TopUserRecipesWidget = () => {
 
     // State
     const [userRecipes, setUserRecipes] = useState(null);
+    const [user, setUser] = useState(null);
 
     // Token
     const token = useSelector((state) => state.token);
@@ -35,23 +36,44 @@ const TopUserRecipesWidget = () => {
     const bronze = palette.trophy.bronze;
     const main = palette.default.neutral.main;
 
-    // getUserRecipes API Call
-    const getUserRecipes = async () => {
-        const response = await fetch(
-            `http://localhost:3005/users/${userId}/recipes`,
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
+    // // Need to Create getUserRecipe Model, API Controller
+    // // getUserRecipes API Call
+    // const getUserRecipes = async () => {
+    //     const response = await fetch(
+    //         `http://localhost:3005/users/${userId}/recipes`,
+    //         {
+    //             method: "GET",
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         }
+    //     );
+    //     const data = await response.json();
+    //     setUserRecipes(data);
+    // };
+
+    // useEffect(() => {
+    //     getUserRecipes();
+    // }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const getUser = async () => {
+        const response = await fetch(`http://localhost:3005/users/${userId}`, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+        });
         const data = await response.json();
-        setUserRecipes(data);
+        setUser(data);
+        console.log("UserWidget.js - DATA - ", data);
     };
 
     useEffect(() => {
-        getUserRecipes();
+        getUser();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+    // Typically have loading component while user waits
+    if (!user) {
+        return null;
+    }
+
+    const { recipeLikes, recipesPosted } = user;
     return (
         <WidgetWrapper>
             {/* Top Recipe Stat Title */}
@@ -71,10 +93,12 @@ const TopUserRecipesWidget = () => {
                         >
                             Most Popular
                         </Typography>
-                        <Typography color={medium}>
-                            Total Recipe Likes
-                            {/* {totalRecipeLikes} */}
-                        </Typography>
+                        <FlexBetween gap="0.5rem">
+                            <Typography color={medium}>
+                                Total Recipe Likes
+                            </Typography>
+                            <Typography color={main}>{recipeLikes}</Typography>
+                        </FlexBetween>
                     </Box>
                 </FlexBetween>
             </FlexBetween>
