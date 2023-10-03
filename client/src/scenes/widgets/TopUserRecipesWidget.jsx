@@ -36,24 +36,7 @@ const TopUserRecipesWidget = () => {
     const bronze = palette.trophy.bronze;
     const main = palette.default.neutral.main;
 
-    // // Need to Create getUserRecipe Model, API Controller
-    // // getUserRecipes API Call
-    // const getUserRecipes = async () => {
-    //     const response = await fetch(
-    //         `http://localhost:3005/users/${userId}/recipes`,
-    //         {
-    //             method: "GET",
-    //             headers: { Authorization: `Bearer ${token}` },
-    //         }
-    //     );
-    //     const data = await response.json();
-    //     setUserRecipes(data);
-    // };
-
-    // useEffect(() => {
-    //     getUserRecipes();
-    // }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+    // API Calls
     const getUser = async () => {
         const response = await fetch(`http://localhost:3005/users/${userId}`, {
             method: "GET",
@@ -64,8 +47,22 @@ const TopUserRecipesWidget = () => {
         console.log("UserWidget.js - DATA - ", data);
     };
 
+    // getUserRecipes API Call
+    const getUserRecipes = async () => {
+        const response = await fetch(
+            `http://localhost:3005/users/${userId}/recipes`,
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
+        const data = await response.json();
+        setUserRecipes(data);
+    };
+
     useEffect(() => {
         getUser();
+        getUserRecipes();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // Typically have loading component while user waits
