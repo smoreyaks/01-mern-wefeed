@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import Recipe from "../models/Recipe.js";
 
 // --- Read ---
 export const getUser = async (req, res) => {
@@ -16,7 +17,6 @@ export const getUserFriends = async (req, res) => {
     try {
         const { id } = req.params;
         const user = await User.findById(id);
-
         const friends = await Promise.all(
             user.friends.map((id) => User.findById(id))
         );
@@ -28,6 +28,8 @@ export const getUserFriends = async (req, res) => {
                 occupation,
                 location,
                 picturePath,
+                recipesPosted,
+                recipeLikes,
             }) => {
                 return {
                     _id,
@@ -36,6 +38,8 @@ export const getUserFriends = async (req, res) => {
                     occupation,
                     location,
                     picturePath,
+                    recipesPosted,
+                    recipeLikes,
                 };
             }
         );
@@ -45,10 +49,16 @@ export const getUserFriends = async (req, res) => {
     }
 };
 
-// Get User Recipes API Call
+// Get User Recipes API Response
 export const getUserRecipes = async (req, res) => {
     try {
-        // Insert GET Recipe Method
+        const { userId } = req.params;
+
+        // Grab the list of all user recipes
+        const recipes = await Recipe.find({ userId });
+
+        // Return Successful Request
+        res.status(200).json(recipes);
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
@@ -82,6 +92,8 @@ export const addRemoveFriend = async (req, res) => {
                 occupation,
                 location,
                 picturePath,
+                recipesPosted,
+                recipesLikes,
             }) => {
                 return {
                     _id,
@@ -90,6 +102,8 @@ export const addRemoveFriend = async (req, res) => {
                     occupation,
                     location,
                     picturePath,
+                    recipesPosted,
+                    recipesLikes,
                 };
             }
         );
