@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+// import Recipe from "./Recipe";
 
 const UserSchema = new mongoose.Schema(
     {
@@ -37,14 +38,13 @@ const UserSchema = new mongoose.Schema(
         occupation: String,
         viewedProfile: Number,
         impressions: Number,
+        // TEMP
         recipesPosted: Number,
+        recipeLikes: Number,
         recipeList: {
             type: Array,
             default: [],
-        },
-        // TEMP
-        recipeLikes: {
-            type: number,
+            // Recipe,
         },
     },
     { timestamps: true }
