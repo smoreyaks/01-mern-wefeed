@@ -73,7 +73,7 @@ const TopUserRecipesWidget = () => {
                         </Typography>
                         <Typography color={medium}>
                             Total Recipe Likes
-                            {/* {totalRecipesLikes} */}
+                            {/* {totalRecipeLikes} */}
                         </Typography>
                     </Box>
                 </FlexBetween>
