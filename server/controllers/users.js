@@ -29,7 +29,7 @@ export const getUserFriends = async (req, res) => {
                 location,
                 picturePath,
                 recipesPosted,
-                recipeLikes,
+                totalRecipeLikes,
             }) => {
                 return {
                     _id,
@@ -39,7 +39,7 @@ export const getUserFriends = async (req, res) => {
                     location,
                     picturePath,
                     recipesPosted,
-                    recipeLikes,
+                    totalRecipeLikes,
                 };
             }
         );
