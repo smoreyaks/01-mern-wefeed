@@ -70,7 +70,7 @@ const TopUserRecipesWidget = () => {
         return null;
     }
 
-    const { recipeLikes, recipesPosted } = user;
+    const { totalRecipeLikes, recipesPosted } = user;
     return (
         <WidgetWrapper>
             {/* Top Recipe Stat Title */}
@@ -94,7 +94,9 @@ const TopUserRecipesWidget = () => {
                             <Typography color={medium}>
                                 Total Recipe Likes
                             </Typography>
-                            <Typography color={main}>{recipeLikes}</Typography>
+                            <Typography color={main}>
+                                {totalRecipeLikes}
+                            </Typography>
                         </FlexBetween>
                     </Box>
                 </FlexBetween>
