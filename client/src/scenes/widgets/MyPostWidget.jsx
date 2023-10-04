@@ -1,3 +1,7 @@
+// React Packages
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 // MUI Components
 import {
     Box,
@@ -21,12 +25,15 @@ import {
     MoreHorizOutlined,
 } from "@mui/icons-material";
 
+// Custom Components
 import FlexBetween from "../../components/FlexBetween";
-import Dropzone from "react-dropzone";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+
+// Image Upload
+import Dropzone from "react-dropzone";
+
+// State
 import { setPosts } from "../../state";
 
 const MyPostWidget = ({ picturePath }) => {
