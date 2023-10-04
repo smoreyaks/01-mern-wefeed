@@ -3,10 +3,16 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "../navbar";
-import FriendListWidget from "../widgets/FriendListWidget";
-import MyPostWidget from "../widgets/MyPostWidget";
-import PostsWidget from "../widgets/PostsWidget";
 import UserWidget from "../widgets/UserWidget";
+import FriendListWidget from "../widgets/FriendListWidget";
+
+// Posts
+import CreatePostWidget from "../widgets/CreatePostWidget";
+import PostsFeedWidget from "../widgets/PostsFeedWidget";
+
+// Recipes
+import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
+import RecipePostWidget from "../widgets/RecipePostWidget";
 
 import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
 
@@ -52,9 +58,11 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    <MyPostWidget picturePath={user.picturePath} />
+                    {/* <CreatePostWidget picturePath={user.picturePath} /> */}
+                    <CreateRecipeWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
-                    <PostsWidget userId={userId} isProfile />
+                    <PostsFeedWidget userId={userId} isProfile />
+                    {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
                 <Box
                     flexBasis={isNonMobileScreens ? "26%" : undefined}
