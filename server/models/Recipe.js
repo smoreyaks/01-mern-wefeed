@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const RecipeSchema = mongoose.Schema({
+    recipeId: {
+        type: String,
+        required: true,
+    },
     userId: {
         type: String,
         required: true,
@@ -14,17 +18,37 @@ const RecipeSchema = mongoose.Schema({
         default: [],
         min: 1,
     },
+    // ingredientNum: Number,
+    recipeImage: {
+        type: String,
+        default: "",
+    },
     equipment: String,
     prepTime: String,
     cookTime: String,
-    servings: Number,
+    servings: {
+        type: Number,
+        required: true,
+    },
     cookMethod: {
         type: Array,
         default: [],
+        required: true,
     },
     spiceLevel: String,
-    steps: Number,
+    steps: {
+        type: Array,
+        default: [],
+        stepNum: Number,
+        stepMethod: String,
+        required: true,
+    },
     notes: String,
+    tags: {
+        type: Array,
+        default: [],
+    },
+
     recommendations: Number,
 });
 
