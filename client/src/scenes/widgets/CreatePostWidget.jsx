@@ -36,7 +36,7 @@ import Dropzone from "react-dropzone";
 // State
 import { setPosts } from "../../state";
 
-const MyPostWidget = ({ picturePath }) => {
+const CreatePostWidget = ({ picturePath }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
@@ -194,4 +194,4 @@ const MyPostWidget = ({ picturePath }) => {
     );
 };
 
-export default MyPostWidget;
+export default CreatePostWidget;
