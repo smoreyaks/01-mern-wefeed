@@ -9,6 +9,7 @@ const userIds = [
     new mongoose.Types.ObjectId(),
     new mongoose.Types.ObjectId(),
     new mongoose.Types.ObjectId(),
+    "651c2c05e043388a8c6ac57c",
 ];
 
 export const users = [
@@ -139,6 +140,34 @@ export const users = [
         createdAt: 1369908044,
         updatedAt: 1359322268,
         __v: 0,
+    },
+    {
+        _id: userIds[8],
+        firstName: "FakeFirst",
+        lastName: "FakeLast",
+        email: "fakeuser@email.com",
+        password:
+            "$2b$10$U4zv/wq06/mQrzk7aR2xr.Zyrfqra3mVVxWK8MJMYSDJ3/TTe87BO",
+        picturePath: "link-sunglasses.gif",
+        friends: [
+            "64eb62978d6fe23d068982bc",
+            "64eb62978d6fe23d068982bd",
+            "64eb62978d6fe23d068982b8",
+        ],
+        location: "Fake Town",
+        occupation: "Fake Job",
+        viewedProfile: 3156,
+        impressions: 8705,
+        recipesPosted: 135,
+        totalRecipeLikes: 652,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2023-10-03T14:58:13.789Z",
+        },
+        updatedAt: {
+            $date: "2023-10-04T05:10:19.541Z",
+        },
+        __v: 3,
     },
 ];
 
@@ -287,7 +316,7 @@ export const posts = [
 export const recipes = [
     {
         _id: new mongoose.Types.ObjectId(),
-        // userId: userIds[8],
+        userId: userIds[8],
         title: "Crispy Beef & Shitake Noodles",
         recipeImage: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
