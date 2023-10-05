@@ -22,9 +22,10 @@ import { verifyToken } from "./middleware/auth.js";
 // Models
 import User from "./models/User.js";
 import Post from "./models/Post.js";
+import Recipe from "./models/Recipe.js";
 
 // Data
-import { users, posts } from "./data/index.js";
+import { users, posts, recipes } from "./data/index.js";
 
 // Configuration
 const __filename = fileURLToPath(import.meta.url);
@@ -78,5 +79,6 @@ mongoose
         // Data Only Added Once
         // User.insertMany(users);
         // Post.insertMany(posts);
+        // Recipe.insertMany(recipes);
     })
     .catch((error) => console.log(`${error} did not connect`));
