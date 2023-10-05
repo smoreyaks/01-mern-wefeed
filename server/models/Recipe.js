@@ -1,55 +1,101 @@
 import mongoose from "mongoose";
 
 const RecipeSchema = mongoose.Schema({
-    recipeId: {
+    _id: {
         type: String,
         required: true,
     },
-    userId: {
-        type: String,
-        required: true,
-    },
+    // userId: {
+    //     type: String,
+    //     required: true,
+    // },
     title: {
         type: String,
         required: true,
     },
-    ingredients: {
-        type: Array,
-        default: [],
-        min: 1,
-    },
-    // ingredientNum: Number,
     recipeImage: {
         type: String,
         default: "",
     },
-    equipment: String,
-    prepTime: String,
-    cookTime: String,
+    ingredients: {
+        type: Array,
+        default: [
+            {
+                qty: {
+                    type: String,
+                    required: true,
+                },
+                element: {
+                    type: String,
+                    required: true,
+                },
+            },
+        ],
+    },
+    // ingredientNum: Number,
+    equipment: {
+        type: Array,
+        default: [],
+    },
+    prepTime: { type: String, default: "" },
+    cookTime: { type: String, default: "" },
     servings: {
         type: Number,
+        default: "",
         required: true,
     },
-    cookMethod: {
-        type: Array,
-        default: [],
-        required: true,
+    spiceLevel: {
+        type: Number,
+        default: "",
     },
-    spiceLevel: String,
     steps: {
         type: Array,
-        default: [],
-        stepNum: Number,
-        stepMethod: String,
-        required: true,
+        default: [
+            {
+                stepNum: Number,
+                stepMethod: String,
+                required: true,
+            },
+        ],
     },
-    notes: String,
+
+    notes: {
+        type: String,
+        default: "",
+    },
     tags: {
         type: Array,
         default: [],
     },
 
-    recommendations: Number,
+    likes: {
+        // type: Number,
+        type: Map,
+        default: "",
+        of: Boolean,
+    },
+    recommendations: {
+        // type: Number,
+        type: Map,
+        default: "",
+        of: Boolean,
+    },
+    saves: {
+        // type: Number,
+        type: Map,
+        default: "",
+        of: Boolean,
+    },
+    shares: Number,
+    comments: {
+        type: Array,
+        default: [
+            {
+                userId: String,
+                commentText: String,
+            },
+        ],
+    },
 });
 
 // Pass User Schema into Mongoose DB
