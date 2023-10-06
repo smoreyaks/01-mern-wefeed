@@ -317,8 +317,12 @@ export const recipes = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[8],
+        firstName: "FakeFirst",
+        lastName: "FakeLast",
+        userPicturePath: "link-sunglasses.gif",
+
         title: "Crispy Beef & Shitake Noodles",
-        recipeImage: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
+        recipeImagePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
         ingredients: [
             { qty: "450g", element: "hokkien noodles" },
