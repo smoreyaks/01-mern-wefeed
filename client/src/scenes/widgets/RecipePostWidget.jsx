@@ -14,18 +14,19 @@ import { setRecipe } from "../../state";
 
 const RecipePostWidget = ({
     _id,
+    recipeId,
     recipeUserId,
     name,
     userPicturePath,
     title,
-    recipeImagePath,
+    picturePath,
     ingredients,
     equipment,
     prepTime,
     cookTime,
     servings,
     spiceLevel,
-    steps,
+    // steps,
     notes,
     tags,
     likes,
@@ -82,16 +83,16 @@ const RecipePostWidget = ({
             >
                 {title}
             </Typography>
-            <Typography color={main} sx={{ mt: "1rem" }}>
+            {/* <Typography color={main} sx={{ mt: "1rem" }}>
                 {steps}
-            </Typography>
-            {recipeImagePath && (
+            </Typography> */}
+            {picturePath && (
                 <img
                     width="100%"
                     height="auto"
                     alt="recipe"
                     style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-                    src={`http://localhost:3005/assets/${recipeImagePath}`}
+                    src={`http://localhost:3005/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">
