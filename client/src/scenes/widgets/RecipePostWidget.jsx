@@ -14,9 +14,11 @@ import { setRecipe } from "../../state";
 
 const RecipePostWidget = ({
     _id,
-    userId,
+    recipeUserId,
+    name,
+    userPicturePath,
     title,
-    recipeImage,
+    recipeImagePath,
     ingredients,
     equipment,
     prepTime,
@@ -45,7 +47,7 @@ const RecipePostWidget = ({
 
     const patchLike = async () => {
         const response = await fetch(
-            `http://localhost:3005/recipes/${recipeId}/like`,
+            `http://localhost:3005/recipes/${_id}/like`,
             {
                 method: "PATCH",
                 headers: {
@@ -64,7 +66,7 @@ const RecipePostWidget = ({
             <Friend
                 friendId={recipeUserId}
                 name={name}
-                subtitle={location}
+                // subtitle={location}
                 userPicturePath={userPicturePath}
             />
             <Typography
@@ -78,18 +80,18 @@ const RecipePostWidget = ({
                     },
                 }}
             >
-                {name}
+                {title}
             </Typography>
             <Typography color={main} sx={{ mt: "1rem" }}>
-                {description}
+                {steps}
             </Typography>
-            {picturePath && (
+            {recipeImagePath && (
                 <img
                     width="100%"
                     height="auto"
                     alt="recipe"
                     style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-                    src={`http://localhost:3005/assets/${picturePath}`}
+                    src={`http://localhost:3005/assets/${recipeImagePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">
