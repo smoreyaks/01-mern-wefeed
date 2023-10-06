@@ -48,11 +48,22 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                     userId,
                     firstName,
                     lastName,
-                    description,
-                    location,
-                    recipeImagePath,
                     userPicturePath,
+                    title,
+                    picturePath,
+                    ingredients,
+                    equipment,
+                    prepTime,
+                    cookTime,
+                    servings,
+                    spiceLevel,
+                    // steps,
+                    notes,
+                    tags,
                     likes,
+                    recommendations,
+                    saves,
+                    shares,
                     comments,
                 }) => (
                     <RecipePostWidget
@@ -61,11 +72,22 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                         recipeId={_id}
                         recipeUserId={userId}
                         name={`${firstName} ${lastName}`}
-                        description={description}
-                        location={location}
-                        recipeImagePath={recipeImagePath}
                         userPicturePath={userPicturePath}
+                        title={title}
+                        picturePath={picturePath}
+                        ingredients={ingredients}
+                        equipment={equipment}
+                        prepTime={prepTime}
+                        cookTime={cookTime}
+                        servings={servings}
+                        spiceLevel={spiceLevel}
+                        // steps={steps}
+                        notes={notes}
+                        tags={tags}
                         likes={likes}
+                        recommendations={recommendations}
+                        saves={saves}
+                        shares={shares}
                         comments={comments}
                     />
                 )
