@@ -34,14 +34,14 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import Dropzone from "react-dropzone";
 
 // State
-import { setPosts } from "../../state";
+import { setRecipes } from "../../state";
 
 const CreateRecipeWidget = ({ picturePath }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
-    const [post, setPost] = useState("");
+    const [recipe, setRecipe] = useState("");
 
     // Theme
     const { palette } = useTheme();
@@ -53,24 +53,24 @@ const CreateRecipeWidget = ({ picturePath }) => {
     const token = useSelector((state) => state.token);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
-    const handlePost = async () => {
+    const handleRecipe = async () => {
         const formData = new FormData();
         formData.append("userId", _id);
-        formData.append("description", post);
+        formData.append("description", recipe);
         if (image) {
             formData.append("picture", image);
             formData.append("picturePath", image.name);
         }
 
-        const response = await fetch(`http://localhost:3005/posts`, {
+        const response = await fetch(`http://localhost:3005/recipes`, {
             method: "POST",
             headers: { Authorization: `Bearer ${token}` },
             body: formData,
         });
-        const posts = await response.json();
-        dispatch(setPosts({ posts }));
+        const recipes = await response.json();
+        dispatch(setRecipes({ recipes }));
         setImage(null);
-        setPost("");
+        setRecipe("");
     };
 
     return (
@@ -79,8 +79,8 @@ const CreateRecipeWidget = ({ picturePath }) => {
                 <UserImage image={picturePath} />
                 <InputBase
                     placeholder="What's on your mind?"
-                    onChange={(e) => setPost(e.target.value)}
-                    value={post}
+                    onChange={(e) => setRecipe(e.target.value)}
+                    value={recipe}
                     sx={{
                         width: "100%",
                         backgroundColor: palette.default.neutral.light,
@@ -158,8 +158,8 @@ const CreateRecipeWidget = ({ picturePath }) => {
                 </FlexBetween>
 
                 <Button
-                    disabled={!post}
-                    onClick={handlePost}
+                    disabled={!recipe}
+                    onClick={handleRecipe}
                     sx={{
                         color: palette.default.background.alt,
                         backgroundColor: palette.default.primary.main,

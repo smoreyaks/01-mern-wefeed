@@ -115,7 +115,7 @@ const UserWidget = ({ userId, picturePath }) => {
                 </FlexBetween>
                 <FlexBetween>
                     <Typography color={medium}>
-                        Impressions of your post
+                        Impressions of your recipe
                     </Typography>
                     <Typography color={main} fontWeight="500">
                         {impressions}

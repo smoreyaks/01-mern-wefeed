@@ -1,48 +1,48 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPosts } from "../../state";
+import { setRecipes } from "../../state";
 import PostWidget from "./PostWidget";
 
 // RecipePost
 import RecipePostWidget from "./RecipePostWidget";
 
-const PostsFeedWidget = ({ userId, isProfile = false }) => {
+const RecipesFeedWidget = ({ userId, isProfile = false }) => {
     const dispatch = useDispatch();
-    const posts = useSelector((state) => state.posts);
+    const recipes = useSelector((state) => state.recipes);
     const token = useSelector((state) => state.token);
 
-    const getPosts = async () => {
-        const response = await fetch("http://localhost:3005/posts", {
+    const getRecipes = async () => {
+        const response = await fetch("http://localhost:3005/recipes", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
-        dispatch(setPosts({ posts: data }));
+        dispatch(setRecipes({ recipes: data }));
     };
 
-    const getUserPosts = async () => {
+    const getUserRecipes = async () => {
         const response = await fetch(
-            `http://localhost:3005/posts/${userId}/posts`,
+            `http://localhost:3005/recipes/${userId}/recipes`,
             {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             }
         );
         const data = await response.json();
-        dispatch(setPosts({ posts: data }));
+        dispatch(setRecipes({ recipes: data }));
     };
 
     useEffect(() => {
         if (isProfile) {
-            getUserPosts();
+            getUserRecipes();
         } else {
-            getPosts();
+            getRecipes();
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
-            {posts.map(
+            {recipes.map(
                 ({
                     _id,
                     userId,
@@ -58,8 +58,8 @@ const PostsFeedWidget = ({ userId, isProfile = false }) => {
                     <RecipePostWidget
                         // <PostWidget
                         key={_id}
-                        postId={_id}
-                        postUserId={userId}
+                        recipeId={_id}
+                        recipeUserId={userId}
                         name={`${firstName} ${lastName}`}
                         description={description}
                         location={location}
@@ -74,4 +74,4 @@ const PostsFeedWidget = ({ userId, isProfile = false }) => {
     );
 };
 
-export default PostsFeedWidget;
+export default RecipesFeedWidget;

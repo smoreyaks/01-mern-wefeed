@@ -10,17 +10,26 @@ import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPost } from "../../state";
+import { setRecipe } from "../../state";
 
 const RecipePostWidget = ({
-    postId,
-    postUserId,
-    name,
-    description,
-    location,
-    picturePath,
-    userPicturePath,
+    _id,
+    userId,
+    title,
+    recipeImage,
+    ingredients,
+    equipment,
+    prepTime,
+    cookTime,
+    servings,
+    spiceLevel,
+    steps,
+    notes,
+    tags,
     likes,
+    recommendations,
+    saves,
+    shares,
     comments,
 }) => {
     const [isComments, setIsComments] = useState(false);
@@ -36,7 +45,7 @@ const RecipePostWidget = ({
 
     const patchLike = async () => {
         const response = await fetch(
-            `http://localhost:3005/posts/${postId}/like`,
+            `http://localhost:3005/recipes/${recipeId}/like`,
             {
                 method: "PATCH",
                 headers: {
@@ -46,14 +55,14 @@ const RecipePostWidget = ({
                 body: JSON.stringify({ userId: loggedInUserId }),
             }
         );
-        const updatedPost = await response.json();
-        dispatch(setPost({ post: updatedPost }));
+        const updatedRecipe = await response.json();
+        dispatch(setRecipe({ recipe: updatedRecipe }));
     };
 
     return (
         <WidgetWrapper m="2rem 0">
             <Friend
-                friendId={postUserId}
+                friendId={recipeUserId}
                 name={name}
                 subtitle={location}
                 userPicturePath={userPicturePath}
@@ -78,7 +87,7 @@ const RecipePostWidget = ({
                 <img
                     width="100%"
                     height="auto"
-                    alt="post"
+                    alt="recipe"
                     style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
                     src={`http://localhost:3005/assets/${picturePath}`}
                 />
