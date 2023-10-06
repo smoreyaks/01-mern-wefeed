@@ -22,7 +22,7 @@ const RecipeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    recipeImagePath: {
+    picturePath: {
         type: String,
         default: "",
     },
