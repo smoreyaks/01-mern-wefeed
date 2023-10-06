@@ -34,7 +34,7 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import Dropzone from "react-dropzone";
 
 // State
-import { setPosts } from "../../state";
+// import { setPosts } from "../../state";
 
 const CreatePostWidget = ({ picturePath }) => {
     // State
@@ -68,7 +68,7 @@ const CreatePostWidget = ({ picturePath }) => {
             body: formData,
         });
         const posts = await response.json();
-        dispatch(setPosts({ posts }));
+        // dispatch(setPosts({ posts }));
         setImage(null);
         setPost("");
     };
