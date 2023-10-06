@@ -322,7 +322,7 @@ export const recipes = [
         userPicturePath: "link-sunglasses.gif",
 
         title: "Crispy Beef & Shitake Noodles",
-        recipeImagePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
+        picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
         ingredients: [
             { qty: "450g", element: "hokkien noodles" },
