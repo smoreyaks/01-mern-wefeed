@@ -69,6 +69,7 @@ const RecipePostWidget = ({
                 name={name}
                 // subtitle={location}
                 userPicturePath={userPicturePath}
+                // marginTop="1rem 0"
             />
             <Typography
                 color={main}
@@ -79,6 +80,7 @@ const RecipePostWidget = ({
                         color: palette.default.primary.light,
                         cursor: "pointer",
                     },
+                    mt: "1rem",
                 }}
             >
                 {title}
