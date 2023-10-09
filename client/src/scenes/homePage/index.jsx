@@ -10,6 +10,9 @@ import FriendListWidget from "../widgets/FriendListWidget";
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
+    // console.log("BG_IMAGE:", backgroundThemeImg);
+    console.log("BG_ID:", _id);
+    console.log("BG_PICPATH:", picturePath);
 
     return (
         <Box>
