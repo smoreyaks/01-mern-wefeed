@@ -9,7 +9,7 @@ import ProfilePage from "./scenes/profilePage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-import Paper from "@mui/material/Paper";
+
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 import Background from "./components/Background";
