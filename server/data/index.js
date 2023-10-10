@@ -430,4 +430,113 @@ export const recipes = [
             },
         ],
     },
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[8],
+        firstName: "FakeFirst",
+        lastName: "FakeLast",
+        userPicturePath: "link-sunglasses.gif",
+
+        title: "One-Pan Creamy Chicken & Gnocchi",
+        picturePath:
+            "210623-delish-quarterly-creamy-chicken-gnocchi-horizontal-0258-eb-1625174322.jpg",
+
+        ingredients: [
+            { qty: "680g", element: "boneless skinless chicken breasts" },
+            { qty: "2 tsp", element: "kosher salt" },
+            { qty: "2 tbsp", element: "extra virgin olive oil, divided" },
+            { qty: "1", element: "small shallot, diced" },
+            {
+                qty: "225g",
+                element: "baby bella mushrooms, sliced",
+            },
+            { qty: "2", element: "cloves garlic, minced" },
+            { qty: "2 tsp", element: "fresh thyme leaves" },
+            { qty: "1 tsp", element: "dried oregano" },
+            { qty: "1 cup", element: "low-sodium chicken broth" },
+            { qty: "1 1/4 cup", element: "half and half" },
+            { qty: "480g", element: "gnocchi" },
+            { qty: "3/4 cup", element: "shredded mozzarella" },
+            { qty: "1/2 cup", element: "freshly grated Parmesan" },
+            { qty: "3 cup", element: "packed baby spinach" },
+            { qty: "2 tsp", element: "Freshly ground black pepper" },
+            { qty: "1/2 tsp", element: "curshed red pepper flakes" },
+        ],
+        // ingredientNum: Number,
+
+        equipment: [
+            "large skillet",
+            "chefs knife",
+            "Wooden Stirer",
+            "Metal Tongs",
+            "chopping board",
+            "measuring cup",
+            "serving spoon",
+            "serving plate",
+        ],
+        prepTime: "15 mins",
+        cookTime: "30 mins",
+        servings: 4,
+        spiceLevel: 1,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "Season chicken on both sides with salt and pepper. In a large skillet over medium-high heat, heat 1 tablespoon oil. Add chicken and cook until golden, 4 minutes per side. Remove from skillet.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Reduce heat to medium and add remaining 1 tablespoon oil. Add shallot and mushrooms and cook until golden, 5 minutes. Add garlic, thyme, and oregano and cook until fragrant, 1 minute more. Add broth and scrape up any brown bits on bottom of pan, then slowly add in half and half. Bring to a simmer and season with salt, pepper, and a pinch of red pepper flakes. Stir in gnocchi and return chicken to pan. Let simmer until chicken is cooked through and internal temperature reaches 165°, 8 to 10 minutes, stirring occasionally. Remove chicken from skillet. ",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "Add cheeses and stir until melted, then add spinach and stir until wilted.",
+            },
+            {
+                stepNum: 4,
+                stepMethod:
+                    "Slice chicken and return to skillet. Season with more salt and pepper to taste.",
+            },
+        ],
+        notes: "This is a family favourite and has currently been passed down through several generations. Always a crowd pleaser.",
+        tags: ["stir fry", "noodles", "healthy", "flavourful"],
+        likes: new Map([
+            [userIds[1], true],
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+            [userIds[5], true],
+        ]),
+        recommendations: new Map([
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+        ]),
+        saves: new Map([
+            [userIds[1], true],
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+        ]),
+        shares: 65,
+        comments: [
+            {
+                userId: userIds[1],
+                commentText:
+                    "Wow, that creamy chicken gnocchi looks amazing! Can't wait to try it. 😋 #Yum",
+            },
+            {
+                userId: userIds[2],
+                commentText:
+                    "OMG, this recipe is an absolute flavor explosion! 😍 Can't wait to try it out this weekend. Drooling already. 🤤 #FoodieHeaven",
+            },
+            {
+                userId: userIds[3],
+                commentText:
+                    "I need that creamy chicken gnocchi in my life ASAP! 😍",
+            },
+        ],
+    },
 ];
