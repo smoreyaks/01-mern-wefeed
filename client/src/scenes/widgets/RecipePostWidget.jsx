@@ -1,16 +1,29 @@
+// React Packages
+import { useState } from "react";
+
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+
+// MUI Icons
 import {
     ChatBubbleOutlineOutlined,
     FavoriteBorderOutlined,
     FavoriteOutlined,
     ShareOutlined,
 } from "@mui/icons-material";
+
+// Mui Components
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+
+// State
+import { setRecipe } from "../../state";
+
+// Components
+import IngredientList from "../../components/IngredientList";
+import EquipmentList from "../../components/EquipmentList";
 import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setRecipe } from "../../state";
 
 const RecipePostWidget = ({
     _id,
@@ -39,12 +52,15 @@ const RecipePostWidget = ({
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
-    const isLiked = Boolean(likes[loggedInUserId]);
-    const likeCount = Object.keys(likes).length;
 
+    // Theme
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
+
+    // Like Recipe
+    const isLiked = Boolean(likes[loggedInUserId]);
+    const likeCount = Object.keys(likes).length;
 
     const patchLike = async () => {
         const response = await fetch(
@@ -67,9 +83,7 @@ const RecipePostWidget = ({
             <Friend
                 friendId={recipeUserId}
                 name={name}
-                // subtitle={location}
                 userPicturePath={userPicturePath}
-                // marginTop="1rem 0"
             />
             <Typography
                 color={main}
@@ -85,6 +99,12 @@ const RecipePostWidget = ({
             >
                 {title}
             </Typography>
+            {/* <EquipmentList /> */}
+            <IngredientList ingredients={ingredients} />
+            <Divider />
+            {/* <Typography>Prep Time:{ingredients}</Typography> */}
+            {/* <Typography>Ingredients:{ingredients}</Typography>
+            <Typography>Ingredients:{ingredients}</Typography> */}
             {/* <Typography color={main} sx={{ mt: "1rem" }}>
                 {steps}
             </Typography> */}
