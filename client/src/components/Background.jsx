@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
-const Background = styled("Box", {
+const Background = styled(Box, {
     shouldForwardProp: (prop) => prop !== "backgroundThemeImg",
     name: "Background",
     slot: "Root",
