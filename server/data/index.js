@@ -314,122 +314,122 @@ export const posts = [
 ];
 
 export const recipes = [
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[8],
-        firstName: "FakeFirst",
-        lastName: "FakeLast",
-        userPicturePath: "link-sunglasses.gif",
+    // {
+    //     _id: new mongoose.Types.ObjectId(),
+    //     userId: userIds[8],
+    //     firstName: "FakeFirst",
+    //     lastName: "FakeLast",
+    //     userPicturePath: "link-sunglasses.gif",
 
-        title: "Crispy Beef & Shitake Noodles",
-        picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
+    //     title: "Crispy Beef & Shitake Noodles",
+    //     picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
-        ingredients: [
-            { qty: "450g", element: "hokkien noodles" },
-            { qty: "2 tsp", element: "sesame oil" },
-            { qty: "200g", element: "shiitake mushrooms, halved" },
-            { qty: "3", element: "garlic cloves, crushed" },
-            {
-                qty: "3 tsp",
-                element: "Kewpie Roasted Sesame Dressing",
-            },
-            { qty: "460g ", element: "beef stir-fry strips" },
-            { qty: "3 tsp ", element: "ginger paste" },
-            { qty: "1/2 tsp", element: "Chinese five spice" },
-            { qty: "1 tbsp ", element: "Shaoxing wine" },
-            { qty: "35g (1/4 cup)", element: "cornflour" },
-            { qty: "60ml (1/4 cup)", element: "peanut oil" },
-            { qty: "200g ", element: "bunch broccolini, halved lengthways" },
-            { qty: "100g ", element: "baby spinach" },
-            { qty: "60ml ", element: "oyster sauce" },
-            { qty: "4 tsp", element: "Sesame seeds, toasted" },
-            { qty: "8 slices", element: "Fresh red chilli, sliced" },
-        ],
-        // ingredientNum: Number,
+    //     ingredients: [
+    //         { qty: "450g", element: "hokkien noodles" },
+    //         { qty: "2 tsp", element: "sesame oil" },
+    //         { qty: "200g", element: "shiitake mushrooms, halved" },
+    //         { qty: "3", element: "garlic cloves, crushed" },
+    //         {
+    //             qty: "3 tsp",
+    //             element: "Kewpie Roasted Sesame Dressing",
+    //         },
+    //         { qty: "460g ", element: "beef stir-fry strips" },
+    //         { qty: "3 tsp ", element: "ginger paste" },
+    //         { qty: "1/2 tsp", element: "Chinese five spice" },
+    //         { qty: "1 tbsp ", element: "Shaoxing wine" },
+    //         { qty: "35g (1/4 cup)", element: "cornflour" },
+    //         { qty: "60ml (1/4 cup)", element: "peanut oil" },
+    //         { qty: "200g ", element: "bunch broccolini, halved lengthways" },
+    //         { qty: "100g ", element: "baby spinach" },
+    //         { qty: "60ml ", element: "oyster sauce" },
+    //         { qty: "4 tsp", element: "Sesame seeds, toasted" },
+    //         { qty: "8 slices", element: "Fresh red chilli, sliced" },
+    //     ],
+    //     // ingredientNum: Number,
 
-        equipment: [
-            "heatproof bowl",
-            "collander",
-            "large wok",
-            "wooden stirer",
-            "mixing bowl",
-            "plastic bag",
-        ],
-        prepTime: "15 mins",
-        cookTime: "15 mins",
-        servings: 4,
-        spiceLevel: 2,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod:
-                    "Place the noodles in a large heatproof bowl. Cover with boiling water. Set aside for 5 minutes to soften. Drain well.",
-            },
-            {
-                stepNum: 2,
-                stepMethod:
-                    "Meanwhile, heat the sesame oil in a large wok or non-stick frying pan over medium-high heat. Add mushroom and cook, stirring, for 2-3 minutes or until softened. Add half the garlic and stir for 1-2 minutes or until golden. Stir in sesame dressing. Transfer to a bowl and set aside.",
-            },
-            {
-                stepNum: 3,
-                stepMethod:
-                    "Combine the beef, ginger paste, five spice, Shaoxing wine and remaining garlic in a bowl. Mix well, then transfer the beef to a large sealable plastic bag. Add the cornflour, seal and shake to coat.",
-            },
-            {
-                stepNum: 4,
-                stepMethod:
-                    "Heat about 1 tbs peanut oil in wok or pan over high heat. Add a third of the beef. Cook for 2-3 minutes or until crisp. Transfer to a plate. Repeat with remaining oil and beef.",
-            },
-            {
-                stepNum: 5,
-                stepMethod:
-                    "Add the broccolini to the wok or pan. Cook over medium-high heat, stirring, for 2 minutes or until tender-crisp. Add the noodles and cook, stirring, for 2 minutes. Add the spinach and cook for 1 minute, until wilted. Return the mushroom and beef to the wok or pan, add the oyster sauce and toss to coat.",
-            },
-            {
-                stepNum: 6,
-                stepMethod:
-                    "Divide the noodle mixture among serving bowls. Drizzle with the extra dressing and sprinkle with toasted sesame seeds and chilli.",
-            },
-        ],
-        notes: "This is a family favourite and has currently been passed down through several generations. Always a crowd pleaser.",
-        tags: ["stir fry", "noodles", "healthy", "flavourful"],
-        likes: new Map([
-            [userIds[1], true],
-            [userIds[3], true],
-            [userIds[5], true],
-            [userIds[7], true],
-        ]),
-        recommendations: new Map([
-            [userIds[1], true],
-            [userIds[3], true],
-            [userIds[5], true],
-            [userIds[7], true],
-        ]),
-        saves: new Map([
-            [userIds[1], true],
-            [userIds[3], true],
-            [userIds[5], true],
-            [userIds[7], true],
-        ]),
-        shares: 59,
-        comments: [
-            {
-                userId: userIds[7],
-                commentText:
-                    "This look so good! I can't wait to give this a go.",
-            },
-            {
-                userId: userIds[6],
-                commentText:
-                    "Would this dish be ok to serve with rice instead?",
-            },
-            {
-                userId: userIds[5],
-                commentText:
-                    "Such a great dish! I made this tonight and my kids really loved it! Definitely going to be making this again.",
-            },
-        ],
-    },
+    //     equipment: [
+    //         "heatproof bowl",
+    //         "collander",
+    //         "large wok",
+    //         "wooden stirer",
+    //         "mixing bowl",
+    //         "plastic bag",
+    //     ],
+    //     prepTime: "15 mins",
+    //     cookTime: "15 mins",
+    //     servings: 4,
+    //     spiceLevel: 2,
+    //     steps: [
+    //         {
+    //             stepNum: 1,
+    //             stepMethod:
+    //                 "Place the noodles in a large heatproof bowl. Cover with boiling water. Set aside for 5 minutes to soften. Drain well.",
+    //         },
+    //         {
+    //             stepNum: 2,
+    //             stepMethod:
+    //                 "Meanwhile, heat the sesame oil in a large wok or non-stick frying pan over medium-high heat. Add mushroom and cook, stirring, for 2-3 minutes or until softened. Add half the garlic and stir for 1-2 minutes or until golden. Stir in sesame dressing. Transfer to a bowl and set aside.",
+    //         },
+    //         {
+    //             stepNum: 3,
+    //             stepMethod:
+    //                 "Combine the beef, ginger paste, five spice, Shaoxing wine and remaining garlic in a bowl. Mix well, then transfer the beef to a large sealable plastic bag. Add the cornflour, seal and shake to coat.",
+    //         },
+    //         {
+    //             stepNum: 4,
+    //             stepMethod:
+    //                 "Heat about 1 tbs peanut oil in wok or pan over high heat. Add a third of the beef. Cook for 2-3 minutes or until crisp. Transfer to a plate. Repeat with remaining oil and beef.",
+    //         },
+    //         {
+    //             stepNum: 5,
+    //             stepMethod:
+    //                 "Add the broccolini to the wok or pan. Cook over medium-high heat, stirring, for 2 minutes or until tender-crisp. Add the noodles and cook, stirring, for 2 minutes. Add the spinach and cook for 1 minute, until wilted. Return the mushroom and beef to the wok or pan, add the oyster sauce and toss to coat.",
+    //         },
+    //         {
+    //             stepNum: 6,
+    //             stepMethod:
+    //                 "Divide the noodle mixture among serving bowls. Drizzle with the extra dressing and sprinkle with toasted sesame seeds and chilli.",
+    //         },
+    //     ],
+    //     notes: "This is a family favourite and has currently been passed down through several generations. Always a crowd pleaser.",
+    //     tags: ["stir fry", "noodles", "healthy", "flavourful"],
+    //     likes: new Map([
+    //         [userIds[1], true],
+    //         [userIds[3], true],
+    //         [userIds[5], true],
+    //         [userIds[7], true],
+    //     ]),
+    //     recommendations: new Map([
+    //         [userIds[1], true],
+    //         [userIds[3], true],
+    //         [userIds[5], true],
+    //         [userIds[7], true],
+    //     ]),
+    //     saves: new Map([
+    //         [userIds[1], true],
+    //         [userIds[3], true],
+    //         [userIds[5], true],
+    //         [userIds[7], true],
+    //     ]),
+    //     shares: 59,
+    //     comments: [
+    //         {
+    //             userId: userIds[7],
+    //             commentText:
+    //                 "This look so good! I can't wait to give this a go.",
+    //         },
+    //         {
+    //             userId: userIds[6],
+    //             commentText:
+    //                 "Would this dish be ok to serve with rice instead?",
+    //         },
+    //         {
+    //             userId: userIds[5],
+    //             commentText:
+    //                 "Such a great dish! I made this tonight and my kids really loved it! Definitely going to be making this again.",
+    //         },
+    //     ],
+    // },
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[8],
@@ -460,7 +460,7 @@ export const recipes = [
             { qty: "1/2 cup", element: "freshly grated Parmesan" },
             { qty: "3 cup", element: "packed baby spinach" },
             { qty: "2 tsp", element: "Freshly ground black pepper" },
-            { qty: "1/2 tsp", element: "curshed red pepper flakes" },
+            { qty: "1/2 tsp", element: "crushed red pepper flakes" },
         ],
         // ingredientNum: Number,
 
@@ -520,7 +520,7 @@ export const recipes = [
             [userIds[3], true],
             [userIds[4], true],
         ]),
-        shares: 65,
+        shares: 33,
         comments: [
             {
                 userId: userIds[1],
@@ -539,4 +539,208 @@ export const recipes = [
             },
         ],
     },
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[6],
+        firstName: "Carly",
+        lastName: "Vowel",
+        userPicturePath: "p8.jpeg",
+
+        title: "Honey-Garlic Glazed Salmon",
+        picturePath: "1506456214-delish-honey-garlic-glazed-salmon.jpg",
+
+        ingredients: [
+            { qty: "1/3 cup", element: "honey" },
+            { qty: "1/4 cup", element: "low-sodium soy sauce" },
+            { qty: "2 tbsp", element: "lemon juice" },
+            { qty: "1 tsp", element: "red pepper flakes" },
+            {
+                qty: "3 tbsp",
+                element: "extra virgin olive oil, divided",
+            },
+            {
+                qty: "4 160g",
+                element: "salmon fillets, patted dry with a paper towel",
+            },
+            { qty: "1 tsp", element: "kosher salt" },
+            { qty: "1 tsp", element: "Freshly ground black pepper" },
+            { qty: "3", element: "cloves garlic, minced" },
+            { qty: "1", element: "lemon, sliced into rounds" },
+        ],
+        // ingredientNum: Number,
+
+        equipment: [
+            "large skillet",
+            "chefs knife",
+            "Wooden Stirer",
+            "Metal Tongs",
+            "Whisk",
+            "Basting Brush",
+            "Measuring cup",
+            "Medium Bowl",
+            "serving plate",
+        ],
+        prepTime: "5 mins",
+        cookTime: "15 mins",
+        servings: 4,
+        spiceLevel: 2,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a medium bowl, whisk together honey, soy sauce, lemon juice and red pepper flakes.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "In a large skillet over medium-high heat, heat two tablespoons oil. When oil is hot but not smoking, add salmon skin-side up and season with salt and pepper. Cook salmon until deeply golden, about 6 minutes, then flip over and add remaining tablespoon of oil.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "Add garlic to the skillet and cook until fragrant, 1 minute. Add the honey mixture and sliced lemons and cook until sauce is reduced by about 1/3. Baste salmon with the sauce.",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "Garnish with sliced lemon and serve.",
+            },
+        ],
+        notes: "This is a family favourite and has currently been passed down through several generations. Always a crowd pleaser.",
+        tags: ["stir fry", "noodles", "healthy", "flavourful"],
+        likes: new Map([
+            [userIds[1], true],
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+            [userIds[5], true],
+        ]),
+        recommendations: new Map([
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+        ]),
+        saves: new Map([
+            [userIds[1], true],
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
+        ]),
+        shares: 65,
+        comments: [
+            {
+                userId: userIds[3],
+                commentText:
+                    "I've been searching for an easy salmon recipe, and this one looks just right. The garlic and lemon are a nice touch, and the image has me convinced it's a winner.",
+            },
+            {
+                userId: userIds[4],
+                commentText:
+                    "Salmon is my go-to when I want something healthy and tasty. This recipe with garlic and lemon is a classic combo that never disappoints. Can't wait to give it a try!",
+            },
+            {
+                userId: userIds[5],
+                commentText: "I love a good baked salmon recipe.",
+            },
+        ],
+    },
+
+    // // Recipe Data Template
+    // {
+    //     _id: new mongoose.Types.ObjectId(),
+    //     userId: userIds[XXXXXXXXXXXX],
+    //     firstName: "XXXXXXXXXXXX",
+    //     lastName: "XXXXXXXXXXXX",
+    //     userPicturePath: "XXXXXXXXXXXX",
+
+    //     title: "XXXXXXXXXXXX",
+    //     picturePath: "XXXXXXXXXXXX",
+
+    //     ingredients: [
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+    //     ],
+    //     // ingredientNum: Number,
+
+    //     equipment: [
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //         "XXXXXXXXXXXX",
+    //     ],
+    //     prepTime: "XXXXXXXXXXXX",
+    //     cookTime: "XXXXXXXXXXXX",
+    //     servings: XXXXXXXXXXXX,
+    //     spiceLevel: XXXXXXXXXXXX,
+    //     steps: [
+    //         {
+    //             stepNum: 1,
+    //             stepMethod: "XXXXXXXXXXXX",
+    //         },
+    //         {
+    //             stepNum: 2,
+    //             stepMethod: "XXXXXXXXXXXX",
+    //         },
+    //         {
+    //             stepNum: 3,
+    //             stepMethod: "XXXXXXXXXXXX",
+    //         },
+    //         {
+    //             stepNum: 4,
+    //             stepMethod: "XXXXXXXXXXXX",
+    //         },
+    //     ],
+    //     notes: "XXXXXXXXXXXX",
+    //     tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+    //     likes: new Map([
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //     ]),
+    //     recommendations: new Map([
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //     ]),
+    //     saves: new Map([
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //         [userIds[XXXXXXXXXXXX], true],
+    //     ]),
+    //     shares: XXXXXXXXXXXX,
+    //     comments: [
+    //         {
+    //             userId: userIds[XXXXXXXXXXXX],
+    //             commentText: "XXXXXXXXXXXX",
+    //         },
+    //         {
+    //             userId: userIds[XXXXXXXXXXXX],
+    //             commentText: "XXXXXXXXXXXX",
+    //         },
+    //         {
+    //             userId: userIds[XXXXXXXXXXXX],
+    //             commentText: "XXXXXXXXXXXX",
+    //         },
+    //     ],
+    // },
 ];
