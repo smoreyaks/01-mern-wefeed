@@ -6,11 +6,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 // MUI Icons
 import {
-    ChatBubbleOutlineOutlined,
     FavoriteBorderOutlined,
     FavoriteOutlined,
     ShareOutlined,
 } from "@mui/icons-material";
+import CommentIcon from "@mui/icons-material/Comment";
+import PlaylistAddOutlinedIcon from "@mui/icons-material/PlaylistAddOutlined";
+import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
 
 // Mui Components
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
@@ -49,6 +53,7 @@ const RecipePostWidget = ({
     comments,
 }) => {
     const [isComments, setIsComments] = useState(false);
+
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
@@ -61,6 +66,10 @@ const RecipePostWidget = ({
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
+
+    // Saved Recipe
+    const [isSaved, setIsSaved] = useState(false);
+    const [isRecommended, setIsRecommended] = useState(false);
 
     const patchLike = async () => {
         const response = await fetch(
@@ -99,12 +108,11 @@ const RecipePostWidget = ({
             >
                 {title}
             </Typography>
-            {/* <EquipmentList /> */}
+            <Typography>Prep Time: {prepTime}</Typography>
+            <Typography>Cook Time: {cookTime}</Typography>
+            <EquipmentList equipment={equipment} />
             <IngredientList ingredients={ingredients} />
-            <Divider />
-            {/* <Typography>Prep Time:{ingredients}</Typography> */}
-            {/* <Typography>Ingredients:{ingredients}</Typography>
-            <Typography>Ingredients:{ingredients}</Typography> */}
+            {/* <Typography>Ingredients:{ingredients}</Typography> */}
             {/* <Typography color={main} sx={{ mt: "1rem" }}>
                 {steps}
             </Typography> */}
@@ -113,34 +121,59 @@ const RecipePostWidget = ({
                     width="100%"
                     height="auto"
                     alt="recipe"
-                    style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
+                    style={{ borderRadius: "0.75rem" }}
                     src={`http://localhost:3005/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">
-                <FlexBetween gap="1rem">
-                    <FlexBetween gap="0.3rem">
-                        <IconButton onClick={patchLike}>
-                            {isLiked ? (
-                                <FavoriteOutlined sx={{ color: primary }} />
-                            ) : (
-                                <FavoriteBorderOutlined />
-                            )}
-                        </IconButton>
-                        <Typography>{likeCount}</Typography>
-                    </FlexBetween>
-
-                    <FlexBetween gap="0.3rem">
-                        <IconButton onClick={() => setIsComments(!isComments)}>
-                            <ChatBubbleOutlineOutlined />
-                        </IconButton>
-                        <Typography>{comments.length}</Typography>
-                    </FlexBetween>
+                {/* Likes */}
+                <FlexBetween gap="0.3rem">
+                    <IconButton onClick={patchLike}>
+                        {isLiked ? (
+                            <FavoriteOutlined sx={{ color: primary }} />
+                        ) : (
+                            <FavoriteBorderOutlined />
+                        )}
+                    </IconButton>
+                    <Typography>{likeCount}</Typography>
                 </FlexBetween>
 
-                <IconButton>
-                    <ShareOutlined />
-                </IconButton>
+                {/* Comments */}
+                <FlexBetween gap="0.3rem">
+                    <IconButton onClick={() => setIsComments(!isComments)}>
+                        <CommentIcon />
+                    </IconButton>
+                    <Typography>{comments.length}</Typography>
+                </FlexBetween>
+
+                {/* Save Recipe to List */}
+                <FlexBetween gap="0.3rem">
+                    <IconButton onClick={() => setIsSaved(!isSaved)}>
+                        {isSaved ? (
+                            <PlaylistAddCheckIcon />
+                        ) : (
+                            <PlaylistAddOutlinedIcon />
+                        )}
+                    </IconButton>
+                </FlexBetween>
+
+                {/* Recommendations */}
+                <FlexBetween gap="0.3rem">
+                    <IconButton
+                        onClick={() => setIsRecommended(!isRecommended)}
+                    >
+                        {isRecommended ? (
+                            <HowToRegIcon />
+                        ) : (
+                            <RecordVoiceOverIcon />
+                        )}
+                    </IconButton>
+                </FlexBetween>
+                <FlexBetween gap="0.3rem">
+                    <IconButton>
+                        <ShareOutlined />
+                    </IconButton>
+                </FlexBetween>
             </FlexBetween>
             {isComments && (
                 <Box mt="0.5rem">
