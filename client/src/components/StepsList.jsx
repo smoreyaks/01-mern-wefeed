@@ -11,7 +11,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 // Components
 import FlexBetween from "./FlexBetween";
 
-const StepsList = () => {
+const StepsList = ({ steps }) => {
     const [stepsListOpen, setStepsListOpen] = useState(false);
 
     // Theme
@@ -49,7 +49,7 @@ const StepsList = () => {
                     >
                         <Box gridColumn="1">
                             <Typography
-                                key={step.stepNum}
+                                key={step._id}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
@@ -59,8 +59,8 @@ const StepsList = () => {
                             </Typography>
                         </Box>
                         <Box gridColumn="2">
-                            <Typography key={step.stepNum}>
-                                {step.stepNum}
+                            <Typography key={step._id}>
+                                {step.stepMethod}
                             </Typography>
                         </Box>
                     </Box>
