@@ -56,7 +56,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                     cookTime,
                     servings,
                     spiceLevel,
-                    // steps,
+                    steps,
                     notes,
                     tags,
                     likes,
@@ -66,7 +66,6 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                     comments,
                 }) => (
                     <RecipePostWidget
-                        // <PostWidget
                         key={_id}
                         recipeId={_id}
                         recipeUserId={userId}
@@ -80,7 +79,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                         cookTime={cookTime}
                         servings={servings}
                         spiceLevel={spiceLevel}
-                        // steps={steps}
+                        steps={steps}
                         notes={notes}
                         tags={tags}
                         likes={likes}
