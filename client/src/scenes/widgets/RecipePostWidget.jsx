@@ -25,6 +25,7 @@ import { setRecipe } from "../../state";
 // Components
 import IngredientList from "../../components/IngredientList";
 import EquipmentList from "../../components/EquipmentList";
+import StepList from "../../components/StepList";
 import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
@@ -112,7 +113,7 @@ const RecipePostWidget = ({
             <Typography>Cook Time: {cookTime}</Typography>
             <EquipmentList equipment={equipment} />
             <IngredientList ingredients={ingredients} />
-            {/* <Typography>Ingredients:{ingredients}</Typography> */}
+            <StepList steps={steps} />
             {/* <Typography color={main} sx={{ mt: "1rem" }}>
                 {steps}
             </Typography> */}
