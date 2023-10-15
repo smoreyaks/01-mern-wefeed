@@ -28,6 +28,7 @@ import EquipmentList from "../../components/EquipmentList";
 import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
+import StepsList from "../../components/StepsList";
 
 const RecipePostWidget = ({
     _id,
@@ -43,7 +44,7 @@ const RecipePostWidget = ({
     cookTime,
     servings,
     spiceLevel,
-    // steps,
+    steps,
     notes,
     tags,
     likes,
@@ -112,6 +113,7 @@ const RecipePostWidget = ({
             <Typography>Cook Time: {cookTime}</Typography>
             <EquipmentList equipment={equipment} />
             <IngredientList ingredients={ingredients} />
+            <StepsList steps={steps} />
             {picturePath && (
                 <img
                     width="100%"
