@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setRecipes } from "../../state";
-import PostWidget from "./PostWidget";
 
 // RecipePost
 import RecipePostWidget from "./RecipePostWidget";
