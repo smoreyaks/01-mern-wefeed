@@ -112,10 +112,6 @@ const RecipePostWidget = ({
             <Typography>Cook Time: {cookTime}</Typography>
             <EquipmentList equipment={equipment} />
             <IngredientList ingredients={ingredients} />
-            {/* <Typography>Ingredients:{ingredients}</Typography> */}
-            {/* <Typography color={main} sx={{ mt: "1rem" }}>
-                {steps}
-            </Typography> */}
             {picturePath && (
                 <img
                     width="100%"
