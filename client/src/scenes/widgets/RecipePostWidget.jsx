@@ -15,6 +15,8 @@ import PlaylistAddOutlinedIcon from "@mui/icons-material/PlaylistAddOutlined";
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 
 // Mui Components
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
@@ -32,6 +34,7 @@ import StepsList from "../../components/StepsList";
 
 const RecipePostWidget = ({
     _id,
+    user,
     recipeId,
     recipeUserId,
     name,
@@ -87,7 +90,9 @@ const RecipePostWidget = ({
         const updatedRecipe = await response.json();
         dispatch(setRecipe({ recipe: updatedRecipe }));
     };
-
+    console.log("USER Post 1:", user);
+    // const { firstName, lastName } = user;
+    console.log("USER Post 2:", user);
     return (
         <WidgetWrapper m="2rem 0">
             <Friend
@@ -104,13 +109,64 @@ const RecipePostWidget = ({
                         color: palette.default.primary.light,
                         cursor: "pointer",
                     },
-                    mt: "1rem",
+                    m: "1rem 0",
                 }}
             >
                 {title}
             </Typography>
-            <Typography>Prep Time: {prepTime}</Typography>
-            <Typography>Cook Time: {cookTime}</Typography>
+
+            <Box display="flex" justifyContent="flex-start" gap="1rem">
+                {/* Prep Time */}
+                <Typography
+                    sx={{
+                        backgroundColor: main,
+                        borderRadius: ".75rem",
+                        display: "flex",
+                        alignItems: "center",
+                        p: "0.25rem 0.5rem 0.25rem 0.5rem",
+                    }}
+                >
+                    Prep: {prepTime}
+                </Typography>
+                {/* Cook Time */}
+                <Typography
+                    sx={{
+                        backgroundColor: main,
+                        borderRadius: ".75rem",
+                        padding: "0.5rem",
+                    }}
+                >
+                    Cook: {cookTime}
+                </Typography>
+
+                {/* Servings */}
+                <Box
+                    sx={{
+                        backgroundColor: main,
+                        borderRadius: ".75rem",
+                        padding: "0.5rem",
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <PersonRoundedIcon />
+                    <Typography sx={{ pl: "0.25rem" }}>{servings}</Typography>
+                </Box>
+
+                {/* Spice Level */}
+                <Box
+                    sx={{
+                        backgroundColor: main,
+                        borderRadius: ".75rem",
+                        padding: "0.5rem",
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <LocalFireDepartmentIcon />
+                    <Typography sx={{ pl: "0.25rem" }}>{spiceLevel}</Typography>
+                </Box>
+            </Box>
             <EquipmentList equipment={equipment} />
             <IngredientList ingredients={ingredients} />
             <StepsList steps={steps} />
@@ -175,13 +231,15 @@ const RecipePostWidget = ({
             </FlexBetween>
             {isComments && (
                 <Box mt="0.5rem">
+                    {/* ${_id.findById(comments.userId)} */}
                     {comments.map((comment, i) => (
                         <Box key={`${name}-${i}`}>
                             <Divider />
                             <Typography
                                 sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}
                             >
-                                {comment}
+                                {/* {`${user.findById(comment.userId)}`} */}
+                                {comment.commentText}
                             </Typography>
                         </Box>
                     ))}
