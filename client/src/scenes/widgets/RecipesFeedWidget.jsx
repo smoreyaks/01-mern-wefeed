@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setRecipes } from "../../state";
+import { useState } from "react";
 
 // RecipePost
 import RecipePostWidget from "./RecipePostWidget";
 
 const RecipesFeedWidget = ({ userId, isProfile = false }) => {
+    const [user, setUser] = useState(null);
     const dispatch = useDispatch();
     const recipes = useSelector((state) => state.recipes);
     const token = useSelector((state) => state.token);
@@ -17,6 +19,15 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
         });
         const data = await response.json();
         dispatch(setRecipes({ recipes: data }));
+    };
+
+    const getUser = async () => {
+        const response = await fetch(`http://localhost:3005/users/${userId}`, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        const data = await response.json();
+        setUser(data);
     };
 
     const getUserRecipes = async () => {
@@ -36,14 +47,18 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
             getUserRecipes();
         } else {
             getRecipes();
+            getUser();
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+    if (!user) return null;
+    console.log("USER Feed:", user);
     return (
         <>
             {recipes.map(
                 ({
                     _id,
+                    user,
                     userId,
                     firstName,
                     lastName,
@@ -67,6 +82,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                 }) => (
                     <RecipePostWidget
                         key={_id}
+                        user={user}
                         recipeId={_id}
                         recipeUserId={userId}
                         name={`${firstName} ${lastName}`}
