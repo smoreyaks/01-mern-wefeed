@@ -2,14 +2,17 @@ import { Box, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import Navbar from "../navbar";
 import UserWidget from "../widgets/UserWidget";
-import CreatePostWidget from "../widgets/CreatePostWidget";
-import PostsFeedWidget from "../widgets/PostsFeedWidget";
+import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
+import RecipesFeedWidget from "../widgets/RecipesFeedWidget";
 import AdvertWidget from "../widgets/AdvertWidget";
 import FriendListWidget from "../widgets/FriendListWidget";
 
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
+    // console.log("BG_IMAGE:", backgroundThemeImg);
+    console.log("BG_ID:", _id);
+    console.log("BG_PICPATH:", picturePath);
 
     return (
         <Box>
@@ -28,8 +31,8 @@ const HomePage = () => {
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    <CreatePostWidget picturePath={picturePath} />
-                    <PostsFeedWidget userId={_id} />
+                    <CreateRecipeWidget picturePath={picturePath} />
+                    <RecipesFeedWidget userId={_id} />
                 </Box>
                 {isNonMobileScreens && (
                     <Box flexBasis="26%">

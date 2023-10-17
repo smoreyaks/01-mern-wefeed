@@ -4,7 +4,7 @@ const initialState = {
     mode: "light",
     user: null,
     token: null,
-    posts: [],
+    recipes: [],
     theme: "default",
 };
 
@@ -43,17 +43,17 @@ export const authSlice = createSlice({
                 console.error("user friends non-existent :(");
             }
         },
-        // Get User Posts
-        setPosts: (state, action) => {
-            state.posts = action.payload.posts;
+        // Get User recipes
+        setRecipes: (state, action) => {
+            state.recipes = action.payload.recipes;
         },
-        setPost: (state, action) => {
-            const updatedPosts = state.posts.map((post) => {
-                if (post._id === action.payload.post._id)
-                    return action.payload.post;
-                return post;
+        setRecipe: (state, action) => {
+            const updatedRecipes = state.recipes.map((recipe) => {
+                if (recipe._id === action.payload.recipe._id)
+                    return action.payload.recipe;
+                return recipe;
             });
-            state.posts = updatedPosts;
+            state.recipes = updatedRecipes;
         },
     },
 });
@@ -66,7 +66,7 @@ export const {
     setLogin,
     setLogout,
     setFriends,
-    setPosts,
-    setPost,
+    setRecipes,
+    setRecipe,
 } = authSlice.actions;
 export default authSlice.reducer;

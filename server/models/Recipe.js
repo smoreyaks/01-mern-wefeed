@@ -9,11 +9,20 @@ const RecipeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    firstName: {
+        type: String,
+        required: true,
+    },
+    lastName: {
+        type: String,
+        required: true,
+    },
+    userPicturePath: String,
     title: {
         type: String,
         required: true,
     },
-    recipeImage: {
+    picturePath: {
         type: String,
         default: "",
     },

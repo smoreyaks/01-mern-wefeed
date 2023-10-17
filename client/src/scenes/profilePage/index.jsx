@@ -7,10 +7,11 @@ import UserWidget from "../widgets/UserWidget";
 import FriendListWidget from "../widgets/FriendListWidget";
 
 // Posts
-import CreatePostWidget from "../widgets/CreatePostWidget";
-import PostsFeedWidget from "../widgets/PostsFeedWidget";
+// import CreatePostWidget from "../widgets/CreatePostWidget";
+// import PostsFeedWidget from "../widgets/PostsFeedWidget";
 
 // Recipes
+import RecipesFeedWidget from "../widgets/RecipesFeedWidget";
 import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
 import RecipePostWidget from "../widgets/RecipePostWidget";
 
@@ -58,10 +59,10 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    {/* <CreatePostWidget picturePath={user.picturePath} /> */}
+                    {/* <CreateRecipeWidget picturePath={user.picturePath} /> */}
                     <CreateRecipeWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
-                    <PostsFeedWidget userId={userId} isProfile />
+                    <RecipesFeedWidget userId={userId} isProfile />
                     {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
                 <Box
