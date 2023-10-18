@@ -25,7 +25,7 @@ function App() {
     const [user, setUser] = useState(null);
 
     const getUser = async () => {
-        const response = await fetch(`${process.env.API_URL}/users/${_id}`, {
+        const response = await fetch(`${API_URL}/users/${_id}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });
@@ -62,7 +62,7 @@ function App() {
                     width="100%"
                     height="auto"
                     alt="recipe"
-                    src={`${process.env.API_URL}/assets/dessertTheme/${backgroundThemeImg}`}
+                    src={`${API_URL}/assets/dessertTheme/${backgroundThemeImg}`}
                     // server\public\assets\dessertTheme\vecteezy_ice-cream-seamless-pattern-vector-illustration_9157472.jpg
                 />
             )} */}

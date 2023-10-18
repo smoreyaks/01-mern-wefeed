@@ -38,7 +38,7 @@ const TopUserRecipesWidget = () => {
 
     // API Calls
     const getUser = async () => {
-        const response = await fetch(`${process.env.API_URL}/users/${userId}`, {
+        const response = await fetch(`${API_URL}/users/${userId}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });
@@ -49,13 +49,10 @@ const TopUserRecipesWidget = () => {
 
     // getUserRecipes API Call
     const getUserRecipes = async () => {
-        const response = await fetch(
-            `${process.env.API_URL}/users/${userId}/recipes`,
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
+        const response = await fetch(`${API_URL}/users/${userId}/recipes`, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+        });
         const data = await response.json();
         setUserRecipes(data);
     };
