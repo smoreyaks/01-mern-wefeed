@@ -36,7 +36,7 @@ const PostWidget = ({
 
     // const patchLike = async () => {
     //     const response = await fetch(
-    //         `https://server-vukx.onrender.com/posts/${postId}/like`,
+    //         `http://localhost:3005/posts/${postId}/like`,
     //         {
     //             method: "PATCH",
     //             headers: {
@@ -67,7 +67,7 @@ const PostWidget = ({
                     height="auto"
                     alt="post"
                     style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-                    src={`https://server-vukx.onrender.com/assets/${picturePath}`}
+                    src={`http://localhost:3005/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">

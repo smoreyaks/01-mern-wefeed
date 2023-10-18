@@ -77,7 +77,7 @@ const RecipePostWidget = ({
 
     const patchLike = async () => {
         const response = await fetch(
-            `https://server-vukx.onrender.com/recipes/${_id}/like`,
+            `http://localhost:3005/recipes/${_id}/like`,
             {
                 method: "PATCH",
                 headers: {
@@ -176,7 +176,7 @@ const RecipePostWidget = ({
                     height="auto"
                     alt="recipe"
                     style={{ borderRadius: "0.75rem" }}
-                    src={`https://server-vukx.onrender.com/assets/${picturePath}`}
+                    src={`http://localhost:3005/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">

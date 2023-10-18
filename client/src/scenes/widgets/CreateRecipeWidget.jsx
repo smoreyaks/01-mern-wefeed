@@ -62,14 +62,11 @@ const CreateRecipeWidget = ({ picturePath }) => {
             formData.append("picturePath", image.name);
         }
 
-        const response = await fetch(
-            `https://server-vukx.onrender.com/recipes`,
-            {
-                method: "POST",
-                headers: { Authorization: `Bearer ${token}` },
-                body: formData,
-            }
-        );
+        const response = await fetch(`http://localhost:3005/recipes`, {
+            method: "POST",
+            headers: { Authorization: `Bearer ${token}` },
+            body: formData,
+        });
         const recipes = await response.json();
         dispatch(setRecipes({ recipes }));
         setImage(null);
