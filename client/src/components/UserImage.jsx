@@ -11,7 +11,7 @@ const UserImage = ({ image, size = "60px" }) => {
                 width={size}
                 height={size}
                 alt="user"
-                src={`${API_URL}/assets/${image}`}
+                src={`https://server-vukx.onrender.com/assets/${image}`}
             />
         </Box>
     );
