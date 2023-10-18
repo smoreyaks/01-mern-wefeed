@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    // "dev": "webpack --env.ENVIRONMENT=dev --config webpack.config.dev.js",
-    // "buildWP": "webpack --env.ENVIRONMENT=production --config webpack.config.build.js"
+    "dev": "webpack --env.ENVIRONMENT=development --config webpack.config.dev.js",
+    "buildWP": "webpack --env.ENVIRONMENT=production --config webpack.config.build.js"
 
   },
   "eslintConfig": {
