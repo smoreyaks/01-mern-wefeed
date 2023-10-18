@@ -25,10 +25,13 @@ function App() {
     const [user, setUser] = useState(null);
 
     const getUser = async () => {
-        const response = await fetch(`${API_URL}/users/${_id}`, {
-            method: "GET",
-            headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await fetch(
+            `https://server-vukx.onrender.com/users/${_id}`,
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
         const data = await response.json();
         setUser(data);
         console.log("UserWidget.js - DATA - ", data);
@@ -62,7 +65,7 @@ function App() {
                     width="100%"
                     height="auto"
                     alt="recipe"
-                    src={`${API_URL}/assets/dessertTheme/${backgroundThemeImg}`}
+                    src={`https://server-vukx.onrender.com/assets/dessertTheme/${backgroundThemeImg}`}
                     // server\public\assets\dessertTheme\vecteezy_ice-cream-seamless-pattern-vector-illustration_9157472.jpg
                 />
             )} */}
