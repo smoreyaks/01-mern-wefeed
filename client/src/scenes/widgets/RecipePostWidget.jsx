@@ -76,17 +76,14 @@ const RecipePostWidget = ({
     const [isRecommended, setIsRecommended] = useState(false);
 
     const patchLike = async () => {
-        const response = await fetch(
-            `https://server-vukx.onrender.com/recipes/${_id}/like`,
-            {
-                method: "PATCH",
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ userId: loggedInUserId }),
-            }
-        );
+        const response = await fetch(`${API_URL}/recipes/${_id}/like`, {
+            method: "PATCH",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ userId: loggedInUserId }),
+        });
         const updatedRecipe = await response.json();
         dispatch(setRecipe({ recipe: updatedRecipe }));
     };
@@ -176,7 +173,7 @@ const RecipePostWidget = ({
                     height="auto"
                     alt="recipe"
                     style={{ borderRadius: "0.75rem" }}
-                    src={`https://server-vukx.onrender.com/assets/${picturePath}`}
+                    src={`${API_URL}/assets/${picturePath}`}
                 />
             )}
             <FlexBetween mt="0.25rem">
