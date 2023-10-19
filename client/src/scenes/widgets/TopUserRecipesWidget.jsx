@@ -38,10 +38,13 @@ const TopUserRecipesWidget = () => {
 
     // API Calls
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3005/users/${userId}`, {
-            method: "GET",
-            headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await fetch(
+            `https://server-vukx.onrender.com/users/${userId}`,
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
         const data = await response.json();
         setUser(data);
         console.log("UserWidget.js - DATA - ", data);
@@ -50,7 +53,7 @@ const TopUserRecipesWidget = () => {
     // getUserRecipes API Call
     const getUserRecipes = async () => {
         const response = await fetch(
-            `http://localhost:3005/users/${userId}/recipes`,
+            `https://server-vukx.onrender.com/users/${userId}/recipes`,
             {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
