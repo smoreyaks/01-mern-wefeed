@@ -19,7 +19,7 @@ function App() {
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
     const isAuth = Boolean(useSelector((state) => state.token));
     const token = useSelector((state) => state.token);
-    // const { _id, picturePath } = useSelector((state) => state.user);
+    const { _id } = useSelector((state) => state.user);
 
     // State
     const [user, setUser] = useState(null);
