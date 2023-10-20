@@ -19,7 +19,7 @@ function App() {
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
     const isAuth = Boolean(useSelector((state) => state.token));
     const token = useSelector((state) => state.token);
-    const { _id, picturePath } = useSelector((state) => state.user);
+    // const { _id, picturePath } = useSelector((state) => state.user);
 
     // State
     const [user, setUser] = useState(null);
@@ -60,15 +60,6 @@ function App() {
 
     return (
         <Background backgroundThemeImg={backgroundThemeImg}>
-            {/* {backgroundThemeImg && (
-                <img
-                    width="100%"
-                    height="auto"
-                    alt="recipe"
-                    src={`https://server-vukx.onrender.com/assets/dessertTheme/${backgroundThemeImg}`}
-                    // server\public\assets\dessertTheme\vecteezy_ice-cream-seamless-pattern-vector-illustration_9157472.jpg
-                />
-            )} */}
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
                     <CssBaseline />
