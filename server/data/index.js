@@ -289,10 +289,10 @@ export const users = [
     // User Template
     {
         _id: userIds[14],
-        firstName: "XXXXXXXXXXX",
-        lastName: "XXXXXXXXXXX",
-        email: "XXXXXXXXXXXXX",
-        password: "XXXXXXXXXXX",
+        firstName: "Edwin",
+        lastName: "Johnson",
+        email: "verlie2016@gmail.com",
+        password: "a53d8538db19b5d352cab5984d650c4f",
         picturePath: "XXXXXXXXXXX",
         friends: ["XXXXXXXXXXX"],
         location: "Harrisburg, Pennsylvania, US",
@@ -302,10 +302,10 @@ export const users = [
         totalRecipeLikes: 25,
         userRecipeList: [],
         createdAt: {
-            $date: "XXXXXXXXXXXXXXX",
+            $date: "2015-11-08 16:21:18",
         },
         updatedAt: {
-            $date: "XXXXXXXXXXXXXXX",
+            $date: "2017-04-01 02:09:44",
         },
         __v: 0,
     },
@@ -313,10 +313,10 @@ export const users = [
     // User Template
     {
         _id: userIds[15],
-        firstName: "XXXXXXXXXXX",
-        lastName: "XXXXXXXXXXX",
-        email: "XXXXXXXXXXXXX",
-        password: "XXXXXXXXXXX",
+        firstName: "Naomi",
+        lastName: "Cortes",
+        email: "napoleon.gorcza@gmail.com",
+        password: "bcbc9e570f0a9bb7916d322c03089513",
         picturePath: "XXXXXXXXXXX",
         friends: ["XXXXXXXXXXX"],
         location: "Bakersfield, California, US",
@@ -326,10 +326,10 @@ export const users = [
         totalRecipeLikes: 245,
         userRecipeList: [],
         createdAt: {
-            $date: "XXXXXXXXXXXXXXX",
+            $date: "2015-08-03 17:48:18",
         },
         updatedAt: {
-            $date: "XXXXXXXXXXXXXXX",
+            $date: "2016-10-05 03:06:48",
         },
         __v: 0,
     },
@@ -337,8 +337,8 @@ export const users = [
     // User Template
     {
         _id: userIds[16],
-        firstName: "XXXXXXXXXXX",
-        lastName: "XXXXXXXXXXX",
+        firstName: "Annika",
+        lastName: "Pierce",
         email: "XXXXXXXXXXXXX",
         password: "XXXXXXXXXXX",
         picturePath: "XXXXXXXXXXX",
