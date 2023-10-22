@@ -24,7 +24,6 @@ export const users = [
         location: "San Fran, CA",
         occupation: "Software Engineer",
         viewedProfile: 14561,
-        impressions: 888822,
         createdAt: 1115211422,
         updatedAt: 1115211422,
         __v: 0,
@@ -40,7 +39,6 @@ export const users = [
         location: "New York, CA",
         occupation: "Degenerate",
         viewedProfile: 12351,
-        impressions: 55555,
         createdAt: 1595589072,
         updatedAt: 1595589072,
         __v: 0,
@@ -56,7 +54,6 @@ export const users = [
         location: "Canada, CA",
         occupation: "Data Scientist Hacker",
         viewedProfile: 45468,
-        impressions: 19986,
         createdAt: 1288090662,
         updatedAt: 1288090662,
         __v: 0,
@@ -72,7 +69,6 @@ export const users = [
         location: "Korea, CA",
         occupation: "Educator",
         viewedProfile: 41024,
-        impressions: 55316,
         createdAt: 1219214568,
         updatedAt: 1219214568,
         __v: 0,
@@ -88,7 +84,6 @@ export const users = [
         location: "Utah, CA",
         occupation: "Hacker",
         viewedProfile: 40212,
-        impressions: 7758,
         createdAt: 1493463661,
         updatedAt: 1493463661,
         __v: 0,
@@ -104,7 +99,6 @@ export const users = [
         location: "Los Angeles, CA",
         occupation: "Journalist",
         viewedProfile: 976,
-        impressions: 4658,
         createdAt: 1381326073,
         updatedAt: 1381326073,
         __v: 0,
@@ -120,7 +114,6 @@ export const users = [
         location: "Chicago, IL",
         occupation: "Nurse",
         viewedProfile: 1510,
-        impressions: 77579,
         createdAt: 1714704324,
         updatedAt: 1642716557,
         __v: 0,
@@ -136,7 +129,6 @@ export const users = [
         location: "Washington, DC",
         occupation: "A Student",
         viewedProfile: 19420,
-        impressions: 82970,
         createdAt: 1369908044,
         updatedAt: 1359322268,
         __v: 0,
@@ -157,7 +149,6 @@ export const users = [
         location: "Fake Town",
         occupation: "Fake Job",
         viewedProfile: 3156,
-        impressions: 8705,
         recipesPosted: 135,
         totalRecipeLikes: 652,
         userRecipeList: [],
@@ -169,7 +160,398 @@ export const users = [
         },
         __v: 3,
     },
+
+    //-------------------------------------------------------------------------------------//
+    //-------------------------------------------------------------------------------------//
+    //-------------------------------------------------------------------------------------//
+    // Fake Person Generator Users
+
+    // User Template
+    {
+        _id: userIds[9],
+        firstName: "Hannah",
+        lastName: "Middlebrooks",
+        email: "eliane2004@yahoo.com",
+        password: "07cab6e1dd91f8618b41e00e4679fec4",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Youngstown, Ohio, US",
+        occupation: "Glass Blower & Molder",
+        viewedProfile: 234,
+        recipesPosted: 16,
+        totalRecipeLikes: 464,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2013-11-16 22:24:27",
+        },
+        updatedAt: {
+            $date: "2014-08-21 05:13:13",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[10],
+        firstName: "Molly",
+        lastName: "Melton",
+        email: "amir2012@hotmail.com",
+        password: "34207929905f6716b514aaab072fec4d",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Hatch, Texas, US",
+        occupation: "Insurance Claims Clerk",
+        viewedProfile: 346,
+        recipesPosted: 13,
+        totalRecipeLikes: 23,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2014-03-01 23:07:15",
+        },
+        updatedAt: {
+            $date: "2015-07-22 09:51:51",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[11],
+        firstName: "Kur",
+        lastName: "Hintz",
+        email: "mohammad1987@gmail.com",
+        password: "76b6ff18fdb02fd33da50ad988fccede",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Albany, New York, US",
+        occupation: "Surveying & Mapping Technician",
+        viewedProfile: 243,
+        recipesPosted: 7,
+        totalRecipeLikes: 7,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2013-05-14 21:41:03",
+        },
+        updatedAt: {
+            $date: "2016-10-25 11:12:25",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[12],
+        firstName: "Patricia",
+        lastName: "Lin",
+        email: "haven20092000@yahoo.com",
+        password: "30a8dc367bd3fa27876463af71d98e46",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Weehawken, New Jersey, US",
+        occupation: "Storage & Distribution Manager",
+        viewedProfile: 127,
+        recipesPosted: 28,
+        totalRecipeLikes: 124,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2016-10-02 10:33:09",
+        },
+        updatedAt: {
+            $date: "2017-05-27 20:24:29",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[13],
+        firstName: "Mary",
+        lastName: "Remillard",
+        email: "jeffrey.jakubows@hotmail.com",
+        password: "b183458c7aac47f912668f3c1fbf216f",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Pomona, California, US",
+        occupation: "Product Marketer",
+        viewedProfile: 1245,
+        recipesPosted: 31,
+        totalRecipeLikes: 678,
+        userRecipeList: [],
+        createdAt: {
+            $date: "2013-05-20 22:39:39",
+        },
+        updatedAt: {
+            $date: "2013-11-20 14:21:46",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[14],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Harrisburg, Pennsylvania, US",
+        occupation: "Correctional Officer",
+        viewedProfile: 999,
+        recipesPosted: 9,
+        totalRecipeLikes: 25,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[15],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Bakersfield, California, US",
+        occupation: "Recreation Worker",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[16],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Phoenix, Arizona, US",
+        occupation: "Insurance Appraiser",
+        viewedProfile: 747,
+        recipesPosted: 166,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[17],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Sudbury, Massachusetts, US",
+        occupation: "Social Worker",
+        viewedProfile: 74,
+        recipesPosted: 23,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[18],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "OHS Auditor",
+        occupation: "Westbrook, Maine, US",
+        viewedProfile: 47,
+        recipesPosted: 6,
+        totalRecipeLikes: 111,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[19],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Plantation, Florida, US",
+        occupation: "Special Education Teacher",
+        viewedProfile: 747,
+        recipesPosted: 9,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[20],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Huntsville, Alabama, US",
+        occupation: "Vocational Nurse",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 111,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[21],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Stockton, California, US",
+        occupation: "Retail Sales",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 20,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[22],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Chignik, Alaska, US",
+        occupation: "Plumber",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[23],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Houston, Texas, US",
+        occupation: "Industrial Production Manager",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[24],
+        firstName: "XXXXXXXXXXX",
+        lastName: "XXXXXXXXXXX",
+        email: "XXXXXXXXXXXXX",
+        password: "XXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXX",
+        friends: ["XXXXXXXXXXX"],
+        location: "Owensboro, Kentucky, US",
+        occupation: "Solderer & Brazer",
+        viewedProfile: 747,
+        recipesPosted: 24,
+        totalRecipeLikes: 55,
+        userRecipeList: [],
+        createdAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        updatedAt: {
+            $date: "XXXXXXXXXXXXXXX",
+        },
+        __v: 0,
+    },
 ];
+
+// All Posts
 
 export const posts = [
     {
