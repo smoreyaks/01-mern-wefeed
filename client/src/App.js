@@ -34,13 +34,10 @@ function App() {
     const [user, setUser] = useState(null);
 
     const getUser = async () => {
-        const response = await fetch(
-            `https://server-vukx.onrender.com/users/${_id}`,
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
+        const response = await fetch(`http://localhost:3006/users/${_id}`, {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` },
+        });
         const data = await response.json();
         setUser(data);
         console.log("UserWidget.js - DATA - ", data);
@@ -68,7 +65,7 @@ function App() {
 
     return (
         <CardMedia
-            src={`https://server-vukx.onrender.com/assets/dessertTheme/${backgroundThemeImg}`}
+            src={`http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg}`}
         >
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -76,7 +73,7 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertTheme/${backgroundThemeImg})`,
+                                backgroundImage: `url(http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg})`,
                                 margin: 0,
                                 padding: 0,
                             },
@@ -86,7 +83,7 @@ function App() {
                         enableColorScheme
                         sx={{
                             backgroundColor: backgroundThemeColor,
-                            backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertTheme/${backgroundThemeImg})`,
+                            backgroundImage: `url(http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg})`,
                         }}
                     >
                         <Routes>
