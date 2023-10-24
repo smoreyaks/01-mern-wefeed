@@ -37,6 +37,7 @@ const TopUserRecipesWidget = () => {
     const main = palette.default.neutral.main;
 
     // API Calls
+    // Get User Data
     const getUser = async () => {
         const response = await fetch(`http://localhost:3006/users/${userId}`, {
             method: "GET",
