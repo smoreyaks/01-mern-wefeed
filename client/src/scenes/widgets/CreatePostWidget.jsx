@@ -62,7 +62,7 @@ const CreatePostWidget = ({ picturePath }) => {
             formData.append("picturePath", image.name);
         }
 
-        const response = await fetch(`https://server-vukx.onrender.com/posts`, {
+        const response = await fetch(`http://localhost:3006/posts`, {
             method: "POST",
             headers: { Authorization: `Bearer ${token}` },
             body: formData,
