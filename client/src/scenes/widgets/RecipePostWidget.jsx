@@ -90,9 +90,8 @@ const RecipePostWidget = ({
         const updatedRecipe = await response.json();
         dispatch(setRecipe({ recipe: updatedRecipe }));
     };
-    console.log("USER Post 1:", user);
-    // const { firstName, lastName } = user;
-    console.log("USER Post 2:", user);
+    console.log("USER Post 1:", loggedInUserId);
+
     return (
         <WidgetWrapper m="2rem 0">
             <Friend
