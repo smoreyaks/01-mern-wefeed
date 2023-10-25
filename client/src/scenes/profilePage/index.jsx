@@ -59,7 +59,6 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    {/* <CreateRecipeWidget picturePath={user.picturePath} /> */}
                     <CreateRecipeWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
                     <RecipesFeedWidget userId={userId} isProfile />
