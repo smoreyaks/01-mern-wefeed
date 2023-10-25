@@ -22,14 +22,20 @@ const StepsList = ({ steps }) => {
     return (
         <Box
             sx={{
-                p: "0.25rem 0.5rem",
-                m: "0.5rem 0",
+                // p: "0.25rem 0",
+                m: "0.5rem 0 0.5rem 0",
                 backgroundColor: main,
                 borderRadius: "0.75rem",
             }}
         >
             <FlexBetween>
-                <Typography p=".5rem 0" variant="h5" borderRadius="0.75rem">
+                <Typography
+                    p="0.5rem 0"
+                    variant="h5"
+                    borderRadius="0.75rem"
+                    display="flex"
+                    alignItems="flex-start"
+                >
                     Steps
                 </Typography>
                 <IconButton onClick={() => setStepsListOpen(!stepsListOpen)}>
@@ -39,12 +45,17 @@ const StepsList = ({ steps }) => {
             {steps.map((step) =>
                 stepsListOpen ? (
                     <Box
-                        mr="0.5rem"
+                        // mr="0.5rem"
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: "repeat(2, 2fr)",
+                            display: "flex",
+                            gridTemplateColumns: "12.5%, 87.5%",
                             gap: "0.5rem",
+                            m: "0 0 0.5rem 0",
+                            mx: "0",
+                            p: "0.5rem",
                             borderRadius: "0.75rem",
+                            backgroundColor: "#eeaae2",
+                            width: "100%",
                         }}
                     >
                         <Box gridColumn="1">
@@ -53,13 +64,26 @@ const StepsList = ({ steps }) => {
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
+                                    p: "0.25rem 0.5rem 0.25rem 0.5rem",
+                                    fontWeight: "bold",
+                                    background: "#eeceee",
+                                    borderRadius: "0.5rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    // width: "20%",
                                 }}
                             >
                                 {step.stepNum}
                             </Typography>
                         </Box>
                         <Box gridColumn="2">
-                            <Typography key={step._id}>
+                            <Typography
+                                key={step._id}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                }}
+                            >
                                 {step.stepMethod}
                             </Typography>
                         </Box>
