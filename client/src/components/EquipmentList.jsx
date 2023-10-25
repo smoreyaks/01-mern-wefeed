@@ -23,7 +23,7 @@ const EquipmentList = ({ equipment }) => {
     return (
         <Box
             sx={{
-                p: "0.25rem 0.5rem",
+                // p: "0.25rem 0.5rem",
                 m: "0.5rem 0",
                 backgroundColor: main,
                 borderRadius: "0.75rem",
