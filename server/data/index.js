@@ -1,30 +1,48 @@
 import mongoose from "mongoose";
 
 const userIds = [
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    new mongoose.Types.ObjectId(),
-    "651c2c05e043388a8c6ac57c",
+    "653895aab327ab8ea31b6925", // 0
+    "653895aab327ab8ea31b6926", // 1
+    "653895aab327ab8ea31b6927", // 2
+    "653895aab327ab8ea31b6928", // 3
+    "653895aab327ab8ea31b6929", // 4
+    "653895aab327ab8ea31b692a", // 5
+    "653895aab327ab8ea31b692b", // 6
+    "653895aab327ab8ea31b692c", // 7
+    "651c2c05e043388a8c6ac57c", // 8
+    "653895aab327ab8ea31b692d", // 9
+    "653895aab327ab8ea31b692e", // 10
+    "653895aab327ab8ea31b692f", // 11
+    "653895aab327ab8ea31b6930", // 12
+    "653895aab327ab8ea31b6931", // 13
+    "653895aab327ab8ea31b6932", // 14
+    "653895aab327ab8ea31b6933", // 15
+    "653895aab327ab8ea31b6934", // 16
+    "653895aab327ab8ea31b6935", // 17
+    "653895aab327ab8ea31b6936", // 18
+    "653895aab327ab8ea31b6937", // 19
+    "653895aab327ab8ea31b6938", // 20
+    "653895aab327ab8ea31b6939", // 21
+    "653895aab327ab8ea31b693a", // 22
+    "653895aab327ab8ea31b693b", // 23
+    "653895aab327ab8ea31b693c", // 24
 ];
 
 export const users = [
     {
         _id: userIds[0],
-        firstName: "test",
-        lastName: "me",
-        email: "aaaaaaa@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        firstName: "Susan",
+        lastName: "Wertz",
+        email: "cindy2015@yahoo.com",
+        password: "92e5cca20a09e6987b965777cad6d96f",
         picturePath: "p11.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "San Fran, CA",
         occupation: "Software Engineer",
         viewedProfile: 14561,
-        impressions: 888822,
         createdAt: 1115211422,
         updatedAt: 1115211422,
         __v: 0,
@@ -33,46 +51,52 @@ export const users = [
         _id: userIds[1],
         firstName: "Steve",
         lastName: "Ralph",
-        email: "thataaa@gmail.com",
-        password: "$!FEAS@!O)_IDJda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        email: "Steve.Ralph@email.com",
+        password: "504d0dc526306bc2c53697ee0f6c7d60",
         picturePath: "p3.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "New York, CA",
-        occupation: "Degenerate",
+        occupation: "Equipment Operator",
         viewedProfile: 12351,
-        impressions: 55555,
         createdAt: 1595589072,
         updatedAt: 1595589072,
         __v: 0,
     },
     {
         _id: userIds[2],
-        firstName: "Some",
-        lastName: "Guy",
-        email: "someguy@gmail.com",
-        password: "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        firstName: "Carolyn",
+        lastName: "McKinney",
+        email: "laron1993@hotmail.com",
+        password: "be88e241f5aaf1ae970c65efd043cc17",
         picturePath: "p4.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Canada, CA",
-        occupation: "Data Scientist Hacker",
+        occupation: "Chemical Engineer",
         viewedProfile: 45468,
-        impressions: 19986,
         createdAt: 1288090662,
         updatedAt: 1288090662,
         __v: 0,
     },
     {
         _id: userIds[3],
-        firstName: "Whatcha",
-        lastName: "Doing",
-        email: "whatchadoing@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        firstName: "Lina",
+        lastName: "Prichard",
+        email: "jerome_franec@yahoo.com",
+        password: "011fd93d28805e4073c9022337afc644",
         picturePath: "p6.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Korea, CA",
-        occupation: "Educator",
+        occupation: "Processing Machine Operator",
         viewedProfile: 41024,
-        impressions: 55316,
         createdAt: 1219214568,
         updatedAt: 1219214568,
         __v: 0,
@@ -81,14 +105,16 @@ export const users = [
         _id: userIds[4],
         firstName: "Jane",
         lastName: "Doe",
-        email: "janedoe@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        email: "jean.hudso1@yahoo.com",
+        password: "e7e60a78110a9519974f062d48cd64ed",
         picturePath: "p5.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Utah, CA",
-        occupation: "Hacker",
+        occupation: "Database Administrator",
         viewedProfile: 40212,
-        impressions: 7758,
         createdAt: 1493463661,
         updatedAt: 1493463661,
         __v: 0,
@@ -98,13 +124,15 @@ export const users = [
         firstName: "Harvey",
         lastName: "Dunn",
         email: "harveydunn@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        password: "6b68a6323af093283007784c6240cae8",
         picturePath: "p7.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Los Angeles, CA",
         occupation: "Journalist",
         viewedProfile: 976,
-        impressions: 4658,
         createdAt: 1381326073,
         updatedAt: 1381326073,
         __v: 0,
@@ -114,13 +142,15 @@ export const users = [
         firstName: "Carly",
         lastName: "Vowel",
         email: "carlyvowel@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        password: "07da63dab4b9de4c43a22808b9098fa4",
         picturePath: "p8.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Chicago, IL",
         occupation: "Nurse",
         viewedProfile: 1510,
-        impressions: 77579,
         createdAt: 1714704324,
         updatedAt: 1642716557,
         __v: 0,
@@ -130,46 +160,425 @@ export const users = [
         firstName: "Jessica",
         lastName: "Dunn",
         email: "jessicadunn@gmail.com",
-        password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+        password: "e7763816ab85341df512eaa03d2c27df",
         picturePath: "p9.jpeg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
         friends: [],
         location: "Washington, DC",
-        occupation: "A Student",
+        occupation: "Traffic Clerk",
         viewedProfile: 19420,
-        impressions: 82970,
         createdAt: 1369908044,
         updatedAt: 1359322268,
         __v: 0,
     },
     {
         _id: userIds[8],
-        firstName: "FakeFirst",
-        lastName: "FakeLast",
+        firstName: "Link of",
+        lastName: "Hyrule",
         email: "fakeuser@email.com",
         password:
             "$2b$10$U4zv/wq06/mQrzk7aR2xr.Zyrfqra3mVVxWK8MJMYSDJ3/TTe87BO",
         picturePath: "link-sunglasses.gif",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
         friends: [
-            "64eb62978d6fe23d068982bc",
-            "64eb62978d6fe23d068982bd",
-            "64eb62978d6fe23d068982b8",
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b692d",
+            "653895aab327ab8ea31b692e",
+            "653895aab327ab8ea31b692f",
+            "653895aab327ab8ea31b6930",
         ],
-        location: "Fake Town",
-        occupation: "Fake Job",
+        location: "Hyrule",
+        occupation: "Hero of Time",
         viewedProfile: 3156,
-        impressions: 8705,
         recipesPosted: 135,
         totalRecipeLikes: 652,
         userRecipeList: [],
-        createdAt: {
-            $date: "2023-10-03T14:58:13.789Z",
-        },
-        updatedAt: {
-            $date: "2023-10-04T05:10:19.541Z",
-        },
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
         __v: 3,
     },
+
+    //-------------------------------------------------------------------------------------//
+    //-------------------------------------------------------------------------------------//
+    //-------------------------------------------------------------------------------------//
+    // Fake Person Generator Users
+
+    // User Template
+    {
+        _id: userIds[9],
+        firstName: "Hannah",
+        lastName: "Middlebrooks",
+        email: "eliane2004@yahoo.com",
+        password: "07cab6e1dd91f8618b41e00e4679fec4",
+        picturePath: "f1.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Youngstown, Ohio, US",
+        occupation: "Glass Blower & Molder",
+        viewedProfile: 234,
+        recipesPosted: 16,
+        totalRecipeLikes: 464,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[10],
+        firstName: "Molly",
+        lastName: "Melton",
+        email: "amir2012@hotmail.com",
+        password: "34207929905f6716b514aaab072fec4d",
+        picturePath: "f2.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Hatch, Texas, US",
+        occupation: "Insurance Claims Clerk",
+        viewedProfile: 346,
+        recipesPosted: 13,
+        totalRecipeLikes: 23,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[11],
+        firstName: "Kur",
+        lastName: "Hintz",
+        email: "mohammad1987@gmail.com",
+        password: "76b6ff18fdb02fd33da50ad988fccede",
+        picturePath: "f3.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Albany, New York, US",
+        occupation: "Surveying & Mapping Technician",
+        viewedProfile: 243,
+        recipesPosted: 7,
+        totalRecipeLikes: 7,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[12],
+        firstName: "Patricia",
+        lastName: "Lin",
+        email: "haven20092000@yahoo.com",
+        password: "30a8dc367bd3fa27876463af71d98e46",
+        picturePath: "f4.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Weehawken, New Jersey, US",
+        occupation: "Storage & Distribution Manager",
+        viewedProfile: 127,
+        recipesPosted: 28,
+        totalRecipeLikes: 124,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[13],
+        firstName: "Mary",
+        lastName: "Remillard",
+        email: "jeffrey.jakubows@hotmail.com",
+        password: "b183458c7aac47f912668f3c1fbf216f",
+        picturePath: "f5.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Pomona, California, US",
+        occupation: "Product Marketer",
+        viewedProfile: 1245,
+        recipesPosted: 31,
+        totalRecipeLikes: 678,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[14],
+        firstName: "Edwin",
+        lastName: "Johnson",
+        email: "verlie2016@gmail.com",
+        password: "a53d8538db19b5d352cab5984d650c4f",
+        picturePath: "m1.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Harrisburg, Pennsylvania, US",
+        occupation: "Correctional Officer",
+        viewedProfile: 999,
+        recipesPosted: 9,
+        totalRecipeLikes: 25,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[15],
+        firstName: "Naomi",
+        lastName: "Cortes",
+        email: "napoleon.gorcza@gmail.com",
+        password: "bcbc9e570f0a9bb7916d322c03089513",
+        picturePath: "f6.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Bakersfield, California, US",
+        occupation: "Recreation Worker",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[16],
+        firstName: "Annika",
+        lastName: "Pierce",
+        email: "henderson_zula@hotmail.com",
+        password: "f79a5793bdd55dd9cfa7d8ecf746a6a8",
+        picturePath: "f7.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Phoenix, Arizona, US",
+        occupation: "Insurance Appraiser",
+        viewedProfile: 747,
+        recipesPosted: 166,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[17],
+        firstName: "Flora",
+        lastName: "Jones",
+        email: "edmund1992@hotmail.com",
+        password: "53b72db146a618fc8c51be1ac9330e60",
+        picturePath: "f8.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Sudbury, Massachusetts, US",
+        occupation: "Social Worker",
+        viewedProfile: 74,
+        recipesPosted: 23,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[18],
+        firstName: "Valerie",
+        lastName: "Osborn",
+        email: "herta.maye0@yahoo.com",
+        password: "56634e9ebcddb8029b1553c6318436c3",
+        picturePath: "f9.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "OHS Auditor",
+        occupation: "Westbrook, Maine, US",
+        viewedProfile: 47,
+        recipesPosted: 6,
+        totalRecipeLikes: 111,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[19],
+        firstName: "Robert",
+        lastName: "Pahl",
+        email: "hyman_schoe5@yahoo.com",
+        password: "21d13480a515095ddb78e5ad9a192e28",
+        picturePath: "m2.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Plantation, Florida, US",
+        occupation: "Special Education Teacher",
+        viewedProfile: 747,
+        recipesPosted: 9,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[20],
+        firstName: "Mark",
+        lastName: "Higgins",
+        email: "florian.upt@yahoo.com",
+        password: "e132aa4d52c40c505943681da5c1fd9d",
+        picturePath: "m3.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Huntsville, Alabama, US",
+        occupation: "Vocational Nurse",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 111,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[21],
+        firstName: "Daniel",
+        lastName: "King",
+        email: "marianna_ha@hotmail.com",
+        password: "a3b4278f026fab7f825ad7329a4c9bd2",
+        picturePath: "m4.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Stockton, California, US",
+        occupation: "Retail Sales",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 20,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[22],
+        firstName: "Craig",
+        lastName: "Stone",
+        email: "cstone@email.com",
+        password: "64f9c1b7625612h4765263c03f9031ee",
+        picturePath: "m5.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Chignik, Alaska, US",
+        occupation: "Plumber",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[23],
+        firstName: "Travis",
+        lastName: "Denzer",
+        email: "wayne2014@hotmail.com",
+        password: "64f9c1b762561a73244263c03f9031ee",
+        picturePath: "m6.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Houston, Texas, US",
+        occupation: "Industrial Production Manager",
+        viewedProfile: 747,
+        recipesPosted: 14,
+        totalRecipeLikes: 245,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
+
+    // User Template
+    {
+        _id: userIds[24],
+        firstName: "Wilbur",
+        lastName: "Boyd",
+        email: "fredy1981@gmail.com",
+        password: "8b491cc7b62a6ad061ce979a6b4964dc",
+        picturePath: "m7.jpg",
+        backgroundThemeImg:
+            "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
+
+        friends: [],
+        location: "Owensboro, Kentucky, US",
+        occupation: "Solderer & Brazer",
+        viewedProfile: 747,
+        recipesPosted: 24,
+        totalRecipeLikes: 55,
+        userRecipeList: [],
+        createdAt: 1369908044,
+        updatedAt: 1359322268,
+        __v: 0,
+    },
 ];
+
+// All Posts
 
 export const posts = [
     {
