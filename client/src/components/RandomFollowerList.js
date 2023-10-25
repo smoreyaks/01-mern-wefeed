@@ -29,17 +29,27 @@ const userIds = [
 const numberOfUsers = userIds.length;
 console.log("NUMBER OF USERS:", numberOfUsers);
 
-let userArray = [];
+let friendLengthArray = [];
+let numberOfUserFriends;
 
 for (let i = 0; i < numberOfUsers; i++) {
-    let numberOfUserFriends;
     numberOfUserFriends = Math.floor(Math.random() * userIds.length) + 1;
     console.log(
-        `${numberOfUserFriends} Number of Friends:`,
+        `Pushing ${numberOfUserFriends} into array:`,
         numberOfUserFriends
     );
-    userArray.push(numberOfUserFriends);
-    console.log("UA:", userArray);
+    friendLengthArray.push(numberOfUserFriends);
+    console.log("UA:", friendLengthArray);
+    console.log("-------------------------------");
+}
+
+let arrayOfArrays = [];
+
+for (let i = 0; i < friendLengthArray.length; i++) {
+    for (let j = 0; j < friendLengthArray[i]; j++) {
+        arrayOfArrays.push(userIds[j]);
+        console.log("AoA:", arrayOfArrays);
+    }
 }
 
 // console.log("ARR: ", numberOfUserFriends);
