@@ -22,14 +22,14 @@ const IngredientList = ({ ingredients }) => {
     return (
         <Box
             sx={{
-                p: "0.25rem 0.5rem",
+                // p: "0.25rem",
                 m: "0.5rem 0",
                 backgroundColor: main,
                 borderRadius: "0.75rem",
             }}
         >
             <FlexBetween>
-                <Typography p=".5rem 0" variant="h5" borderRadius="0.75rem">
+                <Typography variant="h5" borderRadius="0.75rem">
                     Ingredients
                 </Typography>
                 <IconButton
