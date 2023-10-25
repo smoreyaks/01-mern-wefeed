@@ -39,7 +39,11 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+        ],
         location: "San Fran, CA",
         occupation: "Software Engineer",
         viewedProfile: 14561,
@@ -57,7 +61,12 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+        ],
         location: "New York, CA",
         occupation: "Equipment Operator",
         viewedProfile: 12351,
@@ -75,7 +84,13 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+        ],
         location: "Canada, CA",
         occupation: "Chemical Engineer",
         viewedProfile: 45468,
@@ -93,7 +108,12 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+        ],
         location: "Korea, CA",
         occupation: "Processing Machine Operator",
         viewedProfile: 41024,
@@ -111,7 +131,17 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+        ],
         location: "Utah, CA",
         occupation: "Database Administrator",
         viewedProfile: 40212,
@@ -129,7 +159,14 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+        ],
         location: "Los Angeles, CA",
         occupation: "Journalist",
         viewedProfile: 976,
@@ -147,7 +184,15 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+        ],
         location: "Chicago, IL",
         occupation: "Nurse",
         viewedProfile: 1510,
@@ -220,7 +265,17 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+        ],
         location: "Youngstown, Ohio, US",
         occupation: "Glass Blower & Molder",
         viewedProfile: 234,
@@ -243,7 +298,18 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+            "653895aab327ab8ea31b692d",
+        ],
         location: "Hatch, Texas, US",
         occupation: "Insurance Claims Clerk",
         viewedProfile: 346,
@@ -266,7 +332,19 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+            "653895aab327ab8ea31b692d",
+            "653895aab327ab8ea31b692e",
+        ],
         location: "Albany, New York, US",
         occupation: "Surveying & Mapping Technician",
         viewedProfile: 243,
@@ -289,7 +367,20 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+            "653895aab327ab8ea31b692d",
+            "653895aab327ab8ea31b692e",
+            "653895aab327ab8ea31b692f",
+        ],
         location: "Weehawken, New Jersey, US",
         occupation: "Storage & Distribution Manager",
         viewedProfile: 127,
@@ -312,7 +403,23 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+            "653895aab327ab8ea31b692d",
+            "653895aab327ab8ea31b692e",
+            "653895aab327ab8ea31b692f",
+            "653895aab327ab8ea31b693a", // 22
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+        ],
         location: "Pomona, California, US",
         occupation: "Product Marketer",
         viewedProfile: 1245,
@@ -335,7 +442,17 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b692f", // 11
+            "653895aab327ab8ea31b6930", // 12
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+            "653895aab327ab8ea31b6935", // 17
+            "653895aab327ab8ea31b6936", // 18
+            "653895aab327ab8ea31b6937", // 19
+        ],
         location: "Harrisburg, Pennsylvania, US",
         occupation: "Correctional Officer",
         viewedProfile: 999,
@@ -358,7 +475,16 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6937", // 19
+            "653895aab327ab8ea31b6938", // 20
+            "653895aab327ab8ea31b6939", // 21
+            "653895aab327ab8ea31b693a", // 22
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b6925", // 0
+            "653895aab327ab8ea31b6926", // 1
+            "653895aab327ab8ea31b6927", // 2
+        ],
         location: "Bakersfield, California, US",
         occupation: "Recreation Worker",
         viewedProfile: 747,
@@ -381,7 +507,24 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925",
+            "653895aab327ab8ea31b6926",
+            "653895aab327ab8ea31b6927",
+            "653895aab327ab8ea31b6928",
+            "653895aab327ab8ea31b6929",
+            "653895aab327ab8ea31b692a",
+            "653895aab327ab8ea31b692b",
+            "653895aab327ab8ea31b692c",
+            "651c2c05e043388a8c6ac57c",
+            "653895aab327ab8ea31b692d",
+            "653895aab327ab8ea31b692e",
+            "653895aab327ab8ea31b692f",
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+        ],
         location: "Phoenix, Arizona, US",
         occupation: "Insurance Appraiser",
         viewedProfile: 747,
@@ -404,7 +547,17 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b692c", // 7
+            "651c2c05e043388a8c6ac57c", // 8
+            "653895aab327ab8ea31b692d", // 9
+            "653895aab327ab8ea31b692e", // 10
+            "653895aab327ab8ea31b692f", // 11
+            "653895aab327ab8ea31b6930", // 12
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+            "653895aab327ab8ea31b6933", // 15
+        ],
         location: "Sudbury, Massachusetts, US",
         occupation: "Social Worker",
         viewedProfile: 74,
@@ -427,7 +580,20 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925", // 0
+            "653895aab327ab8ea31b6926", // 1
+            "653895aab327ab8ea31b6927", // 2
+            "653895aab327ab8ea31b692e", // 10
+            "653895aab327ab8ea31b692f", // 11
+            "653895aab327ab8ea31b6930", // 12
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+        ],
         location: "OHS Auditor",
         occupation: "Westbrook, Maine, US",
         viewedProfile: 47,
@@ -450,7 +616,18 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925", // 0
+            "653895aab327ab8ea31b6926", // 1
+            "653895aab327ab8ea31b6927", // 2
+            "653895aab327ab8ea31b692b", // 6
+            "653895aab327ab8ea31b692c", // 7
+            "651c2c05e043388a8c6ac57c", // 8
+            "653895aab327ab8ea31b692d", // 9
+            "653895aab327ab8ea31b6934", // 16
+            "653895aab327ab8ea31b6935", // 17
+            "653895aab327ab8ea31b6936", // 18
+        ],
         location: "Plantation, Florida, US",
         occupation: "Special Education Teacher",
         viewedProfile: 747,
@@ -473,7 +650,19 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6925", // 0
+            "653895aab327ab8ea31b6926", // 1
+            "653895aab327ab8ea31b6936", // 18
+            "653895aab327ab8ea31b6937", // 19
+            "653895aab327ab8ea31b6938", // 20
+            "653895aab327ab8ea31b6939", // 21
+            "653895aab327ab8ea31b693a", // 22
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+            "651c2c05e043388a8c6ac57c", // 8
+            "653895aab327ab8ea31b692d", // 9
+        ],
         location: "Huntsville, Alabama, US",
         occupation: "Vocational Nurse",
         viewedProfile: 747,
@@ -496,7 +685,15 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+            "653895aab327ab8ea31b6935", // 17
+            "653895aab327ab8ea31b692a", // 5
+            "653895aab327ab8ea31b692b", // 6
+            "653895aab327ab8ea31b692c", // 7
+            "653895aab327ab8ea31b6925", // 0
+        ],
         location: "Stockton, California, US",
         occupation: "Retail Sales",
         viewedProfile: 747,
@@ -519,7 +716,27 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6929", // 4
+            "653895aab327ab8ea31b692a", // 5
+            "653895aab327ab8ea31b692b", // 6
+            "653895aab327ab8ea31b692c", // 7
+            "651c2c05e043388a8c6ac57c", // 8
+            "653895aab327ab8ea31b692d", // 9
+            "653895aab327ab8ea31b692e", // 10
+            "653895aab327ab8ea31b692f", // 11
+            "653895aab327ab8ea31b6930", // 12
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+            "653895aab327ab8ea31b6933", // 15
+            "653895aab327ab8ea31b6934", // 16
+            "653895aab327ab8ea31b6935", // 17
+            "653895aab327ab8ea31b6936", // 18
+            "653895aab327ab8ea31b6937", // 19
+            "653895aab327ab8ea31b6938", // 20
+            "653895aab327ab8ea31b6939", // 21
+            "653895aab327ab8ea31b693a", // 22
+        ],
         location: "Chignik, Alaska, US",
         occupation: "Plumber",
         viewedProfile: 747,
@@ -565,7 +782,18 @@ export const users = [
         backgroundThemeImg:
             "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg",
 
-        friends: [],
+        friends: [
+            "653895aab327ab8ea31b6929", // 4
+            "653895aab327ab8ea31b692a", // 5
+            "653895aab327ab8ea31b692b", // 6
+            "653895aab327ab8ea31b692c", // 7
+            "651c2c05e043388a8c6ac57c", // 8
+            "653895aab327ab8ea31b693a", // 22
+            "653895aab327ab8ea31b693b", // 23
+            "653895aab327ab8ea31b693c", // 24
+            "653895aab327ab8ea31b6931", // 13
+            "653895aab327ab8ea31b6932", // 14
+        ],
         location: "Owensboro, Kentucky, US",
         occupation: "Solderer & Brazer",
         viewedProfile: 747,
@@ -839,6 +1067,7 @@ export const recipes = [
             },
         ],
     },
+
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[8],
@@ -1051,6 +1280,8 @@ export const recipes = [
             },
         ],
     },
+
+    console.log("DATA USER ID:", userIds[8]),
 
     // // Recipe Data Template
     // {
