@@ -114,7 +114,12 @@ const RecipePostWidget = ({
                 {title}
             </Typography>
 
-            <Box display="flex" justifyContent="flex-start" gap="1rem">
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                margin="0.5rem 0"
+                padding="0.5rem 0"
+            >
                 {/* Prep Time */}
                 <Typography
                     sx={{
@@ -122,7 +127,7 @@ const RecipePostWidget = ({
                         borderRadius: ".75rem",
                         display: "flex",
                         alignItems: "center",
-                        p: "0.25rem 0.5rem 0.25rem 0.5rem",
+                        // p: "0.25rem 0.5rem 0.25rem 0.5rem",
                     }}
                 >
                     Prep: {prepTime}
@@ -132,7 +137,7 @@ const RecipePostWidget = ({
                     sx={{
                         backgroundColor: main,
                         borderRadius: ".75rem",
-                        padding: "0.5rem",
+                        // padding: "0.5rem",
                     }}
                 >
                     Cook: {cookTime}
@@ -143,7 +148,7 @@ const RecipePostWidget = ({
                     sx={{
                         backgroundColor: main,
                         borderRadius: ".75rem",
-                        padding: "0.5rem",
+                        // padding: "0.5rem",
                         display: "flex",
                         alignItems: "center",
                     }}
@@ -157,7 +162,7 @@ const RecipePostWidget = ({
                     sx={{
                         backgroundColor: main,
                         borderRadius: ".75rem",
-                        padding: "0.5rem",
+                        padding: "0 0.75rem",
                         display: "flex",
                         alignItems: "center",
                     }}
@@ -178,6 +183,8 @@ const RecipePostWidget = ({
                     src={`http://localhost:3006/assets/recipeImg/${picturePath}`}
                 />
             )}
+
+            {/* Recipe Interactions */}
             <FlexBetween mt="0.25rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
@@ -187,26 +194,15 @@ const RecipePostWidget = ({
                         ) : (
                             <FavoriteBorderOutlined />
                         )}
+                        <Typography pl="0.5rem">{likeCount}</Typography>
                     </IconButton>
-                    <Typography>{likeCount}</Typography>
                 </FlexBetween>
 
                 {/* Comments */}
                 <FlexBetween gap="0.3rem">
                     <IconButton onClick={() => setIsComments(!isComments)}>
                         <CommentIcon />
-                    </IconButton>
-                    <Typography>{comments.length}</Typography>
-                </FlexBetween>
-
-                {/* Save Recipe to List */}
-                <FlexBetween gap="0.3rem">
-                    <IconButton onClick={() => setIsSaved(!isSaved)}>
-                        {isSaved ? (
-                            <PlaylistAddCheckIcon />
-                        ) : (
-                            <PlaylistAddOutlinedIcon />
-                        )}
+                        <Typography pl="0.5rem">{comments.length}</Typography>
                     </IconButton>
                 </FlexBetween>
 
@@ -220,8 +216,24 @@ const RecipePostWidget = ({
                         ) : (
                             <RecordVoiceOverIcon />
                         )}
+                        <Typography pl="0.5rem">
+                            {recommendations.length}
+                        </Typography>
                     </IconButton>
                 </FlexBetween>
+
+                {/* Save Recipe to List */}
+                <FlexBetween gap="0.3rem">
+                    <IconButton onClick={() => setIsSaved(!isSaved)}>
+                        {isSaved ? (
+                            <PlaylistAddCheckIcon />
+                        ) : (
+                            <PlaylistAddOutlinedIcon />
+                        )}
+                    </IconButton>
+                </FlexBetween>
+
+                {/* Share Recipe */}
                 <FlexBetween gap="0.3rem">
                     <IconButton>
                         <ShareOutlined />
