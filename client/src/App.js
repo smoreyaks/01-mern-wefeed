@@ -34,7 +34,7 @@ function App() {
     const [user, setUser] = useState(null);
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3006/users/${_id}`, {
+        const response = await fetch(`https://server-vukx.onrender.com/users/${_id}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });
@@ -65,7 +65,7 @@ function App() {
 
     return (
         <CardMedia
-            src={`http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg}`}
+            src={`https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg}`}
         >
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -73,7 +73,7 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                backgroundImage: `url(http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg})`,
+                                backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
                                 margin: 0,
                                 padding: 0,
                             },
@@ -83,7 +83,7 @@ function App() {
                         enableColorScheme
                         sx={{
                             backgroundColor: backgroundThemeColor,
-                            backgroundImage: `url(http://localhost:3006/assets/dessertThemeImg/${backgroundThemeImg})`,
+                            backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
                         }}
                     >
                         <Routes>
