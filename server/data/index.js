@@ -958,7 +958,7 @@ export const recipes = [
         lastName: "FakeLast",
         userPicturePath: "link-sunglasses.gif",
 
-        title: "Crispy Beef & Shitake Noodles",
+        recipeTitle: "Crispy Beef & Shitake Noodles",
         picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
         ingredients: [
@@ -1075,7 +1075,7 @@ export const recipes = [
         lastName: "FakeLast",
         userPicturePath: "link-sunglasses.gif",
 
-        title: "One-Pan Creamy Chicken & Gnocchi",
+        recipeTitle: "One-Pan Creamy Chicken & Gnocchi",
         picturePath:
             "210623-delish-quarterly-creamy-chicken-gnocchi-horizontal-0258-eb-1625174322.jpg",
 
@@ -1184,7 +1184,7 @@ export const recipes = [
         lastName: "Vowel",
         userPicturePath: "p8.jpeg",
 
-        title: "Honey-Garlic Glazed Salmon",
+        recipeTitle: "Honey-Garlic Glazed Salmon",
         picturePath: "1506456214-delish-honey-garlic-glazed-salmon.jpg",
 
         ingredients: [
@@ -1291,7 +1291,7 @@ export const recipes = [
     //     lastName: "XXXXXXXXXXXX",
     //     userPicturePath: "XXXXXXXXXXXX",
 
-    //     title: "XXXXXXXXXXXX",
+    //     recipeTitle: "XXXXXXXXXXXX",
     //     picturePath: "XXXXXXXXXXXX",
 
     //     ingredients: [
