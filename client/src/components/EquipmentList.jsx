@@ -11,7 +11,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 // Components
 import FlexBetween from "./FlexBetween";
 
-const EquipmentList = ({ equipment }) => {
+const EquipmentList = ({ equipment, themeColors }) => {
     // State
     const [equipmentListOpen, setEquipmentListOpen] = useState(false);
 
@@ -19,7 +19,7 @@ const EquipmentList = ({ equipment }) => {
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
-
+    const { headingText, recipeText, recipeStepsPanel } = themeColors;
     return (
         <Box
             sx={{
@@ -29,16 +29,29 @@ const EquipmentList = ({ equipment }) => {
                 borderRadius: "0.75rem",
             }}
         >
-            <FlexBetween>
-                <Typography p=".5rem 0" variant="h5" borderRadius="0.75rem">
-                    Equipment
-                </Typography>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    background: recipeStepsPanel,
+                    borderRadius: "0.75rem",
+                    p: "0.5rem",
+                }}
+            >
                 <IconButton
                     onClick={() => setEquipmentListOpen(!equipmentListOpen)}
                 >
+                    <Typography
+                        p="0.5rem 0"
+                        variant="h5"
+                        borderRadius="0.75rem"
+                    >
+                        Equipment
+                    </Typography>
                     {equipmentListOpen ? <RemoveIcon /> : <AddIcon />}
                 </IconButton>
-            </FlexBetween>
+            </Box>
             {equipment.map((equip) =>
                 equipmentListOpen ? (
                     <Box
