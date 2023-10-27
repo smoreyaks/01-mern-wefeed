@@ -69,7 +69,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                     firstName,
                     lastName,
                     userPicturePath,
-                    title,
+                    recipeTitle,
                     picturePath,
                     ingredients,
                     equipment,
@@ -93,7 +93,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                         recipeUserId={userId}
                         name={`${firstName} ${lastName}`}
                         userPicturePath={userPicturePath}
-                        title={title}
+                        recipeTitle={recipeTitle}
                         picturePath={picturePath}
                         ingredients={ingredients}
                         equipment={equipment}
