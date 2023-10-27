@@ -13,11 +13,13 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
 
+    // Theme
     const { palette } = useTheme();
     const primaryLight = palette.default.primary.light;
     const primaryDark = palette.default.primary.dark;
     const main = palette.default.neutral.main;
     const medium = palette.default.neutral.medium;
+    const headingText = palette.default.neutral;
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
@@ -47,19 +49,19 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                     }}
                 >
                     <Typography
-                        color={main}
+                        color={headingText}
                         variant="h5"
                         fontWeight="500"
                         sx={{
                             "&:hover": {
-                                color: palette.default.primary.light,
+                                color: palette.default.primaryTwo.main,
                                 cursor: "pointer",
                             },
                         }}
                     >
                         {name}
                     </Typography>
-                    <Typography color={medium} fontSize="0.75rem">
+                    <Typography color={headingText} fontSize="0.75rem">
                         {subtitle}
                     </Typography>
                 </Box>
