@@ -18,7 +18,7 @@ const RecipeSchema = mongoose.Schema({
         required: true,
     },
     userPicturePath: String,
-    title: {
+    recipeTitle: {
         type: String,
         required: true,
     },
