@@ -2,7 +2,14 @@
 import { useState } from "react";
 
 // MUI Components
-import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import {
+    Box,
+    Button,
+    Divider,
+    IconButton,
+    Typography,
+    useTheme,
+} from "@mui/material";
 
 // MUI Icons
 import AddIcon from "@mui/icons-material/Add";
@@ -11,13 +18,14 @@ import RemoveIcon from "@mui/icons-material/Remove";
 // Components
 import FlexBetween from "./FlexBetween";
 
-const IngredientList = ({ ingredients }) => {
+const IngredientList = ({ ingredients, themeColors }) => {
     const [ingredientListOpen, setIngredientListOpen] = useState(false);
 
     // Theme
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
+    const { headingText, recipeText, recipeStepsPanel } = themeColors;
 
     return (
         <Box
@@ -28,16 +36,35 @@ const IngredientList = ({ ingredients }) => {
                 borderRadius: "0.75rem",
             }}
         >
-            <FlexBetween>
-                <Typography variant="h5" borderRadius="0.75rem">
-                    Ingredients
-                </Typography>
-                <IconButton
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    background: recipeStepsPanel,
+                    borderRadius: "0.75rem",
+                }}
+            >
+                <Button
                     onClick={() => setIngredientListOpen(!ingredientListOpen)}
+                    fullwidth
                 >
-                    {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
-                </IconButton>
-            </FlexBetween>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                        }}
+                    >
+                        <Typography p="0.5rem" variant="h5">
+                            Ingredients
+                        </Typography>
+                        <Box>
+                            {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
+                        </Box>
+                    </Box>
+                </Button>
+            </Box>
             {ingredients.map((ingredient) =>
                 ingredientListOpen ? (
                     <Box
