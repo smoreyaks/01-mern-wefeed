@@ -39,7 +39,7 @@ const RecipePostWidget = ({
     recipeUserId,
     name,
     userPicturePath,
-    title,
+    recipeTitle,
     picturePath,
     ingredients,
     equipment,
@@ -66,7 +66,15 @@ const RecipePostWidget = ({
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
+    const headingText = palette.default.neutral;
+    const recipeText = palette.default.neutral.main;
+    const recipeStepsPanel = palette.default.primary.light;
+    const followerIconOutline = palette.default.neutral.main;
+    const followerIconBack = palette.default.neutral.main;
+    const recipeTextPanel = palette.default.neutral.main;
+    const mainBackPanel = palette.default.neutral.main;
 
+    const themeColors = { headingText, recipeText, recipeStepsPanel };
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
@@ -100,18 +108,18 @@ const RecipePostWidget = ({
                 userPicturePath={userPicturePath}
             />
             <Typography
-                color={main}
+                color={headingText}
                 variant="h5"
                 fontWeight="500"
                 sx={{
                     "&:hover": {
-                        color: palette.default.primary.light,
+                        color: palette.default.primaryTwo.main,
                         cursor: "pointer",
                     },
                     m: "1rem 0",
                 }}
             >
-                {title}
+                {recipeTitle}
             </Typography>
 
             <Box
@@ -171,9 +179,12 @@ const RecipePostWidget = ({
                     <Typography sx={{ pl: "0.25rem" }}>{spiceLevel}</Typography>
                 </Box>
             </Box>
-            <EquipmentList equipment={equipment} />
-            <IngredientList ingredients={ingredients} />
-            <StepsList steps={steps} />
+            <EquipmentList equipment={equipment} themeColors={themeColors} />
+            <IngredientList
+                ingredients={ingredients}
+                themeColors={themeColors}
+            />
+            <StepsList steps={steps} themeColors={themeColors} />
             {picturePath && (
                 <img
                     width="100%"
