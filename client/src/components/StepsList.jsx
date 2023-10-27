@@ -11,37 +11,47 @@ import RemoveIcon from "@mui/icons-material/Remove";
 // Components
 import FlexBetween from "./FlexBetween";
 
-const StepsList = ({ steps }) => {
+const StepsList = ({ steps, themeColors }) => {
     const [stepsListOpen, setStepsListOpen] = useState(false);
 
     // Theme
     const { palette } = useTheme();
+    const { headingText, recipeText, recipeStepsPanel } = themeColors;
+
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
 
     return (
+        // Steps Back
         <Box
             sx={{
                 // p: "0.25rem 0",
                 m: "0.5rem 0 0.5rem 0",
-                backgroundColor: main,
+                // backgroundColor: recipeStepsPanel,
                 borderRadius: "0.75rem",
             }}
         >
-            <FlexBetween>
-                <Typography
-                    p="0.5rem 0"
-                    variant="h5"
-                    borderRadius="0.75rem"
-                    display="flex"
-                    alignItems="flex-start"
-                >
-                    Steps
-                </Typography>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    background: recipeStepsPanel,
+                    borderRadius: "0.75rem",
+                }}
+            >
                 <IconButton onClick={() => setStepsListOpen(!stepsListOpen)}>
+                    <Typography
+                        p="0.5rem"
+                        variant="h5"
+                        display="flex"
+                        alignItems="flex-start"
+                    >
+                        Steps
+                    </Typography>
                     {stepsListOpen ? <RemoveIcon /> : <AddIcon />}
                 </IconButton>
-            </FlexBetween>
+            </Box>
             {steps.map((step) =>
                 stepsListOpen ? (
                     <Box
