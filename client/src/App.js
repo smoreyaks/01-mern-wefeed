@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 import {
     Box,
     CardMedia,
-    CssBaseline,
     GlobalStyles,
     ScopedCssBaseline,
     ThemeProvider,
@@ -19,6 +18,8 @@ import {
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 import Background from "./components/Background";
+
+import backgroundThemeImg from "./assets/vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg";
 
 function App() {
     const mode = useSelector((state) => state.mode);
@@ -34,14 +35,18 @@ function App() {
     const [user, setUser] = useState(null);
 
     const getUser = async () => {
-        const response = await fetch(`https://server-vukx.onrender.com/users/${_id}`, {
-            method: "GET",
-            headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await fetch(
+            `https://server-vukx.onrender.com/users/${_id}`,
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
         const data = await response.json();
         setUser(data);
         console.log("UserWidget.js - DATA - ", data);
     };
+
     useEffect(() => {
         getUser();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -59,13 +64,17 @@ function App() {
         viewedProfile,
         impressions,
         friends,
-        backgroundThemeImg,
+        // backgroundThemeImg,
     } = user;
     console.log("THEME_IMG:", backgroundThemeImg);
 
     return (
         <CardMedia
-            src={`https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg}`}
+            src={
+                // `https://server-vukx.onrender.com/assets/dessertThemeImg/${
+                backgroundThemeImg
+                // }`
+            }
         >
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -73,7 +82,8 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
+                                background: `url(${backgroundThemeImg})`,
+                                // background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
                                 margin: 0,
                                 padding: 0,
                             },
@@ -83,7 +93,8 @@ function App() {
                         enableColorScheme
                         sx={{
                             backgroundColor: backgroundThemeColor,
-                            backgroundImage: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
+                            background: `url(${backgroundThemeImg})`,
+                            // background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
                         }}
                     >
                         <Routes>
