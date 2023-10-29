@@ -97,7 +97,7 @@ export const colorTokens = {
     burger: {
         brown: {
             200: "#DCC38A", // Ecru             (Beige)
-            1000: "#56463C", // Umber           (Brown)
+            1000: "#56463C", // Umber            (Brown)
         },
         red: {
             300: "#E4572E", // Flame            (Red/Orange)
@@ -122,20 +122,8 @@ export const themeSettings = (mode) => {
                       default: {
                           primary: {
                               dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.teal[400],
+                              main: colorTokens.cupcake.teal[200],
                               light: colorTokens.cupcake.teal[100],
-                          },
-                          primaryOne: {
-                              dark: colorTokens.cupcake.teal[400],
-                              main: colorTokens.cupcake.teal[300],
-                              light: colorTokens.cupcake.teal[200],
-                              lightest: colorTokens.cupcake.teal[100],
-                          },
-                          primaryTwo: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.pink[200],
-                              light: colorTokens.cupcake.pink[100],
-                              lightest: colorTokens.cupcake.pink[0],
                           },
                           neutral: {
                               dark: colorTokens.cupcake.pink[300],
