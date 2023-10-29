@@ -64,17 +64,25 @@ const RecipePostWidget = ({
 
     // Theme
     const { palette } = useTheme();
-    const main = palette.default.neutral.main;
+    const whiteText = palette.default.neutral.main;
+    const textHover = palette.default.primaryTwo.main;
     const primary = palette.default.primary.main;
-    const headingText = palette.default.neutral;
+    const headingText = palette.default.neutral.white;
     const recipeText = palette.default.neutral.main;
     const recipeStepsPanel = palette.default.primary.light;
-    const followerIconOutline = palette.default.neutral.main;
-    const followerIconBack = palette.default.neutral.main;
+    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconBack = palette.default.primaryOne.main;
+    const followerIconBackHover = palette.default.primaryOne.light;
     const recipeTextPanel = palette.default.neutral.main;
     const mainBackPanel = palette.default.neutral.main;
 
-    const themeColors = { headingText, recipeText, recipeStepsPanel };
+    const themeColors = {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        whiteText,
+    };
+
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
@@ -106,6 +114,7 @@ const RecipePostWidget = ({
                 friendId={recipeUserId}
                 name={name}
                 userPicturePath={userPicturePath}
+                themeColors={themeColors}
             />
             <Typography
                 color={headingText}
@@ -113,7 +122,7 @@ const RecipePostWidget = ({
                 fontWeight="500"
                 sx={{
                     "&:hover": {
-                        color: palette.default.primaryTwo.main,
+                        color: textHover,
                         cursor: "pointer",
                     },
                     m: "1rem 0",
@@ -131,7 +140,7 @@ const RecipePostWidget = ({
                 {/* Prep Time */}
                 <Typography
                     sx={{
-                        backgroundColor: main,
+                        backgroundColor: whiteText,
                         borderRadius: ".75rem",
                         display: "flex",
                         alignItems: "center",
@@ -143,7 +152,7 @@ const RecipePostWidget = ({
                 {/* Cook Time */}
                 <Typography
                     sx={{
-                        backgroundColor: main,
+                        backgroundColor: whiteText,
                         borderRadius: ".75rem",
                         // padding: "0.5rem",
                     }}
@@ -154,7 +163,7 @@ const RecipePostWidget = ({
                 {/* Servings */}
                 <Box
                     sx={{
-                        backgroundColor: main,
+                        backgroundColor: whiteText,
                         borderRadius: ".75rem",
                         // padding: "0.5rem",
                         display: "flex",
@@ -168,7 +177,7 @@ const RecipePostWidget = ({
                 {/* Spice Level */}
                 <Box
                     sx={{
-                        backgroundColor: main,
+                        backgroundColor: whiteText,
                         borderRadius: ".75rem",
                         padding: "0 0.75rem",
                         display: "flex",
@@ -258,7 +267,11 @@ const RecipePostWidget = ({
                         <Box key={`${name}-${i}`}>
                             <Divider />
                             <Typography
-                                sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}
+                                sx={{
+                                    color: whiteText,
+                                    m: "0.5rem 0",
+                                    pl: "1rem",
+                                }}
                             >
                                 {/* {`${user.findById(comment.userId)}`} */}
                                 {comment.commentText}
