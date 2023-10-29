@@ -6,8 +6,36 @@ import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
 import RecipesFeedWidget from "../widgets/RecipesFeedWidget";
 import AdvertWidget from "../widgets/AdvertWidget";
 import FriendListWidget from "../widgets/FriendListWidget";
+import { useTheme } from "@emotion/react";
 
 const HomePage = () => {
+    // Theme
+    const { palette } = useTheme();
+    const whiteText = palette.default.neutralGrey.white;
+    const textHover = palette.default.primaryTwo.main;
+    const primary = palette.default.primary.main;
+    const headingText = palette.default.neutral.white;
+    const recipeText = palette.default.neutral.main;
+    const recipeStepsPanel = palette.default.primary.light;
+    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconBack = palette.default.primaryOne.main;
+    const followerIconBackHover = palette.default.primaryOne.light;
+    const recipeTextPanel = palette.default.neutral.main;
+    const mainBackPanel = palette.default.neutral.main;
+
+    const themeColors = {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        textHover,
+        whiteText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
+    };
+
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
     // console.log("BG_IMAGE:", backgroundThemeImg);
@@ -25,13 +53,20 @@ const HomePage = () => {
                 justifyContent="space-between"
             >
                 <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
-                    <UserWidget userId={_id} picturePath={picturePath} />
+                    <UserWidget
+                        userId={_id}
+                        picturePath={picturePath}
+                        themeColors={themeColors}
+                    />
                 </Box>
                 <Box
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    <CreateRecipeWidget picturePath={picturePath} />
+                    <CreateRecipeWidget
+                        picturePath={picturePath}
+                        themeColors={themeColors}
+                    />
                     <RecipesFeedWidget userId={_id} />
                 </Box>
                 {isNonMobileScreens && (
