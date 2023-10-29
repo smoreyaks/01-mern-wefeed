@@ -27,7 +27,7 @@ const StepsList = ({ steps, themeColors }) => {
             sx={{
                 // p: "0.25rem 0",
                 m: "0.5rem 0 0.5rem 0",
-                // backgroundColor: recipeStepsPanel,
+                backgroundColor: recipeStepsPanel,
                 borderRadius: "0.75rem",
             }}
         >
