@@ -6,7 +6,7 @@ import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
-const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
+const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { _id } = useSelector((state) => state.user);
@@ -17,9 +17,22 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const { palette } = useTheme();
     const primaryLight = palette.default.primary.light;
     const primaryDark = palette.default.primary.dark;
-    const main = palette.default.neutral.main;
+    // const main = palette.default.neutral.main;
+
     const medium = palette.default.neutral.medium;
-    const headingText = palette.default.neutral;
+
+    const {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        textHover,
+        whiteText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
+    } = themeColors;
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
@@ -49,7 +62,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                     }}
                 >
                     <Typography
-                        color={headingText}
+                        color={whiteText}
                         variant="h5"
                         fontWeight="500"
                         sx={{
@@ -61,7 +74,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                     >
                         {name}
                     </Typography>
-                    <Typography color={headingText} fontSize="0.75rem">
+                    <Typography color={whiteText} fontSize="0.75rem">
                         {subtitle}
                     </Typography>
                 </Box>
