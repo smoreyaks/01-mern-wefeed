@@ -5,11 +5,24 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "../../state";
 
-const FriendListWidget = ({ userId }) => {
+const FriendListWidget = ({ userId, themeColors }) => {
     const dispatch = useDispatch();
     const { palette } = useTheme();
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
+
+    const {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        textHover,
+        whiteText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
+    } = themeColors;
 
     const getFriends = async () => {
         const response = await fetch(
@@ -30,7 +43,7 @@ const FriendListWidget = ({ userId }) => {
     return (
         <WidgetWrapper>
             <Typography
-                color={palette.default.neutral.dark}
+                color={whiteText}
                 variant="h5"
                 fontWeight="500"
                 sx={{
@@ -47,6 +60,7 @@ const FriendListWidget = ({ userId }) => {
                         name={`${friend.firstName} ${friend.lastName}`}
                         subtitle={friend.occupation}
                         userPicturePath={friend.picturePath}
+                        themeColors={themeColors}
                     />
                 ))}
             </Box>
