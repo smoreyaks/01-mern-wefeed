@@ -70,6 +70,7 @@ const RecipePostWidget = ({
     const headingText = palette.default.neutral.white;
     const recipeText = palette.default.neutral.main;
     const recipeStepsPanel = palette.default.primary.light;
+    const recipeStepsPanelHover = palette.default.primaryTwo.light;
     const followerIconOutline = palette.default.primaryTwo.main;
     const followerIconBack = palette.default.primaryOne.main;
     const followerIconBackHover = palette.default.primaryOne.light;
@@ -81,6 +82,7 @@ const RecipePostWidget = ({
         recipeText,
         recipeStepsPanel,
         whiteText,
+        recipeStepsPanelHover,
     };
 
     // Like Recipe
