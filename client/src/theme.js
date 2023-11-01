@@ -205,22 +205,65 @@ export const themeSettings = (mode) => {
                       // Light Mode Palette
                       default: {
                           primary: {
-                              dark: colorTokens.primary[700],
-                              main: colorTokens.primary[500],
-                              light: colorTokens.primary[50],
+                              dark: colorTokens.cupcake.pink[300],
+                              main: colorTokens.cupcake.teal[200],
+                              light: colorTokens.cupcake.teal[100],
+                          },
+                          primaryOne: {
+                              dark: colorTokens.cupcake.teal[400],
+                              main: colorTokens.cupcake.teal[300],
+                              light: colorTokens.cupcake.teal[200],
+                              lightest: colorTokens.cupcake.teal[100],
+                          },
+                          primaryTwo: {
+                              dark: colorTokens.cupcake.pink[300],
+                              main: colorTokens.cupcake.pink[200],
+                              light: colorTokens.cupcake.pink[100],
                           },
                           neutral: {
-                              dark: colorTokens.grey[700],
+                              dark: colorTokens.cupcake.pink[300],
+                              main: colorTokens.cupcake.teal[300],
+                              mediumMain: colorTokens.cupcake.teal[300],
+                              medium: colorTokens.cupcake.pink[200],
+                              light: colorTokens.cupcake.pink[100],
+                          },
+                          neutralGrey: {
+                              dark: colorTokens.grey[900],
                               main: colorTokens.grey[500],
-                              mediumMain: colorTokens.grey[400],
-                              medium: colorTokens.grey[300],
-                              light: colorTokens.grey[50],
+                              mediumMain: colorTokens.grey[300],
+                              medium: colorTokens.grey[200],
+                              light: colorTokens.grey[100],
+                              white: colorTokens.grey[0],
                           },
                           background: {
-                              default: colorTokens.grey[10],
-                              alt: colorTokens.grey[0],
+                              default: colorTokens.cupcake.pink[200],
+                              alt: colorTokens.cupcake.teal[400],
                           },
                       },
+                      trophy: {
+                          gold: colorTokens.trophy["gold"],
+                          silver: colorTokens.trophy["silver"],
+                          bronze: colorTokens.trophy["bronze"],
+                      },
+
+                      //   default: {
+                      //       primary: {
+                      //           dark: colorTokens.primary[700],
+                      //           main: colorTokens.primary[500],
+                      //           light: colorTokens.primary[50],
+                      //       },
+                      //       neutral: {
+                      //           dark: colorTokens.grey[700],
+                      //           main: colorTokens.grey[500],
+                      //           mediumMain: colorTokens.grey[400],
+                      //           medium: colorTokens.grey[300],
+                      //           light: colorTokens.grey[50],
+                      //       },
+                      //       background: {
+                      //           default: colorTokens.grey[10],
+                      //           alt: colorTokens.grey[0],
+                      //       },
+                      //   },
                       // Dessert Theme Light Mode Palette - Change Colours to Suit Theme
                       //   dessert: {
                       //       primary: {
