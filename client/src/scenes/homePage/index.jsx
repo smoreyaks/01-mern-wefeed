@@ -14,7 +14,7 @@ const HomePage = () => {
     const whiteText = palette.default.neutralGrey.white;
     const textHover = palette.default.primaryTwo.main;
     const primary = palette.default.primary.main;
-    const headingText = palette.default.neutral.white;
+    const headingText = palette.default.neutralGrey.white;
     const recipeText = palette.default.neutral.main;
     const recipeStepsPanel = palette.default.primary.light;
     const followerIconOutline = palette.default.primaryTwo.main;
