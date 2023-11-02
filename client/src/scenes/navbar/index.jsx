@@ -75,7 +75,7 @@ const Navbar = ({ userId }) => {
     const firstName = user.firstName;
 
     return (
-        <Box>
+        <Box position="fixed" sx={{ width: "100%", zIndex: "100" }}>
             <FlexBetween padding="1rem 6%" backgroundColor={alt}>
                 <FlexBetween gap="1.75rem">
                     <Typography
