@@ -7,6 +7,7 @@ import {
     Button,
     Divider,
     IconButton,
+    ToggleButton,
     Typography,
     useTheme,
 } from "@mui/material";
@@ -25,56 +26,51 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
-    const { headingText, recipeText, recipeStepsPanel } = themeColors;
+    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
+        themeColors;
 
     return (
-        <Box
-            sx={{
-                // p: "0.25rem",
-                m: "0.5rem 0",
-                backgroundColor: main,
-                borderRadius: "0.75rem",
-            }}
-        >
-            <Box
+        <Box>
+            <ToggleButton
+                onClick={() => setIngredientListOpen(!ingredientListOpen)}
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     background: recipeStepsPanel,
+                    "&:hover": {
+                        backgroundColor: recipeStepsPanelHover,
+                        cursor: "pointer",
+                    },
+                    width: "100%",
+                    m: "0.5rem 0",
+                    p: "0.25rem 0.75rem",
                     borderRadius: "0.75rem",
+                    border: "0",
                 }}
             >
-                <Button
-                    onClick={() => setIngredientListOpen(!ingredientListOpen)}
-                    fullwidth
+                <Typography
+                    variant="h6"
+                    // borderRadius="1.75rem"
                 >
-                    <Box
-                        sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                        }}
-                    >
-                        <Typography p="0.5rem" variant="h5">
-                            Ingredients
-                        </Typography>
-                        <Box>
-                            {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
-                        </Box>
-                    </Box>
-                </Button>
-            </Box>
+                    Ingredients
+                </Typography>
+                {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
+            </ToggleButton>
+
             {ingredients.map((ingredient) =>
                 ingredientListOpen ? (
                     <Box
-                        mr="0.5rem"
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: "repeat(2, 2fr)",
-                            gap: "0.5rem",
-
-                            borderRadius: "0.75rem",
+                            display: "flex",
+                            gridTemplateColumns: "12.5%, 87.5%",
+                            gap: "0.25rem",
+                            // m: "0 0 0.5rem 0",
+                            mx: "0",
+                            p: "0.25rem 0.5rem",
+                            // borderRadius: "0.75rem",
+                            backgroundColor: "#eeaae2",
+                            width: "100%",
                         }}
                     >
                         <Box gridColumn="1">
