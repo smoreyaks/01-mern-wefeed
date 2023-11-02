@@ -2,7 +2,14 @@
 import { useState } from "react";
 
 // MUI Components
-import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import {
+    Box,
+    Divider,
+    IconButton,
+    Typography,
+    useTheme,
+    ToggleButton,
+} from "@mui/material";
 
 // MUI Icons
 import AddIcon from "@mui/icons-material/Add";
@@ -19,39 +26,37 @@ const EquipmentList = ({ equipment, themeColors }) => {
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
-    const { headingText, recipeText, recipeStepsPanel } = themeColors;
+    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
+        themeColors || {};
     return (
-        <Box
-            sx={{
-                // p: "0.25rem 0.5rem",
-                m: "0.5rem 0",
-                backgroundColor: main,
-                borderRadius: "0.75rem",
-            }}
-        >
-            <Box
+        <Box>
+            <ToggleButton
+                onClick={() => setEquipmentListOpen(!equipmentListOpen)}
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     background: recipeStepsPanel,
+                    "&:hover": {
+                        backgroundColor: recipeStepsPanelHover,
+                        cursor: "pointer",
+                    },
+                    width: "100%",
+                    m: "0.5rem 0",
+                    p: "0.25rem 0.75rem",
                     borderRadius: "0.75rem",
-                    p: "0.5rem",
+                    border: "0",
                 }}
             >
-                <IconButton
-                    onClick={() => setEquipmentListOpen(!equipmentListOpen)}
+                <Typography
+                    variant="h6"
+                    // borderRadius="1.75rem"
                 >
-                    <Typography
-                        p="0.5rem 0"
-                        variant="h5"
-                        borderRadius="0.75rem"
-                    >
-                        Equipment
-                    </Typography>
-                    {equipmentListOpen ? <RemoveIcon /> : <AddIcon />}
-                </IconButton>
-            </Box>
+                    Equipment
+                </Typography>
+                {equipmentListOpen ? <RemoveIcon /> : <AddIcon />}
+            </ToggleButton>
+
             {equipment.map((equip) =>
                 equipmentListOpen ? (
                     <Box
