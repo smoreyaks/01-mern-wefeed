@@ -36,7 +36,7 @@ import Dropzone from "react-dropzone";
 // State
 import { setRecipes } from "../../state";
 
-const CreateRecipeWidget = ({ picturePath }) => {
+const CreateRecipeWidget = ({ picturePath, theme }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
@@ -145,7 +145,7 @@ const CreateRecipeWidget = ({ picturePath }) => {
                 </Box>
             )}
 
-            <Divider sx={{ margin: "1.25rem 0" }} />
+            <Divider sx={{ margin: "0.5rem 0" }} />
 
             <FlexBetween>
                 <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
