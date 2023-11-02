@@ -22,7 +22,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
-    } = themeColors;
+    } = themeColors || {};
 
     const getFriends = async () => {
         const response = await fetch(
