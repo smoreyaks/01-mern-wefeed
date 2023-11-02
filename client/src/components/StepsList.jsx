@@ -2,7 +2,13 @@
 import { useState } from "react";
 
 // MUI Components
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import {
+    Box,
+    IconButton,
+    ToggleButton,
+    Typography,
+    useTheme,
+} from "@mui/material";
 
 // MUI Icons
 import AddIcon from "@mui/icons-material/Add";
@@ -16,42 +22,37 @@ const StepsList = ({ steps, themeColors }) => {
 
     // Theme
     const { palette } = useTheme();
-    const { headingText, recipeText, recipeStepsPanel } = themeColors;
+    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
+        themeColors || {};
 
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
 
     return (
-        // Steps Back
-        <Box
-            sx={{
-                // p: "0.25rem 0",
-                m: "0.5rem 0 0.5rem 0",
-                backgroundColor: recipeStepsPanel,
-                borderRadius: "0.75rem",
-            }}
-        >
-            <Box
+        // Steps Back<Box>
+        <Box>
+            <ToggleButton
+                onClick={() => setStepsListOpen(!stepsListOpen)}
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     background: recipeStepsPanel,
+                    "&:hover": {
+                        backgroundColor: recipeStepsPanelHover,
+                        cursor: "pointer",
+                    },
+                    width: "100%",
+                    m: "0.5rem 0",
+                    p: "0.25rem 0.75rem",
                     borderRadius: "0.75rem",
+                    border: "0",
                 }}
             >
-                <IconButton onClick={() => setStepsListOpen(!stepsListOpen)}>
-                    <Typography
-                        p="0.5rem"
-                        variant="h5"
-                        display="flex"
-                        alignItems="flex-start"
-                    >
-                        Steps
-                    </Typography>
-                    {stepsListOpen ? <RemoveIcon /> : <AddIcon />}
-                </IconButton>
-            </Box>
+                <Typography variant="h6">Steps</Typography>
+                {stepsListOpen ? <RemoveIcon /> : <AddIcon />}
+            </ToggleButton>
+
             {steps.map((step) =>
                 stepsListOpen ? (
                     <Box
@@ -80,7 +81,6 @@ const StepsList = ({ steps, themeColors }) => {
                                     borderRadius: "0.5rem",
                                     display: "flex",
                                     alignItems: "center",
-                                    // width: "20%",
                                 }}
                             >
                                 {step.stepNum}
