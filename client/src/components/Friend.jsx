@@ -32,7 +32,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
-    } = themeColors;
+    } = themeColors || {};
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
@@ -62,7 +62,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
                     }}
                 >
                     <Typography
-                        color={whiteText}
+                        color={headingText}
                         variant="h5"
                         fontWeight="500"
                         sx={{
@@ -74,7 +74,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
                     >
                         {name}
                     </Typography>
-                    <Typography color={whiteText} fontSize="0.75rem">
+                    <Typography color={headingText} fontSize="0.75rem">
                         {subtitle}
                     </Typography>
                 </Box>
