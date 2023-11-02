@@ -47,7 +47,7 @@ const HomePage = () => {
             <Navbar userId={_id} picturePath={picturePath} />
             <Box
                 width="100%"
-                padding="7rem 6%"
+                padding="7rem 6% 0 6%"
                 display={isNonMobileScreens ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between"
