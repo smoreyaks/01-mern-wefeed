@@ -23,14 +23,15 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
 
     const {
         headingText,
-        recipeText,
-        recipeStepsPanel,
         textHover,
+        recipeStepsPanel,
         whiteText,
+        recipeStepsPanelHover,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
         recipeTextPanel,
+        recipeText,
         mainBackPanel,
     } = themeColors || {};
 
@@ -81,12 +82,24 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
             </FlexBetween>
             <IconButton
                 onClick={() => patchFriend()}
-                sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
+                sx={{
+                    backgroundColor: mainBackPanel,
+                    p: "0.75rem",
+                    m: "0.75rem",
+                }}
             >
                 {isFriend ? (
-                    <PersonRemoveOutlined sx={{ color: primaryDark }} />
+                    <PersonRemoveOutlined
+                        sx={{
+                            color: headingText,
+                        }}
+                    />
                 ) : (
-                    <PersonAddOutlined sx={{ color: primaryDark }} />
+                    <PersonAddOutlined
+                        sx={{
+                            color: headingText,
+                        }}
+                    />
                 )}
             </IconButton>
         </FlexBetween>
