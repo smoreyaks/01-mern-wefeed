@@ -74,28 +74,49 @@ const RecipePostWidget = ({
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
 
-    // Theme
+    // --- Theme ---
     const { palette } = useTheme();
+
     const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
     const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
+
+    // Text
     const headingText = palette.default.neutralGrey.white; // Text Color
+    const textMain = palette.default.neutralGrey.white; // Text Color
+
     const textHover = palette.default.primaryTwo.main; // Text Hover Color
-    const recipeText = palette.default.neutral.main;
+
+    // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
+    const backgroundMain = palette.default.primaryOne.main;
+
+    // Panel / Subsection Main
     const recipeStepsPanel = palette.default.primary.light;
+    const panelMain = palette.default.primary.light;
+
     const recipeStepsPanelHover = palette.default.primaryTwo.light;
+    const panelMainHover = palette.default.primaryTwo.light;
+
+    // Icon Main
     const followerIconOutline = palette.default.primaryTwo.main;
     const followerIconBack = palette.default.primaryOne.main;
+
     const followerIconBackHover = palette.default.primaryOne.light;
+
     const recipeTextPanel = palette.default.neutral.main;
     const mainBackPanel = palette.default.neutral.main;
 
     const themeColors = {
         headingText,
-        recipeText,
+        textHover,
         recipeStepsPanel,
         whiteText,
         recipeStepsPanelHover,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
     };
 
     // Like Recipe
