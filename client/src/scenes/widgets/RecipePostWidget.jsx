@@ -171,6 +171,7 @@ const RecipePostWidget = ({
                     position: "relative",
                     display: "flex",
                     justifyContent: "space-between",
+                    mb: "0.5rem",
                 }}
             >
                 {picturePath && (
@@ -297,7 +298,7 @@ const RecipePostWidget = ({
             <StepsList steps={steps} themeColors={themeColors} />
 
             {/* Recipe Interactions */}
-            <FlexBetween mt="0.25rem">
+            <FlexBetween mt="0.5rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
                     <IconButton onClick={patchLike}>
