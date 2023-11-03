@@ -42,9 +42,9 @@ const EquipmentList = ({ equipment, themeColors }) => {
                         cursor: "pointer",
                     },
                     width: "100%",
-                    m: "0.5rem 0",
-                    p: "0.25rem 0.75rem",
-                    borderRadius: "0.75rem",
+                    // m: "0.5rem 0",
+                    p: "0.5rem 0.75rem",
+                    borderRadius: "0.75rem 0.75rem 0 0",
                     border: "0",
                 }}
             >
