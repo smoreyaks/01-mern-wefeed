@@ -100,13 +100,38 @@ export const colorTokens = {
             1000: "#56463C", // Umber            (Brown)
         },
         red: {
-            300: "#E4572E", // Flame            (Red/Orange)
+            100: "#faddd5", // Flame            (Red/Orange)
+            200: "#f4bcab",
+            300: "#ef9a82",
+            400: "#e97958",
+            500: "#e4572e", // Starting Color
+            600: "#b64625",
+            700: "#89341c",
+            800: "#5b2312",
+            900: "#2e1109",
         },
         yellow: {
-            300: "#FFC914", // Jonquil          (Yellow)
+            100: "#fff4d0", // Jonquil          (Yellow)
+            200: "#ffe9a1",
+            300: "#ffdf72",
+            400: "#ffd443",
+            500: "#ffc914", // Starting Color
+            600: "#cca110",
+            700: "#99790c",
+            800: "#665008",
+            900: "#332804",
         },
+
         green: {
-            300: "#76B041", // Kelly Green      (Green)
+            100: "#e4efd9", // Kelly Green      (Green)
+            200: "#c8dfb3",
+            300: "#add08d",
+            400: "#91c067",
+            500: "#76b041", // Starting Color
+            600: "#5e8d34",
+            700: "#476a27",
+            800: "#2f461a",
+            900: "#18230d",
         },
     },
 };
