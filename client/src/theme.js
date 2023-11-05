@@ -55,7 +55,7 @@ export const colorTokens = {
         700: "#333333",
         800: "#1A1A1A",
         900: "#0A0A0A",
-        1000: "#000000",
+        1000: "rgba(0, 0, 0, 65%)",
     },
 
     //    - Trophy Icons -
@@ -258,7 +258,7 @@ export const themeSettings = (mode) => {
                               mediumMain: colorTokens.grey[300],
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
-                              white: colorTokens.grey[0],
+                              white: colorTokens.grey[1000],
                           },
                           background: {
                               default: colorTokens.cupcake.pink[200],
