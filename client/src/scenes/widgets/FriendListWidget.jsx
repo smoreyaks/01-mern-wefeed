@@ -42,7 +42,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
 
     return (
         <WidgetWrapper>
-            <Typography color={whiteText} variant="h5" fontWeight="500">
+            <Typography color={textHover} variant="h5" fontWeight="500">
                 Following
             </Typography>
 
@@ -54,7 +54,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
                         key={friend._id}
                         friendId={friend._id}
                         name={`${friend.firstName} ${friend.lastName}`}
-                        subtitle={friend.occupation}
+                        occupation={friend.occupation}
                         userPicturePath={friend.picturePath}
                         themeColors={themeColors}
                     />
