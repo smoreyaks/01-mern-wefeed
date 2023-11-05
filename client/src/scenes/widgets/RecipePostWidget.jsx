@@ -27,7 +27,7 @@ import PrepIcon from "../../components/svg/PrepIcon";
 import {
     Box,
     Divider,
-    IconButton,
+    Button,
     Typography,
     useTheme,
     SvgIcon,
@@ -122,6 +122,8 @@ const RecipePostWidget = ({
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
+    const recommendationCount = Object.keys(recommendations).length;
+    const commentCount = Object.keys(comments).length;
 
     // Saved Recipe
     const [isSaved, setIsSaved] = useState(false);
@@ -166,6 +168,8 @@ const RecipePostWidget = ({
             >
                 {recipeTitle}
             </Typography>
+
+            {/* Recipe Image */}
             <Box
                 sx={{
                     position: "relative",
@@ -301,28 +305,68 @@ const RecipePostWidget = ({
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
-                    <IconButton onClick={patchLike}>
+                    <Button
+                        size="medium"
+                        fullwidth
+                        onClick={patchLike}
+                        sx={{
+                            borderRadius: "0.75rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
                         {isLiked ? (
                             <FavoriteOutlined sx={{ color: primary }} />
                         ) : (
                             <FavoriteBorderOutlined />
                         )}
                         <Typography pl="0.5rem">{likeCount}</Typography>
-                    </IconButton>
+                    </Button>
                 </FlexBetween>
 
                 {/* Comments */}
                 <FlexBetween gap="0.3rem">
-                    <IconButton onClick={() => setIsComments(!isComments)}>
+                    <Button
+                        size="medium"
+                        fullwidth
+                        onClick={() => setIsComments(!isComments)}
+                        sx={{
+                            borderRadius: "0.75rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
                         <CommentIcon />
-                        <Typography pl="0.5rem">{comments.length}</Typography>
-                    </IconButton>
+                        <Typography pl="0.5rem">{commentCount}</Typography>
+                    </Button>
                 </FlexBetween>
 
                 {/* Recommendations */}
                 <FlexBetween gap="0.3rem">
-                    <IconButton
+                    <Button
+                        size="medium"
+                        fullwidth
                         onClick={() => setIsRecommended(!isRecommended)}
+                        sx={{
+                            borderRadius: "0.75rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
                     >
                         {isRecommended ? (
                             <HowToRegIcon />
@@ -330,27 +374,54 @@ const RecipePostWidget = ({
                             <RecordVoiceOverIcon />
                         )}
                         <Typography pl="0.5rem">
-                            {recommendations.length}
+                            {recommendationCount}
                         </Typography>
-                    </IconButton>
+                    </Button>
                 </FlexBetween>
 
                 {/* Save Recipe to List */}
                 <FlexBetween gap="0.3rem">
-                    <IconButton onClick={() => setIsSaved(!isSaved)}>
+                    <Button
+                        size="medium"
+                        fullwidth
+                        onClick={() => setIsSaved(!isSaved)}
+                        sx={{
+                            borderRadius: "0.75rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
                         {isSaved ? (
                             <PlaylistAddCheckIcon />
                         ) : (
                             <PlaylistAddOutlinedIcon />
                         )}
-                    </IconButton>
+                    </Button>
                 </FlexBetween>
 
                 {/* Share Recipe */}
                 <FlexBetween gap="0.3rem">
-                    <IconButton>
+                    <Button
+                        size="medium"
+                        fullwidth
+                        sx={{
+                            borderRadius: "0.75rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
                         <ShareOutlined />
-                    </IconButton>
+                    </Button>
                 </FlexBetween>
             </FlexBetween>
             {isComments && (
