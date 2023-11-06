@@ -10,7 +10,6 @@ import {
     FavoriteOutlined,
     ShareOutlined,
 } from "@mui/icons-material";
-
 import CommentIcon from "@mui/icons-material/Comment";
 import PlaylistAddOutlinedIcon from "@mui/icons-material/PlaylistAddOutlined";
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
@@ -32,6 +31,7 @@ import {
     Typography,
     useTheme,
     SvgIcon,
+    Badge,
 } from "@mui/material";
 
 // State
@@ -44,6 +44,7 @@ import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import StepsList from "../../components/StepsList";
+import ImageBadge from "../../components/ImageBadge";
 
 const RecipePostWidget = ({
     _id,
@@ -75,7 +76,7 @@ const RecipePostWidget = ({
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
 
-    // --- Theme ---
+    // ---------- Theme ----------
     const { palette } = useTheme();
 
     const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
@@ -120,6 +121,12 @@ const RecipePostWidget = ({
         mainBackPanel,
     };
 
+    // Icons
+
+    // ---------- Prep Time Minimised ----------
+    let prepTimeMin = prepTime.replace("ins", "");
+
+    // ---------- Recipe Interactions ----------
     // Ingredients
     const ingredientCount = Object.keys(ingredients).length;
 
@@ -153,8 +160,6 @@ const RecipePostWidget = ({
         dispatch(setRecipe({ recipe: updatedRecipe }));
     };
     console.log("USER Post 1:", loggedInUserId);
-
-    let prepTimeMin = prepTime.replace("ins", "");
 
     return (
         <WidgetWrapper m="2rem 0">
@@ -197,38 +202,46 @@ const RecipePostWidget = ({
                         src={`https://server-vukx.onrender.com/assets/recipeImg/${picturePath}`}
                     />
                 )}
-                {/* Ingredient Count Badge */}
                 <Box
+                    gap="0.5rem"
                     sx={{
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        flexDirection: "column",
                         position: "absolute",
-                        top: "0.5rem",
-                        left: "0.5rem",
-                        padding: "0.25rem 0.75rem",
-                        borderRadius: "0.75rem",
-                        width: "4rem",
-                        color: headingText,
-                        zIndex: "180",
-                        backgroundColor: textHover,
+                        p: "0.5rem 0.5rem",
+                        zIndex: "80",
                     }}
                 >
-                    <Typography>{ingredientCount}</Typography>
-                </Box>
-                {/* Recipe Total Time Badge */}
+                    {/* Ingredient Count Badge */}
+                    <Badge
+                        sx={{
+                            backgroundColor: textHover,
 
-                <Box
-                    sx={{
-                        position: "absolute",
-                        top: "2.75rem",
-                        left: "0.5rem",
-                        padding: "0.25rem 0.75rem",
-                        borderRadius: "0.75rem",
-                        width: "4rem",
-                        color: headingText,
-                        zIndex: "180",
-                        backgroundColor: textHover,
-                    }}
-                >
-                    <Typography>{prepTimeMin}</Typography>
+                            p: "0.5rem",
+                            borderRadius: "0.75rem",
+                            gap: "0.5rem",
+                            opacity: "1",
+                        }}
+                    >
+                        <CookIcon />
+                        {ingredientCount}
+                    </Badge>
+
+                    {/* Recipe Total Time Badge */}
+                    <Badge
+                        sx={{
+                            backgroundColor: textHover,
+
+                            p: "0.5rem",
+                            borderRadius: "0.75rem",
+                            gap: "0.5rem",
+                            opacity: "1",
+                        }}
+                    >
+                        <PrepIcon />
+                        {prepTimeMin}
+                    </Badge>
                 </Box>
             </Box>
 
@@ -478,7 +491,7 @@ const RecipePostWidget = ({
                             <Divider />
                             <Typography
                                 sx={{
-                                    color: backgroundPrimary,
+                                    color: headingText,
                                     m: "0.5rem 0",
                                     pl: "1rem",
                                 }}
