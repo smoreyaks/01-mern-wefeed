@@ -44,7 +44,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     },
                     width: "100%",
                     // m: "0.5rem 0",
-                    p: "0.5rem 0.75rem",
+                    p: "0.5rem  0.75rem",
                     borderRadius: "0rem",
                     border: "0",
                     // borderTop: `1 solid ${palette.default.neutralGrey[900]}`,
