@@ -246,111 +246,122 @@ const RecipePostWidget = ({
             </Box>
 
             {/* Recipe Quick Info */}
-
             <Box
                 sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    background: recipeStepsPanel,
-                    width: "100%",
-                    // m: "0.5rem 0",
-                    p: "0.5rem 0rem",
+                    p: "0 0.75rem",
+                    backgroundColor: recipeStepsPanel,
                     borderRadius: "0.75rem 0.75rem 0 0",
-                    border: "0",
                 }}
             >
-                {/* Prep Time */}
                 <Box
                     sx={{
-                        backgroundColor: recipeStepsPanel,
-                        borderRadius: ".75rem",
-                        padding: "0.25rem 0.75rem",
                         display: "flex",
+                        justifyContent: "space-between",
                         alignItems: "center",
+                        background: recipeStepsPanel,
+                        width: "100%",
+                        // m: "0.5rem 0",
+                        p: "0.5rem 0rem",
+                        borderRadius: "0.75rem 0.75rem 0 0",
+                        border: "0",
                     }}
                 >
-                    <PrepIcon
+                    {/* Prep Time */}
+                    <Box
                         sx={{
-                            width: "1rem",
-                            height: "1rem",
-                            mr: "0.5rem",
-                            fill: headingText,
-                        }}
-                    />
-                    <Typography
-                        sx={{
-                            backgroundColor: "inherit",
+                            backgroundColor: recipeStepsPanel,
                             borderRadius: ".75rem",
+                            padding: "0.25rem 0rem",
                             display: "flex",
                             alignItems: "center",
                         }}
                     >
-                        {prepTime}
-                    </Typography>
-                </Box>
+                        <PrepIcon
+                            sx={{
+                                width: "1rem",
+                                height: "1rem",
+                                mr: "0.5rem",
+                                fill: headingText,
+                            }}
+                        />
+                        <Typography
+                            sx={{
+                                backgroundColor: "inherit",
+                                borderRadius: ".75rem",
+                                display: "flex",
+                                alignItems: "center",
+                            }}
+                        >
+                            {prepTime}
+                        </Typography>
+                    </Box>
 
-                {/* Cook Time */}
-                <Box
-                    sx={{
-                        backgroundColor: recipeStepsPanel,
-                        borderRadius: ".75rem",
-                        padding: "0.25rem 0.75rem",
-                        display: "flex",
-                        alignItems: "center",
-                    }}
-                >
-                    <CookIcon
+                    {/* Cook Time */}
+                    <Box
                         sx={{
-                            width: "1rem",
-                            height: "1rem",
-                            mr: "0.5rem",
-                            fill: headingText,
-                        }}
-                    />
-                    <Typography
-                        sx={{
-                            backgroundColor: "inherit",
+                            backgroundColor: recipeStepsPanel,
                             borderRadius: ".75rem",
-                            // padding: "0.5rem",
+                            padding: "0.25rem 0.75rem",
+                            display: "flex",
+                            alignItems: "center",
                         }}
                     >
-                        {cookTime}
-                    </Typography>
+                        <CookIcon
+                            sx={{
+                                width: "1rem",
+                                height: "1rem",
+                                mr: "0.5rem",
+                                fill: headingText,
+                            }}
+                        />
+                        <Typography
+                            sx={{
+                                backgroundColor: "inherit",
+                                borderRadius: ".75rem",
+                                // padding: "0.5rem",
+                            }}
+                        >
+                            {cookTime}
+                        </Typography>
+                    </Box>
+
+                    {/* Servings */}
+                    <Box
+                        sx={{
+                            backgroundColor: recipeStepsPanel,
+                            borderRadius: ".75rem",
+                            padding: "0.25rem 0.75rem",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                    >
+                        <PersonRoundedIcon />
+                        <Typography sx={{ pl: "0.25rem" }}>
+                            {servings}
+                        </Typography>
+                    </Box>
+
+                    {/* Spice Level */}
+                    <Box
+                        sx={{
+                            backgroundColor: recipeStepsPanel,
+                            borderRadius: ".75rem",
+                            padding: "0.25rem 0rem",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                        <LocalFireDepartmentIcon />
+                        <Typography sx={{ pl: "0.25rem" }}>
+                            {spiceLevel}
+                        </Typography>
+                    </Box>
                 </Box>
 
-                {/* Servings */}
-                <Box
-                    sx={{
-                        backgroundColor: recipeStepsPanel,
-                        borderRadius: ".75rem",
-                        padding: "0.25rem 0.75rem",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}
-                >
-                    <PersonRoundedIcon />
-                    <Typography sx={{ pl: "0.25rem" }}>{servings}</Typography>
-                </Box>
-
-                {/* Spice Level */}
-                <Box
-                    sx={{
-                        backgroundColor: recipeStepsPanel,
-                        borderRadius: ".75rem",
-                        padding: "0.25rem 0.75rem",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    <LocalFireDepartmentIcon />
-                    <Typography sx={{ pl: "0.25rem" }}>{spiceLevel}</Typography>
-                </Box>
+                <Divider />
             </Box>
-
-            <Divider />
 
             <EquipmentList equipment={equipment} themeColors={themeColors} />
             <IngredientList
