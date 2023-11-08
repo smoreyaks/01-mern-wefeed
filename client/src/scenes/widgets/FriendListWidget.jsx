@@ -13,10 +13,10 @@ const FriendListWidget = ({ userId, themeColors }) => {
 
     const {
         headingText,
-        recipeText,
-        recipeStepsPanel,
         textHover,
+        recipeStepsPanel,
         whiteText,
+        recipeStepsPanelHover,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
@@ -24,7 +24,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
         mainBackPanel,
     } = themeColors || {};
 
-    const getFriends = async () => {
+    const getUserFriends = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/users/${userId}/friends`,
             {
@@ -37,12 +37,12 @@ const FriendListWidget = ({ userId, themeColors }) => {
     };
 
     useEffect(() => {
-        getFriends();
+        getUserFriends();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <WidgetWrapper>
-            <Typography color={textHover} variant="h5" fontWeight="500">
+            <Typography color={headingText} variant="h5" fontWeight="500">
                 Following
             </Typography>
 
