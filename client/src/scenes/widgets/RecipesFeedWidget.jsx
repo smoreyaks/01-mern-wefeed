@@ -7,10 +7,12 @@ import { useState } from "react";
 import RecipePostWidget from "./RecipePostWidget";
 
 const RecipesFeedWidget = ({ userId, isProfile = false }) => {
-    const [user, setUser] = useState(null);
     const dispatch = useDispatch();
-    const recipes = useSelector((state) => state.recipes);
     const token = useSelector((state) => state.token);
+    // const friends = useSelector((state) => state.user.friends);
+
+    const [user, setUser] = useState(null);
+    const recipes = useSelector((state) => state.recipes);
 
     const getRecipes = async () => {
         const response = await fetch(
@@ -58,7 +60,11 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     if (!user) return null;
-    console.log("USER Feed:", user);
+
+    // const { formattedFriends } = friends || {};
+    console.log("USER FEED USER:", user);
+    // console.log("USER FEED FRIEND:", friends);
+
     return (
         <>
             {recipes.map(
@@ -68,6 +74,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                     userId,
                     firstName,
                     lastName,
+                    occupation,
                     userPicturePath,
                     recipeTitle,
                     picturePath,
@@ -93,6 +100,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                         recipeUserId={userId}
                         name={`${firstName} ${lastName}`}
                         userPicturePath={userPicturePath}
+                        occupation={occupation}
                         recipeTitle={recipeTitle}
                         picturePath={picturePath}
                         ingredients={ingredients}
