@@ -53,6 +53,7 @@ const RecipePostWidget = ({
     recipeUserId,
     name,
     userPicturePath,
+    occupation,
     recipeTitle,
     picturePath,
     ingredients,
@@ -168,6 +169,7 @@ const RecipePostWidget = ({
                 name={name}
                 userPicturePath={userPicturePath}
                 themeColors={themeColors}
+                occupation={occupation}
             />
             <Typography
                 color={headingText}
@@ -219,7 +221,7 @@ const RecipePostWidget = ({
                             backgroundColor: textHover,
 
                             p: "0.5rem",
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             gap: "0.5rem",
                             opacity: "1",
                         }}
@@ -234,7 +236,7 @@ const RecipePostWidget = ({
                             backgroundColor: textHover,
 
                             p: "0.5rem",
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             gap: "0.5rem",
                             opacity: "1",
                         }}
@@ -379,7 +381,7 @@ const RecipePostWidget = ({
                         fullwidth
                         onClick={patchLike}
                         sx={{
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             width: "6rem",
 
                             color: headingText,
@@ -405,7 +407,7 @@ const RecipePostWidget = ({
                         fullwidth
                         onClick={() => setIsComments(!isComments)}
                         sx={{
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             width: "6rem",
 
                             color: headingText,
@@ -427,7 +429,7 @@ const RecipePostWidget = ({
                         fullwidth
                         onClick={() => setIsRecommended(!isRecommended)}
                         sx={{
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             width: "6rem",
 
                             color: headingText,
@@ -455,7 +457,7 @@ const RecipePostWidget = ({
                         fullwidth
                         onClick={() => setIsSaved(!isSaved)}
                         sx={{
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             width: "6rem",
 
                             color: headingText,
@@ -479,7 +481,7 @@ const RecipePostWidget = ({
                         size="medium"
                         fullwidth
                         sx={{
-                            borderRadius: "0.75rem",
+                            borderRadius: "3rem",
                             width: "6rem",
 
                             color: headingText,
