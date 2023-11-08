@@ -1,12 +1,18 @@
 import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
-const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
+const Friend = ({
+    friendId,
+    name,
+    occupation,
+    userPicturePath,
+    themeColors,
+}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { _id } = useSelector((state) => state.user);
@@ -68,7 +74,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
                         fontWeight="500"
                         sx={{
                             "&:hover": {
-                                color: palette.default.primaryTwo.main,
+                                color: textHover,
                                 cursor: "pointer",
                             },
                         }}
@@ -76,32 +82,34 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, themeColors }) => {
                         {name}
                     </Typography>
                     <Typography color={headingText} fontSize="0.75rem">
-                        {subtitle}
+                        {occupation}
                     </Typography>
                 </Box>
             </FlexBetween>
-            <IconButton
+            <Button
                 onClick={() => patchFriend()}
+                fullwidth
+                size="small"
                 sx={{
-                    backgroundColor: mainBackPanel,
-                    p: "0.75rem",
-                    m: "0.75rem",
+                    backgroundColor: recipeStepsPanel,
+                    color: headingText,
+                    p: "0.5rem",
+                    m: "0.5rem",
+
+                    borderRadius: "3rem",
+                    "&:hover": {
+                        backgroundColor: textHover,
+                    },
                 }}
             >
                 {isFriend ? (
-                    <PersonRemoveOutlined
-                        sx={{
-                            color: headingText,
-                        }}
-                    />
+                    <FlexBetween>
+                        <PersonRemoveOutlined />
+                    </FlexBetween>
                 ) : (
-                    <PersonAddOutlined
-                        sx={{
-                            color: headingText,
-                        }}
-                    />
+                    <PersonAddOutlined />
                 )}
-            </IconButton>
+            </Button>
         </FlexBetween>
     );
 };
