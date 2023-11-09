@@ -65,6 +65,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
                             display: "grid",
                             gridTemplateColumns: "repeat(4, 1fr)",
                             gap: "0.5rem",
+                            backgroundColor: recipeStepsPanel,
                         }}
                     >
                         {equip}
