@@ -45,7 +45,9 @@ const StepsList = ({ steps, themeColors }) => {
                     width: "100%",
                     // m: "0.5rem 0",
                     p: "0.5rem  0.75rem",
-                    borderRadius: "0 0 0.75rem 0.75rem ",
+                    borderRadius: stepsListOpen
+                        ? "0 0 0rem 0rem "
+                        : "0 0 0.75rem 0.75rem ",
                     border: "0",
                 }}
             >
@@ -61,11 +63,11 @@ const StepsList = ({ steps, themeColors }) => {
                             display: "flex",
                             gridTemplateColumns: "12.5%, 87.5%",
                             gap: "0.5rem",
-                            m: "0 0 0.5rem 0",
+                            m: "0 0 0rem 0",
                             mx: "0",
-                            p: "0.5rem",
-                            borderRadius: "0.75rem",
-                            backgroundColor: "#eeaae2",
+                            p: "0.5rem 0.5rem 0 0.5rem",
+                            borderRadius: "0rem",
+                            backgroundColor: recipeStepsPanel,
                             width: "100%",
                         }}
                     >
@@ -102,6 +104,13 @@ const StepsList = ({ steps, themeColors }) => {
                     <Box display="none" />
                 )
             )}
+            <Box
+                sx={{
+                    height: stepsListOpen ? "1rem" : null,
+                    backgroundColor: stepsListOpen ? recipeStepsPanel : null,
+                    borderRadius: stepsListOpen ? "0 0 0.75rem 0.75rem" : null,
+                }}
+            ></Box>
         </Box>
     );
 };
