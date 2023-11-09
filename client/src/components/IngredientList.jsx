@@ -70,7 +70,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                             mx: "0",
                             p: "0.25rem 0.5rem",
                             // borderRadius: "0.75rem",
-                            backgroundColor: "#eeaae2",
+                            backgroundColor: recipeStepsPanel,
                             width: "100%",
                         }}
                     >
