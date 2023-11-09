@@ -22,6 +22,8 @@ import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOu
 // Custom Icons
 import CookIcon from "../../components/svg/CookIcon";
 import PrepIcon from "../../components/svg/PrepIcon";
+import IngredientsQtyIcon from "../../components/svg/IngredientsQtyIcon";
+import TimerIcon from "../../components/svg/TimerIcon";
 
 // Mui Components
 import {
@@ -163,7 +165,14 @@ const RecipePostWidget = ({
     console.log("USER Post 1:", loggedInUserId);
 
     return (
-        <WidgetWrapper m="2rem 0">
+        <WidgetWrapper
+            m="2rem 0"
+            sx={
+                {
+                    // boxShadow: 4,
+                }
+            }
+        >
             <Friend
                 friendId={recipeUserId}
                 name={name}
@@ -215,21 +224,6 @@ const RecipePostWidget = ({
                         zIndex: "80",
                     }}
                 >
-                    {/* Ingredient Count Badge */}
-                    <Badge
-                        sx={{
-                            backgroundColor: textHover,
-
-                            p: "0.5rem",
-                            borderRadius: "3rem",
-                            gap: "0.5rem",
-                            opacity: "1",
-                        }}
-                    >
-                        <CookIcon />
-                        {ingredientCount}
-                    </Badge>
-
                     {/* Recipe Total Time Badge */}
                     <Badge
                         sx={{
@@ -239,10 +233,29 @@ const RecipePostWidget = ({
                             borderRadius: "3rem",
                             gap: "0.5rem",
                             opacity: "1",
+                            display: "flex",
+                            alignItems: "center",
                         }}
                     >
-                        <PrepIcon />
+                        <TimerIcon />
                         {prepTimeMin}
+                    </Badge>
+
+                    {/* Ingredient Count Badge */}
+                    <Badge
+                        sx={{
+                            backgroundColor: textHover,
+
+                            p: "0.5rem",
+                            borderRadius: "3rem",
+                            gap: "0.5rem",
+                            opacity: "1",
+                            display: "flex",
+                            alignItems: "center",
+                        }}
+                    >
+                        <IngredientsQtyIcon />
+                        {ingredientCount}
                     </Badge>
                 </Box>
             </Box>
@@ -364,13 +377,24 @@ const RecipePostWidget = ({
 
                 <Divider />
             </Box>
-
-            <EquipmentList equipment={equipment} themeColors={themeColors} />
-            <IngredientList
-                ingredients={ingredients}
-                themeColors={themeColors}
-            />
-            <StepsList steps={steps} themeColors={themeColors} />
+            <Box
+                sx={{
+                    backgroundColor: recipeStepsPanel,
+                    borderRadius: ".75rem",
+                }}
+            >
+                <EquipmentList
+                    equipment={equipment}
+                    themeColors={themeColors}
+                />
+                {/* <Divider sx={{ m: "0 0.75rem" }} /> */}
+                <IngredientList
+                    ingredients={ingredients}
+                    themeColors={themeColors}
+                />
+                {/* <Divider sx={{ m: "0 0.75rem" }} /> */}
+                <StepsList steps={steps} themeColors={themeColors} />
+            </Box>
 
             {/* Recipe Interactions */}
             <FlexBetween mt="0.5rem">
@@ -400,28 +424,6 @@ const RecipePostWidget = ({
                     </Button>
                 </FlexBetween>
 
-                {/* Comments */}
-                <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        onClick={() => setIsComments(!isComments)}
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
-
-                            color: headingText,
-                            "&:hover": {
-                                color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <CommentIcon />
-                        <Typography pl="0.5rem">{commentCount}</Typography>
-                    </Button>
-                </FlexBetween>
-
                 {/* Recommendations */}
                 <FlexBetween gap="0.3rem">
                     <Button
@@ -447,6 +449,28 @@ const RecipePostWidget = ({
                         <Typography pl="0.5rem">
                             {recommendationCount}
                         </Typography>
+                    </Button>
+                </FlexBetween>
+
+                {/* Comments */}
+                <FlexBetween gap="0.3rem">
+                    <Button
+                        size="medium"
+                        fullwidth
+                        onClick={() => setIsComments(!isComments)}
+                        sx={{
+                            borderRadius: "3rem",
+                            width: "6rem",
+
+                            color: headingText,
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
+                        <CommentIcon />
+                        <Typography pl="0.5rem">{commentCount}</Typography>
                     </Button>
                 </FlexBetween>
 
