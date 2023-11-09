@@ -60,8 +60,8 @@ const EquipmentList = ({ equipment, themeColors }) => {
             {equipment.map((equip) =>
                 equipmentListOpen ? (
                     <Box
-                        mr="0.5rem"
                         sx={{
+                            p: "0 0.75rem",
                             display: "grid",
                             gridTemplateColumns: "repeat(4, 1fr)",
                             gap: "0.5rem",
