@@ -1283,103 +1283,416 @@ export const recipes = [
 
     console.log("DATA USER ID:", userIds[8]),
 
+    // New Recipes
+
     // // Recipe Data Template
-    // {
-    //     _id: new mongoose.Types.ObjectId(),
-    //     userId: userIds[XXXXXXXXXXXX],
-    //     firstName: "XXXXXXXXXXXX",
-    //     lastName: "XXXXXXXXXXXX",
-    //     userPicturePath: "XXXXXXXXXXXX",
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[23],
+        firstName: "Travis",
+        lastName: "Denzer",
+        userPicturePath: "m6.jpg",
 
-    //     recipeTitle: "XXXXXXXXXXXX",
-    //     picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Christmas Pie",
+        picturePath: "XXXXXXXXXXXX",
 
-    //     ingredients: [
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //     ],
-    //     // ingredientNum: Number,
+        ingredients: [
+            { qty: "2", element: "tbsp olive oil" },
+            { qty: "1", element: "knob butter" },
+            { qty: "1", element: "onion, finely chopped" },
+            { qty: "500g", element: "sausagemeat or skinned sausages" },
+            { qty: "1 lemon", element: "grated lemon zest" },
+            { qty: "100g", element: "fresh white breadcrumbs" },
+            { qty: "85g", element: "ready-to-eat dried apricots, chopped" },
+            {
+                qty: "50g",
+                element: "chestnut, canned or vacuum-packed, chopped",
+            },
+            { qty: "2 tsp", element: "thyme, fresh & chopped" },
+            { qty: "100g", element: "cranberries, fresh or frozen" },
+            { qty: "500g", element: "chicken breasts, boneless & skinless" },
+            { qty: "500g", element: "shortcrust pastry" },
+            { qty: "1", element: "beaten egg, to glaze" },
+        ],
+        // ingredientNum: Number,
 
-    //     equipment: [
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //     ],
-    //     prepTime: "XXXXXXXXXXXX",
-    //     cookTime: "XXXXXXXXXXXX",
-    //     servings: XXXXXXXXXXXX,
-    //     spiceLevel: XXXXXXXXXXXX,
-    //     steps: [
-    //         {
-    //             stepNum: 1,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 2,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 3,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 4,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //     ],
-    //     notes: "XXXXXXXXXXXX",
-    //     tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-    //     likes: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     recommendations: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     saves: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     shares: XXXXXXXXXXXX,
-    //     comments: [
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //     ],
-    // },
+        equipment: [
+            "Chopping Board",
+            "Chef Knife",
+            "20-23cm springform or deep loose-based tart tin",
+            "Frying Pan",
+            "Mixing Bowl",
+            "Oven",
+            "Pastry Brush",
+        ],
+        prepTime: "30 mins",
+        cookTime: "1 hr 15 mins",
+        servings: "12",
+        spiceLevel: "0",
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in a frying pan, then add the onion and fry for 5 mins until softened. Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs, apricots, chestnuts and thyme into a bowl. Add the onion and cranberries, and mix everything together with your hands, adding plenty of pepper and a little salt.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Cut each chicken breast into three fillets lengthwise and season all over with salt and pepper. Heat the remaining oil in the frying pan, and fry the chicken fillets quickly until browned, about 6-8 mins.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "Roll out two-thirds of the pastry to line a 20-23cm springform or deep loose-based tart tin. Press in half the sausage mix and spread to level. Then add the chicken pieces in one layer and cover with the rest of the sausage. Press down lightly.",
+            },
+            {
+                stepNum: 4,
+                stepMethod:
+                    "Roll out the remaining pastry. Brush the edges of the pastry with beaten egg and cover with the pastry lid. Pinch the edges to seal, then trim. Brush the top of the pie with egg, then roll out the trimmings to make holly leaf shapes and berries. Decorate the pie and brush again with egg.",
+            },
+            {
+                stepNum: 5,
+                stepMethod:
+                    "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles.",
+            },
+        ],
+        notes: "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
+        tags: ["Christmas", "Pie", "Savoury", "Rich"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 12,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+        // ingredientNum: Number,
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+        // ingredientNum: Number,
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+        // ingredientNum: Number,
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
 ];
