@@ -22,8 +22,13 @@ const StepsList = ({ steps, themeColors }) => {
 
     // Theme
     const { palette } = useTheme();
-    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
-        themeColors || {};
+    const {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        recipeStepsPanelHover,
+        mainBackPanel,
+    } = themeColors || {};
 
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
@@ -48,6 +53,7 @@ const StepsList = ({ steps, themeColors }) => {
                     borderRadius: stepsListOpen
                         ? "0 0 0rem 0rem "
                         : "0 0 0.75rem 0.75rem ",
+
                     border: "0",
                 }}
             >
@@ -65,7 +71,7 @@ const StepsList = ({ steps, themeColors }) => {
                             gap: "0.5rem",
                             m: "0 0 0rem 0",
                             mx: "0",
-                            p: "0.5rem 0.5rem 0 0.5rem",
+                            p: "0.5rem 0.5rem 0 0.5rem ",
                             borderRadius: "0rem",
                             backgroundColor: recipeStepsPanel,
                             width: "100%",
