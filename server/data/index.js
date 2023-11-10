@@ -30,7 +30,7 @@ const userIds = [
 
 export const users = [
     {
-        _id: userIds[0],
+        _id: userIds[0], // 653895aab327ab8ea31b6925
         firstName: "Susan",
         lastName: "Wertz",
         email: "cindy2015@yahoo.com",
@@ -52,7 +52,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[1],
+        _id: userIds[1], // 653895aab327ab8ea31b6926
         firstName: "Steve",
         lastName: "Ralph",
         email: "Steve.Ralph@email.com",
@@ -75,7 +75,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[2],
+        _id: userIds[2], // 653895aab327ab8ea31b6927
         firstName: "Carolyn",
         lastName: "McKinney",
         email: "laron1993@hotmail.com",
@@ -99,7 +99,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[3],
+        _id: userIds[3], // 653895aab327ab8ea31b6928
         firstName: "Lina",
         lastName: "Prichard",
         email: "jerome_franec@yahoo.com",
@@ -122,7 +122,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[4],
+        _id: userIds[4], // 653895aab327ab8ea31b6929
         firstName: "Jane",
         lastName: "Doe",
         email: "jean.hudso1@yahoo.com",
@@ -150,7 +150,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[5],
+        _id: userIds[5], // 653895aab327ab8ea31b692a
         firstName: "Harvey",
         lastName: "Dunn",
         email: "harveydunn@gmail.com",
@@ -175,7 +175,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[6],
+        _id: userIds[6], // 653895aab327ab8ea31b692b
         firstName: "Carly",
         lastName: "Vowel",
         email: "carlyvowel@gmail.com",
@@ -201,7 +201,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[7],
+        _id: userIds[7], // 653895aab327ab8ea31b692c
         firstName: "Jessica",
         lastName: "Dunn",
         email: "jessicadunn@gmail.com",
@@ -219,7 +219,7 @@ export const users = [
         __v: 0,
     },
     {
-        _id: userIds[8],
+        _id: userIds[8], // 651c2c05e043388a8c6ac57c
         firstName: "Link of",
         lastName: "Hyrule",
         email: "fakeuser@email.com",
@@ -256,7 +256,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[9],
+        _id: userIds[9], // 653895aab327ab8ea31b692d
         firstName: "Hannah",
         lastName: "Middlebrooks",
         email: "eliane2004@yahoo.com",
@@ -289,7 +289,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[10],
+        _id: userIds[10], // 653895aab327ab8ea31b692e
         firstName: "Molly",
         lastName: "Melton",
         email: "amir2012@hotmail.com",
@@ -323,7 +323,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[11],
+        _id: userIds[11], // 653895aab327ab8ea31b692f
         firstName: "Kur",
         lastName: "Hintz",
         email: "mohammad1987@gmail.com",
@@ -358,7 +358,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[12],
+        _id: userIds[12], // 653895aab327ab8ea31b6930
         firstName: "Patricia",
         lastName: "Lin",
         email: "haven20092000@yahoo.com",
@@ -394,7 +394,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[13],
+        _id: userIds[13], // 653895aab327ab8ea31b6931
         firstName: "Mary",
         lastName: "Remillard",
         email: "jeffrey.jakubows@hotmail.com",
@@ -433,7 +433,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[14],
+        _id: userIds[14], // 653895aab327ab8ea31b6932
         firstName: "Edwin",
         lastName: "Johnson",
         email: "verlie2016@gmail.com",
@@ -466,7 +466,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[15],
+        _id: userIds[15], // 653895aab327ab8ea31b6933
         firstName: "Naomi",
         lastName: "Cortes",
         email: "napoleon.gorcza@gmail.com",
@@ -498,7 +498,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[16],
+        _id: userIds[16], // 653895aab327ab8ea31b6934
         firstName: "Annika",
         lastName: "Pierce",
         email: "henderson_zula@hotmail.com",
@@ -538,7 +538,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[17],
+        _id: userIds[17], // 653895aab327ab8ea31b6935
         firstName: "Flora",
         lastName: "Jones",
         email: "edmund1992@hotmail.com",
@@ -571,7 +571,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[18],
+        _id: userIds[18], // 653895aab327ab8ea31b6936
         firstName: "Valerie",
         lastName: "Osborn",
         email: "herta.maye0@yahoo.com",
@@ -607,7 +607,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[19],
+        _id: userIds[19], // 653895aab327ab8ea31b6937
         firstName: "Robert",
         lastName: "Pahl",
         email: "hyman_schoe5@yahoo.com",
@@ -641,7 +641,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[20],
+        _id: userIds[20], // 653895aab327ab8ea31b6938
         firstName: "Mark",
         lastName: "Higgins",
         email: "florian.upt@yahoo.com",
@@ -676,7 +676,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[21],
+        _id: userIds[21], // 653895aab327ab8ea31b6939
         firstName: "Daniel",
         lastName: "King",
         email: "marianna_ha@hotmail.com",
@@ -707,7 +707,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[22],
+        _id: userIds[22], // 653895aab327ab8ea31b693a
         firstName: "Craig",
         lastName: "Stone",
         email: "cstone@email.com",
@@ -750,7 +750,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[23],
+        _id: userIds[23], // 653895aab327ab8ea31b693b
         firstName: "Travis",
         lastName: "Denzer",
         email: "wayne2014@hotmail.com",
@@ -773,7 +773,7 @@ export const users = [
 
     // User Template
     {
-        _id: userIds[24],
+        _id: userIds[24], // 653895aab327ab8ea31b693c
         firstName: "Wilbur",
         lastName: "Boyd",
         email: "fredy1981@gmail.com",
@@ -952,7 +952,7 @@ export const posts = [
 
 export const recipes = [
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "652c06b97a11801be3235379",
         userId: userIds[8],
         firstName: "FakeFirst",
         lastName: "FakeLast",
@@ -1069,7 +1069,7 @@ export const recipes = [
     },
 
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "652c06b97a11801be323537a",
         userId: userIds[8],
         firstName: "FakeFirst",
         lastName: "FakeLast",
@@ -1178,7 +1178,7 @@ export const recipes = [
         ],
     },
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "652c06b97a11801be323537b",
         userId: userIds[6],
         firstName: "Carly",
         lastName: "Vowel",
@@ -1294,7 +1294,7 @@ export const recipes = [
         userPicturePath: "m6.jpg",
 
         recipeTitle: "Christmas Pie",
-        picturePath: "XXXXXXXXXXXX",
+        picturePath: "christmas-dinner-pie_770x408.jpg",
 
         ingredients: [
             { qty: "2", element: "tbsp olive oil" },
@@ -1319,16 +1319,17 @@ export const recipes = [
         equipment: [
             "Chopping Board",
             "Chef Knife",
-            "20-23cm springform or deep loose-based tart tin",
+            "20-23cm Baking Tin",
             "Frying Pan",
             "Mixing Bowl",
             "Oven",
             "Pastry Brush",
+            "Baking Sheet",
         ],
         prepTime: "30 mins",
         cookTime: "1 hr 15 mins",
         servings: "12",
-        spiceLevel: "0",
+        spiceLevel: "1",
         steps: [
             {
                 stepNum: 1,
@@ -1359,36 +1360,37 @@ export const recipes = [
         notes: "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
         tags: ["Christmas", "Pie", "Savoury", "Rich"],
         likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[13], true],
+            [userIds[14], true],
+            [userIds[15], true],
+            [userIds[16], true],
+            [userIds[17], true],
         ]),
         recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[13], true],
+            [userIds[16], true],
+            [userIds[17], true],
         ]),
         saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[13], true],
+            [userIds[14], true],
+            [userIds[15], true],
+            [userIds[16], true],
         ]),
         shares: 12,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[13],
+                commentText:
+                    "Wow! Thought I would give this a try for next Christmas and I'm thoroughly impressed! Will definitely be making this one for the whole family!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[17],
+                commentText: "This is a great recipe! I love Christmas Pie!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[16],
+                commentText: "Can't wait to try this one out!",
             },
         ],
     },
