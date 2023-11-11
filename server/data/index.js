@@ -949,7 +949,9 @@ export const posts = [
         ],
     },
 ];
-
+// --------------------------------------------------
+// ------------------- RECIPES ----------------------
+// --------------------------------------------------
 export const recipes = [
     {
         _id: "652c06b97a11801be3235379",
@@ -982,7 +984,6 @@ export const recipes = [
             { qty: "4 tsp", element: "Sesame seeds, toasted" },
             { qty: "8 slices", element: "Fresh red chilli, sliced" },
         ],
-        // ingredientNum: Number,
 
         equipment: [
             "heatproof bowl",
@@ -1100,7 +1101,6 @@ export const recipes = [
             { qty: "2 tsp", element: "Freshly ground black pepper" },
             { qty: "1/2 tsp", element: "crushed red pepper flakes" },
         ],
-        // ingredientNum: Number,
 
         equipment: [
             "large skillet",
@@ -1314,7 +1314,6 @@ export const recipes = [
             { qty: "500g", element: "shortcrust pastry" },
             { qty: "1", element: "beaten egg, to glaze" },
         ],
-        // ingredientNum: Number,
 
         equipment: [
             "Chopping Board",
@@ -1396,7 +1395,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
-
+    // https://www.delish.com/cooking/recipe-ideas/a20720530/healthy-peanut-butter-banana-smoothie-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[XXXXXXXXXXXX],
@@ -1404,63 +1403,171 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Peanut Butter Banana Smoothie",
+        picturePath: "peanut-butter-banana-smoothie-lead-64e6355ef32bd.jpg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "1", element: "large banana" },
+            { qty: "1", element: "large banana, peeled, halved & frozen" },
+            { qty: "1 cup", element: "unsweetened almond milk" },
+            { qty: "2 tbsp", element: "peanut butter" },
+            { qty: "2 tsp", element: "honey" },
+            { qty: "1/8 tsp", element: "pure vanilla extract" },
+            { qty: "1/8 tsp", element: "ground cinnamon" },
+            { qty: "1/4 tsp", element: "ground cinnamon, for garnish" },
+            { qty: "3", element: "banana slices" },
         ],
-        // ingredientNum: Number,
 
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        equipment: ["Blender", "Tall Glass", "Knife", "Teaspoon"],
+        prepTime: "5",
+        cookTime: "0",
+        servings: 1,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Combine all ingredients in a blender and blend until smooth.",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Layer 3 slices of banana and 1/4 tsp of ground cinnamon on top for garnish.",
+            },
+        ],
+        notes: "A delicious smoothie for on the go, breakfast or treat on a warm day.",
+        tags: ["Smoothie", "Banana", "Peanut Butter", "Breakfast"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a44321711/apple-cider-whoopie-pies-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Apple Cider Whoopie Pies",
+        picturePath: "apple-cider-whoopie-pies-lead-649e038061d39.jpg",
+
+        ingredients: [
+            { qty: "1 1/2 cup", element: "apple cider" },
+            { qty: "2 1/2 cup", element: "all-purpose flour" },
+            { qty: "2 tsp", element: "ground cinnamon" },
+            { qty: "1 tsp", element: "1 navel orange, zested" },
+            { qty: "1 tsp", element: "baking powder" },
+            { qty: "3/4 tsp", element: "ground ginger" },
+            { qty: "1/2 tsp", element: "baking soda" },
+            { qty: "1/2 tsp", element: "fresh nutmeg, grated" },
+            { qty: "1/2 tsp", element: "kosher salt" },
+            { qty: "1/4 tsp", element: "ground cloves" },
+            { qty: "2", element: "large eggs" },
+            { qty: "2/3 cup", element: "apple butter" },
+            { qty: "1/2 cup", element: "packed dark brown sugar" },
+            { qty: "1/2 c", element: "vegetable oil" },
+            { qty: "1/3 cup", element: "granulated sugar" },
+            { qty: "2 tsp", element: "pure vanilla extract" },
+            { qty: "1 tbsp", element: "unsalted butter, melted" },
+            { qty: "1/4 cup", element: "cinnamon sugar" },
+            { qty: "4 oz", element: "cream cheese, room temp" },
+            { qty: "4 tbsp", element: "unsalted butter, room temp" },
+            { qty: "2 cup", element: "confectioners’ sugar" },
+            { qty: "1 tsp", element: "pure vanilla extract" },
+            { qty: "3 tbsp", element: "salted caramel topping" },
+        ],
+
+        equipment: [
+            "medium saucepan",
+            "large bowl",
+            "oven",
+            "whisk",
+            "medium bowl",
+            "ice cream scoop",
+            "pastry brush",
+            "wire rack",
+        ],
+        prepTime: "10 mins",
+        cookTime: "2 hrs 20 mins",
+        servings: 8,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a medium saucepan over medium-high heat, bring cider to a boil. Continue to boil until cider starts to darken and slightly thicken and is reduced to about 1/4 cup, about 15 minutes. Let cool 10 minutes.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Preheat oven to 350°. Line 2 baking sheets with parchment. In a large bowl, whisk flour, cinnamon, orange zest, baking powder, ginger, baking soda, nutmeg, salt, and cloves.",
             },
             {
                 stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "In a medium bowl, whisk eggs, apple butter, brown sugar, oil, granulated sugar, and vanilla. While whisking, slowly pour reduced cider into egg mixture, whisking until combined. Add egg mixture to dry ingredients and stir until combined.",
             },
             {
                 stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Using a medium (2-oz.) cookie scoop, scoop dough onto prepared sheets, spacing about 1 inch apart. Bake cookies until springy to the touch, 12 to 14 minutes. Transfer to a wire rack and let cool.",
+            },
+            {
+                stepNum: 5,
+                stepMethod:
+                    "Lightly brush tops of cookies with butter. Sprinkle with cinnamon sugar.",
+            },
+            {
+                stepNum: 6,
+                stepMethod:
+                    "In a large bowl, using a handheld mixer on medium-high speed, beat cream cheese and butter until light and fluffy, about 3 minutes. Add confectioners’ sugar and vanilla and beat until fluffy and smooth, about 2 minutes more. Scrape filling into a pastry bag or resealable bag.",
+            },
+            {
+                stepNum: 7,
+                stepMethod:
+                    "Turn cookies rounded side down. Cut bottom of pastry bag or corner of resealable bag to create a 1/2 inch opening. Pipe filling into the center of half of cookies.",
+            },
+            {
+                stepNum: 8,
+                stepMethod:
+                    "Dollop caramel onto the center of remaining cookies. Sandwich and gently press until filling spreads almost to edges of cookies. Cover and refrigerate whoopie pies at least 1 hour or up to 3 days.",
             },
         ],
         notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        tags: ["Whoopie Pie", "Dessert", "Sweet", "Apple Cider"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -1526,108 +1633,6 @@ export const recipes = [
             { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
             { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
         ],
-        // ingredientNum: Number,
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-        // ingredientNum: Number,
 
         equipment: [
             "XXXXXXXXXXXX",
