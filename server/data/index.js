@@ -1586,7 +1586,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 22,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
