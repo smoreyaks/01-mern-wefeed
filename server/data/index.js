@@ -1646,8 +1646,8 @@ export const recipes = [
         ],
         prepTime: "XXXXXXXXXXXX",
         cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        servings: 6,
+        spiceLevel: 3,
         steps: [
             {
                 stepNum: 1,
