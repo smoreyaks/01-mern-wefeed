@@ -1613,61 +1613,54 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Harissa Chicken & Sweet Potatoes",
-        picturePath: "XXXXXXXXXXXX",
+        picturePath:
+            "sheet-pan-harrisa-chicken-and-sweet-potatoes-1-1669060587.jpeg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "3 lb", element: "bone-in chicken thighs, skin on" },
+            { qty: "2 tsp", element: "Kosher salt" },
+            { qty: "2 tsp", element: "Freshly ground black pepper" },
+            { qty: "3 tbsp", element: "harissa" },
+            { qty: "1/2 Lemon", element: "Lemon Juice" },
+            { qty: "2", element: "cloves garlic, minced" },
+            { qty: "3", element: "large sweet potatoes, sliced" },
+            { qty: "1", element: " large red onion, sliced thick" },
+            { qty: "2 tbsp", element: "extra-virgin olive oil" },
+            { qty: "1 tsp", element: "cumin seeds" },
+            { qty: "1 tsp", element: "ground cumin" },
+            { qty: "1", element: "lemon, cut into 6 wedges" },
+            { qty: "2 tbsp", element: "cilantro, fresh chopped" },
         ],
 
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
+        equipment: ["Large Bowl", "Baking Tray", "Kitchen Knife"],
+        prepTime: "15 mins",
+        cookTime: "1 hr 5 mins",
         servings: 6,
         spiceLevel: 3,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Season chicken all over with salt and pepper. Transfer to a large bowl and add harissa, lemon juice, and garlic. Rub into chicken with your hands to coat. Let sit at room temperature 30 minutes. ",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Preheat oven to 425°. On a baking sheet, toss potatoes and onion with oil, cumin seeds, and ground cumin; season with salt and pepper. Spread in an even layer, then nestle chicken in with veggies. ",
             },
             {
                 stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Bake until potatoes are golden and an instant-read thermometer inserted into thickest part of chicken registers 165°, 30 to 35 minutes. ",
             },
             {
                 stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Top with cilantro. Serve with lemon wedges alongside.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        notes: "This easy-as-can-be weeknight dinner is a complete meal made on one sheet pan. I love when a dish’s prep is simple and fast; here’s the perfect example. If you roast the sweet potatoes as indicated, your gift = creamy centers and crispy edges, enhanced by jammy red onions. Using bone-in thighs pretty much guarantees super-tender chicken.",
+        tags: ["Simple", "Chicken", "Harissa", "Spicy"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -1704,7 +1697,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
-
+    // https://www.delish.com/cooking/recipe-ideas/a38326725/spinach-puffs-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[XXXXXXXXXXXX],
@@ -1712,12 +1705,12 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
+        recipeTitle: "Spinach Puffs",
         picturePath: "XXXXXXXXXXXX",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "vegetable oil" },
+            { qty: "XXXXXXXXXXXX", element: "onion, finely chopped" },
             { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
             { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
             { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
@@ -1751,18 +1744,29 @@ export const recipes = [
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "In a medium skillet, heat oil over medium heat. Add onions and season with salt. Cook, stirring occasionally, until softened, 4 to 5 minutes. Add garlic and cook until fragrant, about 30 seconds more. Remove from heat.",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "In a large bowl, stir together cream cheese and 1 egg. Stir in garlic-onion mixture, spinach, feta, dill, and lemon zest and season with salt and pepper.",
             },
             {
                 stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Grease 9 cups of a muffin tin with cooking spray. On a lightly floured surface, roll out puff pastry sheet to a 12” square. Cut into 9 smaller squares, each about 4” wide. Ease each puff pastry square into a greased muffin cup, letting the corners hang over the sides. Add about 2½ tablespoons of filling to the center of each. Fold in pastry corners to meet in the center over the filling and pinch together. Refrigerate for 30 minutes (or freeze for 15 minutes).",
             },
             {
                 stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 5,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 6,
                 stepMethod: "XXXXXXXXXXXX",
             },
         ],
