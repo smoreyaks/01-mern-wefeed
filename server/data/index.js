@@ -1735,10 +1735,10 @@ export const recipes = [
             "rolling pin",
             "XXXXXXXXXXXX",
         ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        prepTime: "30 mins",
+        cookTime: "1 hr",
+        servings: 9,
+        spiceLevel: 1,
         steps: [
             {
                 stepNum: 1,
