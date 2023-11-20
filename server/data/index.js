@@ -1733,7 +1733,6 @@ export const recipes = [
             "oven",
             "muffin tin",
             "rolling pin",
-            "XXXXXXXXXXXX",
         ],
         prepTime: "30 mins",
         cookTime: "1 hr",
