@@ -1115,7 +1115,7 @@ export const recipes = [
         prepTime: "15 mins",
         cookTime: "30 mins",
         servings: 4,
-        spiceLevel: 1,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
@@ -1455,7 +1455,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 13,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
@@ -1737,7 +1737,7 @@ export const recipes = [
         prepTime: "30 mins",
         cookTime: "1 hr",
         servings: 9,
-        spiceLevel: 1,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
@@ -1790,7 +1790,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 55,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
@@ -1808,7 +1808,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
-    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a45574717/frozen-hot-chocolate-martini-recipe/
 
     {
         _id: new mongoose.Types.ObjectId(),
@@ -1817,61 +1817,217 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Frozen Hot Chocolate Martini",
+        picturePath: "frozenhotchocolatemartini-lead-65305104aa881.jpg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "4 c", element: "ice" },
+            { qty: "4 oz", element: "Baileys" },
+            { qty: "3 oz.", element: "vodka" },
+            { qty: "1/2 c.", element: "hot chocolate mix" },
+            {
+                qty: "XXXXXXXXXXXX",
+                element: "Whipped cream and chocolate shavings, for serving",
+            },
         ],
 
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        equipment: ["Martini Glass", "Grater", "Blender"],
+        prepTime: "5 mins",
+        cookTime: "5 mins",
+        servings: 2,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "In a blender, blend ice, Baileys, vodka, and hot chocolate mix until smooth. Add more ice as needed to thicken as desired.",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Pour into 2 glasses. Top with whipped cream and chocolate shavings.",
+            },
+        ],
+        notes: "The frozen hot chocolate is simple and uses a premade hot chocolate mix, and everything gets blended together for a quick festive cocktail that would be a hit around the holidays.",
+        tags: ["Chocolate", "Martini", "Dessert Cocktail", "Sweet"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 34,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a40087538/amaretto-sour-recipe/
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Amaretto Sour",
+        picturePath: "amaretto-sour3-1654707964.jpg",
+
+        ingredients: [
+            { qty: "1/2 oz.", element: "large egg white, whisked" },
+            { qty: "1 1/2 oz.", element: "bourbon" },
+            { qty: "3/4 oz.", element: " amaretto liqueur" },
+            { qty: "3/4 oz.", element: "fresh lemon juice" },
+            { qty: "2 dashes", element: "Angostura bitters" },
+            { qty: "2 cubes", element: "Ice" },
+            { qty: "3", element: "Maraschino cherries, for garnish" },
+            { qty: "1", element: "lemon peel, strip" },
+        ],
+
+        equipment: ["cocktail shaker", "rocks glass", "Cocktail Skewer"],
+        prepTime: "5 mins",
+        cookTime: "N/A",
+        servings: 1,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a cocktail shaker, combine egg white, bourbon, amaretto, lemon juice, and bitters. Fill shaker with ice, cover, and vigorously shake until outside of shaker is very cold, about 30 seconds.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Strain cocktail into a rocks glass. Garnish with cherries and lemon peel.",
+            },
+        ],
+        notes: "If you love a Whiskey Sour but wish it was a hint nuttier, this is the perfect, classic drink for you.",
+        tags: ["Cocktail", "Amaretto", "Sour", "Refreshing"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 48,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a45362568/best-chicken-stir-fry-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Chicken Stir-Fry",
+        picturePath: "chicken-stir-fry-lead-6513039282dd4.jpg",
+
+        ingredients: [
+            { qty: "1/2 c.", element: " reduced-sodium soy sauce" },
+            { qty: "2 tbsp.", element: "honey" },
+            { qty: "2 tsp.", element: "toasted sesame oil" },
+            { qty: "1 tbsp.", element: "canola oil" },
+            {
+                qty: "1",
+                element: "head broccoli, cut into small florets",
+            },
+            {
+                qty: "1",
+                element: "bell pepper, seeds and ribs removed, chopped",
+            },
+            { qty: "2", element: "cloves garlic, finely chopped" },
+            {
+                qty: "1 lb.",
+                element:
+                    "boneless, skinless chicken breast, cut into 1 inch pieces",
+            },
+            { qty: "1/3 c.", element: "cashews" },
+            { qty: "1 tsp", element: "black pepper, fresh ground" },
+        ],
+
+        equipment: [
+            "small bowl",
+            "whisk ",
+            " large skillet",
+            "stove",
+            "kitchen knife",
+            "measuring spoons",
+        ],
+        prepTime: "10 mins",
+        cookTime: "20 mins",
+        servings: 4,
+        spiceLevel: 1,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a small bowl, whisk soy sauce, honey, and sesame oil.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "In a large skillet over high heat, heat oil. Cook broccoli, bell pepper, and garlic, stirring frequently, until softened, about 5 minutes. Add chicken and cook, tossing occasionally, until golden brown and cooked through, about 8 minutes. Stir in cashews; season with pepper.",
             },
             {
                 stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Pour sauce into skillet and bring to a simmer. Cook, stirring occasionally, until thickened, about 5 minutes.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
+        notes: "A stir fry is our go-to weeknight dinner when we just don’t have the energy to spend a long time in the kitchen or hit the grocery store—this recipe is no exception.",
         tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
@@ -1891,207 +2047,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
+        shares: 19,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
