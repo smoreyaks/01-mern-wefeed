@@ -2764,6 +2764,1906 @@ export const recipes = [
         ],
     },
 
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "XXXXXXXXXXXX",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "XXXXXXXXXXXX",
+        cookTime: "XXXXXXXXXXXX",
+        servings: XXXXXXXXXXXX,
+        spiceLevel: XXXXXXXXXXXX,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
     // //--------------------------------------//
 
     // {
