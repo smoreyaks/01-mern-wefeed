@@ -961,6 +961,7 @@ export const recipes = [
         userPicturePath: "link-sunglasses.gif",
 
         recipeTitle: "Crispy Beef & Shitake Noodles",
+        recipeType: ["main"],
         picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
 
         ingredients: [
@@ -1077,6 +1078,7 @@ export const recipes = [
         userPicturePath: "link-sunglasses.gif",
 
         recipeTitle: "One-Pan Creamy Chicken & Gnocchi",
+        recipeType: ["main"],
         picturePath:
             "210623-delish-quarterly-creamy-chicken-gnocchi-horizontal-0258-eb-1625174322.jpg",
 
@@ -1185,6 +1187,7 @@ export const recipes = [
         userPicturePath: "p8.jpeg",
 
         recipeTitle: "Honey-Garlic Glazed Salmon",
+        recipeType: ["main", "lunch"],
         picturePath: "1506456214-delish-honey-garlic-glazed-salmon.jpg",
 
         ingredients: [
@@ -1294,6 +1297,7 @@ export const recipes = [
         userPicturePath: "m6.jpg",
 
         recipeTitle: "Christmas Pie",
+        recipeType: ["main"],
         picturePath: "christmas-dinner-pie_770x408.jpg",
 
         ingredients: [
@@ -1404,6 +1408,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Peanut Butter Banana Smoothie",
+        recipeType: ["drink", "breakfast"],
         picturePath: "peanut-butter-banana-smoothie-lead-64e6355ef32bd.jpg",
 
         ingredients: [
@@ -1482,6 +1487,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Apple Cider Whoopie Pies",
+        recipeType: ["dessert"],
         picturePath: "apple-cider-whoopie-pies-lead-649e038061d39.jpg",
 
         ingredients: [
@@ -1613,6 +1619,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Harissa Chicken & Sweet Potatoes",
+        recipeType: ["main"],
         picturePath:
             "sheet-pan-harrisa-chicken-and-sweet-potatoes-1-1669060587.jpeg",
 
@@ -1706,6 +1713,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Spinach Puffs",
+        recipeType: ["main", "appetiser"],
         picturePath: "delish-spinach-puffs-1638982470.jpg",
 
         ingredients: [
@@ -1771,7 +1779,7 @@ export const recipes = [
             },
         ],
         notes: "These spinach puffs are the perfect holiday appetizer. They're filled with a mixture of sautéed onion, garlic,  spinach, and cream cheese and baked inside little puff pastry cups in a muffin tin. We've never met anyone who's been able to eat just one.",
-        tags: ["Spinach", "Appetizer", "Entree", "Delicious"],
+        tags: ["Spinach", "Appetiser", "Entree", "Delicious"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -1818,6 +1826,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Frozen Hot Chocolate Martini",
+        recipeType: ["drink", "dessert"],
         picturePath: "frozenhotchocolatemartini-lead-65305104aa881.jpg",
 
         ingredients: [
@@ -1826,8 +1835,12 @@ export const recipes = [
             { qty: "3 oz.", element: "vodka" },
             { qty: "1/2 c.", element: "hot chocolate mix" },
             {
-                qty: "XXXXXXXXXXXX",
-                element: "Whipped cream and chocolate shavings, for serving",
+                qty: "1 swirl",
+                element: "Whipped cream, for serving",
+            },
+            {
+                qty: "1 sprinkle",
+                element: "chocolate shavings, for serving",
             },
         ],
 
@@ -1896,6 +1909,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Amaretto Sour",
+        recipeType: ["drink"],
         picturePath: "amaretto-sour3-1654707964.jpg",
 
         ingredients: [
@@ -1973,6 +1987,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "Chicken Stir-Fry",
+        recipeType: ["main"],
         picturePath: "chicken-stir-fry-lead-6513039282dd4.jpg",
 
         ingredients: [
@@ -2028,7 +2043,7 @@ export const recipes = [
             },
         ],
         notes: "A stir fry is our go-to weeknight dinner when we just don’t have the energy to spend a long time in the kitchen or hit the grocery store—this recipe is no exception.",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        tags: ["Stir Fry", "Chicken", "Simple", "Delicious"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -2065,7 +2080,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
-
+    // https://www.delish.com/cooking/recipe-ideas/a41802674/sweet-potato-gratin-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[XXXXXXXXXXXX],
@@ -2073,62 +2088,87 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Sweet Potato Gratin",
+        recipeType: ["main"],
+        picturePath: "delish-202210-sweetpotatogratin-186-1666972220.jpg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            {
+                qty: "3 tbsp.",
+                element:
+                    "unsalted butter, softened, divided, plus more for foil",
+            },
+            { qty: "4 tsp.", element: "cloves garlic, chopped" },
+            {
+                qty: "2 tbsp.",
+                element: "chopped fresh thyme leaves, plus more for serving",
+            },
+            { qty: "1 tbsp.", element: "chopped fresh sage leaves" },
+            { qty: "1 tbsp.", element: "Kosher salt" },
+            { qty: "1 cup", element: "heavy cream" },
+            { qty: "3/4 c.", element: "whole milk" },
+            { qty: "1/4 tsp.", element: "ground cinnamon" },
+            { qty: "1/4 tsp.", element: "ground nutmeg" },
+            { qty: "2", element: "large eggs" },
+            { qty: "3/4 c.", element: "grated Parmesan, divided" },
+            { qty: "1/4 tsp.", element: "black pepper, freshly ground " },
+            {
+                qty: "0.7 lb",
+                element: "orange sweet potatoes, peeled and sliced",
+            },
+            {
+                qty: "0.7 lb",
+                element: "purple sweet potatoes, peeled & sliced",
+            },
+            {
+                qty: "0.7 lb",
+                element: "white sweet potatoes, peeled and sliced",
+            },
+            { qty: "2 2/3 cup", element: "Gruyère cheese, shredded" },
         ],
 
         equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
+            "oven",
+            "medium bowl",
+            "casserole dish",
+            "small saucepan",
+            "kitchen knife",
+            "wooden spoon",
+            "whisk",
+            "stove",
+            "measuring cups",
+            "Tin Foil",
+            "Peeler",
+            "Grater",
         ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        prepTime: "30 mins",
+        cookTime: "1 hr 30 mins",
+        servings: 12,
+        spiceLevel: 1,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Preheat oven to 375°. Butter a 2-quart casserole or gratin dish with 1 tablespoon butter. In a small saucepan over medium heat, melt 2 tablespoons butter. When butter stops foaming, add garlic and cook, stirring, until fragrant, about 30 seconds. Add thyme, sage, and 1/2 teaspoon salt and cook, stirring occasionally, until heated through, about 30 seconds. Add cream, milk, cinnamon, and nutmeg. Bring to a simmer (do not let boil) and cook, stirring occasionally, until slightly thickened, about 5 minutes. Remove from heat.",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "In a medium bowl, beat eggs. Transfer 1 cup cream mixture to a liquid measuring cup or bowl with a spout. Whisking constantly, slowly stream cream mixture into eggs a few tablespoons at a time until incorporated. Add egg mixture to saucepan with remaining cream mixture and whisk until combined. Whisk in 1/2 cup Parmesan.",
             },
             {
                 stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Line bottom of prepared dish with a layer of potatoes, slightly overlapping slices; season with a pinch of salt. Top with 2/3 cup Gruyère and 2/3 cup cream mixture. Repeat 3 times, ending with cream mixture. Top final layer with remaining 1/4 cup Parmesan.",
             },
             {
                 stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Butter a piece of foil and tightly cover dish. Bake gratin 30 minutes, uncover, and continue to bake until sides are bubbling and golden brown, about 30 minutes more. Top with thyme.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        notes: "Just like the OG potatoes au gratin, these sweet potatoes are layered with plenty of cheese and the signature herby cream sauce before being baked until golden brown and bubbly.",
+        tags: ["Sweet Potato", "Oven Bake", "Gratin", "Cheesy"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -2147,7 +2187,313 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 26,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a41734055/crispy-gnocchi-and-mushrooms-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Crispy Gnocchi & Mushrooms",
+        recipeType: ["main"],
+        picturePath: "crispygnocchimushrooms-3-1669134579.jpeg",
+
+        ingredients: [
+            { qty: "4 tbsp.", element: "extra-virgin olive oil, divided" },
+            { qty: "8 oz.", element: "baby bella mushrooms, sliced" },
+            { qty: "1", element: "small shallot, finely chopped" },
+            { qty: "2", element: "cloves garlic, minced" },
+            { qty: "1 tsp", element: "Kosher salt" },
+            { qty: "1", element: "packet of gnocchi" },
+            { qty: "2 tbsp.", element: "unsalted butter" },
+            { qty: "1 pinch", element: "red pepper flakes, crushed" },
+            { qty: "1 sprinkle", element: "Grated Parmesan" },
+        ],
+
+        equipment: [
+            "large skillet",
+            "stove",
+            "medium bowl",
+            "kitchen knife",
+            "wooden spoon",
+        ],
+        prepTime: "10 mins",
+        cookTime: "15 mins",
+        servings: 4,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a large skillet over medium-high heat, heat 2 tablespoons oil. Add mushrooms and cook, stirring occasionally, until golden brown, about 8 minutes. Add shallot and garlic and cook, stirring occasionally, until shallot is softened, about 3 minutes more; season with salt. Transfer mushroom mixture to a medium bowl.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "In same skillet over medium-high heat, heat remaining 2 tablespoons oil. Add gnocchi in an even layer and cook, undisturbed, until golden brown on the bottom, about 5 minutes. Stir and continue to cook, stirring occasionally, until gnocchi is cooked through, about 2 minutes more. Add butter and return mushrooms to skillet. Cook, stirring, until butter is melted, about 2 minutes. Stir in red pepper flakes; season with salt.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "Divide gnocchi mixture among plates or shallow bowls. Top with Parmesan.",
+            },
+        ],
+        notes: "Gnocchi will always hit the spot for a quick, delicious meal. It really couldn’t be simpler. It’s highly advised to cook the mushrooms 'til golden brown perfection. Without that step, you’re missing half the pleasure of this dish. ",
+        tags: ["Gnocchi", "Baked", "Cripsy", "Mushrooms"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 51,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a38015076/magic-cookie-bars-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Magic Cookie Bars",
+        recipeType: ["dessert"],
+        picturePath: "magicbars-1643145825.jpg",
+
+        ingredients: [
+            { qty: "18 ", element: "graham crackers, crushed" },
+            { qty: "6 tbsp.", element: "unsalted butter, melted" },
+            { qty: "1/4 c.", element: "sugar" },
+            { qty: "14 oz", element: "condensed milk" },
+            { qty: "1 1/2 c.", element: "chocolate chips" },
+            { qty: "1 1/2 c.", element: "pecans, chopped" },
+            { qty: "2 c.", element: "coconut flakes, unsweetened" },
+        ],
+
+        equipment: [
+            "oven",
+            "baking dish",
+            "kitchen knife",
+            "medium bowl",
+            "parchment paper",
+            "wooden spoon",
+            "cooling rack",
+            "measuring cups",
+        ],
+        prepTime: "5 mins",
+        cookTime: "35 mins",
+        servings: 15,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "Preheat the oven to 350 ºF. Grease a 9 x 9” baking dish with cooking spray, then line dish with parchment paper up and over the sides, with a slight overhang. Grease the parchment again.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "In a medium bowl, mix the graham crackers, butter and sugar until the mixture resembles wet sand. Press the graham cracker mixture into the bottom of the prepared baking dish.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "In an even layer, drizzle condensed milk over the crust, then top with half the chocolate chips and half the nuts. Add all of the coconut, then top with the remaining chips and nuts.",
+            },
+            {
+                stepNum: 4,
+                stepMethod:
+                    "Transfer the baking dish to the oven, and bake until the chocolate has melted and the crust has browned, 25 to 30 minutes. Let cool. Cut into squares and serve.",
+            },
+        ],
+        notes: "We have tried all sorts of chocolate chips from dark to peanut butter as well as a whole slew of nuts, like pistachios and walnuts. We encourage you to find your ideal combinations to discover the true magic of these bars.",
+        tags: ["Gooey", "Chocolate", "Dessert", "Crunchy"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 53,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a41123932/tiramisu-cookie-cups-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[XXXXXXXXXXXX],
+        firstName: "XXXXXXXXXXXX",
+        lastName: "XXXXXXXXXXXX",
+        userPicturePath: "XXXXXXXXXXXX",
+
+        recipeTitle: "Tiramisu Cookie Cups",
+        recipeType: ["dessert"],
+        picturePath:
+            "220919-delish-quarterly-cookies-tiramisu-cookie-cups-0148-eb-1-1664305909.jpg",
+
+        ingredients: [
+            { qty: "1 c.", element: "unsalted butter, softened" },
+            { qty: "1 c.", element: "packed brown sugar" },
+            { qty: "1/2 c.", element: "granulated sugar" },
+            { qty: "2", element: "large eggs" },
+            { qty: "1 tsp.", element: "pure vanilla extract" },
+            { qty: "1 c.", element: "all-purpose flour" },
+            { qty: "2 tsp.", element: "espresso powder" },
+            { qty: "1 tsp.", element: "baking powder" },
+            { qty: "1 tsp.", element: "kosher salt" },
+            { qty: "1 c.", element: "espresso chips" },
+            { qty: "1/2 c.", element: "semisweet chocolate chips" },
+            { qty: "1 1/2 c.", element: "heavy whipping cream" },
+            { qty: "8-oz.", element: "mascarpone" },
+            { qty: "1/4 c.", element: "coffee-flavored liqueur" },
+            { qty: "2 tbsp.", element: "powdered sugar" },
+            { qty: "1 tsp.", element: "pure vanilla extract" },
+            { qty: "1/4 tsp", element: "kosher salt" },
+            { qty: "1/2 tsp", element: "Cocoa powder, for dusting" },
+        ],
+
+        equipment: [
+            "oven",
+            "large bowl",
+            "12 cup muffin tin",
+            "stand mixer",
+            "medium bowl",
+            "whisk",
+            "spatula",
+            "measuring cups",
+            "shot glass",
+            "wire rack",
+        ],
+        prepTime: "45 mins",
+        cookTime: "15 mins",
+        servings: 24,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "Preheat oven to 350° and grease 2 standard 12-cup muffin tins with butter. In the large bowl of a stand mixer fitted with the paddle attachment, cream butter, brown sugar, and granulated sugar until smooth, airy, and slightly paler in color, about 4 minutes. Add eggs and vanilla and continue to beat until light and fluffy, about 3 minutes more.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "In a medium bowl, whisk flour, espresso powder, baking powder, and salt. Gradually add dry ingredients to butter mixture and beat until just combined, then fold in espresso and chocolate chips.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "Place 2 tablespoons dough in each prepared muffin cup. Using your finger, create a well in the center of dough. Bake cookies until slightly browned, about 15 minutes.",
+            },
+            {
+                stepNum: 4,
+                stepMethod:
+                    "While cookies are still warm, grease a shot glass or round spice jar with butter. Press into the center of each cookie to create a deeper well. Let cool 15 minutes in pan, then transfer to a wire rack and let cool completely.",
+            },
+            {
+                stepNum: 5,
+                stepMethod:
+                    "In the large bowl of stand mixer fitted with the whisk attachment, beat cream, mascarpone, liqueur, powdered sugar, vanilla, and salt until soft peaks form, 2 to 3 minutes.",
+            },
+            {
+                stepNum: 6,
+                stepMethod:
+                    "Spoon mascarpone filling into well of each cookie, then cover tops with remaining filling. Generously dust with cocoa powder.",
+            },
+        ],
+        notes: "N/A",
+        tags: ["Tiramisu", "Cookie", "Coffee", "Rich"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: 35,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
@@ -2174,306 +2520,7 @@ export const recipes = [
         userPicturePath: "XXXXXXXXXXXX",
 
         recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
-
-        ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-        ],
-
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
-        steps: [
-            {
-                stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-        ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-        likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-        ]),
-        shares: XXXXXXXXXXXX,
-        comments: [
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-            {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
-            },
-        ],
-    },
-
-    //--------------------------------------//
-
-    {
-        _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
-
-        recipeTitle: "XXXXXXXXXXXX",
+        recipeType: ["dessert"],
         picturePath: "XXXXXXXXXXXX",
 
         ingredients: [
