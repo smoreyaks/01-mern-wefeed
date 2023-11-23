@@ -2511,7 +2511,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
-
+    // https://www.delish.com/cooking/recipe-ideas/a30121084/brown-sugar-old-fashioned-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[XXXXXXXXXXXX],
@@ -2519,63 +2519,39 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
-        recipeType: ["dessert"],
-        picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Brown Sugar Old Fashioned",
+        recipeType: ["drink"],
+        picturePath:
+            "20191204-brown-sugar-old-fashioned-delish-ehg-5689-1585680228.jpg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "1 tsp.", element: "packed brown sugar" },
+            { qty: "1 tsp.", element: "water" },
+            { qty: "2 dashes", element: "Angostura bitters" },
+            { qty: "2 oz.", element: "bourbon" },
+            { qty: "1", element: "Orange peel, for garnish" },
+            { qty: "1", element: "Cinnamon stick, for garnish" },
+            { qty: "3 cubes", element: "ice" },
         ],
 
-        equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-        ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        equipment: ["Muddler", "Glass", "Stirring Rod"],
+        prepTime: "10 mins",
+        cookTime: "N/A",
+        servings: 1,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Add sugar, water, and bitters to glass. Muddle until sugar is dissolved. Add bourbon and ice and stir to combine. ",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod: "Garnish with an orange peel and cinnamon stick.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        notes: "A little brown sugar makes this classic cocktail extra warm cozy. The brown sugar gives it a hint of caramel and makes this drink feel anything but old fashioned. It's the only way we like to make it now. ",
+        tags: ["Old Fashioned", "Aromatic", "Classic", "Cocktail"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -2594,7 +2570,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 37,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
@@ -2612,6 +2588,7 @@ export const recipes = [
     },
 
     //--------------------------------------//
+    // https://www.delish.com/cooking/recipe-ideas/a40656644/tom-collins-recipe/
 
     {
         _id: new mongoose.Types.ObjectId(),
@@ -2620,62 +2597,44 @@ export const recipes = [
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
 
-        recipeTitle: "XXXXXXXXXXXX",
-        picturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Tom Collins",
+        recipeType: ["drink"],
+        picturePath: "220726-delish-seo-jff-tom-collins-0948-eb-1659719064.jpg",
 
         ingredients: [
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "2 oz.", element: "London Dry gin" },
+            { qty: "1 oz.", element: "fresh lemon juice" },
+            { qty: "1 oz.", element: "simple syrup" },
+            { qty: "3 oz.", element: "seltzer water" },
+            { qty: "2", element: "cocktail cherries" },
+            { qty: "1 slice", element: "lemon, for serving" },
+            { qty: "1 cup", element: "Ice Cubes" },
         ],
 
         equipment: [
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
-            "XXXXXXXXXXXX",
+            "cocktail shaker",
+            "Collins glass",
+            "kitchen knife",
+            "cocktail skewer",
         ],
-        prepTime: "XXXXXXXXXXXX",
-        cookTime: "XXXXXXXXXXXX",
-        servings: XXXXXXXXXXXX,
-        spiceLevel: XXXXXXXXXXXX,
+        prepTime: "5 mins",
+        cookTime: "N/A",
+        servings: 1,
+        spiceLevel: 0,
         steps: [
             {
                 stepNum: 1,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Fill a cocktail shaker with ice. Add gin, lemon juice, and simple syrup and vigorously shake until outside of shaker is frosty, about 20 seconds.",
             },
             {
                 stepNum: 2,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 3,
-                stepMethod: "XXXXXXXXXXXX",
-            },
-            {
-                stepNum: 4,
-                stepMethod: "XXXXXXXXXXXX",
+                stepMethod:
+                    "Pour into an ice-filled Collins glass. Top off with seltzer water. Garnish with cherries and a lemon slice.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
-        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        notes: " This fizzy cocktail is as old as it is iconic, having made its first appearance in print in 1876 in the Bar-Tender’s Guide by famed father of American mixology Jerry Thomas. It hasn’t changed much since its inception, meaning that it's probably perfect the way it is.  ",
+        tags: ["Classic", "Cocktail", "Refreshing", "Summer Time"],
         likes: new Map([
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
@@ -2694,7 +2653,7 @@ export const recipes = [
             [userIds[XXXXXXXXXXXX], true],
             [userIds[XXXXXXXXXXXX], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 23,
         comments: [
             {
                 userId: userIds[XXXXXXXXXXXX],
@@ -4811,3 +4770,25 @@ export const recipes = [
     //     ],
     // },
 ];
+
+/*
+MAIN
+https://www.delish.com/cooking/recipe-ideas/a41886262/slow-cooker-creamy-lemon-herb-chicken-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a46066/slow-cooker-garlic-parmesan-chicken-recipe/
+https://www.delish.com/cooking/recipe-ideas/a55484/slow-cooker-rotisserie-chicken-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a56797/crock-pot-chicken-enchilada-soup-recipe/
+https://www.delish.com/cooking/recipe-ideas/a29504585/slow-cooker-pork-shoulder-recipe/
+https://www.delish.com/cooking/recipe-ideas/a30519954/crockpot-salsa-chicken-recipe/
+https://www.delish.com/cooking/recipe-ideas/a40671749/lobster-ravioli-recipe/
+https://www.delish.com/cooking/recipe-ideas/a40179920/nashville-hot-fish-and-chips-recipe/
+https://www.delish.com/cooking/recipe-ideas/a39588373/baked-scallops-recipe/
+https://www.delish.com/cooking/recipe-ideas/a37418736/sheet-pan-chicken-thighs-recipe/
+https://www.delish.com/cooking/a22691438/bbq-chicken-nachos-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a55760/healthy-chicken-casserole-recipe/
+
+
+LUNCH
+https://www.delish.com/cooking/recipe-ideas/a43148339/copycat-sweetgreen-harvest-bowl-recipe/
+https://www.delish.com/cooking/recipe-ideas/a19624080/blackened-shrimp-bowls-recipe/
+
+*/
