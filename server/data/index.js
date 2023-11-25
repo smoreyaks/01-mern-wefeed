@@ -2051,7 +2051,7 @@ export const recipes = [
     // https://www.delish.com/cooking/recipe-ideas/a45362568/best-chicken-stir-fry-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
+        userId: userIds[4],
         firstName: "XXXXXXXXXXXX",
         lastName: "XXXXXXXXXXXX",
         userPicturePath: "XXXXXXXXXXXX",
