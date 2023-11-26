@@ -2052,9 +2052,9 @@ export const recipes = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[4],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
+        firstName: "Jane",
+        lastName: "Doe",
+        userPicturePath: "p5.jpeg",
 
         recipeTitle: "Chicken Stir-Fry",
         recipeType: ["main"],
