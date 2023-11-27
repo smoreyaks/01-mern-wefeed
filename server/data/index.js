@@ -2153,10 +2153,10 @@ export const recipes = [
     // https://www.delish.com/cooking/recipe-ideas/a41802674/sweet-potato-gratin-recipe/
     {
         _id: new mongoose.Types.ObjectId(),
-        userId: userIds[XXXXXXXXXXXX],
-        firstName: "XXXXXXXXXXXX",
-        lastName: "XXXXXXXXXXXX",
-        userPicturePath: "XXXXXXXXXXXX",
+        userId: userIds[10],
+        firstName: "Molly",
+        lastName: "Melton",
+        userPicturePath: "f2.jpg",
 
         recipeTitle: "Sweet Potato Gratin",
         recipeType: ["main"],
