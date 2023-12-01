@@ -4911,4 +4911,24 @@ LUNCH
 https://www.delish.com/cooking/recipe-ideas/a43148339/copycat-sweetgreen-harvest-bowl-recipe/
 https://www.delish.com/cooking/recipe-ideas/a19624080/blackened-shrimp-bowls-recipe/
 
+DRINKS
+https://www.delish.com/cooking/recipe-ideas/recipes/a53458/boozy-sour-watermelon-slushies-recipe/
+https://www.delish.com/cooking/recipe-ideas/a31289978/perfect-cosmopolitan-cocktail-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a4298/strawberry-daiquiri-frozen-drinks/
+https://www.delish.com/cooking/recipe-ideas/a43402365/classic-mai-tai-recipe/
+https://www.delish.com/cooking/recipe-ideas/a42005570/peppermint-white-russian-recipe/
+https://www.delish.com/cooking/recipe-ideas/a35686657/nutty-irishman-recipe/
+
+SIDE
+https://www.delish.com/cooking/recipe-ideas/recipes/a57237/smashed-brussels-sprouts-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a50228/holiday-roasted-vegetables-recipe/
+https://www.delish.com/cooking/recipe-ideas/a50630/perfect-mashed-potatoes-recipe/
+https://www.delish.com/cooking/recipe-ideas/recipes/a53359/broccoli-salad-recipe/
+
+DESSERT
+https://www.delish.com/cooking/recipe-ideas/a41093925/m-and-m-cookie-bar-recipe/
+
+BREAKFAST
+https://www.delish.com/cooking/recipe-ideas/a40560590/breakfast-tostadas-recipe/
+
 */
