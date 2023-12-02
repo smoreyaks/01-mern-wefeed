@@ -1575,7 +1575,7 @@ export const recipes = [
                     "Dollop caramel onto the center of remaining cookies. Sandwich and gently press until filling spreads almost to edges of cookies. Cover and refrigerate whoopie pies at least 1 hour or up to 3 days.",
             },
         ],
-        notes: "XXXXXXXXXXXX",
+        notes: "After these are baked, coating the whoopie pies in cinnamon sugar further enhances the apple-ness of these treats, and it lends them an appealing crunch!",
         tags: ["Whoopie Pie", "Dessert", "Sweet", "Apple Cider"],
         likes: new Map([
             [userIds[8], true],
