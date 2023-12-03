@@ -1615,16 +1615,39 @@ export const recipes = [
         shares: 22,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[8],
+                commentText:
+                    "Ideal for cozy nights in. Turn off the lights, light a candle, and savor this delightful dessert. Pure bliss!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[9],
+                commentText:
+                    "Not a dessert person, but this treat makes me reconsider. A sweet motivator to end the day on a high note!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[10],
+                commentText:
+                    "I added a drizzle of caramel sauce – a sweet touch that took this dessert to the next level.",
+            },
+            {
+                userId: userIds[11],
+                commentText:
+                    "Indulgent and decadent! This dessert is a sweet symphony of flavors that satisfies every craving.",
+            },
+            {
+                userId: userIds[12],
+                commentText:
+                    "Shared this with coworkers, and now it's our go-to office celebration treat. A workplace-approved indulgence!",
+            },
+            {
+                userId: userIds[13],
+                commentText:
+                    "A burst of flavors! This dessert is a delightful treat for your taste buds.",
+            },
+            {
+                userId: userIds[14],
+                commentText:
+                    "A nice mix of textures! This dessert offers a delightful contrast between smooth and a nice crunch.",
             },
         ],
     },
