@@ -1466,16 +1466,18 @@ export const recipes = [
         shares: 13,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[0],
+                commentText:
+                    "Healthy twist without sacrificing taste. A guilt-free indulgence.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[3],
+                commentText: "Quick and simple – great for busy weekdays!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[20],
+                commentText:
+                    "Healthy and satisfying. This breakfast keeps me energized throughout the morning. A nutritious delight!",
             },
         ],
     },
