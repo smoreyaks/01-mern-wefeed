@@ -1754,19 +1754,22 @@ export const recipes = [
             [userIds[5], true],
             [userIds[6], true],
         ]),
-        shares: XXXXXXXXXXXX,
+        shares: 56,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[11],
+                commentText:
+                    "Dinner party hit. Shared the recipe, but the credit goes to you!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[10],
+                commentText:
+                    "Step-by-step guide saved my kitchen dignity. A culinary genius now!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[9],
+                commentText:
+                    "Boosted my kitchen confidence. A culinary wizard now!",
             },
         ],
     },
