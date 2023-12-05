@@ -1875,16 +1875,16 @@ export const recipes = [
         shares: 55,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[13],
+                commentText: "Easy to make, and the flavor is just right. A pleasant start to any gathering.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[15],
+                commentText: "Tried it with a hint of garlic – a subtle twist that added a nice depth. Savory and enjoyable!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[14],
+                commentText: "Perfect for laid-back afternoons. A plate of these and good company – simple and satisfying!",
             },
         ],
     },
