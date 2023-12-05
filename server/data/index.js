@@ -1876,15 +1876,18 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[13],
-                commentText: "Easy to make, and the flavor is just right. A pleasant start to any gathering.",
+                commentText:
+                    "Easy to make, and the flavor is just right. A pleasant start to any gathering.",
             },
             {
                 userId: userIds[15],
-                commentText: "Tried it with a hint of garlic – a subtle twist that added a nice depth. Savory and enjoyable!",
+                commentText:
+                    "Tried it with a hint of garlic – a subtle twist that added a nice depth. Savory and enjoyable!",
             },
             {
                 userId: userIds[14],
-                commentText: "Perfect for laid-back afternoons. A plate of these and good company – simple and satisfying!",
+                commentText:
+                    "Perfect for laid-back afternoons. A plate of these and good company – simple and satisfying!",
             },
         ],
     },
@@ -1965,16 +1968,18 @@ export const recipes = [
         shares: 34,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[15],
+                commentText:
+                    "A sweet sip that's the perfect ending to any meal. Simple and satisfying!",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[16],
+                commentText:
+                    "Not a fan of overly sweet drinks, but this won me over. A balanced and enjoyable sip.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[11],
+                commentText: "Loved making this, thank you!",
             },
         ],
     },
@@ -2061,16 +2066,33 @@ export const recipes = [
         shares: 48,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[4],
+                commentText:
+                    "Elevate your cocktail game with this simple yet chic concoction. A touch of glamour in every glass.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[6],
+                commentText:
+                    "An easy sipper that feels like a breeze. Simple, smooth, and enjoyable.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[5],
+                commentText:
+                    "A burst of flavors! This cocktail is a pleasant surprise for your taste buds.",
+            },
+            {
+                userId: userIds[7],
+                commentText:
+                    "Ideal for chill evenings. Just pour, sip, and enjoy the simplicity!",
+            },
+            {
+                userId: userIds[18],
+                commentText: "Uncomplicated and delightful.",
+            },
+            {
+                userId: userIds[3],
+                commentText:
+                    "Boosted my mixing confidence. This cocktail is foolproof and enjoyable.",
             },
         ],
     },
