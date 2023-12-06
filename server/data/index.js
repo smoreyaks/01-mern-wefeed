@@ -2180,21 +2180,24 @@ export const recipes = [
             [userIds[11], true],
             [userIds[16], true],
             [userIds[18], true],
-            [userIds[11], true],
+            [userIds[8], true],
         ]),
         shares: 19,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[16],
+                commentText:
+                    "Quick and easy for busy evenings. A stress-free way to enjoy a delectable dinner.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[18],
+                commentText:
+                    "Added a hint of spice – a tasty upgrade to an already fantastic dish.",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
-                commentText: "XXXXXXXXXXXX",
+                userId: userIds[8],
+                commentText:
+                    "Savory and satisfying. The blend of flavors is simply wonderful.",
             },
         ],
     },
