@@ -2165,22 +2165,22 @@ export const recipes = [
         notes: "A stir fry is our go-to weeknight dinner when we just don’t have the energy to spend a long time in the kitchen or hit the grocery store—this recipe is no exception.",
         tags: ["Stir Fry", "Chicken", "Simple", "Delicious"],
         likes: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[16], true],
+            [userIds[18], true],
+            [userIds[7], true],
+            [userIds[8], true],
+            [userIds[11], true],
         ]),
         recommendations: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[16], true],
+            [userIds[18], true],
+            [userIds[11], true],
         ]),
         saves: new Map([
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
-            [userIds[XXXXXXXXXXXX], true],
+            [userIds[11], true],
+            [userIds[16], true],
+            [userIds[18], true],
+            [userIds[11], true],
         ]),
         shares: 19,
         comments: [
@@ -2320,11 +2320,13 @@ export const recipes = [
             },
             {
                 userId: userIds[11],
-                commentText: "A nice blend of flavors! This side dish offers a delightful mix that complements the main course.",
+                commentText:
+                    "A nice blend of flavors! This side dish offers a delightful mix that complements the main course.",
             },
             {
                 userId: userIds[13],
-                commentText: "Perfect for weeknight meals! This side dish is a quick and tasty addition to your dinner routine.",
+                commentText:
+                    "Perfect for weeknight meals! This side dish is a quick and tasty addition to your dinner routine.",
             },
         ],
     },
