@@ -2836,15 +2836,27 @@ export const recipes = [
         shares: 23,
         comments: [
             {
-                userId: userIds[XXXXXXXXXXXX],
+                userId: userIds[3],
                 commentText: "XXXXXXXXXXXX",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
+                userId: userIds[10],
                 commentText: "XXXXXXXXXXXX",
             },
             {
-                userId: userIds[XXXXXXXXXXXX],
+                userId: userIds[6],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[5],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[14],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[13],
                 commentText: "XXXXXXXXXXXX",
             },
         ],
