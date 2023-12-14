@@ -2412,15 +2412,18 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[7],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Perfect for cozy dinners. Comforting and satisfying.",
             },
             {
                 userId: userIds[6],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Classic combo that consistently wows. Timeless and welcomed.",
             },
             {
                 userId: userIds[15],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Easy to make, with amazing textures. A winner on the plate.",
             },
         ],
     },
@@ -2524,31 +2527,36 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[2],
-                commentText: "XXXXXXXXXXXX",
+                commentText: "These look increidble! I can't wait to try them!",
             },
             {
                 userId: userIds[24],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Made these for a school bake-off, and they won first place. Pure magic in every delicious square!",
             },
             {
                 userId: userIds[22],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Tried it with an extra layer of chocolate – a delightful surprise that makes these bars irresistible.",
             },
             {
                 userId: userIds[4],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Saved this recipe for later. Looks like a perfect treat for the kids on the weekend.",
             },
             {
                 userId: userIds[6],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "The textures look beautiful together. My mouth is melting looking at these.",
             },
             {
                 userId: userIds[8],
-                commentText: "XXXXXXXXXXXX",
+                commentText: "Looks like a great and quick treat.",
             },
             {
                 userId: userIds[16],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "An effortless creation that brings joy to dessert time. Pure magic in simplicity.",
             },
         ],
     },
@@ -2667,19 +2675,22 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[21],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "A dessert presentation that's both inviting and scrumptious. A sweet symphony of tiramisu goodness.",
             },
             {
                 userId: userIds[22],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Irresistibly charming. These cookie cups put a twist on classic Tiramisu.",
             },
             {
                 userId: userIds[2],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Tea party star! These cups cast a sweet spell with Tiramisu magic.",
             },
             {
                 userId: userIds[19],
-                commentText: "XXXXXXXXXXXX",
+                commentText: "Guess I'm having a cheat day this weekend.",
             },
         ],
     },
@@ -2762,27 +2773,33 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[17],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "No fuss, just flavor – enjoy the delight in every sip.",
             },
             {
                 userId: userIds[13],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Classic cocktail charm with a sweet touch. Here's to cheers!",
             },
             {
                 userId: userIds[11],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Experience the perfect blend of simplicity and deliciousness. Highly recommend this recipe.",
             },
             {
                 userId: userIds[19],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Upgrade your go-to cocktail with the warmth of brown sugar. Cheers!",
             },
             {
                 userId: userIds[18],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Seems really easy to make. I'm going to try this a try over the weekend.",
             },
             {
                 userId: userIds[14],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Embrace a classic with a sweet twist – this cocktail is a winner.",
             },
         ],
     },
@@ -2869,31 +2886,39 @@ export const recipes = [
         comments: [
             {
                 userId: userIds[3],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Simple, sophisticated, and utterly refreshing – this recipe hits the spot.",
             },
             {
                 userId: userIds[10],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "A Tom Collins seems like the perfect way to unwind. Excited to try it out!",
             },
             {
                 userId: userIds[6],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "To anyone thinking about making the Tom Collins – do it! It's an absolute crowd-pleaser.",
             },
             {
                 userId: userIds[5],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "If you haven't tried the Tom Collins recipe yet, you're missing out. A true classic with a modern twist!",
             },
             {
                 userId: userIds[14],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "I've got the ingredients for a Tom Collins; just need the motivation to try it. Anyone a fan?",
             },
             {
                 userId: userIds[13],
-                commentText: "XXXXXXXXXXXX",
+                commentText:
+                    "Ready to step up my cocktail game with this one. Any mixing advice for a newbie?",
             },
         ],
     },
 
+    // //--------------------------------------//
+    // // ------------ TEMPLATE ---------------//
     // //--------------------------------------//
 
     // {
