@@ -956,8 +956,8 @@ export const recipes = [
     {
         _id: "652c06b97a11801be3235379",
         userId: userIds[8],
-        firstName: "FakeFirst",
-        lastName: "FakeLast",
+        firstName: "Link of",
+        lastName: "Hyrule",
         userPicturePath: "link-sunglasses.gif",
 
         recipeTitle: "Crispy Beef & Shitake Noodles",
@@ -1073,8 +1073,8 @@ export const recipes = [
     {
         _id: "652c06b97a11801be323537a",
         userId: userIds[8],
-        firstName: "FakeFirst",
-        lastName: "FakeLast",
+        firstName: "Link of",
+        lastName: "Hyrule",
         userPicturePath: "link-sunglasses.gif",
 
         recipeTitle: "One-Pan Creamy Chicken & Gnocchi",
