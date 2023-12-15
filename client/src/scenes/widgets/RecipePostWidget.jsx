@@ -387,12 +387,12 @@ const RecipePostWidget = ({
                     equipment={equipment}
                     themeColors={themeColors}
                 />
-                {/* <Divider sx={{ m: "0 0.75rem" }} /> */}
+
                 <IngredientList
                     ingredients={ingredients}
                     themeColors={themeColors}
                 />
-                {/* <Divider sx={{ m: "0 0.75rem" }} /> */}
+
                 <StepsList steps={steps} themeColors={themeColors} />
             </Box>
 
