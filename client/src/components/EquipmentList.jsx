@@ -28,6 +28,16 @@ const EquipmentList = ({ equipment, themeColors }) => {
     const primary = palette.default.primary.main;
     const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
         themeColors || {};
+
+    /* Capitalise First Letter of Equipment Item */\
+    let equipListCorrected = equipment.map((e) => {
+        let equipSplit = e.toLowerCase().split(" ");
+        for (let i = 0; i < equipSplit.length; i++) {
+            equipSplit[i] =
+                equipSplit[i][0].toUpperCase() + equipSplit[i].substr(1);
+        }
+        return equipSplit.join(" ");
+    });
     return (
         <Box>
             <ToggleButton
@@ -50,6 +60,9 @@ const EquipmentList = ({ equipment, themeColors }) => {
             >
                 <Typography
                     variant="h6"
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
                     // borderRadius="1.75rem"
                 >
                     Equipment
@@ -57,13 +70,13 @@ const EquipmentList = ({ equipment, themeColors }) => {
                 {equipmentListOpen ? <RemoveIcon /> : <AddIcon />}
             </ToggleButton>
 
-            {equipment.map((equip) =>
+            {equipListCorrected.map((equip) =>
                 equipmentListOpen ? (
                     <Box
                         sx={{
                             p: "0 0.75rem",
-                            display: "grid",
-                            gridTemplateColumns: "repeat(4, 1fr)",
+                            display: "flex",
+                            // gridTemplateColumns: "repeat(4, 1fr)",
                             gap: "0.5rem",
                             backgroundColor: recipeStepsPanel,
                         }}
