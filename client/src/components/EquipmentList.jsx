@@ -29,7 +29,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
     const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
         themeColors || {};
 
-    /* Capitalise First Letter of Equipment Item */\
+    /* Capitalise First Letter of Equipment Item */
     let equipListCorrected = equipment.map((e) => {
         let equipSplit = e.toLowerCase().split(" ");
         for (let i = 0; i < equipSplit.length; i++) {
