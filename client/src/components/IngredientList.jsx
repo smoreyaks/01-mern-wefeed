@@ -52,6 +52,9 @@ const IngredientList = ({ ingredients, themeColors }) => {
             >
                 <Typography
                     variant="h6"
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
                     // borderRadius="1.75rem"
                 >
                     Ingredients
@@ -68,7 +71,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                             gap: "0.25rem",
                             // m: "0 0 0.5rem 0",
                             mx: "0",
-                            p: "0.25rem 0.5rem",
+                            p: "0rem 0.5rem",
                             // borderRadius: "0.75rem",
                             backgroundColor: recipeStepsPanel,
                             width: "100%",
