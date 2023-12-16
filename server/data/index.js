@@ -3053,6 +3053,7 @@ https://www.delish.com/cooking/recipe-ideas/recipes/a57237/smashed-brussels-spro
 https://www.delish.com/cooking/recipe-ideas/recipes/a50228/holiday-roasted-vegetables-recipe/
 https://www.delish.com/cooking/recipe-ideas/a50630/perfect-mashed-potatoes-recipe/
 https://www.delish.com/cooking/recipe-ideas/recipes/a53359/broccoli-salad-recipe/
+https://www.delish.com/holiday-recipes/christmas/g1713/holiday-party-appetizers/?slide=17
 
 DESSERT
 https://www.delish.com/cooking/recipe-ideas/a41093925/m-and-m-cookie-bar-recipe/
