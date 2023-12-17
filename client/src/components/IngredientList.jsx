@@ -29,6 +29,17 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
         themeColors;
 
+    /* Capitalise First Letter of Ingredient Items */
+    let ingredientsListCorrected = ingredients.map((e) => {
+        let ingredientSplit = e.toLowerCase().split(" ");
+        for (let i = 0; i < ingredientSplit.length; i++) {
+            ingredientSplit[i] =
+                ingredientSplit[i][0].toUpperCase() +
+                ingredientSplit[i].substr(1);
+        }
+        return ingredientSplit.join(" ");
+    });
+
     return (
         <Box>
             <ToggleButton
@@ -62,7 +73,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
             </ToggleButton>
 
-            {ingredients.map((ingredient) =>
+            {ingredientsListCorrected.map((ingredient) =>
                 ingredientListOpen ? (
                     <Box
                         sx={{
