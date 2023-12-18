@@ -1187,7 +1187,7 @@ export const recipes = [
         userPicturePath: "p8.jpeg",
 
         recipeTitle: "Honey-Garlic Glazed Salmon",
-        recipeType: ["main", "lunch"],
+        recipeType: ["main"],
         picturePath: "1506456214-delish-honey-garlic-glazed-salmon.jpg",
 
         ingredients: [
