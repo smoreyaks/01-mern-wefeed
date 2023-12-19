@@ -27,11 +27,11 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
     const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
-        themeColors;
+        themeColors || {};
 
     /* Capitalise First Letter of Ingredient Items */
-    let ingredientsListCorrected = ingredients.map((e) => {
-        let ingredientSplit = e.toLowerCase().split(" ");
+    let ingredientsListCorrected = ingredients.map((ingredient) => {
+        let ingredientSplit = ingredient.toLowerCase().split(" ");
         for (let i = 0; i < ingredientSplit.length; i++) {
             ingredientSplit[i] =
                 ingredientSplit[i][0].toUpperCase() +
