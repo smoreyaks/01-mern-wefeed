@@ -1674,7 +1674,7 @@ export const recipes = [
             { qty: "1/2 Lemon", element: "Lemon Juice" },
             { qty: "2", element: "cloves garlic, minced" },
             { qty: "3", element: "large sweet potatoes, sliced" },
-            { qty: "1", element: " large red onion, sliced thick" },
+            { qty: "1", element: "large red onion, sliced thick" },
             { qty: "2 tbsp", element: "extra-virgin olive oil" },
             { qty: "1 tsp", element: "cumin seeds" },
             { qty: "1 tsp", element: "ground cumin" },
@@ -2001,7 +2001,7 @@ export const recipes = [
         ingredients: [
             { qty: "1/2 oz.", element: "large egg white, whisked" },
             { qty: "1 1/2 oz.", element: "bourbon" },
-            { qty: "3/4 oz.", element: " amaretto liqueur" },
+            { qty: "3/4 oz.", element: "amaretto liqueur" },
             { qty: "3/4 oz.", element: "fresh lemon juice" },
             { qty: "2 dashes", element: "Angostura bitters" },
             { qty: "2 cubes", element: "Ice" },
@@ -2111,7 +2111,7 @@ export const recipes = [
         picturePath: "chicken-stir-fry-lead-6513039282dd4.jpg",
 
         ingredients: [
-            { qty: "1/2 c.", element: " reduced-sodium soy sauce" },
+            { qty: "1/2 c.", element: "reduced-sodium soy sauce" },
             { qty: "2 tbsp.", element: "honey" },
             { qty: "2 tsp.", element: "toasted sesame oil" },
             { qty: "1 tbsp.", element: "canola oil" },
@@ -2234,7 +2234,7 @@ export const recipes = [
             { qty: "1/4 tsp.", element: "ground nutmeg" },
             { qty: "2", element: "large eggs" },
             { qty: "3/4 c.", element: "grated Parmesan, divided" },
-            { qty: "1/4 tsp.", element: "black pepper, freshly ground " },
+            { qty: "1/4 tsp.", element: "black pepper, freshly ground" },
             {
                 qty: "0.7 lb",
                 element: "orange sweet potatoes, peeled and sliced",
