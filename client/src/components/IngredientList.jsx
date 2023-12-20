@@ -30,14 +30,16 @@ const IngredientList = ({ ingredients, themeColors }) => {
         themeColors || {};
 
     /* Capitalise First Letter of Ingredient Items */
-    let ingredientsListCorrected = ingredients.map((ingredient) => {
-        let ingredientSplit = ingredient.toLowerCase().split(" ");
+    let ingredientsListCapitalised = ingredients.map((ingredient) => {
+        let ingredientString = ingredient["element"]; // JSON Object to String Array Conversion
+        let ingredientSplit = ingredientString.toLowerCase().split(" "); // Break String Array into Words
+        let ingredientCapitalised = [];
         for (let i = 0; i < ingredientSplit.length; i++) {
-            ingredientSplit[i] =
+            ingredientCapitalised[i] =
                 ingredientSplit[i][0].toUpperCase() +
                 ingredientSplit[i].substr(1);
         }
-        return ingredientSplit.join(" ");
+        return ingredientCapitalised.join(" ");
     });
 
     return (
@@ -73,7 +75,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
             </ToggleButton>
 
-            {ingredientsListCorrected.map((ingredient) =>
+            {ingredientsListCapitalised.map((ingredient) =>
                 ingredientListOpen ? (
                     <Box
                         sx={{
@@ -102,7 +104,8 @@ const IngredientList = ({ ingredients, themeColors }) => {
                         </Box>
                         <Box gridColumn="2">
                             <Typography key={ingredient._id}>
-                                {ingredient.element}
+                                {console.log("FINAL:", ingredient)}
+                                {ingredient}
                             </Typography>
                         </Box>
                     </Box>
