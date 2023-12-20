@@ -1286,7 +1286,7 @@ export const recipes = [
 
     // // Recipe Data Template
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c6b",
         userId: userIds[23],
         firstName: "Travis",
         lastName: "Denzer",
@@ -1300,7 +1300,7 @@ export const recipes = [
             { qty: "2", element: "tbsp olive oil" },
             { qty: "1", element: "knob butter" },
             { qty: "1", element: "onion, finely chopped" },
-            { qty: "500g", element: "sausagemeat or skinned sausages" },
+            { qty: "500g", element: "sausage meat or skinned sausages" },
             { qty: "1 lemon", element: "grated lemon zest" },
             { qty: "100g", element: "fresh white breadcrumbs" },
             { qty: "85g", element: "ready-to-eat dried apricots, chopped" },
@@ -1404,7 +1404,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a20720530/healthy-peanut-butter-banana-smoothie-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c6c",
         userId: userIds[15],
         firstName: "Naomi",
         lastName: "Cortes",
@@ -1485,7 +1485,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a44321711/apple-cider-whoopie-pies-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c6d",
         userId: userIds[6],
         firstName: "Carly",
         lastName: "Vowel",
@@ -1655,7 +1655,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a41734144/sheet-pan-harissa-chicken-and-sweet-potatoes-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c6e",
         userId: userIds[24],
         firstName: "Wilbur",
         lastName: "Boyd",
@@ -1777,7 +1777,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a38326725/spinach-puffs-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c6f",
         userId: userIds[23],
         firstName: "Travis",
         lastName: "Denzer",
@@ -1896,7 +1896,7 @@ export const recipes = [
     // https://www.delish.com/cooking/recipe-ideas/a45574717/frozen-hot-chocolate-martini-recipe/
 
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c70",
         userId: userIds[18],
         firstName: "Valerie",
         lastName: "Osborn",
@@ -1988,7 +1988,7 @@ export const recipes = [
     // https://www.delish.com/cooking/recipe-ideas/a40087538/amaretto-sour-recipe/
 
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c71",
         userId: userIds[10],
         firstName: "Molly",
         lastName: "Melton",
@@ -2100,7 +2100,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a45362568/best-chicken-stir-fry-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c72",
         userId: userIds[4],
         firstName: "Jane",
         lastName: "Doe",
@@ -2205,7 +2205,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a41802674/sweet-potato-gratin-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c73",
         userId: userIds[10],
         firstName: "Molly",
         lastName: "Melton",
@@ -2337,7 +2337,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a41734055/crispy-gnocchi-and-mushrooms-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c74",
         userId: userIds[14],
         firstName: "Edwin",
         lastName: "Johnson",
@@ -2431,7 +2431,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a38015076/magic-cookie-bars-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c75",
         userId: userIds[11],
         firstName: "Kur",
         lastName: "Hintz",
@@ -2564,7 +2564,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a41123932/tiramisu-cookie-cups-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c76",
         userId: userIds[18],
         firstName: "Valerie",
         lastName: "Osborn",
@@ -2698,7 +2698,7 @@ export const recipes = [
     //--------------------------------------//
     // https://www.delish.com/cooking/recipe-ideas/a30121084/brown-sugar-old-fashioned-recipe/
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c77",
         userId: userIds[16],
         firstName: "Annika",
         lastName: "Pierce",
@@ -2808,7 +2808,7 @@ export const recipes = [
     // https://www.delish.com/cooking/recipe-ideas/a40656644/tom-collins-recipe/
 
     {
-        _id: new mongoose.Types.ObjectId(),
+        _id: "657b071e785978afdb673c78",
         userId: userIds[1],
         firstName: "Steve",
         lastName: "Ralph",
