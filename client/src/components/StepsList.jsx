@@ -66,34 +66,32 @@ const StepsList = ({ steps, themeColors }) => {
                         // mr="0.5rem"
                         sx={{
                             display: "flex",
-                            gridTemplateColumns: "12.5%, 87.5%",
                             gap: "0.5rem",
-                            m: "0 0 0rem 0",
-                            mx: "0",
+                            m: "0",
                             p: "0.5rem 0.5rem 0 0.5rem",
                             borderRadius: "0rem",
                             backgroundColor: recipeStepsPanel,
                             width: "100%",
                         }}
                     >
-                        <Box gridColumn="1">
+                        <Box>
                             <Typography
                                 key={step._id}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
+                                    alignItems: "center",
                                     p: "0.25rem 0.5rem 0.25rem 0.5rem",
                                     fontWeight: "bold",
                                     background: "#eeceee",
                                     borderRadius: "0.5rem",
-                                    display: "flex",
-                                    alignItems: "center",
+                                    width: "1.5rem",
                                 }}
                             >
                                 {step.stepNum}
                             </Typography>
                         </Box>
-                        <Box gridColumn="2">
+                        <Box>
                             <Typography
                                 key={step._id}
                                 sx={{
