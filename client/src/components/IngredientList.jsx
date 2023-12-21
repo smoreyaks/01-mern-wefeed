@@ -29,11 +29,19 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
         themeColors || {};
 
+    // Homogenize Quantities to Lower Case
+    let qtyListLower = ingredients.map((quantity) => {
+        let qtyLower = quantity["qty"].toLowerCase(); // Qty String Array Conversion & Lowercase
+        return qtyLower;
+    });
+
     /* Capitalise First Letter of Ingredient Items */
     let ingredientsListCapitalised = ingredients.map((ingredient) => {
-        let ingredientString = ingredient["element"]; // JSON Object to String Array Conversion
-        let ingredientSplit = ingredientString.toLowerCase().split(" "); // Break String Array into Words
         let ingredientCapitalised = [];
+        let ingredientString = ingredient["element"]; // Element Object to String Array Conversion
+        let ingredientSplit = ingredientString.toLowerCase().split(" "); // Break String Array into Words
+
+        // Capitalise
         for (let i = 0; i < ingredientSplit.length; i++) {
             ingredientCapitalised[i] =
                 ingredientSplit[i][0].toUpperCase() +
@@ -41,6 +49,14 @@ const IngredientList = ({ ingredients, themeColors }) => {
         }
         return ingredientCapitalised.join(" ");
     });
+
+    console.log("CAPITALISED ARR:", ingredientsListCapitalised);
+
+    // New Qty & Ingreidient Array Assembly
+    let newCombinedArr = [];
+    newCombinedArr.push(qtyListLower);
+    newCombinedArr.push(ingredientsListCapitalised);
+    console.log("COMBINED:", newCombinedArr);
 
     return (
         <Box>
@@ -56,11 +72,9 @@ const IngredientList = ({ ingredients, themeColors }) => {
                         cursor: "pointer",
                     },
                     width: "100%",
-                    // m: "0.5rem 0",
                     p: "0.5rem  0.75rem",
                     borderRadius: "0rem",
                     border: "0",
-                    // borderTop: `1 solid ${palette.default.neutralGrey[900]}`,
                 }}
             >
                 <Typography
@@ -74,37 +88,44 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 </Typography>
                 {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
             </ToggleButton>
-
             {ingredientsListCapitalised.map((ingredient) =>
                 ingredientListOpen ? (
                     <Box
                         sx={{
                             display: "flex",
-                            gridTemplateColumns: "12.5%, 87.5%",
-                            gap: "0.25rem",
-                            // m: "0 0 0.5rem 0",
-                            mx: "0",
-                            p: "0rem 0.5rem",
-                            // borderRadius: "0.75rem",
+                            gap: "0.5rem",
+                            m: "0",
+                            p: "0rem 0.75rem",
+                            borderRadius: "0rem",
                             backgroundColor: recipeStepsPanel,
                             width: "100%",
                         }}
                     >
-                        <Box gridColumn="1">
+                        <Box>
                             <Typography
                                 key={ingredient._id}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
-                                    // mr: "0.5rem",
+                                    alignItems: "center",
+                                    fontWeight: "bold",
+                                    // background: "#eeceee",
+                                    borderRadius: "0.5rem",
+                                    width: "1.25rem",
                                 }}
                             >
                                 {ingredient.qty}
                             </Typography>
                         </Box>
-                        <Box gridColumn="2">
-                            <Typography key={ingredient._id}>
-                                {console.log("FINAL:", ingredient)}
+                        <Box>
+                            <Typography
+                                key={ingredient._id}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    width: "100%",
+                                }}
+                            >
                                 {ingredient}
                             </Typography>
                         </Box>
