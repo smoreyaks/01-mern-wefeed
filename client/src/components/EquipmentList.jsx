@@ -74,14 +74,42 @@ const EquipmentList = ({ equipment, themeColors }) => {
                 equipmentListOpen ? (
                     <Box
                         sx={{
-                            p: "0 0.75rem",
                             display: "flex",
-                            // gridTemplateColumns: "repeat(4, 1fr)",
+                            // gridTemplateColumns: "30% 70%",
                             gap: "0.5rem",
+                            m: "0",
+                            p: "0 0.75rem",
+                            // p: "0.5rem 0.5rem 0 0.5rem",
+                            borderRadius: "0rem",
                             backgroundColor: recipeStepsPanel,
                         }}
                     >
-                        {equip}
+                        <Box>
+                            <Typography
+                                key={equip._id}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    alignItems: "center",
+                                    fontWeight: "bold",
+                                    // background: "#eeceee",
+                                    borderRadius: "0.5rem",
+                                    width: "1.25rem",
+                                }}
+                            ></Typography>
+                        </Box>
+                        <Box>
+                            <Typography
+                                key={equip._id}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    width: "100%",
+                                }}
+                            >
+                                {equip}
+                            </Typography>
+                        </Box>
                     </Box>
                 ) : (
                     <Box display="none" />
