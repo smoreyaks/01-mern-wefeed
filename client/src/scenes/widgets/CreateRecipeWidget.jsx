@@ -29,6 +29,7 @@ import {
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
+import FeedSelect from "../../components/FeedSelect";
 
 // Image Upload
 import Dropzone from "react-dropzone";
@@ -172,6 +173,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     POST
                 </Button>
             </FlexBetween>
+            <FeedSelect />
         </WidgetWrapper>
     );
 };
