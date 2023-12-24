@@ -9,16 +9,19 @@ import { useState } from "react";
 // import ProjectFilter from "./ProjectFilter";
 
 // import userEvent from "@testing-library/user-event";
+
 // Components
 import FlexBetween from "./FlexBetween";
 import WidgetWrapper from "./WidgetWrapper";
-import { IconButton } from "@mui/material";
-
-// Icons
-import LocalBarIcon from "@mui/icons-material/LocalBar";
 
 // Custom Icons
 import AppetiserIcon from "./svg/AppetiserIcon";
+import MainIcon from "./svg/MainIcon";
+import DessertIcon from "./svg/DessertIcon";
+import DrinkIcon from "./svg/DrinkIcon";
+import BreakfastIcon from "./svg/BreakfastIcon";
+
+// import Button from "@mui";
 
 export default function FeedSelect() {
     // const { user } = useAuthContext();
@@ -65,24 +68,36 @@ export default function FeedSelect() {
         <WidgetWrapper>
             <FlexBetween>
                 {/* All Recipes */}
-                <AppetiserIcon>All</AppetiserIcon>
+
+                {/* <AppetiserIcon>All</AppetiserIcon> */}
 
                 {/* Main Dish Recipes */}
-                <IconButton>Main</IconButton>
+
+                <Button>
+                    <MainIcon />
+                </Button>
 
                 {/* Appetiser Recipes */}
-                <IconButton>Appetisers</IconButton>
+
+                <Button>
+                    <AppetiserIcon />
+                </Button>
 
                 {/* Breakfast Recipes */}
-                <IconButton>Breakfast</IconButton>
+
+                <Button>
+                    <BreakfastIcon />
+                </Button>
 
                 {/* Dessert Recipes */}
-                <IconButton>Dessert</IconButton>
+                <Button>
+                    <DessertIcon />
+                </Button>
 
                 {/* Drinks */}
-                <IconButton>
-                    <LocalBarIcon />
-                </IconButton>
+                <Button>
+                    <DrinkIcon />
+                </Button>
             </FlexBetween>
             {/* {error && <p className="error">{error}</p>} */}
             {/* {documents && <ProjectFilter changeFilter={changeFilter} />} */}
