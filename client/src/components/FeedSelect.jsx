@@ -21,7 +21,7 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
-// import Button from "@mui";
+import Button from "@mui/material";
 
 export default function FeedSelect() {
     // const { user } = useAuthContext();
