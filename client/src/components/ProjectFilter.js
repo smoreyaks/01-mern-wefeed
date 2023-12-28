@@ -4,6 +4,7 @@ import React from "react";
 // Hooks
 import { useState } from "react";
 
+// Feed Select Array
 const filterList = [
     ["All", "All"],
     ["main", "Main"],
@@ -13,6 +14,7 @@ const filterList = [
     ["drink", "Drink"],
 ];
 
+// Filter Function
 export default function ProjectFilter({ changeFilter }) {
     const [currentFilter, setCurrentFilter] = useState("all");
 
