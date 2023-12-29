@@ -22,6 +22,7 @@ import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
 import Button from "@mui/material";
+
 // Check button style
 export default function FeedSelect() {
     // const { user } = useAuthContext();
@@ -65,6 +66,7 @@ export default function FeedSelect() {
     //     : null;
 
     return (
+        // Adjust Feed Select design
         <WidgetWrapper>
             <FlexBetween>
                 {/* All Recipes */}
