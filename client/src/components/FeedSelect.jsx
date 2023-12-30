@@ -70,8 +70,7 @@ export default function FeedSelect() {
         <WidgetWrapper>
             <FlexBetween>
                 {/* All Recipes */}
-
-                {/* <AppetiserIcon>All</AppetiserIcon> */}
+                <Button>All</Button>
 
                 {/* Main Dish Recipes */}
 
