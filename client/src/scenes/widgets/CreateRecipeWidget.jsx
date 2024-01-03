@@ -45,9 +45,55 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
     const [recipe, setRecipe] = useState("");
 
     // Theme
+    // const { palette } = useTheme();
+
+    // ---------- Theme ----------
     const { palette } = useTheme();
+
+    const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
+    const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
+
+    // Text
+    const headingText = palette.default.neutralGrey.white; // Text Color
+    const textMain = palette.default.neutralGrey.white; // Text Color
+
+    const textHover = palette.default.primaryTwo.main; // Text Hover Color
+
+    // Background Main Color
+    const backgroundPrimary = palette.default.primaryOne.main;
+    const backgroundMain = palette.default.primaryOne.main;
+
+    // Panel / Subsection Main
+    const recipeStepsPanel = palette.default.primary.light;
+    const panelMain = palette.default.primary.light;
+
+    const recipeStepsPanelHover = palette.default.primaryTwo.light;
+    const panelMainHover = palette.default.primaryTwo.light;
+
+    // Icon Main
+    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconBack = palette.default.primaryOne.main;
+
+    const followerIconBackHover = palette.default.primaryOne.light;
+
+    const recipeTextPanel = palette.default.neutral.main;
+    const mainBackPanel = palette.default.neutral.main;
+
     const mediumMain = palette.default.neutral.mediumMain;
     const medium = palette.default.neutral.medium;
+
+    const themeColors = {
+        headingText,
+        textHover,
+        recipeStepsPanel,
+        whiteText,
+        recipeStepsPanelHover,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
+    };
 
     // Redux State
     const { _id } = useSelector((state) => state.user);
@@ -173,7 +219,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     POST
                 </Button>
             </FlexBetween>
-            <FeedSelect />
+            <FeedSelect themeColors={themeColors} />
         </WidgetWrapper>
     );
 };
