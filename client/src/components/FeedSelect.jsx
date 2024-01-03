@@ -21,13 +21,15 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 // Check button style
-export default function FeedSelect() {
+export default function FeedSelect(themeColors) {
     // const { user } = useAuthContext();
     // const { documents, error } = useCollection("projects");
     const [filter, setFilter] = useState("all");
+
+    const { textHover, headingText } = themeColors || {};
 
     const changeFilter = (newFilter) => {
         setFilter(newFilter);
@@ -70,7 +72,23 @@ export default function FeedSelect() {
         <WidgetWrapper>
             <FlexBetween>
                 {/* All Recipes */}
-                <Button>All</Button>
+                <Button
+                    size="medium"
+                    fullwidth
+                    // onClick={patchLike}
+                    sx={{
+                        borderRadius: "3rem",
+                        width: "6rem",
+
+                        color: headingText,
+                        "&:hover": {
+                            color: headingText,
+                            backgroundColor: textHover,
+                        },
+                    }}
+                >
+                    <Typography>All</Typography>
+                </Button>
 
                 {/* Main Dish Recipes */}
 
