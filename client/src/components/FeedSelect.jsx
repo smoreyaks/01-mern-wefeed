@@ -10,8 +10,6 @@ import { useState } from "react";
 
 // import userEvent from "@testing-library/user-event";
 
-// Test Comment
-
 // Components
 import FlexBetween from "./FlexBetween";
 import WidgetWrapper from "./WidgetWrapper";
@@ -23,7 +21,7 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
-import Button from "@mui/material";
+import { Button } from "@mui/material";
 
 // Check button style
 export default function FeedSelect() {
