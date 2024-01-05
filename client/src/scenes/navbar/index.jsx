@@ -204,19 +204,19 @@ const Navbar = ({ userId }) => {
                         </IconButton>
 
                         {/* Message Icon */}
-                        <IconButton>
+                        {/* <IconButton>
                             <Message sx={{ fontSize: "25px" }} />
-                        </IconButton>
+                        </IconButton> */}
 
                         {/* Notification Icon */}
-                        <IconButton>
+                        {/* <IconButton>
                             <Notifications sx={{ fontSize: "25px" }} />
-                        </IconButton>
+                        </IconButton> */}
 
                         {/* Help Icon */}
-                        <IconButton>
+                        {/* <IconButton>
                             <Help sx={{ fontSize: "25px" }} />
-                        </IconButton>
+                        </IconButton> */}
 
                         {/* User Profile */}
                         <IconButton
@@ -296,13 +296,13 @@ const Navbar = ({ userId }) => {
                             </IconButton>
 
                             {/* Messages Icon */}
-                            <Message sx={{ fontSize: "25px" }} />
+                            {/* <Message sx={{ fontSize: "25px" }} /> */}
 
                             {/* Notifications Icon */}
-                            <Notifications sx={{ fontSize: "25px" }} />
+                            {/* <Notifications sx={{ fontSize: "25px" }} /> */}
 
                             {/* Help Icon */}
-                            <Help sx={{ fontSize: "25px" }} />
+                            {/* <Help sx={{ fontSize: "25px" }} /> */}
 
                             {/* LogOut Icon */}
                             <IconButton
