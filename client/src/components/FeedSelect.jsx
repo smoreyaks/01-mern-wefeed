@@ -21,7 +21,7 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
 
 // Check button style
 const FeedSelect = ({ themeColors }) => {
@@ -80,124 +80,118 @@ const FeedSelect = ({ themeColors }) => {
                     }}
                 >
                     {/* All Recipes */}
-                    <Button
-                        // size="medium"
-                        // fullwidth
-                        // // onClick={patchLike}
-                        // sx={{
-                        //     borderRadius: "3rem",
-                        //     width: "6rem",
-
-                        //     color: headingText,
-                        //     "&:hover": {
-                        //         color: headingText,
-                        //         backgroundColor: textHover,
-                        //     },
-                        // }}
-
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
+                    <Tooltip title="All Recipes">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <Typography>All</Typography>
-                    </Button>
+                                p: "0.5rem 0 0.5rem 0.5rem",
+                                m: "0.5rem 0 0.5rem 0.5rem",
+                                borderTopLeftRadius: "3rem",
+                                borderBottomLeftRadius: "3rem",
+                                borderTopRightRadius: "0rem",
+                                borderBottomRightRadius: "0rem",
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <Typography>All</Typography>
+                        </Button>
+                    </Tooltip>
 
                     {/* Main Dish Recipes */}
-
-                    <Button
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <MainIcon />
-                    </Button>
+                    <Tooltip title="Main Dishes">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                color: headingText,
+                                py: "0.5rem",
+                                my: "0.5rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <MainIcon />
+                        </Button>
+                    </Tooltip>
 
                     {/* Appetiser Recipes */}
-
-                    <Button
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <AppetiserIcon />
-                    </Button>
+                    <Tooltip title="Appetisers">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                color: headingText,
+                                py: "0.5rem",
+                                my: "0.5rem",
+                                // borderRadiusTopLeft: "3rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <AppetiserIcon />
+                        </Button>
+                    </Tooltip>
 
                     {/* Breakfast Recipes */}
-
-                    <Button
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <BreakfastIcon />
-                    </Button>
+                    <Tooltip title="Breakfast Dishes">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                color: headingText,
+                                py: "0.5rem",
+                                my: "0.5rem",
+                                // borderRadius: "3rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <BreakfastIcon />
+                        </Button>
+                    </Tooltip>
 
                     {/* Dessert Recipes */}
-                    <Button
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <DessertIcon />
-                    </Button>
+                    <Tooltip title="Desserts">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                color: headingText,
+                                py: "0.5rem",
+                                my: "0.5rem",
+                                // borderRadius: "3rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <DessertIcon />
+                        </Button>
+                    </Tooltip>
 
                     {/* Drinks */}
-                    <Button
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            color: headingText,
-                            p: "0.5rem",
-                            m: "0.5rem",
-
-                            borderRadius: "3rem",
-                            "&:hover": {
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <DrinkIcon />
-                    </Button>
+                    <Tooltip title="Drinks & Cocktails">
+                        <Button
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                color: headingText,
+                                p: "0.5rem 0.5rem 0.5rem 0",
+                                m: "0.5rem 0.5rem 0.5rem 0 ",
+                                borderTopRightRadius: "3rem",
+                                borderBottomRightRadius: "3rem",
+                                borderTopLeftRadius: "0rem",
+                                borderBottomLeftRadius: "0rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <DrinkIcon />
+                        </Button>
+                    </Tooltip>
                 </Box>
             </FlexBetween>
             {/* {error && <p className="error">{error}</p>} */}
