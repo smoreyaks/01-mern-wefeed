@@ -219,7 +219,14 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     POST
                 </Button>
             </FlexBetween>
-            <FeedSelect themeColors={themeColors} />
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                }}
+            >
+                <FeedSelect themeColors={themeColors} />
+            </Box>
         </WidgetWrapper>
     );
 };
