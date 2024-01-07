@@ -82,8 +82,8 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                background: `url(${backgroundThemeImg})`,
-                                // background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
+                                // background: `url(${backgroundThemeImg})`,
+                                background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
                                 margin: 0,
                                 padding: 0,
                             },
