@@ -12,6 +12,7 @@ import {
     MenuItem,
     FormControl,
     useTheme,
+    Tooltip,
     useMediaQuery,
 } from "@mui/material";
 
@@ -110,99 +111,119 @@ const Navbar = ({ userId }) => {
                 {/* Desktop Navbar */}
                 {isNonMobileScreens ? (
                     <FlexBetween gap="1rem">
-                        <IconButton
-                            onClick={() =>
-                                setIsThemeMenuToggled(!isThemeMenuToggled)
-                            }
-                        >
-                            <BrushIcon fontSize="25px" />
-                            {/* Theme Menu */}
-                            {isNonMobileScreens && isThemeMenuToggled && (
-                                <Box
-                                    position="fixed"
-                                    top="5%"
-                                    height="3rem"
-                                    width="10rem"
-                                    zIndex="11"
-                                    maxWidth="300px"
-                                    minWidth="200px"
-                                    backgroundColor={alt}
-                                    border={`2px solid ${neutralLight}`}
-                                    borderRadius="2rem"
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    {/* Default Theme */}
-                                    <IconButton
-                                        onClick={() =>
-                                            dispatch(setThemeDefault())
-                                        }
+                        <Tooltip title="Theme Select" enterDelay="500">
+                            <IconButton
+                                onClick={() =>
+                                    setIsThemeMenuToggled(!isThemeMenuToggled)
+                                }
+                            >
+                                <BrushIcon fontSize="25px" />
+
+                                {/* Theme Menu */}
+                                {isNonMobileScreens && isThemeMenuToggled && (
+                                    <Box
+                                        position="fixed"
+                                        top="5%"
+                                        height="3rem"
+                                        width="10rem"
+                                        zIndex="11"
+                                        maxWidth="300px"
+                                        minWidth="200px"
+                                        backgroundColor={alt}
+                                        border={`2px solid ${neutralLight}`}
+                                        borderRadius="2rem"
                                         sx={{
-                                            p: "0.5rem",
-                                            m: "0.25rem 0.125rem 0.25rem 0.5rem",
-                                            borderRadius: "2rem",
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
                                         }}
                                     >
-                                        <ChairOutlinedIcon />
-                                    </IconButton>
+                                        {/* Default Theme */}
+                                        <Tooltip
+                                            title="Default Theme"
+                                            enterDelay="500"
+                                        >
+                                            <IconButton
+                                                onClick={() =>
+                                                    dispatch(setThemeDefault())
+                                                }
+                                                sx={{
+                                                    p: "0.5rem",
+                                                    m: "0.25rem 0.125rem 0.25rem 0.5rem",
+                                                    borderRadius: "2rem",
+                                                }}
+                                            >
+                                                <ChairOutlinedIcon />
+                                            </IconButton>
+                                        </Tooltip>
 
-                                    {/* Dinner Theme */}
-                                    <IconButton
-                                        onClick={() =>
-                                            dispatch(setThemeDinner())
-                                        }
-                                        sx={{
-                                            p: "0.5rem",
-                                            m: "0.25rem 0.125rem 0.25rem",
-                                            borderRadius: "2rem",
-                                        }}
-                                    >
-                                        <RamenDiningOutlinedIcon />
-                                    </IconButton>
+                                        {/* Dinner Theme */}
+                                        <Tooltip
+                                            title="Dinner Theme"
+                                            enterDelay="500"
+                                        >
+                                            <IconButton
+                                                onClick={() =>
+                                                    dispatch(setThemeDinner())
+                                                }
+                                                sx={{
+                                                    p: "0.5rem",
+                                                    m: "0.25rem 0.125rem 0.25rem",
+                                                    borderRadius: "2rem",
+                                                }}
+                                            >
+                                                <RamenDiningOutlinedIcon />
+                                            </IconButton>
+                                        </Tooltip>
 
-                                    {/* Dessert Theme */}
-                                    <IconButton
-                                        onClick={() =>
-                                            dispatch(setThemeDessert())
-                                        }
-                                        sx={{
-                                            p: "0.5rem",
-                                            m: "0.25rem 0.125rem 0.25rem",
-                                            borderRadius: "2rem",
-                                        }}
-                                    >
-                                        <CakeOutlinedIcon />
-                                    </IconButton>
+                                        {/* Dessert Theme */}
+                                        <Tooltip
+                                            title="Dessert Theme"
+                                            enterDelay="500"
+                                            sx={{ fontSize: "3rem" }}
+                                        >
+                                            <IconButton
+                                                onClick={() =>
+                                                    dispatch(setThemeDessert())
+                                                }
+                                                sx={{
+                                                    p: "0.5rem",
+                                                    m: "0.25rem 0.125rem 0.25rem",
+                                                    borderRadius: "2rem",
+                                                }}
+                                            >
+                                                <CakeOutlinedIcon />
+                                            </IconButton>
+                                        </Tooltip>
 
-                                    {/* Close Icon */}
-                                    <IconButton
-                                        onClick={() =>
-                                            setIsThemeMenuToggled(
-                                                !isThemeMenuToggled
-                                            )
-                                        }
-                                        sx={{ p: "0.5rem", m: "0.5rem" }}
-                                    >
-                                        <Close />
-                                    </IconButton>
-                                </Box>
-                            )}
-                        </IconButton>
+                                        {/* Close Icon */}
+                                        <IconButton
+                                            onClick={() =>
+                                                setIsThemeMenuToggled(
+                                                    !isThemeMenuToggled
+                                                )
+                                            }
+                                            sx={{ p: "0.5rem", m: "0.5rem" }}
+                                        >
+                                            <Close />
+                                        </IconButton>
+                                    </Box>
+                                )}
+                            </IconButton>
+                        </Tooltip>
 
                         {/* Dark & Light Mode Button */}
-                        <IconButton onClick={() => dispatch(setMode())}>
-                            {theme.palette.default.mode === "dark" ? (
-                                <DarkMode sx={{ fontSize: "25px" }} />
-                            ) : (
-                                <LightMode
-                                    sx={{ color: dark, fontSize: "25px" }}
-                                />
-                            )}
-                        </IconButton>
-
+                        <Tooltip title="Light & Dark Mode" enterDelay="500">
+                            <IconButton onClick={() => dispatch(setMode())}>
+                                {theme.palette.default.mode === "dark" ? (
+                                    <DarkMode sx={{ fontSize: "25px" }} />
+                                ) : (
+                                    <LightMode
+                                        sx={{ color: dark, fontSize: "25px" }}
+                                    />
+                                )}
+                            </IconButton>
+                        </Tooltip>
                         {/* Message Icon */}
                         {/* <IconButton>
                             <Message sx={{ fontSize: "25px" }} />
@@ -219,24 +240,28 @@ const Navbar = ({ userId }) => {
                         </IconButton> */}
 
                         {/* User Profile */}
-                        <IconButton
-                            onClick={() => navigate(`/profile/${userId}`)}
-                        >
-                            <UserImage
-                                // height="25px"
-                                size="30px"
-                                image={user.picturePath}
-                            />
-                        </IconButton>
+                        <Tooltip title="User Profile" enterDelay="500">
+                            <IconButton
+                                onClick={() => navigate(`/profile/${userId}`)}
+                            >
+                                <UserImage
+                                    // height="25px"
+                                    size="30px"
+                                    image={user.picturePath}
+                                />
+                            </IconButton>
+                        </Tooltip>
 
                         {/* Log Out Icon */}
-                        <IconButton onClick={() => dispatch(setLogout())}>
-                            <LogoutIcon
-                                sx={{
-                                    fontSize: "25px",
-                                }}
-                            />
-                        </IconButton>
+                        <Tooltip title="Log Out" enterDelay="500">
+                            <IconButton onClick={() => dispatch(setLogout())}>
+                                <LogoutIcon
+                                    sx={{
+                                        fontSize: "25px",
+                                    }}
+                                />
+                            </IconButton>
+                        </Tooltip>
                     </FlexBetween>
                 ) : (
                     <IconButton
