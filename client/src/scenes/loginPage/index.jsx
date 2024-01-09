@@ -28,7 +28,7 @@ const LoginPage = () => {
                 backgroundColor={theme.palette.default.background.alt}
             >
                 <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-                    Welcome to the platform!
+                    Welcome to WeFeed!
                 </Typography>
                 <Form />
             </Box>
