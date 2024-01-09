@@ -32,6 +32,7 @@ import {
     Button,
     Typography,
     useTheme,
+    Tooltip,
     SvgIcon,
     Badge,
 } from "@mui/material";
@@ -225,38 +226,42 @@ const RecipePostWidget = ({
                     }}
                 >
                     {/* Recipe Total Time Badge */}
-                    <Badge
-                        sx={{
-                            backgroundColor: textHover,
+                    <Tooltip title="Total Recipe Time" enterDelay="500">
+                        <Badge
+                            sx={{
+                                backgroundColor: textHover,
 
-                            p: "0.5rem",
-                            borderRadius: "3rem",
-                            gap: "0.5rem",
-                            opacity: "1",
-                            display: "flex",
-                            alignItems: "center",
-                        }}
-                    >
-                        <TimerIcon />
-                        {prepTimeMin}
-                    </Badge>
+                                p: "0.5rem",
+                                borderRadius: "3rem",
+                                gap: "0.5rem",
+                                opacity: "1",
+                                display: "flex",
+                                alignItems: "center",
+                            }}
+                        >
+                            <TimerIcon />
+                            {prepTimeMin}
+                        </Badge>
+                    </Tooltip>
 
                     {/* Ingredient Count Badge */}
-                    <Badge
-                        sx={{
-                            backgroundColor: textHover,
+                    <Tooltip title="Number of Ingredients" enterDelay="500">
+                        <Badge
+                            sx={{
+                                backgroundColor: textHover,
 
-                            p: "0.5rem",
-                            borderRadius: "3rem",
-                            gap: "0.5rem",
-                            opacity: "1",
-                            display: "flex",
-                            alignItems: "center",
-                        }}
-                    >
-                        <IngredientsQtyIcon />
-                        {ingredientCount}
-                    </Badge>
+                                p: "0.5rem",
+                                borderRadius: "3rem",
+                                gap: "0.5rem",
+                                opacity: "1",
+                                display: "flex",
+                                alignItems: "center",
+                            }}
+                        >
+                            <IngredientsQtyIcon />
+                            {ingredientCount}
+                        </Badge>
+                    </Tooltip>
                 </Box>
             </Box>
 
@@ -282,97 +287,105 @@ const RecipePostWidget = ({
                     }}
                 >
                     {/* Prep Time */}
-                    <Box
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            borderRadius: ".75rem",
-                            padding: "0.25rem 0rem",
-                            display: "flex",
-                            alignItems: "center",
-                        }}
-                    >
-                        <PrepIcon
+                    <Tooltip title="Preparation Time" enterDelay="500">
+                        <Box
                             sx={{
-                                width: "1rem",
-                                height: "1rem",
-                                mr: "0.5rem",
-                                fill: headingText,
-                            }}
-                        />
-                        <Typography
-                            sx={{
-                                backgroundColor: "inherit",
+                                backgroundColor: recipeStepsPanel,
                                 borderRadius: ".75rem",
+                                padding: "0.25rem 0rem",
                                 display: "flex",
                                 alignItems: "center",
                             }}
                         >
-                            {prepTime}
-                        </Typography>
-                    </Box>
+                            <PrepIcon
+                                sx={{
+                                    width: "1rem",
+                                    height: "1rem",
+                                    mr: "0.5rem",
+                                    fill: headingText,
+                                }}
+                            />
+                            <Typography
+                                sx={{
+                                    backgroundColor: "inherit",
+                                    borderRadius: ".75rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                }}
+                            >
+                                {prepTime}
+                            </Typography>
+                        </Box>
+                    </Tooltip>
 
                     {/* Cook Time */}
-                    <Box
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            borderRadius: ".75rem",
-                            padding: "0.25rem 0.75rem",
-                            display: "flex",
-                            alignItems: "center",
-                        }}
-                    >
-                        <CookIcon
+                    <Tooltip title="Cook Time" enterDelay="500">
+                        <Box
                             sx={{
-                                width: "1rem",
-                                height: "1rem",
-                                mr: "0.5rem",
-                                fill: headingText,
-                            }}
-                        />
-                        <Typography
-                            sx={{
-                                backgroundColor: "inherit",
+                                backgroundColor: recipeStepsPanel,
                                 borderRadius: ".75rem",
-                                // padding: "0.5rem",
+                                padding: "0.25rem 0.75rem",
+                                display: "flex",
+                                alignItems: "center",
                             }}
                         >
-                            {cookTime}
-                        </Typography>
-                    </Box>
+                            <CookIcon
+                                sx={{
+                                    width: "1rem",
+                                    height: "1rem",
+                                    mr: "0.5rem",
+                                    fill: headingText,
+                                }}
+                            />
+                            <Typography
+                                sx={{
+                                    backgroundColor: "inherit",
+                                    borderRadius: ".75rem",
+                                    // padding: "0.5rem",
+                                }}
+                            >
+                                {cookTime}
+                            </Typography>
+                        </Box>
+                    </Tooltip>
 
                     {/* Servings */}
-                    <Box
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            borderRadius: ".75rem",
-                            padding: "0.25rem 0.75rem",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    >
-                        <PersonRoundedIcon />
-                        <Typography sx={{ pl: "0.25rem" }}>
-                            {servings}
-                        </Typography>
-                    </Box>
+                    <Tooltip title="Number of Servings" enterDelay="500">
+                        <Box
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                borderRadius: ".75rem",
+                                padding: "0.25rem 0.75rem",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <PersonRoundedIcon />
+                            <Typography sx={{ pl: "0.25rem" }}>
+                                {servings}
+                            </Typography>
+                        </Box>
+                    </Tooltip>
 
                     {/* Spice Level */}
-                    <Box
-                        sx={{
-                            backgroundColor: recipeStepsPanel,
-                            borderRadius: ".75rem",
-                            padding: "0.25rem 0rem",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}
-                    >
-                        <LocalFireDepartmentIcon />
-                        <Typography sx={{ pl: "0.25rem" }}>
-                            {spiceLevel}
-                        </Typography>
-                    </Box>
+                    <Tooltip title="Spice Level" enterDelay="500">
+                        <Box
+                            sx={{
+                                backgroundColor: recipeStepsPanel,
+                                borderRadius: ".75rem",
+                                padding: "0.25rem 0rem",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}
+                        >
+                            <LocalFireDepartmentIcon />
+                            <Typography sx={{ pl: "0.25rem" }}>
+                                {spiceLevel}
+                            </Typography>
+                        </Box>
+                    </Tooltip>
                 </Box>
 
                 <Divider />
@@ -400,123 +413,133 @@ const RecipePostWidget = ({
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        onClick={patchLike}
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
+                    <Tooltip title="Like Recipe" enterDelay="500">
+                        <Button
+                            size="medium"
+                            fullwidth
+                            onClick={patchLike}
+                            sx={{
+                                borderRadius: "3rem",
+                                width: "6rem",
 
-                            color: headingText,
-                            "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        {isLiked ? (
-                            <FavoriteOutlined sx={{ color: primary }} />
-                        ) : (
-                            <FavoriteBorderOutlined />
-                        )}
-                        <Typography pl="0.5rem">{likeCount}</Typography>
-                    </Button>
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            {isLiked ? (
+                                <FavoriteOutlined sx={{ color: primary }} />
+                            ) : (
+                                <FavoriteBorderOutlined />
+                            )}
+                            <Typography pl="0.5rem">{likeCount}</Typography>
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
 
                 {/* Recommendations */}
                 <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        onClick={() => setIsRecommended(!isRecommended)}
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
+                    <Tooltip title="Recommend Recipe" enterDelay="500">
+                        <Button
+                            size="medium"
+                            fullwidth
+                            onClick={() => setIsRecommended(!isRecommended)}
+                            sx={{
+                                borderRadius: "3rem",
+                                width: "6rem",
 
-                            color: headingText,
-                            "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        {isRecommended ? (
-                            <HowToRegIcon />
-                        ) : (
-                            <RecordVoiceOverIcon />
-                        )}
-                        <Typography pl="0.5rem">
-                            {recommendationCount}
-                        </Typography>
-                    </Button>
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            {isRecommended ? (
+                                <HowToRegIcon />
+                            ) : (
+                                <RecordVoiceOverIcon />
+                            )}
+                            <Typography pl="0.5rem">
+                                {recommendationCount}
+                            </Typography>
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
 
                 {/* Comments */}
                 <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        onClick={() => setIsComments(!isComments)}
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
+                    <Tooltip title="Show Comments" enterDelay="500">
+                        <Button
+                            size="medium"
+                            fullwidth
+                            onClick={() => setIsComments(!isComments)}
+                            sx={{
+                                borderRadius: "3rem",
+                                width: "6rem",
 
-                            color: headingText,
-                            "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <CommentIcon />
-                        <Typography pl="0.5rem">{commentCount}</Typography>
-                    </Button>
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <CommentIcon />
+                            <Typography pl="0.5rem">{commentCount}</Typography>
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
 
                 {/* Save Recipe to List */}
                 <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        onClick={() => setIsSaved(!isSaved)}
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
+                    <Tooltip title="Save Recipe" enterDelay="500">
+                        <Button
+                            size="medium"
+                            fullwidth
+                            onClick={() => setIsSaved(!isSaved)}
+                            sx={{
+                                borderRadius: "3rem",
+                                width: "6rem",
 
-                            color: headingText,
-                            "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        {isSaved ? (
-                            <PlaylistAddCheckIcon />
-                        ) : (
-                            <PlaylistAddOutlinedIcon />
-                        )}
-                    </Button>
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            {isSaved ? (
+                                <PlaylistAddCheckIcon />
+                            ) : (
+                                <PlaylistAddOutlinedIcon />
+                            )}
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
 
                 {/* Share Recipe */}
                 <FlexBetween gap="0.3rem">
-                    <Button
-                        size="medium"
-                        fullwidth
-                        sx={{
-                            borderRadius: "3rem",
-                            width: "6rem",
+                    <Tooltip title="Share Recipe" enterDelay="500">
+                        <Button
+                            size="medium"
+                            fullwidth
+                            sx={{
+                                borderRadius: "3rem",
+                                width: "6rem",
 
-                            color: headingText,
-                            "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
-                            },
-                        }}
-                    >
-                        <ShareOutlined />
-                    </Button>
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                        >
+                            <ShareOutlined />
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
             </FlexBetween>
 
