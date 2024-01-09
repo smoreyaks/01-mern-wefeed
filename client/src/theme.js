@@ -332,6 +332,8 @@ export const themeSettings = (mode) => {
                       //   },
                   }),
         },
+
+        // Typography Styles
         typography: {
             fontFamily: ["Rubik", "sans-serif"].join(","),
             fontSize: 12,
@@ -360,5 +362,19 @@ export const themeSettings = (mode) => {
                 fontSize: 14,
             },
         },
+
+        // Style Overrides
+        // components: {
+        //     // Name of the component
+        //     MuiButton: {
+        //         styleOverrides: {
+        //             // Name of the slot
+        //             root: {
+        //                 // Some CSS
+        //                 fontSize: "1rem",
+        //             },
+        //         },
+        //     },
+        // },
     };
 };
