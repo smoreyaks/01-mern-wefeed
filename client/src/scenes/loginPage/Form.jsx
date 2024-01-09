@@ -256,7 +256,16 @@ const Form = () => {
                                 Boolean(touched.email) && Boolean(errors.email)
                             }
                             helperText={touched.email && errors.email}
-                            sx={{ gridColumn: "span 4" }}
+                            sx={{
+                                gridColumn: "span 4",
+                            }}
+                            inputProps={{
+                                style: {
+                                    backgroundColor:
+                                        palette.default.primaryTwo.light,
+                                    borderRadius: "0.25rem",
+                                },
+                            }}
                         />
                         <TextField
                             label="Password"
@@ -271,6 +280,13 @@ const Form = () => {
                             }
                             helperText={touched.password && errors.password}
                             sx={{ gridColumn: "span 4" }}
+                            inputProps={{
+                                style: {
+                                    backgroundColor:
+                                        palette.default.primaryTwo.light,
+                                    borderRadius: "0.25rem",
+                                },
+                            }}
                         />
                     </Box>
 
