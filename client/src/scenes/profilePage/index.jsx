@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -18,6 +18,35 @@ import RecipePostWidget from "../widgets/RecipePostWidget";
 import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
 
 const ProfilePage = () => {
+    // Theme
+    const { palette } = useTheme();
+    const whiteText = palette.default.neutralGrey.white;
+    const textHover = palette.default.primaryTwo.main;
+    const primary = palette.default.primary.main;
+    const headingText = palette.default.neutralGrey.white;
+    const recipeText = palette.default.neutral.main;
+    const recipeStepsPanel = palette.default.primary.light;
+    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconBack = palette.default.primaryOne.main;
+    const followerIconBackHover = palette.default.primaryOne.light;
+    const recipeTextPanel = palette.default.neutral.main;
+    const mainBackPanel = palette.default.neutral.main;
+
+    const themeColors = {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        textHover,
+        whiteText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        recipeTextPanel,
+        mainBackPanel,
+    };
+
+    const { _id, picturePath } = useSelector((state) => state.user);
+
     const [user, setUser] = useState(null);
     const { userId } = useParams();
     const token = useSelector((state) => state.token);
@@ -56,7 +85,7 @@ const ProfilePage = () => {
                         picturePath={user.picturePath}
                     />
                     <Box m="2rem 0" />
-                    <FriendListWidget userId={userId} />
+                    <FriendListWidget userId={_id} themeColors={themeColors} />
                 </Box>
                 <Box
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
