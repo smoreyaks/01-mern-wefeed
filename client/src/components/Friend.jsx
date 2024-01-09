@@ -1,5 +1,5 @@
 import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setFriends } from "../state";
@@ -104,10 +104,14 @@ const Friend = ({
             >
                 {isFriend ? (
                     <FlexBetween>
-                        <PersonRemoveOutlined />
+                        <Tooltip title="Unfollow User" enterDelay="500">
+                            <PersonRemoveOutlined />
+                        </Tooltip>
                     </FlexBetween>
                 ) : (
-                    <PersonAddOutlined />
+                    <Tooltip title="Follow User" enterDelay="500">
+                        <PersonAddOutlined />
+                    </Tooltip>
                 )}
             </Button>
         </FlexBetween>
