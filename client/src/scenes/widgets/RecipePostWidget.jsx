@@ -163,7 +163,7 @@ const RecipePostWidget = ({
         const updatedRecipe = await response.json();
         dispatch(setRecipe({ recipe: updatedRecipe }));
     };
-    console.log("USER Post 1:", loggedInUserId);
+    // console.log("USER Post 1:", loggedInUserId);
 
     return (
         <WidgetWrapper

@@ -48,7 +48,7 @@ const TopUserRecipesWidget = () => {
         );
         const data = await response.json();
         setUser(data);
-        console.log("UserWidget.js - DATA - ", data);
+        // console.log("UserWidget.js - DATA - ", data);
     };
 
     // getUserRecipes API Call
