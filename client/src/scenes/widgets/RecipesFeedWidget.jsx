@@ -14,6 +14,18 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
     const [user, setUser] = useState(null);
     const recipes = useSelector((state) => state.recipes);
 
+    // ORIGINAL UNCHANGED API CALL - getRecipes
+    // const getRecipes = async () => {
+    //     const response = await fetch(
+    //         "https://server-vukx.onrender.com/recipes",
+    //         {
+    //             method: "GET",
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         }
+    //     );
+    //     const data = await response.json();
+    //     dispatch(setRecipes({ recipes: data }));
+    // };
     const getRecipes = async () => {
         const response = await fetch(
             "https://server-vukx.onrender.com/recipes",
@@ -25,6 +37,19 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
         const data = await response.json();
         dispatch(setRecipes({ recipes: data }));
     };
+
+    // ORIGINAL UNCHANGED API CALL - getUser
+    // const getUser = async () => {
+    //     const response = await fetch(
+    //         `https://server-vukx.onrender.com/users/${userId}`,
+    //         {
+    //             method: "GET",
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         }
+    //     );
+    //     const data = await response.json();
+    //     setUser(data);
+    // };
 
     const getUser = async () => {
         const response = await fetch(
@@ -38,6 +63,19 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
         setUser(data);
     };
 
+    // ORIGINAL UNCHANGED API CALL - getUserRecipes
+    // const getUserRecipes = async () => {
+    //     const response = await fetch(
+    //         `https://server-vukx.onrender.com/recipes/${userId}/recipes`,
+    //         {
+    //             method: "GET",
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         }
+    //     );
+    //     const data = await response.json();
+    //     dispatch(setRecipes({ recipes: data }));
+    // };
+
     const getUserRecipes = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/recipes/${userId}/recipes`,
@@ -50,12 +88,16 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
         dispatch(setRecipes({ recipes: data }));
     };
 
+    // Renders either All Recipes or select Profile Recipes
     useEffect(() => {
         if (isProfile) {
-            getUserRecipes();
-        } else {
-            getRecipes();
+            // getUserRecipes(); // Doesn't function - Original
+            // getUserRecipes();
             getUser();
+        } else {
+            // getRecipes(); // Doesn't function - Original
+            // getUser();
+            getUser(); // Works as intended
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
