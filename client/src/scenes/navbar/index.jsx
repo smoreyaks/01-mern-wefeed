@@ -71,6 +71,19 @@ const Navbar = ({ userId }) => {
     const primaryLight = theme.palette.default.primary.light;
     const alt = theme.palette.default.background.alt;
 
+    const whiteText = theme.palette.default.neutralGrey.white;
+    const textHover = theme.palette.default.primaryTwo.main;
+    const primary = theme.palette.default.primary.main;
+    const headingText = theme.palette.default.neutralGrey.white;
+    const recipeText = theme.palette.default.neutral.main;
+    const recipeStepsPanel = theme.palette.default.primary.light;
+    const followerIconOutline = theme.palette.default.primaryTwo.main;
+    const followerIconBack = theme.palette.default.primaryOne.main;
+    const followerIconBackHover = theme.palette.default.primaryOne.light;
+    const recipeTextPanel = theme.palette.default.neutral.main;
+    const mainBackPanel = theme.palette.default.neutral.main;
+    const buttonLight = theme.palette.default.neutral.light;
+
     // Swap Hard Code for Dynamic String
     const fullName = `${user.firstName} ${user.lastName}`;
     const firstName = user.firstName;
@@ -219,7 +232,10 @@ const Navbar = ({ userId }) => {
                                     <DarkMode sx={{ fontSize: "25px" }} />
                                 ) : (
                                     <LightMode
-                                        sx={{ color: dark, fontSize: "25px" }}
+                                        sx={{
+                                            color: buttonLight,
+                                            fontSize: "25px",
+                                        }}
                                     />
                                 )}
                             </IconButton>
