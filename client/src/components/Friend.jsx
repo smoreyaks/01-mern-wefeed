@@ -39,6 +39,7 @@ const Friend = ({
         recipeTextPanel,
         recipeText,
         mainBackPanel,
+        buttonLight,
     } = themeColors || {};
 
     const isFriend = friends.find((friend) => friend._id === friendId);
@@ -91,7 +92,7 @@ const Friend = ({
                 fullwidth
                 size="small"
                 sx={{
-                    backgroundColor: recipeStepsPanel,
+                    backgroundColor: buttonLight,
                     color: headingText,
                     p: "0.5rem",
                     m: "0.5rem",

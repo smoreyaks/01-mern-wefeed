@@ -30,7 +30,8 @@ const FeedSelect = ({ themeColors }) => {
     // const { documents, error } = useCollection("projects");
     const [filter, setFilter] = useState("all");
 
-    const { textHover, headingText, recipeStepsPanel } = themeColors || {};
+    const { textHover, headingText, recipeStepsPanel, buttonLight } =
+        themeColors || {};
 
     const changeFilter = (newFilter) => {
         setFilter(newFilter);
@@ -75,7 +76,7 @@ const FeedSelect = ({ themeColors }) => {
                 <Box
                     sx={{
                         display: "flex",
-                        backgroundColor: recipeStepsPanel,
+                        backgroundColor: buttonLight,
                         borderRadius: "3rem",
                     }}
                 >
@@ -83,7 +84,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="All Recipes">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 p: "0.5rem 0 0.5rem 0.5rem",
                                 m: "0.5rem 0 0.5rem 0.5rem",
@@ -97,7 +98,12 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <Typography>All</Typography>
+                            <Typography
+                                fontWeight="bold"
+                                sx={{ color: headingText }}
+                            >
+                                All
+                            </Typography>
                         </Button>
                     </Tooltip>
 
@@ -105,7 +111,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Main Dishes">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -122,7 +128,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Appetisers">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -132,7 +138,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <AppetiserIcon />
+                            <AppetiserIcon sx={{ color: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -140,7 +146,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Breakfast Dishes">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -150,7 +156,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <BreakfastIcon />
+                            <BreakfastIcon sx={{ color: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -158,7 +164,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Desserts">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -168,7 +174,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <DessertIcon />
+                            <DessertIcon sx={{ color: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -176,7 +182,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Drinks & Cocktails">
                         <Button
                             sx={{
-                                backgroundColor: recipeStepsPanel,
+                                backgroundColor: buttonLight,
                                 color: headingText,
                                 p: "0.5rem 0.5rem 0.5rem 0",
                                 m: "0.5rem 0.5rem 0.5rem 0 ",

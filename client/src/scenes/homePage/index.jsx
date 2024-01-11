@@ -22,6 +22,7 @@ const HomePage = () => {
     const followerIconBackHover = palette.default.primaryOne.light;
     const recipeTextPanel = palette.default.neutral.main;
     const mainBackPanel = palette.default.neutral.main;
+    const buttonLight = palette.default.primaryTwo.light;
 
     const themeColors = {
         headingText,
@@ -34,6 +35,7 @@ const HomePage = () => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        buttonLight,
     };
 
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");

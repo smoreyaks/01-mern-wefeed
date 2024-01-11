@@ -31,6 +31,7 @@ const ProfilePage = () => {
     const followerIconBackHover = palette.default.primaryOne.light;
     const recipeTextPanel = palette.default.neutral.main;
     const mainBackPanel = palette.default.neutral.main;
+    const buttonLight = palette.default.primaryTwo.light;
 
     const themeColors = {
         headingText,
@@ -43,6 +44,7 @@ const ProfilePage = () => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        buttonLight,
     };
 
     const { _id, picturePath } = useSelector((state) => state.user);
