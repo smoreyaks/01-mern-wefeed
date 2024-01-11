@@ -35,7 +35,7 @@ import FeedSelect from "../../components/FeedSelect";
 import Dropzone from "react-dropzone";
 
 // State
-import { setRecipes } from "../../state";
+import { setAllRecipes } from "../../state";
 
 const CreateRecipeWidget = ({ picturePath, theme }) => {
     // State
@@ -82,6 +82,8 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
     const mediumMain = palette.default.neutral.mediumMain;
     const medium = palette.default.neutral.medium;
 
+    const buttonLight = palette.default.primaryTwo.light;
+
     const themeColors = {
         headingText,
         textHover,
@@ -93,6 +95,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        buttonLight,
     };
 
     // Redux State
@@ -118,7 +121,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
             }
         );
         const recipes = await response.json();
-        dispatch(setRecipes({ recipes }));
+        dispatch(setAllRecipes({ recipes }));
         setImage(null);
         setRecipe("");
     };
@@ -198,7 +201,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                 <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
                     <ImageOutlined sx={{ color: mediumMain }} />
                     <Typography
-                        color={mediumMain}
+                        color={headingText}
                         sx={{
                             "&:hover": { cursor: "pointer", color: medium },
                         }}
@@ -212,7 +215,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     onClick={handleRecipe}
                     sx={{
                         color: palette.default.background.alt,
-                        backgroundColor: palette.default.primary.main,
+                        backgroundColor: buttonLight,
                         borderRadius: "3rem",
                     }}
                 >
