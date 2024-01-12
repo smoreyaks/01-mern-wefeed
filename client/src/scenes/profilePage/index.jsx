@@ -102,7 +102,7 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "26%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    <TopUserRecipesWidget />
+                    <TopUserRecipesWidget themeColors={themeColors} />
                 </Box>
             </Box>
         </Box>
