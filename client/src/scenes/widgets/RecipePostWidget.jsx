@@ -237,6 +237,7 @@ const RecipePostWidget = ({
                                 opacity: "1",
                                 display: "flex",
                                 alignItems: "center",
+                                width: "5rem",
                             }}
                         >
                             <TimerIcon />
@@ -256,6 +257,7 @@ const RecipePostWidget = ({
                                 opacity: "1",
                                 display: "flex",
                                 alignItems: "center",
+                                width: "5rem",
                             }}
                         >
                             <IngredientsQtyIcon />
