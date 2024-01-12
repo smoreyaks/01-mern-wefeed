@@ -12,6 +12,7 @@ import {
     Button,
     IconButton,
     useMediaQuery,
+    Tooltip,
 } from "@mui/material";
 
 // MUI Icons
@@ -83,6 +84,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
     const medium = palette.default.neutral.medium;
 
     const buttonLight = palette.default.primaryTwo.light;
+    // const widgetWrapBorderColor = palette.default.primaryTwo.lightest;
 
     const themeColors = {
         headingText,
@@ -96,6 +98,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
         recipeTextPanel,
         mainBackPanel,
         buttonLight,
+        // widgetWrapBorderColor,
     };
 
     // Redux State
@@ -198,29 +201,46 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
             <Divider sx={{ margin: "0.5rem 0" }} />
 
             <FlexBetween>
-                <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
-                    <ImageOutlined sx={{ color: mediumMain }} />
-                    <Typography
-                        color={headingText}
-                        sx={{
-                            "&:hover": { cursor: "pointer", color: medium },
-                        }}
-                    >
-                        Image
-                    </Typography>
+                <FlexBetween gap="0.25rem">
+                    {/* Upload Image Icon */}
+                    <ImageOutlined sx={{ color: headingText }} />
+
+                    {/* Upload Image Icon */}
+                    <Tooltip title="Upload Image" enterDelay="500">
+                        <Button
+                            onClick={() => setIsImage(!isImage)}
+                            sx={{
+                                color: headingText,
+                                backgroundColor: buttonLight,
+                                borderRadius: "3rem",
+                                "&:hover": {
+                                    backgroundColor: textHover,
+                                },
+                            }}
+                            // color={headingText}
+                            // sx={{
+                            //     "&:hover": { cursor: "pointer", color: medium },
+                            // }}
+                        >
+                            Image
+                        </Button>
+                    </Tooltip>
                 </FlexBetween>
 
-                <Button
-                    disabled={!recipe}
-                    onClick={handleRecipe}
-                    sx={{
-                        color: palette.default.background.alt,
-                        backgroundColor: buttonLight,
-                        borderRadius: "3rem",
-                    }}
-                >
-                    POST
-                </Button>
+                {/* Post Recipe */}
+                <Tooltip title="Post Recipe" enterDelay="500">
+                    <Button
+                        disabled={!recipe}
+                        onClick={handleRecipe}
+                        sx={{
+                            color: headingText,
+                            backgroundColor: buttonLight,
+                            borderRadius: "3rem",
+                        }}
+                    >
+                        POST
+                    </Button>
+                </Tooltip>
             </FlexBetween>
             <Box
                 sx={{
