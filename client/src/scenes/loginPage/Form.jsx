@@ -262,7 +262,7 @@ const Form = () => {
                             inputProps={{
                                 style: {
                                     backgroundColor:
-                                        palette.default.primaryTwo.light,
+                                        palette.default.primaryOne.light,
                                     borderRadius: "0.25rem",
                                 },
                             }}
@@ -283,7 +283,7 @@ const Form = () => {
                             inputProps={{
                                 style: {
                                     backgroundColor:
-                                        palette.default.primaryTwo.light,
+                                        palette.default.primaryOne.light,
                                     borderRadius: "0.25rem",
                                 },
                             }}
