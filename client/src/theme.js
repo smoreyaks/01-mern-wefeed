@@ -86,10 +86,18 @@ export const colorTokens = {
             300: "#FDBADD", // Lavender Pink    (Medium Pink)
         },
         teal: {
-            100: "#C0E9E5", // Mint Green       (Light Teal)
-            200: "#C0E9E5", // Mint Green       (Light Teal)
-            300: "#9FDDD8", // Tiffany Blue     (Medium Teal)
-            400: "#9FDDD8", // Tiffany Blue     (Medium Teal)
+            100: "#eaf4f6", // Mint Green       (Light Teal)
+            200: "#eaf4f6", // Mint Green       (Light Teal)
+            300: "#eaf4f6", // Tiffany Blue     (Medium Teal)
+            400: "#d8ebee", // Tiffany Blue     (Medium Teal)
+            // 100: "#C0E9E5", // Mint Green       (Light Teal)
+            // 200: "#C0E9E5", // Mint Green       (Light Teal)
+            // 300: "#9FDDD8", // Tiffany Blue     (Medium Teal)
+            // 400: "#9FDDD8", // Tiffany Blue     (Medium Teal)
+        },
+        cream: {
+            100: "#FFF5EB",
+            200: "#FEE9BA",
         },
     },
 
@@ -163,6 +171,12 @@ export const themeSettings = (mode) => {
                               dark: colorTokens.cupcake.pink[300],
                               main: colorTokens.cupcake.pink[200],
                               light: colorTokens.cupcake.pink[100],
+                              //   lightest: colorTokens.cupcake.cream[100],
+                          },
+                          // Beige
+                          primaryThree: {
+                              main: colorTokens.cupcake.cream[200],
+                              light: colorTokens.cupcake.cream[100],
                           },
                           neutral: {
                               dark: colorTokens.cupcake.pink[300],
@@ -337,6 +351,7 @@ export const themeSettings = (mode) => {
         typography: {
             fontFamily: ["Rubik", "sans-serif"].join(","),
             fontSize: 12,
+
             h1: {
                 fontFamily: ["Rubik", "sans-serif"].join(","),
                 fontSize: 40,
