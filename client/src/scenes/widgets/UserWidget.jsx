@@ -82,7 +82,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         <Typography
                             variant="h4"
                             color={whiteText}
-                            fontWeight="500"
+                            fontWeight="bold"
+                            fontSize="1rem"
                             sx={{
                                 "&:hover": {
                                     color: whiteText,
@@ -148,7 +149,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 <Typography
                     fontSize="1rem"
                     color={whiteText}
-                    fontWeight="500"
+                    fontWeight="bold"
                     mb="1rem"
                 >
                     Social Profiles
