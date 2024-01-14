@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setRecipes } from "../../state";
+import { setAllRecipes, setRecipe, setPosts } from "../../state";
 import { useState } from "react";
 
 // RecipePost
@@ -24,7 +24,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
     //         }
     //     );
     //     const data = await response.json();
-    //     dispatch(setRecipes({ recipes: data }));
+    //     dispatch(setAllRecipes({ recipes: data }));
     // };
     const getRecipes = async () => {
         const response = await fetch(
@@ -35,7 +35,8 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
             }
         );
         const data = await response.json();
-        dispatch(setRecipes({ recipes: data }));
+        // dispatch(setAllRecipes({ recipes: data }));
+        setAllRecipes(data);
     };
 
     // ORIGINAL UNCHANGED API CALL - getUser
@@ -73,7 +74,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
     //         }
     //     );
     //     const data = await response.json();
-    //     dispatch(setRecipes({ recipes: data }));
+    //     dispatch(setAllRecipes({ recipes: data }));
     // };
 
     const getUserRecipes = async () => {
@@ -85,19 +86,21 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
             }
         );
         const data = await response.json();
-        dispatch(setRecipes({ recipes: data }));
+        dispatch(setRecipe({ recipes: data }));
     };
 
     // Renders either All Recipes or select Profile Recipes
     useEffect(() => {
         if (isProfile) {
+            // getRecipes(); // Doesn't function - Original
             // getUserRecipes(); // Doesn't function - Original
+
             // getUserRecipes();
             getUser();
         } else {
             // getRecipes(); // Doesn't function - Original
             // getUser();
-            getUser(); // Works as intended
+            // getUser(); // Works as intended
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
