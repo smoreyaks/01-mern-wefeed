@@ -41,9 +41,10 @@ import {
     // setThemeDessert,
 } from "../../state";
 
-// Local Components
+// Custom Components
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
+import FeedSelect from "../../components/FeedSelect";
 
 const Navbar = ({ userId }) => {
     // Mobile Menu Toggle
@@ -102,22 +103,22 @@ const Navbar = ({ userId }) => {
     return (
         <Box position="fixed" sx={{ width: "100%", zIndex: "100" }}>
             <FlexBetween padding="1rem 6%" backgroundColor={alt}>
-                <FlexBetween gap="1.75rem">
-                    <Typography
-                        fontWeight="bold"
-                        fontSize="clamp(1rem, 2rem, 2.25rem)"
-                        color={main}
-                        onClick={() => navigate("/home")}
-                        sx={{
-                            "&:hover": {
-                                color: primaryLight,
-                                cursor: "pointer",
-                            },
-                        }}
-                    >
-                        WeFeed
-                    </Typography>
-                    {/* {isDesktopScreen && (
+                <Typography
+                    fontWeight="bold"
+                    fontSize="clamp(1rem, 2rem, 2.25rem)"
+                    color={main}
+                    onClick={() => navigate("/home")}
+                    sx={{
+                        "&:hover": {
+                            color: primaryLight,
+                            cursor: "pointer",
+                        },
+                    }}
+                >
+                    WeFeed
+                </Typography>
+                <FeedSelect themeColors={themeColors} />
+                {/* {isDesktopScreen && (
                         <FlexBetween
                             backgroundColor={neutralLight}
                             borderRadius="9px"
@@ -130,7 +131,6 @@ const Navbar = ({ userId }) => {
                             </IconButton>
                         </FlexBetween>
                     )} */}
-                </FlexBetween>
 
                 {/* Desktop Navbar */}
                 {isDesktopScreen ? (
