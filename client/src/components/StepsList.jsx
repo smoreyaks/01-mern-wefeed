@@ -56,7 +56,9 @@ const StepsList = ({ steps, themeColors }) => {
                     border: "0",
                 }}
             >
-                <Typography variant="h6">Steps</Typography>
+                <Typography variant="h6" fontWeight="bold">
+                    Steps
+                </Typography>
                 {stepsListOpen ? <RemoveIcon /> : <AddIcon />}
             </ToggleButton>
 

@@ -60,6 +60,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
             >
                 <Typography
                     variant="h6"
+                    fontWeight="bold"
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"
