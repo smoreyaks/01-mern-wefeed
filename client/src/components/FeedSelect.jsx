@@ -71,13 +71,14 @@ const FeedSelect = ({ themeColors }) => {
 
     return (
         // Adjust Feed Select design
-        <WidgetWrapper>
+        <WidgetWrapper sx={{ padding: "0rem" }}>
             <FlexBetween>
                 <Box
                     sx={{
                         display: "flex",
                         backgroundColor: buttonLight,
                         borderRadius: "3rem",
+                        padding: "0",
                     }}
                 >
                     {/* All Recipes */}
@@ -102,7 +103,7 @@ const FeedSelect = ({ themeColors }) => {
                                 fontWeight="bold"
                                 sx={{ color: headingText }}
                             >
-                                All
+                                ALL
                             </Typography>
                         </Button>
                     </Tooltip>
