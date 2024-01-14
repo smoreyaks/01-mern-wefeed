@@ -30,7 +30,7 @@ import {
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import FeedSelect from "../../components/FeedSelect";
+// import FeedSelect from "../../components/FeedSelect";
 
 // Image Upload
 import Dropzone from "react-dropzone";
@@ -148,7 +148,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
             {isImage && (
                 <Box
                     borderRadius="5px"
-                    border={`1px solid ${medium}`}
+                    border={`1px solid ${palette.default.neutralGrey.medium}`}
                     mt="1rem"
                     p="1rem"
                 >
@@ -161,7 +161,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                             <FlexBetween>
                                 <Box
                                     {...getRootProps()}
-                                    border={`2px dashed ${palette.default.primary.main}`}
+                                    border={`2px dashed ${palette.default.neutralGrey.medium}`}
                                     p="1rem"
                                     sx={{
                                         "&:hover": {
@@ -172,7 +172,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                                 >
                                     <input {...getInputProps()} />
                                     {!image ? (
-                                        <p>Add Image Here</p>
+                                        <p>Drag & Drop Image Here</p>
                                     ) : (
                                         <FlexBetween>
                                             <Typography>
@@ -203,7 +203,6 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
             <FlexBetween>
                 <FlexBetween gap="0.25rem">
                     {/* Upload Image Icon */}
-                    <ImageOutlined sx={{ color: headingText }} />
 
                     {/* Upload Image Icon */}
                     <Tooltip title="Upload Image" enterDelay="500">
@@ -222,6 +221,9 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                             //     "&:hover": { cursor: "pointer", color: medium },
                             // }}
                         >
+                            <ImageOutlined
+                                sx={{ color: headingText, pr: "0.25rem" }}
+                            />
                             Image
                         </Button>
                     </Tooltip>
@@ -236,6 +238,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                             color: headingText,
                             backgroundColor: buttonLight,
                             borderRadius: "3rem",
+                            zIndex: 90,
                         }}
                     >
                         POST
@@ -247,9 +250,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     display: "flex",
                     justifyContent: "center",
                 }}
-            >
-                <FeedSelect themeColors={themeColors} />
-            </Box>
+            ></Box>
         </WidgetWrapper>
     );
 };
