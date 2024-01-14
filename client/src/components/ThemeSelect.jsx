@@ -19,7 +19,7 @@ const ThemeSelect = ({ themeColors }) => {
                 <BrushIcon fontSize="25px" />
 
                 {/* Theme Menu */}
-                {isNonMobileScreens && isThemeMenuToggled && (
+                {isDesktopScreen && isThemeMenuToggled && (
                     <Box
                         position="fixed"
                         top="5%"

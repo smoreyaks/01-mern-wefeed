@@ -6,7 +6,7 @@ import Form from "./Form";
 
 const LoginPage = () => {
     const theme = useTheme();
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
     return (
         <Box>
@@ -21,7 +21,7 @@ const LoginPage = () => {
                 </Typography>
             </Box>
             <Box
-                width={isNonMobileScreens ? "50%" : "93%"}
+                width={isDesktopScreen ? "50%" : "93%"}
                 p="2rem"
                 m="2rem auto"
                 borderRadius="1.5rem"

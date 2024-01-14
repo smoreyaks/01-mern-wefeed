@@ -52,7 +52,7 @@ const ProfilePage = () => {
     const [user, setUser] = useState(null);
     const { userId } = useParams();
     const token = useSelector((state) => state.token);
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
     const getUser = async () => {
         const response = await fetch(
@@ -77,11 +77,11 @@ const ProfilePage = () => {
             <Box
                 width="100%"
                 padding="7rem 6% 0 6%"
-                display={isNonMobileScreens ? "flex" : "block"}
+                display={isDesktopScreen ? "flex" : "block"}
                 gap="2rem"
                 justifyContent="center"
             >
-                <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+                <Box flexBasis={isDesktopScreen ? "26%" : undefined}>
                     <UserWidget
                         userId={userId}
                         picturePath={user.picturePath}
@@ -90,8 +90,8 @@ const ProfilePage = () => {
                     <FriendListWidget userId={_id} themeColors={themeColors} />
                 </Box>
                 <Box
-                    flexBasis={isNonMobileScreens ? "42%" : undefined}
-                    mt={isNonMobileScreens ? undefined : "2rem"}
+                    flexBasis={isDesktopScreen ? "42%" : undefined}
+                    mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <CreateRecipeWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
@@ -99,8 +99,8 @@ const ProfilePage = () => {
                     {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
                 <Box
-                    flexBasis={isNonMobileScreens ? "26%" : undefined}
-                    mt={isNonMobileScreens ? undefined : "2rem"}
+                    flexBasis={isDesktopScreen ? "26%" : undefined}
+                    mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <TopUserRecipesWidget themeColors={themeColors} />
                 </Box>

@@ -56,7 +56,7 @@ const Navbar = ({ userId }) => {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
     const navigate = useNavigate();
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
     // Theme
     const theme = useTheme();
@@ -117,7 +117,7 @@ const Navbar = ({ userId }) => {
                     >
                         WeFeed
                     </Typography>
-                    {/* {isNonMobileScreens && (
+                    {/* {isDesktopScreen && (
                         <FlexBetween
                             backgroundColor={neutralLight}
                             borderRadius="9px"
@@ -133,7 +133,7 @@ const Navbar = ({ userId }) => {
                 </FlexBetween>
 
                 {/* Desktop Navbar */}
-                {isNonMobileScreens ? (
+                {isDesktopScreen ? (
                     <FlexBetween gap="1rem">
                         {/* Dark & Light Mode Button */}
                         <Tooltip title="Light & Dark Mode" enterDelay="500">
@@ -200,7 +200,7 @@ const Navbar = ({ userId }) => {
                 )}
 
                 {/* Mobile Nav */}
-                {!isNonMobileScreens && isMobileMenuToggled && (
+                {!isDesktopScreen && isMobileMenuToggled && (
                     <Box
                         position="fixed"
                         right="0"

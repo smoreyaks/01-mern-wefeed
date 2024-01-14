@@ -49,7 +49,7 @@ const CreatePostWidget = ({ picturePath }) => {
     // Redux State
     const { _id } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
     const mediumMain = palette.default.neutral.mediumMain;
     const medium = palette.default.neutral.medium;
 
@@ -154,7 +154,7 @@ const CreatePostWidget = ({ picturePath }) => {
                         Image
                     </Typography>
                 </FlexBetween>
-                {isNonMobileScreens ? (
+                {isDesktopScreen ? (
                     <>
                         <FlexBetween gap="0.25rem">
                             <GifBoxOutlined sx={{ color: mediumMain }} />

@@ -38,7 +38,7 @@ const HomePage = () => {
         buttonLight,
     };
 
-    const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    const isDesktopScreen = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
     // console.log("BG_IMAGE:", backgroundThemeImg);
     console.log("BG_ID:", _id);
@@ -50,11 +50,11 @@ const HomePage = () => {
             <Box
                 width="100%"
                 padding="7rem 6% 0 6%"
-                display={isNonMobileScreens ? "flex" : "block"}
+                display={isDesktopScreen ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between"
             >
-                <Box display={isNonMobileScreens ? "26%" : "none"}>
+                <Box display={isDesktopScreen ? "26%" : "none"}>
                     <UserWidget
                         userId={_id}
                         picturePath={picturePath}
@@ -62,8 +62,8 @@ const HomePage = () => {
                     />
                 </Box>
                 <Box
-                    flexBasis={isNonMobileScreens ? "42%" : undefined}
-                    mt={isNonMobileScreens ? undefined : "2rem"}
+                    flexBasis={isDesktopScreen ? "42%" : "none"}
+                    mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <CreateRecipeWidget
                         picturePath={picturePath}
@@ -71,7 +71,7 @@ const HomePage = () => {
                     />
                     <RecipesFeedWidget userId={_id} />
                 </Box>
-                {isNonMobileScreens && (
+                {isDesktopScreen && (
                     <Box flexBasis="26%">
                         <AdvertWidget />
                         <Box m="2rem 0" />
