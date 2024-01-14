@@ -81,7 +81,10 @@ const ProfilePage = () => {
                 gap="2rem"
                 justifyContent="center"
             >
-                <Box flexBasis={isDesktopScreen ? "26%" : undefined}>
+                <Box
+                    // flexBasis={isDesktopScreen ? "26%" : undefined}
+                    display={isDesktopScreen ? "26%" : "none"}
+                >
                     <UserWidget
                         userId={userId}
                         picturePath={user.picturePath}
@@ -99,7 +102,7 @@ const ProfilePage = () => {
                     {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
                 <Box
-                    flexBasis={isDesktopScreen ? "26%" : undefined}
+                    display={isDesktopScreen ? "26%" : "none"}
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <TopUserRecipesWidget themeColors={themeColors} />
