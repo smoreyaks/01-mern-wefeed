@@ -184,7 +184,7 @@ const RecipePostWidget = ({
             <Typography
                 color={headingText}
                 variant="h5"
-                fontWeight="500"
+                fontWeight="bold"
                 sx={{
                     "&:hover": {
                         color: textHover,
