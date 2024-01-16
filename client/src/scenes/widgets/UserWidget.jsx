@@ -1,16 +1,22 @@
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
     ManageAccountsOutlined,
     EditOutlined,
     LocationOnOutlined,
     WorkOutlineOutlined,
+    StarHalf,
+    StarOutline,
 } from "@mui/icons-material";
+import StarRateIcon from "@mui/icons-material/StarRate";
+
+// MUI Comnponents
 import { Box, Typography, Divider, useTheme } from "@mui/material";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const UserWidget = ({ userId, picturePath, themeColors }) => {
     const [user, setUser] = useState(null);
@@ -94,8 +100,16 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             {firstName} {lastName}
                         </Typography>
                         <Typography color={whiteText}>
-                            {friends.length} friends
+                            Following {friends.length}
                         </Typography>
+                        <Typography color={whiteText}>
+                            Followers {Math.ceil(Math.random() * 100)}
+                        </Typography>
+                        <Box fontSize="large">
+                            <StarRateIcon />
+                            <StarRateIcon />
+                            <StarRateIcon />
+                        </Box>
                     </Box>
                 </FlexBetween>
             </FlexBetween>
@@ -106,14 +120,14 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             <Box p="1rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
                     <LocationOnOutlined
-                        fontSize="large"
+                        fontSize="small"
                         sx={{ color: whiteText }}
                     />
                     <Typography color={whiteText}>{location}</Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem">
                     <WorkOutlineOutlined
-                        fontSize="large"
+                        fontSize="small"
                         sx={{ color: whiteText }}
                     />
                     <Typography color={whiteText}>{occupation}</Typography>
@@ -125,19 +139,17 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             {/* Third Row */}
             <Box p="1rem 0">
                 <FlexBetween mb="0.5rem">
-                    <Typography color={whiteText}>
-                        Who's viewed your profile
-                    </Typography>
+                    <Typography color={whiteText}>Profile Views</Typography>
                     <Typography color={whiteText} fontWeight="500">
                         {viewedProfile}
                     </Typography>
                 </FlexBetween>
                 <FlexBetween>
                     <Typography color={whiteText}>
-                        Impressions of your recipe
+                        Total Recipe Views
                     </Typography>
                     <Typography color={whiteText} fontWeight="500">
-                        {impressions}
+                        {Math.ceil(Math.random() * 100)}
                     </Typography>
                 </FlexBetween>
             </Box>
@@ -167,7 +179,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             </Typography>
                         </Box>
                     </FlexBetween>
-                    <EditOutlined sx={{ color: whiteText }} />
                 </FlexBetween>
 
                 <FlexBetween gap="1rem">
@@ -182,7 +193,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             </Typography>
                         </Box>
                     </FlexBetween>
-                    <EditOutlined sx={{ color: main }} />
                 </FlexBetween>
             </Box>
         </WidgetWrapper>
