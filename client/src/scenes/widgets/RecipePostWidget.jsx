@@ -18,6 +18,9 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
+import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 // Custom Icons
 import CookIcon from "../../components/svg/CookIcon";
@@ -35,6 +38,7 @@ import {
     Tooltip,
     SvgIcon,
     Badge,
+    ToggleButton,
 } from "@mui/material";
 
 // State
@@ -74,7 +78,9 @@ const RecipePostWidget = ({
     shares,
     comments,
 }) => {
+    // State
     const [isComments, setIsComments] = useState(false);
+    const [notesOpen, setNotesOpen] = useState(false);
 
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
@@ -181,20 +187,48 @@ const RecipePostWidget = ({
                 themeColors={themeColors}
                 occupation={occupation}
             />
-            <Typography
-                color={headingText}
-                variant="h5"
-                fontWeight="bold"
+            <FlexBetween
                 sx={{
-                    "&:hover": {
-                        color: textHover,
-                        cursor: "pointer",
-                    },
-                    m: "1rem 0",
+                    backgroundColor: recipeStepsPanel,
+                    p: "0 0 0 0.5rem",
+                    my: "0.5rem",
+                    borderRadius: "0.75rem",
                 }}
             >
-                {recipeTitle}
-            </Typography>
+                <Typography
+                    color={headingText}
+                    variant="h5"
+                    fontWeight="bold"
+                    sx={{
+                        "&:hover": {
+                            color: textHover,
+                            cursor: "pointer",
+                        },
+                        m: "0",
+                    }}
+                >
+                    {recipeTitle}
+                </Typography>
+                <Tooltip title="Notes" enterDelay="500">
+                    <ToggleButton
+                        onClick={() => setNotesOpen(!notesOpen)}
+                        sx={{
+                            // borderRadius: "3rem",
+                            width: "4rem",
+                            color: headingText,
+                            border: "0",
+                            borderRadius: "0 0.75rem 0.75rem 0",
+                            "&:hover": {
+                                color: headingText,
+                                backgroundColor: textHover,
+                            },
+                        }}
+                    >
+                        <TextSnippetOutlinedIcon />
+                        {notesOpen ? <RemoveIcon /> : <AddIcon />}
+                    </ToggleButton>
+                </Tooltip>
+            </FlexBetween>
 
             {/* Recipe Image */}
             <Box
