@@ -90,7 +90,7 @@ const ProfilePage = () => {
                         picturePath={user.picturePath}
                     />
                     <Box m="2rem 0" />
-                    <FriendListWidget userId={_id} themeColors={themeColors} />
+                    <TopUserRecipesWidget themeColors={themeColors} />
                 </Box>
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : undefined}
@@ -105,7 +105,7 @@ const ProfilePage = () => {
                     display={isDesktopScreen ? "26%" : "none"}
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
-                    <TopUserRecipesWidget themeColors={themeColors} />
+                    <FriendListWidget userId={_id} themeColors={themeColors} />
                 </Box>
             </Box>
         </Box>
