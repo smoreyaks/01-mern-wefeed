@@ -72,12 +72,13 @@ const Friend = ({
                     <Typography
                         color={headingText}
                         variant="h5"
-                        fontWeight="500"
+                        fontWeight="bold"
                         sx={{
                             "&:hover": {
                                 color: textHover,
                                 cursor: "pointer",
                             },
+                            fontSize: "0.8rem",
                         }}
                     >
                         {name}
@@ -91,6 +92,7 @@ const Friend = ({
                 onClick={() => patchFriend()}
                 fullwidth
                 size="small"
+                // backgroundColor={buttonLight}
                 sx={{
                     backgroundColor: buttonLight,
                     color: headingText,
@@ -110,9 +112,11 @@ const Friend = ({
                         </Tooltip>
                     </FlexBetween>
                 ) : (
-                    <Tooltip title="Follow User" enterDelay="500">
-                        <PersonAddOutlined />
-                    </Tooltip>
+                    <FlexBetween>
+                        <Tooltip title="Follow User" enterDelay="500">
+                            <PersonAddOutlined />
+                        </Tooltip>
+                    </FlexBetween>
                 )}
             </Button>
         </FlexBetween>
