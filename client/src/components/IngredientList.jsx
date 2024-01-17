@@ -15,12 +15,18 @@ import {
 // MUI Icons
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 
 // Components
 import FlexBetween from "./FlexBetween";
 
 const IngredientList = ({ ingredients, themeColors }) => {
+    // State
     const [ingredientListOpen, setIngredientListOpen] = useState(false);
+
+    // Number of Ingredients
+    const ingredientCount = Object.keys(ingredients).length;
 
     // Theme
     const { palette } = useTheme();
@@ -72,7 +78,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                         cursor: "pointer",
                     },
                     width: "100%",
-                    p: "0.5rem  0.75rem",
+                    p: "0.25rem  0.75rem",
                     borderRadius: "0rem",
                     border: "0",
                 }}
@@ -80,14 +86,21 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 <Typography
                     variant="h6"
                     fontWeight="bold"
+                    fontFamily="rubik"
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"
                     // borderRadius="1.75rem"
                 >
-                    Ingredients
+                    {ingredientCount} Ingredients
+                    {/* INGREDIENTS */}
                 </Typography>
-                {ingredientListOpen ? <RemoveIcon /> : <AddIcon />}
+
+                {ingredientListOpen ? (
+                    <KeyboardArrowDownRoundedIcon fontSize="large" />
+                ) : (
+                    <KeyboardArrowRightRoundedIcon fontSize="large" />
+                )}
             </ToggleButton>
             {ingredientsListCapitalised.map((ingredient) =>
                 ingredientListOpen ? (

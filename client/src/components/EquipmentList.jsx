@@ -14,11 +14,16 @@ import {
 // MUI Icons
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 
 // Components
 import FlexBetween from "./FlexBetween";
 
 const EquipmentList = ({ equipment, themeColors }) => {
+    // Equipment Count
+    const equipmentCount = Object.keys(equipment).length;
+
     // State
     const [equipmentListOpen, setEquipmentListOpen] = useState(false);
 
@@ -53,7 +58,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
                     },
                     width: "100%",
                     // m: "0.5rem 0",
-                    p: "0.5rem 0.75rem",
+                    p: "0.25rem 0.75rem",
                     borderRadius: "0rem 0rem 0 0",
                     border: "0",
                 }}
@@ -61,14 +66,20 @@ const EquipmentList = ({ equipment, themeColors }) => {
                 <Typography
                     variant="h6"
                     fontWeight="bold"
+                    fontFamily="rubik"
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"
                     // borderRadius="1.75rem"
                 >
-                    Equipment
+                    {equipmentCount} Tools & Utensils
                 </Typography>
-                {equipmentListOpen ? <RemoveIcon /> : <AddIcon />}
+
+                {equipmentListOpen ? (
+                    <KeyboardArrowDownRoundedIcon fontSize="large" />
+                ) : (
+                    <KeyboardArrowRightRoundedIcon fontSize="large" />
+                )}
             </ToggleButton>
 
             {equipListCorrected.map((equip) =>
