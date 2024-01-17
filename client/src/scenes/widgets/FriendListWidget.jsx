@@ -1,8 +1,16 @@
+// React Hooks
+import { useEffect } from "react";
+
+// MUI Components
 import { Box, Typography, useTheme, Divider } from "@mui/material";
+
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import { useEffect } from "react";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
+
+// State
 import { setFriends } from "../../state";
 
 const FriendListWidget = ({ userId, themeColors }) => {
@@ -43,7 +51,12 @@ const FriendListWidget = ({ userId, themeColors }) => {
 
     return (
         <WidgetWrapper>
-            <Typography color={headingText} variant="h5" fontWeight="bold">
+            <Typography
+                color={headingText}
+                variant="h4"
+                fontWeight="bold"
+                fontFamily="Poppins"
+            >
                 Following
             </Typography>
 
