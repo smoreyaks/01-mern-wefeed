@@ -1,3 +1,8 @@
+// Custom Fonts
+// import TiltNeon from "./assets/fonts/TiltNeon/TiltNeon-Regular.ttf";
+// import "../src/index.css";
+// import { createTheme } from "@mui/material/styles";
+
 /* --- Colours to Add ---
 
     - Cupcake Theme -
@@ -38,9 +43,6 @@
     #C7D0A0     // Sage             (Medium Green)
 
 */
-
-// Imported Fonts
-import { createTheme } from "@mui/material/styles";
 
 // Color Design Tokens
 export const colorTokens = {
