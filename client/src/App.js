@@ -1,12 +1,13 @@
-// Import Packages
+// React Packages
 import { useState, useEffect } from "react";
+import { useMemo } from "react";
 
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
-import HomePage from "./scenes/homePage";
-import LoginPage from "./scenes/loginPage";
-import ProfilePage from "./scenes/profilePage";
-import { useMemo } from "react";
+
+// Redux
 import { useSelector } from "react-redux";
+
+// MUI Components
 import {
     Box,
     CardMedia,
@@ -15,11 +16,17 @@ import {
     ThemeProvider,
 } from "@mui/material";
 
+// Theme
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
-import Background from "./components/Background";
 
+// Backgorund Image
 import backgroundThemeImg from "./assets/vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg";
+
+// Custom Components
+import HomePage from "./scenes/homePage";
+import LoginPage from "./scenes/loginPage";
+import ProfilePage from "./scenes/profilePage";
 
 function App() {
     const mode = useSelector((state) => state.mode);
