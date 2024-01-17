@@ -100,12 +100,14 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         <Typography
                             variant="h4"
                             color={headingText}
-                            fontWeight="500"
+                            fontWeight="bold"
+                            fontFamily="Poppins"
                             sx={{
                                 "&:hover": {
                                     color: headingText,
                                     cursor: "pointer",
                                 },
+                                mb: "0.5rem",
                             }}
                         >
                             Most Popular
