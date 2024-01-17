@@ -18,6 +18,8 @@ import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
+// import TiltNeon from "../../assets/fonts/TiltNeon/TiltNeon-Regular.ttf";
+
 const UserWidget = ({ userId, picturePath, themeColors }) => {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
@@ -77,6 +79,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     return (
         <WidgetWrapper>
             {/* First Row */}
+
             <FlexBetween
                 gap="0.5rem"
                 pb="1.1rem"
@@ -154,10 +157,10 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 </FlexBetween>
             </Box>
 
-            <Divider />
+            {/* <Divider /> */}
 
             {/* Fourth Row */}
-            <Box p="1rem 0">
+            {/* <Box p="1rem 0">
                 <Typography
                     fontSize="1rem"
                     color={whiteText}
@@ -194,7 +197,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         </Box>
                     </FlexBetween>
                 </FlexBetween>
-            </Box>
+            </Box> */}
         </WidgetWrapper>
     );
 };
