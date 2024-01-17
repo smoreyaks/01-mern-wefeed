@@ -137,8 +137,6 @@ const RecipePostWidget = ({
     let prepTimeMin = prepTime.replace("ins", "");
 
     // ---------- Recipe Interactions ----------
-    // Ingredients
-    const ingredientCount = Object.keys(ingredients).length;
 
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
@@ -199,6 +197,7 @@ const RecipePostWidget = ({
                     color={headingText}
                     variant="h5"
                     fontWeight="bold"
+                    fontFamily="rubik"
                     sx={{
                         "&:hover": {
                             color: textHover,
@@ -259,7 +258,7 @@ const RecipePostWidget = ({
                         zIndex: "80",
                     }}
                 >
-                    {/* Recipe Total Time Badge */}
+                    {/* Recipe Total Time Badge
                     <Tooltip title="Total Recipe Time" enterDelay="500">
                         <Badge
                             sx={{
@@ -277,27 +276,7 @@ const RecipePostWidget = ({
                             <TimerIcon />
                             {prepTimeMin}
                         </Badge>
-                    </Tooltip>
-
-                    {/* Ingredient Count Badge */}
-                    <Tooltip title="Number of Ingredients" enterDelay="500">
-                        <Badge
-                            sx={{
-                                backgroundColor: textHover,
-
-                                p: "0.5rem",
-                                borderRadius: "3rem",
-                                gap: "0.5rem",
-                                opacity: "1",
-                                display: "flex",
-                                alignItems: "center",
-                                width: "5rem",
-                            }}
-                        >
-                            <IngredientsQtyIcon />
-                            {ingredientCount}
-                        </Badge>
-                    </Tooltip>
+                    </Tooltip> */}
                 </Box>
             </Box>
 
@@ -432,16 +411,19 @@ const RecipePostWidget = ({
                     borderRadius: ".75rem",
                 }}
             >
+                {/* Equipment List Toggle */}
                 <EquipmentList
                     equipment={equipment}
                     themeColors={themeColors}
                 />
 
+                {/* Ingredient List Toggle */}
                 <IngredientList
                     ingredients={ingredients}
                     themeColors={themeColors}
                 />
 
+                {/* Method Step List Toggle */}
                 <StepsList steps={steps} themeColors={themeColors} />
             </Box>
 
