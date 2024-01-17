@@ -1,3 +1,4 @@
+// React Packages
 import { useState } from "react";
 
 // MUI Components
@@ -10,12 +11,18 @@ import {
     useTheme,
 } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+
+// Form Packages
 import { Formik } from "formik";
 import * as yup from "yup";
+
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogin } from "../../state";
+
 import Dropzone from "react-dropzone";
+
+// Custom Components
 import FlexBetween from "../../components/FlexBetween";
 
 const registerSchema = yup.object().shape({
@@ -50,10 +57,17 @@ const initialValuesLogin = {
 
 const Form = () => {
     const [pageType, setPageType] = useState("login");
+
+    // Theme
     const { palette } = useTheme();
+    const buttonLight2 = palette.default.primaryTwo.light2;
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const isNonMobile = useMediaQuery("(min-width:600px)");
+
+    // Login
     const isLogin = pageType === "login";
     const isRegister = pageType === "register";
 
@@ -108,6 +122,8 @@ const Form = () => {
         if (isRegister) await register(values, onSubmitProps);
     };
 
+    //
+
     return (
         <Formik
             onSubmit={handleFormSubmit}
@@ -137,6 +153,7 @@ const Form = () => {
                     >
                         {isRegister && (
                             <>
+                                {/* New User First Name Input */}
                                 <TextField
                                     label="First Name"
                                     onBlur={handleBlur}
@@ -151,7 +168,17 @@ const Form = () => {
                                         touched.firstName && errors.firstName
                                     }
                                     sx={{ gridColumn: "span 2" }}
+                                    inputProps={{
+                                        style: {
+                                            backgroundColor:
+                                                palette.default.primaryOne
+                                                    .light,
+                                            borderRadius: "0.25rem",
+                                        },
+                                    }}
                                 />
+
+                                {/* New User Last Name Input */}
                                 <TextField
                                     label="Last Name"
                                     onBlur={handleBlur}
@@ -166,7 +193,17 @@ const Form = () => {
                                         touched.lastName && errors.lastName
                                     }
                                     sx={{ gridColumn: "span 2" }}
+                                    inputProps={{
+                                        style: {
+                                            backgroundColor:
+                                                palette.default.primaryOne
+                                                    .light,
+                                            borderRadius: "0.25rem",
+                                        },
+                                    }}
                                 />
+
+                                {/* New User Location Input */}
                                 <TextField
                                     label="Location"
                                     onBlur={handleBlur}
@@ -181,7 +218,17 @@ const Form = () => {
                                         touched.location && errors.location
                                     }
                                     sx={{ gridColumn: "span 4" }}
+                                    inputProps={{
+                                        style: {
+                                            backgroundColor:
+                                                palette.default.primaryOne
+                                                    .light,
+                                            borderRadius: "0.25rem",
+                                        },
+                                    }}
                                 />
+
+                                {/* New User Occupation Input */}
                                 <TextField
                                     label="Occupation"
                                     onBlur={handleBlur}
@@ -196,6 +243,14 @@ const Form = () => {
                                         touched.occupation && errors.occupation
                                     }
                                     sx={{ gridColumn: "span 4" }}
+                                    inputProps={{
+                                        style: {
+                                            backgroundColor:
+                                                palette.default.primaryOne
+                                                    .light,
+                                            borderRadius: "0.25rem",
+                                        },
+                                    }}
                                 />
                                 <Box
                                     gridColumn="span 4"
@@ -203,6 +258,7 @@ const Form = () => {
                                     borderRadius="5px"
                                     p="1rem"
                                 >
+                                    {/* Image Upload with React Dropzone */}
                                     <Dropzone
                                         acceptedFiles=".jpg,.jpeg,.png"
                                         multiple={false}
@@ -212,21 +268,34 @@ const Form = () => {
                                                 acceptedFiles[0]
                                             )
                                         }
+                                        sx={{
+                                            backgroundColor:
+                                                palette.default.primaryOne
+                                                    .light,
+                                            borderRadius: "0.25rem",
+                                        }}
                                     >
                                         {({ getRootProps, getInputProps }) => (
                                             <Box
                                                 {...getRootProps()}
-                                                border={`2px dashed ${palette.default.primary.main}`}
+                                                border={`1px solid ${palette.default.neutralGrey.medium}`}
                                                 p="1rem"
                                                 sx={{
                                                     "&:hover": {
                                                         cursor: "pointer",
                                                     },
+
+                                                    backgroundColor:
+                                                        palette.default
+                                                            .primaryOne.light,
+                                                    borderRadius: "0.25rem",
                                                 }}
                                             >
                                                 <input {...getInputProps()} />
                                                 {!values.picture ? (
-                                                    <p>Add Picture Here</p>
+                                                    <Typography fontWeight="bold">
+                                                        Drag Image Here
+                                                    </Typography>
                                                 ) : (
                                                     <FlexBetween>
                                                         <Typography>
@@ -245,7 +314,7 @@ const Form = () => {
                             </>
                         )}
 
-                        {/* Login & Register */}
+                        {/* Login Email Input  */}
                         <TextField
                             label="Email"
                             onBlur={handleBlur}
@@ -267,6 +336,7 @@ const Form = () => {
                                 },
                             }}
                         />
+                        {/* Login Password Input */}
                         <TextField
                             label="Password"
                             type="password"
@@ -290,23 +360,27 @@ const Form = () => {
                         />
                     </Box>
 
-                    {/* Buttons */}
                     <Box>
+                        {/* Login Button */}
                         <Button
                             fullWidth
                             type="submit"
                             sx={{
                                 m: "2rem 0",
                                 p: "1rem",
-                                backgroundColor: palette.default.primary.main,
-                                color: palette.default.background.alt,
+                                backgroundColor: buttonLight2,
+                                color: palette.default.neutralGrey.white,
                                 "&:hover": {
-                                    color: palette.default.primary.main,
+                                    color: palette.default.neutralGrey.white,
+                                    backgroundColor:
+                                        palette.default.primaryTwo.main,
                                 },
                             }}
                         >
                             {isLogin ? "LOGIN" : "REGISTER"}
                         </Button>
+
+                        {/* New User Sign Up */}
                         <Typography
                             onClick={() => {
                                 setPageType(isLogin ? "register" : "login");
@@ -314,7 +388,7 @@ const Form = () => {
                             }}
                             sx={{
                                 textDecoration: "underline",
-                                color: palette.default.primary.main,
+                                color: palette.default.neutralGrey.white,
                                 "&:hover": {
                                     cursor: "pointer",
                                     color: palette.default.primary.light,
