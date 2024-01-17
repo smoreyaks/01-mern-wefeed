@@ -87,6 +87,8 @@ export const colorTokens = {
     cupcake: {
         pink: {
             100: "#FBE3F1", // Pale Purple      (Lightest Pink)
+            150: "#FADCED", // Pale Purple      (Lightest Pink)
+            160: "#FAD7EB", // Pale Purple      (Lightest Pink)
             200: "#FBD4E9", // Mimi Pink        (Light Pink)
             300: "#FDBADD", // Lavender Pink    (Medium Pink)
         },
@@ -175,6 +177,8 @@ export const themeSettings = (mode) => {
                           primaryTwo: {
                               dark: colorTokens.cupcake.pink[300],
                               main: colorTokens.cupcake.pink[200],
+                              light3: colorTokens.cupcake.pink[160],
+                              light2: colorTokens.cupcake.pink[150],
                               light: colorTokens.cupcake.pink[100],
                               //   lightest: colorTokens.cupcake.cream[100],
                           },
