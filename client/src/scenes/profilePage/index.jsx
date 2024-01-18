@@ -150,7 +150,10 @@ const ProfilePage = () => {
                     display={isDesktopScreen ? "26%" : "none"}
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
-                    <FriendListWidget userId={_id} themeColors={themeColors} />
+                    <FriendListWidget
+                        userId={userId}
+                        themeColors={themeColors}
+                    />
                 </Box>
             </Box>
         </Box>
