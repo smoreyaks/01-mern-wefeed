@@ -20,26 +20,32 @@ const Friend = ({
     const friends = useSelector((state) => state.user.friends);
 
     // Theme
-    const { palette } = useTheme();
-    const primaryLight = palette.default.primary.light;
-    const primaryDark = palette.default.primary.dark;
+    // const { palette } = useTheme();
+    // const primaryLight = palette.default.primary.light;
+    // const primaryDark = palette.default.primary.dark;
     // const main = palette.default.neutral.main;
 
-    const medium = palette.default.neutral.medium;
-
     const {
+        primary,
+        whiteText,
         headingText,
         textHover,
-        recipeStepsPanel,
-        whiteText,
-        recipeStepsPanelHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
-        recipeTextPanel,
-        recipeText,
-        mainBackPanel,
         buttonLight,
+        buttonLight2,
+        buttonLight3,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     } = themeColors || {};
 
     const isFriend = friends.find((friend) => friend._id === friendId);
@@ -94,13 +100,14 @@ const Friend = ({
                 size="small"
                 // backgroundColor={buttonLight}
                 sx={{
-                    backgroundColor: buttonLight,
+                    backgroundColor: buttonLight2,
                     color: headingText,
                     p: "0.5rem",
                     m: "0.5rem",
-
+                    // border: `1px solid ${buttonLight}`,
                     borderRadius: "3rem",
                     "&:hover": {
+                        // border: `1px solid ${textHover}`,
                         backgroundColor: textHover,
                     },
                 }}
