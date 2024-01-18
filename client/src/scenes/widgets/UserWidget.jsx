@@ -42,6 +42,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        buttonHover,
     } = themeColors || {};
 
     const getUser = async () => {
@@ -108,7 +109,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         <Typography color={whiteText}>
                             Followers {Math.ceil(Math.random() * 100)}
                         </Typography>
-                        <Box fontSize="large">
+                        <Box fontSize="large" sx={{ color: headingText }}>
                             <StarRateIcon />
                             <StarRateIcon />
                             <StarRateIcon />
