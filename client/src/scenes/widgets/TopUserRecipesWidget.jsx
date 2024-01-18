@@ -44,6 +44,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         recipeText,
         mainBackPanel,
         buttonLight,
+        buttonHover,
     } = themeColors || {};
 
     // Trophy Colors
@@ -101,11 +102,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                             variant="h4"
                             color={headingText}
                             fontWeight="bold"
-                            fontFamily="Poppins"
+                            fontSize="1rem"
+                            fontFamily="Montserrat"
                             sx={{
                                 "&:hover": {
                                     color: headingText,
-                                    cursor: "pointer",
                                 },
                                 mb: "0.5rem",
                             }}
