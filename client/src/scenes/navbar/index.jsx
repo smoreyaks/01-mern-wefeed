@@ -47,52 +47,26 @@ import UserImage from "../../components/UserImage";
 import FeedSelect from "../../components/FeedSelect";
 
 const Navbar = ({ userId, themeColors }) => {
+    // Navigate Hook
+    const navigate = useNavigate();
+
+    // State
     // Mobile Menu Toggle
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
 
     // Theme Menu Toggle
     const [isThemeMenuToggled, setIsThemeMenuToggled] = useState(false);
 
-    // State
+    // Local State
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
-    const navigate = useNavigate();
+
+    // Media Query
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
     // Theme
     const theme = useTheme();
-    // const main = theme.palette.default.primaryTwo.main;
-    // const background = theme.palette.default.primaryTwo.main;
     const primaryLight = theme.palette.default.primaryOne.light;
-    // const alt = theme.palette.default.primaryOne.dark;
-
-    // const whiteText = theme.palette.default.neutralGrey.white;
-    // const textHover = theme.palette.default.primaryTwo.main;
-    // const primary = theme.palette.default.primary.main;
-    // const headingText = theme.palette.default.neutralGrey.white;
-    // const recipeText = theme.palette.default.neutral.main;
-    // const recipeStepsPanel = theme.palette.default.primary.light;
-    // const followerIconOutline = theme.palette.default.primaryTwo.main;
-    // const followerIconBack = theme.palette.default.primaryOne.main;
-    // const followerIconBackHover = theme.palette.default.primaryOne.light;
-    // const recipeTextPanel = theme.palette.default.neutral.main;
-    // const mainBackPanel = theme.palette.default.neutral.main;
-    // const buttonLight = theme.palette.default.neutral.light;
-
-    // const themeColors = {
-    //     whiteText,
-    //     textHover,
-    //     primary,
-    //     headingText,
-    //     recipeText,
-    //     recipeStepsPanel,
-    //     followerIconBack,
-    //     followerIconBackHover,
-    //     followerIconOutline,
-    //     recipeTextPanel,
-    //     mainBackPanel,
-    //     buttonLight,
-    // };
 
     // Theme Destructure
     const {
