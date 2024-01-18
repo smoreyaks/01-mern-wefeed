@@ -83,57 +83,12 @@ const RecipePostWidget = ({
     const [isComments, setIsComments] = useState(false);
     const [notesOpen, setNotesOpen] = useState(false);
 
+    // Local State
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
 
-    // // ---------- Theme ----------
-    // const { palette } = useTheme();
-
-    // const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
-    // const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
-
-    // // Text
-    // const headingText = palette.default.neutralGrey.white; // Text Color
-    // const textMain = palette.default.neutralGrey.white; // Text Color
-
-    // const textHover = palette.default.primaryTwo.main; // Text Hover Color
-
-    // // Background Main Color
-    // const backgroundPrimary = palette.default.primaryOne.main;
-    // const backgroundMain = palette.default.primaryOne.main;
-
-    // // Panel / Subsection Main
-    // const recipeStepsPanel = palette.default.primary.light;
-    // const panelMain = palette.default.primary.light;
-
-    // const recipeStepsPanelHover = palette.default.primaryTwo.light;
-    // const panelMainHover = palette.default.primaryTwo.light;
-
-    // // Icon Main
-    // const followerIconOutline = palette.default.primaryTwo.main;
-    // const followerIconBack = palette.default.primaryOne.main;
-
-    // const followerIconBackHover = palette.default.primaryOne.light;
-
-    // const recipeTextPanel = palette.default.neutral.main;
-    // const mainBackPanel = palette.default.neutral.main;
-
-    // const buttonLight = palette.default.primaryTwo.light;
-
-    // const themeColors = {
-    //     headingText,
-    //     textHover,
-    //     recipeStepsPanel,
-    //     whiteText,
-    //     recipeStepsPanelHover,
-    //     followerIconOutline,
-    //     followerIconBack,
-    //     followerIconBackHover,
-    //     recipeTextPanel,
-    //     mainBackPanel,
-    //     buttonLight,
-    // };
+    // // Theme Destructure
 
     const {
         primary,
@@ -158,8 +113,6 @@ const RecipePostWidget = ({
         recipeStepsPanelHover,
         panelMainHover,
     } = themeColors || {};
-
-    // Icons
 
     // ---------- Prep Time Minimised ----------
     let prepTimeMin = prepTime.replace("ins", "");
@@ -218,7 +171,6 @@ const RecipePostWidget = ({
                     backgroundColor: recipeStepsPanel,
                     p: "0 0 0 0.5rem",
                     my: "0.5rem",
-                    // border: `1px solid #fff`,
                     borderRadius: "0.75rem",
                 }}
             >
@@ -312,7 +264,6 @@ const RecipePostWidget = ({
             {/* Recipe Quick Info */}
             <Box
                 sx={{
-                    // border: `1px solid #FFF`,
                     borderRadius: "0.75rem",
                 }}
             >
