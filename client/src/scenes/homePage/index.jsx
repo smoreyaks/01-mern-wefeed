@@ -10,7 +10,6 @@ import { useTheme } from "@emotion/react";
 
 const HomePage = () => {
     // ---------- Theme ----------
-
     const { palette } = useTheme();
 
     const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
@@ -74,8 +73,9 @@ const HomePage = () => {
     const isDesktopScreen = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
     // console.log("BG_IMAGE:", backgroundThemeImg);
-    console.log("BG_ID:", _id);
-    console.log("BG_PICPATH:", picturePath);
+
+    // console.log("BG_ID:", _id);
+    // console.log("BG_PICPATH:", picturePath);
 
     return (
         <Box>
