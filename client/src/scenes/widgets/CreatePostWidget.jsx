@@ -36,7 +36,7 @@ import Dropzone from "react-dropzone";
 // State
 // import { setPosts } from "../../state";
 
-const CreatePostWidget = ({ picturePath }) => {
+const CreatePostWidget = ({ picturePath, themeColors }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);

@@ -6,7 +6,7 @@ import { useState } from "react";
 // RecipePost
 import RecipePostWidget from "./RecipePostWidget";
 
-const RecipesFeedWidget = ({ userId, isProfile = false }) => {
+const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     // const friends = useSelector((state) => state.user.friends);
@@ -162,6 +162,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false }) => {
                         saves={saves}
                         shares={shares}
                         comments={comments}
+                        themeColors={themeColors}
                     />
                 )
             )}
