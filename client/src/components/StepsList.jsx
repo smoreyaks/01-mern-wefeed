@@ -11,31 +11,40 @@ import {
 } from "@mui/material";
 
 // MUI Icons
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 
-// Components
+// Custom Components
 import FlexBetween from "./FlexBetween";
 
 const StepsList = ({ steps, themeColors }) => {
     const [stepsListOpen, setStepsListOpen] = useState(false);
 
     const stepsCount = Object.keys(steps).length;
-    // Theme
-    const { palette } = useTheme();
-    const {
-        headingText,
-        recipeText,
-        recipeStepsPanel,
-        recipeStepsPanelHover,
-        mainBackPanel,
-        buttonLight,
-    } = themeColors || {};
 
-    const main = palette.default.neutral.main;
-    const primary = palette.default.primary.main;
+    // Theme Destructure
+    const {
+        primary,
+        whiteText,
+        headingText,
+        textHover,
+        textMain,
+        recipeText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+    } = themeColors || {};
 
     return (
         // Steps Back<Box>
