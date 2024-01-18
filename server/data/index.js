@@ -1427,7 +1427,7 @@ export const recipes = [
         ],
 
         equipment: ["Blender", "Tall Glass", "Knife", "Teaspoon"],
-        prepTime: "5",
+        prepTime: "5 mins",
         cookTime: "0",
         servings: 1,
         spiceLevel: 0,
