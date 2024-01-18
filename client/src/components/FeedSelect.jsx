@@ -25,17 +25,37 @@ import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
 
 // Check button style
 const FeedSelect = ({ themeColors }) => {
-    const { palette } = useTheme();
-    // const { user } = useAuthContext();
-    // const { documents, error } = useCollection("projects");
+    // State
     const [filter, setFilter] = useState("all");
 
+    // ------- TBD --------
+    // const { user } = useAuthContext();
+    // const { documents, error } = useCollection("projects");
+
+    // Theme Destructure
+    const { palette } = useTheme();
     const {
-        textHover,
-        buttonHover,
+        primary,
+        whiteText,
         headingText,
-        recipeStepsPanel,
+        textHover,
+        textMain,
+        recipeText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
         buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     } = themeColors || {};
 
     const changeFilter = (newFilter) => {
@@ -81,7 +101,7 @@ const FeedSelect = ({ themeColors }) => {
                 <Box
                     sx={{
                         display: "flex",
-                        backgroundColor: buttonLight,
+                        backgroundColor: buttonLight2,
                         borderRadius: "3rem",
                         padding: "0",
                     }}
@@ -90,7 +110,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="All Recipes">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 p: "0.5rem 0 0.5rem 0.5rem",
                                 m: "0.5rem 0 0.5rem 0.5rem",
@@ -117,7 +137,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Main Dishes">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -134,7 +154,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Appetisers">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -152,7 +172,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Breakfast Dishes">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -170,7 +190,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Desserts">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 py: "0.5rem",
                                 my: "0.5rem",
@@ -188,7 +208,7 @@ const FeedSelect = ({ themeColors }) => {
                     <Tooltip title="Drinks & Cocktails">
                         <Button
                             sx={{
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 color: headingText,
                                 p: "0.5rem 0.5rem 0.5rem 0",
                                 m: "0.5rem 0.5rem 0.5rem 0 ",
