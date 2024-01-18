@@ -46,7 +46,7 @@ import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import FeedSelect from "../../components/FeedSelect";
 
-const Navbar = ({ userId }) => {
+const Navbar = ({ userId, themeColors }) => {
     // Mobile Menu Toggle
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
 
@@ -61,56 +61,83 @@ const Navbar = ({ userId }) => {
 
     // Theme
     const theme = useTheme();
-    const neutralLight = theme.palette.default.neutral.light;
-    const dark = theme.palette.default.neutral.dark;
-    const main = theme.palette.default.primary.main;
-    const background = theme.palette.default.background.default;
-    const primaryLight = theme.palette.default.primary.light;
-    const alt = theme.palette.default.background.alt;
+    // const main = theme.palette.default.primaryTwo.main;
+    // const background = theme.palette.default.primaryTwo.main;
+    const primaryLight = theme.palette.default.primaryOne.light;
+    // const alt = theme.palette.default.primaryOne.dark;
 
-    const whiteText = theme.palette.default.neutralGrey.white;
-    const textHover = theme.palette.default.primaryTwo.main;
-    const primary = theme.palette.default.primary.main;
-    const headingText = theme.palette.default.neutralGrey.white;
-    const recipeText = theme.palette.default.neutral.main;
-    const recipeStepsPanel = theme.palette.default.primary.light;
-    const followerIconOutline = theme.palette.default.primaryTwo.main;
-    const followerIconBack = theme.palette.default.primaryOne.main;
-    const followerIconBackHover = theme.palette.default.primaryOne.light;
-    const recipeTextPanel = theme.palette.default.neutral.main;
-    const mainBackPanel = theme.palette.default.neutral.main;
-    const buttonLight = theme.palette.default.neutral.light;
+    // const whiteText = theme.palette.default.neutralGrey.white;
+    // const textHover = theme.palette.default.primaryTwo.main;
+    // const primary = theme.palette.default.primary.main;
+    // const headingText = theme.palette.default.neutralGrey.white;
+    // const recipeText = theme.palette.default.neutral.main;
+    // const recipeStepsPanel = theme.palette.default.primary.light;
+    // const followerIconOutline = theme.palette.default.primaryTwo.main;
+    // const followerIconBack = theme.palette.default.primaryOne.main;
+    // const followerIconBackHover = theme.palette.default.primaryOne.light;
+    // const recipeTextPanel = theme.palette.default.neutral.main;
+    // const mainBackPanel = theme.palette.default.neutral.main;
+    // const buttonLight = theme.palette.default.neutral.light;
 
-    const themeColors = {
-        whiteText,
-        textHover,
+    // const themeColors = {
+    //     whiteText,
+    //     textHover,
+    //     primary,
+    //     headingText,
+    //     recipeText,
+    //     recipeStepsPanel,
+    //     followerIconBack,
+    //     followerIconBackHover,
+    //     followerIconOutline,
+    //     recipeTextPanel,
+    //     mainBackPanel,
+    //     buttonLight,
+    // };
+
+    // Theme Destructure
+    const {
         primary,
+        whiteText,
         headingText,
+        textHover,
+        textMain,
         recipeText,
-        recipeStepsPanel,
+        followerIconOutline,
         followerIconBack,
         followerIconBackHover,
-        followerIconOutline,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
         recipeTextPanel,
         mainBackPanel,
-        buttonLight,
-    };
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+    } = themeColors || {};
 
     // Swap Hard Code for Dynamic String
     const fullName = `${user.firstName} ${user.lastName}`;
     const firstName = user.firstName;
 
     return (
-        <Box position="fixed" sx={{ width: "100%", zIndex: "100" }}>
-            <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+        <Box
+            position="fixed"
+            sx={{ width: "100%", zIndex: "100", boxShadow: 8 }}
+        >
+            <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
                 <Typography
-                    fontWeight="bold"
+                    fontFamily="PrequelShadow"
+                    // fontWeight="bold"
                     fontSize="clamp(1rem, 2rem, 2.25rem)"
-                    color={main}
+                    color={headingText}
                     onClick={() => navigate("/home")}
                     sx={{
                         "&:hover": {
-                            color: primaryLight,
+                            color: textHover,
                             cursor: "pointer",
                         },
                     }}
@@ -143,7 +170,7 @@ const Navbar = ({ userId }) => {
                                 ) : (
                                     <LightMode
                                         sx={{
-                                            color: buttonLight,
+                                            color: buttonLight2,
                                             fontSize: "25px",
                                         }}
                                     />
@@ -184,6 +211,7 @@ const Navbar = ({ userId }) => {
                                 <LogoutIcon
                                     sx={{
                                         fontSize: "25px",
+                                        color: headingText,
                                     }}
                                 />
                             </IconButton>
@@ -209,7 +237,7 @@ const Navbar = ({ userId }) => {
                         zIndex="10"
                         maxWidth="500px"
                         minWidth="300px"
-                        backgroundColor={background}
+                        backgroundColor={backgroundMain}
                     >
                         {/* Close Icon */}
                         <Box display="flex" justifyContent="flex-end" p="1rem">
@@ -241,7 +269,10 @@ const Navbar = ({ userId }) => {
                                     </DarkMode>
                                 ) : (
                                     <LightMode
-                                        sx={{ color: dark, fontSize: "25px" }}
+                                        sx={{
+                                            color: buttonLight2,
+                                            fontSize: "25px",
+                                        }}
                                     />
                                 )}
                             </IconButton>
