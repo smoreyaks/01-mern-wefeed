@@ -96,7 +96,7 @@ const FeedSelect = ({ themeColors }) => {
 
     return (
         // Adjust Feed Select design
-        <WidgetWrapper sx={{ padding: "0rem" }}>
+        <Box>
             <FlexBetween>
                 <Box
                     sx={{
@@ -229,7 +229,7 @@ const FeedSelect = ({ themeColors }) => {
             {/* {error && <p className="error">{error}</p>} */}
             {/* {documents && <ProjectFilter changeFilter={changeFilter} />} */}
             {/* {projects && <ProjectList projects={projects} />} */}
-        </WidgetWrapper>
+        </Box>
     );
 };
 
