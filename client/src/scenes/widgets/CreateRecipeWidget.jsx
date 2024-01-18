@@ -38,7 +38,7 @@ import Dropzone from "react-dropzone";
 // State
 import { setAllRecipes } from "../../state";
 
-const CreateRecipeWidget = ({ picturePath, theme }) => {
+const CreateRecipeWidget = ({ picturePath, themeColors }) => {
     // State
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
@@ -51,58 +51,32 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
     // ---------- Theme ----------
     const { palette } = useTheme();
 
-    const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
-    const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
-
-    // Text
-    const headingText = palette.default.neutralGrey.white; // Text Color
-    const textMain = palette.default.neutralGrey.white; // Text Color
-
-    const textHover = palette.default.primaryTwo.main; // Text Hover Color
-
-    // Background Main Color
-    const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.main;
-
-    // Panel / Subsection Main
-    const recipeStepsPanel = palette.default.primary.light;
-    const panelMain = palette.default.primary.light;
-
-    const recipeStepsPanelHover = palette.default.primaryTwo.light;
-    const panelMainHover = palette.default.primaryTwo.light;
-
-    // Icon Main
-    const followerIconOutline = palette.default.primaryTwo.main;
-    const followerIconBack = palette.default.primaryOne.main;
-
-    const followerIconBackHover = palette.default.primaryOne.light;
-
-    const recipeTextPanel = palette.default.neutral.main;
-    const mainBackPanel = palette.default.neutral.main;
-
     const mediumMain = palette.default.neutral.mediumMain;
     const medium = palette.default.neutral.medium;
 
-    const buttonLight = palette.default.primaryTwo.light;
-
-    const buttonHover = palette.default.primaryTwo.main; // Button Hover Color
-    // const widgetWrapBorderColor = palette.default.primaryTwo.lightest;
-
-    const themeColors = {
+    const {
+        primary,
+        whiteText,
         headingText,
         textHover,
-        recipeStepsPanel,
-        whiteText,
-        recipeStepsPanelHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
         recipeTextPanel,
         mainBackPanel,
-        buttonLight,
-        buttonHover,
-        // widgetWrapBorderColor,
-    };
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+    } = themeColors || {};
 
     // Redux State
     const { _id } = useSelector((state) => state.user);
@@ -142,7 +116,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                     value={recipe}
                     sx={{
                         width: "100%",
-                        backgroundColor: palette.default.neutral.light,
+                        backgroundColor: buttonLight2,
                         borderRadius: "2rem",
                         padding: "1rem 2rem",
                     }}
@@ -213,7 +187,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                             onClick={() => setIsImage(!isImage)}
                             sx={{
                                 color: headingText,
-                                backgroundColor: buttonLight,
+                                backgroundColor: buttonLight2,
                                 borderRadius: "3rem",
                                 "&:hover": {
                                     backgroundColor: buttonHover,
@@ -239,7 +213,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                         onClick={handleRecipe}
                         sx={{
                             color: headingText,
-                            backgroundColor: buttonLight,
+                            backgroundColor: buttonLight2,
                             borderRadius: "3rem",
                             zIndex: 90,
                         }}
