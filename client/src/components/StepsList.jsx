@@ -117,7 +117,6 @@ const StepsList = ({ steps, themeColors }) => {
                                         fontWeight: "bold",
                                         fontFamily: "Montserrat",
                                         background: buttonLight,
-                                        color: headingText,
                                         borderRadius: "50%",
                                         width: "1.75rem",
                                     }}
