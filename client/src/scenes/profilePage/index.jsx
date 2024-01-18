@@ -18,33 +18,64 @@ import RecipePostWidget from "../widgets/RecipePostWidget";
 import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
 
 const ProfilePage = () => {
-    // Theme
+    // ---------- Theme ----------
+
     const { palette } = useTheme();
-    const whiteText = palette.default.neutralGrey.white;
-    const textHover = palette.default.primaryTwo.main;
-    const primary = palette.default.primary.main;
-    const headingText = palette.default.neutralGrey.white;
+
+    const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
+
+    // Text
+    const whiteText = palette.default.neutralGrey.white; // Delete
+    const headingText = palette.default.neutralGrey.white; // Text Color
+    const textHover = palette.default.primaryTwo.main; // Text Hover Color
+    const textMain = palette.default.neutralGrey.white; // Text Color
     const recipeText = palette.default.neutral.main;
-    const recipeStepsPanel = palette.default.primary.light;
+
+    // Follower Icon
     const followerIconOutline = palette.default.primaryTwo.main;
     const followerIconBack = palette.default.primaryOne.main;
     const followerIconBackHover = palette.default.primaryOne.light;
+
+    // Button Main
+    const buttonLight = palette.default.primaryTwo.light;
+    const buttonLight2 = palette.default.primaryTwo.light2;
+    const buttonLight3 = palette.default.primaryTwo.light3;
+
+    // Background Main Color
+    const backgroundPrimary = palette.default.primaryOne.main;
+    const backgroundMain = palette.default.primaryOne.main;
+
+    // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
     const mainBackPanel = palette.default.neutral.main;
-    const buttonLight = palette.default.primaryTwo.light;
+    const recipeStepsPanel = palette.default.primary.light;
+    const panelMain = palette.default.primary.light;
+
+    // Panel / Subsection Hover
+    const recipeStepsPanelHover = palette.default.primaryTwo.light;
+    const panelMainHover = palette.default.primaryTwo.light;
 
     const themeColors = {
-        headingText,
-        recipeText,
-        recipeStepsPanel,
-        textHover,
+        primary,
         whiteText,
+        headingText,
+        textHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        backgroundPrimary,
+        backgroundMain,
         recipeTextPanel,
         mainBackPanel,
-        buttonLight,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     };
 
     const { _id, picturePath } = useSelector((state) => state.user);
@@ -88,6 +119,7 @@ const ProfilePage = () => {
                     <UserWidget
                         userId={userId}
                         picturePath={user.picturePath}
+                        themeColors={themeColors}
                     />
                     <Box m="2rem 0" />
                     <TopUserRecipesWidget themeColors={themeColors} />
@@ -98,7 +130,11 @@ const ProfilePage = () => {
                 >
                     <CreateRecipeWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
-                    <RecipesFeedWidget userId={userId} isProfile />
+                    <RecipesFeedWidget
+                        userId={userId}
+                        isProfile
+                        themeColors={themeColors}
+                    />
                     {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
                 <Box
