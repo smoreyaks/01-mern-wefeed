@@ -27,16 +27,28 @@ const EquipmentList = ({ equipment, themeColors }) => {
     // State
     const [equipmentListOpen, setEquipmentListOpen] = useState(false);
 
-    // Theme
-    const { palette } = useTheme();
-    const main = palette.default.neutral.main;
-    const primary = palette.default.primary.main;
+    // Theme Destructure
     const {
+        primary,
+        whiteText,
         headingText,
+        textHover,
+        textMain,
         recipeText,
-        recipeStepsPanel,
-        recipeStepsPanelHover,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
         buttonLight,
+        buttonLight2,
+        buttonLight3,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     } = themeColors || {};
 
     /* Capitalise First Letter of Equipment Item */
@@ -109,7 +121,6 @@ const EquipmentList = ({ equipment, themeColors }) => {
                                     justifyContent: "flex-start",
                                     alignItems: "center",
                                     fontWeight: "bold",
-                                    // background: "#eeceee",
                                     borderRadius: "0.5rem",
                                     width: "1.25rem",
                                 }}
