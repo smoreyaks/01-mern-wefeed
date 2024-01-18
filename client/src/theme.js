@@ -60,7 +60,12 @@ export const colorTokens = {
         700: "#333333",
         800: "#1A1A1A",
         900: "#0A0A0A",
-        1000: "rgba(0, 0, 0, 65%)",
+        1000: "rgba(0, 0, 0, 70%)",
+    },
+
+    opaque: {
+        50: "rgba(0, 0, 0, 50%)",
+        70: "rgba(0, 0, 0, 70%)",
     },
 
     //    - Trophy Icons -
@@ -199,7 +204,8 @@ export const themeSettings = (mode) => {
                               mediumMain: colorTokens.grey[300],
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
-                              white: colorTokens.grey[0],
+                              white: colorTokens.opaque[70],
+                              fade: colorTokens.opaque[50],
                           },
                           background: {
                               default: colorTokens.cupcake.pink[200],
@@ -292,7 +298,8 @@ export const themeSettings = (mode) => {
                               mediumMain: colorTokens.grey[300],
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
-                              white: colorTokens.grey[1000],
+                              white: colorTokens.opaque[70],
+                              fade: colorTokens.opaque[50],
                           },
                           background: {
                               default: colorTokens.cupcake.pink[200],
