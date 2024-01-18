@@ -27,7 +27,7 @@ const ProfilePage = () => {
     // Text
     const whiteText = palette.default.neutralGrey.white; // Delete
     const headingText = palette.default.neutralGrey.white; // Text Color
-    const textHover = palette.default.primaryTwo.main; // Text Hover Color
+    const textHover = palette.default.neutralGrey.fade; // Text Hover Color
     const textMain = palette.default.neutralGrey.white; // Text Color
     const recipeText = palette.default.neutral.main;
 
@@ -40,10 +40,11 @@ const ProfilePage = () => {
     const buttonLight = palette.default.primaryTwo.light;
     const buttonLight2 = palette.default.primaryTwo.light2;
     const buttonLight3 = palette.default.primaryTwo.light3;
+    const buttonHover = palette.default.primaryTwo.main; // Button Hover Color
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.main;
+    const backgroundMain = palette.default.primaryOne.dark;
 
     // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
@@ -68,6 +69,7 @@ const ProfilePage = () => {
         buttonLight,
         buttonLight2,
         buttonLight3,
+        buttonHover,
         backgroundPrimary,
         backgroundMain,
         recipeTextPanel,
@@ -104,7 +106,11 @@ const ProfilePage = () => {
 
     return (
         <Box>
-            <Navbar />
+            <Navbar
+                userId={_id}
+                picturePath={picturePath}
+                themeColors={themeColors}
+            />
             <Box
                 width="100%"
                 padding="7rem 6% 0 6%"
@@ -128,7 +134,10 @@ const ProfilePage = () => {
                     flexBasis={isDesktopScreen ? "42%" : undefined}
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
-                    <CreateRecipeWidget picturePath={user.picturePath} />
+                    <CreateRecipeWidget
+                        picturePath={user.picturePath}
+                        themeColors={themeColors}
+                    />
                     <Box m="2rem 0" />
                     <RecipesFeedWidget
                         userId={userId}
