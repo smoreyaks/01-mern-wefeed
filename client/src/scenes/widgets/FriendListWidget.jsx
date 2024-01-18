@@ -19,19 +19,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
 
-    const {
-        headingText,
-        textHover,
-        recipeStepsPanel,
-        whiteText,
-        recipeStepsPanelHover,
-        followerIconOutline,
-        followerIconBack,
-        followerIconBackHover,
-        recipeTextPanel,
-        mainBackPanel,
-        buttonLight,
-    } = themeColors || {};
+    const { headingText } = themeColors || {};
 
     const getUserFriends = async () => {
         const response = await fetch(
@@ -55,7 +43,8 @@ const FriendListWidget = ({ userId, themeColors }) => {
                 color={headingText}
                 variant="h4"
                 fontWeight="bold"
-                fontFamily="Poppins"
+                fontSize="1rem"
+                fontFamily="Montserrat"
             >
                 Following
             </Typography>
