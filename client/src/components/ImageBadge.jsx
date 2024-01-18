@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 const ImageBadge = ({ badgeData, themeColors, BadgeIcon }) => {
     const {
         headingText,
-        textHover,
+        buttonHover,
         recipeStepsPanel,
         whiteText,
         recipeStepsPanelHover,
@@ -29,7 +29,7 @@ const ImageBadge = ({ badgeData, themeColors, BadgeIcon }) => {
                 width: "4rem",
                 color: headingText,
                 zIndex: "180",
-                backgroundColor: textHover,
+                backgroundColor: buttonHover,
             }}
         >
             {/* <BadgeIcon /> */}

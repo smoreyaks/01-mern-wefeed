@@ -30,8 +30,13 @@ const FeedSelect = ({ themeColors }) => {
     // const { documents, error } = useCollection("projects");
     const [filter, setFilter] = useState("all");
 
-    const { textHover, headingText, recipeStepsPanel, buttonLight } =
-        themeColors || {};
+    const {
+        textHover,
+        buttonHover,
+        headingText,
+        recipeStepsPanel,
+        buttonLight,
+    } = themeColors || {};
 
     const changeFilter = (newFilter) => {
         setFilter(newFilter);
@@ -95,7 +100,7 @@ const FeedSelect = ({ themeColors }) => {
                                 borderBottomRightRadius: "0rem",
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -117,7 +122,7 @@ const FeedSelect = ({ themeColors }) => {
                                 py: "0.5rem",
                                 my: "0.5rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -135,7 +140,7 @@ const FeedSelect = ({ themeColors }) => {
                                 my: "0.5rem",
                                 // borderRadiusTopLeft: "3rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -153,7 +158,7 @@ const FeedSelect = ({ themeColors }) => {
                                 my: "0.5rem",
                                 // borderRadius: "3rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -171,7 +176,7 @@ const FeedSelect = ({ themeColors }) => {
                                 my: "0.5rem",
                                 // borderRadius: "3rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -192,7 +197,7 @@ const FeedSelect = ({ themeColors }) => {
                                 borderTopLeftRadius: "0rem",
                                 borderBottomLeftRadius: "0rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >

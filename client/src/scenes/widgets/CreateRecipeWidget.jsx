@@ -84,6 +84,8 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
     const medium = palette.default.neutral.medium;
 
     const buttonLight = palette.default.primaryTwo.light;
+
+    const buttonHover = palette.default.primaryTwo.main; // Button Hover Color
     // const widgetWrapBorderColor = palette.default.primaryTwo.lightest;
 
     const themeColors = {
@@ -98,6 +100,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
         recipeTextPanel,
         mainBackPanel,
         buttonLight,
+        buttonHover,
         // widgetWrapBorderColor,
     };
 
@@ -213,7 +216,7 @@ const CreateRecipeWidget = ({ picturePath, theme }) => {
                                 backgroundColor: buttonLight,
                                 borderRadius: "3rem",
                                 "&:hover": {
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                             // color={headingText}

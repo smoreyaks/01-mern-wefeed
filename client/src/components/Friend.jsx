@@ -38,6 +38,7 @@ const Friend = ({
         buttonLight,
         buttonLight2,
         buttonLight3,
+        buttonHover,
         backgroundPrimary,
         backgroundMain,
         recipeTextPanel,
@@ -107,8 +108,8 @@ const Friend = ({
                     // border: `1px solid ${buttonLight}`,
                     borderRadius: "3rem",
                     "&:hover": {
-                        // border: `1px solid ${textHover}`,
-                        backgroundColor: textHover,
+                        // border: `1px solid ${buttonHover}`,
+                        backgroundColor: buttonHover,
                     },
                 }}
             >

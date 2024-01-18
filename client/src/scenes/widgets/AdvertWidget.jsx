@@ -13,6 +13,7 @@ const AdvertWidget = ({ themeColors }) => {
         recipeText,
         recipeStepsPanel,
         textHover,
+        buttonHover,
         whiteText,
         followerIconOutline,
         followerIconBack,

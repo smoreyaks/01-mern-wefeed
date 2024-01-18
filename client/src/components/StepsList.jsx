@@ -36,6 +36,7 @@ const StepsList = ({ steps, themeColors }) => {
         buttonLight,
         buttonLight2,
         buttonLight3,
+        buttonHover,
         backgroundPrimary,
         backgroundMain,
         recipeTextPanel,

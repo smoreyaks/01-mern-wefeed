@@ -34,6 +34,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        buttonHover,
     } = themeColors || {};
 
     const getUser = async () => {
