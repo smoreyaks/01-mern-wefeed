@@ -25,6 +25,7 @@ import Dropzone from "react-dropzone";
 // Custom Components
 import FlexBetween from "../../components/FlexBetween";
 
+// Register Form Data Schema
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("Required"),
     lastName: yup.string().required("Required"),
@@ -35,11 +36,13 @@ const registerSchema = yup.object().shape({
     picture: yup.string().required("Required"),
 });
 
+// Login Form Data Schema
 const loginSchema = yup.object().shape({
     email: yup.string().email("Invalid Email").required("Required"),
     password: yup.string().required("Required"),
 });
 
+// Blank Initial Values for Registration Form
 const initialValuesRegister = {
     firstName: "",
     lastName: "",
@@ -50,27 +53,34 @@ const initialValuesRegister = {
     picture: "",
 };
 
+// Blank Initial Values for Login Form
 const initialValuesLogin = {
     email: "",
     password: "",
 };
 
 const Form = () => {
+    // State
     const [pageType, setPageType] = useState("login");
+
+    // Local State
+    const dispatch = useDispatch();
 
     // Theme
     const { palette } = useTheme();
-    const buttonLight2 = palette.default.primaryTwo.light2;
+    const buttonLight = palette.default.primaryTwo.light;
 
-    const dispatch = useDispatch();
+    // Navigate
     const navigate = useNavigate();
 
+    // Media Queries
     const isNonMobile = useMediaQuery("(min-width:600px)");
 
     // Login
     const isLogin = pageType === "login";
     const isRegister = pageType === "register";
 
+    // User Register Function - New User Sign Up
     const register = async (values, onSubmitProps) => {
         // Sends Form Info with Image
         const formData = new FormData();
@@ -95,6 +105,7 @@ const Form = () => {
         }
     };
 
+    // User Login Function
     const login = async (values, onSubmitProps) => {
         const loggedInResponse = await fetch(
             `https://server-vukx.onrender.com/auth/login`,
@@ -117,12 +128,11 @@ const Form = () => {
         }
     };
 
+    // Form Data Submit Function
     const handleFormSubmit = async (values, onSubmitProps) => {
         if (isLogin) await login(values, onSubmitProps);
         if (isRegister) await register(values, onSubmitProps);
     };
-
-    //
 
     return (
         <Formik
@@ -365,10 +375,14 @@ const Form = () => {
                         <Button
                             fullWidth
                             type="submit"
+                            fontFamily="Poppins"
+                            fontStyle="bold"
                             sx={{
                                 m: "2rem 0",
                                 p: "1rem",
-                                backgroundColor: buttonLight2,
+                                border: `1px solid ${palette.default.primaryTwo.dark}`,
+                                backgroundColor:
+                                    palette.default.primaryTwo.light2,
                                 color: palette.default.neutralGrey.white,
                                 "&:hover": {
                                     color: palette.default.neutralGrey.white,
@@ -391,7 +405,7 @@ const Form = () => {
                                 color: palette.default.neutralGrey.white,
                                 "&:hover": {
                                     cursor: "pointer",
-                                    color: palette.default.primary.light,
+                                    color: palette.default.neutralGrey.fade,
                                 },
                             }}
                         >
