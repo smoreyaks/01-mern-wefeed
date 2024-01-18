@@ -31,6 +31,7 @@ const StepsList = ({ steps, themeColors }) => {
         recipeStepsPanel,
         recipeStepsPanelHover,
         mainBackPanel,
+        buttonLight,
     } = themeColors || {};
 
     const main = palette.default.neutral.main;
@@ -59,7 +60,11 @@ const StepsList = ({ steps, themeColors }) => {
                     border: "0",
                 }}
             >
-                <Typography variant="h6" fontWeight="bold" fontFamily="rubik">
+                <Typography
+                    variant="h6"
+                    fontWeight="bold"
+                    fontFamily="Montserrat"
+                >
                     {stepsCount} Steps
                 </Typography>
 
@@ -100,8 +105,9 @@ const StepsList = ({ steps, themeColors }) => {
                                         alignItems: "center",
                                         p: "0.25rem 0.25rem 0.25rem 0.25rem",
                                         fontWeight: "bold",
-                                        fontFamily: "rubik",
-                                        background: "#eeceee",
+                                        fontFamily: "Montserrat",
+                                        background: buttonLight,
+                                        color: headingText,
                                         borderRadius: "50%",
                                         width: "1.75rem",
                                     }}

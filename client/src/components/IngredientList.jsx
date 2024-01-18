@@ -86,7 +86,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 <Typography
                     variant="h6"
                     fontWeight="bold"
-                    fontFamily="rubik"
+                    fontFamily="Montserrat"
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"

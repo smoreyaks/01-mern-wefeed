@@ -31,8 +31,13 @@ const EquipmentList = ({ equipment, themeColors }) => {
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
-    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
-        themeColors || {};
+    const {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        recipeStepsPanelHover,
+        buttonLight,
+    } = themeColors || {};
 
     /* Capitalise First Letter of Equipment Item */
     let equipListCorrected = equipment.map((e) => {
@@ -66,7 +71,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
                 <Typography
                     variant="h6"
                     fontWeight="bold"
-                    fontFamily="rubik"
+                    fontFamily="Montserrat"
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"
