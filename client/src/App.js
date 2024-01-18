@@ -96,17 +96,17 @@ function App() {
                                 margin: 0,
                                 padding: 0,
                             },
-                            ".childClass": {
-                                "&-webkit-text-fill-color": "transparent",
+                            // ".childClass": {
+                            //     "&-webkit-text-fill-color": "transparent",
 
-                                /* -webkit-text-stroke: {size} {color}; */
-                                // "&-webkit-text-stroke": "#FFFFFF",
-                                "&-webkit-text-stroke": `0.2rem #FFFFFF}`,
+                            //     /* -webkit-text-stroke: {size} {color}; */
+                            //     // "&-webkit-text-stroke": "#FFFFFF",
+                            //     "&-webkit-text-stroke": `0.2rem #FFFFFF}`,
 
-                                /* 👇 split stroke properties */
-                                "&-webkit-text-stroke-color": "#FFFFFF",
-                                "&-webkit-text-stroke-width": "1rem",
-                            },
+                            //     /* 👇 split stroke properties */
+                            //     "&-webkit-text-stroke-color": "#FFFFFF",
+                            //     "&-webkit-text-stroke-width": "1rem",
+                            // },
                         }}
                     />
                     <ScopedCssBaseline
