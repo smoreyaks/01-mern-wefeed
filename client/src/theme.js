@@ -180,7 +180,6 @@ export const themeSettings = (mode) => {
                               light3: colorTokens.cupcake.pink[160],
                               light2: colorTokens.cupcake.pink[150],
                               light: colorTokens.cupcake.pink[100],
-                              //   lightest: colorTokens.cupcake.cream[100],
                           },
                           // Beige
                           primaryThree: {
@@ -260,16 +259,25 @@ export const themeSettings = (mode) => {
                               main: colorTokens.cupcake.teal[200],
                               light: colorTokens.cupcake.teal[100],
                           },
+                          // Teal
                           primaryOne: {
                               dark: colorTokens.cupcake.teal[400],
                               main: colorTokens.cupcake.teal[300],
                               light: colorTokens.cupcake.teal[200],
                               lightest: colorTokens.cupcake.teal[100],
                           },
+                          // Pink
                           primaryTwo: {
                               dark: colorTokens.cupcake.pink[300],
                               main: colorTokens.cupcake.pink[200],
+                              light3: colorTokens.cupcake.pink[160],
+                              light2: colorTokens.cupcake.pink[150],
                               light: colorTokens.cupcake.pink[100],
+                          },
+                          // Beige
+                          primaryThree: {
+                              main: colorTokens.cupcake.cream[200],
+                              light: colorTokens.cupcake.cream[100],
                           },
                           neutral: {
                               dark: colorTokens.cupcake.pink[300],
