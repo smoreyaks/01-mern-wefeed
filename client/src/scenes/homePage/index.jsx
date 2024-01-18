@@ -18,7 +18,7 @@ const HomePage = () => {
     // Text
     const whiteText = palette.default.neutralGrey.white; // Delete
     const headingText = palette.default.neutralGrey.white; // Text Color
-    const textHover = palette.default.primaryTwo.main; // Text Hover Color
+    const textHover = palette.default.neutralGrey.fade; // Text Hover Color
     const textMain = palette.default.neutralGrey.white; // Text Color
     const recipeText = palette.default.neutral.main;
 
@@ -31,10 +31,11 @@ const HomePage = () => {
     const buttonLight = palette.default.primaryTwo.light;
     const buttonLight2 = palette.default.primaryTwo.light2;
     const buttonLight3 = palette.default.primaryTwo.light3;
+    const buttonHover = palette.default.primaryTwo.main; // Button Hover Color
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.main;
+    const backgroundMain = palette.default.primaryOne.dark;
 
     // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
@@ -59,6 +60,7 @@ const HomePage = () => {
         buttonLight,
         buttonLight2,
         buttonLight3,
+        buttonHover,
         backgroundPrimary,
         backgroundMain,
         recipeTextPanel,
