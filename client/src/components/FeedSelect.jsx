@@ -121,7 +121,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <MainIcon />
+                            <MainIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -139,7 +139,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <AppetiserIcon sx={{ color: headingText }} />
+                            <AppetiserIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -157,7 +157,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <BreakfastIcon sx={{ color: headingText }} />
+                            <BreakfastIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -175,7 +175,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <DessertIcon sx={{ color: headingText }} />
+                            <DessertIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
 
@@ -196,7 +196,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <DrinkIcon />
+                            <DrinkIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
                 </Box>
