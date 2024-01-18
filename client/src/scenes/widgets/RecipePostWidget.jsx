@@ -77,6 +77,7 @@ const RecipePostWidget = ({
     saves,
     shares,
     comments,
+    themeColors,
 }) => {
     // State
     const [isComments, setIsComments] = useState(false);
@@ -86,50 +87,77 @@ const RecipePostWidget = ({
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
 
-    // ---------- Theme ----------
-    const { palette } = useTheme();
+    // // ---------- Theme ----------
+    // const { palette } = useTheme();
 
-    const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
-    const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
+    // const whiteText = palette.default.neutral.main; // ---- ! Need to remove, superseded
+    // const primary = palette.default.primary.main; // ---- ! Need to remove, superseded
 
-    // Text
-    const headingText = palette.default.neutralGrey.white; // Text Color
-    const textMain = palette.default.neutralGrey.white; // Text Color
+    // // Text
+    // const headingText = palette.default.neutralGrey.white; // Text Color
+    // const textMain = palette.default.neutralGrey.white; // Text Color
 
-    const textHover = palette.default.primaryTwo.main; // Text Hover Color
+    // const textHover = palette.default.primaryTwo.main; // Text Hover Color
 
-    // Background Main Color
-    const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.main;
+    // // Background Main Color
+    // const backgroundPrimary = palette.default.primaryOne.main;
+    // const backgroundMain = palette.default.primaryOne.main;
 
-    // Panel / Subsection Main
-    const recipeStepsPanel = palette.default.primary.light;
-    const panelMain = palette.default.primary.light;
+    // // Panel / Subsection Main
+    // const recipeStepsPanel = palette.default.primary.light;
+    // const panelMain = palette.default.primary.light;
 
-    const recipeStepsPanelHover = palette.default.primaryTwo.light;
-    const panelMainHover = palette.default.primaryTwo.light;
+    // const recipeStepsPanelHover = palette.default.primaryTwo.light;
+    // const panelMainHover = palette.default.primaryTwo.light;
 
-    // Icon Main
-    const followerIconOutline = palette.default.primaryTwo.main;
-    const followerIconBack = palette.default.primaryOne.main;
+    // // Icon Main
+    // const followerIconOutline = palette.default.primaryTwo.main;
+    // const followerIconBack = palette.default.primaryOne.main;
 
-    const followerIconBackHover = palette.default.primaryOne.light;
+    // const followerIconBackHover = palette.default.primaryOne.light;
 
-    const recipeTextPanel = palette.default.neutral.main;
-    const mainBackPanel = palette.default.neutral.main;
+    // const recipeTextPanel = palette.default.neutral.main;
+    // const mainBackPanel = palette.default.neutral.main;
 
-    const themeColors = {
+    // const buttonLight = palette.default.primaryTwo.light;
+
+    // const themeColors = {
+    //     headingText,
+    //     textHover,
+    //     recipeStepsPanel,
+    //     whiteText,
+    //     recipeStepsPanelHover,
+    //     followerIconOutline,
+    //     followerIconBack,
+    //     followerIconBackHover,
+    //     recipeTextPanel,
+    //     mainBackPanel,
+    //     buttonLight,
+    // };
+
+    const {
+        primary,
+        whiteText,
         headingText,
         textHover,
-        recipeStepsPanel,
-        whiteText,
-        recipeStepsPanelHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
         recipeTextPanel,
         mainBackPanel,
-    };
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+    } = themeColors || {};
 
     // Icons
 
@@ -190,6 +218,7 @@ const RecipePostWidget = ({
                     backgroundColor: recipeStepsPanel,
                     p: "0 0 0 0.5rem",
                     my: "0.5rem",
+                    // border: `1px solid #fff`,
                     borderRadius: "0.75rem",
                 }}
             >
@@ -197,7 +226,7 @@ const RecipePostWidget = ({
                     color={headingText}
                     variant="h5"
                     fontWeight="bold"
-                    fontFamily="rubik"
+                    fontFamily="Montserrat"
                     sx={{
                         "&:hover": {
                             color: textHover,
@@ -219,7 +248,7 @@ const RecipePostWidget = ({
                             borderRadius: "0 0.75rem 0.75rem 0",
                             "&:hover": {
                                 color: headingText,
-                                backgroundColor: textHover,
+                                backgroundColor: buttonHover,
                             },
                         }}
                     >
@@ -283,150 +312,158 @@ const RecipePostWidget = ({
             {/* Recipe Quick Info */}
             <Box
                 sx={{
-                    p: "0 0.75rem",
-                    backgroundColor: recipeStepsPanel,
-                    borderRadius: "0.75rem 0.75rem 0 0",
+                    // border: `1px solid #FFF`,
+                    borderRadius: "0.75rem",
                 }}
             >
                 <Box
                     sx={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        background: recipeStepsPanel,
-                        width: "100%",
-                        // m: "0.5rem 0",
-                        p: "0.5rem 0rem",
+                        p: "0 0.75rem",
+                        backgroundColor: recipeStepsPanel,
                         borderRadius: "0.75rem 0.75rem 0 0",
-                        border: "0",
                     }}
                 >
-                    {/* Prep Time */}
-                    <Tooltip title="Preparation Time" enterDelay="500">
-                        <Box
-                            sx={{
-                                backgroundColor: recipeStepsPanel,
-                                borderRadius: ".75rem",
-                                padding: "0.25rem 0rem",
-                                display: "flex",
-                                alignItems: "center",
-                            }}
-                        >
-                            <PrepIcon
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            background: recipeStepsPanel,
+                            width: "100%",
+                            // m: "0.5rem 0",
+                            p: "0.5rem 0rem",
+                            borderRadius: "0.75rem 0.75rem 0 0",
+                            border: "0",
+                        }}
+                    >
+                        {/* Prep Time */}
+                        <Tooltip title="Preparation Time" enterDelay="500">
+                            <Box
                                 sx={{
-                                    width: "1rem",
-                                    height: "1rem",
-                                    mr: "0.5rem",
-                                    fill: headingText,
-                                }}
-                            />
-                            <Typography
-                                sx={{
-                                    backgroundColor: "inherit",
+                                    backgroundColor: recipeStepsPanel,
                                     borderRadius: ".75rem",
+                                    padding: "0.25rem 0rem",
                                     display: "flex",
                                     alignItems: "center",
                                 }}
                             >
-                                {prepTime}
-                            </Typography>
-                        </Box>
-                    </Tooltip>
+                                <PrepIcon
+                                    sx={{
+                                        width: "1rem",
+                                        height: "1rem",
+                                        mr: "0.5rem",
+                                        fill: headingText,
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        backgroundColor: "inherit",
+                                        borderRadius: ".75rem",
+                                        display: "flex",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    {prepTime}
+                                </Typography>
+                            </Box>
+                        </Tooltip>
 
-                    {/* Cook Time */}
-                    <Tooltip title="Cook Time" enterDelay="500">
-                        <Box
-                            sx={{
-                                backgroundColor: recipeStepsPanel,
-                                borderRadius: ".75rem",
-                                padding: "0.25rem 0.75rem",
-                                display: "flex",
-                                alignItems: "center",
-                            }}
-                        >
-                            <CookIcon
+                        {/* Cook Time */}
+                        <Tooltip title="Cook Time" enterDelay="500">
+                            <Box
                                 sx={{
-                                    width: "1rem",
-                                    height: "1rem",
-                                    mr: "0.5rem",
-                                    fill: headingText,
-                                }}
-                            />
-                            <Typography
-                                sx={{
-                                    backgroundColor: "inherit",
+                                    backgroundColor: recipeStepsPanel,
                                     borderRadius: ".75rem",
-                                    // padding: "0.5rem",
+                                    padding: "0.25rem 0.75rem",
+                                    display: "flex",
+                                    alignItems: "center",
                                 }}
                             >
-                                {cookTime}
-                            </Typography>
-                        </Box>
-                    </Tooltip>
+                                <CookIcon
+                                    sx={{
+                                        width: "1rem",
+                                        height: "1rem",
+                                        mr: "0.5rem",
+                                        fill: headingText,
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        backgroundColor: "inherit",
+                                        borderRadius: ".75rem",
+                                        // padding: "0.5rem",
+                                    }}
+                                >
+                                    {cookTime}
+                                </Typography>
+                            </Box>
+                        </Tooltip>
 
-                    {/* Servings */}
-                    <Tooltip title="Number of Servings" enterDelay="500">
-                        <Box
-                            sx={{
-                                backgroundColor: recipeStepsPanel,
-                                borderRadius: ".75rem",
-                                padding: "0.25rem 0.75rem",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                            }}
-                        >
-                            <PersonRoundedIcon />
-                            <Typography sx={{ pl: "0.25rem" }}>
-                                {servings}
-                            </Typography>
-                        </Box>
-                    </Tooltip>
+                        {/* Servings */}
+                        <Tooltip title="Number of Servings" enterDelay="500">
+                            <Box
+                                sx={{
+                                    backgroundColor: recipeStepsPanel,
+                                    borderRadius: ".75rem",
+                                    padding: "0.25rem 0.75rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                }}
+                            >
+                                <PersonRoundedIcon sx={{ fill: headingText }} />
+                                <Typography sx={{ pl: "0.25rem" }}>
+                                    {servings}
+                                </Typography>
+                            </Box>
+                        </Tooltip>
 
-                    {/* Spice Level */}
-                    <Tooltip title="Spice Level" enterDelay="500">
-                        <Box
-                            sx={{
-                                backgroundColor: recipeStepsPanel,
-                                borderRadius: ".75rem",
-                                padding: "0.25rem 0rem",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                            }}
-                        >
-                            <LocalFireDepartmentIcon />
-                            <Typography sx={{ pl: "0.25rem" }}>
-                                {spiceLevel}
-                            </Typography>
-                        </Box>
-                    </Tooltip>
+                        {/* Spice Level */}
+                        <Tooltip title="Spice Level" enterDelay="500">
+                            <Box
+                                sx={{
+                                    backgroundColor: recipeStepsPanel,
+                                    borderRadius: ".75rem",
+                                    padding: "0.25rem 0rem",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <LocalFireDepartmentIcon
+                                    sx={{ fill: headingText }}
+                                />
+                                <Typography sx={{ pl: "0.25rem" }}>
+                                    {spiceLevel}
+                                </Typography>
+                            </Box>
+                        </Tooltip>
+                    </Box>
+
+                    <Divider />
                 </Box>
+                <Box
+                    sx={{
+                        backgroundColor: recipeStepsPanel,
+                        borderRadius: ".75rem",
+                    }}
+                >
+                    {/* Equipment List Toggle */}
+                    <EquipmentList
+                        equipment={equipment}
+                        themeColors={themeColors}
+                    />
 
-                <Divider />
+                    {/* Ingredient List Toggle */}
+                    <IngredientList
+                        ingredients={ingredients}
+                        themeColors={themeColors}
+                    />
+
+                    {/* Method Step List Toggle */}
+                    <StepsList steps={steps} themeColors={themeColors} />
+                </Box>
             </Box>
-            <Box
-                sx={{
-                    backgroundColor: recipeStepsPanel,
-                    borderRadius: ".75rem",
-                }}
-            >
-                {/* Equipment List Toggle */}
-                <EquipmentList
-                    equipment={equipment}
-                    themeColors={themeColors}
-                />
-
-                {/* Ingredient List Toggle */}
-                <IngredientList
-                    ingredients={ingredients}
-                    themeColors={themeColors}
-                />
-
-                {/* Method Step List Toggle */}
-                <StepsList steps={steps} themeColors={themeColors} />
-            </Box>
-
             {/* Recipe Interactions */}
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
@@ -443,7 +480,7 @@ const RecipePostWidget = ({
                                 color: headingText,
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -471,7 +508,7 @@ const RecipePostWidget = ({
                                 color: headingText,
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -501,7 +538,7 @@ const RecipePostWidget = ({
                                 color: headingText,
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -525,7 +562,7 @@ const RecipePostWidget = ({
                                 color: headingText,
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
@@ -551,7 +588,7 @@ const RecipePostWidget = ({
                                 color: headingText,
                                 "&:hover": {
                                     color: headingText,
-                                    backgroundColor: textHover,
+                                    backgroundColor: buttonHover,
                                 },
                             }}
                         >
