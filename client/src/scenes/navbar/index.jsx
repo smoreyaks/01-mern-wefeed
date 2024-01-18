@@ -137,20 +137,33 @@ const Navbar = ({ userId, themeColors }) => {
                 {isDesktopScreen ? (
                     <FlexBetween gap="1rem">
                         {/* Dark & Light Mode Button */}
-                        <Tooltip title="Light & Dark Mode" enterDelay="500">
-                            <IconButton onClick={() => dispatch(setMode())}>
-                                {theme.palette.default.mode === "dark" ? (
-                                    <DarkMode sx={{ fontSize: "25px" }} />
-                                ) : (
-                                    <LightMode
+                        {/* <Tooltip title="Light & Dark Mode" enterDelay="500"> */}
+                        <IconButton
+                            onClick={() => dispatch(setMode())}
+                            // sx={{ fontSize: "25px" }}
+                        >
+                            {theme.palette.default.mode === "dark" ? (
+                                <Tooltip title="Dark Mode" enterDelay="500">
+                                    <DarkMode
                                         sx={{
-                                            color: buttonLight2,
+                                            color: headingText,
                                             fontSize: "25px",
                                         }}
                                     />
-                                )}
-                            </IconButton>
-                        </Tooltip>
+                                </Tooltip>
+                            ) : (
+                                <Tooltip title="Light Mode" enterDelay="500">
+                                    <LightMode
+                                        sx={{
+                                            color: textHover,
+                                            fontSize: "25px",
+                                        }}
+                                    />
+                                </Tooltip>
+                            )}
+                        </IconButton>
+                        {/* </Tooltip> */}
+
                         {/* Message Icon */}
                         {/* <IconButton>
                             <Message sx={{ fontSize: "25px" }} />
