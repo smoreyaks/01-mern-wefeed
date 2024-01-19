@@ -17,13 +17,13 @@ export const authSlice = createSlice({
         },
         // Themes
         setThemeDefault: (state, action) => {
-            state.theme = action.payload.theme;
+            state.theme = action.payload.theme.default;
         },
         setThemeDessert: (state, action) => {
-            state.theme = action.payload.theme;
+            state.theme = action.payload.theme.dessert;
         },
         setThemeDinner: (state, action) => {
-            state.theme = action.payload.theme;
+            state.theme = action.payload.theme.dinner;
         },
 
         // Login/Logout
