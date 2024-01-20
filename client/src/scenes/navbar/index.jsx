@@ -182,7 +182,10 @@ const Navbar = ({ userId, themeColors }) => {
                         {/* User Profile */}
                         <Tooltip title="User Profile" enterDelay="500">
                             <IconButton
-                                onClick={() => navigate(`/profile/${userId}`)}
+                                onClick={() => {
+                                    navigate(`/profile/${userId}`);
+                                    navigate(0);
+                                }}
                             >
                                 <UserImage
                                     // height="25px"
