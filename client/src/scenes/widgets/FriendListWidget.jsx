@@ -37,6 +37,11 @@ const FriendListWidget = ({ userId, themeColors }) => {
         getUserFriends();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+    // if (friends.length > 0) {
+
+    // }
+
+    console.log("FRIENDS TEST:", friends);
     return (
         <WidgetWrapper>
             <Typography
@@ -51,18 +56,24 @@ const FriendListWidget = ({ userId, themeColors }) => {
 
             <Divider sx={{ margin: "0.5rem 0" }} />
 
-            <Box display="flex" flexDirection="column" gap="1.5rem">
-                {friends.map((friend) => (
-                    <Friend
-                        key={friend._id}
-                        friendId={friend._id}
-                        name={`${friend.firstName} ${friend.lastName}`}
-                        occupation={friend.occupation}
-                        userPicturePath={friend.picturePath}
-                        themeColors={themeColors}
-                    />
-                ))}
-            </Box>
+            {friends.length > 0 ? (
+                <Box display="flex" flexDirection="column" gap="1.5rem">
+                    {friends.map((friend) => (
+                        <Friend
+                            key={friend._id}
+                            friendId={friend._id}
+                            name={`${friend.firstName} ${friend.lastName}`}
+                            occupation={friend.occupation}
+                            userPicturePath={friend.picturePath}
+                            themeColors={themeColors}
+                        />
+                    ))}
+                </Box>
+            ) : (
+                <Box display="flex" flexDirection="column" gap="1.5rem">
+                    <Typography>You aren't following anybody, yet..</Typography>
+                </Box>
+            )}
         </WidgetWrapper>
     );
 };
