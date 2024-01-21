@@ -9,10 +9,7 @@ import AddIcon from "@mui/icons-material/Add";
 // React Packages
 import { useState } from "react";
 
-const Notes = ({ notes, themeColors }) => {
-    // State
-    const [notesOpen, setNotesOpen] = useState(false);
-
+const Notes = ({ notes, themeColors, recipeId, notesOpen }) => {
     // Theme Destructure
     const {
         primary,
@@ -40,72 +37,49 @@ const Notes = ({ notes, themeColors }) => {
 
     return (
         <Box>
-            <Tooltip title="Notes" enterDelay="500">
-                <ToggleButton
-                    onClick={() => setNotesOpen(!notesOpen)}
+            {notesOpen ? (
+                <Box
                     sx={{
-                        // borderRadius: "3rem",
-                        width: "4rem",
-                        color: headingText,
-                        border: "0",
-                        borderRadius: "0 0.75rem 0.75rem 0",
-                        "&:hover": {
-                            color: headingText,
-                            backgroundColor: buttonHover,
-                        },
+                        display: "flex",
+                        gap: "0.5rem",
+                        mb: notesOpen ? "0.5rem" : "0",
+                        p: "0.5rem 0.25rem",
+                        borderRadius: notesOpen
+                            ? "0rem 0rem 0.75rem 0.75rem"
+                            : "0",
+                        backgroundColor: recipeStepsPanel,
                     }}
                 >
-                    <TextSnippetOutlinedIcon />
-                    {notesOpen ? <RemoveIcon /> : <AddIcon />}
-                </ToggleButton>
-
-                {/*-------------------------------*/}
-
-                {notes.map((note) =>
-                    notesOpen ? (
-                        <Box
+                    <Box>
+                        {/* <Typography
+                                key={note._id}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    alignItems: "center",
+                                    fontWeight: "bold",
+                                    borderRadius: "0.5rem",
+                                    width: "1.25rem",
+                                }}
+                            ></Typography> */}
+                    </Box>
+                    <Box>
+                        <Typography
+                            key={recipeId.notes}
                             sx={{
                                 display: "flex",
-                                // gridTemplateColumns: "30% 70%",
-                                gap: "0.5rem",
-                                m: "0",
-                                p: "0 0.75rem",
-                                // p: "0.5rem 0.5rem 0 0.5rem",
-                                borderRadius: "0rem",
-                                backgroundColor: recipeStepsPanel,
+                                justifyContent: "flex-start",
+                                width: "100%",
                             }}
                         >
-                            <Box>
-                                <Typography
-                                    key={note._id}
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "flex-start",
-                                        alignItems: "center",
-                                        fontWeight: "bold",
-                                        borderRadius: "0.5rem",
-                                        width: "1.25rem",
-                                    }}
-                                ></Typography>
-                            </Box>
-                            <Box>
-                                <Typography
-                                    key={equip._id}
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "flex-start",
-                                        width: "100%",
-                                    }}
-                                >
-                                    {note}
-                                </Typography>
-                            </Box>
-                        </Box>
-                    ) : (
-                        <Box display="none" />
-                    )
-                )}
-            </Tooltip>
+                            {notes}
+                        </Typography>
+                    </Box>
+                </Box>
+            ) : (
+                <Box display="none" />
+            )}
+            {/* </Tooltip> */}
         </Box>
     );
 };
