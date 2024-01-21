@@ -64,6 +64,8 @@ export const colorTokens = {
     },
 
     opaque: {
+        10: "rgba(0, 0, 0, 10%)",
+        30: "rgba(0, 0, 0, 30%)",
         50: "rgba(0, 0, 0, 50%)",
         70: "rgba(0, 0, 0, 70%)",
     },
@@ -95,7 +97,7 @@ export const colorTokens = {
             150: "#FADCED", // Pale Purple      (Lightest Pink)
             160: "#FAD7EB", // Pale Purple      (Lightest Pink)
             200: "#FBD4E9", // Mimi Pink        (Light Pink)
-            300: "#FDBADD", // Lavender Pink    (Medium Pink)
+            300: "#FACAE4", // Lavender Pink    (Medium Pink)
         },
         teal: {
             100: "#eaf4f6", // Mint Green       (Light Teal)
@@ -204,8 +206,11 @@ export const themeSettings = (mode) => {
                               mediumMain: colorTokens.grey[300],
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
+                              lightest: colorTokens.grey[0],
                               white: colorTokens.opaque[70],
-                              fade: colorTokens.opaque[50],
+                              fade50: colorTokens.opaque[50],
+                              fade30: colorTokens.opaque[30],
+                              fade10: colorTokens.opaque[10],
                           },
                           background: {
                               default: colorTokens.cupcake.pink[200],
@@ -298,8 +303,11 @@ export const themeSettings = (mode) => {
                               mediumMain: colorTokens.grey[300],
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
+                              lightest: colorTokens.grey[0],
                               white: colorTokens.opaque[70],
-                              fade: colorTokens.opaque[50],
+                              fade50: colorTokens.opaque[50],
+                              fade30: colorTokens.opaque[30],
+                              fade10: colorTokens.opaque[10],
                           },
                           background: {
                               default: colorTokens.cupcake.pink[200],
@@ -378,7 +386,7 @@ export const themeSettings = (mode) => {
             },
             fontFamily: ["Poppins", "sans-serif"].join(","),
             fontSize: 12,
-
+            color: colorTokens.opaque[70],
             h1: {
                 fontFamily: ["Poppins", "sans-serif"].join(","),
 
