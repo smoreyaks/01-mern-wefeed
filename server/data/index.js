@@ -2644,7 +2644,7 @@ export const recipes = [
                     "Spoon mascarpone filling into well of each cookie, then cover tops with remaining filling. Generously dust with cocoa powder.",
             },
         ],
-        notes: "N/A",
+        notes: "A classic taste with a delicate texture for a beautiful sweet dessert.",
         tags: ["Tiramisu", "Cookie", "Coffee", "Rich"],
         likes: new Map([
             [userIds[10], true],
@@ -2850,7 +2850,7 @@ export const recipes = [
                     "Pour into an ice-filled Collins glass. Top off with seltzer water. Garnish with cherries and a lemon slice.",
             },
         ],
-        notes: " This fizzy cocktail is as old as it is iconic, having made its first appearance in print in 1876 in the Bar-Tender’s Guide by famed father of American mixology Jerry Thomas. It hasn’t changed much since its inception, meaning that it's probably perfect the way it is.  ",
+        notes: "This fizzy cocktail is as old as it is iconic, having made its first appearance in print in 1876 in the Bar-Tender’s Guide by famed father of American mixology Jerry Thomas. It hasn’t changed much since its inception, meaning that it's probably perfect the way it is.  ",
         tags: ["Classic", "Cocktail", "Refreshing", "Summer Time"],
         likes: new Map([
             [userIds[10], true],
