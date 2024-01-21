@@ -32,7 +32,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
     const primary = palette.default.primary.main;
-    const { headingText, recipeText, recipeStepsPanel, recipeStepsPanelHover } =
+    const { headingText, recipeText, recipeStepsPanel, buttonLight2 } =
         themeColors || {};
 
     // Homogenize Quantities to Lower Case
@@ -74,7 +74,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     alignItems: "center",
                     background: recipeStepsPanel,
                     "&:hover": {
-                        backgroundColor: recipeStepsPanelHover,
+                        backgroundColor: buttonLight2,
                         cursor: "pointer",
                     },
                     width: "100%",
