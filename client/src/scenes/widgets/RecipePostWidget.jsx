@@ -51,7 +51,8 @@ import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import StepsList from "../../components/StepsList";
-import ImageBadge from "../../components/ImageBadge";
+// import ImageBadge from "../../components/ImageBadge";
+import Notes from "../../components/Notes";
 
 const RecipePostWidget = ({
     _id,
@@ -172,9 +173,11 @@ const RecipePostWidget = ({
             <FlexBetween
                 sx={{
                     backgroundColor: recipeStepsPanel,
-                    p: "0 0 0 0.5rem",
-                    my: "0.5rem",
-                    borderRadius: "0.75rem",
+                    p: "0 0 0 0.75rem",
+                    m: notesOpen ? "0.5rem 0rem 0rem 0rem" : "0.5rem 0rem",
+                    borderRadius: notesOpen
+                        ? "0.75rem 0.75rem 0rem 0rem "
+                        : "0.75rem ",
                 }}
             >
                 <Typography
@@ -192,6 +195,7 @@ const RecipePostWidget = ({
                 >
                     {recipeTitle}
                 </Typography>
+
                 <Tooltip title="Notes" enterDelay="500">
                     <ToggleButton
                         onClick={() => setNotesOpen(!notesOpen)}
@@ -200,7 +204,9 @@ const RecipePostWidget = ({
                             width: "4rem",
                             color: headingText,
                             border: "0",
-                            borderRadius: "0 0.75rem 0.75rem 0",
+                            borderRadius: notesOpen
+                                ? "0 0.75rem 0rem 0rem"
+                                : "0 0.75rem 0.75rem 0",
                             "&:hover": {
                                 color: headingText,
                                 backgroundColor: buttonHover,
@@ -212,6 +218,12 @@ const RecipePostWidget = ({
                     </ToggleButton>
                 </Tooltip>
             </FlexBetween>
+            <Notes
+                themeColors={themeColors}
+                notes={notes}
+                recipeId={recipeId}
+                notesOpen={notesOpen}
+            />
 
             {/* Recipe Image */}
             <Box
