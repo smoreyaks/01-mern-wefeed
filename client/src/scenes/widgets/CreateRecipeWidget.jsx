@@ -124,8 +124,9 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
             </FlexBetween>
             {isImage && (
                 <Box
-                    borderRadius="5px"
                     border={`1px solid ${palette.default.neutralGrey.medium}`}
+                    backgroundColor={palette.default.neutralGrey.fade10}
+                    borderRadius="5px"
                     mt="1rem"
                     p="1rem"
                 >
@@ -138,12 +139,16 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
                             <FlexBetween>
                                 <Box
                                     {...getRootProps()}
-                                    border={`2px dashed ${palette.default.neutralGrey.medium}`}
+                                    border={`1px solid ${palette.default.neutralGrey.medium}`}
                                     p="1rem"
                                     sx={{
                                         "&:hover": {
                                             cursor: "pointer",
                                         },
+
+                                        backgroundColor:
+                                            palette.default.primaryOne.light,
+                                        borderRadius: "0.25rem",
                                     }}
                                     width="100%"
                                 >
