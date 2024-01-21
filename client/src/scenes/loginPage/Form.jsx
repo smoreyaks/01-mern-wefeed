@@ -264,7 +264,10 @@ const Form = () => {
                                 />
                                 <Box
                                     gridColumn="span 4"
-                                    border={`1px solid ${palette.default.neutral.medium}`}
+                                    border={`1px solid ${palette.default.neutralGrey.medium}`}
+                                    backgroundColor={
+                                        palette.default.neutralGrey.fade10
+                                    }
                                     borderRadius="5px"
                                     p="1rem"
                                 >
@@ -304,7 +307,7 @@ const Form = () => {
                                                 <input {...getInputProps()} />
                                                 {!values.picture ? (
                                                     <Typography fontWeight="bold">
-                                                        Drag Image Here
+                                                        Drag & Drop Image Here
                                                     </Typography>
                                                 ) : (
                                                     <FlexBetween>
@@ -387,7 +390,7 @@ const Form = () => {
                                 "&:hover": {
                                     color: palette.default.neutralGrey.white,
                                     backgroundColor:
-                                        palette.default.primaryTwo.main,
+                                        palette.default.primaryTwo.dark,
                                 },
                             }}
                         >
