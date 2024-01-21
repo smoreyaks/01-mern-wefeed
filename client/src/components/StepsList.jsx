@@ -58,7 +58,7 @@ const StepsList = ({ steps, themeColors }) => {
                     alignItems: "center",
                     background: recipeStepsPanel,
                     "&:hover": {
-                        backgroundColor: recipeStepsPanelHover,
+                        backgroundColor: buttonLight2,
                         cursor: "pointer",
                     },
                     width: "100%",
