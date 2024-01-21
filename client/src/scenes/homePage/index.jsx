@@ -30,7 +30,7 @@ const HomePage = () => {
     const buttonLight = palette.default.primaryTwo.light;
     const buttonLight2 = palette.default.primaryTwo.light2;
     const buttonLight3 = palette.default.primaryTwo.light3;
-    const buttonHover = palette.default.primaryTwo.main; // Button Hover Color
+    const buttonHover = palette.default.primaryTwo.dark; // Button Hover Color
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
