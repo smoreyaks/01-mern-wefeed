@@ -50,7 +50,7 @@ const LoginPage = () => {
                     p="2rem"
                     m="2rem auto"
                     borderRadius="1.5rem"
-                    border="0.5rem solid #fff"
+                    border={`0.5rem solid ${palette.default.neutralGrey.lightest}`}
                     backgroundColor={palette.default.background.alt}
                 >
                     <Form />
