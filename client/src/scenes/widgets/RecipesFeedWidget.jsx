@@ -9,7 +9,7 @@ import RecipePostWidget from "./RecipePostWidget";
 const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
-    // const friends = useSelector((state) => state.user.friends);
+    const friends = useSelector((state) => state.user.friends);
 
     const [user, setUser] = useState(null);
     const recipes = useSelector((state) => state.recipes);
@@ -35,8 +35,8 @@ const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
             }
         );
         const data = await response.json();
-        // dispatch(setAllRecipes({ recipes: data }));
-        setAllRecipes(data);
+        dispatch(setAllRecipes({ recipes: data }));
+        // setAllRecipes(data);
     };
 
     // ORIGINAL UNCHANGED API CALL - getUser
@@ -86,7 +86,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
             }
         );
         const data = await response.json();
-        dispatch(setRecipe({ recipes: data }));
+        dispatch(setAllRecipes({ recipes: data }));
     };
 
     // Renders either All Recipes or select Profile Recipes
@@ -94,10 +94,10 @@ const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
         if (isProfile) {
             // getRecipes(); // Doesn't function - Original
             // getUserRecipes(); // Doesn't function - Original
-
             // getUserRecipes();
-            getUser();
+            getUserRecipes();
         } else {
+            // getUser();
             // getRecipes(); // Doesn't function - Original
             // getUser();
             // getUser(); // Works as intended
@@ -107,7 +107,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
     if (!user) return null;
 
     // const { formattedFriends } = friends || {};
-    console.log("USER FEED USER:", user);
+    console.log("RECIPE FEED USER:", user);
     // console.log("USER FEED FRIEND:", friends);
 
     return (
