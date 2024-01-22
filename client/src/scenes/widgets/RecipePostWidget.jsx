@@ -134,6 +134,7 @@ const RecipePostWidget = ({
     const [isSaved, setIsSaved] = useState(false);
     const [isRecommended, setIsRecommended] = useState(false);
 
+    // Patch Recipe Likes
     const patchLike = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/recipes/${recipeId}/like`,
