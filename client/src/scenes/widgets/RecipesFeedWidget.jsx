@@ -96,6 +96,7 @@ const RecipesFeedWidget = ({ userId, isProfile = false, themeColors }) => {
             // getUserRecipes(); // Doesn't function - Original
             // getUserRecipes();
             getUserRecipes();
+            getUser();
         } else {
             getUser();
             // getRecipes(); // Doesn't function - Original
