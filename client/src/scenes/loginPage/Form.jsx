@@ -68,7 +68,7 @@ const Form = () => {
 
     // Theme
     const { palette } = useTheme();
-    const buttonLight = palette.default.primaryTwo.light;
+    const buttonLight2 = palette.default.primaryTwo.light2;
 
     // Navigate
     const navigate = useNavigate();

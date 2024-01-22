@@ -29,7 +29,7 @@ const ThemeSelect = ({ themeColors }) => {
                         maxWidth="300px"
                         minWidth="200px"
                         backgroundColor={alt}
-                        border={`2px solid ${buttonLight}`}
+                        border={`2px solid ${buttonLight2}`}
                         borderRadius="2rem"
                         sx={{
                             display: "flex",

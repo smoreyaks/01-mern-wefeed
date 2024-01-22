@@ -43,7 +43,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         recipeTextPanel,
         recipeText,
         mainBackPanel,
-        buttonLight,
+        buttonLight2,
         buttonHover,
     } = themeColors || {};
 
