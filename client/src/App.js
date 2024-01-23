@@ -75,7 +75,6 @@ function App() {
         friends,
         // backgroundThemeImg,
     } = user;
-    console.log("THEME_IMG:", backgroundThemeImg);
 
     return (
         <CardMedia
@@ -96,17 +95,6 @@ function App() {
                                 margin: 0,
                                 padding: 0,
                             },
-                            // ".childClass": {
-                            //     "&-webkit-text-fill-color": "transparent",
-
-                            //     /* -webkit-text-stroke: {size} {color}; */
-                            //     // "&-webkit-text-stroke": "#FFFFFF",
-                            //     "&-webkit-text-stroke": `0.2rem #FFFFFF}`,
-
-                            //     /* 👇 split stroke properties */
-                            //     "&-webkit-text-stroke-color": "#FFFFFF",
-                            //     "&-webkit-text-stroke-width": "1rem",
-                            // },
                         }}
                     />
                     <ScopedCssBaseline
