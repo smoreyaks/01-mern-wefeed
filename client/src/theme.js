@@ -134,6 +134,8 @@ export const colorTokens = {
         },
         yellow: {
             100: "#fff4d0", // Jonquil          (Yellow)
+            150: "#fff4d0", // Jonquil          (Yellow)
+            160: "#fff4d0", // Jonquil          (Yellow)
             200: "#ffe9a1",
             300: "#ffdf72",
             400: "#ffd443",
@@ -242,25 +244,76 @@ export const themeSettings = (mode) => {
                       //           alt: colorTokens.cupcake[800],
                       //       },
                       //   },
+
                       // Dinner Theme Dark Mode Palette - Change Colours to Suit Theme
-                      //   dinner: {
-                      //       primary: {
-                      //           dark: colorTokens.dinnerColor[200],
-                      //           main: colorTokens.dinnerColor[500],
-                      //           light: colorTokens.dinnerColor[800],
-                      //       },
-                      //       neutral: {
-                      //           dark: colorTokens.dinnerMono[100],
-                      //           main: colorTokens.dinnerMono[200],
-                      //           mediumMain: colorTokens.dinnerMono[300],
-                      //           medium: colorTokens.dinnerMono[400],
-                      //           light: colorTokens.dinnerMono[700],
-                      //       },
-                      //       background: {
-                      //           default: colorTokens.dinnerMono[900],
-                      //           alt: colorTokens.dinnerMono[800],
-                      //       },
-                      //   },
+                      dinner: {
+                          red: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                          },
+                          yellow: {
+                              dark: colorTokens.burger.yellow[100],
+                              main: colorTokens.burger.yellow[200],
+                              mediumMain: colorTokens.burger.yellow[300],
+                              medium: colorTokens.burger.yellow[400],
+                              light: colorTokens.burger.yellow[700],
+                          },
+                          //   green: {
+                          //       default: colorTokens.burger.green[900],
+                          //       alt: colorTokens.burger.green[800],
+                          //   },
+
+                          primary: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                          },
+
+                          // Teal
+                          primaryOne: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                              lightest: colorTokens.burger.red[100],
+                          },
+                          // Pink
+                          primaryTwo: {
+                              dark: colorTokens.burger.yellow[100],
+                              main: colorTokens.burger.yellow[200],
+                              light3: colorTokens.cupcake.pink[160],
+                              light2: colorTokens.cupcake.pink[150],
+                              light: colorTokens.burger.yellow[700],
+                          },
+                          // Beige
+                          //   primaryThree: {
+                          //       main: colorTokens.cupcake.cream[200],
+                          //       light: colorTokens.cupcake.cream[100],
+                          //   },
+                          neutral: {
+                              dark: colorTokens.cupcake.pink[300],
+                              main: colorTokens.cupcake.teal[300],
+                              mediumMain: colorTokens.cupcake.teal[300],
+                              medium: colorTokens.cupcake.pink[200],
+                              light: colorTokens.cupcake.pink[100],
+                          },
+                          neutralGrey: {
+                              dark: colorTokens.grey[900],
+                              main: colorTokens.grey[500],
+                              mediumMain: colorTokens.grey[300],
+                              medium: colorTokens.grey[200],
+                              light: colorTokens.grey[100],
+                              lightest: colorTokens.grey[0],
+                              white: colorTokens.opaque[70],
+                              fade50: colorTokens.opaque[50],
+                              fade30: colorTokens.opaque[30],
+                              fade10: colorTokens.opaque[10],
+                          },
+                          background: {
+                              default: colorTokens.cupcake.pink[200],
+                              alt: colorTokens.cupcake.teal[400],
+                          },
+                      },
                   }
                 : {
                       // Light Mode Palette
@@ -338,6 +391,7 @@ export const themeSettings = (mode) => {
                       //           alt: colorTokens.grey[0],
                       //       },
                       //   },
+
                       // Dessert Theme Light Mode Palette - Change Colours to Suit Theme
                       //   dessert: {
                       //       primary: {
@@ -358,24 +412,74 @@ export const themeSettings = (mode) => {
                       //       },
                       //   },
                       // Dinner Theme Light Mode Palette - Change Colours to Suit Theme
-                      //   dinner: {
-                      //       primary: {
-                      //           dark: colorTokens.dinnerColor[700],
-                      //           main: colorTokens.dinnerColor[500],
-                      //           light: colorTokens.dinnerColor[50],
-                      //       },
-                      //       neutral: {
-                      //           dark: colorTokens.dinnerMono[700],
-                      //           main: colorTokens.dinnerMono[500],
-                      //           mediumMain: colorTokens.dinnerMono[400],
-                      //           medium: colorTokens.dinnerMono[300],
-                      //           light: colorTokens.dinnerMono[50],
-                      //       },
-                      //       background: {
-                      //           default: colorTokens.dinnerMono[10],
-                      //           alt: colorTokens.dinnerMono[0],
-                      //       },
-                      //   },
+                      dinner: {
+                          red: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                          },
+                          yellow: {
+                              dark: colorTokens.burger.yellow[100],
+                              main: colorTokens.burger.yellow[200],
+                              mediumMain: colorTokens.burger.yellow[300],
+                              medium: colorTokens.burger.yellow[400],
+                              light: colorTokens.burger.yellow[700],
+                          },
+                          //   green: {
+                          //       default: colorTokens.burger.green[900],
+                          //       alt: colorTokens.burger.green[800],
+                          //   },
+
+                          primary: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                          },
+
+                          // Teal
+                          primaryOne: {
+                              dark: colorTokens.burger.red[200],
+                              main: colorTokens.burger.red[500],
+                              light: colorTokens.burger.red[800],
+                              lightest: colorTokens.burger.red[100],
+                          },
+                          // Pink
+                          primaryTwo: {
+                              dark: colorTokens.burger.yellow[100],
+                              main: colorTokens.burger.yellow[200],
+                              light3: colorTokens.cupcake.pink[160],
+                              light2: colorTokens.cupcake.pink[150],
+                              light: colorTokens.burger.yellow[700],
+                          },
+                          // Beige
+                          //   primaryThree: {
+                          //       main: colorTokens.cupcake.cream[200],
+                          //       light: colorTokens.cupcake.cream[100],
+                          //   },
+                          neutral: {
+                              dark: colorTokens.cupcake.pink[300],
+                              main: colorTokens.cupcake.teal[300],
+                              mediumMain: colorTokens.cupcake.teal[300],
+                              medium: colorTokens.cupcake.pink[200],
+                              light: colorTokens.cupcake.pink[100],
+                          },
+                          neutralGrey: {
+                              dark: colorTokens.grey[900],
+                              main: colorTokens.grey[500],
+                              mediumMain: colorTokens.grey[300],
+                              medium: colorTokens.grey[200],
+                              light: colorTokens.grey[100],
+                              lightest: colorTokens.grey[0],
+                              white: colorTokens.opaque[70],
+                              fade50: colorTokens.opaque[50],
+                              fade30: colorTokens.opaque[30],
+                              fade10: colorTokens.opaque[10],
+                          },
+                          background: {
+                              default: colorTokens.cupcake.pink[200],
+                              alt: colorTokens.cupcake.teal[400],
+                          },
+                      },
                   }),
         },
 
