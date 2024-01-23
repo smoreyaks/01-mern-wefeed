@@ -108,7 +108,10 @@ const Navbar = ({ userId, themeColors }) => {
                     // fontWeight="bold"
                     fontSize="clamp(1rem, 2rem, 2.25rem)"
                     color={headingText}
-                    onClick={() => navigate("/home")}
+                    onClick={() => {
+                        navigate("/home");
+                        // navigate(0);
+                    }}
                     sx={{
                         "&:hover": {
                             color: textHover,
