@@ -45,6 +45,7 @@ import {
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import FeedSelect from "../../components/FeedSelect";
+import ThemeSelect from "../../components/ThemeSelect";
 
 const Navbar = ({ userId, themeColors }) => {
     // Navigate Hook
@@ -53,9 +54,6 @@ const Navbar = ({ userId, themeColors }) => {
     // State
     // Mobile Menu Toggle
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
-
-    // Theme Menu Toggle
-    const [isThemeMenuToggled, setIsThemeMenuToggled] = useState(false);
 
     // Local State
     const dispatch = useDispatch();
@@ -140,7 +138,7 @@ const Navbar = ({ userId, themeColors }) => {
                 {isDesktopScreen ? (
                     <FlexBetween gap="1rem">
                         {/* Dark & Light Mode Button */}
-                        {/* <Tooltip title="Light & Dark Mode" enterDelay="500"> */}
+
                         <IconButton
                             onClick={() => dispatch(setMode())}
                             // sx={{ fontSize: "25px" }}
@@ -165,7 +163,11 @@ const Navbar = ({ userId, themeColors }) => {
                                 </Tooltip>
                             )}
                         </IconButton>
-                        {/* </Tooltip> */}
+
+                        <ThemeSelect
+                            themeColors={themeColors}
+                            isDesktopScreen
+                        />
 
                         {/* Message Icon */}
                         {/* <IconButton>
