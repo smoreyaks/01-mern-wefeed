@@ -174,11 +174,10 @@ const RecipesFeedWidget = ({
     // Renders either All Recipes or select Profile Recipes
     useEffect(() => {
         if (isProfile) {
-            // getUser();
-            // getRecipes();
+            getUser();
             getUserRecipes();
         } else {
-            // getUser();
+            getUser();
             getRecipes();
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -195,7 +194,7 @@ const RecipesFeedWidget = ({
 
     return (
         <>
-            {!user ? (
+            {user ? (
                 <Box>
                     {recipes.map(
                         ({
@@ -262,7 +261,7 @@ const RecipesFeedWidget = ({
                     <Typography
                         fontWeight="bold"
                         fontSize="1rem"
-                        color="#F00"
+                        color={headingText}
                         textAlign="center"
                         borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
                         backgroundColor={recipeStepsPanel}
