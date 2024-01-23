@@ -50,19 +50,19 @@ export const getUserFriends = async (req, res) => {
 };
 
 // Get User Recipes API Response
-// export const getUserRecipes = async (req, res) => {
-//     try {
-//         const { userId } = req.params;
+export const getUserRecipes = async (req, res) => {
+    try {
+        const { userId } = req.params;
 
-//         // Grab the list of all user recipes
-//         const recipes = await Recipe.find({ userId });
+        // Grab the list of all user recipes
+        const recipes = await Recipe.find({ userId });
 
-//         // Return Successful Request
-//         res.status(200).json(recipes);
-//     } catch (err) {
-//         res.status(404).json({ message: err.message });
-//     }
-// };
+        // Return Successful Request
+        res.status(200).json(recipes);
+    } catch (err) {
+        res.status(404).json({ message: err.message });
+    }
+};
 
 // --- Update ---
 export const addRemoveFriend = async (req, res) => {
