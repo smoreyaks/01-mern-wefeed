@@ -143,7 +143,6 @@ const ProfilePage = () => {
                         userId={userId}
                         isProfile
                         themeColors={themeColors}
-                        user={user} // !!! ---- May need to delete userCondition
                     />
                     {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
