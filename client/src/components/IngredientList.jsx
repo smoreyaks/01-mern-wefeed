@@ -56,13 +56,13 @@ const IngredientList = ({ ingredients, themeColors }) => {
         return ingredientCapitalised.join(" ");
     });
 
-    console.log("CAPITALISED ARR:", ingredientsListCapitalised);
+    // console.log("CAPITALISED ARR:", ingredientsListCapitalised);
 
     // New Qty & Ingreidient Array Assembly
     let newCombinedArr = [];
     newCombinedArr.push(qtyListLower);
     newCombinedArr.push(ingredientsListCapitalised);
-    console.log("COMBINED:", newCombinedArr);
+    // console.log("COMBINED:", newCombinedArr);
 
     return (
         <Box>
