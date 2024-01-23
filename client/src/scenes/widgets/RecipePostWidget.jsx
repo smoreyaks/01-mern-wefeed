@@ -152,8 +152,8 @@ const RecipePostWidget = ({
     };
     // console.log("USER Post 1:", loggedInUserId);
 
-    console.log("USER Id:", _id);
-    console.log("Recipe Id:", recipeId);
+    // console.log("USER Id:", _id);
+    // console.log("Recipe Id:", recipeId);
 
     return (
         <WidgetWrapper
@@ -225,7 +225,6 @@ const RecipePostWidget = ({
                 recipeId={recipeId}
                 notesOpen={notesOpen}
             />
-
             {/* Recipe Image */}
             <Box
                 sx={{
@@ -276,7 +275,6 @@ const RecipePostWidget = ({
                     </Tooltip> */}
                 </Box>
             </Box>
-
             {/* Recipe Quick Info */}
             <Box
                 sx={{
@@ -564,7 +562,6 @@ const RecipePostWidget = ({
                     </Tooltip>
                 </FlexBetween>
             </FlexBetween>
-
             {isComments && (
                 <Box mt="0.5rem">
                     {/* ${_id.findById(comments.userId)} */}
