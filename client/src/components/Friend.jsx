@@ -99,7 +99,6 @@ const Friend = ({
                 onClick={() => patchFriend()}
                 fullwidth
                 size="small"
-                // backgroundColor={buttonLight}
                 sx={{
                     backgroundColor: buttonLight2,
                     color: headingText,
