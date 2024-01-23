@@ -1,16 +1,57 @@
+// React Packages
+import { useState } from "react";
+
+// Redux Hooks
+import { useDispatch } from "react-redux";
+
 // State
 import { setThemeDefault, setThemeDinner, setThemeDessert } from "../state";
 
 // MUI Components
-import { Tooltip, IconButton, Box } from "@mui/material";
+import { Tooltip, IconButton, Box, useMediaQuery } from "@mui/material";
 
 // MUI Icons
 import BrushIcon from "@mui/icons-material/Brush";
 import RamenDiningOutlinedIcon from "@mui/icons-material/RamenDiningOutlined";
 import CakeOutlinedIcon from "@mui/icons-material/CakeOutlined";
 import ChairOutlinedIcon from "@mui/icons-material/ChairOutlined";
+import { Close } from "@mui/icons-material";
+
+// // State
+// import { setThemeDefault, setThemeDinner, setThemeDessert } from "../../state";
 
 const ThemeSelect = ({ themeColors }) => {
+    // Local State
+    const dispatch = useDispatch();
+
+    const {
+        primary,
+        whiteText,
+        headingText,
+        textHover,
+        textMain,
+        recipeText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+    } = themeColors || {};
+
+    // Theme Menu Toggle
+    const [isThemeMenuToggled, setIsThemeMenuToggled] = useState(false);
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+
     return (
         <Tooltip title="Theme Select" enterDelay="500">
             <IconButton
@@ -28,7 +69,7 @@ const ThemeSelect = ({ themeColors }) => {
                         zIndex="11"
                         maxWidth="300px"
                         minWidth="200px"
-                        backgroundColor={alt}
+                        backgroundColor={panelMainHover}
                         border={`2px solid ${buttonLight2}`}
                         borderRadius="2rem"
                         sx={{
