@@ -89,7 +89,7 @@ export const recommendRecipe = async (req, res) => {
         const { id } = req.params;
         const { userId } = req.body;
         const recipe = await Recipe.findById(id);
-        const isRecommended = recipe.recommended.get(userId);
+        const isRecommended = recipe.recommendations.get(userId);
 
         if (isRecommended) {
             recipe.recommendations.delete(userId);
