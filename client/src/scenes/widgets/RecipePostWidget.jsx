@@ -115,16 +115,19 @@ const RecipePostWidget = ({
         panelMainHover,
     } = themeColors || {};
 
-    // ---------- Prep Time Minimised ----------
+    //  -------- Prep Time Minimised  --------
     let prepTimeMin = prepTime.replace("ins", "");
 
-    // ---------- Recipe Interactions ----------
+    //--------------------------------------
+    // -------- Recipe Interactions --------
+    //--------------------------------------
 
     // Like Recipe
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
 
     // Recommend Recipe
+    const isRecommended = Boolean(recommendations[loggedInUserId]);
     const recommendationCount = Object.keys(recommendations).length;
 
     // Recipe Comments
@@ -132,12 +135,28 @@ const RecipePostWidget = ({
 
     // Saved Recipe
     const [isSaved, setIsSaved] = useState(false);
-    const [isRecommended, setIsRecommended] = useState(false);
 
     // Patch Recipe Likes
     const patchLike = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/recipes/${recipeId}/like`,
+            {
+                method: "PATCH",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ userId: loggedInUserId }),
+            }
+        );
+        const updatedRecipe = await response.json();
+        dispatch(setRecipe({ recipe: updatedRecipe }));
+    };
+
+    // Patch Recipe Recommendations
+    const patchRecommendation = async () => {
+        const response = await fetch(
+            `https://server-vukx.onrender.com/recipes/${recipeId}/recommendation`,
             {
                 method: "PATCH",
                 headers: {
@@ -164,6 +183,9 @@ const RecipePostWidget = ({
                 }
             }
         >
+            {/* ------------------------------- */}
+            {/* -------- Recipe Author -------- */}
+            {/* ------------------------------- */}
             <Friend
                 friendId={recipeUserId}
                 name={name}
@@ -171,6 +193,10 @@ const RecipePostWidget = ({
                 themeColors={themeColors}
                 occupation={occupation}
             />
+
+            {/* ---------------------------------------- */}
+            {/* -------- Recipe Heading Section -------- */}
+            {/* ---------------------------------------- */}
             <FlexBetween
                 sx={{
                     backgroundColor: recipeStepsPanel,
@@ -243,39 +269,11 @@ const RecipePostWidget = ({
                         src={`https://server-vukx.onrender.com/assets/recipeImg/${picturePath}`}
                     />
                 )}
-                <Box
-                    gap="0.5rem"
-                    sx={{
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        flexDirection: "column",
-                        position: "absolute",
-                        p: "0.5rem 0.5rem",
-                        zIndex: "80",
-                    }}
-                >
-                    {/* Recipe Total Time Badge
-                    <Tooltip title="Total Recipe Time" enterDelay="500">
-                        <Badge
-                            sx={{
-                                backgroundColor: textHover,
-
-                                p: "0.5rem",
-                                borderRadius: "3rem",
-                                gap: "0.5rem",
-                                opacity: "1",
-                                display: "flex",
-                                alignItems: "center",
-                                width: "5rem",
-                            }}
-                        >
-                            <TimerIcon />
-                            {prepTimeMin}
-                        </Badge>
-                    </Tooltip> */}
-                </Box>
             </Box>
-            {/* Recipe Quick Info */}
+
+            {/* ----------------------------------- */}
+            {/* -------- Recipe Quick Info -------- */}
+            {/* ----------------------------------- */}
             <Box
                 sx={{
                     borderRadius: "0.75rem",
@@ -407,6 +405,10 @@ const RecipePostWidget = ({
 
                     <Divider />
                 </Box>
+
+                {/* ----------------------------------------- */}
+                {/* -------- Main Recipe Information -------- */}
+                {/* ----------------------------------------- */}
                 <Box
                     sx={{
                         backgroundColor: recipeStepsPanel,
@@ -429,7 +431,10 @@ const RecipePostWidget = ({
                     <StepsList steps={steps} themeColors={themeColors} />
                 </Box>
             </Box>
-            {/* Recipe Interactions */}
+
+            {/* ------------------------------------- */}
+            {/* -------- Recipe Interactions -------- */}
+            {/* ------------------------------------- */}
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
@@ -465,7 +470,8 @@ const RecipePostWidget = ({
                         <Button
                             size="medium"
                             fullwidth
-                            onClick={() => setIsRecommended(!isRecommended)}
+                            onClick={patchRecommendation}
+                            // onClick={() => setIsRecommended(!isRecommended)}
                             sx={{
                                 borderRadius: "3rem",
                                 width: "6rem",
