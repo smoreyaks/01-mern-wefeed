@@ -35,11 +35,15 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { headingText, recipeText, recipeStepsPanel, buttonLight2 } =
         themeColors || {};
 
+    console.log("INGREDIENT QTY TEST:", ingredients);
+
     // Homogenize Quantities to Lower Case
     let qtyListLower = ingredients.map((quantity) => {
         let qtyLower = quantity["qty"].toLowerCase(); // Qty String Array Conversion & Lowercase
         return qtyLower;
     });
+
+    console.log("INGREDIENT QTY TEST 2:", qtyListLower);
 
     /* Capitalise First Letter of Ingredient Items */
     let ingredientsListCapitalised = ingredients.map((ingredient) => {
@@ -59,9 +63,10 @@ const IngredientList = ({ ingredients, themeColors }) => {
     // console.log("CAPITALISED ARR:", ingredientsListCapitalised);
 
     // New Qty & Ingreidient Array Assembly
-    let newCombinedArr = [];
-    newCombinedArr.push(qtyListLower);
-    newCombinedArr.push(ingredientsListCapitalised);
+    let newCombinedArr = [...qtyListLower, ...ingredientsListCapitalised];
+
+    // newCombinedArr.push(qtyListLower);
+    // newCombinedArr.push(ingredientsListCapitalised);
     // console.log("COMBINED:", newCombinedArr);
 
     return (
@@ -117,13 +122,12 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     >
                         <Box>
                             <Typography
-                                key={ingredient._id}
+                                key={ingredient.qty}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
                                     alignItems: "center",
                                     fontWeight: "bold",
-                                    // background: "#eeceee",
                                     borderRadius: "0.5rem",
                                     width: "1.25rem",
                                 }}
@@ -153,3 +157,37 @@ const IngredientList = ({ ingredients, themeColors }) => {
 };
 
 export default IngredientList;
+
+/*
+
+Array Merge Problem
+
+Array 1 - Qty
+
+[0][0]
+[0][1]
+[0][2]
+[0][3]
+[0][4]
+[0][5]
+[0][6]
+[0][7]
+[0][8]
+[0][9]
+[0][10]
+
+Array 2 - Ingredients
+
+[1][0]
+[1][1]
+[1][2]
+[1][3]
+[1][4]
+[1][5]
+[1][6]
+[1][7]
+[1][8]
+[1][9]
+[1][10]
+
+*/
