@@ -56,6 +56,7 @@ export const getUserRecipes = async (req, res) => {
 };
 
 /* Update */
+// Update Likes
 export const likeRecipe = async (req, res) => {
     try {
         const { id } = req.params;
@@ -72,6 +73,33 @@ export const likeRecipe = async (req, res) => {
         const updatedRecipe = await Recipe.findByIdAndUpdate(
             id,
             { likes: recipe.likes },
+            { new: true }
+        );
+
+        // Return Successful Request
+        res.status(200).json(updatedRecipe);
+    } catch (err) {
+        res.status(404).json({ message: err.message });
+    }
+};
+
+// Update Recommendations
+export const recommendRecipe = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { userId } = req.body;
+        const recipe = await Recipe.findById(id);
+        const isRecommended = recipe.recommended.get(userId);
+
+        if (isRecommended) {
+            recipe.recommendations.delete(userId);
+        } else {
+            recipe.recommendations.set(userId, true);
+        }
+
+        const updatedRecipe = await Recipe.findByIdAndUpdate(
+            id,
+            { recommendations: recipe.recommendations },
             { new: true }
         );
 

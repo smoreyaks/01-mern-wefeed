@@ -64,28 +64,29 @@ app.post("/recipes", verifyToken, upload.single("picture"), createRecipe);
 /* ------------- Routes ------------- */
 // ---- /auth/register Routes ----
 app.use("/auth", authRoutes);
-// /login           - login
+// /login                   - login
 
 // ---- /users Routes ----
 app.use("/users", userRoutes);
 
 /* -- READ -- */
-// /:id             - verifyToken, getUser
-// /:id/friends     - verifyToken, getUserFriends
-// /:id/recipes     - verifyToken, getUserRecipes
+// /:id                     - verifyToken, getUser
+// /:id/friends             - verifyToken, getUserFriends
+// /:id/recipes             - verifyToken, getUserRecipes
 
 /* -- UPDATE -- */
-// /:id/:friendId   - verifyToken, addRemoveFriend
+// /:id/:friendId           - verifyToken, addRemoveFriend
 
 // ---- /recipes Routes ----
 app.use("/recipes", recipeRoutes);
 
 /* -- READ -- */
-// /                - verifyToken, getFeedRecipes
-// /:userId/recipes - verifyToken, getUserRecipes
+// /                        - verifyToken, getFeedRecipes
+// /:userId/recipes         - verifyToken, getUserRecipes
 
 /* -- UPDATE -- */
-// /:id/like        -  verifyToken, likeRecipe
+// /:id/like                -  verifyToken, likeRecipe
+// /:id/recommendation      -  verifyToken, recommendRecipe
 
 /* Mongoose Setup */
 const PORT = process.env.PORT || 6001;
