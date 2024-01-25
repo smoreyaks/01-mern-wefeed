@@ -108,37 +108,37 @@ const EquipmentList = ({ equipment, themeColors }) => {
                             // gridTemplateColumns: "30% 70%",
                             gap: "0.5rem",
                             m: "0",
-                            p: "0 0.75rem",
+                            p: "0 2rem",
                             // p: "0.5rem 0.5rem 0 0.5rem",
                             borderRadius: "0rem",
                             backgroundColor: recipeStepsPanel,
                         }}
                     >
-                        <Box>
-                            <Typography
-                                key={equip._id}
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    alignItems: "center",
-                                    fontWeight: "bold",
-                                    borderRadius: "0.5rem",
-                                    width: "1.25rem",
-                                }}
-                            ></Typography>
-                        </Box>
-                        <Box>
-                            <Typography
-                                key={equip._id}
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    width: "100%",
-                                }}
-                            >
-                                {equip}
-                            </Typography>
-                        </Box>
+                        {/* <Box> */}
+                        {/* <Typography
+                            key={equip._id}
+                            sx={{
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                fontWeight: "bold",
+                                borderRadius: "0.5rem",
+                                width: "1.25rem",
+                            }}
+                        ></Typography> */}
+                        {/* </Box>
+                        <Box> */}
+                        <Typography
+                            key={equip._id}
+                            sx={{
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                width: "100%",
+                            }}
+                        >
+                            {equip}
+                        </Typography>
+                        {/* </Box> */}
                     </Box>
                 ) : (
                     <Box display="none" />
