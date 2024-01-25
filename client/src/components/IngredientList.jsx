@@ -60,14 +60,14 @@ const IngredientList = ({ ingredients, themeColors }) => {
         return ingredientCapitalised.join(" ");
     });
 
-    // console.log("CAPITALISED ARR:", ingredientsListCapitalised);
-
     // New Qty & Ingreidient Array Assembly
-    let newCombinedArr = [...qtyListLower, ...ingredientsListCapitalised];
+    let newCombinedArr = [
+        // ...qtyListLower, ...ingredientsListCapitalised
+    ];
 
-    // newCombinedArr.push(qtyListLower);
-    // newCombinedArr.push(ingredientsListCapitalised);
-    // console.log("COMBINED:", newCombinedArr);
+    newCombinedArr.push(qtyListLower);
+    newCombinedArr.push(ingredientsListCapitalised);
+    console.log("COMBINED:", newCombinedArr);
 
     return (
         <Box>
@@ -107,51 +107,65 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     <KeyboardArrowRightRoundedIcon fontSize="large" />
                 )}
             </ToggleButton>
-            {ingredientsListCapitalised.map((ingredient) =>
-                ingredientListOpen ? (
-                    <Box
-                        sx={{
-                            display: "flex",
-                            gap: "0.5rem",
-                            m: "0",
-                            p: "0rem 0.75rem",
-                            borderRadius: "0rem",
-                            backgroundColor: recipeStepsPanel,
-                            width: "100%",
-                        }}
-                    >
-                        <Box>
-                            <Typography
-                                key={ingredient.qty}
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    gap: "0.5rem",
+                    m: "0",
+                    p: "0rem 2rem",
+                    borderRadius: "0rem",
+                    backgroundColor: recipeStepsPanel,
+                    width: "auto",
+                }}
+            >
+                {console.log("INGREDIENT CHECKL", ingredientsListCapitalised)}
+
+                <Box>
+                    {qtyListLower.map((qty) =>
+                        ingredientListOpen ? (
+                            <Box
+                                key={qty}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
                                     alignItems: "center",
-                                    fontWeight: "bold",
+                                    // fontWeight: "bold",
                                     borderRadius: "0.5rem",
-                                    width: "1.25rem",
+                                    width: "auto",
                                 }}
                             >
-                                {ingredient.qty}
-                            </Typography>
-                        </Box>
-                        <Box>
+                                {/* {console.log("MAP CHECK:", ingredient)} */}
+                                {
+                                    qty
+                                    // .qty
+                                }
+                            </Box>
+                        ) : (
+                            <Box display="none" />
+                        )
+                    )}
+                </Box>
+
+                <Box>
+                    {ingredientsListCapitalised.map((ingredient) =>
+                        ingredientListOpen ? (
                             <Typography
                                 key={ingredient._id}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
-                                    width: "100%",
+                                    width: "auto",
                                 }}
                             >
                                 {ingredient}
                             </Typography>
-                        </Box>
-                    </Box>
-                ) : (
-                    <Box display="none" />
-                )
-            )}
+                        ) : (
+                            <Box display="none" />
+                        )
+                    )}
+                </Box>
+            </Box>
         </Box>
     );
 };
