@@ -41,8 +41,6 @@ const IngredientList = ({ ingredients, themeColors }) => {
         return qtyLower;
     });
 
-    // console.log("QTY ARRAY:", qtyListLower);
-
     /* Capitalise First Letter of Ingredient Items */
     let ingredientsListCapitalised = ingredients.map((ingredient) => {
         let ingredientCapitalised = [];
@@ -58,8 +56,6 @@ const IngredientList = ({ ingredients, themeColors }) => {
         return ingredientCapitalised.join(" ");
     });
 
-    // console.log("INGREDIENT ARRAY:", ingredients);
-
     // New Qty & Ingreidient Array Assembly
     let combinedIngQtyArr = [...qtyListLower, ...ingredientsListCapitalised];
     let finalIngArr = [];
@@ -71,9 +67,6 @@ const IngredientList = ({ ingredients, themeColors }) => {
         );
     }
     console.log("FINAL ARRAY:", finalIngArr);
-    // combinedIngQtyArr.push(qtyListLower);
-    // combinedIngQtyArr.push(ingredientsListCapitalised);
-    // console.log("COMBINED:", combinedIngQtyArr);
 
     return (
         <Box>
@@ -125,8 +118,6 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     width: "auto",
                 }}
             >
-                {/* {console.log("INGREDIENT CHECKL", ingredientsListCapitalised)} */}
-
                 <Box>
                     {finalIngArr.map((element) =>
                         ingredientListOpen ? (
@@ -136,78 +127,20 @@ const IngredientList = ({ ingredients, themeColors }) => {
                                     display: "flex",
                                     justifyContent: "flex-start",
                                     alignItems: "center",
-                                    // fontWeight: "bold",
                                     borderRadius: "0.5rem",
                                     width: "auto",
                                 }}
                             >
-                                {/* {console.log("MAP CHECK:", ingredient)} */}
-                                {
-                                    element
-                                    // .qty
-                                }
+                                {element}
                             </Box>
                         ) : (
                             <Box display="none" />
                         )
                     )}
                 </Box>
-
-                {/* <Box>
-                    {ingredientsListCapitalised.map((ingredient) =>
-                        ingredientListOpen ? (
-                            <Typography
-                                key={ingredient._id}
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    width: "auto",
-                                }}
-                            >
-                                {ingredient}
-                            </Typography>
-                        ) : (
-                            <Box display="none" />
-                        )
-                    )}
-                </Box> */}
             </Box>
         </Box>
     );
 };
 
 export default IngredientList;
-
-/*
-
-Array Merge Problem
-
-Array 1 - Qty
-
-[0][0]
-[0][1]
-[0][2]
-[0][3]
-[0][4]
-[0][5]
-[0][6]
-[0][7]
-[0][8]
-[0][9]
-[0][10]
-
-Array 2 - Ingredients
-
-[1][0]
-[1][1]
-[1][2]
-[1][3]
-[1][4]
-[1][5]
-[1][6]
-[1][7]
-[1][8]
-[1][9]
-[1][10]
-
-*/
