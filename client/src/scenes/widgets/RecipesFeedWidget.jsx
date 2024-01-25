@@ -47,34 +47,6 @@ const RecipesFeedWidget = ({
         panelMainHover,
     } = themeColors || {};
 
-    // User Destructure - Disabled, Maybe Delete userCondition
-    // const {
-    //     _id,
-    //     // user,
-    //     // userId,
-    //     firstName,
-    //     lastName,
-    //     userPicturePath,
-    //     occupation,
-    //     recipeTitle,
-    //     picturePath,
-    //     ingredients,
-    //     equipment,
-    //     prepTime,
-    //     cookTime,
-    //     servings,
-    //     spiceLevel,
-    //     steps,
-    //     notes,
-    //     tags,
-    //     likes,
-    //     recommendations,
-    //     saves,
-    //     shares,
-    //     comments,
-    //     // themeColors,
-    // } = user || {};
-
     const [user, setUser] = useState(null);
     const [userRecipes, setUserRecipes] = useState(null);
 
@@ -85,19 +57,6 @@ const RecipesFeedWidget = ({
     const [userRecipesTest, setUserRecipesTest] = useState(null);
     const [recipesTest, setRecipesTest] = useState(null);
     const [allRecipesTest, setAllRecipesTest] = useState(null);
-
-    // ORIGINAL UNCHANGED API CALL - getRecipes
-    // const getRecipes = async () => {
-    //     const response = await fetch(
-    //         "https://server-vukx.onrender.com/recipes",
-    //         {
-    //             method: "GET",
-    //             headers: { Authorization: `Bearer ${token}` },
-    //         }
-    //     );
-    //     const data = await response.json();
-    //     dispatch(setAllRecipes({ recipes: data }));
-    // };
 
     // Retrieves All Recipe Data -  ✅ Works Correctly
     const getRecipes = async () => {
@@ -110,22 +69,7 @@ const RecipesFeedWidget = ({
         );
         const data = await response.json();
         dispatch(setAllRecipes({ recipes: data }));
-        // setRecipesTest(data);
     };
-    // console.log("getRecipes", recipesTest);
-
-    // ORIGINAL UNCHANGED API CALL - getUser
-    // const getUser = async () => {
-    //     const response = await fetch(
-    //         `https://server-vukx.onrender.com/users/${userId}`,
-    //         {
-    //             method: "GET",
-    //             headers: { Authorization: `Bearer ${token}` },
-    //         }
-    //     );
-    //     const data = await response.json();
-    //     setUser(data);
-    // };
 
     // Retrieves User Data for Selected User -  ✅ Works Correctly
     const getUser = async () => {
@@ -138,22 +82,7 @@ const RecipesFeedWidget = ({
         );
         const data = await response.json();
         setUser(data);
-        // setUserTest(data);
     };
-    // console.log("getUserResponse", user);
-
-    // ORIGINAL UNCHANGED API CALL - getUserRecipes
-    // const getUserRecipes = async () => {
-    //     const response = await fetch(
-    //         `https://server-vukx.onrender.com/recipes/${userId}/recipes`,
-    //         {
-    //             method: "GET",
-    //             headers: { Authorization: `Bearer ${token}` },
-    //         }
-    //     );
-    //     const data = await response.json();
-    //     dispatch(setAllRecipes({ recipes: data }));
-    // };
 
     // Retrieves Recipe Data for Selected User -  ✅ Works Correctly
     const getUserRecipes = async () => {
@@ -166,10 +95,7 @@ const RecipesFeedWidget = ({
         );
         const data = await response.json();
         dispatch(setAllRecipes({ recipes: data }));
-        // setUserRecipes(data);
-        // setUserRecipesTest(data);
     };
-    // console.log("getUserRecipes", userRecipes); // ✅
 
     // Renders either All Recipes or select Profile Recipes
     useEffect(() => {
@@ -186,11 +112,6 @@ const RecipesFeedWidget = ({
     console.log("getRecipesTest", recipesTest); // ✅
     console.log("getUserTest", userTest || "No Data Found"); // ✅
     console.log("getUserRecipesTest", userRecipesTest); // ✅
-    // console.log("RECIPE FEED USER:", user || "No data found");
-
-    // if (!user) return "Error: No User Found";
-
-    // const { formattedFriends } = friends || {};
 
     return (
         <>
