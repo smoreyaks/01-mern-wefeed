@@ -455,7 +455,7 @@ const RecipePostWidget = ({
                             }}
                         >
                             {isLiked ? (
-                                <FavoriteOutlined sx={{ color: primary }} />
+                                <FavoriteOutlined sx={{ color: headingText }} />
                             ) : (
                                 <FavoriteBorderOutlined />
                             )}
