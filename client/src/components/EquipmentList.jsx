@@ -114,20 +114,6 @@ const EquipmentList = ({ equipment, themeColors }) => {
                             backgroundColor: recipeStepsPanel,
                         }}
                     >
-                        {/* <Box> */}
-                        {/* <Typography
-                            key={equip._id}
-                            sx={{
-                                display: "flex",
-                                justifyContent: "flex-start",
-                                alignItems: "center",
-                                fontWeight: "bold",
-                                borderRadius: "0.5rem",
-                                width: "1.25rem",
-                            }}
-                        ></Typography> */}
-                        {/* </Box>
-                        <Box> */}
                         <Typography
                             key={equip._id}
                             sx={{
@@ -138,7 +124,6 @@ const EquipmentList = ({ equipment, themeColors }) => {
                         >
                             {equip}
                         </Typography>
-                        {/* </Box> */}
                     </Box>
                 ) : (
                     <Box display="none" />
