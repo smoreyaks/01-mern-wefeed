@@ -156,7 +156,7 @@ const RecipePostWidget = ({
     // Patch Recipe Recommendations
     const patchRecommendation = async () => {
         const response = await fetch(
-            `https://server-vukx.onrender.com/recipes/${recipeId}/recommendation`,
+            `https://server-vukx.onrender.com/recipes/${recipeId}/recommend`,
             {
                 method: "PATCH",
                 headers: {
