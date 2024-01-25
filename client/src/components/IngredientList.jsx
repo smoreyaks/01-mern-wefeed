@@ -35,15 +35,13 @@ const IngredientList = ({ ingredients, themeColors }) => {
     const { headingText, recipeText, recipeStepsPanel, buttonLight2 } =
         themeColors || {};
 
-    console.log("INGREDIENT QTY TEST:", ingredients);
-
     // Homogenize Quantities to Lower Case
     let qtyListLower = ingredients.map((quantity) => {
         let qtyLower = quantity["qty"].toLowerCase(); // Qty String Array Conversion & Lowercase
         return qtyLower;
     });
 
-    console.log("INGREDIENT QTY TEST 2:", qtyListLower);
+    // console.log("QTY ARRAY:", qtyListLower);
 
     /* Capitalise First Letter of Ingredient Items */
     let ingredientsListCapitalised = ingredients.map((ingredient) => {
@@ -60,14 +58,22 @@ const IngredientList = ({ ingredients, themeColors }) => {
         return ingredientCapitalised.join(" ");
     });
 
-    // New Qty & Ingreidient Array Assembly
-    let newCombinedArr = [
-        // ...qtyListLower, ...ingredientsListCapitalised
-    ];
+    // console.log("INGREDIENT ARRAY:", ingredients);
 
-    newCombinedArr.push(qtyListLower);
-    newCombinedArr.push(ingredientsListCapitalised);
-    console.log("COMBINED:", newCombinedArr);
+    // New Qty & Ingreidient Array Assembly
+    let combinedIngQtyArr = [...qtyListLower, ...ingredientsListCapitalised];
+    let finalIngArr = [];
+    for (let i = 0; i < combinedIngQtyArr.length / 2; i++) {
+        finalIngArr.push(
+            combinedIngQtyArr[i] +
+                " " +
+                combinedIngQtyArr[i + combinedIngQtyArr.length / 2]
+        );
+    }
+    console.log("FINAL ARRAY:", finalIngArr);
+    // combinedIngQtyArr.push(qtyListLower);
+    // combinedIngQtyArr.push(ingredientsListCapitalised);
+    // console.log("COMBINED:", combinedIngQtyArr);
 
     return (
         <Box>
@@ -119,13 +125,13 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     width: "auto",
                 }}
             >
-                {console.log("INGREDIENT CHECKL", ingredientsListCapitalised)}
+                {/* {console.log("INGREDIENT CHECKL", ingredientsListCapitalised)} */}
 
                 <Box>
-                    {qtyListLower.map((qty) =>
+                    {finalIngArr.map((element) =>
                         ingredientListOpen ? (
                             <Box
-                                key={qty}
+                                key={element}
                                 sx={{
                                     display: "flex",
                                     justifyContent: "flex-start",
@@ -137,7 +143,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                             >
                                 {/* {console.log("MAP CHECK:", ingredient)} */}
                                 {
-                                    qty
+                                    element
                                     // .qty
                                 }
                             </Box>
@@ -147,7 +153,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     )}
                 </Box>
 
-                <Box>
+                {/* <Box>
                     {ingredientsListCapitalised.map((ingredient) =>
                         ingredientListOpen ? (
                             <Typography
@@ -164,7 +170,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                             <Box display="none" />
                         )
                     )}
-                </Box>
+                </Box> */}
             </Box>
         </Box>
     );
