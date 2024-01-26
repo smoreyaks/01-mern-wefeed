@@ -9,7 +9,14 @@ import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
 // MUI
-import { Box, Typography, Divider, Icon, useTheme } from "@mui/material";
+import {
+    Box,
+    Typography,
+    Divider,
+    Icon,
+    useTheme,
+    CircularProgress,
+} from "@mui/material";
 
 // MUI Icons
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
@@ -32,19 +39,27 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     const light = palette.default.primary.light;
 
     const {
+        primary,
+        whiteText,
         headingText,
         textHover,
-        recipeStepsPanel,
-        whiteText,
-        recipeStepsPanelHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
-        recipeTextPanel,
-        recipeText,
-        mainBackPanel,
+        buttonLight,
         buttonLight2,
+        buttonLight3,
         buttonHover,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     } = themeColors || {};
 
     // Trophy Colors
@@ -92,79 +107,109 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     }
 
     const { totalRecipeLikes, recipesPosted } = user;
+    console.log("totalRecipeLikes:", totalRecipeLikes);
     return (
+        // <>
         <WidgetWrapper>
             {/* Top Recipe Stat Title */}
-            <FlexBetween gap="0.5rem" pb="1.1rem">
-                <FlexBetween gap="1rem">
-                    <Box>
-                        <Typography
-                            variant="h4"
-                            color={headingText}
-                            fontWeight="bold"
-                            fontSize="1rem"
-                            fontFamily="Montserrat"
-                            sx={{
-                                "&:hover": {
-                                    color: headingText,
-                                },
-                                mb: "0.5rem",
-                            }}
-                        >
-                            Most Popular
-                        </Typography>
-                        <FlexBetween gap="0.5rem">
-                            <Typography color={headingText}>
-                                Total Recipe Likes
-                            </Typography>
-                            <Typography color={headingText}>
-                                {totalRecipeLikes}
-                            </Typography>
+            {user ? (
+                <Box>
+                    <FlexBetween gap="0.5rem" pb="1.1rem">
+                        <FlexBetween gap="1rem">
+                            <Box>
+                                <Typography
+                                    variant="h4"
+                                    color={headingText}
+                                    fontWeight="bold"
+                                    fontSize="1rem"
+                                    fontFamily="Montserrat"
+                                    sx={{
+                                        "&:hover": {
+                                            color: headingText,
+                                        },
+                                        mb: "0.5rem",
+                                    }}
+                                >
+                                    Most Popular
+                                </Typography>
+                                <FlexBetween gap="0.5rem">
+                                    <Typography color={headingText}>
+                                        Total Recipe Likes
+                                    </Typography>
+                                    <Typography color={headingText}>
+                                        {totalRecipeLikes}
+                                    </Typography>
+                                </FlexBetween>
+                            </Box>
+                        </FlexBetween>
+                    </FlexBetween>
+
+                    <Divider />
+
+                    {/* Top Recipe Stats */}
+                    <Box p="1rem 0">
+                        {/* First Place */}
+                        <FlexBetween pb="0.5rem">
+                            <FlexBetween gap="0.5rem">
+                                <Icon>
+                                    <EmojiEventsIcon sx={{ color: gold }} />
+                                </Icon>
+                                <Typography color={headingText}>
+                                    First Recipe
+                                </Typography>
+                            </FlexBetween>
+                            <Typography>1ST</Typography>
+                        </FlexBetween>
+
+                        {/* Second Place */}
+                        <FlexBetween pb="0.5rem">
+                            <FlexBetween gap="0.5rem">
+                                <EmojiEventsIcon sx={{ color: silver }} />
+                                <Typography color={headingText}>
+                                    Second Recipe
+                                </Typography>
+                            </FlexBetween>
+                            <Typography>2ND</Typography>
+                        </FlexBetween>
+
+                        {/* Third Place */}
+                        <FlexBetween pb="0.5rem">
+                            <FlexBetween gap="0.5rem">
+                                <EmojiEventsIcon sx={{ color: bronze }} />
+                                <Typography color={headingText}>
+                                    Third Recipe{" "}
+                                </Typography>
+                            </FlexBetween>
+                            <Typography>3RD</Typography>
                         </FlexBetween>
                     </Box>
-                </FlexBetween>
-            </FlexBetween>
-
-            <Divider />
-
-            {/* Top Recipe Stats */}
-            <Box p="1rem 0">
-                {/* First Place */}
-                <FlexBetween pb="0.5rem">
-                    <FlexBetween gap="0.5rem">
-                        <Icon>
-                            <EmojiEventsIcon sx={{ color: gold }} />
-                        </Icon>
-                        <Typography color={headingText}>
-                            First Recipe
-                        </Typography>
-                    </FlexBetween>
-                    <Typography>1ST</Typography>
-                </FlexBetween>
-
-                {/* Second Place */}
-                <FlexBetween pb="0.5rem">
-                    <FlexBetween gap="0.5rem">
-                        <EmojiEventsIcon sx={{ color: silver }} />
-                        <Typography color={headingText}>
-                            Second Recipe
-                        </Typography>
-                    </FlexBetween>
-                    <Typography>2ND</Typography>
-                </FlexBetween>
-
-                {/* Third Place */}
-                <FlexBetween pb="0.5rem">
-                    <FlexBetween gap="0.5rem">
-                        <EmojiEventsIcon sx={{ color: bronze }} />
-                        <Typography color={headingText}>
-                            Third Recipe{" "}
-                        </Typography>
-                    </FlexBetween>
-                    <Typography>3RD</Typography>
-                </FlexBetween>
-            </Box>
+                </Box>
+            ) : (
+                <Box
+                    backgroundColor={backgroundMain}
+                    borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
+                    p="1.5rem"
+                    my="1rem"
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <CircularProgress
+                        size="4rem"
+                        thickness={18}
+                        sx={{
+                            color: buttonHover,
+                            // display: "flex",
+                            // justifyContent: "center",
+                            // alignItems: "center",
+                        }}
+                    />
+                </Box>
+            )}
         </WidgetWrapper>
+        // </>
     );
 };
 
