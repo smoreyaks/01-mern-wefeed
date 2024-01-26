@@ -66,7 +66,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 combinedIngQtyArr[i + combinedIngQtyArr.length / 2]
         );
     }
-    console.log("FINAL ARRAY:", finalIngArr);
+    // console.log("FINAL ARRAY:", finalIngArr);
 
     return (
         <Box>
