@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
+import { useState } from "react";
 
 const Friend = ({
     friendId,
@@ -95,37 +96,43 @@ const Friend = ({
                     </Typography>
                 </Box>
             </FlexBetween>
-            <Button
-                onClick={() => patchFriend()}
-                fullwidth
-                size="small"
-                sx={{
-                    backgroundColor: buttonLight2,
-                    color: headingText,
-                    p: "0.5rem",
-                    m: "0.5rem",
-                    // border: `1px solid ${buttonLight}`,
-                    borderRadius: "3rem",
-                    "&:hover": {
-                        // border: `1px solid ${buttonHover}`,
-                        backgroundColor: buttonHover,
-                    },
-                }}
-            >
-                {isFriend ? (
-                    <FlexBetween>
-                        <Tooltip title="Unfollow User" enterDelay="500">
-                            <PersonRemoveOutlined />
-                        </Tooltip>
-                    </FlexBetween>
-                ) : (
-                    <FlexBetween>
-                        <Tooltip title="Follow User" enterDelay="500">
-                            <PersonAddOutlined />
-                        </Tooltip>
-                    </FlexBetween>
-                )}
-            </Button>
+            {/* {console.log("FRIEND ID:", friendId)}
+            {console.log("USER ID:", _id)} */}
+            {friendId === _id ? (
+                <Box display="none" />
+            ) : (
+                <Button
+                    onClick={() => patchFriend()}
+                    fullwidth
+                    size="small"
+                    sx={{
+                        backgroundColor: buttonLight2,
+                        color: headingText,
+                        p: "0.5rem",
+                        m: "0.5rem",
+                        // border: `1px solid ${buttonLight}`,
+                        borderRadius: "3rem",
+                        "&:hover": {
+                            // border: `1px solid ${buttonHover}`,
+                            backgroundColor: buttonHover,
+                        },
+                    }}
+                >
+                    {isFriend ? (
+                        <FlexBetween>
+                            <Tooltip title="Unfollow User" enterDelay="500">
+                                <PersonRemoveOutlined />
+                            </Tooltip>
+                        </FlexBetween>
+                    ) : (
+                        <FlexBetween>
+                            <Tooltip title="Follow User" enterDelay="500">
+                                <PersonAddOutlined />
+                            </Tooltip>
+                        </FlexBetween>
+                    )}
+                </Button>
+            )}
         </FlexBetween>
     );
 };
