@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import {
     ManageAccountsOutlined,
@@ -9,21 +9,39 @@ import {
     WorkOutlineOutlined,
     StarHalf,
     StarOutline,
+    PersonRemoveOutlined,
+    PersonAddOutlined,
 } from "@mui/icons-material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 
 // MUI Comnponents
-import { Box, Typography, Divider, useTheme } from "@mui/material";
+import {
+    Box,
+    Typography,
+    Divider,
+    Tooltip,
+    Button,
+    useTheme,
+} from "@mui/material";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
-// import TiltNeon from "../../assets/fonts/TiltNeon/TiltNeon-Regular.ttf";
+// Local State
+import { setFriends } from "../../state";
 
 const UserWidget = ({ userId, picturePath, themeColors }) => {
+    // State
     const [user, setUser] = useState(null);
+
     const navigate = useNavigate();
     const token = useSelector((state) => state.token);
+
+    // Local State
+    const dispatch = useDispatch();
+    const { _id } = useSelector((state) => state.user);
+    const friends = useSelector((state) => state.user.friends);
+    const isFriend = friends.find((friend) => friend._id === friends.id);
 
     // Theme Colors
     const { palette } = useTheme();
@@ -32,17 +50,27 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     const main = palette.default.neutral.main;
 
     const {
-        headingText,
-        recipeText,
-        recipeStepsPanel,
-        textHover,
+        primary,
         whiteText,
+        headingText,
+        textHover,
+        textMain,
+        recipeText,
         followerIconOutline,
         followerIconBack,
         followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
         recipeTextPanel,
         mainBackPanel,
-        buttonHover,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
     } = themeColors || {};
 
     const getUser = async () => {
@@ -56,6 +84,21 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         const data = await response.json();
         setUser(data);
         // console.log("UserWidget.js - DATA - ", data);
+    };
+
+    const patchFriend = async () => {
+        const response = await fetch(
+            `https://server-vukx.onrender.com/users/${_id}/${friends.id}`,
+            {
+                method: "PATCH",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+        const data = await response.json();
+        dispatch(setFriends({ friends: data }));
     };
 
     useEffect(() => {
@@ -74,7 +117,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         occupation,
         viewedProfile,
         impressions,
-        friends,
+        // friends,
     } = user;
 
     return (
@@ -89,7 +132,10 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 }}
             >
                 <FlexBetween gap="1rem">
-                    <UserImage image={picturePath} />
+                    <Box>
+                        <UserImage image={picturePath} />
+                    </Box>
+
                     <Box>
                         <Typography
                             variant="h4"
@@ -105,25 +151,87 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         >
                             {firstName} {lastName}
                         </Typography>
-                        <Typography color={whiteText}>
-                            Following {friends.length}
-                        </Typography>
-                        <Typography color={whiteText}>
-                            Followers {Math.ceil(Math.random() * 100)}
-                        </Typography>
-                        <Box fontSize="large" sx={{ color: headingText }}>
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
-                        </Box>
                     </Box>
                 </FlexBetween>
             </FlexBetween>
+            {/* Add Friend Button */}
+            {/* {console.log("UW FRIEND ID:", friends._id)}
+            {console.log("UW USER ID:", _id)}
 
+            {friends.id === _id ? (
+                <Box display="none" />
+            ) : (
+                <Button
+                    onClick={() => patchFriend()}
+                    fullwidth
+                    size="small"
+                    sx={{
+                        backgroundColor: buttonLight2,
+                        color: headingText,
+                        width: "100%",
+                        // p: "0.5rem",
+                        // m: "0.5rem",
+                        // border: `1px solid ${buttonLight}`,
+                        borderRadius: "3rem",
+                        "&:hover": {
+                            // border: `1px solid ${buttonHover}`,
+                            backgroundColor: buttonHover,
+                        },
+                    }}
+                >
+                    {isFriend ? (
+                        <FlexBetween>
+                            <Tooltip title="Unfollow User" enterDelay="500">
+                                <PersonRemoveOutlined />
+                            </Tooltip>
+                        </FlexBetween>
+                    ) : (
+                        <FlexBetween>
+                            <Tooltip title="Follow User" enterDelay="500">
+                                <PersonAddOutlined />
+                            </Tooltip>
+                        </FlexBetween>
+                    )}
+                </Button>
+            )} */}
+            <Box
+                display="flex"
+                justifyContent="center"
+                flexDirection="column"
+                // py="0.5rem"
+                gap="0.5rem"
+                mb="0.5rem"
+            >
+                <Typography color={whiteText}>
+                    Following {friends.length}
+                </Typography>
+                <Typography color={whiteText}>
+                    Followers {Math.ceil(Math.random() * 100)}
+                </Typography>
+            </Box>
+            <Divider />
+            {/* Reputation Stars */}
+            <Tooltip title="Reputation" enterDelay="500">
+                <Box
+                    fontSize="medium"
+                    my="0.5rem"
+                    sx={{
+                        color: headingText,
+                        width: "100%",
+                        display: "flex-start",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <StarRateIcon fontSize="1rem" />
+                    <StarRateIcon fontSize="1rem" />
+                    <StarRateIcon fontSize="1rem" />
+                </Box>
+            </Tooltip>
             <Divider />
 
             {/* Second Row */}
-            <Box p="1rem 0">
+            <Box p="0.5rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
                     <LocationOnOutlined
                         fontSize="small"
@@ -143,7 +251,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             <Divider />
 
             {/* Third Row */}
-            <Box p="1rem 0">
+            <Box p="0.5rem 0">
                 <FlexBetween mb="0.5rem">
                     <Typography color={whiteText}>Profile Views</Typography>
                     <Typography color={whiteText} fontWeight="500">
