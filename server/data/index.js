@@ -2916,109 +2916,409 @@ export const recipes = [
             },
         ],
     },
+    // ---------------------------------------
+    // --------  New Recipes Jan 2024 --------
+    // ---------------------------------------
 
-    // //--------------------------------------//
-    // // ------------ TEMPLATE ---------------//
-    // //--------------------------------------//
+    // Best Mashed Potatoes
+    // https://www.delish.com/cooking/recipe-ideas/a50630/perfect-mashed-potatoes-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[2],
+        firstName: "Carolyn",
+        lastName: "McKinney",
+        userPicturePath: "p4.jpeg",
 
-    // {
-    //     _id: new mongoose.Types.ObjectId(),
-    //     userId: userIds[XXXXXXXXXXXX],
-    //     firstName: "XXXXXXXXXXXX",
-    //     lastName: "XXXXXXXXXXXX",
-    //     userPicturePath: "XXXXXXXXXXXX",
+        recipeTitle: "Best Mashed Potatoes",
+        picturePath: "mashed-potatoes-secondary-64bed551364af.jpg",
 
-    //     recipeTitle: "XXXXXXXXXXXX",
-    //     picturePath: "XXXXXXXXXXXX",
+        ingredients: [
+            {
+                qty: "3 lb.",
+                element: "mixed potatoes, peeled & cut into pieces",
+            },
+            { qty: "1/2 cup", element: "whole milk" },
+            { qty: "3/4 cup", element: "unsalted butter" },
+            { qty: "2 tbsp", element: "unsalted butter" },
+            { qty: "1/2 cup", element: "sour cream, room temp" },
+            { qty: "1/4 tsp", element: "Freshly ground black pepper" },
+            { qty: "1 pinch", element: "Kosher salt" },
+            { qty: "1 sprig", element: "fresh parsley, chopped" },
+        ],
 
-    //     ingredients: [
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
-    //     ],
+        equipment: [
+            "Kitchen Knife",
+            "Large Pot",
+            "Wooden Stirer",
+            "Ricer",
+            "Small Saucepan",
+            "Peeler",
+            "Collander",
+        ],
+        prepTime: "5 mins",
+        cookTime: "25 mins",
+        servings: 8,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "In a large pot, cover potatoes with water and add a generous pinch of salt. Bring to a boil and cook until softened, 15 to 20 minutes.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Drain and return potatoes to pot. Using a potato masher or ricer, mash potatoes until smooth.",
+            },
+            {
+                stepNum: 3,
+                stepMethod:
+                    "While potatoes cook, in a small saucepan over medium-low heat, cook milk and 3/4 cup butter, stirring occasionally, until butter is melted and mixture is warmed through.",
+            },
+            {
+                stepNum: 4,
+                stepMethod:
+                    "Pour milk mixture over potatoes and stir until combined and creamy. Add sour cream and stir until combined; generously season with salt and pepper. ",
+            },
+            {
+                stepNum: 5,
+                stepMethod:
+                    "Transfer potatoes to a serving bowl. Top with remaining 2 tablespoons butter; season with more pepper. Top with parsley.",
+            },
+        ],
+        notes: "This is a comfort food that deserves to be celebrated all year long. Russet potatoes are the classic go-to for mashed potatoes, but you don't have to stick to those alone. I like using a mix of russet and Yukon golds, which have a super-creamy texture. Russets cook slightly faster, are starchier and fluffier, and taste less sweet; Yukons are a little more moist, a little waxier, and they hold their shape better. Put 'em together, and you’ve got the perfect combo.",
+        tags: ["Potatoes", "Creamy", "Comforting", "Classic"],
+        likes: new Map([
+            [userIds[12], true],
+            [userIds[24], true],
+            [userIds[5], true],
+            [userIds[17], true],
+            [userIds[2], true],
+            [userIds[7], true],
+            [userIds[8], true],
+            [userIds[23], true],
+            [userIds[15], true],
+        ]),
+        recommendations: new Map([
+            [userIds[2], true],
+            [userIds[17], true],
+            [userIds[15], true],
+        ]),
+        saves: new Map([
+            [userIds[12], true],
+            [userIds[17], true],
+            [userIds[2], true],
+            [userIds[15], true],
+        ]),
+        shares: 55,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
 
-    //     equipment: [
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //         "XXXXXXXXXXXX",
-    //     ],
-    //     prepTime: "XXXXXXXXXXXX",
-    //     cookTime: "XXXXXXXXXXXX",
-    //     servings: XXXXXXXXXXXX,
-    //     spiceLevel: XXXXXXXXXXXX,
-    //     steps: [
-    //         {
-    //             stepNum: 1,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 2,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 3,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             stepNum: 4,
-    //             stepMethod: "XXXXXXXXXXXX",
-    //         },
-    //     ],
-    //     notes: "XXXXXXXXXXXX",
-    //     tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
-    //     likes: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     recommendations: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     saves: new Map([
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //         [userIds[XXXXXXXXXXXX], true],
-    //     ]),
-    //     shares: XXXXXXXXXXXX,
-    //     comments: [
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //         {
-    //             userId: userIds[XXXXXXXXXXXX],
-    //             commentText: "XXXXXXXXXXXX",
-    //         },
-    //     ],
-    // },
+    // Mai Tai
+    // https://www.delish.com/cooking/recipe-ideas/a43402365/classic-mai-tai-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[3],
+        firstName: "Lina",
+        lastName: "Prichard",
+        userPicturePath: "p6.jpeg",
+
+        recipeTitle: "Mai Tai Cocktail",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "1 oz.", element: "fresh lime juice" },
+            { qty: "1 oz.", element: "light rum" },
+            {
+                qty: "3/4 oz.",
+                element: "dry orange Curaçao, Cointreau, or triple sec",
+            },
+            { qty: "3/4 oz.", element: "orgeat syrup" },
+            { qty: "1/2 oz.", element: "dark rum" },
+            { qty: "3", element: "Fresh mint leaves" },
+            { qty: "1", element: "lime wedge" },
+            { qty: "1", element: "Maraschino cherry" },
+            { qty: "1 cup", element: "Ice" },
+        ],
+
+        equipment: ["cocktail shaker", "rocks glass"],
+        prepTime: "5",
+        cookTime: "N/A",
+        servings: 1,
+        spiceLevel: 0,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod:
+                    "Fill a cocktail shaker with ice. Add lime juice, light rum, Curaçao, and syrup and vigorously shake until outside of shaker is very frosty, about 20 seconds.",
+            },
+            {
+                stepNum: 2,
+                stepMethod:
+                    "Strain into an ice-filled rocks glass. Slowly pour dark rum on top to float. Garnish with mint, a lime wheel, and a cherry.",
+            },
+        ],
+        notes: "One sip of the refreshing and fruity Mai Tai cocktail, and you'll be instantly transported to a sunny, sandy beach. The classic Mai Tai has evolved to include other tropical flavors like pineapple juice, orange juice, or a splash of grenadine, but a true classic Mai Tai keeps it simple with a shaken blend of light rum, lime juice, dry Curaçao, and orgeat syrup over ice. Like any good tiki drink, these babies are strong and sneaky, so you won’t need much to get the party started. Serve these at a tiki-themed backyard bash, weekend brunch, or when you had an extra long day at work.",
+        tags: ["Cocktail", "Fruity", "Sweet", "Mai Tai"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
+
+    // Breakfast Tostadas
+    // https://www.delish.com/cooking/recipe-ideas/a40560590/breakfast-tostadas-recipe/
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[5],
+        firstName: "Harvey",
+        lastName: "Dunn",
+        userPicturePath: "p7.jpeg",
+
+        recipeTitle: "Breakfast Tostadas",
+        picturePath: "XXXXXXXXXXXX",
+
+        ingredients: [
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+            { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+        ],
+
+        equipment: [
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+            "XXXXXXXXXXXX",
+        ],
+        prepTime: "10 mins",
+        cookTime: "30 mins",
+        servings: 6,
+        spiceLevel: 3,
+        steps: [
+            {
+                stepNum: 1,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 2,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 3,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 4,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 5,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+            {
+                stepNum: 6,
+                stepMethod: "XXXXXXXXXXXX",
+            },
+        ],
+        notes: "XXXXXXXXXXXX",
+        tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+        likes: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        recommendations: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        saves: new Map([
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+            [userIds[XXXXXXXXXXXX], true],
+        ]),
+        shares: XXXXXXXXXXXX,
+        comments: [
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+            {
+                userId: userIds[XXXXXXXXXXXX],
+                commentText: "XXXXXXXXXXXX",
+            },
+        ],
+    },
 ];
+
+// //--------------------------------------//
+// // ------------ TEMPLATE ---------------//
+// //--------------------------------------//
+
+// {
+//     _id: new mongoose.Types.ObjectId(),
+//     userId: userIds[XXXXXXXXXXXX],
+//     firstName: "XXXXXXXXXXXX",
+//     lastName: "XXXXXXXXXXXX",
+//     userPicturePath: "XXXXXXXXXXXX",
+
+//     recipeTitle: "XXXXXXXXXXXX",
+//     picturePath: "XXXXXXXXXXXX",
+
+//     ingredients: [
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//         { qty: "XXXXXXXXXXXX", element: "XXXXXXXXXXXX" },
+//     ],
+
+//     equipment: [
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//         "XXXXXXXXXXXX",
+//     ],
+//     prepTime: "XXXXXXXXXXXX",
+//     cookTime: "XXXXXXXXXXXX",
+//     servings: XXXXXXXXXXXX,
+//     spiceLevel: XXXXXXXXXXXX,
+//     steps: [
+//         {
+//             stepNum: 1,
+//             stepMethod: "XXXXXXXXXXXX",
+//         },
+//         {
+//             stepNum: 2,
+//             stepMethod: "XXXXXXXXXXXX",
+//         },
+//         {
+//             stepNum: 3,
+//             stepMethod: "XXXXXXXXXXXX",
+//         },
+//         {
+//             stepNum: 4,
+//             stepMethod: "XXXXXXXXXXXX",
+//         },
+//     ],
+//     notes: "XXXXXXXXXXXX",
+//     tags: ["XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX", "XXXXXXXXXXXX"],
+//     likes: new Map([
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//     ]),
+//     recommendations: new Map([
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//     ]),
+//     saves: new Map([
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//         [userIds[XXXXXXXXXXXX], true],
+//     ]),
+//     shares: XXXXXXXXXXXX,
+//     comments: [
+//         {
+//             userId: userIds[XXXXXXXXXXXX],
+//             commentText: "XXXXXXXXXXXX",
+//         },
+//         {
+//             userId: userIds[XXXXXXXXXXXX],
+//             commentText: "XXXXXXXXXXXX",
+//         },
+//         {
+//             userId: userIds[XXXXXXXXXXXX],
+//             commentText: "XXXXXXXXXXXX",
+//         },
+//     ],
+// },
+// ];
 
 /*
 MAIN
@@ -3044,21 +3344,20 @@ DRINKS
 https://www.delish.com/cooking/recipe-ideas/recipes/a53458/boozy-sour-watermelon-slushies-recipe/
 https://www.delish.com/cooking/recipe-ideas/a31289978/perfect-cosmopolitan-cocktail-recipe/
 https://www.delish.com/cooking/recipe-ideas/recipes/a4298/strawberry-daiquiri-frozen-drinks/
-https://www.delish.com/cooking/recipe-ideas/a43402365/classic-mai-tai-recipe/
 https://www.delish.com/cooking/recipe-ideas/a42005570/peppermint-white-russian-recipe/
 https://www.delish.com/cooking/recipe-ideas/a35686657/nutty-irishman-recipe/
 
 SIDE
 https://www.delish.com/cooking/recipe-ideas/recipes/a57237/smashed-brussels-sprouts-recipe/
 https://www.delish.com/cooking/recipe-ideas/recipes/a50228/holiday-roasted-vegetables-recipe/
-https://www.delish.com/cooking/recipe-ideas/a50630/perfect-mashed-potatoes-recipe/
+
 https://www.delish.com/cooking/recipe-ideas/recipes/a53359/broccoli-salad-recipe/
-https://www.delish.com/holiday-recipes/christmas/g1713/holiday-party-appetizers/?slide=17
+
 
 DESSERT
 https://www.delish.com/cooking/recipe-ideas/a41093925/m-and-m-cookie-bar-recipe/
 
 BREAKFAST
-https://www.delish.com/cooking/recipe-ideas/a40560590/breakfast-tostadas-recipe/
+
 
 */
