@@ -172,7 +172,8 @@ const RecipePostWidget = ({
     // console.log("USER Post 1:", loggedInUserId);
 
     // console.log("USER Id:", _id);
-    // console.log("Recipe Id:", recipeId);
+    // console.log("Occupation:", occupation);
+    // console.log("Servings:", servings);
 
     return (
         <WidgetWrapper
