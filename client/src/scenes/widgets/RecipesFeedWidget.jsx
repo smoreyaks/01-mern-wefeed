@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAllRecipes, setRecipe, setPosts } from "../../state";
 
 // MUI Components
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, CircularProgress } from "@mui/material";
 
 // Custom Components
 import RecipePostWidget from "./RecipePostWidget";
@@ -178,19 +178,22 @@ const RecipesFeedWidget = ({
                     borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
                     p="1.5rem"
                     my="1rem"
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
                 >
-                    <Typography
-                        fontWeight="bold"
-                        fontSize="1rem"
-                        color={headingText}
-                        textAlign="center"
-                        borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
-                        backgroundColor={recipeStepsPanel}
-                        p="1rem"
-                        // m="1rem"
-                    >
-                        Error: No User Found
-                    </Typography>
+                    <CircularProgress
+                        size="4rem"
+                        thickness={18}
+                        sx={{
+                            color: buttonHover,
+                            // display: "flex",
+                            // justifyContent: "center",
+                            // alignItems: "center",
+                        }}
+                    />
                 </Box>
             )}
         </>
