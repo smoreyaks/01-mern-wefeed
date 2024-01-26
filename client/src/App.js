@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 
 // Redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // MUI Components
 import {
@@ -21,6 +21,18 @@ import {
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 
+// Different Themes
+import {
+    darkTheme,
+    lightTheme,
+    dinnerTheme,
+    dessertTheme,
+    defaultTheme,
+} from "./theme/theme";
+
+// Theme Slice
+import { themeSelect } from "./redux/theme/themeSlice";
+
 // Backgorund Image
 import backgroundThemeImg from "./assets/vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg";
 
@@ -30,8 +42,18 @@ import LoginPage from "./scenes/loginPage";
 import ProfilePage from "./scenes/profilePage";
 
 function App() {
+    // Old Theme - Dark & Light Mode
     const mode = useSelector((state) => state.mode);
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
+    // New Theme Select
+
+    // get theme from store
+    const themeOption = useSelector((state) => state.themeOption);
+
+    // initialize dispatch variable
+    const dispatch = useDispatch();
+
     const isAuth = Boolean(useSelector((state) => state.token));
     const token = useSelector((state) => state.token);
     const { _id, picturePath } = useSelector((state) => state.user || {});
@@ -85,7 +107,13 @@ function App() {
             }
         >
             <BrowserRouter>
-                <ThemeProvider theme={theme}>
+                <ThemeProvider
+                    theme={
+                        themeOption.defaultTheme
+                            ? themeOption.dinnerTheme
+                            : theme.dessertTheme
+                    }
+                >
                     <GlobalStyles
                         styles={{
                             body: {
