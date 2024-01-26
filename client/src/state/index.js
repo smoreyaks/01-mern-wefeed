@@ -29,17 +29,6 @@ export const authSlice = createSlice({
             state.mode = state.mode === "light" ? "dark" : "light";
         },
 
-        // Themes
-        setThemeDefault: (state, action) => {
-            state.theme = action.payload.theme.default;
-        },
-        setThemeDessert: (state, action) => {
-            state.theme = action.payload.theme.dessert;
-        },
-        setThemeDinner: (state, action) => {
-            state.theme = action.payload.theme.dinner;
-        },
-
         // Get User Friends
         setFriends: (state, action) => {
             if (state.user) {
