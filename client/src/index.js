@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 
 // Import Redux Tools & State
-import authReducer from "./state";
+import authReducer from "./state/index";
+import themeReducer from "./redux/theme/themeSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
@@ -23,7 +24,11 @@ import storage from "redux-persist/lib/storage";
 import { PersistGate } from "redux-persist/integration/react";
 
 const persistConfig = { key: "root", storage, version: 1 };
-const persistedReducer = persistReducer(persistConfig, authReducer);
+const persistedReducer = persistReducer(
+    persistConfig,
+    authReducer,
+    themeReducer
+);
 const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
