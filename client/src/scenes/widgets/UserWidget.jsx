@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+// MUI Icons
 import {
     ManageAccountsOutlined,
     EditOutlined,
@@ -9,9 +10,10 @@ import {
     WorkOutlineOutlined,
     StarHalf,
     StarOutline,
-    PersonRemoveOutlined,
     PersonAddOutlined,
 } from "@mui/icons-material";
+import GroupsIcon from "@mui/icons-material/Groups";
+import PersonIcon from "@mui/icons-material/Person";
 import StarRateIcon from "@mui/icons-material/StarRate";
 
 // MUI Comnponents
@@ -23,6 +25,8 @@ import {
     Button,
     useTheme,
 } from "@mui/material";
+
+// Custom Compponents
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
@@ -194,21 +198,55 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     )}
                 </Button>
             )} */}
-            <Box
-                display="flex"
-                justifyContent="center"
-                flexDirection="column"
-                // py="0.5rem"
-                gap="0.5rem"
-                mb="0.5rem"
-            >
-                <Typography color={whiteText}>
-                    Following {friends.length}
-                </Typography>
-                <Typography color={whiteText}>
-                    Followers {Math.ceil(Math.random() * 100)}
-                </Typography>
+            {/* <FlexBetween> */}
+            <FlexBetween mb="0.5rem">
+                <Tooltip title="Following" enterDelay="500">
+                    <Box
+                        color={headingText}
+                        display="flex"
+                        justifyContent="flex-start"
+                        gap="1rem"
+                    >
+                        <PersonIcon fontSize="small" />
+                        <Typography fontWeight="bold">
+                            {friends.length}
+                        </Typography>
+                    </Box>
+                </Tooltip>
+                <Tooltip title="Followers" enterDelay="500">
+                    <Box
+                        color={headingText}
+                        display="flex"
+                        justifyContent="flex-start"
+                        gap="1rem"
+                    >
+                        <GroupsIcon fontSize="small" />
+                        <Typography fontWeight="bold">
+                            {Math.ceil(Math.random() * 100)}
+                        </Typography>
+                    </Box>
+                </Tooltip>
+            </FlexBetween>
+            {/* </FlexBetween> */}
+
+            <Divider />
+
+            {/* Third Row */}
+            <Box p="0.5rem 0">
+                <FlexBetween mb="0.5rem">
+                    <Typography color={whiteText}>Visitors</Typography>
+                    <Typography color={whiteText} fontWeight="500">
+                        {viewedProfile}
+                    </Typography>
+                </FlexBetween>
+                <FlexBetween>
+                    <Typography color={whiteText}>Score</Typography>
+                    <Typography color={whiteText} fontWeight="500">
+                        {Math.ceil(Math.random() * 100)}
+                    </Typography>
+                </FlexBetween>
             </Box>
+
             <Divider />
             {/* Reputation Stars */}
             <Tooltip title="Reputation" enterDelay="500">
@@ -246,26 +284,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     />
                     <Typography color={whiteText}>{occupation}</Typography>
                 </Box>
-            </Box>
-
-            <Divider />
-
-            {/* Third Row */}
-            <Box p="0.5rem 0">
-                <FlexBetween mb="0.5rem">
-                    <Typography color={whiteText}>Profile Views</Typography>
-                    <Typography color={whiteText} fontWeight="500">
-                        {viewedProfile}
-                    </Typography>
-                </FlexBetween>
-                <FlexBetween>
-                    <Typography color={whiteText}>
-                        Total Recipe Views
-                    </Typography>
-                    <Typography color={whiteText} fontWeight="500">
-                        {Math.ceil(Math.random() * 100)}
-                    </Typography>
-                </FlexBetween>
             </Box>
 
             {/* <Divider /> */}
