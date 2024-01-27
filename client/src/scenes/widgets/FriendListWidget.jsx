@@ -43,7 +43,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
 
     console.log("FRIENDS TEST:", friends);
     return (
-        <WidgetWrapper>
+        <WidgetWrapper sx={{ minWidth: "16.7915rem" }}>
             <Typography
                 color={headingText}
                 variant="h4"
