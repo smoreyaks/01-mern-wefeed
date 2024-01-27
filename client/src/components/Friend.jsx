@@ -1,11 +1,21 @@
-import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
-import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+// React Packages
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { setFriends } from "../state";
+
+// MUI Icons
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import PersonRemoveAlt1Icon from "@mui/icons-material/PersonRemoveAlt1";
+
+// Custom Components
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
-import { useState } from "react";
+
+// Mui Components
+import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
+
+// Redux - Local State
+import { useDispatch, useSelector } from "react-redux";
+import { setFriends } from "../state";
 
 const Friend = ({
     friendId,
@@ -103,13 +113,17 @@ const Friend = ({
             ) : (
                 <Button
                     onClick={() => patchFriend()}
-                    fullwidth
+                    // fullwidth
                     size="small"
                     sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                         backgroundColor: buttonLight2,
                         color: headingText,
                         p: "0.5rem",
                         m: "0.5rem",
+                        minWidth: "3rem",
                         // border: `1px solid ${buttonLight}`,
                         borderRadius: "3rem",
                         "&:hover": {
@@ -121,13 +135,13 @@ const Friend = ({
                     {isFriend ? (
                         <FlexBetween>
                             <Tooltip title="Unfollow User" enterDelay="500">
-                                <PersonRemoveOutlined />
+                                <PersonRemoveAlt1Icon fontSize="small" />
                             </Tooltip>
                         </FlexBetween>
                     ) : (
                         <FlexBetween>
                             <Tooltip title="Follow User" enterDelay="500">
-                                <PersonAddOutlined />
+                                <PersonAddAlt1Icon fontSize="small" />
                             </Tooltip>
                         </FlexBetween>
                     )}
