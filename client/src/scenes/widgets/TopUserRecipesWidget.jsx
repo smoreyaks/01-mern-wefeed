@@ -107,7 +107,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     }
 
     const { totalRecipeLikes, recipesPosted } = user;
-    console.log("totalRecipeLikes:", totalRecipeLikes);
+    console.log("totalRecipeLikes:", user);
     return (
         // <>
         <WidgetWrapper>
@@ -134,11 +134,19 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                 </Typography>
                                 <FlexBetween gap="0.5rem">
                                     <Typography color={headingText}>
-                                        Total Recipe Likes
+                                        Recipe Impressions {totalRecipeLikes}
                                     </Typography>
-                                    <Typography color={headingText}>
-                                        {totalRecipeLikes}
-                                    </Typography>
+                                    <Box
+                                        color={headingText}
+                                        display="flex"
+                                        justifyContent="flex-start"
+                                        gap="1rem"
+                                    >
+                                        Recipes
+                                        <Typography color={headingText}>
+                                            {recipesPosted}
+                                        </Typography>
+                                    </Box>
                                 </FlexBetween>
                             </Box>
                         </FlexBetween>
