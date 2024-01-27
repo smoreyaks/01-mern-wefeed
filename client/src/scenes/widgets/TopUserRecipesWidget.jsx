@@ -106,8 +106,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         return null;
     }
 
-    const { totalRecipeLikes, recipesPosted } = user;
+    const { totalRecipeLikes, userRecipeList } = user;
+    const recipesPosted = user.userRecipeList.length;
+
     console.log("totalRecipeLikes:", user);
+    console.log("recipesPosted:", user.userRecipeList);
     return (
         // <>
         <WidgetWrapper>
