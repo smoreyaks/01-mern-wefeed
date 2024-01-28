@@ -36,6 +36,7 @@ import {
     Typography,
     useTheme,
     Tooltip,
+    Zoom,
     SvgIcon,
     Badge,
     ToggleButton,
@@ -53,6 +54,7 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import StepsList from "../../components/StepsList";
 // import ImageBadge from "../../components/ImageBadge";
 import Notes from "../../components/Notes";
+import SocialShareButton from "../../components/SocialShareButton";
 
 const RecipePostWidget = ({
     _id,
@@ -224,7 +226,13 @@ const RecipePostWidget = ({
                     {recipeTitle}
                 </Typography>
 
-                <Tooltip title="Notes" enterDelay="500">
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Notes"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
                     <ToggleButton
                         onClick={() => setNotesOpen(!notesOpen)}
                         sx={{
@@ -301,7 +309,13 @@ const RecipePostWidget = ({
                         }}
                     >
                         {/* Prep Time */}
-                        <Tooltip title="Preparation Time" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Preparation Time"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <Box
                                 sx={{
                                     backgroundColor: recipeStepsPanel,
@@ -333,7 +347,13 @@ const RecipePostWidget = ({
                         </Tooltip>
 
                         {/* Cook Time */}
-                        <Tooltip title="Cook Time" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Cook Time"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <Box
                                 sx={{
                                     backgroundColor: recipeStepsPanel,
@@ -364,7 +384,13 @@ const RecipePostWidget = ({
                         </Tooltip>
 
                         {/* Servings */}
-                        <Tooltip title="Number of Servings" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Number of Servings"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <Box
                                 sx={{
                                     backgroundColor: recipeStepsPanel,
@@ -383,7 +409,13 @@ const RecipePostWidget = ({
                         </Tooltip>
 
                         {/* Spice Level */}
-                        <Tooltip title="Spice Level" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Spice Level"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <Box
                                 sx={{
                                     backgroundColor: recipeStepsPanel,
@@ -439,7 +471,13 @@ const RecipePostWidget = ({
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
                 <FlexBetween gap="0.3rem">
-                    <Tooltip title="Like Recipe" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Like Recipe"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             size="medium"
                             fullwidth
@@ -467,7 +505,13 @@ const RecipePostWidget = ({
 
                 {/* Recommendations */}
                 <FlexBetween gap="0.3rem">
-                    <Tooltip title="Recommend Recipe" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Recommend Recipe"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             size="medium"
                             fullwidth
@@ -498,7 +542,13 @@ const RecipePostWidget = ({
 
                 {/* Comments */}
                 <FlexBetween gap="0.3rem">
-                    <Tooltip title="Show Comments" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Show Comments"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             size="medium"
                             fullwidth
@@ -522,7 +572,13 @@ const RecipePostWidget = ({
 
                 {/* Save Recipe to List */}
                 <FlexBetween gap="0.3rem">
-                    <Tooltip title="Save Recipe" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Save Recipe"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             size="medium"
                             fullwidth
@@ -549,7 +605,13 @@ const RecipePostWidget = ({
 
                 {/* Share Recipe */}
                 <FlexBetween gap="0.3rem">
-                    <Tooltip title="Share Recipe" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Share Recipe"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             size="medium"
                             fullwidth
@@ -564,7 +626,8 @@ const RecipePostWidget = ({
                                 },
                             }}
                         >
-                            <ShareOutlined />
+                            {/* <ShareOutlined /> */}
+                            <SocialShareButton />
                         </Button>
                     </Tooltip>
                 </FlexBetween>
