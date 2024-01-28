@@ -11,7 +11,14 @@ import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
 // Mui Components
-import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
+import {
+    Box,
+    Button,
+    Typography,
+    useTheme,
+    Tooltip,
+    Zoom,
+} from "@mui/material";
 
 // Redux - Local State
 import { useDispatch, useSelector } from "react-redux";
@@ -134,13 +141,25 @@ const Friend = ({
                 >
                     {isFriend ? (
                         <FlexBetween>
-                            <Tooltip title="Unfollow User" enterDelay="500">
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Unfollow User"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
+                            >
                                 <PersonRemoveAlt1Icon fontSize="small" />
                             </Tooltip>
                         </FlexBetween>
                     ) : (
                         <FlexBetween>
-                            <Tooltip title="Follow User" enterDelay="500">
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Follow User"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
+                            >
                                 <PersonAddAlt1Icon fontSize="small" />
                             </Tooltip>
                         </FlexBetween>
