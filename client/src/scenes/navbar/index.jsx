@@ -13,6 +13,7 @@ import {
     FormControl,
     useTheme,
     Tooltip,
+    Zoom,
     useMediaQuery,
 } from "@mui/material";
 
@@ -144,7 +145,13 @@ const Navbar = ({ userId, themeColors }) => {
                             // sx={{ fontSize: "25px" }}
                         >
                             {theme.palette.default.mode === "dark" ? (
-                                <Tooltip title="Dark Mode" enterDelay="500">
+                                <Tooltip
+                                    TransitionComponent={Zoom}
+                                    placement="top"
+                                    title="Dark Mode"
+                                    enterDelay="500"
+                                    sx={{ fontSize: "1rem" }}
+                                >
                                     <DarkMode
                                         sx={{
                                             color: headingText,
@@ -153,7 +160,13 @@ const Navbar = ({ userId, themeColors }) => {
                                     />
                                 </Tooltip>
                             ) : (
-                                <Tooltip title="Light Mode" enterDelay="500">
+                                <Tooltip
+                                    TransitionComponent={Zoom}
+                                    placement="top"
+                                    title="Light Mode"
+                                    enterDelay="500"
+                                    sx={{ fontSize: "1rem" }}
+                                >
                                     <LightMode
                                         sx={{
                                             color: textHover,
@@ -185,7 +198,13 @@ const Navbar = ({ userId, themeColors }) => {
                         </IconButton> */}
 
                         {/* User Profile */}
-                        <Tooltip title="User Profile" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="User Profile"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <IconButton
                                 onClick={() => {
                                     navigate(`/profile/${userId}`);
@@ -201,7 +220,13 @@ const Navbar = ({ userId, themeColors }) => {
                         </Tooltip>
 
                         {/* Log Out Icon */}
-                        <Tooltip title="Log Out" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Log Out"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <IconButton onClick={() => dispatch(setLogout())}>
                                 <LogoutIcon
                                     sx={{
