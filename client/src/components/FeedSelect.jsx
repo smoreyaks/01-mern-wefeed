@@ -21,7 +21,14 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
-import { Box, Button, Typography, useTheme, Tooltip } from "@mui/material";
+import {
+    Box,
+    Button,
+    Typography,
+    useTheme,
+    Tooltip,
+    Zoom,
+} from "@mui/material";
 
 // Check button style
 const FeedSelect = ({ themeColors }) => {
@@ -107,7 +114,13 @@ const FeedSelect = ({ themeColors }) => {
                     }}
                 >
                     {/* All Recipes */}
-                    <Tooltip title="All Recipes">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="All Recipes"
+                        enterDelay="500"
+                        fontSize="1rem"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
@@ -134,7 +147,12 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
 
                     {/* Main Dish Recipes */}
-                    <Tooltip title="Main Dishes">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Main Dishes"
+                        enterDelay="500"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
@@ -151,7 +169,12 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
 
                     {/* Appetiser Recipes */}
-                    <Tooltip title="Appetisers">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Appetisers"
+                        enterDelay="500"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
@@ -169,7 +192,12 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
 
                     {/* Breakfast Recipes */}
-                    <Tooltip title="Breakfast Dishes">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Breakfast Dishes"
+                        enterDelay="500"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
@@ -187,7 +215,12 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
 
                     {/* Dessert Recipes */}
-                    <Tooltip title="Desserts">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Desserts"
+                        enterDelay="500"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
@@ -205,7 +238,12 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
 
                     {/* Drinks */}
-                    <Tooltip title="Drinks & Cocktails">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Drinks & Cocktails"
+                        enterDelay="500"
+                    >
                         <Button
                             sx={{
                                 backgroundColor: buttonLight2,
