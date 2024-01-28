@@ -527,17 +527,20 @@ export const themeSettings = (mode) => {
         },
 
         // Style Overrides
-        // components: {
-        //     // Name of the component
-        //     MuiButton: {
-        //         styleOverrides: {
-        //             // Name of the slot
-        //             root: {
-        //                 // Some CSS
-        //                 fontSize: "1rem",
-        //             },
-        //         },
-        //     },
-        // },
+        components: {
+            MuiTooltip: {
+                styleOverrides: {
+                    tooltip: {
+                        fontSize: "0.75rem",
+                        fontWeight: "bold",
+                        color: colorTokens.opaque[70],
+                        backgroundColor: colorTokens.cupcake.pink[300],
+
+                        // colorTokens.cupcake.pink[300],
+                        border: `1px solid ${colorTokens.opaque[70]}`,
+                    },
+                },
+            },
+        },
     };
 };
