@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { setThemeDefault, setThemeDinner, setThemeDessert } from "../state";
 
 // MUI Components
-import { Tooltip, IconButton, Box, useMediaQuery } from "@mui/material";
+import { Tooltip, Zoom, IconButton, Box, useMediaQuery } from "@mui/material";
 
 // MUI Icons
 import BrushIcon from "@mui/icons-material/Brush";
@@ -53,7 +53,13 @@ const ThemeSelect = ({ themeColors }) => {
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
     return (
-        <Tooltip title="Theme Select" enterDelay="500">
+        <Tooltip
+            TransitionComponent={Zoom}
+            placement="top"
+            title="Theme Select"
+            enterDelay="500"
+            sx={{ fontSize: "1rem" }}
+        >
             <IconButton
                 onClick={() => setIsThemeMenuToggled(!isThemeMenuToggled)}
             >
@@ -79,7 +85,13 @@ const ThemeSelect = ({ themeColors }) => {
                         }}
                     >
                         {/* Default Theme */}
-                        <Tooltip title="Default Theme" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Default Theme"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <IconButton
                                 onClick={() => dispatch(setThemeDefault())}
                                 sx={{
@@ -93,7 +105,13 @@ const ThemeSelect = ({ themeColors }) => {
                         </Tooltip>
 
                         {/* Dinner Theme */}
-                        <Tooltip title="Dinner Theme" enterDelay="500">
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Dinner Theme"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
                             <IconButton
                                 onClick={() => dispatch(setThemeDinner())}
                                 sx={{
@@ -108,9 +126,12 @@ const ThemeSelect = ({ themeColors }) => {
 
                         {/* Dessert Theme */}
                         <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
                             title="Dessert Theme"
                             enterDelay="500"
-                            sx={{ fontSize: "3rem" }}
+                            sx={{ fontSize: "1rem" }}
+                            // sx={{ fontSize: "3rem" }}
                         >
                             <IconButton
                                 onClick={() => dispatch(setThemeDessert())}
