@@ -22,6 +22,7 @@ import {
     Typography,
     Divider,
     Tooltip,
+    Zoom,
     Button,
     useTheme,
 } from "@mui/material";
@@ -185,13 +186,13 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 >
                     {isFriend ? (
                         <FlexBetween>
-                            <Tooltip title="Unfollow User" enterDelay="500">
+                            <Tooltip TransitionComponent={Zoom} placement="top" title="Unfollow User" enterDelay="500" >
                                 <PersonRemoveOutlined />
                             </Tooltip>
                         </FlexBetween>
                     ) : (
                         <FlexBetween>
-                            <Tooltip title="Follow User" enterDelay="500">
+                            <Tooltip TransitionComponent={Zoom} placement="top" title="Follow User" enterDelay="500" >
                                 <PersonAddOutlined />
                             </Tooltip>
                         </FlexBetween>
@@ -200,7 +201,13 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             )} */}
             {/* <FlexBetween> */}
             <FlexBetween mb="0.5rem">
-                <Tooltip title="Following" enterDelay="500">
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Following"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
                     <Box
                         color={headingText}
                         display="flex"
@@ -213,7 +220,13 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         </Typography>
                     </Box>
                 </Tooltip>
-                <Tooltip title="Followers" enterDelay="500">
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Followers"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
                     <Box
                         color={headingText}
                         display="flex"
@@ -249,7 +262,13 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
 
             <Divider />
             {/* Reputation Stars */}
-            <Tooltip title="Reputation" enterDelay="500">
+            <Tooltip
+                TransitionComponent={Zoom}
+                placement="top"
+                title="Reputation"
+                enterDelay="500"
+                sx={{ fontSize: "1rem" }}
+            >
                 <Box
                     fontSize="medium"
                     my="0.5rem"
