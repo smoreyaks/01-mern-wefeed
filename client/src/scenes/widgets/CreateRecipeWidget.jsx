@@ -13,6 +13,7 @@ import {
     IconButton,
     useMediaQuery,
     Tooltip,
+    Zoom,
 } from "@mui/material";
 
 // MUI Icons
@@ -187,7 +188,13 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
                     {/* Upload Image Icon */}
 
                     {/* Upload Image Icon */}
-                    <Tooltip title="Upload Image" enterDelay="500">
+                    <Tooltip
+                        TransitionComponent={Zoom}
+                        placement="top"
+                        title="Upload Image"
+                        enterDelay="500"
+                        sx={{ fontSize: "1rem" }}
+                    >
                         <Button
                             onClick={() => setIsImage(!isImage)}
                             sx={{
@@ -212,7 +219,13 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
                 </FlexBetween>
 
                 {/* Post Recipe */}
-                <Tooltip title="Post Recipe" enterDelay="500">
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Post Recipe"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
                     <Button
                         disabled={!recipe}
                         onClick={handleRecipe}
