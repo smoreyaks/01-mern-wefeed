@@ -15,7 +15,11 @@ export const authSlice = createSlice({
         // Login
         setLogin: (state, action) => {
             state.user = action.payload.user;
+            state.loggedInUser = action.payload.user;
+            state.loggedInUser.friends = action.payload.user.friends;
             state.token = action.payload.token;
+            console.log("STATE LOG IN USER:", state.loggedInUser);
+            console.log("STATE LOGGED IN FRIENDS:", state.loggedInUser.friends);
         },
 
         // Logout
@@ -42,6 +46,15 @@ export const authSlice = createSlice({
 
         // Get User Friends
         setFriends: (state, action) => {
+            if (state.user) {
+                state.user.friends = action.payload.friends;
+            } else {
+                console.error("user friends non-existent :(");
+            }
+        },
+
+        // Get User Friends
+        setLoggedInFriends: (state, action) => {
             if (state.user) {
                 state.user.friends = action.payload.friends;
             } else {
