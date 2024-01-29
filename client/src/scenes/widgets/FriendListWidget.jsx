@@ -37,10 +37,6 @@ const FriendListWidget = ({ userId, themeColors }) => {
         getUserFriends();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-    // if (friends.length > 0) {
-
-    // }
-
     console.log("FRIENDS TEST:", friends);
     return (
         <WidgetWrapper sx={{ minWidth: "16.7915rem" }}>
@@ -66,12 +62,13 @@ const FriendListWidget = ({ userId, themeColors }) => {
                             occupation={friend.occupation}
                             userPicturePath={friend.picturePath}
                             themeColors={themeColors}
+                            isProfile
                         />
                     ))}
                 </Box>
             ) : (
                 <Box display="flex" flexDirection="column" gap="1.5rem">
-                    <Typography>You aren't following anybody, yet..</Typography>
+                    <Typography>This account doesn't follow anyone</Typography>
                 </Box>
             )}
         </WidgetWrapper>
