@@ -30,12 +30,15 @@ const Friend = ({
     occupation,
     userPicturePath,
     themeColors,
+    isProfile = false,
 }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { _id } = useSelector((state) => state.user);
+
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
+    const loggedInFriends = useSelector((state) => state.loggedInUser.friends);
 
     // Theme
     // const { palette } = useTheme();
@@ -69,6 +72,16 @@ const Friend = ({
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 
+    const isEqual = (friends, loggedInUser) =>
+        JSON.stringify(friends) === JSON.stringify(loggedInUser);
+
+    console.log("IS EQUAL:", isEqual());
+
+    console.log("FRIEND - friends:", friends);
+    console.log("FRIEND - isFriend:", isFriend);
+    console.log("FRIEND ID:", friendId);
+    console.log("USER OBJECT:", loggedInFriends);
+
     const patchFriend = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/users/${_id}/${friendId}`,
@@ -83,6 +96,12 @@ const Friend = ({
         const data = await response.json();
         dispatch(setFriends({ friends: data }));
     };
+
+    {
+        console.log(
+            `https://server-vukx.onrender.com/users/${_id}/${friendId}`
+        );
+    }
 
     return (
         <FlexBetween>
@@ -113,8 +132,6 @@ const Friend = ({
                     </Typography>
                 </Box>
             </FlexBetween>
-            {/* {console.log("FRIEND ID:", friendId)}
-            {console.log("USER ID:", _id)} */}
             {friendId === _id ? (
                 <Box display="none" />
             ) : (
