@@ -70,10 +70,11 @@ const HomePage = () => {
         panelMainHover,
     };
 
+    // Media Query
     const isDesktopScreen = useMediaQuery("(min-width:1000px)");
-    const { _id, picturePath } = useSelector((state) => state.user);
-    // console.log("BG_IMAGE:", backgroundThemeImg);
 
+    // Local State
+    const { _id, picturePath } = useSelector((state) => state.user);
     // console.log("BG_ID:", _id);
     // console.log("BG_PICPATH:", picturePath);
 
