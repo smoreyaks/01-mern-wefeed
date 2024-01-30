@@ -21,6 +21,7 @@ import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOu
 import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import NoteIcon from "@mui/icons-material/Note";
 
 // Custom Icons
 import CookIcon from "../../components/svg/CookIcon";
@@ -249,7 +250,8 @@ const RecipePostWidget = ({
                             },
                         }}
                     >
-                        <TextSnippetOutlinedIcon />
+                        {/* <TextSnippetOutlinedIcon /> */}
+                        <NoteIcon />
                         {notesOpen ? <RemoveIcon /> : <AddIcon />}
                     </ToggleButton>
                 </Tooltip>
