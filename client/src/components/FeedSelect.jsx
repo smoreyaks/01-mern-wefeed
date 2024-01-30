@@ -16,7 +16,7 @@ import WidgetWrapper from "./WidgetWrapper";
 
 // Custom Icons
 import AppetiserIcon from "./svg/AppetiserIcon";
-import MainIcon from "./svg/MainIcon";
+import MainDishIcon from "./svg/MainDishIcon";
 import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
@@ -164,7 +164,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <MainIcon sx={{ fill: headingText }} />
+                            <MainDishIcon sx={{ fill: headingText }} />
                         </Button>
                     </Tooltip>
 
