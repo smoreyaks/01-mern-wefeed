@@ -40,7 +40,7 @@ function App() {
     const backgroundThemeColor = theme.palette.default.background.default;
 
     // State
-    const [user, setUser] = useState(null);
+    const [userObject, setUserObject] = useState(null);
 
     const getUser = async () => {
         const response = await fetch(
@@ -51,9 +51,7 @@ function App() {
             }
         );
         const data = await response.json();
-        setUser(data);
-
-        // console.log("UserWidget.js - DATA - ", data);
+        setUserObject(data);
     };
 
     useEffect(() => {
@@ -61,20 +59,9 @@ function App() {
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // Typically have loading component while user waits
-    if (!user) {
+    if (!userObject) {
         return null;
     }
-
-    const {
-        firstName,
-        lastName,
-        location,
-        occupation,
-        viewedProfile,
-        impressions,
-        friends,
-        // backgroundThemeImg,
-    } = user;
 
     return (
         <CardMedia
