@@ -16,10 +16,16 @@ import {
     Icon,
     useTheme,
     CircularProgress,
+    Tooltip,
+    Zoom,
 } from "@mui/material";
 
 // MUI Icons
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+
+// Custom Icons
+import RecipeIcon from "../../components/svg/RecipeIcon";
+import ChefHatIcon from "../../components/svg/ChefHatIcon";
 
 const TopUserRecipesWidget = ({ themeColors }) => {
     // ID
@@ -106,9 +112,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         return null;
     }
 
-    const { totalRecipeLikes, userRecipeList } = user;
-    const recipesPosted = user.userRecipeList.length;
-
     console.log("totalRecipeLikes:", user);
     console.log("recipesPosted:", user.userRecipeList);
     return (
@@ -117,7 +120,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
             {/* Top Recipe Stat Title */}
             {user ? (
                 <Box>
-                    <FlexBetween gap="0.5rem" pb="1.1rem">
+                    <FlexBetween gap="0.5rem" pb="0rem">
                         <FlexBetween gap="1rem">
                             <Box>
                                 <Typography
@@ -135,22 +138,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                 >
                                     Most Popular
                                 </Typography>
-                                <FlexBetween gap="0.5rem">
-                                    <Typography color={headingText}>
-                                        Recipe Impressions {totalRecipeLikes}
-                                    </Typography>
-                                    <Box
-                                        color={headingText}
-                                        display="flex"
-                                        justifyContent="flex-start"
-                                        gap="1rem"
-                                    >
-                                        Recipes
-                                        <Typography color={headingText}>
-                                            {recipesPosted}
-                                        </Typography>
-                                    </Box>
-                                </FlexBetween>
+                                <Divider />
                             </Box>
                         </FlexBetween>
                     </FlexBetween>
@@ -188,7 +176,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: bronze }} />
                                 <Typography color={headingText}>
-                                    Third Recipe{" "}
+                                    Third Recipe
                                 </Typography>
                             </FlexBetween>
                             <Typography>3RD</Typography>
@@ -212,9 +200,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         thickness={18}
                         sx={{
                             color: buttonHover,
-                            // display: "flex",
-                            // justifyContent: "center",
-                            // alignItems: "center",
                         }}
                     />
                 </Box>
