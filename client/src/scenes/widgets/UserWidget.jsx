@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
     ManageAccountsOutlined,
     EditOutlined,
-    LocationOnOutlined,
+    // LocationOnIcon,
     WorkOutlineOutlined,
     StarHalf,
     StarOutline,
@@ -15,7 +15,7 @@ import {
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import StarRateIcon from "@mui/icons-material/StarRate";
-
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 // MUI Comnponents
 import {
     Box,
@@ -32,6 +32,10 @@ import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
 
+// Custom Icons
+import ChefHatIcon from "../../components/svg/ChefHatIcon";
+import RecipeIcon from "../../components/svg/RecipeIcon";
+
 // Local State
 import { setFriends } from "../../state";
 
@@ -44,6 +48,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
 
     // Local State
     const dispatch = useDispatch();
+    const loggedInUserObject = useSelector((state) => state.user);
+
     const { _id } = useSelector((state) => state.user);
     const friends = useSelector((state) => state.user.friends);
     const isFriend = friends.find((friend) => friend._id === friends.id);
@@ -115,15 +121,18 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         return null;
     }
 
+    // Destructure Fetch User Data
+
     const {
         firstName,
         lastName,
         location,
         occupation,
         viewedProfile,
-        impressions,
-        // friends,
+        totalRecipeLikes,
+        userRecipeList,
     } = user;
+    const recipesPosted = userRecipeList.length;
 
     return (
         <WidgetWrapper>
@@ -199,7 +208,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     )}
                 </Button>
             )} */}
-            {/* <FlexBetween> */}
+
             <FlexBetween mb="0.5rem">
                 <Tooltip
                     TransitionComponent={Zoom}
@@ -240,7 +249,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     </Box>
                 </Tooltip>
             </FlexBetween>
-            {/* </FlexBetween> */}
 
             <Divider />
 
@@ -262,6 +270,62 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
 
             <Divider />
             {/* Reputation Stars */}
+            <Box>
+                {/* Repuation Score */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Reputation Score"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
+                    <FlexBetween
+                        display="flex"
+                        justifyContent="space-between"
+                        alignItems="center"
+                        gap="1rem"
+                        py="0.5rem"
+                    >
+                        <ChefHatIcon
+                            sx={{
+                                width: "1rem",
+                                height: "1rem",
+                                fill: headingText,
+                            }}
+                        />
+                        <Typography color={headingText}>
+                            {totalRecipeLikes || 0}
+                        </Typography>
+                    </FlexBetween>
+                </Tooltip>
+
+                {/* Recipes Posted */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Recipes Posted"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
+                    <FlexBetween
+                        display="flex"
+                        justifyContent="flex-start"
+                        gap="1rem"
+                        pb="0.5rem"
+                    >
+                        <RecipeIcon
+                            sx={{
+                                width: "1rem",
+                                height: "1rem",
+                                fill: headingText,
+                            }}
+                        />
+                        <Typography color={headingText}>
+                            {recipesPosted}
+                        </Typography>
+                    </FlexBetween>
+                </Tooltip>
+            </Box>
             <Tooltip
                 TransitionComponent={Zoom}
                 placement="top"
@@ -290,7 +354,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             {/* Second Row */}
             <Box p="0.5rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-                    <LocationOnOutlined
+                    <LocationOnIcon
                         fontSize="small"
                         sx={{ color: whiteText }}
                     />
