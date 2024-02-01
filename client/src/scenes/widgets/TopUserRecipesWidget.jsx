@@ -23,10 +23,6 @@ import {
 // MUI Icons
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
-// Custom Icons
-import RecipeIcon from "../../components/svg/RecipeIcon";
-import ChefHatIcon from "../../components/svg/ChefHatIcon";
-
 const TopUserRecipesWidget = ({ themeColors }) => {
     // ID
     const { userId } = useParams();
