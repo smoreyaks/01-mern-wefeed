@@ -211,6 +211,7 @@ const RecipePostWidget = ({
                         : "0.75rem ",
                 }}
             >
+                {/* Recipe Title */}
                 <Typography
                     color={headingText}
                     variant="h5"
@@ -227,6 +228,7 @@ const RecipePostWidget = ({
                     {recipeTitle}
                 </Typography>
 
+                {/* Recipe Notes & Annotations */}
                 <Tooltip
                     TransitionComponent={Zoom}
                     placement="top"
@@ -614,7 +616,7 @@ const RecipePostWidget = ({
                         enterDelay="500"
                         sx={{ fontSize: "1rem" }}
                     >
-                        <Button
+                        {/* <Button
                             size="medium"
                             fullwidth
                             sx={{
@@ -627,10 +629,10 @@ const RecipePostWidget = ({
                                     backgroundColor: buttonHover,
                                 },
                             }}
-                        >
-                            {/* <ShareOutlined /> */}
-                            <SocialShareButton />
-                        </Button>
+                        > */}
+                        {/* <ShareOutlined /> */}
+                        <SocialShareButton themeColors={themeColors} />
+                        {/* </Button> */}
                     </Tooltip>
                 </FlexBetween>
             </FlexBetween>
