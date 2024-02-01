@@ -1,6 +1,6 @@
 import { SvgIcon } from "@mui/material";
 
-const CookIcon = (props) => {
+const MainDishIcon = (props) => {
     return (
         <SvgIcon {...props}>
             <svg
@@ -26,4 +26,4 @@ const CookIcon = (props) => {
     );
 };
 
-export default CookIcon;
+export default MainDishIcon;
