@@ -148,6 +148,9 @@ const SocialShareButton = ({ themeColors }) => {
                                         sx={{
                                             borderTopLeftRadius: "0.75rem",
                                             borderTopRightRadius: "0.75rem",
+                                            "&:hover": {
+                                                backgroundColor: buttonHover,
+                                            },
                                         }}
                                     >
                                         <ListItemIcon>
@@ -158,13 +161,26 @@ const SocialShareButton = ({ themeColors }) => {
                                     <ListItem
                                         id="twitter"
                                         onClick={handleShare}
+                                        sx={{
+                                            "&:hover": {
+                                                backgroundColor: buttonHover,
+                                            },
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <TwitterIcon />
                                         </ListItemIcon>
                                         <ListItemText primary="Twitter" />
                                     </ListItem>
-                                    <ListItem id="reddit" onClick={handleShare}>
+                                    <ListItem
+                                        id="reddit"
+                                        onClick={handleShare}
+                                        sx={{
+                                            "&:hover": {
+                                                backgroundColor: buttonHover,
+                                            },
+                                        }}
+                                    >
                                         <ListItemIcon>
                                             <RedditIcon />
                                         </ListItemIcon>
@@ -176,6 +192,10 @@ const SocialShareButton = ({ themeColors }) => {
                                         sx={{
                                             borderBottomLeftRadius: "0.75rem",
                                             borderBottomRightRadius: "0.75rem",
+
+                                            "&:hover": {
+                                                backgroundColor: buttonHover,
+                                            },
                                         }}
                                     >
                                         <ListItemIcon>
