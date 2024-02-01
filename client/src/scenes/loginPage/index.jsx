@@ -4,6 +4,9 @@ import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 // Imported Components
 import Form from "./Form";
 
+// Font Icons
+import PrequelShadowA from "../../components/svg/PrequelShadowA";
+
 const LoginPage = () => {
     const { palette } = useTheme();
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
@@ -43,6 +46,7 @@ const LoginPage = () => {
                     textAlign="center"
                 >
                     WeFeed
+                    <PrequelShadowA />
                 </Typography>
 
                 <Box
