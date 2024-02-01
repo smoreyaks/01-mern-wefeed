@@ -1449,7 +1449,7 @@ export const recipes = [
 
         equipment: ["Blender", "Tall Glass", "Knife", "Teaspoon"],
         prepTime: "5 mins",
-        cookTime: "0",
+        cookTime: "0 mins",
         servings: 1,
         spiceLevel: 0,
         steps: [
