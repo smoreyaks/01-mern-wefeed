@@ -1,3 +1,6 @@
+// React Packages
+import { useState } from "react";
+
 // Custom MUI Package
 import PopupState, { bindToggle, bindPopper } from "material-ui-popup-state";
 
@@ -5,9 +8,8 @@ import PopupState, { bindToggle, bindPopper } from "material-ui-popup-state";
 import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Popper from "@mui/material/Popper";
-import { List } from "@mui/material";
+import { Box, List, ToggleButton, Button, IconButton } from "@mui/material";
 import { ListItem } from "@mui/material";
 import { ListItemIcon } from "@mui/material";
 import { ListItemText } from "@mui/material";
@@ -20,6 +22,10 @@ import RedditIcon from "@mui/icons-material/Reddit";
 import LinkIcon from "@mui/icons-material/Link";
 import ShareOutlined from "@mui/icons-material/ShareOutlined";
 
+// Event Listener
+import { ClickAwayListener } from "@mui/base/ClickAwayListener";
+
+// Share to External Social Platforms Function Handler
 const handleShare = (e) => {
     e.preventDefault();
 
@@ -56,7 +62,13 @@ const open = (socialLink) => {
     window.open(socialLink, "_blank");
 };
 
-export default function PopperPopupState({ themeColors }) {
+const SocialShareButton = ({ themeColors }) => {
+    const [shareButtonOpen, setShareButtonOpen] = useState(false);
+    //  CLick Away Function Handler
+    const handleClickAway = () => {
+        setShareButtonOpen(false);
+    };
+
     // Theme Destructure
     const {
         primary,
@@ -83,78 +95,102 @@ export default function PopperPopupState({ themeColors }) {
     } = themeColors || {};
 
     return (
-        <PopupState
-            variant="popper"
-            popupId="demo-popup-popper"
-            sx={{ backgroundColor: buttonLight2, color: buttonLight2 }}
-        >
-            {(popupState) => (
-                <div>
-                    <Button variant="contained" {...bindToggle(popupState)}>
-                        <ShareOutlined />
-                    </Button>
-                    <Popper {...bindPopper(popupState)} transition>
-                        {({ TransitionProps }) => (
-                            <Fade {...TransitionProps} timeout={350}>
-                                <Paper
+        <ClickAwayListener onClickAway={handleClickAway}>
+            <Button
+                size="medium"
+                fullwidth
+                onClick={() => setShareButtonOpen(!shareButtonOpen)}
+                sx={{
+                    borderRadius: "3rem",
+                    width: "6rem",
+                    color: headingText,
+                    "&:hover": {
+                        backgroundColor: buttonHover,
+                    },
+                }}
+            >
+                <ShareOutlined />
+                {shareButtonOpen && (
+                    <Box
+                        transition
+                        // // maxWidth="300px"
+                        // // minWidth="200px"
+                    >
+                        {/* Social Share Pop Up */}
+                        <Paper
+                            sx={{
+                                borderRadius: "0.75rem",
+                                backgroundColor: backgroundMain,
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                position: "absolute",
+                                left: "-2rem",
+                                bottom: "3.5rem",
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    p: 1,
+                                }}
+                            >
+                                <List
+                                    dense={true}
                                     sx={{
+                                        backgroundColor: backgroundPrimary,
                                         borderRadius: "0.75rem",
+                                        p: "0rem",
                                     }}
                                 >
-                                    <Typography sx={{ p: 1 }}>
-                                        <List
-                                            dense={true}
-
-                                            // className={classes.paper}
-                                        >
-                                            <ListItem
-                                                button
-                                                id="facebook"
-                                                onClick={handleShare}
-                                            >
-                                                <ListItemIcon>
-                                                    <FacebookIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Facebook" />
-                                            </ListItem>
-                                            <ListItem
-                                                button
-                                                id="twitter"
-                                                onClick={handleShare}
-                                            >
-                                                <ListItemIcon>
-                                                    <TwitterIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Twitter" />
-                                            </ListItem>
-                                            <ListItem
-                                                button
-                                                id="reddit"
-                                                onClick={handleShare}
-                                            >
-                                                <ListItemIcon>
-                                                    <RedditIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Reddit" />
-                                            </ListItem>
-                                            <ListItem
-                                                button
-                                                id="copy"
-                                                onClick={handleShare}
-                                            >
-                                                <ListItemIcon>
-                                                    <LinkIcon />
-                                                </ListItemIcon>
-                                                <ListItemText primary="Copy Link" />
-                                            </ListItem>
-                                        </List>
-                                    </Typography>
-                                </Paper>
-                            </Fade>
-                        )}
-                    </Popper>
-                </div>
-            )}
-        </PopupState>
+                                    <ListItem
+                                        id="facebook"
+                                        onClick={handleShare}
+                                        sx={{
+                                            borderTopLeftRadius: "0.75rem",
+                                            borderTopRightRadius: "0.75rem",
+                                        }}
+                                    >
+                                        <ListItemIcon>
+                                            <FacebookIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Facebook" />
+                                    </ListItem>
+                                    <ListItem
+                                        id="twitter"
+                                        onClick={handleShare}
+                                    >
+                                        <ListItemIcon>
+                                            <TwitterIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Twitter" />
+                                    </ListItem>
+                                    <ListItem id="reddit" onClick={handleShare}>
+                                        <ListItemIcon>
+                                            <RedditIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Reddit" />
+                                    </ListItem>
+                                    <ListItem
+                                        id="copy"
+                                        onClick={handleShare}
+                                        sx={{
+                                            borderBottomLeftRadius: "0.75rem",
+                                            borderBottomRightRadius: "0.75rem",
+                                        }}
+                                    >
+                                        <ListItemIcon>
+                                            <LinkIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Copy Link" />
+                                    </ListItem>
+                                </List>
+                            </Typography>
+                        </Paper>
+                    </Box>
+                )}
+            </Button>
+        </ClickAwayListener>
     );
-}
+};
+
+export default SocialShareButton;
