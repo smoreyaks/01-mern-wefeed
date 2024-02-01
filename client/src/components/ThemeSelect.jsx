@@ -63,7 +63,7 @@ const ThemeSelect = ({ themeColors }) => {
             <IconButton
                 onClick={() => setIsThemeMenuToggled(!isThemeMenuToggled)}
             >
-                <BrushIcon fontSize="25px" />
+                <BrushIcon fontSize="medium" />
 
                 {/* Theme Menu */}
                 {isDesktopScreen && isThemeMenuToggled && (
