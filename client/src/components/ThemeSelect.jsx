@@ -87,7 +87,7 @@ const ThemeSelect = ({ themeColors }) => {
                             borderRadius="2rem"
                             sx={{
                                 display: "flex",
-                                justifyContent: "space-between",
+                                justifyContent: "space-evenly",
                                 alignItems: "center",
                             }}
                         >
@@ -151,16 +151,6 @@ const ThemeSelect = ({ themeColors }) => {
                                     <CakeOutlinedIcon />
                                 </IconButton>
                             </Tooltip>
-
-                            {/* Close Icon */}
-                            <IconButton
-                                onClick={() =>
-                                    setIsThemeMenuToggled(!isThemeMenuToggled)
-                                }
-                                sx={{ p: "0.5rem", m: "0.5rem" }}
-                            >
-                                <Close />
-                            </IconButton>
                         </Box>
                     )}
                 </IconButton>
