@@ -17,6 +17,8 @@ import CakeOutlinedIcon from "@mui/icons-material/CakeOutlined";
 import ChairOutlinedIcon from "@mui/icons-material/ChairOutlined";
 import { Close } from "@mui/icons-material";
 
+import { ClickAwayListener } from "@mui/material";
+
 // // State
 // import { setThemeDefault, setThemeDinner, setThemeDessert } from "../../state";
 
@@ -52,6 +54,10 @@ const ThemeSelect = ({ themeColors }) => {
     const [isThemeMenuToggled, setIsThemeMenuToggled] = useState(false);
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
+    const handleClickAway = () => {
+        setIsThemeMenuToggled(false);
+    };
+
     return (
         <Tooltip
             TransitionComponent={Zoom}
@@ -60,103 +66,105 @@ const ThemeSelect = ({ themeColors }) => {
             enterDelay="500"
             sx={{ fontSize: "1rem" }}
         >
-            <IconButton
-                onClick={() => setIsThemeMenuToggled(!isThemeMenuToggled)}
-            >
-                <BrushIcon fontSize="medium" />
+            <ClickAwayListener onClickAway={handleClickAway}>
+                <IconButton
+                    onClick={() => setIsThemeMenuToggled(!isThemeMenuToggled)}
+                >
+                    <BrushIcon fontSize="medium" />
 
-                {/* Theme Menu */}
-                {isDesktopScreen && isThemeMenuToggled && (
-                    <Box
-                        position="fixed"
-                        top="5%"
-                        height="3rem"
-                        width="10rem"
-                        zIndex="11"
-                        maxWidth="300px"
-                        minWidth="200px"
-                        backgroundColor={panelMainHover}
-                        border={`2px solid ${buttonLight2}`}
-                        borderRadius="2rem"
-                        sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                        }}
-                    >
-                        {/* Default Theme */}
-                        <Tooltip
-                            TransitionComponent={Zoom}
-                            placement="top"
-                            title="Default Theme"
-                            enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
+                    {/* Theme Menu */}
+                    {isDesktopScreen && isThemeMenuToggled && (
+                        <Box
+                            position="fixed"
+                            top="5%"
+                            height="3rem"
+                            width="10rem"
+                            zIndex="11"
+                            maxWidth="300px"
+                            minWidth="200px"
+                            backgroundColor={panelMainHover}
+                            border={`2px solid ${buttonLight2}`}
+                            borderRadius="2rem"
+                            sx={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                            }}
                         >
-                            <IconButton
-                                onClick={() => dispatch(setThemeDefault())}
-                                sx={{
-                                    p: "0.5rem",
-                                    m: "0.25rem 0.125rem 0.25rem 0.5rem",
-                                    borderRadius: "2rem",
-                                }}
+                            {/* Default Theme */}
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Default Theme"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
                             >
-                                <ChairOutlinedIcon />
-                            </IconButton>
-                        </Tooltip>
+                                <IconButton
+                                    onClick={() => dispatch(setThemeDefault())}
+                                    sx={{
+                                        p: "0.5rem",
+                                        m: "0.25rem 0.125rem 0.25rem 0.5rem",
+                                        borderRadius: "2rem",
+                                    }}
+                                >
+                                    <ChairOutlinedIcon />
+                                </IconButton>
+                            </Tooltip>
 
-                        {/* Dinner Theme */}
-                        <Tooltip
-                            TransitionComponent={Zoom}
-                            placement="top"
-                            title="Dinner Theme"
-                            enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
-                        >
-                            <IconButton
-                                onClick={() => dispatch(setThemeDinner())}
-                                sx={{
-                                    p: "0.5rem",
-                                    m: "0.25rem 0.125rem 0.25rem",
-                                    borderRadius: "2rem",
-                                }}
+                            {/* Dinner Theme */}
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Dinner Theme"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
                             >
-                                <RamenDiningOutlinedIcon />
-                            </IconButton>
-                        </Tooltip>
+                                <IconButton
+                                    onClick={() => dispatch(setThemeDinner())}
+                                    sx={{
+                                        p: "0.5rem",
+                                        m: "0.25rem 0.125rem 0.25rem",
+                                        borderRadius: "2rem",
+                                    }}
+                                >
+                                    <RamenDiningOutlinedIcon />
+                                </IconButton>
+                            </Tooltip>
 
-                        {/* Dessert Theme */}
-                        <Tooltip
-                            TransitionComponent={Zoom}
-                            placement="top"
-                            title="Dessert Theme"
-                            enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
-                            // sx={{ fontSize: "3rem" }}
-                        >
-                            <IconButton
-                                onClick={() => dispatch(setThemeDessert())}
-                                sx={{
-                                    p: "0.5rem",
-                                    m: "0.25rem 0.125rem 0.25rem",
-                                    borderRadius: "2rem",
-                                }}
+                            {/* Dessert Theme */}
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Dessert Theme"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
+                                // sx={{ fontSize: "3rem" }}
                             >
-                                <CakeOutlinedIcon />
-                            </IconButton>
-                        </Tooltip>
+                                <IconButton
+                                    onClick={() => dispatch(setThemeDessert())}
+                                    sx={{
+                                        p: "0.5rem",
+                                        m: "0.25rem 0.125rem 0.25rem",
+                                        borderRadius: "2rem",
+                                    }}
+                                >
+                                    <CakeOutlinedIcon />
+                                </IconButton>
+                            </Tooltip>
 
-                        {/* Close Icon */}
-                        <IconButton
-                            onClick={() =>
-                                setIsThemeMenuToggled(!isThemeMenuToggled)
-                            }
-                            sx={{ p: "0.5rem", m: "0.5rem" }}
-                        >
-                            <Close />
-                        </IconButton>
-                    </Box>
-                )}
-            </IconButton>
+                            {/* Close Icon */}
+                            <IconButton
+                                onClick={() =>
+                                    setIsThemeMenuToggled(!isThemeMenuToggled)
+                                }
+                                sx={{ p: "0.5rem", m: "0.5rem" }}
+                            >
+                                <Close />
+                            </IconButton>
+                        </Box>
+                    )}
+                </IconButton>
+            </ClickAwayListener>
         </Tooltip>
     );
 };
