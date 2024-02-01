@@ -35,7 +35,7 @@ const handleShare = (e) => {
 
     switch (e.currentTarget.id) {
         case "facebook":
-            link = `https://www.facebook.com/sharer/sharer.php?u=${ahref}`;
+            link = `https://www.facebook.com/sharer/sharer.php?u=${encodedAhref}`;
             open(link);
             break;
 
