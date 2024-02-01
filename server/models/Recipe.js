@@ -17,8 +17,16 @@ const RecipeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    userPicturePath: String,
+    userPicturePath: {
+        type: String,
+        default: "",
+    },
+
     recipeTitle: {
+        type: String,
+        required: true,
+    },
+    recipeType: {
         type: String,
         required: true,
     },
@@ -41,13 +49,14 @@ const RecipeSchema = mongoose.Schema({
             },
         ],
     },
-    // ingredientNum: Number,
+
     equipment: {
         type: Array,
         default: [],
+        required: true,
     },
-    prepTime: { type: String, default: "" },
-    cookTime: { type: String, default: "" },
+    prepTime: { type: String, default: "", required: true },
+    cookTime: { type: String, default: "", required: true },
     servings: {
         type: Number,
         default: "",
