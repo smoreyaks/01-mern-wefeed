@@ -1,11 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    // Theme Light Dark Mode State
     mode: "light",
+    theme: "default",
+
+    // User State
     user: null,
     token: null,
+
+    // Recipes State
     recipes: [],
-    theme: "default",
 };
 
 export const authSlice = createSlice({
@@ -18,8 +23,8 @@ export const authSlice = createSlice({
             state.loggedInUser = action.payload.user;
             state.loggedInUser.friends = action.payload.user.friends;
             state.token = action.payload.token;
-            console.log("STATE LOG IN USER:", state.loggedInUser);
-            console.log("STATE LOGGED IN FRIENDS:", state.loggedInUser.friends);
+            // console.log("STATE LOG IN USER:", state.loggedInUser);
+            // console.log("STATE LOGGED IN FRIENDS:", state.loggedInUser.friends);
         },
 
         // Logout
