@@ -1,14 +1,8 @@
+// React Packages
 import { useState } from "react";
-// import { useAuthContext } from "../../hooks/useAuthContext";
 
-// Styles
-// import "./Dashboard.css";
-
-// Components
-// import ProjectList from "../../components/ProjectList";
-// import ProjectFilter from "./ProjectFilter";
-
-// import userEvent from "@testing-library/user-event";
+// Redux
+import { useSelector, useDispatch } from "react-redux";
 
 // Components
 import FlexBetween from "./FlexBetween";
@@ -21,6 +15,7 @@ import DessertIcon from "./svg/DessertIcon";
 import DrinkIcon from "./svg/DrinkIcon";
 import BreakfastIcon from "./svg/BreakfastIcon";
 
+// MUI Components
 import {
     Box,
     Button,
@@ -30,14 +25,15 @@ import {
     Zoom,
 } from "@mui/material";
 
-// Check button style
 const FeedSelect = ({ themeColors }) => {
     // State
-    const [filter, setFilter] = useState("all");
+    const [filter, setFilter] = useState("");
 
-    // ------- TBD --------
-    // const { user } = useAuthContext();
-    // const { documents, error } = useCollection("projects");
+    // Local State
+    const dispatch = useDispatch();
+    const recipes = useSelector((state) => state.recipes);
+
+    console.log("FS - RECIPES:", recipes);
 
     // Theme Destructure
     const { palette } = useTheme();
@@ -65,44 +61,7 @@ const FeedSelect = ({ themeColors }) => {
         panelMainHover,
     } = themeColors || {};
 
-    const changeFilter = (newFilter) => {
-        setFilter(newFilter);
-    };
-
-    // const projects = documents
-    //     ? documents.filter((document) => {
-    //           switch (filter) {
-    //               case "all":
-    //                   return true;
-    //               case "main":
-    //                   let assignedToMe = false;
-    //                   console.log(document.assignedUsersList);
-    //                   document.assignedUsersList.forEach((u) => {
-    //                       if (u.id === user.uid) {
-    //                           assignedToMe = true;
-    //                       }
-    //                   });
-    //                   return assignedToMe;
-    //               case "appetiser":
-    //                   let createdByMe = false;
-    //                   console.log(document.createdBy.id);
-    //                   if (document.createdBy.id === user.uid) {
-    //                       createdByMe = true;
-    //                   }
-    //                   return createdByMe;
-    //               case "breakfast":
-    //               case "dessert":
-    //               case "drink":
-    //                   console.log(document.category, filter);
-    //                   return document.category === filter;
-    //               default:
-    //                   return true;
-    //           }
-    //       })
-    //     : null;
-
     return (
-        // Adjust Feed Select design
         <Box>
             <FlexBetween>
                 <Box
@@ -121,7 +80,9 @@ const FeedSelect = ({ themeColors }) => {
                         enterDelay="500"
                         fontSize="1rem"
                     >
+                        {/* Clear Tags to Show ALl Recipe Types */}
                         <Button
+                            // onClick={() => filterByRecipeType("all")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -153,7 +114,9 @@ const FeedSelect = ({ themeColors }) => {
                         title="Main Dishes"
                         enterDelay="500"
                     >
+                        {/* Filter by Main Recipe Type */}
                         <Button
+                            // onClick={() => filterByRecipeType("main")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -175,7 +138,9 @@ const FeedSelect = ({ themeColors }) => {
                         title="Appetisers"
                         enterDelay="500"
                     >
+                        {/* Filter by Appetiser Recipe Type */}
                         <Button
+                            // onClick={() => filterByRecipeType("appetiser")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -198,7 +163,9 @@ const FeedSelect = ({ themeColors }) => {
                         title="Breakfast Dishes"
                         enterDelay="500"
                     >
+                        {/* Filter by Breakfast Recipe Type */}
                         <Button
+                            // onClick={() => filterByRecipeType("breakfast")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -221,7 +188,9 @@ const FeedSelect = ({ themeColors }) => {
                         title="Desserts"
                         enterDelay="500"
                     >
+                        {/* Filter by Dessert Recipe Type */}
                         <Button
+                            // onClick={() => filterByRecipeType("dessert")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -244,7 +213,9 @@ const FeedSelect = ({ themeColors }) => {
                         title="Drinks & Cocktails"
                         enterDelay="500"
                     >
+                        {/* Filter by Drink Recipe Type */}
                         <Button
+                            // onClick={() => filterByRecipeType("drink")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -264,11 +235,73 @@ const FeedSelect = ({ themeColors }) => {
                     </Tooltip>
                 </Box>
             </FlexBetween>
-            {/* {error && <p className="error">{error}</p>} */}
-            {/* {documents && <ProjectFilter changeFilter={changeFilter} />} */}
-            {/* {projects && <ProjectList projects={projects} />} */}
         </Box>
     );
 };
 
 export default FeedSelect;
+
+//---------------------------------
+// -------- FILTER HANDLER --------
+//---------------------------------
+// const changeFilter = (newFilter) => {
+//     setFilter(newFilter);
+// };
+
+//----------------------------------
+// -------- FILTER FUNCTION --------
+//----------------------------------
+// const filterByRecipeType = () => {
+//     const filtered = recipes.filter((type) =>
+//         type.recipeTypes.includes(recipeType)
+//     );
+//     dispatch(setFilter(filtered));
+// };
+
+//----------------------------------------------
+// -------- ORIGINAL SWITCH CASE DESIGN --------
+//----------------------------------------------
+// recipes ? recipes.filter((document) => {
+//     switch (filter) {
+
+//         /* CASE ALL */
+//         case "all":
+//             return true;
+//     /* CASE MAIN */
+//         case "main":
+//         recipes.recipeType.forEach((r) => {
+//             if (recipeType === "main") {
+//                 main = true;
+//             }
+//             return main;
+//             console.log(document.assignedUsersList);
+
+//             document.assignedUsersList.forEach((u) => {
+//                 if (u.id === user.uid) {
+//                     assignedToMe = true;
+//                 }
+//             });
+//             return assignedToMe;
+
+//     /* CASE APPETISER */
+//         case "appetiser":
+//             console.log(document.createdBy.id);
+//             if (document.createdBy.id === user.uid) {
+//                 appetiser = true;
+//             }
+//             return createdByMe;
+
+//           case "breakfast":
+
+//           case "dessert":
+
+//           case "drink":
+//               console.log();
+//               return document.category === filter;
+
+//           default:
+//               return true;
+//       }
+//   })
+// : null;
+//----------------------------------------------
