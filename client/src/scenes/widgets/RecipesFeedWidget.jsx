@@ -47,11 +47,14 @@ const RecipesFeedWidget = ({
         panelMainHover,
     } = themeColors || {};
 
+    // State
     const [user, setUser] = useState(null);
     const [userRecipes, setUserRecipes] = useState(null);
 
+    // Local State
     const recipes = useSelector((state) => state.recipes);
     console.log("STATE - Recipes:", recipes);
+
     // Testing State
     const [userTest, setUserTest] = useState(null);
     const [userRecipesTest, setUserRecipesTest] = useState(null);
