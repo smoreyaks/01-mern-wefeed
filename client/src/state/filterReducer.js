@@ -1,38 +1,69 @@
-// Initial Filter State
+// Initial Filter State ✅
 const initialState = {
-    // Filter State
     filterMode: "all",
-    filteredRecipeData: [],
+    recipes: [],
+    filteredRecipes: [],
 };
 
-// actions.js
+// Actions ✅
 export const SET_FILTER = "SET_FILTER";
-export const SET_FILTERED_DATA = "SET_FILTERED_DATA";
+export const SET_FILTERED_RECIPES = "SET_FILTERED_RECIPES";
 
+// Filter State ✅
 export const setFilter = (filter) => ({
     type: SET_FILTER,
     payload: filter,
 });
 
-export const setFilteredData = (filteredData) => ({
-    type: SET_FILTERED_DATA,
-    payload: filteredData,
+// Filtered Recipes State ✅
+export const setFilteredRecipes = (filteredRecipes) => ({
+    type: SET_FILTERED_RECIPES,
+    payload: filteredRecipes,
 });
 
+// Reducer ✅
 const filterReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_FILTER:
             return {
                 ...state,
                 filter: action.payload,
-            };
-        case SET_FILTERED_DATA:
-            return {
-                ...state,
-                filteredData: action.payload,
+                filteredRecipes: applyFilter(state.recipes, action.payload),
             };
         default:
             return state;
+    }
+};
+
+const applyFilter = (recipes, filter) => {
+    console.log(`REDUCER - FILTEER: ${filter}, RECIPES: ${recipes}`);
+    switch (filter) {
+        case "all":
+            console.log(`FILTER - ${filter}`);
+            return recipes;
+
+        case "main":
+            console.log(`FILTER - ${filter}`);
+            return recipes.filter((item) => item.recipeType === filter);
+
+        case "appetiser":
+            console.log(`FILTER - ${filter}`);
+            return recipes.filter((item) => item.recipeType === filter);
+
+        case "breakfast":
+            console.log(`FILTER - ${filter}`);
+            return recipes.filter((item) => item.recipeType === filter);
+
+        case "dessert":
+            console.log(`FILTER - ${filter}`);
+            return recipes.filter((item) => item.recipeType === filter);
+
+        case "drink":
+            console.log(`FILTER - ${filter}`);
+            return recipes.filter((item) => item.recipeType === filter);
+
+        default:
+            return recipes;
     }
 };
 
