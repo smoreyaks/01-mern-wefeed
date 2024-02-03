@@ -42,6 +42,18 @@ export const getFeedRecipes = async (req, res) => {
     }
 };
 
+// TEST FUNCTION
+export const getMainRecipes = async (req, res) => {
+    try {
+        // Grab the list of all the recipes
+        const recipe = await Recipe.find(recipeType === "main");
+        // Return Successful Request
+        res.status(200).json(recipe);
+    } catch (err) {
+        res.status(404).json({ message: err.message });
+    }
+};
+
 export const getUserRecipes = async (req, res) => {
     try {
         const { userId } = req.params;

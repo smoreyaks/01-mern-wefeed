@@ -1,10 +1,11 @@
 // React Components
-
 import { useState, useEffect } from "react";
 
 // Redux & Local State
 import { useDispatch, useSelector } from "react-redux";
 import { setAllRecipes, setRecipe, setPosts } from "../../state";
+import { setFilter } from "../../state/filterReducer";
+import { connect } from "react-redux";
 
 // MUI Components
 import { Box, Typography, CircularProgress } from "@mui/material";
@@ -63,6 +64,19 @@ const RecipesFeedWidget = ({
 
     // Retrieves All Recipe Data -  ✅ Works Correctly
     const getRecipes = async () => {
+        const response = await fetch(
+            "https://server-vukx.onrender.com/recipes",
+            {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            }
+        );
+        const data = await response.json();
+        dispatch(setAllRecipes({ recipes: data }));
+    };
+    // TESTING  FUNCTIOn
+    // Retrieves All Recipe Data -  ✅ Works Correctly
+    const getMainRecipes = async () => {
         const response = await fetch(
             "https://server-vukx.onrender.com/recipes",
             {
@@ -145,6 +159,7 @@ const RecipesFeedWidget = ({
                             saves,
                             shares,
                             comments,
+                            getMainRecipes,
                         }) => (
                             <RecipePostWidget
                                 key={_id}
@@ -171,6 +186,7 @@ const RecipesFeedWidget = ({
                                 shares={shares}
                                 comments={comments}
                                 themeColors={themeColors}
+                                getMainRecipes={getMainRecipes}
                             />
                         )
                     )}
