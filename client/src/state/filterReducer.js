@@ -1,6 +1,6 @@
 // Initial Filter State ✅
 const initialState = {
-    filterMode: "all",
+    filter: "all",
     recipes: [],
     filteredRecipes: [],
 };
