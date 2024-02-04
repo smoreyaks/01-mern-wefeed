@@ -3,7 +3,8 @@ import { useState } from "react";
 
 // Redux
 import { useSelector, useDispatch } from "react-redux";
-
+// import { setFilter } from "../state/filterReducer";
+import { setFilter } from "../state/index";
 // Components
 import FlexBetween from "./FlexBetween";
 import WidgetWrapper from "./WidgetWrapper";
@@ -27,11 +28,17 @@ import {
 
 const FeedSelect = ({ themeColors }) => {
     // State
-    const [filter, setFilter] = useState("");
+    // const [filter, setFilter] = useState("");
 
     // Local State
     const dispatch = useDispatch();
     const recipes = useSelector((state) => state.recipes);
+
+    // Filter Handler Function
+    const handleFilterByRecipeType = (filter) => {
+        console.log(`DISPATCH - ${filter}`);
+        dispatch(setFilter(filter));
+    };
 
     console.log("FS - RECIPES:", recipes);
 
@@ -82,7 +89,7 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Clear Tags to Show ALl Recipe Types */}
                         <Button
-                            // onClick={() => filterByRecipeType("all")}
+                            onClick={() => handleFilterByRecipeType("all")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -116,7 +123,7 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Filter by Main Recipe Type */}
                         <Button
-                            // onClick={() => filterByRecipeType("main")}
+                            onClick={() => handleFilterByRecipeType("main")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -140,7 +147,9 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Filter by Appetiser Recipe Type */}
                         <Button
-                            // onClick={() => filterByRecipeType("appetiser")}
+                            onClick={() =>
+                                handleFilterByRecipeType("appetiser")
+                            }
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -165,7 +174,9 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Filter by Breakfast Recipe Type */}
                         <Button
-                            // onClick={() => filterByRecipeType("breakfast")}
+                            onClick={() =>
+                                handleFilterByRecipeType("breakfast")
+                            }
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -190,7 +201,7 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Filter by Dessert Recipe Type */}
                         <Button
-                            // onClick={() => filterByRecipeType("dessert")}
+                            onClick={() => handleFilterByRecipeType("dessert")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
@@ -215,7 +226,7 @@ const FeedSelect = ({ themeColors }) => {
                     >
                         {/* Filter by Drink Recipe Type */}
                         <Button
-                            // onClick={() => filterByRecipeType("drink")}
+                            onClick={() => handleFilterByRecipeType("drink")}
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
