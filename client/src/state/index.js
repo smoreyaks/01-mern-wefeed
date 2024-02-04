@@ -11,6 +11,8 @@ const initialState = {
 
     // Recipes State
     recipes: [],
+    filter: "all",
+    filteredRecipes: [],
 };
 
 export const authSlice = createSlice({
@@ -70,6 +72,7 @@ export const authSlice = createSlice({
         // Get User Recipes
         // Get All Recipes
         setAllRecipes: (state, action) => {
+            console.log("setRecipe Action Payload:", action.payload);
             state.recipes = action.payload.recipes;
         },
 
@@ -82,6 +85,62 @@ export const authSlice = createSlice({
                 return recipe;
             });
             state.recipes = updatedRecipes;
+        },
+
+        setFilter: (state, action) => {
+            state.filter = action.payload;
+            console.log("setFilter:", state.filter);
+
+            let switchFilter = state.filter;
+            console.log("switchFilter:", switchFilter);
+
+            const stateRecipes = state.recipes;
+
+            const applyFilter = (recipeList, filter) => {
+                console.log(
+                    `REDUCER - FILTER: ${filter}, RECIPES: ${recipeList}`
+                );
+                switch (filter) {
+                    case "all":
+                        console.log(`FILTER - ${filter}`);
+                        return recipeList;
+
+                    case "main":
+                        console.log(`FILTER - ${filter}`);
+                        const updatedRecipes = recipeList.filter(
+                            (item) => item.recipeType === filter
+                        );
+                        return updatedRecipes;
+
+                    case "appetiser":
+                        console.log(`FILTER - ${filter}`);
+                        return recipeList.filter(
+                            (item) => item.recipeType === filter
+                        );
+
+                    case "breakfast":
+                        console.log(`FILTER - ${filter}`);
+                        return recipeList.filter(
+                            (item) => item.recipeType === filter
+                        );
+
+                    case "dessert":
+                        console.log(`FILTER - ${filter}`);
+                        return recipeList.filter(
+                            (item) => item.recipeType === filter
+                        );
+
+                    case "drink":
+                        console.log(`FILTER - ${filter}`);
+                        return recipeList.filter(
+                            (item) => item.recipeType === filter
+                        );
+
+                    default:
+                        return recipeList;
+                }
+            };
+            applyFilter(stateRecipes, switchFilter);
         },
 
         // // Get User Posts
@@ -99,6 +158,38 @@ export const authSlice = createSlice({
     },
 });
 
+// const applyFilter = (recipes, filter) => {
+//     console.log(`REDUCER - FILTEER: ${filter}, RECIPES: ${recipes}`);
+//     switch (filter) {
+//         case "all":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes;
+
+//         case "main":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes.filter((item) => item.recipeType === filter);
+
+//         case "appetiser":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes.filter((item) => item.recipeType === filter);
+
+//         case "breakfast":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes.filter((item) => item.recipeType === filter);
+
+//         case "dessert":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes.filter((item) => item.recipeType === filter);
+
+//         case "drink":
+//             console.log(`FILTER - ${filter}`);
+//             return recipes.filter((item) => item.recipeType === filter);
+
+//         default:
+//             return recipes;
+//     }
+// };
+
 export const {
     setMode,
     setThemeDefault,
@@ -109,6 +200,7 @@ export const {
     setFriends,
     setAllRecipes,
     setRecipe,
+    setFilter,
     // setPosts,
     // setPost,
 } = authSlice.actions;
