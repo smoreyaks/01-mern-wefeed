@@ -36,7 +36,6 @@ const FeedSelect = ({ themeColors }) => {
 
     // Filter Handler Function
     const handleFilterByRecipeType = (filter) => {
-        console.log(`DISPATCH - ${filter}`);
         dispatch(setFilter(filter));
     };
 
