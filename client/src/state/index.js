@@ -72,7 +72,6 @@ export const authSlice = createSlice({
         // Get User Recipes
         // Get All Recipes
         setAllRecipes: (state, action) => {
-            console.log("setRecipe Action Payload:", action.payload);
             state.recipes = action.payload.recipes;
         },
 
@@ -89,58 +88,52 @@ export const authSlice = createSlice({
 
         setFilter: (state, action) => {
             state.filter = action.payload;
-            console.log("setFilter:", state.filter);
 
-            let switchFilter = state.filter;
-            console.log("switchFilter:", switchFilter);
+            // let switchFilter = state.filter;
+            // console.log("STATE RECIPES:", state.recipes);
+            // const stateRecipes = state.recipes;
 
-            const stateRecipes = state.recipes;
+            // const applyFilter = (recipeList, filter) => {
+            //     console.log(`RECIPES: ${recipeList}`);
+            //     switch (filter) {
+            //         case "all":
+            //             console.log(`FILTER - ${filter}`);
+            //             return recipeList;
 
-            const applyFilter = (recipeList, filter) => {
-                console.log(
-                    `REDUCER - FILTER: ${filter}, RECIPES: ${recipeList}`
-                );
-                switch (filter) {
-                    case "all":
-                        console.log(`FILTER - ${filter}`);
-                        return recipeList;
+            //         case "main":
+            //             console.log(`FILTER - ${filter}`);
+            //             const updatedRecipes = recipeList.map((recipe) => {
+            //                 console.log("RECIPETYPE:", recipe);
+            //                 if (recipe.recipeType === filter) {
+            //                     console.log("MAIN:", recipe);
+            //                     return recipe;
+            //                 }
+            //                 return recipe;
+            //             });
+            //             state.recipes = updatedRecipes;
+            //             return state.recipes;
 
-                    case "main":
-                        console.log(`FILTER - ${filter}`);
-                        const updatedRecipes = recipeList.filter(
-                            (item) => item.recipeType === filter
-                        );
-                        return updatedRecipes;
+            //         case "appetiser":
+            //             console.log(`FILTER - ${filter}`);
+            //             return recipeList;
 
-                    case "appetiser":
-                        console.log(`FILTER - ${filter}`);
-                        return recipeList.filter(
-                            (item) => item.recipeType === filter
-                        );
+            //         case "breakfast":
+            //             console.log(`FILTER - ${filter}`);
+            //             return recipeList;
 
-                    case "breakfast":
-                        console.log(`FILTER - ${filter}`);
-                        return recipeList.filter(
-                            (item) => item.recipeType === filter
-                        );
+            //         case "dessert":
+            //             console.log(`FILTER - ${filter}`);
+            //             return recipeList;
 
-                    case "dessert":
-                        console.log(`FILTER - ${filter}`);
-                        return recipeList.filter(
-                            (item) => item.recipeType === filter
-                        );
+            //         case "drink":
+            //             console.log(`FILTER - ${filter}`);
+            //             return recipeList;
 
-                    case "drink":
-                        console.log(`FILTER - ${filter}`);
-                        return recipeList.filter(
-                            (item) => item.recipeType === filter
-                        );
-
-                    default:
-                        return recipeList;
-                }
-            };
-            applyFilter(stateRecipes, switchFilter);
+            //         default:
+            //             return recipeList;
+            //     }
+            // };
+            // applyFilter(stateRecipes, switchFilter);
         },
 
         // // Get User Posts
