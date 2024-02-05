@@ -54,6 +54,7 @@ const RecipesFeedWidget = ({
 
     // Local State
     const recipes = useSelector((state) => state.recipes);
+    const filter = useSelector((state) => state.filter);
     console.log("STATE - Recipes:", recipes);
 
     // Testing State
@@ -124,6 +125,51 @@ const RecipesFeedWidget = ({
             getRecipes();
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    // FILTER TESTING
+    console.log("STATE RECIPES:", recipes);
+
+    const applyFilter = (recipeList, filter) => {
+        console.log(`RECIPES: ${recipeList}`);
+        switch (filter) {
+            case "all":
+                console.log(`FILTER - ${filter}`);
+                return recipeList;
+
+            case "main":
+                console.log(`FILTER - ${filter}`);
+                const updatedRecipes = recipeList.map((recipe) => {
+                    console.log("RECIPE TYPE:", recipe.recipeType);
+                    if (recipe.recipeType === filter) {
+                        return recipe;
+                    }
+                    return recipe;
+                });
+            // console.log("RECIPETYPE:", recipe);
+            // state.recipes = updatedRecipes;
+            // return state.recipes;
+
+            case "appetiser":
+                console.log(`FILTER - ${filter}`);
+                return recipeList;
+
+            case "breakfast":
+                console.log(`FILTER - ${filter}`);
+                return recipeList;
+
+            case "dessert":
+                console.log(`FILTER - ${filter}`);
+                return recipeList;
+
+            case "drink":
+                console.log(`FILTER - ${filter}`);
+                return recipeList;
+
+            default:
+                return recipeList;
+        }
+    };
+    applyFilter(recipes, filter);
 
     // API Testing
     console.log("getRecipesTest", recipesTest); // ✅
