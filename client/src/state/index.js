@@ -86,6 +86,7 @@ export const authSlice = createSlice({
             state.recipes = updatedRecipes;
         },
 
+        // CHECK, TEST STATE FOR FILTER
         setFilter: (state, action) => {
             state.filter = action.payload;
 
