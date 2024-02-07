@@ -12,7 +12,6 @@ const router = express.Router();
 
 /* Read */
 router.get("/", verifyToken, getFeedRecipes);
-router.get("/", verifyToken, getMainRecipes); // TEST ROUTE
 router.get("/:userId/recipes", verifyToken, getUserRecipes);
 
 /* Update */
