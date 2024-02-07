@@ -39,8 +39,6 @@ const FeedSelect = ({ themeColors }) => {
         dispatch(setFilter(filter));
     };
 
-    console.log("FS - RECIPES:", recipes);
-
     // Theme Destructure
     const { palette } = useTheme();
     const {
