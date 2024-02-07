@@ -121,6 +121,20 @@ const RecipesFeedWidget = ({
     const applyFilter = (recipeList, recipeFilter) => {
         filteredRecipes = []; // Reset Filtered List before filter call
 
+        const recipeTypeFilterFunction = () => {
+            console.log(`FILTER - ${recipeFilter}`);
+            recipeList.filter((recipe) => {
+                recipe.recipeType.forEach((rt) => {
+                    if (rt === recipeFilter) {
+                        console.log("RECIPE TYPE:", recipe.recipeType);
+                        filteredRecipes.push(recipe);
+                        return filteredRecipes;
+                    }
+                });
+            });
+            console.log("NEW LIST RECIPE:", filteredRecipes);
+        };
+
         switch (recipeFilter) {
             // Returns Updated Feed with all recipes
             case "all":
@@ -131,107 +145,35 @@ const RecipesFeedWidget = ({
 
             // Returns updated feed with Main Dishes
             case "main":
-                console.log(`FILTER - ${recipeFilter}`);
-                recipeList.filter((recipe) => {
-                    recipe.recipeType.forEach((rt) => {
-                        if (rt === recipeFilter) {
-                            console.log("RECIPE TYPE:", recipe.recipeType);
-                            filteredRecipes.push(recipe);
-                            return filteredRecipes;
-                        }
-                    });
-                });
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Appetisers
             case "appetiser":
-                console.log(`FILTER - ${recipeFilter}`);
-                recipeList.filter((recipe) => {
-                    recipe.recipeType.forEach((rt) => {
-                        if (rt === recipeFilter) {
-                            filteredRecipes.push(recipe);
-                            return filteredRecipes;
-                        }
-                    });
-                });
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Breakfast Dishes
             case "breakfast":
-                console.log(`FILTER - ${recipeFilter}`);
-                recipeList.filter((recipe) => {
-                    recipe.recipeType.forEach((rt) => {
-                        if (rt === recipeFilter) {
-                            filteredRecipes.push(recipe);
-                            return filteredRecipes;
-                        }
-                    });
-                });
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Dessert Dishes
             case "dessert":
-                console.log(`FILTER - ${recipeFilter}`);
-                recipeList.filter((recipe) => {
-                    recipe.recipeType.forEach((rt) => {
-                        if (rt === recipeFilter) {
-                            filteredRecipes.push(recipe);
-                            return filteredRecipes;
-                        }
-                    });
-                });
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Drinks & Cocktails
             case "drink":
-                console.log(`FILTER - ${recipeFilter}`);
-                recipeList.filter((recipe) => {
-                    recipe.recipeType.forEach((rt) => {
-                        if (rt === recipeFilter) {
-                            filteredRecipes.push(recipe);
-                            return filteredRecipes;
-                        }
-                    });
-                });
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
 
             default:
-                console.log("NEW LIST RECIPE:", filteredRecipes);
+                recipeTypeFilterFunction();
                 return filteredRecipes;
         }
     };
     applyFilter(recipes, filter);
-
-    // console.log("RFW - RECIPES", recipes);
-    // function setShow(array, column) {
-
-    // const projects = recipes
-    //     ? recipes.filter((recipe) => {
-    //           //prettier-ignore
-    //           //   console.log("RECIPE FILTER CHECK", recipe);
-    //           recipe.recipeType.forEach((rt) => {
-    //             if (rt === "main") {
-    //                 console.log("NEW FILTER CHECK", recipe.recipeType);
-    //             }
-    //             console.log("FILTERED RECIPES", recipe);
-    //               return recipe
-    //           });
-    //       })
-    //     : null;
-
-    // if (found) {
-    //     // console.log("FOUND OBJ:", recipe.recipeType);
-    //     // found.recipeType = "main";
-    // }
-    // return array;
-    // }
-
-    // console.log("SETSHOW", setShow(recipes, "main"));
 
     // API Testing
     // console.log("getRecipesTest", recipesTest); // ✅
