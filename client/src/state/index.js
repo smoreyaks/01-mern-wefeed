@@ -34,6 +34,7 @@ export const authSlice = createSlice({
             state.user = null;
             state.token = null;
             state.recipes = [];
+            state.filter = "all";
         },
         // Dark & Light Mode
         setMode: (state) => {
