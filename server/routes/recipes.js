@@ -2,7 +2,6 @@ import express from "express";
 import {
     getFeedRecipes,
     getUserRecipes,
-    getMainRecipes,
     likeRecipe,
     recommendRecipe,
 } from "../controllers/recipes.js";
