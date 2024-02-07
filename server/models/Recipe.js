@@ -27,7 +27,8 @@ const RecipeSchema = mongoose.Schema({
         required: true,
     },
     recipeType: {
-        type: String,
+        type: Array,
+        default: [],
         required: true,
     },
     picturePath: {
