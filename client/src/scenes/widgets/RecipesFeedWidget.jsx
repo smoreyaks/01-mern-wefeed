@@ -55,7 +55,6 @@ const RecipesFeedWidget = ({
     // Local State
     const recipes = useSelector((state) => state.recipes);
     const filter = useSelector((state) => state.filter);
-    console.log("STATE - Recipes:", recipes);
 
     // Testing State
     const [userTest, setUserTest] = useState(null);
@@ -75,19 +74,8 @@ const RecipesFeedWidget = ({
         const data = await response.json();
         dispatch(setAllRecipes({ recipes: data }));
     };
-    // TESTING  FUNCTIOn
+    // TESTING  FUNCTION
     // Retrieves All Recipe Data -  ✅ Works Correctly
-    const getMainRecipes = async () => {
-        const response = await fetch(
-            "https://server-vukx.onrender.com/recipes",
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
-        const data = await response.json();
-        dispatch(setAllRecipes({ recipes: data }));
-    };
 
     // Retrieves User Data for Selected User -  ✅ Works Correctly
     const getUser = async () => {
@@ -127,60 +115,135 @@ const RecipesFeedWidget = ({
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // FILTER TESTING
-    console.log("STATE RECIPES:", recipes);
+    // console.log("STATE RECIPES:", recipes);
 
-    const applyFilter = (recipeList, filter) => {
-        console.log(`RECIPES: ${recipeList}`);
-        switch (filter) {
+    let filteredRecipes = [];
+    const applyFilter = (recipeList, recipeFilter) => {
+        filteredRecipes = []; // Reset Filtered List before filter call
+
+        switch (recipeFilter) {
+            // Returns Updated Feed with all recipes
             case "all":
-                console.log(`FILTER - ${filter}`);
-                return recipeList;
+                console.log(`FILTER - ${recipeFilter}`);
+                filteredRecipes = recipeList;
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
+            // Returns updated feed with Main Dishes
             case "main":
-                console.log(`FILTER - ${filter}`);
-                const updatedRecipes = recipeList.map((recipe) => {
-                    console.log("RECIPE TYPE:", recipe.recipeType);
-                    if (recipe.recipeType === filter) {
-                        return recipe;
-                    }
-                    return recipe;
+                console.log(`FILTER - ${recipeFilter}`);
+                recipeList.filter((recipe) => {
+                    recipe.recipeType.forEach((rt) => {
+                        if (rt === recipeFilter) {
+                            console.log("RECIPE TYPE:", recipe.recipeType);
+                            filteredRecipes.push(recipe);
+                            return filteredRecipes;
+                        }
+                    });
                 });
-            // console.log("RECIPETYPE:", recipe);
-            // state.recipes = updatedRecipes;
-            // return state.recipes;
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
+            // Returns updated feed with Appetisers
             case "appetiser":
-                console.log(`FILTER - ${filter}`);
-                return recipeList;
+                console.log(`FILTER - ${recipeFilter}`);
+                recipeList.filter((recipe) => {
+                    recipe.recipeType.forEach((rt) => {
+                        if (rt === recipeFilter) {
+                            filteredRecipes.push(recipe);
+                            return filteredRecipes;
+                        }
+                    });
+                });
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
+            // Returns updated feed with Breakfast Dishes
             case "breakfast":
-                console.log(`FILTER - ${filter}`);
-                return recipeList;
+                console.log(`FILTER - ${recipeFilter}`);
+                recipeList.filter((recipe) => {
+                    recipe.recipeType.forEach((rt) => {
+                        if (rt === recipeFilter) {
+                            filteredRecipes.push(recipe);
+                            return filteredRecipes;
+                        }
+                    });
+                });
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
+            // Returns updated feed with Dessert Dishes
             case "dessert":
-                console.log(`FILTER - ${filter}`);
-                return recipeList;
+                console.log(`FILTER - ${recipeFilter}`);
+                recipeList.filter((recipe) => {
+                    recipe.recipeType.forEach((rt) => {
+                        if (rt === recipeFilter) {
+                            filteredRecipes.push(recipe);
+                            return filteredRecipes;
+                        }
+                    });
+                });
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
+            // Returns updated feed with Drinks & Cocktails
             case "drink":
-                console.log(`FILTER - ${filter}`);
-                return recipeList;
+                console.log(`FILTER - ${recipeFilter}`);
+                recipeList.filter((recipe) => {
+                    recipe.recipeType.forEach((rt) => {
+                        if (rt === recipeFilter) {
+                            filteredRecipes.push(recipe);
+                            return filteredRecipes;
+                        }
+                    });
+                });
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
 
             default:
-                return recipeList;
+                console.log("NEW LIST RECIPE:", filteredRecipes);
+                return filteredRecipes;
         }
     };
     applyFilter(recipes, filter);
 
+    // console.log("RFW - RECIPES", recipes);
+    // function setShow(array, column) {
+
+    // const projects = recipes
+    //     ? recipes.filter((recipe) => {
+    //           //prettier-ignore
+    //           //   console.log("RECIPE FILTER CHECK", recipe);
+    //           recipe.recipeType.forEach((rt) => {
+    //             if (rt === "main") {
+    //                 console.log("NEW FILTER CHECK", recipe.recipeType);
+    //             }
+    //             console.log("FILTERED RECIPES", recipe);
+    //               return recipe
+    //           });
+    //       })
+    //     : null;
+
+    // if (found) {
+    //     // console.log("FOUND OBJ:", recipe.recipeType);
+    //     // found.recipeType = "main";
+    // }
+    // return array;
+    // }
+
+    // console.log("SETSHOW", setShow(recipes, "main"));
+
     // API Testing
-    console.log("getRecipesTest", recipesTest); // ✅
-    console.log("getUserTest", userTest || "No Data Found"); // ✅
-    console.log("getUserRecipesTest", userRecipesTest); // ✅
+    // console.log("getRecipesTest", recipesTest); // ✅
+    // console.log("getUserTest", userTest || "No Data Found"); // ✅
+    // console.log("getUserRecipesTest", userRecipesTest); // ✅
+    // console.log("RFW - APPLY FILTER:", applyFilter(recipes, filter));
 
     return (
         <>
             {user ? (
                 <Box>
-                    {recipes.map(
+                    {filteredRecipes.map(
                         ({
                             _id,
                             user,
@@ -205,7 +268,7 @@ const RecipesFeedWidget = ({
                             saves,
                             shares,
                             comments,
-                            getMainRecipes,
+                            // getMainRecipes,
                         }) => (
                             <RecipePostWidget
                                 key={_id}
@@ -232,7 +295,7 @@ const RecipesFeedWidget = ({
                                 shares={shares}
                                 comments={comments}
                                 themeColors={themeColors}
-                                getMainRecipes={getMainRecipes}
+                                // getMainRecipes={getMainRecipes}
                             />
                         )
                     )}
@@ -254,9 +317,6 @@ const RecipesFeedWidget = ({
                         thickness={18}
                         sx={{
                             color: buttonHover,
-                            // display: "flex",
-                            // justifyContent: "center",
-                            // alignItems: "center",
                         }}
                     />
                 </Box>
