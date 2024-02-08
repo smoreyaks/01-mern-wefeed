@@ -21,7 +21,10 @@ const RecipeSchema = mongoose.Schema({
         type: String,
         default: "",
     },
-
+    occupation: {
+        type: String,
+        default: "",
+    },
     recipeTitle: {
         type: String,
         required: true,
