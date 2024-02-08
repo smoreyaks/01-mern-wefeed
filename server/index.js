@@ -101,6 +101,27 @@ mongoose
         // Data Only Added Once
         // User.insertMany(users);
         // Post.insertMany(posts);
-        // Recipe.insertMany(recipes);
+        Recipe.insertMany(recipes);
+
+        // const recipesData = require("./data/index.js");
+        // console.log("Data read from file:", recipesData);
+        // for (const recipe of recipesData) {
+        //     try {
+        //         await Recipe.updateOne(
+        //             { _id: recipe._id },
+        //             { $set: { occupation: recipe.occupation } },
+        //             { upsert: true } // Create the 'occupation' field if it doesn't exist
+        //         );
+        //         console.log(
+        //             `Occupation field updated for recipe with _id ${recipe._id}`
+        //         );
+        //     } catch (error) {
+        //         console.error("Error updating document:", error);
+        //     }
+        // }
+
+        // console.log(
+        //     "Occupation field updated for all documents in the 'recipes' collection."
+        // );
     })
     .catch((error) => console.log(`${error} did not connect`));
