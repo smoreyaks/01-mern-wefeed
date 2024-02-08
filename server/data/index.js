@@ -980,7 +980,7 @@ export const recipes = [
         firstName: "Link of",
         lastName: "Hyrule",
         userPicturePath: "link-sunglasses.gif",
-
+        occupation: "Hero of Time",
         recipeTitle: "Crispy Beef & Shitake Noodles",
         recipeType: ["main"],
         picturePath: "crispy-beef-and-shiitake-noodles-135398-1.jpg",
@@ -1097,7 +1097,7 @@ export const recipes = [
         firstName: "Link of",
         lastName: "Hyrule",
         userPicturePath: "link-sunglasses.gif",
-
+        occupation: "Hero of Time",
         recipeTitle: "One-Pan Creamy Chicken & Gnocchi",
         recipeType: ["main"],
         picturePath:
@@ -1206,7 +1206,7 @@ export const recipes = [
         firstName: "Carly",
         lastName: "Vowel",
         userPicturePath: "p8.jpeg",
-
+        occupation: "Nurse",
         recipeTitle: "Honey-Garlic Glazed Salmon",
         recipeType: ["main"],
         picturePath: "1506456214-delish-honey-garlic-glazed-salmon.jpg",
@@ -1312,7 +1312,7 @@ export const recipes = [
         firstName: "Travis",
         lastName: "Denzer",
         userPicturePath: "m6.jpg",
-
+        occupation: "Industrial Production Manager",
         recipeTitle: "Christmas Pie",
         recipeType: ["main"],
         picturePath: "christmas-dinner-pie_770x408.jpg",
@@ -1430,7 +1430,7 @@ export const recipes = [
         firstName: "Naomi",
         lastName: "Cortes",
         userPicturePath: "f6.jpg",
-
+        occupation: "Recreation Worker",
         recipeTitle: "Peanut Butter Banana Smoothie",
         recipeType: ["drink", "breakfast"],
         picturePath: "peanut-butter-banana-smoothie-lead-64e6355ef32bd.jpg",
@@ -1511,7 +1511,7 @@ export const recipes = [
         firstName: "Carly",
         lastName: "Vowel",
         userPicturePath: "p8.jpeg",
-
+        occupation: "Nurse",
         recipeTitle: "Apple Cider Whoopie Pies",
         recipeType: ["dessert"],
         picturePath: "apple-cider-whoopie-pies-lead-649e038061d39.jpg",
@@ -1681,7 +1681,7 @@ export const recipes = [
         firstName: "Wilbur",
         lastName: "Boyd",
         userPicturePath: "m7.jpg",
-
+        occupation: "Solderer & Brazer",
         recipeTitle: "Harissa Chicken & Sweet Potatoes",
         recipeType: ["main"],
         picturePath:
@@ -1803,7 +1803,7 @@ export const recipes = [
         firstName: "Travis",
         lastName: "Denzer",
         userPicturePath: "m6.jpg",
-
+        occupation: "Industrial Production Manager",
         recipeTitle: "Spinach Puffs",
         recipeType: ["main", "appetiser"],
         picturePath: "delish-spinach-puffs-1638982470.jpg",
@@ -1922,7 +1922,7 @@ export const recipes = [
         firstName: "Valerie",
         lastName: "Osborn",
         userPicturePath: "f9.jpg",
-
+        occupation: "OHS Auditor",
         recipeTitle: "Frozen Hot Chocolate Martini",
         recipeType: ["drink", "dessert"],
         picturePath: "frozenhotchocolatemartini-lead-65305104aa881.jpg",
@@ -2014,7 +2014,7 @@ export const recipes = [
         firstName: "Molly",
         lastName: "Melton",
         userPicturePath: "f2.jpg",
-
+        occupation: "Insurance Claims Clerk",
         recipeTitle: "Amaretto Sour",
         recipeType: ["drink"],
         picturePath: "amaretto-sour3-1654707964.jpg",
@@ -2126,7 +2126,7 @@ export const recipes = [
         firstName: "Jane",
         lastName: "Doe",
         userPicturePath: "p5.jpeg",
-
+        occupation: "Database Administrator",
         recipeTitle: "Chicken Stir-Fry",
         recipeType: ["main"],
         picturePath: "chicken-stir-fry-lead-6513039282dd4.jpg",
@@ -2231,7 +2231,7 @@ export const recipes = [
         firstName: "Molly",
         lastName: "Melton",
         userPicturePath: "f2.jpg",
-
+        occupation: "Insurance Claims Clerk",
         recipeTitle: "Sweet Potato Gratin",
         recipeType: ["main"],
         picturePath: "delish-202210-sweetpotatogratin-186-1666972220.jpg",
@@ -2363,7 +2363,7 @@ export const recipes = [
         firstName: "Edwin",
         lastName: "Johnson",
         userPicturePath: "m1.jpg",
-
+        occupation: "Correctional Officer",
         recipeTitle: "Crispy Gnocchi & Mushrooms",
         recipeType: ["main"],
         picturePath: "crispygnocchimushrooms-3-1669134579.jpeg",
@@ -2457,7 +2457,7 @@ export const recipes = [
         firstName: "Kur",
         lastName: "Hintz",
         userPicturePath: "f3.jpg",
-
+        occupation: "Surveying & Mapping Technician",
         recipeTitle: "Magic Cookie Bars",
         recipeType: ["dessert"],
         picturePath: "magicbars-1643145825.jpg",
@@ -2590,7 +2590,7 @@ export const recipes = [
         firstName: "Valerie",
         lastName: "Osborn",
         userPicturePath: "f9.jpg",
-
+        occupation: "OHS Auditor",
         recipeTitle: "Tiramisu Cookie Cups",
         recipeType: ["dessert"],
         picturePath:
@@ -2724,7 +2724,7 @@ export const recipes = [
         firstName: "Annika",
         lastName: "Pierce",
         userPicturePath: "f7.jpg",
-
+        occupation: "Insurance Appraiser",
         recipeTitle: "Brown Sugar Old Fashioned",
         recipeType: ["drink"],
         picturePath:
@@ -2834,7 +2834,7 @@ export const recipes = [
         firstName: "Steve",
         lastName: "Ralph",
         userPicturePath: "p3.jpeg",
-
+        occupation: "Equipment Operator",
         recipeTitle: "Tom Collins",
         recipeType: ["drink"],
         picturePath: "220726-delish-seo-jff-tom-collins-0948-eb-1659719064.jpg",
@@ -2949,7 +2949,7 @@ export const recipes = [
     //     firstName: "Carolyn",
     //     lastName: "McKinney",
     //     userPicturePath: "p4.jpeg",
-
+    //     occupation: "Chemical Engineer",
     //     recipeTitle: "Best Mashed Potatoes",
     //     picturePath: "mashed-potatoes-secondary-64bed551364af.jpg",
 
@@ -3056,7 +3056,7 @@ export const recipes = [
     //     firstName: "Lina",
     //     lastName: "Prichard",
     //     userPicturePath: "p6.jpeg",
-
+    //     occupation: "Processing Machine Operator",
     //     recipeTitle: "Mai Tai Cocktail",
     //     picturePath: "XXXXXXXXXXXX",
 
@@ -3137,7 +3137,7 @@ export const recipes = [
     //     firstName: "Harvey",
     //     lastName: "Dunn",
     //     userPicturePath: "p7.jpeg",
-
+    //     occupation: "Journalist",
     //     recipeTitle: "Breakfast Tostadas",
     //     picturePath: "XXXXXXXXXXXX",
 
@@ -3248,7 +3248,7 @@ export const recipes = [
 //     firstName: "XXXXXXXXXXXX",
 //     lastName: "XXXXXXXXXXXX",
 //     userPicturePath: "XXXXXXXXXXXX",
-
+//     occupation: "XXXXXXXXXXXX"
 //     recipeTitle: "XXXXXXXXXXXX",
 //     picturePath: "XXXXXXXXXXXX",
 
@@ -3340,6 +3340,10 @@ export const recipes = [
 //     ],
 // },
 // ];
+
+// -------------------------------- //
+// -------- RECIPES TO ADD -------- //
+// -------------------------------- //
 
 /*
 MAIN
