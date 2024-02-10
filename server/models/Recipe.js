@@ -22,11 +22,11 @@ const RecipeSchema = mongoose.Schema({
         default: "",
     },
 
-    occupation: {
-        type: String,
-        default: "",
-        required: true,
-    },
+    // occupation: {
+    //     type: String,
+    //     default: "",
+    //     required: true,
+    // },
     recipeTitle: {
         type: String,
         required: true,
