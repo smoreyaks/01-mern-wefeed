@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // Redux & Local State
 import { useDispatch, useSelector } from "react-redux";
-import { setAllRecipes, setRecipe, setPosts } from "../../state";
+import { setAllRecipes, setRecipe, setPosts, setFriends } from "../../state";
 import { setFilter } from "../../state/filterReducer";
 import { connect } from "react-redux";
 
@@ -57,10 +57,10 @@ const RecipesFeedWidget = ({
     const filter = useSelector((state) => state.filter);
 
     // Testing State
-    const [userTest, setUserTest] = useState(null);
-    const [userRecipesTest, setUserRecipesTest] = useState(null);
-    const [recipesTest, setRecipesTest] = useState(null);
-    const [allRecipesTest, setAllRecipesTest] = useState(null);
+    // const [userTest, setUserTest] = useState(null);
+    // const [userRecipesTest, setUserRecipesTest] = useState(null);
+    // const [recipesTest, setRecipesTest] = useState(null);
+    // // const [allRecipesTest, setAllRecipesTest] = useState(null);
 
     // Retrieves All Recipe Data -  ✅ Works Correctly
     const getRecipes = async () => {
@@ -115,8 +115,6 @@ const RecipesFeedWidget = ({
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // FILTER TESTING
-    // console.log("STATE RECIPES:", recipes);
-
     let filteredRecipes = [];
     const applyFilter = (recipeList, recipeFilter) => {
         filteredRecipes = []; // Reset Filtered List before filter call
@@ -179,7 +177,9 @@ const RecipesFeedWidget = ({
     // console.log("getRecipesTest", recipesTest); // ✅
     // console.log("getUserTest", userTest || "No Data Found"); // ✅
     // console.log("getUserRecipesTest", userRecipesTest); // ✅
+
     // console.log("RFW - APPLY FILTER:", applyFilter(recipes, filter));
+    // console.log("STATE RECIPES:", recipes.recipeId);
 
     return (
         <>
@@ -210,7 +210,6 @@ const RecipesFeedWidget = ({
                             saves,
                             shares,
                             comments,
-                            // getMainRecipes,
                         }) => (
                             <RecipePostWidget
                                 key={_id}
@@ -237,7 +236,6 @@ const RecipesFeedWidget = ({
                                 shares={shares}
                                 comments={comments}
                                 themeColors={themeColors}
-                                // getMainRecipes={getMainRecipes}
                             />
                         )
                     )}
