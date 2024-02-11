@@ -7,6 +7,7 @@ import {
     Box,
     IconButton,
     Button,
+    Container,
     InputBase,
     Typography,
     Select,
@@ -107,7 +108,6 @@ const Navbar = ({ userId, themeColors }) => {
     return (
         <Box
             position="fixed"
-            onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
             sx={{ width: "100%", zIndex: "100", boxShadow: 8 }}
         >
             <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
@@ -261,7 +261,9 @@ const Navbar = ({ userId, themeColors }) => {
                     </FlexBetween>
                 )}
 
-                {/* Mobile Nav */}
+                {/*----------------------------- */}
+                {/* -------- Mobile Nav -------- */}
+                {/*----------------------------- */}
                 {!isDesktopScreen && isMobileMenuToggled && (
                     <ClickAwayListener onClickAway={handleClickAway}>
                         <Box
@@ -274,114 +276,293 @@ const Navbar = ({ userId, themeColors }) => {
                             minWidth="300px"
                             backgroundColor={backgroundMain}
                             sx={{
-                                // borderRadius: "0.75rem",
+                                display: "flex",
+                                justifyContent: "space-between",
+                                flexDirection: "column",
                                 borderLeft: `0.5rem solid #FFFFFF `,
                             }}
                         >
-                            {/* Close Icon */}
-                            <Box
-                                display="flex"
-                                justifyContent="flex-end"
-                                p="1rem"
+                            <Container
+                                sx={{
+                                    py: "2rem",
+                                    height: "100%",
+                                }}
                             >
-                                <IconButton
-                                    onClick={() =>
-                                        setIsMobileMenuToggled(
-                                            !isMobileMenuToggled
-                                        )
-                                    }
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        flexDirection: "column",
+                                        borderRadius: "0.75rem",
+                                        backgroundColor: recipeStepsPanel,
+                                        height: "100%",
+                                    }}
                                 >
-                                    <Close />
-                                </IconButton>
-                            </Box>
-
-                            {/* Menu Items */}
-
-                            <FlexBetween
-                                display="flex"
-                                flexDirection="column"
-                                justifyContent="center"
-                                alignItems="center"
-                                gap="3rem"
-                            >
-                                {/* Logo */}
-                                {!isDesktopScreen && isMobileMenuToggled && (
-                                    <Logo themeColors={themeColors} />
-                                )}
-                                {/* Dark & Light Mode */}
-                                <IconButton
-                                    onClick={() => dispatch(setMode())}
-                                    sx={{ fontSize: "25px" }}
-                                >
-                                    {theme.palette.default.mode === "dark" ? (
-                                        <DarkMode sx={{ fontSize: "25px" }}>
-                                            Dark Mode
-                                        </DarkMode>
-                                    ) : (
-                                        <LightMode
-                                            sx={{
-                                                color: buttonLight2,
-                                                fontSize: "25px",
-                                            }}
-                                        />
-                                    )}
-                                </IconButton>
-
-                                {/* Messages Icon */}
-                                {/* <Message sx={{ fontSize: "25px" }} /> */}
-
-                                {/* Notifications Icon */}
-                                {/* <Notifications sx={{ fontSize: "25px" }} /> */}
-
-                                {/* Help Icon */}
-                                {/* <Help sx={{ fontSize: "25px" }} /> */}
-
-                                {/* LogOut Icon */}
-
-                                <Tooltip
-                                    TransitionComponent={Zoom}
-                                    placement="top"
-                                    title="Log Out Account"
-                                    enterDelay="500"
-                                    sx={{ fontSize: "1rem" }}
-                                >
-                                    <Button
-                                        cursor="pointer"
-                                        onClick={() => dispatch(setLogout())}
-                                        // size="large"
-                                        // fullwidth
-                                        sx={{
-                                            borderRadius: "3rem",
-                                            width: "8rem",
-                                            backgroundColor: buttonLight2,
-
-                                            color: headingText,
-                                            "&:hover": {
-                                                color: headingText,
-                                                backgroundColor: buttonHover,
-                                            },
-                                        }}
-                                    >
-                                        <FlexBetween>
-                                            <LogoutIcon
+                                    {/* Close Icon Section*/}
+                                    <Container>
+                                        <Box
+                                            display="flex"
+                                            justifyContent="flex-end"
+                                            py="1rem"
+                                        >
+                                            <IconButton
+                                                onClick={() =>
+                                                    setIsMobileMenuToggled(
+                                                        !isMobileMenuToggled
+                                                    )
+                                                }
+                                            >
+                                                <Close />
+                                            </IconButton>
+                                        </Box>
+                                        {/* ----------------------------------- */}
+                                        {/* -------- Mobile Menu Items -------- */}
+                                        {/* ----------------------------------- */}
+                                        <Box>
+                                            {/* Top Menu Section */}
+                                            <FlexBetween
+                                                display="flex"
+                                                flexDirection="column"
+                                                justifyContent="center"
+                                                alignItems="center"
+                                                gap="2rem"
                                                 sx={{
-                                                    fontSize: "large",
-                                                    color: headingText,
-                                                }}
-                                            />
-
-                                            <Typography
-                                                sx={{
-                                                    pl: "1rem",
-                                                    color: headingText,
+                                                    // borderRadius: "0.75rem",
+                                                    p: "1rem",
                                                 }}
                                             >
-                                                Log Out
+                                                {/* Logo */}
+                                                {!isDesktopScreen &&
+                                                    isMobileMenuToggled && (
+                                                        <Logo
+                                                            themeColors={
+                                                                themeColors
+                                                            }
+                                                        />
+                                                    )}
+                                                <Tooltip
+                                                    TransitionComponent={Zoom}
+                                                    placement="top"
+                                                    title="User Profile"
+                                                    enterDelay="500"
+                                                    sx={{ fontSize: "1rem" }}
+                                                >
+                                                    {/* Profile Button */}
+                                                    <Button
+                                                        cursor="pointer"
+                                                        onClick={() => {
+                                                            navigate(
+                                                                `/profile/${userId}`
+                                                            );
+                                                            navigate(0);
+                                                        }}
+                                                        sx={{
+                                                            display: "flex",
+                                                            justifyContent:
+                                                                "space-evenly",
+                                                            borderRadius:
+                                                                "3rem",
+                                                            width: "8rem",
+                                                            backgroundColor:
+                                                                buttonLight2,
+                                                            color: headingText,
+                                                            "&:hover": {
+                                                                color: headingText,
+                                                                backgroundColor:
+                                                                    buttonHover,
+                                                            },
+                                                        }}
+                                                    >
+                                                        <UserImage
+                                                            size="25px"
+                                                            image={
+                                                                user.picturePath
+                                                            }
+                                                        />
+
+                                                        <Typography
+                                                            sx={{
+                                                                pl: "1rem",
+                                                                color: headingText,
+                                                            }}
+                                                        >
+                                                            Profile
+                                                        </Typography>
+                                                    </Button>
+                                                </Tooltip>
+
+                                                {/* Light & Dark Mode */}
+                                                <Tooltip
+                                                    TransitionComponent={Zoom}
+                                                    placement="top"
+                                                    title="Toggle Dark Mode"
+                                                    enterDelay="500"
+                                                    sx={{ fontSize: "1rem" }}
+                                                >
+                                                    <Box>
+                                                        <Button
+                                                            cursor="pointer"
+                                                            onClick={() =>
+                                                                dispatch(
+                                                                    setMode()
+                                                                )
+                                                            }
+                                                            sx={{
+                                                                display: "flex",
+                                                                justifyContent:
+                                                                    "space-evenly",
+                                                                borderRadius:
+                                                                    "3rem",
+                                                                width: "8rem",
+                                                                backgroundColor:
+                                                                    buttonLight2,
+                                                                color: headingText,
+                                                                fontSize:
+                                                                    "25px",
+                                                                "&:hover": {
+                                                                    color: headingText,
+                                                                    backgroundColor:
+                                                                        buttonHover,
+                                                                },
+                                                            }}
+                                                        >
+                                                            {theme.palette
+                                                                .default
+                                                                .mode ===
+                                                            "dark" ? (
+                                                                <DarkMode
+                                                                    sx={{
+                                                                        fontSize:
+                                                                            "25px",
+                                                                    }}
+                                                                >
+                                                                    Dark Mode
+                                                                </DarkMode>
+                                                            ) : (
+                                                                <LightMode
+                                                                    sx={{
+                                                                        color: buttonLight2,
+                                                                        fontSize:
+                                                                            "25px",
+                                                                    }}
+                                                                />
+                                                            )}
+                                                            <Typography
+                                                                sx={{
+                                                                    pl: "1rem",
+                                                                    color: headingText,
+                                                                }}
+                                                            >
+                                                                Mode
+                                                            </Typography>
+                                                        </Button>
+                                                    </Box>
+                                                </Tooltip>
+
+                                                {/* Dark & Light Mode */}
+                                                {/* <IconButton
+                                            onClick={() => dispatch(setMode())}
+                                            sx={{ fontSize: "25px" }}
+                                            >
+                                            {theme.palette.default.mode ===
+                                            "dark" ? (
+                                                <DarkMode
+                                                sx={{ fontSize: "25px" }}
+                                                >
+                                                    Dark Mode
+                                                </DarkMode>
+                                            ) : (
+                                                <LightMode
+                                                    sx={{
+                                                        color: buttonLight2,
+                                                        fontSize: "25px",
+                                                    }}
+                                                />
+                                            )}
+                                        </IconButton> */}
+                                            </FlexBetween>
+                                            {/* End of Top Section */}
+                                        </Box>
+                                    </Container>
+
+                                    {/* Footer Section */}
+                                    <Container>
+                                        {/* LogOut Icon */}
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                            }}
+                                        >
+                                            <Tooltip
+                                                TransitionComponent={Zoom}
+                                                placement="top"
+                                                title="Log Out of WeFeed"
+                                                enterDelay="500"
+                                                sx={{ fontSize: "1rem" }}
+                                            >
+                                                <Button
+                                                    cursor="pointer"
+                                                    onClick={() =>
+                                                        dispatch(setLogout())
+                                                    }
+                                                    sx={{
+                                                        display: "flex",
+                                                        justifyContent:
+                                                            "space-evenly",
+                                                        borderRadius: "3rem",
+                                                        width: "8rem",
+                                                        backgroundColor:
+                                                            buttonLight2,
+
+                                                        color: headingText,
+                                                        "&:hover": {
+                                                            color: headingText,
+                                                            backgroundColor:
+                                                                buttonHover,
+                                                        },
+                                                    }}
+                                                >
+                                                    <LogoutIcon
+                                                        sx={{
+                                                            // size: "25px",
+                                                            fontSize: "25px",
+                                                            color: headingText,
+                                                        }}
+                                                    />
+
+                                                    <Typography
+                                                        sx={{
+                                                            pl: "1rem",
+                                                            color: headingText,
+                                                        }}
+                                                    >
+                                                        Log Out
+                                                    </Typography>
+                                                </Button>
+                                            </Tooltip>
+                                        </Box>
+                                        <Box
+                                            padding="1rem"
+                                            sx={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                                p: "1rem",
+                                                width: "auto",
+                                            }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    color: headingText,
+                                                    fontWeight: "bold",
+                                                }}
+                                            >
+                                                WeFeed 2024
                                             </Typography>
-                                        </FlexBetween>
-                                    </Button>
-                                </Tooltip>
-                            </FlexBetween>
+                                        </Box>
+                                    </Container>
+                                </Box>
+                            </Container>
                         </Box>
                     </ClickAwayListener>
                 )}
@@ -391,3 +572,14 @@ const Navbar = ({ userId, themeColors }) => {
 };
 
 export default Navbar;
+
+/* Features To Add */
+
+/* Messages Icon */
+/* <Message sx={{ fontSize: "25px" }} /> */
+
+/* Notifications Icon */
+/* <Notifications sx={{ fontSize: "25px" }} /> */
+
+/* Help Icon */
+/* <Help sx={{ fontSize: "25px" }} /> */
