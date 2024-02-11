@@ -441,7 +441,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                             ) : (
                                                                 <LightMode
                                                                     sx={{
-                                                                        color: buttonLight2,
+                                                                        color: headingText,
                                                                         fontSize:
                                                                             "25px",
                                                                     }}
@@ -510,10 +510,9 @@ const Navbar = ({ userId, themeColors }) => {
                                                         display: "flex",
                                                         justifyContent:
                                                             "space-evenly",
+                                                        border: `1px solid ${headingText}`,
                                                         borderRadius: "3rem",
                                                         width: "8rem",
-                                                        backgroundColor:
-                                                            buttonLight2,
 
                                                         color: headingText,
                                                         "&:hover": {
