@@ -17,6 +17,7 @@ import {
     Zoom,
     useMediaQuery,
 } from "@mui/material";
+import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 
 // MUI Icons
 import {
@@ -98,9 +99,15 @@ const Navbar = ({ userId, themeColors }) => {
     const fullName = `${user.firstName} ${user.lastName}`;
     const firstName = user.firstName;
 
+    //  CLick Away Function Handler
+    const handleClickAway = () => {
+        setIsMobileMenuToggled(false);
+    };
+
     return (
         <Box
             position="fixed"
+            onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
             sx={{ width: "100%", zIndex: "100", boxShadow: 8 }}
         >
             <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
@@ -110,6 +117,16 @@ const Navbar = ({ userId, themeColors }) => {
                         isDesktopScreen={isDesktopScreen}
                     />
                 )}
+
+                {!isDesktopScreen && (
+                    <FlexBetween
+                        width="10%"
+                        sx={{
+                            justifyContent: "center",
+                        }}
+                    />
+                )}
+
                 <FeedSelect themeColors={themeColors} />
                 {/* {isDesktopScreen && (
                         <FlexBetween
@@ -228,129 +245,145 @@ const Navbar = ({ userId, themeColors }) => {
                         </Tooltip>
                     </FlexBetween>
                 ) : (
-                    <IconButton
-                        onClick={() =>
-                            setIsMobileMenuToggled(!isMobileMenuToggled)
-                        }
+                    <FlexBetween
+                        width="10%"
+                        sx={{
+                            justifyContent: "center",
+                        }}
                     >
-                        <Menu />
-                    </IconButton>
+                        <IconButton
+                            onClick={() =>
+                                setIsMobileMenuToggled(!isMobileMenuToggled)
+                            }
+                        >
+                            <Menu />
+                        </IconButton>
+                    </FlexBetween>
                 )}
 
                 {/* Mobile Nav */}
                 {!isDesktopScreen && isMobileMenuToggled && (
-                    <Box
-                        position="fixed"
-                        right="0"
-                        bottom="0"
-                        height="100%"
-                        zIndex="10"
-                        maxWidth="500px"
-                        minWidth="300px"
-                        backgroundColor={backgroundMain}
-                        sx={{
-                            // borderRadius: "0.75rem",
-                            borderLeft: `0.5rem solid #FFFFFF `,
-                        }}
-                    >
-                        {/* Close Icon */}
-                        <Box display="flex" justifyContent="flex-end" p="1rem">
-                            <IconButton
-                                onClick={() =>
-                                    setIsMobileMenuToggled(!isMobileMenuToggled)
-                                }
-                            >
-                                <Close />
-                            </IconButton>
-                        </Box>
-
-                        {/* Menu Items */}
-                        <FlexBetween
-                            display="flex"
-                            flexDirection="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            gap="3rem"
+                    <ClickAwayListener onClickAway={handleClickAway}>
+                        <Box
+                            position="fixed"
+                            right="0"
+                            bottom="0"
+                            height="100%"
+                            zIndex="10"
+                            maxWidth="500px"
+                            minWidth="300px"
+                            backgroundColor={backgroundMain}
+                            sx={{
+                                // borderRadius: "0.75rem",
+                                borderLeft: `0.5rem solid #FFFFFF `,
+                            }}
                         >
-                            {/* Logo */}
-                            {!isDesktopScreen && isMobileMenuToggled && (
-                                <Logo themeColors={themeColors} />
-                            )}
-                            {/* Dark & Light Mode */}
-                            <IconButton
-                                onClick={() => dispatch(setMode())}
-                                sx={{ fontSize: "25px" }}
+                            {/* Close Icon */}
+                            <Box
+                                display="flex"
+                                justifyContent="flex-end"
+                                p="1rem"
                             >
-                                {theme.palette.default.mode === "dark" ? (
-                                    <DarkMode sx={{ fontSize: "25px" }}>
-                                        Dark Mode
-                                    </DarkMode>
-                                ) : (
-                                    <LightMode
-                                        sx={{
-                                            color: buttonLight2,
-                                            fontSize: "25px",
-                                        }}
-                                    />
-                                )}
-                            </IconButton>
-
-                            {/* Messages Icon */}
-                            {/* <Message sx={{ fontSize: "25px" }} /> */}
-
-                            {/* Notifications Icon */}
-                            {/* <Notifications sx={{ fontSize: "25px" }} /> */}
-
-                            {/* Help Icon */}
-                            {/* <Help sx={{ fontSize: "25px" }} /> */}
-
-                            {/* LogOut Icon */}
-
-                            <Tooltip
-                                TransitionComponent={Zoom}
-                                placement="top"
-                                title="Log Out Account"
-                                enterDelay="500"
-                                sx={{ fontSize: "1rem" }}
-                            >
-                                <Button
-                                    cursor="pointer"
-                                    onClick={() => dispatch(setLogout())}
-                                    // size="large"
-                                    // fullwidth
-                                    sx={{
-                                        borderRadius: "3rem",
-                                        width: "8rem",
-                                        backgroundColor: buttonLight2,
-
-                                        color: headingText,
-                                        "&:hover": {
-                                            color: headingText,
-                                            backgroundColor: buttonHover,
-                                        },
-                                    }}
+                                <IconButton
+                                    onClick={() =>
+                                        setIsMobileMenuToggled(
+                                            !isMobileMenuToggled
+                                        )
+                                    }
                                 >
-                                    <FlexBetween>
-                                        <LogoutIcon
+                                    <Close />
+                                </IconButton>
+                            </Box>
+
+                            {/* Menu Items */}
+
+                            <FlexBetween
+                                display="flex"
+                                flexDirection="column"
+                                justifyContent="center"
+                                alignItems="center"
+                                gap="3rem"
+                            >
+                                {/* Logo */}
+                                {!isDesktopScreen && isMobileMenuToggled && (
+                                    <Logo themeColors={themeColors} />
+                                )}
+                                {/* Dark & Light Mode */}
+                                <IconButton
+                                    onClick={() => dispatch(setMode())}
+                                    sx={{ fontSize: "25px" }}
+                                >
+                                    {theme.palette.default.mode === "dark" ? (
+                                        <DarkMode sx={{ fontSize: "25px" }}>
+                                            Dark Mode
+                                        </DarkMode>
+                                    ) : (
+                                        <LightMode
                                             sx={{
-                                                fontSize: "large",
-                                                color: headingText,
+                                                color: buttonLight2,
+                                                fontSize: "25px",
                                             }}
                                         />
+                                    )}
+                                </IconButton>
 
-                                        <Typography
-                                            sx={{
-                                                pl: "1rem",
+                                {/* Messages Icon */}
+                                {/* <Message sx={{ fontSize: "25px" }} /> */}
+
+                                {/* Notifications Icon */}
+                                {/* <Notifications sx={{ fontSize: "25px" }} /> */}
+
+                                {/* Help Icon */}
+                                {/* <Help sx={{ fontSize: "25px" }} /> */}
+
+                                {/* LogOut Icon */}
+
+                                <Tooltip
+                                    TransitionComponent={Zoom}
+                                    placement="top"
+                                    title="Log Out Account"
+                                    enterDelay="500"
+                                    sx={{ fontSize: "1rem" }}
+                                >
+                                    <Button
+                                        cursor="pointer"
+                                        onClick={() => dispatch(setLogout())}
+                                        // size="large"
+                                        // fullwidth
+                                        sx={{
+                                            borderRadius: "3rem",
+                                            width: "8rem",
+                                            backgroundColor: buttonLight2,
+
+                                            color: headingText,
+                                            "&:hover": {
                                                 color: headingText,
-                                            }}
-                                        >
-                                            Log Out
-                                        </Typography>
-                                    </FlexBetween>
-                                </Button>
-                            </Tooltip>
-                        </FlexBetween>
-                    </Box>
+                                                backgroundColor: buttonHover,
+                                            },
+                                        }}
+                                    >
+                                        <FlexBetween>
+                                            <LogoutIcon
+                                                sx={{
+                                                    fontSize: "large",
+                                                    color: headingText,
+                                                }}
+                                            />
+
+                                            <Typography
+                                                sx={{
+                                                    pl: "1rem",
+                                                    color: headingText,
+                                                }}
+                                            >
+                                                Log Out
+                                            </Typography>
+                                        </FlexBetween>
+                                    </Button>
+                                </Tooltip>
+                            </FlexBetween>
+                        </Box>
+                    </ClickAwayListener>
                 )}
             </FlexBetween>
         </Box>
