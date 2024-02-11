@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import {
     Box,
     IconButton,
+    Button,
     InputBase,
     Typography,
     Select,
@@ -47,6 +48,7 @@ import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import FeedSelect from "../../components/FeedSelect";
 import ThemeSelect from "../../components/ThemeSelect";
+import Logo from "../../components/Logo";
 
 const Navbar = ({ userId, themeColors }) => {
     // Navigate Hook
@@ -102,24 +104,12 @@ const Navbar = ({ userId, themeColors }) => {
             sx={{ width: "100%", zIndex: "100", boxShadow: 8 }}
         >
             <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
-                <Typography
-                    fontFamily="PrequelShadow"
-                    // fontWeight="bold"
-                    fontSize="clamp(1rem, 2rem, 2.25rem)"
-                    color={headingText}
-                    onClick={() => {
-                        navigate("/home");
-                        // navigate(0);
-                    }}
-                    sx={{
-                        "&:hover": {
-                            color: textHover,
-                            cursor: "pointer",
-                        },
-                    }}
-                >
-                    WeFeed
-                </Typography>
+                {isDesktopScreen && (
+                    <Logo
+                        themeColors={themeColors}
+                        isDesktopScreen={isDesktopScreen}
+                    />
+                )}
                 <FeedSelect themeColors={themeColors} />
                 {/* {isDesktopScreen && (
                         <FlexBetween
@@ -177,10 +167,10 @@ const Navbar = ({ userId, themeColors }) => {
                             )}
                         </IconButton>
 
-                        <ThemeSelect
+                        {/* <ThemeSelect
                             themeColors={themeColors}
                             isDesktopScreen
-                        />
+                        /> */}
 
                         {/* Message Icon */}
                         {/* <IconButton>
@@ -258,6 +248,10 @@ const Navbar = ({ userId, themeColors }) => {
                         maxWidth="500px"
                         minWidth="300px"
                         backgroundColor={backgroundMain}
+                        sx={{
+                            // borderRadius: "0.75rem",
+                            borderLeft: `0.5rem solid #FFFFFF `,
+                        }}
                     >
                         {/* Close Icon */}
                         <Box display="flex" justifyContent="flex-end" p="1rem">
@@ -278,6 +272,10 @@ const Navbar = ({ userId, themeColors }) => {
                             alignItems="center"
                             gap="3rem"
                         >
+                            {/* Logo */}
+                            {!isDesktopScreen && isMobileMenuToggled && (
+                                <Logo themeColors={themeColors} />
+                            )}
                             {/* Dark & Light Mode */}
                             <IconButton
                                 onClick={() => dispatch(setMode())}
@@ -307,16 +305,50 @@ const Navbar = ({ userId, themeColors }) => {
                             {/* <Help sx={{ fontSize: "25px" }} /> */}
 
                             {/* LogOut Icon */}
-                            <IconButton
-                                cursor="pointer"
-                                onClick={() => dispatch(setLogout())}
+
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Log Out Account"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
                             >
-                                <LogoutIcon
+                                <Button
+                                    cursor="pointer"
+                                    onClick={() => dispatch(setLogout())}
+                                    // size="large"
+                                    // fullwidth
                                     sx={{
-                                        fontSize: "25px",
+                                        borderRadius: "3rem",
+                                        width: "8rem",
+                                        backgroundColor: buttonLight2,
+
+                                        color: headingText,
+                                        "&:hover": {
+                                            color: headingText,
+                                            backgroundColor: buttonHover,
+                                        },
                                     }}
-                                />
-                            </IconButton>
+                                >
+                                    <FlexBetween>
+                                        <LogoutIcon
+                                            sx={{
+                                                fontSize: "large",
+                                                color: headingText,
+                                            }}
+                                        />
+
+                                        <Typography
+                                            sx={{
+                                                pl: "1rem",
+                                                color: headingText,
+                                            }}
+                                        >
+                                            Log Out
+                                        </Typography>
+                                    </FlexBetween>
+                                </Button>
+                            </Tooltip>
                         </FlexBetween>
                     </Box>
                 )}
