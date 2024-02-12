@@ -49,7 +49,7 @@ function App() {
         } else {
             // Dark Mode = Ice Cream
             setBackgroundImgState(
-                "vecteezy_ice-cream-seamless-pattern-vector-illustration_9157472.jpg"
+                "vecteezy_sushi-seamless-pattern_15696873.jpg"
             );
         }
     };
@@ -79,7 +79,7 @@ function App() {
 
     return (
         <CardMedia
-        // src={`https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState}`}
+        // src={`https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState}`}
         >
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -87,7 +87,7 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState})`,
+                                background: `url(https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState})`,
                                 margin: 0,
                                 padding: 0,
                             },
@@ -98,7 +98,7 @@ function App() {
                         enableColorScheme
                         sx={{
                             backgroundColor: backgroundThemeColor,
-                            background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState})`,
+                            background: `url(https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState})`,
                         }}
                     >
                         <Routes>
