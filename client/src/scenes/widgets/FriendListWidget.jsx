@@ -37,7 +37,9 @@ const FriendListWidget = ({ userId, themeColors }) => {
         getUserFriends();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+    // THROUGHPUT TESTING
     console.log("FRIENDS TEST:", friends);
+
     return (
         <WidgetWrapper sx={{ minWidth: "16.7915rem" }}>
             <Typography
