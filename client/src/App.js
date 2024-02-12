@@ -21,9 +21,6 @@ import {
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 
-// Backgorund Image
-import backgroundThemeImg from "./assets/vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg";
-
 // Custom Components
 import HomePage from "./scenes/homePage";
 import LoginPage from "./scenes/loginPage";
@@ -41,6 +38,21 @@ function App() {
 
     // State
     const [userObject, setUserObject] = useState(null);
+    const [backgroundImgState, setBackgroundImgState] = useState("");
+
+    const modeFunction = () => {
+        if (mode === "light") {
+            // Light Mode = Dango
+            setBackgroundImgState(
+                "vecteezy_dango-dessert-sweets-japan-kawaii-doodle-flat-vector_7977760.jpg"
+            );
+        } else {
+            // Dark Mode = Ice Cream
+            setBackgroundImgState(
+                "vecteezy_ice-cream-seamless-pattern-vector-illustration_9157472.jpg"
+            );
+        }
+    };
 
     const getUser = async () => {
         const response = await fetch(
@@ -55,8 +67,10 @@ function App() {
     };
 
     useEffect(() => {
+        modeFunction();
         getUser();
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+        // getBackgroundImage();
+    }, [mode]); // eslint-disable-line react-hooks/exhaustive-deps
 
     // Typically have loading component while user waits
     if (!userObject) {
@@ -65,11 +79,7 @@ function App() {
 
     return (
         <CardMedia
-            src={
-                // `https://server-vukx.onrender.com/assets/dessertThemeImg/${
-                backgroundThemeImg
-                // }`
-            }
+        // src={`https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState}`}
         >
             <BrowserRouter>
                 <ThemeProvider theme={theme}>
@@ -77,19 +87,18 @@ function App() {
                         styles={{
                             body: {
                                 backgroundColor: backgroundThemeColor,
-                                background: `url(${backgroundThemeImg})`,
-                                // background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
+                                background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState})`,
                                 margin: 0,
                                 padding: 0,
                             },
                         }}
                     />
+
                     <ScopedCssBaseline
                         enableColorScheme
                         sx={{
                             backgroundColor: backgroundThemeColor,
-                            background: `url(${backgroundThemeImg})`,
-                            // background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundThemeImg})`,
+                            background: `url(https://server-vukx.onrender.com/assets/dessertThemeImg/${backgroundImgState})`,
                         }}
                     >
                         <Routes>
