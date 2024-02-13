@@ -72,22 +72,40 @@ export const colorTokens = {
 
     //    - Trophy Icons -
     trophy: {
-        gold: "#FFD700",
-        silver: "#C0C0C0",
-        bronze: "#CD7F32",
-    },
+        gold: {
+            100: "#FFF7CC",
+            200: "#FFF099",
+            300: "#FFE866",
+            400: "#FFE033",
+            500: "#FFD700",
+            600: "#ffd700",
+            700: "#ccac00",
+            800: "#998100",
+        },
 
-    primary: {
-        50: "#E6FBFF",
-        100: "#CCF7FE",
-        200: "#99EEFD",
-        300: "#66E6FC",
-        400: "#33DDFB",
-        500: "#00D5FA",
-        600: "#00A0BC",
-        700: "#006B7D",
-        800: "#00353F",
-        900: "#001519",
+        silver: {
+            100: "#f2f2f2",
+            200: "#e6e6e6",
+            300: "#d9d9d9",
+            400: "#cdcdcd",
+            500: "#c0c0c0",
+            600: "#9a9a9a",
+            700: "#737373",
+            800: "#4d4d4d",
+            900: "#262626",
+        },
+
+        bronze: {
+            100: "#f5e5d6",
+            200: "#ebccad",
+            300: "#e1b284",
+            400: "#d7995b",
+            500: "#cd7f32",
+            600: "#a46628",
+            700: "#7b4c1e",
+            800: "#523314",
+            900: "#29190a",
+        },
     },
 
     //    - Cupcake Theme -
@@ -109,9 +127,61 @@ export const colorTokens = {
             // 300: "#9FDDD8", // Tiffany Blue     (Medium Teal)
             // 400: "#9FDDD8", // Tiffany Blue     (Medium Teal)
         },
-        cream: {
-            100: "#FFF5EB",
-            200: "#FEE9BA",
+    },
+    sushi: {
+        purple: {
+            // 150: "#CFC4FF",
+            // 160: "#C4B9F1",
+            100: "#baacc1",
+            200: "#a391ac",
+            // 150: "#8c7597",
+            150: "#ABA2D3",
+            160: "#8c7597",
+            300: "#7D6887",
+            // 400: "#7D6887",
+            // 500: "#6D5B76",
+            // 600: "#5E4E65",
+            // 900: "#4D4053",
+            // 1000: "#493946",
+        },
+        blue: {
+            100: "#CFC4FF",
+            // 200: "#C4B9F1",
+            // 100: "#ABA2D3",
+            100: "#938BB5",
+            // 400: "#7B7597",
+            400: "#6D6887",
+            // 700: "#605B76",
+            // 800: "#524E65",
+            // 900: "#444154",
+        },
+    },
+    sushiGrey: {
+        // Primary One - Main
+        grey2: {
+            100: "#f5f5f5",
+            200: "#ebebeb",
+            // 300: "#e0e0e0",
+            // 400: "#d6d6d6",
+            // 200: "#cccccc",
+            // 100: "#999999",
+            100: "#4C5379",
+            // 400: "#555555",
+            400: "#26293c",
+            // 400: "#333333",
+            // 900: "#000000",
+        },
+        // Primary Two - Button
+        grey1: {
+            // 150: "#f5f5f5",
+            160: "#ebebeb",
+            // 300: "#e0e0e0",
+            // 150: "#d6d6d6",
+            150: "#363b56",
+            300: "#524E65",
+            // 700: "#666666",
+            // 800: "#333333",
+            // 900: "#000000",
         },
     },
 
@@ -170,38 +240,35 @@ export const themeSettings = (mode) => {
                       // Default Dark Mode Palette
                       default: {
                           primary: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.teal[200],
-                              light: colorTokens.cupcake.teal[100],
+                              dark: colorTokens.sushiGrey.grey1[300],
+                              main: colorTokens.sushiGrey.grey2[200],
+                              light: colorTokens.sushiGrey.grey2[100],
                           },
 
-                          // Teal
+                          // grey2
                           primaryOne: {
-                              dark: colorTokens.cupcake.teal[400],
-                              main: colorTokens.cupcake.teal[300],
-                              light: colorTokens.cupcake.teal[200],
-                              lightest: colorTokens.cupcake.teal[100],
+                              dark: colorTokens.sushiGrey.grey2[400],
+                              main: colorTokens.sushiGrey.grey2[300],
+                              light: colorTokens.sushiGrey.grey2[200],
+                              lightest: colorTokens.sushiGrey.grey2[100],
                           },
-                          // Pink
+                          // grey1
                           primaryTwo: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.pink[200],
-                              light3: colorTokens.cupcake.pink[160],
-                              light2: colorTokens.cupcake.pink[150],
-                              light: colorTokens.cupcake.pink[100],
+                              dark: colorTokens.sushiGrey.grey1[300],
+                              main: colorTokens.sushiGrey.grey1[200],
+                              light3: colorTokens.sushiGrey.grey1[160],
+                              light2: colorTokens.sushiGrey.grey1[150],
+                              light: colorTokens.sushiGrey.grey1[100],
                           },
-                          // Beige
-                          primaryThree: {
-                              main: colorTokens.cupcake.cream[200],
-                              light: colorTokens.cupcake.cream[100],
-                          },
+
                           neutral: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.teal[300],
-                              mediumMain: colorTokens.cupcake.teal[300],
-                              medium: colorTokens.cupcake.pink[200],
-                              light: colorTokens.cupcake.pink[100],
+                              dark: colorTokens.sushiGrey.grey1[300],
+                              main: colorTokens.sushiGrey.grey2[300],
+                              mediumMain: colorTokens.sushiGrey.grey2[300],
+                              medium: colorTokens.sushiGrey.grey1[200],
+                              light: colorTokens.sushiGrey.grey1[100],
                           },
+
                           neutralGrey: {
                               dark: colorTokens.grey[900],
                               main: colorTokens.grey[500],
@@ -214,105 +281,16 @@ export const themeSettings = (mode) => {
                               fade30: colorTokens.opaque[30],
                               fade10: colorTokens.opaque[10],
                           },
+
                           background: {
-                              default: colorTokens.cupcake.pink[200],
-                              alt: colorTokens.cupcake.teal[400],
+                              default: colorTokens.sushiGrey.grey1[200],
+                              alt: colorTokens.sushiGrey.grey2[400],
                           },
                       },
                       trophy: {
-                          gold: colorTokens.trophy["gold"],
-                          silver: colorTokens.trophy["silver"],
-                          bronze: colorTokens.trophy["bronze"],
-                      },
-
-                      // Dessert Theme Dark Mode Palette - Change Colours to Suit Theme
-                      //   dessert: {
-                      //       primary: {
-                      //           dark: colorTokens.cupcake[200],
-                      //           main: colorTokens.cupcake[500],
-                      //           light: colorTokens.cupcake[800],
-                      //       },
-                      //       neutral: {
-                      //           dark: colorTokens.cupcake[100],
-                      //           main: colorTokens.cupcake[200],
-                      //           mediumMain: colorTokens.cupcake[300],
-                      //           medium: colorTokens.cupcake[400],
-                      //           light: colorTokens.cupcake[700],
-                      //       },
-                      //       background: {
-                      //           default: colorTokens.cupcake[900],
-                      //           alt: colorTokens.cupcake[800],
-                      //       },
-                      //   },
-
-                      // Dinner Theme Dark Mode Palette - Change Colours to Suit Theme
-                      dinner: {
-                          red: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                          },
-                          yellow: {
-                              dark: colorTokens.burger.yellow[100],
-                              main: colorTokens.burger.yellow[200],
-                              mediumMain: colorTokens.burger.yellow[300],
-                              medium: colorTokens.burger.yellow[400],
-                              light: colorTokens.burger.yellow[700],
-                          },
-                          //   green: {
-                          //       default: colorTokens.burger.green[900],
-                          //       alt: colorTokens.burger.green[800],
-                          //   },
-
-                          primary: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                          },
-
-                          // Teal
-                          primaryOne: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                              lightest: colorTokens.burger.red[100],
-                          },
-                          // Pink
-                          primaryTwo: {
-                              dark: colorTokens.burger.yellow[100],
-                              main: colorTokens.burger.yellow[200],
-                              light3: colorTokens.cupcake.pink[160],
-                              light2: colorTokens.cupcake.pink[150],
-                              light: colorTokens.burger.yellow[700],
-                          },
-                          // Beige
-                          //   primaryThree: {
-                          //       main: colorTokens.cupcake.cream[200],
-                          //       light: colorTokens.cupcake.cream[100],
-                          //   },
-                          neutral: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.teal[300],
-                              mediumMain: colorTokens.cupcake.teal[300],
-                              medium: colorTokens.cupcake.pink[200],
-                              light: colorTokens.cupcake.pink[100],
-                          },
-                          neutralGrey: {
-                              dark: colorTokens.grey[900],
-                              main: colorTokens.grey[500],
-                              mediumMain: colorTokens.grey[300],
-                              medium: colorTokens.grey[200],
-                              light: colorTokens.grey[100],
-                              lightest: colorTokens.grey[0],
-                              white: colorTokens.opaque[70],
-                              fade50: colorTokens.opaque[50],
-                              fade30: colorTokens.opaque[30],
-                              fade10: colorTokens.opaque[10],
-                          },
-                          background: {
-                              default: colorTokens.cupcake.pink[200],
-                              alt: colorTokens.cupcake.teal[400],
-                          },
+                          gold: colorTokens.trophy.gold[800],
+                          silver: colorTokens.trophy.silver[900],
+                          bronze: colorTokens.trophy.bronze[900],
                       },
                   }
                 : {
@@ -338,11 +316,7 @@ export const themeSettings = (mode) => {
                               light2: colorTokens.cupcake.pink[150],
                               light: colorTokens.cupcake.pink[100],
                           },
-                          // Beige
-                          primaryThree: {
-                              main: colorTokens.cupcake.cream[200],
-                              light: colorTokens.cupcake.cream[100],
-                          },
+
                           neutral: {
                               dark: colorTokens.cupcake.pink[300],
                               main: colorTokens.cupcake.teal[300],
@@ -368,117 +342,9 @@ export const themeSettings = (mode) => {
                           },
                       },
                       trophy: {
-                          gold: colorTokens.trophy["gold"],
-                          silver: colorTokens.trophy["silver"],
-                          bronze: colorTokens.trophy["bronze"],
-                      },
-
-                      //   default: {
-                      //       primary: {
-                      //           dark: colorTokens.primary[700],
-                      //           main: colorTokens.primary[500],
-                      //           light: colorTokens.primary[50],
-                      //       },
-                      //       neutral: {
-                      //           dark: colorTokens.grey[700],
-                      //           main: colorTokens.grey[500],
-                      //           mediumMain: colorTokens.grey[400],
-                      //           medium: colorTokens.grey[300],
-                      //           light: colorTokens.grey[50],
-                      //       },
-                      //       background: {
-                      //           default: colorTokens.grey[10],
-                      //           alt: colorTokens.grey[0],
-                      //       },
-                      //   },
-
-                      // Dessert Theme Light Mode Palette - Change Colours to Suit Theme
-                      //   dessert: {
-                      //       primary: {
-                      //           dark: colorTokens.dessertColor[700],
-                      //           main: colorTokens.dessertColor[500],
-                      //           light: colorTokens.dessertColor[50],
-                      //       },
-                      //       neutral: {
-                      //           dark: colorTokens.dessertMono[700],
-                      //           main: colorTokens.dessertMono[500],
-                      //           mediumMain: colorTokens.dessertMono[400],
-                      //           medium: colorTokens.dessertMono[300],
-                      //           light: colorTokens.dessertMono[50],
-                      //       },
-                      //       background: {
-                      //           default: colorTokens.dessertMono[10],
-                      //           alt: colorTokens.dessertMono[0],
-                      //       },
-                      //   },
-                      // Dinner Theme Light Mode Palette - Change Colours to Suit Theme
-                      dinner: {
-                          red: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                          },
-                          yellow: {
-                              dark: colorTokens.burger.yellow[100],
-                              main: colorTokens.burger.yellow[200],
-                              mediumMain: colorTokens.burger.yellow[300],
-                              medium: colorTokens.burger.yellow[400],
-                              light: colorTokens.burger.yellow[700],
-                          },
-                          //   green: {
-                          //       default: colorTokens.burger.green[900],
-                          //       alt: colorTokens.burger.green[800],
-                          //   },
-
-                          primary: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                          },
-
-                          // Teal
-                          primaryOne: {
-                              dark: colorTokens.burger.red[200],
-                              main: colorTokens.burger.red[500],
-                              light: colorTokens.burger.red[800],
-                              lightest: colorTokens.burger.red[100],
-                          },
-                          // Pink
-                          primaryTwo: {
-                              dark: colorTokens.burger.yellow[100],
-                              main: colorTokens.burger.yellow[200],
-                              light3: colorTokens.cupcake.pink[160],
-                              light2: colorTokens.cupcake.pink[150],
-                              light: colorTokens.burger.yellow[700],
-                          },
-                          // Beige
-                          //   primaryThree: {
-                          //       main: colorTokens.cupcake.cream[200],
-                          //       light: colorTokens.cupcake.cream[100],
-                          //   },
-                          neutral: {
-                              dark: colorTokens.cupcake.pink[300],
-                              main: colorTokens.cupcake.teal[300],
-                              mediumMain: colorTokens.cupcake.teal[300],
-                              medium: colorTokens.cupcake.pink[200],
-                              light: colorTokens.cupcake.pink[100],
-                          },
-                          neutralGrey: {
-                              dark: colorTokens.grey[900],
-                              main: colorTokens.grey[500],
-                              mediumMain: colorTokens.grey[300],
-                              medium: colorTokens.grey[200],
-                              light: colorTokens.grey[100],
-                              lightest: colorTokens.grey[0],
-                              white: colorTokens.opaque[70],
-                              fade50: colorTokens.opaque[50],
-                              fade30: colorTokens.opaque[30],
-                              fade10: colorTokens.opaque[10],
-                          },
-                          background: {
-                              default: colorTokens.cupcake.pink[200],
-                              alt: colorTokens.cupcake.teal[400],
-                          },
+                          gold: colorTokens.trophy.gold[500],
+                          silver: colorTokens.trophy.silver[500],
+                          bronze: colorTokens.trophy.bronze[500],
                       },
                   }),
         },
