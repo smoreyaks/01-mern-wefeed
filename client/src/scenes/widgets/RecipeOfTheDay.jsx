@@ -19,9 +19,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
 
     // Theme Colors
     const { palette } = useTheme();
-    const dark = palette.default.neutral.dark;
-    const medium = palette.default.neutral.medium;
-    const main = palette.default.neutral.main;
 
     const {
         headingText,
@@ -184,7 +181,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             </Typography>
                         </Box>
                     </FlexBetween>
-                    <EditOutlined sx={{ color: main }} />
+                    <EditOutlined sx={{ color: headingText }} />
                 </FlexBetween>
             </Box>
         </WidgetWrapper>
