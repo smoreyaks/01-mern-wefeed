@@ -247,14 +247,17 @@ const RecipePostWidget = ({
                                 ? "0 0.75rem 0rem 0rem"
                                 : "0 0.75rem 0.75rem 0",
                             "&:hover": {
-                                color: headingText,
                                 backgroundColor: buttonHover,
                             },
                         }}
                     >
                         {/* <TextSnippetOutlinedIcon /> */}
-                        <NoteIcon />
-                        {notesOpen ? <RemoveIcon /> : <AddIcon />}
+                        <NoteIcon sx={{ fill: headingText }} />
+                        {notesOpen ? (
+                            <RemoveIcon sx={{ fill: headingText }} />
+                        ) : (
+                            <AddIcon sx={{ fill: headingText }} />
+                        )}
                     </ToggleButton>
                 </Tooltip>
             </FlexBetween>
@@ -343,6 +346,7 @@ const RecipePostWidget = ({
                                         borderRadius: ".75rem",
                                         display: "flex",
                                         alignItems: "center",
+                                        color: headingText,
                                     }}
                                 >
                                     {prepTime}
@@ -380,6 +384,7 @@ const RecipePostWidget = ({
                                         backgroundColor: "inherit",
                                         borderRadius: ".75rem",
                                         // padding: "0.5rem",
+                                        color: headingText,
                                     }}
                                 >
                                     {cookTime}
@@ -406,7 +411,9 @@ const RecipePostWidget = ({
                                 }}
                             >
                                 <PersonRoundedIcon sx={{ fill: headingText }} />
-                                <Typography sx={{ pl: "0.25rem" }}>
+                                <Typography
+                                    sx={{ pl: "0.25rem", color: headingText }}
+                                >
                                     {servings}
                                 </Typography>
                             </Box>
@@ -418,7 +425,7 @@ const RecipePostWidget = ({
                             placement="top"
                             title="Spice Level"
                             enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
+                            sx={{ fontSize: "1rem", color: headingText }}
                         >
                             <Box
                                 sx={{
@@ -433,7 +440,9 @@ const RecipePostWidget = ({
                                 <LocalFireDepartmentIcon
                                     sx={{ fill: headingText }}
                                 />
-                                <Typography sx={{ pl: "0.25rem" }}>
+                                <Typography
+                                    sx={{ pl: "0.25rem", color: headingText }}
+                                >
                                     {spiceLevel}
                                 </Typography>
                             </Box>

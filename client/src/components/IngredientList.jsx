@@ -93,15 +93,22 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     justifyContent="space-between"
                     alignItems="center"
                     // borderRadius="1.75rem"
+                    sx={{ color: headingText }}
                 >
                     {ingredientCount} Ingredients
                     {/* INGREDIENTS */}
                 </Typography>
 
                 {ingredientListOpen ? (
-                    <KeyboardArrowDownRoundedIcon fontSize="large" />
+                    <KeyboardArrowDownRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 ) : (
-                    <KeyboardArrowRightRoundedIcon fontSize="large" />
+                    <KeyboardArrowRightRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 )}
             </ToggleButton>
             <Box
@@ -127,6 +134,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                                     alignItems: "center",
                                     borderRadius: "0.5rem",
                                     width: "auto",
+                                    color: headingText,
                                 }}
                             >
                                 {element}

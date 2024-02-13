@@ -122,6 +122,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                     fontSize="1rem"
                                     fontFamily="Montserrat"
                                     sx={{
+                                        color: headingText,
                                         "&:hover": {
                                             color: headingText,
                                         },
@@ -149,7 +150,9 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                     First Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography>1ST</Typography>
+                            <Typography sx={{ color: headingText }}>
+                                1ST
+                            </Typography>
                         </FlexBetween>
 
                         {/* Second Place */}
@@ -160,18 +163,22 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                     Second Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography>2ND</Typography>
+                            <Typography sx={{ color: headingText }}>
+                                2ND
+                            </Typography>
                         </FlexBetween>
 
                         {/* Third Place */}
                         <FlexBetween pb="0.5rem">
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: bronze }} />
-                                <Typography color={headingText}>
+                                <Typography sx={{ color: headingText }}>
                                     Third Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography>3RD</Typography>
+                            <Typography sx={{ color: headingText }}>
+                                3RD
+                            </Typography>
                         </FlexBetween>
                     </Box>
                 </Box>

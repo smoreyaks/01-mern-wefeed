@@ -89,14 +89,21 @@ const EquipmentList = ({ equipment, themeColors }) => {
                     justifyContent="space-between"
                     alignItems="center"
                     // borderRadius="1.75rem"
+                    sx={{ color: headingText }}
                 >
                     {equipmentCount} Tools & Utensils
                 </Typography>
 
                 {equipmentListOpen ? (
-                    <KeyboardArrowDownRoundedIcon fontSize="large" />
+                    <KeyboardArrowDownRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 ) : (
-                    <KeyboardArrowRightRoundedIcon fontSize="large" />
+                    <KeyboardArrowRightRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 )}
             </ToggleButton>
 
@@ -120,6 +127,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
                                 display: "flex",
                                 justifyContent: "flex-start",
                                 width: "100%",
+                                color: headingText,
                             }}
                         >
                             {equip}

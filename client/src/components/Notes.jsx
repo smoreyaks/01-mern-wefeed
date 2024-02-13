@@ -70,6 +70,7 @@ const Notes = ({ notes, themeColors, recipeId, notesOpen }) => {
                                 display: "flex",
                                 justifyContent: "flex-start",
                                 width: "100%",
+                                color: headingText,
                             }}
                         >
                             {notes}

@@ -74,14 +74,21 @@ const StepsList = ({ steps, themeColors }) => {
                     variant="h6"
                     fontWeight="bold"
                     fontFamily="Montserrat"
+                    sx={{ color: headingText }}
                 >
                     {stepsCount} Steps
                 </Typography>
 
                 {stepsListOpen ? (
-                    <KeyboardArrowDownRoundedIcon fontSize="large" />
+                    <KeyboardArrowDownRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 ) : (
-                    <KeyboardArrowRightRoundedIcon fontSize="large" />
+                    <KeyboardArrowRightRoundedIcon
+                        fontSize="large"
+                        sx={{ color: headingText }}
+                    />
                 )}
             </ToggleButton>
 
@@ -119,6 +126,7 @@ const StepsList = ({ steps, themeColors }) => {
                                         background: buttonLight2,
                                         borderRadius: "50%",
                                         width: "1.75rem",
+                                        color: headingText,
                                     }}
                                 >
                                     {step.stepNum}
@@ -132,6 +140,7 @@ const StepsList = ({ steps, themeColors }) => {
                                         display: "flex",
                                         justifyContent: "flex-start",
                                         alignItems: "center",
+                                        color: headingText,
                                     }}
                                 >
                                     {step.stepMethod}
