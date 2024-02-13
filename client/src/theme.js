@@ -63,11 +63,20 @@ export const colorTokens = {
         1000: "rgba(0, 0, 0, 70%)",
     },
 
+    // Dark Mode Text Colour
     opaque: {
         10: "rgba(0, 0, 0, 10%)",
         30: "rgba(0, 0, 0, 30%)",
         50: "rgba(0, 0, 0, 50%)",
         70: "rgba(0, 0, 0, 70%)",
+    },
+
+    // Light Mode Text Colour
+    whiteOpaque: {
+        10: "rgba(255, 255, 255, 10%)",
+        30: "rgba(255, 255, 255, 30%)",
+        50: "rgba(255, 255, 255, 50%)",
+        70: "rgba(255, 255, 255, 70%)",
     },
 
     //    - Trophy Icons -
@@ -276,10 +285,10 @@ export const themeSettings = (mode) => {
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
                               lightest: colorTokens.grey[0],
-                              white: colorTokens.opaque[70],
-                              fade50: colorTokens.opaque[50],
-                              fade30: colorTokens.opaque[30],
-                              fade10: colorTokens.opaque[10],
+                              white: colorTokens.whiteOpaque[70],
+                              fade50: colorTokens.whiteOpaque[50],
+                              fade30: colorTokens.whiteOpaque[30],
+                              fade10: colorTokens.whiteOpaque[10],
                           },
 
                           background: {
@@ -288,9 +297,9 @@ export const themeSettings = (mode) => {
                           },
                       },
                       trophy: {
-                          gold: colorTokens.trophy.gold[800],
-                          silver: colorTokens.trophy.silver[900],
-                          bronze: colorTokens.trophy.bronze[900],
+                          gold: colorTokens.trophy.gold[700],
+                          silver: colorTokens.trophy.silver[600],
+                          bronze: colorTokens.trophy.bronze[600],
                       },
                   }
                 : {
