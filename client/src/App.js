@@ -48,7 +48,9 @@ function App() {
             );
         } else {
             // Dark Mode = Ice Cream
-            setBackgroundImgState("vecteezy_sushi_seamless-pattern_grey.jpg");
+            setBackgroundImgState(
+                "vecteezy_sushi_seamless-pattern_grey_shrunk.jpg"
+            );
         }
     };
 
