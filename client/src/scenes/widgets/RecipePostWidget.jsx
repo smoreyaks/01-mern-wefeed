@@ -174,18 +174,18 @@ const RecipePostWidget = ({
     };
     // console.log("USER Post 1:", loggedInUserId);
 
-    // console.log("USER Id:", _id);
     // console.log("Occupation:", occupation);
     // console.log("Servings:", servings);
 
     return (
         <WidgetWrapper
-            m="2rem 0"
-            sx={
-                {
-                    // boxShadow: 4,
-                }
-            }
+            // m="2rem 0"
+            sx={{
+                p: isComments
+                    ? "1rem 1.5rem 0 1.5rem"
+                    : "1rem 1.5rem 0.5rem 1.5rem",
+                m: isComments ? "2rem 0" : "1rem 0",
+            }}
         >
             {/* ------------------------------- */}
             {/* -------- Recipe Author -------- */}
@@ -638,23 +638,22 @@ const RecipePostWidget = ({
             </FlexBetween>
             {isComments && (
                 <Box mt="0.5rem">
-                    {/* ${_id.findById(comments.userId)} */}
                     {comments.map((comment, i) => (
                         <Box key={`${name}-${i}`}>
                             <Divider />
                             <Typography
                                 sx={{
                                     color: headingText,
-                                    m: "0.5rem 0",
+                                    // my: "0.5rem 0",
                                     pl: "1rem",
+                                    py: "0.5rem",
                                 }}
                             >
-                                {/* {`${user.findById(comment.userId)}`} */}
                                 {comment.commentText}
                             </Typography>
                         </Box>
                     ))}
-                    <Divider />
+                    {/* <Divider /> */}
                 </Box>
             )}
         </WidgetWrapper>
