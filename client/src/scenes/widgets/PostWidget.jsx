@@ -32,7 +32,6 @@ const PostWidget = ({
 
     const { palette } = useTheme();
     const main = palette.default.neutral.main;
-    const primary = palette.default.primary.main;
 
     // const patchLike = async () => {
     //     const response = await fetch(

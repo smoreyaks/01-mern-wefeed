@@ -36,9 +36,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
 
     // Theme Colors
     const { palette } = useTheme();
-    const dark = palette.default.neutral.dark;
-    const medium = palette.default.neutral.medium;
-    const light = palette.default.primary.light;
 
     const {
         primary,
@@ -68,7 +65,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     const gold = palette.trophy.gold;
     const silver = palette.trophy.silver;
     const bronze = palette.trophy.bronze;
-    const main = palette.default.neutral.main;
 
     // API Calls
     // Get User Data

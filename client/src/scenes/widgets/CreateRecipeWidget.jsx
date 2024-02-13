@@ -52,9 +52,6 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
     // ---------- Theme ----------
     const { palette } = useTheme();
 
-    const mediumMain = palette.default.neutral.mediumMain;
-    const medium = palette.default.neutral.medium;
-
     const {
         primary,
         whiteText,

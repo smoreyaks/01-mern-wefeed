@@ -55,10 +55,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     const isFriend = friends.find((friend) => friend._id === friends.id);
 
     // Theme Colors
-    const { palette } = useTheme();
-    const dark = palette.default.neutral.dark;
-    const medium = palette.default.neutral.medium;
-    const main = palette.default.neutral.main;
 
     const {
         primary,

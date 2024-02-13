@@ -30,8 +30,6 @@ const IngredientList = ({ ingredients, themeColors }) => {
 
     // Theme
     const { palette } = useTheme();
-    const main = palette.default.neutral.main;
-    const primary = palette.default.primary.main;
     const { headingText, recipeText, recipeStepsPanel, buttonLight2 } =
         themeColors || {};
 
