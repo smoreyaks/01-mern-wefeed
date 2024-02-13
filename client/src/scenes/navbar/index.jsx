@@ -63,6 +63,7 @@ const Navbar = ({ userId, themeColors }) => {
     // Local State
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
+    const mode = useSelector((state) => state.mode);
 
     // Media Query
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
@@ -147,17 +148,17 @@ const Navbar = ({ userId, themeColors }) => {
                     <FlexBetween gap="1rem">
                         {/* Dark & Light Mode Button */}
 
-                        <IconButton
-                            onClick={() => dispatch(setMode())}
-                            // sx={{ fontSize: "25px" }}
-                        >
-                            {theme.palette.default.mode === "dark" ? (
+                        <IconButton onClick={() => dispatch(setMode())}>
+                            {mode === "dark" ? (
                                 <Tooltip
                                     TransitionComponent={Zoom}
                                     placement="top"
-                                    title="Dark Mode"
+                                    title="Toggle Dark Mode"
                                     enterDelay="500"
-                                    sx={{ fontSize: "1rem" }}
+                                    sx={{
+                                        fontSize: "1rem",
+                                        color: headingText,
+                                    }}
                                 >
                                     <DarkMode
                                         sx={{
@@ -170,39 +171,22 @@ const Navbar = ({ userId, themeColors }) => {
                                 <Tooltip
                                     TransitionComponent={Zoom}
                                     placement="top"
-                                    title="Light Mode"
+                                    title="Toggle Light Mode"
                                     enterDelay="500"
-                                    sx={{ fontSize: "1rem" }}
+                                    sx={{
+                                        fontSize: "1rem",
+                                        color: headingText,
+                                    }}
                                 >
                                     <LightMode
                                         sx={{
-                                            color: textHover,
+                                            color: headingText,
                                             fontSize: "25px",
                                         }}
                                     />
                                 </Tooltip>
                             )}
                         </IconButton>
-
-                        {/* <ThemeSelect
-                            themeColors={themeColors}
-                            isDesktopScreen
-                        /> */}
-
-                        {/* Message Icon */}
-                        {/* <IconButton>
-                            <Message sx={{ fontSize: "25px" }} />
-                        </IconButton> */}
-
-                        {/* Notification Icon */}
-                        {/* <IconButton>
-                            <Notifications sx={{ fontSize: "25px" }} />
-                        </IconButton> */}
-
-                        {/* Help Icon */}
-                        {/* <IconButton>
-                            <Help sx={{ fontSize: "25px" }} />
-                        </IconButton> */}
 
                         {/* User Profile */}
                         <Tooltip
@@ -256,7 +240,7 @@ const Navbar = ({ userId, themeColors }) => {
                                 setIsMobileMenuToggled(!isMobileMenuToggled)
                             }
                         >
-                            <Menu />
+                            <Menu sx={{ color: headingText }} />
                         </IconButton>
                     </FlexBetween>
                 )}
@@ -312,7 +296,9 @@ const Navbar = ({ userId, themeColors }) => {
                                                     )
                                                 }
                                             >
-                                                <Close />
+                                                <Close
+                                                    sx={{ color: headingText }}
+                                                />
                                             </IconButton>
                                         </Box>
                                         {/* ----------------------------------- */}
@@ -345,7 +331,10 @@ const Navbar = ({ userId, themeColors }) => {
                                                     placement="top"
                                                     title="User Profile"
                                                     enterDelay="500"
-                                                    sx={{ fontSize: "1rem" }}
+                                                    sx={{
+                                                        fontSize: "1rem",
+                                                        color: headingText,
+                                                    }}
                                                 >
                                                     {/* Profile Button */}
                                                     <Button
@@ -367,7 +356,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 buttonLight2,
                                                             color: headingText,
                                                             "&:hover": {
-                                                                color: headingText,
+                                                                // color: headingText,
                                                                 backgroundColor:
                                                                     buttonHover,
                                                             },
@@ -392,72 +381,104 @@ const Navbar = ({ userId, themeColors }) => {
                                                 </Tooltip>
 
                                                 {/* Light & Dark Mode */}
-                                                <Tooltip
-                                                    TransitionComponent={Zoom}
-                                                    placement="top"
-                                                    title="Toggle Dark Mode"
-                                                    enterDelay="500"
-                                                    sx={{ fontSize: "1rem" }}
-                                                >
-                                                    <Box>
-                                                        <Button
-                                                            cursor="pointer"
-                                                            onClick={() =>
-                                                                dispatch(
-                                                                    setMode()
-                                                                )
-                                                            }
-                                                            sx={{
-                                                                display: "flex",
-                                                                justifyContent:
-                                                                    "space-evenly",
-                                                                borderRadius:
-                                                                    "3rem",
-                                                                width: "8rem",
+
+                                                <Box>
+                                                    <Button
+                                                        cursor="pointer"
+                                                        onClick={() =>
+                                                            dispatch(setMode())
+                                                        }
+                                                        sx={{
+                                                            display: "flex",
+                                                            justifyContent:
+                                                                "space-evenly",
+                                                            borderRadius:
+                                                                "3rem",
+                                                            width: "8rem",
+                                                            backgroundColor:
+                                                                buttonLight2,
+                                                            color: headingText,
+                                                            fontSize: "25px",
+                                                            "&:hover": {
+                                                                // color: headingText,
                                                                 backgroundColor:
-                                                                    buttonLight2,
-                                                                color: headingText,
-                                                                fontSize:
-                                                                    "25px",
-                                                                "&:hover": {
-                                                                    color: headingText,
-                                                                    backgroundColor:
-                                                                        buttonHover,
-                                                                },
-                                                            }}
-                                                        >
-                                                            {theme.palette
-                                                                .default
-                                                                .mode ===
-                                                            "dark" ? (
-                                                                <DarkMode
-                                                                    sx={{
-                                                                        fontSize:
-                                                                            "25px",
-                                                                    }}
-                                                                >
-                                                                    Dark Mode
-                                                                </DarkMode>
-                                                            ) : (
-                                                                <LightMode
-                                                                    sx={{
-                                                                        color: headingText,
-                                                                        fontSize:
-                                                                            "25px",
-                                                                    }}
-                                                                />
-                                                            )}
-                                                            <Typography
+                                                                    buttonHover,
+                                                            },
+                                                        }}
+                                                    >
+                                                        {mode === "dark" ? (
+                                                            <Tooltip
+                                                                TransitionComponent={
+                                                                    Zoom
+                                                                }
+                                                                placement="top"
+                                                                title="Toggle Dark Mode"
+                                                                enterDelay="500"
                                                                 sx={{
-                                                                    pl: "1rem",
-                                                                    color: headingText,
+                                                                    fontSize:
+                                                                        "1rem",
                                                                 }}
                                                             >
-                                                                Mode
-                                                            </Typography>
-                                                        </Button>
-                                                    </Box>
-                                                </Tooltip>
+                                                                <Box
+                                                                    display="flex"
+                                                                    justifyContent="space-between"
+                                                                    alignItems="center"
+                                                                >
+                                                                    <DarkMode
+                                                                        sx={{
+                                                                            color: headingText,
+                                                                            fontSize:
+                                                                                "25px",
+                                                                        }}
+                                                                    />
+                                                                    <Typography
+                                                                        sx={{
+                                                                            pl: "0.25rem",
+                                                                        }}
+                                                                    >
+                                                                        Dark
+                                                                        Mode
+                                                                    </Typography>
+                                                                </Box>
+                                                            </Tooltip>
+                                                        ) : (
+                                                            <Tooltip
+                                                                TransitionComponent={
+                                                                    Zoom
+                                                                }
+                                                                placement="top"
+                                                                title="Toggle Light Mode"
+                                                                enterDelay="500"
+                                                                sx={{
+                                                                    fontSize:
+                                                                        "1rem",
+                                                                }}
+                                                            >
+                                                                <Box
+                                                                    display="flex"
+                                                                    justifyContent="space-between"
+                                                                    alignItems="center"
+                                                                >
+                                                                    <LightMode
+                                                                        sx={{
+                                                                            color: headingText,
+                                                                            fontSize:
+                                                                                "25px",
+                                                                        }}
+                                                                    />
+                                                                    <Typography
+                                                                        sx={{
+                                                                            pl: "0.25rem",
+                                                                        }}
+                                                                    >
+                                                                        Light
+                                                                        Mode
+                                                                    </Typography>
+                                                                </Box>
+                                                            </Tooltip>
+                                                        )}
+                                                    </Button>
+                                                </Box>
 
                                                 {/* Dark & Light Mode */}
                                                 {/* <IconButton
@@ -572,6 +593,29 @@ const Navbar = ({ userId, themeColors }) => {
 
 export default Navbar;
 
+// -------- DESKTOP --------
+
+/* <ThemeSelect
+    themeColors={themeColors}
+    isDesktopScreen
+/> */
+
+/* Message Icon */
+/* <IconButton>
+        <Message sx={{ fontSize: "25px" }} />
+    </IconButton> */
+
+/* Notification Icon */
+/* <IconButton>
+        <Notifications sx={{ fontSize: "25px" }} />
+    </IconButton> */
+
+/* Help Icon */
+/* <IconButton>
+        <Help sx={{ fontSize: "25px" }} />
+    </IconButton> */
+
+// -------- MOBILE --------
 /* Features To Add */
 
 /* Messages Icon */
