@@ -131,7 +131,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                 >
                                     Most Popular
                                 </Typography>
-                                <Divider />
                             </Box>
                         </FlexBetween>
                     </FlexBetween>
