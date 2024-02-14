@@ -71,7 +71,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
                     alignItems: "center",
                     background: recipeStepsPanel,
                     "&:hover": {
-                        backgroundColor: buttonLight2,
+                        backgroundColor: buttonHover,
                         cursor: "pointer",
                     },
                     width: "100%",

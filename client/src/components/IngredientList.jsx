@@ -30,8 +30,13 @@ const IngredientList = ({ ingredients, themeColors }) => {
 
     // Theme
     const { palette } = useTheme();
-    const { headingText, recipeText, recipeStepsPanel, buttonLight2 } =
-        themeColors || {};
+    const {
+        headingText,
+        recipeText,
+        recipeStepsPanel,
+        buttonLight2,
+        buttonHover,
+    } = themeColors || {};
 
     // Homogenize Quantities to Lower Case
     let qtyListLower = ingredients.map((quantity) => {
@@ -76,7 +81,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     alignItems: "center",
                     background: recipeStepsPanel,
                     "&:hover": {
-                        backgroundColor: buttonLight2,
+                        backgroundColor: buttonHover,
                         cursor: "pointer",
                     },
                     width: "100%",
