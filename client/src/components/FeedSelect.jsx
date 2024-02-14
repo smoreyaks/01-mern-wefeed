@@ -9,6 +9,9 @@ import { setFilter } from "../state/index";
 import FlexBetween from "./FlexBetween";
 import WidgetWrapper from "./WidgetWrapper";
 
+// MUI Icons
+import AllInclusiveOutlinedIcon from "@mui/icons-material/AllInclusiveOutlined";
+
 // Custom Icons
 import AppetiserIcon from "./svg/AppetiserIcon";
 import MainDishIcon from "./svg/MainDishIcon";
@@ -102,12 +105,10 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <Typography
-                                fontWeight="bold"
+                            <AllInclusiveOutlinedIcon
                                 sx={{ color: headingText }}
-                            >
-                                ALL
-                            </Typography>
+                                fontSize="medium"
+                            />
                         </Button>
                     </Tooltip>
 
