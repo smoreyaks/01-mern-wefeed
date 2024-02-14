@@ -17,6 +17,7 @@ import {
     Tooltip,
     Zoom,
     useMediaQuery,
+    Divider,
 } from "@mui/material";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 
@@ -31,6 +32,7 @@ import {
     Menu,
     Close,
 } from "@mui/icons-material";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 // Redux Hooks
@@ -129,19 +131,6 @@ const Navbar = ({ userId, themeColors }) => {
                 )}
 
                 <FeedSelect themeColors={themeColors} />
-                {/* {isDesktopScreen && (
-                        <FlexBetween
-                            backgroundColor={neutralLight}
-                            borderRadius="9px"
-                            gap="3rem"
-                            padding="0.1rem 1.5rem"
-                        >
-                            <InputBase placeholder="Search..." />
-                            <IconButton>
-                                <Search />
-                            </IconButton>
-                        </FlexBetween>
-                    )} */}
 
                 {/* Desktop Navbar */}
                 {isDesktopScreen ? (
@@ -263,12 +252,12 @@ const Navbar = ({ userId, themeColors }) => {
                                 display: "flex",
                                 justifyContent: "space-between",
                                 flexDirection: "column",
-                                borderLeft: `0.5rem solid #FFFFFF `,
+                                borderLeft: `0.25rem solid #FFFFFF `,
                             }}
                         >
                             <Container
                                 sx={{
-                                    py: "2rem",
+                                    py: "1rem",
                                     height: "100%",
                                 }}
                             >
@@ -283,11 +272,12 @@ const Navbar = ({ userId, themeColors }) => {
                                     }}
                                 >
                                     {/* Close Icon Section*/}
-                                    <Container>
+                                    <Container sx={{ p: "2px" }}>
                                         <Box
                                             display="flex"
                                             justifyContent="flex-end"
                                             py="1rem"
+                                            px="0rem"
                                         >
                                             <IconButton
                                                 onClick={() =>
@@ -314,7 +304,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                 gap="2rem"
                                                 sx={{
                                                     // borderRadius: "0.75rem",
-                                                    p: "1rem",
+                                                    p: "0rem",
                                                 }}
                                             >
                                                 {/* Logo */}
@@ -326,181 +316,184 @@ const Navbar = ({ userId, themeColors }) => {
                                                             }
                                                         />
                                                     )}
-                                                <Tooltip
-                                                    TransitionComponent={Zoom}
-                                                    placement="top"
-                                                    title="User Profile"
-                                                    enterDelay="500"
-                                                    sx={{
-                                                        fontSize: "1rem",
-                                                        color: headingText,
-                                                    }}
-                                                >
-                                                    {/* Profile Button */}
-                                                    <Button
-                                                        cursor="pointer"
-                                                        onClick={() => {
-                                                            navigate(
-                                                                `/profile/${userId}`
-                                                            );
-                                                            navigate(0);
-                                                        }}
+                                                <Box sx={{ width: "100%" }}>
+                                                    <Tooltip
+                                                        TransitionComponent={
+                                                            Zoom
+                                                        }
+                                                        placement="top"
+                                                        title="User Profile"
+                                                        enterDelay="500"
                                                         sx={{
-                                                            display: "flex",
-                                                            justifyContent:
-                                                                "space-evenly",
-                                                            borderRadius:
-                                                                "3rem",
-                                                            width: "8rem",
-                                                            backgroundColor:
-                                                                buttonLight2,
+                                                            fontSize: "1rem",
                                                             color: headingText,
-                                                            "&:hover": {
-                                                                // color: headingText,
-                                                                backgroundColor:
-                                                                    buttonHover,
-                                                            },
                                                         }}
                                                     >
-                                                        <UserImage
-                                                            size="25px"
-                                                            image={
-                                                                user.picturePath
-                                                            }
-                                                        />
-
-                                                        <Typography
+                                                        {/* Profile Button */}
+                                                        <Button
+                                                            cursor="pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    `/profile/${userId}`
+                                                                );
+                                                                navigate(0);
+                                                            }}
                                                             sx={{
-                                                                pl: "1rem",
+                                                                display: "flex",
+                                                                justifyContent:
+                                                                    "space-around",
+                                                                // borderRadius:
+                                                                //     "3rem",
+                                                                width: "100%",
+                                                                // width: "8rem",
+                                                                backgroundColor:
+                                                                    buttonLight2,
+                                                                borderRadius:
+                                                                    "0rem",
                                                                 color: headingText,
+                                                                "&:hover": {
+                                                                    // color: headingText,
+                                                                    backgroundColor:
+                                                                        buttonHover,
+                                                                },
                                                             }}
                                                         >
-                                                            Profile
-                                                        </Typography>
-                                                    </Button>
-                                                </Tooltip>
+                                                            <PersonRoundedIcon
+                                                                size="25px"
+                                                                color={
+                                                                    headingText
+                                                                }
+                                                            />
 
-                                                {/* Light & Dark Mode */}
+                                                            <Typography
+                                                                sx={{
+                                                                    color: headingText,
+                                                                    fontSize:
+                                                                        "1rem",
+                                                                }}
+                                                            >
+                                                                Profile
+                                                            </Typography>
+                                                        </Button>
+                                                    </Tooltip>
 
-                                                <Box>
-                                                    <Button
-                                                        cursor="pointer"
-                                                        onClick={() =>
-                                                            dispatch(setMode())
-                                                        }
+                                                    <Divider
+                                                        fill={recipeStepsPanel}
                                                         sx={{
-                                                            display: "flex",
-                                                            justifyContent:
-                                                                "space-evenly",
-                                                            borderRadius:
-                                                                "3rem",
-                                                            width: "8rem",
-                                                            backgroundColor:
-                                                                buttonLight2,
-                                                            color: headingText,
-                                                            fontSize: "25px",
-                                                            "&:hover": {
-                                                                // color: headingText,
-                                                                backgroundColor:
-                                                                    buttonHover,
-                                                            },
+                                                            py: "1px",
+                                                            border: "0",
                                                         }}
-                                                    >
-                                                        {mode === "dark" ? (
-                                                            <Tooltip
-                                                                TransitionComponent={
-                                                                    Zoom
-                                                                }
-                                                                placement="top"
-                                                                title="Toggle Dark Mode"
-                                                                enterDelay="500"
-                                                                sx={{
-                                                                    fontSize:
-                                                                        "1rem",
-                                                                }}
-                                                            >
-                                                                <Box
-                                                                    display="flex"
-                                                                    justifyContent="space-between"
-                                                                    alignItems="center"
-                                                                >
-                                                                    <DarkMode
-                                                                        sx={{
-                                                                            color: headingText,
-                                                                            fontSize:
-                                                                                "25px",
-                                                                        }}
-                                                                    />
-                                                                    <Typography
-                                                                        sx={{
-                                                                            pl: "0.25rem",
-                                                                        }}
-                                                                    >
-                                                                        Dark
-                                                                        Mode
-                                                                    </Typography>
-                                                                </Box>
-                                                            </Tooltip>
-                                                        ) : (
-                                                            <Tooltip
-                                                                TransitionComponent={
-                                                                    Zoom
-                                                                }
-                                                                placement="top"
-                                                                title="Toggle Light Mode"
-                                                                enterDelay="500"
-                                                                sx={{
-                                                                    fontSize:
-                                                                        "1rem",
-                                                                }}
-                                                            >
-                                                                <Box
-                                                                    display="flex"
-                                                                    justifyContent="space-between"
-                                                                    alignItems="center"
-                                                                >
-                                                                    <LightMode
-                                                                        sx={{
-                                                                            color: headingText,
-                                                                            fontSize:
-                                                                                "25px",
-                                                                        }}
-                                                                    />
-                                                                    <Typography
-                                                                        sx={{
-                                                                            pl: "0.25rem",
-                                                                        }}
-                                                                    >
-                                                                        Light
-                                                                        Mode
-                                                                    </Typography>
-                                                                </Box>
-                                                            </Tooltip>
-                                                        )}
-                                                    </Button>
-                                                </Box>
+                                                    />
 
-                                                {/* Dark & Light Mode */}
-                                                {/* <IconButton
-                                            onClick={() => dispatch(setMode())}
-                                            sx={{ fontSize: "25px" }}
-                                            >
-                                            {theme.palette.default.mode ===
-                                            "dark" ? (
-                                                <DarkMode
-                                                sx={{ fontSize: "25px" }}
-                                                >
-                                                    Dark Mode
-                                                </DarkMode>
-                                            ) : (
-                                                <LightMode
-                                                    sx={{
-                                                        color: buttonLight2,
-                                                        fontSize: "25px",
-                                                    }}
-                                                />
-                                            )}
-                                        </IconButton> */}
+                                                    {/* Light & Dark Mode */}
+                                                    <Box sx={{ width: "100%" }}>
+                                                        <Button
+                                                            cursor="pointer"
+                                                            // fullWidth
+                                                            onClick={() =>
+                                                                dispatch(
+                                                                    setMode()
+                                                                )
+                                                            }
+                                                            sx={{
+                                                                display: "flex",
+                                                                justifyContent:
+                                                                    "space-between",
+                                                                borderRadius:
+                                                                    "0",
+                                                                width: "100%",
+                                                                // width: "8rem",
+                                                                backgroundColor:
+                                                                    buttonLight2,
+                                                                color: headingText,
+                                                                fontSize:
+                                                                    "25px",
+                                                                "&:hover": {
+                                                                    // color: headingText,
+                                                                    backgroundColor:
+                                                                        buttonHover,
+                                                                },
+                                                            }}
+                                                        >
+                                                            {mode === "dark" ? (
+                                                                <Tooltip
+                                                                    TransitionComponent={
+                                                                        Zoom
+                                                                    }
+                                                                    placement="top"
+                                                                    title="Toggle Dark Mode"
+                                                                    enterDelay="500"
+                                                                    sx={{
+                                                                        fontSize:
+                                                                            "1rem",
+                                                                    }}
+                                                                >
+                                                                    <Box
+                                                                        display="flex"
+                                                                        justifyContent="space-evenly"
+                                                                        alignItems="center"
+                                                                        width="100%"
+                                                                    >
+                                                                        <DarkMode
+                                                                            sx={{
+                                                                                color: headingText,
+                                                                                fontSize:
+                                                                                    "1rem",
+                                                                            }}
+                                                                        />
+                                                                        <Typography
+                                                                            sx={{
+                                                                                fontSize:
+                                                                                    "1rem",
+                                                                            }}
+                                                                        >
+                                                                            Dark
+                                                                            Mode
+                                                                        </Typography>
+                                                                    </Box>
+                                                                </Tooltip>
+                                                            ) : (
+                                                                <Tooltip
+                                                                    TransitionComponent={
+                                                                        Zoom
+                                                                    }
+                                                                    placement="top"
+                                                                    title="Toggle Light Mode"
+                                                                    enterDelay="500"
+                                                                    sx={{
+                                                                        fontSize:
+                                                                            "1rem",
+                                                                    }}
+                                                                >
+                                                                    <Box
+                                                                        display="flex"
+                                                                        justifyContent="space-evenly"
+                                                                        alignItems="center"
+                                                                        width="100%"
+                                                                    >
+                                                                        <LightMode
+                                                                            sx={{
+                                                                                color: headingText,
+                                                                                fontSize:
+                                                                                    "25px",
+                                                                            }}
+                                                                        />
+                                                                        <Typography
+                                                                            sx={
+                                                                                {
+                                                                                    // pl: "0.25rem",
+                                                                                }
+                                                                            }
+                                                                        >
+                                                                            Light
+                                                                            Mode
+                                                                        </Typography>
+                                                                    </Box>
+                                                                </Tooltip>
+                                                            )}
+                                                        </Button>
+                                                    </Box>
+                                                </Box>
                                             </FlexBetween>
                                             {/* End of Top Section */}
                                         </Box>
@@ -593,36 +586,61 @@ const Navbar = ({ userId, themeColors }) => {
 
 export default Navbar;
 
+// -------------------------
 // -------- DESKTOP --------
+// -------------------------
 
+// -- Search Function --
+/* {isDesktopScreen && (
+    <FlexBetween
+        backgroundColor={neutralLight}
+        borderRadius="9px"
+        gap="3rem"
+        padding="0.1rem 1.5rem"
+    >
+        <InputBase placeholder="Search..." />
+        <IconButton>
+            <Search />
+        </IconButton>
+    </FlexBetween>
+    )} */
+
+// -- Theme Select --
 /* <ThemeSelect
     themeColors={themeColors}
     isDesktopScreen
 /> */
 
+// -- Account Messages --
 /* Message Icon */
 /* <IconButton>
         <Message sx={{ fontSize: "25px" }} />
     </IconButton> */
 
+// -- Account Notifications --
 /* Notification Icon */
 /* <IconButton>
         <Notifications sx={{ fontSize: "25px" }} />
     </IconButton> */
 
+// -- Support Options --
 /* Help Icon */
 /* <IconButton>
         <Help sx={{ fontSize: "25px" }} />
     </IconButton> */
 
+// ------------------------
 // -------- MOBILE --------
-/* Features To Add */
+// ------------------------
 
+// -- Account Messages --
 /* Messages Icon */
 /* <Message sx={{ fontSize: "25px" }} /> */
 
+// -- Account Notifications --
 /* Notifications Icon */
 /* <Notifications sx={{ fontSize: "25px" }} /> */
 
+// -- Support Options --
 /* Help Icon */
 /* <Help sx={{ fontSize: "25px" }} /> */
