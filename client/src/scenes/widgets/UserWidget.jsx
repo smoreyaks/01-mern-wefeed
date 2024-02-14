@@ -15,7 +15,9 @@ import {
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import StarRateIcon from "@mui/icons-material/StarRate";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+
 // MUI Comnponents
 import {
     Box,
@@ -283,6 +285,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         py="0.5rem"
                     >
                         <ChefHatIcon
+                            color={headingText}
                             sx={{
                                 width: "1rem",
                                 height: "1rem",
@@ -350,7 +353,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             {/* Second Row */}
             <Box p="0.5rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-                    <LocationOnIcon
+                    <LocationOnOutlinedIcon
                         fontSize="small"
                         sx={{ color: whiteText }}
                     />
