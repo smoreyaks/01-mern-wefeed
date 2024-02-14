@@ -132,65 +132,26 @@ export const colorTokens = {
             300: "#eaf4f6", // Tiffany Blue     (Medium Teal)
             400: "#d8ebee", // Tiffany Blue     (Medium Teal)
             // 100: "#C0E9E5", // Mint Green       (Light Teal)
-            // 200: "#C0E9E5", // Mint Green       (Light Teal)
             // 300: "#9FDDD8", // Tiffany Blue     (Medium Teal)
-            // 400: "#9FDDD8", // Tiffany Blue     (Medium Teal)
-        },
-    },
-    sushi: {
-        purple: {
-            // 150: "#CFC4FF",
-            // 160: "#C4B9F1",
-            100: "#baacc1",
-            200: "#a391ac",
-            // 150: "#8c7597",
-            150: "#ABA2D3",
-            160: "#8c7597",
-            300: "#7D6887",
-            // 400: "#7D6887",
-            // 500: "#6D5B76",
-            // 600: "#5E4E65",
-            // 900: "#4D4053",
-            // 1000: "#493946",
-        },
-        blue: {
-            100: "#CFC4FF",
-            // 200: "#C4B9F1",
-            // 100: "#ABA2D3",
-            100: "#938BB5",
-            // 400: "#7B7597",
-            400: "#6D6887",
-            // 700: "#605B76",
-            // 800: "#524E65",
-            // 900: "#444154",
         },
     },
     sushiGrey: {
         // Primary One - Main
         grey2: {
-            100: "#f5f5f5",
-            200: "#ebebeb",
-            // 300: "#e0e0e0",
-            // 400: "#d6d6d6",
-            // 200: "#cccccc",
-            // 100: "#999999",
+            100: "#dbdde4",
+            200: "#b7bac9",
+            300: "#9498af",
+            400: "#707594",
+
+            100: "#707594",
             100: "#4C5379",
-            // 400: "#555555",
             400: "#26293c",
-            // 400: "#333333",
-            // 900: "#000000",
         },
+
         // Primary Two - Button
         grey1: {
-            // 150: "#f5f5f5",
-            160: "#ebebeb",
-            // 300: "#e0e0e0",
-            // 150: "#d6d6d6",
             150: "#363b56",
-            300: "#524E65",
-            // 700: "#666666",
-            // 800: "#333333",
-            // 900: "#000000",
+            300: "#707594",
         },
     },
 
@@ -408,11 +369,20 @@ export const themeSettings = (mode) => {
                     tooltip: {
                         fontSize: "0.75rem",
                         fontWeight: "bold",
-                        color: colorTokens.opaque[70],
-                        backgroundColor: colorTokens.cupcake.pink[300],
+                        color:
+                            mode === "dark"
+                                ? colorTokens.whiteOpaque[70]
+                                : colorTokens.opaque[70],
+                        backgroundColor:
+                            mode === "dark"
+                                ? colorTokens.sushiGrey.grey1[300]
+                                : colorTokens.cupcake.pink[300],
 
                         // colorTokens.cupcake.pink[300],
-                        border: `1px solid ${colorTokens.opaque[70]}`,
+                        border:
+                            mode === "dark"
+                                ? `1px solid ${colorTokens.whiteOpaque[70]}`
+                                : `1px solid ${colorTokens.opaque[70]}`,
                     },
                 },
             },
