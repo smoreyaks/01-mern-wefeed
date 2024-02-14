@@ -2,9 +2,6 @@
 import { ToggleButton, Tooltip, Zoom, Box, Typography } from "@mui/material";
 
 // MUI Icons
-import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
 
 // React Packages
 import { useState } from "react";
