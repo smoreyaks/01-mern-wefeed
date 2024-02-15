@@ -138,14 +138,13 @@ export const colorTokens = {
     sushiGrey: {
         // Primary One - Main
         grey2: {
-            100: "#dbdde4",
+            100: "#4C5379",
             200: "#b7bac9",
             300: "#9498af",
-            400: "#707594",
-
-            100: "#707594",
-            100: "#4C5379",
             400: "#26293c",
+            // 100: "#dbdde4",
+            // 400: "#707594",
+            // 100: "#707594",
         },
 
         // Primary Two - Button
@@ -217,6 +216,7 @@ export const themeSettings = (mode) => {
 
                           // grey2
                           primaryOne: {
+                              form: colorTokens.sushiGrey.grey2[100],
                               dark: colorTokens.sushiGrey.grey2[400],
                               main: colorTokens.sushiGrey.grey2[300],
                               light: colorTokens.sushiGrey.grey2[200],
@@ -247,6 +247,7 @@ export const themeSettings = (mode) => {
                               light: colorTokens.grey[100],
                               lightest: colorTokens.grey[0],
                               white: colorTokens.whiteOpaque[70],
+                              border: colorTokens.whiteOpaque[70],
                               fade50: colorTokens.whiteOpaque[50],
                               fade30: colorTokens.whiteOpaque[30],
                               fade10: colorTokens.whiteOpaque[10],
@@ -273,6 +274,7 @@ export const themeSettings = (mode) => {
                           },
                           // Teal
                           primaryOne: {
+                              form: colorTokens.cupcake.teal[300],
                               dark: colorTokens.cupcake.teal[400],
                               main: colorTokens.cupcake.teal[300],
                               light: colorTokens.cupcake.teal[200],
@@ -301,6 +303,7 @@ export const themeSettings = (mode) => {
                               medium: colorTokens.grey[200],
                               light: colorTokens.grey[100],
                               lightest: colorTokens.grey[0],
+                              border: colorTokens.grey[0],
                               white: colorTokens.opaque[70],
                               fade50: colorTokens.opaque[50],
                               fade30: colorTokens.opaque[30],
@@ -375,7 +378,7 @@ export const themeSettings = (mode) => {
                                 : colorTokens.opaque[70],
                         backgroundColor:
                             mode === "dark"
-                                ? colorTokens.sushiGrey.grey1[300]
+                                ? colorTokens.sushiGrey.grey2[100]
                                 : colorTokens.cupcake.pink[300],
 
                         // colorTokens.cupcake.pink[300],
