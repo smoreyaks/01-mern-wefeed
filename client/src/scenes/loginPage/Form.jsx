@@ -69,6 +69,7 @@ const Form = () => {
     // Theme
     const { palette } = useTheme();
     const buttonLight2 = palette.default.primaryTwo.light2;
+    const formBG = palette.default.primaryOne.form;
 
     // Navigate
     const navigate = useNavigate();
@@ -180,9 +181,7 @@ const Form = () => {
                                     sx={{ gridColumn: "span 2" }}
                                     inputProps={{
                                         style: {
-                                            backgroundColor:
-                                                palette.default.primaryOne
-                                                    .light,
+                                            backgroundColor: formBG,
                                             borderRadius: "0.25rem",
                                         },
                                     }}
@@ -205,9 +204,7 @@ const Form = () => {
                                     sx={{ gridColumn: "span 2" }}
                                     inputProps={{
                                         style: {
-                                            backgroundColor:
-                                                palette.default.primaryOne
-                                                    .light,
+                                            backgroundColor: formBG,
                                             borderRadius: "0.25rem",
                                         },
                                     }}
@@ -230,9 +227,7 @@ const Form = () => {
                                     sx={{ gridColumn: "span 4" }}
                                     inputProps={{
                                         style: {
-                                            backgroundColor:
-                                                palette.default.primaryOne
-                                                    .light,
+                                            backgroundColor: formBG,
                                             borderRadius: "0.25rem",
                                         },
                                     }}
@@ -255,9 +250,7 @@ const Form = () => {
                                     sx={{ gridColumn: "span 4" }}
                                     inputProps={{
                                         style: {
-                                            backgroundColor:
-                                                palette.default.primaryOne
-                                                    .light,
+                                            backgroundColor: formBG,
                                             borderRadius: "0.25rem",
                                         },
                                     }}
@@ -298,9 +291,7 @@ const Form = () => {
                                                         cursor: "pointer",
                                                     },
 
-                                                    backgroundColor:
-                                                        palette.default
-                                                            .primaryOne.light,
+                                                    backgroundColor: formBG,
                                                     borderRadius: "0.25rem",
                                                 }}
                                             >
@@ -343,8 +334,7 @@ const Form = () => {
                             }}
                             inputProps={{
                                 style: {
-                                    backgroundColor:
-                                        palette.default.primaryOne.light,
+                                    backgroundColor: formBG,
                                     borderRadius: "0.25rem",
                                 },
                             }}
@@ -365,8 +355,7 @@ const Form = () => {
                             sx={{ gridColumn: "span 4" }}
                             inputProps={{
                                 style: {
-                                    backgroundColor:
-                                        palette.default.primaryOne.light,
+                                    backgroundColor: formBG,
                                     borderRadius: "0.25rem",
                                 },
                             }}
