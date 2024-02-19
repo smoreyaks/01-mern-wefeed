@@ -131,8 +131,9 @@ export const colorTokens = {
             200: "#eaf4f6", // Mint Green       (Light Teal)
             300: "#eaf4f6", // Tiffany Blue     (Medium Teal)
             400: "#d8ebee", // Tiffany Blue     (Medium Teal)
-            // 100: "#C0E9E5", // Mint Green       (Light Teal)
-            // 300: "#9FDDD8", // Tiffany Blue     (Medium Teal)
+            500: "#C0E9E5", // Mint Green       (Light Teal)
+            600: "#9FDDD8", // Tiffany Blue     (Medium Teal)
+            700: "#d8ebee", // Tiffany Blue     (Medium Teal)
         },
     },
     sushiGrey: {
@@ -217,6 +218,7 @@ export const themeSettings = (mode) => {
                           // grey2
                           primaryOne: {
                               form: colorTokens.sushiGrey.grey2[100],
+                              darker: colorTokens.sushiGrey.grey2[400],
                               dark: colorTokens.sushiGrey.grey2[400],
                               main: colorTokens.sushiGrey.grey2[300],
                               light: colorTokens.sushiGrey.grey2[200],
@@ -247,6 +249,7 @@ export const themeSettings = (mode) => {
                               light: colorTokens.grey[100],
                               lightest: colorTokens.grey[0],
                               white: colorTokens.whiteOpaque[70],
+                              icon: colorTokens.whiteOpaque[70],
                               border: colorTokens.whiteOpaque[70],
                               fade50: colorTokens.whiteOpaque[50],
                               fade30: colorTokens.whiteOpaque[30],
@@ -275,6 +278,7 @@ export const themeSettings = (mode) => {
                           // Teal
                           primaryOne: {
                               form: colorTokens.cupcake.teal[300],
+                              darker: colorTokens.cupcake.teal[600],
                               dark: colorTokens.cupcake.teal[400],
                               main: colorTokens.cupcake.teal[300],
                               light: colorTokens.cupcake.teal[200],
@@ -305,7 +309,7 @@ export const themeSettings = (mode) => {
                               lightest: colorTokens.grey[0],
                               border: colorTokens.grey[0],
                               white: colorTokens.opaque[70],
-                              fade50: colorTokens.opaque[50],
+                              icon: colorTokens.opaque[50],
                               fade30: colorTokens.opaque[30],
                               fade10: colorTokens.opaque[10],
                           },
