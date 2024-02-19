@@ -22,7 +22,7 @@ const HomePage = () => {
     const recipeText = palette.default.neutral.main;
 
     // Follower Icon
-    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconOutline = palette.default.neutralGrey.icon;
     const followerIconBack = palette.default.primaryOne.main;
     const followerIconBackHover = palette.default.primaryOne.light;
 
