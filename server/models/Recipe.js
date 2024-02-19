@@ -116,6 +116,10 @@ const RecipeSchema = mongoose.Schema({
             {
                 userId: String,
                 commentText: String,
+                userPicturePath: {
+                    type: String,
+                    default: "",
+                },
             },
         ],
     },
