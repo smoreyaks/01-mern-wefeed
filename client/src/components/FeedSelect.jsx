@@ -106,7 +106,7 @@ const FeedSelect = ({ themeColors }) => {
                             }}
                         >
                             <AllInclusiveOutlinedIcon
-                                sx={{ color: headingText }}
+                                sx={{ color: followerIconOutline }}
                                 fontSize="medium"
                             />
                         </Button>
@@ -132,7 +132,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <MainDishIcon sx={{ fill: headingText }} />
+                            <MainDishIcon sx={{ fill: followerIconOutline }} />
                         </Button>
                     </Tooltip>
 
@@ -159,7 +159,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <AppetiserIcon sx={{ fill: headingText }} />
+                            <AppetiserIcon sx={{ fill: followerIconOutline }} />
                         </Button>
                     </Tooltip>
 
@@ -186,7 +186,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <BreakfastIcon sx={{ fill: headingText }} />
+                            <BreakfastIcon sx={{ fill: followerIconOutline }} />
                         </Button>
                     </Tooltip>
 
@@ -211,7 +211,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <DessertIcon sx={{ fill: headingText }} />
+                            <DessertIcon sx={{ fill: followerIconOutline }} />
                         </Button>
                     </Tooltip>
 
@@ -239,7 +239,7 @@ const FeedSelect = ({ themeColors }) => {
                                 },
                             }}
                         >
-                            <DrinkIcon sx={{ fill: headingText }} />
+                            <DrinkIcon sx={{ fill: followerIconOutline }} />
                         </Button>
                     </Tooltip>
                 </Box>
