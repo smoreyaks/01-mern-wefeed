@@ -3,8 +3,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // MUI Icons
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
-import PersonRemoveAlt1Icon from "@mui/icons-material/PersonRemoveAlt1";
+import PersonAddAlt1OutlinedIcon from "@mui/icons-material/PersonAddAlt1";
+// import PersonAddAlt1OutlinedIcon from "@mui/icons-material/PersonAddAlt1Outlined";
+import PersonRemoveAlt1OutlinedIcon from "@mui/icons-material/PersonRemoveAlt1";
+// import PersonRemoveAlt1OutlinedIcon from "@mui/icons-material/PersonRemoveAlt1Outlined";
 
 // Custom Components
 import FlexBetween from "./FlexBetween";
@@ -165,7 +167,10 @@ const Friend = ({
                                 enterDelay="500"
                                 sx={{ fontSize: "1rem" }}
                             >
-                                <PersonRemoveAlt1Icon fontSize="small" />
+                                <PersonRemoveAlt1OutlinedIcon
+                                    fontSize="small"
+                                    sx={{ color: followerIconOutline }}
+                                />
                             </Tooltip>
                         </FlexBetween>
                     ) : (
@@ -177,7 +182,10 @@ const Friend = ({
                                 enterDelay="500"
                                 sx={{ fontSize: "1rem" }}
                             >
-                                <PersonAddAlt1Icon fontSize="small" />
+                                <PersonAddAlt1OutlinedIcon
+                                    fontSize="small"
+                                    sx={{ color: followerIconOutline }}
+                                />
                             </Tooltip>
                         </FlexBetween>
                     )}
