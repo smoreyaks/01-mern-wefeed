@@ -73,7 +73,7 @@ const Navbar = ({ userId, themeColors }) => {
     // Theme
     const theme = useTheme();
     const primaryLight = theme.palette.default.primaryOne.light;
-
+    const testColor = theme.palette.default.primaryOne.light;
     // Theme Destructure
     const {
         primary,
@@ -169,7 +169,7 @@ const Navbar = ({ userId, themeColors }) => {
                                 >
                                     <LightMode
                                         sx={{
-                                            color: headingText,
+                                            color: followerIconOutline,
                                             fontSize: "25px",
                                         }}
                                     />
@@ -211,7 +211,7 @@ const Navbar = ({ userId, themeColors }) => {
                                 <LogoutIcon
                                     sx={{
                                         fontSize: "25px",
-                                        color: headingText,
+                                        color: followerIconOutline,
                                     }}
                                 />
                             </IconButton>
@@ -229,7 +229,7 @@ const Navbar = ({ userId, themeColors }) => {
                                 setIsMobileMenuToggled(!isMobileMenuToggled)
                             }
                         >
-                            <Menu sx={{ color: headingText }} />
+                            <Menu sx={{ color: followerIconOutline }} />
                         </IconButton>
                     </FlexBetween>
                 )}
@@ -473,7 +473,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                                     >
                                                                         <LightMode
                                                                             sx={{
-                                                                                color: headingText,
+                                                                                color: followerIconOutline,
                                                                                 fontSize:
                                                                                     "25px",
                                                                             }}
