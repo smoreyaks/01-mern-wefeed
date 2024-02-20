@@ -252,23 +252,56 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
 
             {/* Third Row */}
             <Box p="0.5rem 0">
-                <FlexBetween mb="0.5rem">
-                    <Typography color={whiteText}>Visitors</Typography>
-                    <Typography color={whiteText} fontWeight="500">
+                <FlexBetween my="0.25rem">
+                    <Typography fontWeight="bold" color={whiteText}>
+                        Visitors
+                    </Typography>
+                    <Typography
+                        fontWeight="bold"
+                        color={whiteText}
+                        // fontWeight="500"
+                    >
                         {viewedProfile}
                     </Typography>
                 </FlexBetween>
-                <FlexBetween>
+
+                {/* <FlexBetween>
                     <Typography color={whiteText}>Score</Typography>
                     <Typography color={whiteText} fontWeight="500">
                         {Math.ceil(Math.random() * 100)}
                     </Typography>
-                </FlexBetween>
+                </FlexBetween> */}
             </Box>
 
             <Divider />
             {/* Reputation Stars */}
             <Box>
+                {/* Recipes Posted */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Recipes Posted"
+                    enterDelay="500"
+                    sx={{ fontSize: "1rem" }}
+                >
+                    <FlexBetween
+                        display="flex"
+                        justifyContent="flex-start"
+                        gap="1rem"
+                        py="0.5rem"
+                    >
+                        <RecipeIcon
+                            sx={{
+                                width: "1rem",
+                                height: "1rem",
+                                fill: headingText,
+                            }}
+                        />
+                        <Typography fontWeight="bold" color={headingText}>
+                            {recipesPosted}
+                        </Typography>
+                    </FlexBetween>
+                </Tooltip>
                 {/* Repuation Score */}
                 <Tooltip
                     TransitionComponent={Zoom}
@@ -282,7 +315,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         justifyContent="space-between"
                         alignItems="center"
                         gap="1rem"
-                        py="0.5rem"
+                        pb="0.5rem"
                     >
                         <ChefHatIcon
                             color={headingText}
@@ -292,35 +325,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                                 fill: headingText,
                             }}
                         />
-                        <Typography color={headingText}>
+                        <Typography fontWeight="bold" color={headingText}>
                             {totalRecipeLikes || 0}
-                        </Typography>
-                    </FlexBetween>
-                </Tooltip>
-
-                {/* Recipes Posted */}
-                <Tooltip
-                    TransitionComponent={Zoom}
-                    placement="top"
-                    title="Recipes Posted"
-                    enterDelay="500"
-                    sx={{ fontSize: "1rem" }}
-                >
-                    <FlexBetween
-                        display="flex"
-                        justifyContent="flex-start"
-                        gap="1rem"
-                        pb="0.5rem"
-                    >
-                        <RecipeIcon
-                            sx={{
-                                width: "1rem",
-                                height: "1rem",
-                                fill: headingText,
-                            }}
-                        />
-                        <Typography color={headingText}>
-                            {recipesPosted}
                         </Typography>
                     </FlexBetween>
                 </Tooltip>
@@ -357,14 +363,18 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         fontSize="small"
                         sx={{ color: whiteText }}
                     />
-                    <Typography color={whiteText}>{location}</Typography>
+                    <Typography fontWeight="bold" color={whiteText}>
+                        {location}
+                    </Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem">
                     <WorkOutlineOutlined
                         fontSize="small"
                         sx={{ color: whiteText }}
                     />
-                    <Typography color={whiteText}>{occupation}</Typography>
+                    <Typography fontWeight="bold" color={whiteText}>
+                        {occupation}
+                    </Typography>
                 </Box>
             </Box>
 
