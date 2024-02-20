@@ -67,7 +67,13 @@ export const colorTokens = {
     opaque: {
         10: "rgba(0, 0, 0, 10%)",
         30: "rgba(0, 0, 0, 30%)",
+        35: "rgba(0, 0, 0, 35%)",
+        40: "rgba(0, 0, 0, 40%)",
+        45: "rgba(0, 0, 0, 45%)",
         50: "rgba(0, 0, 0, 50%)",
+        55: "rgba(0, 0, 0, 55%)",
+        60: "rgba(0, 0, 0, 60%)",
+        65: "rgba(0, 0, 0, 65%)",
         70: "rgba(0, 0, 0, 70%)",
     },
 
@@ -75,7 +81,13 @@ export const colorTokens = {
     whiteOpaque: {
         10: "rgba(255, 255, 255, 10%)",
         30: "rgba(255, 255, 255, 30%)",
+        35: "rgba(255, 255, 255, 35%)",
+        40: "rgba(255, 255, 255, 40%)",
+        45: "rgba(255, 255, 255, 45%)",
         50: "rgba(255, 255, 255, 50%)",
+        55: "rgba(255, 255, 255, 55%)",
+        60: "rgba(255, 255, 255, 60%)",
+        65: "rgba(255, 255, 255, 65%)",
         70: "rgba(255, 255, 255, 70%)",
     },
 
@@ -309,7 +321,7 @@ export const themeSettings = (mode) => {
                               lightest: colorTokens.grey[0],
                               border: colorTokens.grey[0],
                               white: colorTokens.opaque[70],
-                              icon: colorTokens.opaque[50],
+                              icon: colorTokens.opaque[60],
                               fade30: colorTokens.opaque[30],
                               fade10: colorTokens.opaque[10],
                           },
