@@ -93,12 +93,12 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                p: "0.5rem 0 0.5rem 0.5rem",
-                                m: "0.5rem 0 0.5rem 0.5rem",
+                                p: "0.5rem 0rem 0.5rem 0rem",
+                                m: "0.5rem 0rem 0.5rem 0.5rem",
                                 borderTopLeftRadius: "3rem",
                                 borderBottomLeftRadius: "3rem",
-                                borderTopRightRadius: "0rem",
-                                borderBottomRightRadius: "0rem",
+                                borderTopRightRadius: "3rem",
+                                borderBottomRightRadius: "3rem",
                                 "&:hover": {
                                     color: headingText,
                                     backgroundColor: buttonHover,
@@ -125,7 +125,8 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                py: "0.5rem",
+                                borderRadius: "3rem",
+                                p: "0.5rem 0rem 0.5rem 0rem",
                                 my: "0.5rem",
                                 "&:hover": {
                                     backgroundColor: buttonHover,
@@ -151,9 +152,9 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                py: "0.5rem",
+                                borderRadius: "3rem",
+                                p: "0.5rem 0rem",
                                 my: "0.5rem",
-                                // borderRadiusTopLeft: "3rem",
                                 "&:hover": {
                                     backgroundColor: buttonHover,
                                 },
@@ -178,7 +179,8 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                py: "0.5rem",
+                                borderRadius: "3rem",
+                                p: "0.5rem 0rem",
                                 my: "0.5rem",
                                 // borderRadius: "3rem",
                                 "&:hover": {
@@ -203,7 +205,8 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                py: "0.5rem",
+                                borderRadius: "3rem",
+                                p: "0.5rem 0rem",
                                 my: "0.5rem",
                                 // borderRadius: "3rem",
                                 "&:hover": {
@@ -228,12 +231,9 @@ const FeedSelect = ({ themeColors }) => {
                             sx={{
                                 backgroundColor: buttonLight2,
                                 color: headingText,
-                                p: "0.5rem 0.5rem 0.5rem 0",
+                                borderRadius: "3rem",
+                                p: "0.5rem 0rem",
                                 m: "0.5rem 0.5rem 0.5rem 0 ",
-                                borderTopRightRadius: "3rem",
-                                borderBottomRightRadius: "3rem",
-                                borderTopLeftRadius: "0rem",
-                                borderBottomLeftRadius: "0rem",
                                 "&:hover": {
                                     backgroundColor: buttonHover,
                                 },
