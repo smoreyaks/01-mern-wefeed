@@ -146,6 +146,7 @@ export const colorTokens = {
             500: "#C0E9E5", // Mint Green       (Light Teal)
             600: "#9FDDD8", // Tiffany Blue     (Medium Teal)
             700: "#d8ebee", // Tiffany Blue     (Medium Teal)
+            800: "#BFE6EB", // Tiffany Blue     (Medium Teal)
         },
     },
     sushiGrey: {
@@ -231,6 +232,7 @@ export const themeSettings = (mode) => {
                           primaryOne: {
                               form: colorTokens.sushiGrey.grey2[100],
                               darker: colorTokens.sushiGrey.grey2[400],
+                              navbar: colorTokens.sushiGrey.grey2[400],
                               dark: colorTokens.sushiGrey.grey2[400],
                               main: colorTokens.sushiGrey.grey2[300],
                               light: colorTokens.sushiGrey.grey2[200],
@@ -290,6 +292,7 @@ export const themeSettings = (mode) => {
                           // Teal
                           primaryOne: {
                               form: colorTokens.cupcake.teal[300],
+                              navbar: colorTokens.cupcake.teal[800],
                               darker: colorTokens.cupcake.teal[600],
                               dark: colorTokens.cupcake.teal[400],
                               main: colorTokens.cupcake.teal[300],
