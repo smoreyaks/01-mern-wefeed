@@ -59,6 +59,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     // Trophy Colors
@@ -108,7 +109,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     console.log("recipesPosted:", user.userRecipeList);
     return (
         // <>
-        <WidgetWrapper>
+        <WidgetWrapper borderColor={widgetBorder}>
             {/* Top Recipe Stat Title */}
             {user ? (
                 <Box>
@@ -122,9 +123,9 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                     fontSize="1rem"
                                     fontFamily="Montserrat"
                                     sx={{
-                                        color: headingText,
+                                        color: followerIconOutline,
                                         "&:hover": {
-                                            color: headingText,
+                                            color: followerIconOutline,
                                         },
                                         mb: "0.5rem",
                                     }}
@@ -145,11 +146,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                 <Icon>
                                     <EmojiEventsIcon sx={{ color: gold }} />
                                 </Icon>
-                                <Typography color={headingText}>
+                                <Typography color={followerIconOutline}>
                                     First Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography sx={{ color: headingText }}>
+                            <Typography sx={{ color: followerIconOutline }}>
                                 1ST
                             </Typography>
                         </FlexBetween>
@@ -158,11 +159,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         <FlexBetween pb="0.5rem">
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: silver }} />
-                                <Typography color={headingText}>
+                                <Typography color={followerIconOutline}>
                                     Second Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography sx={{ color: headingText }}>
+                            <Typography sx={{ color: followerIconOutline }}>
                                 2ND
                             </Typography>
                         </FlexBetween>
@@ -171,11 +172,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         <FlexBetween pb="0.5rem">
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: bronze }} />
-                                <Typography sx={{ color: headingText }}>
+                                <Typography sx={{ color: followerIconOutline }}>
                                     Third Recipe
                                 </Typography>
                             </FlexBetween>
-                            <Typography sx={{ color: headingText }}>
+                            <Typography sx={{ color: followerIconOutline }}>
                                 3RD
                             </Typography>
                         </FlexBetween>
