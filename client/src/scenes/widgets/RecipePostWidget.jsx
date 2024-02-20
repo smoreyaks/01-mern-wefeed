@@ -15,19 +15,20 @@ import PlaylistAddOutlinedIcon from "@mui/icons-material/PlaylistAddOutlined";
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
-import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
-import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+// import LocalFireDepartmentOutlinedIcon from "@mui/icons-material/LocalFireDepartment";
+import LocalFireDepartmentOutlinedIcon from "@mui/icons-material/LocalFireDepartmentOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
-import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
+
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import NoteIcon from "@mui/icons-material/Note";
+import NoteOutlinedIcon from "@mui/icons-material/NoteOutlined";
 
 // Custom Icons
 import CookIcon from "../../components/svg/CookIcon";
 import PrepIcon from "../../components/svg/PrepIcon";
-import IngredientsQtyIcon from "../../components/svg/IngredientsQtyIcon";
-import TimerIcon from "../../components/svg/TimerIcon";
+import NoteIcon from "../../components/svg/NoteIcon";
 
 // Mui Components
 import {
@@ -53,9 +54,9 @@ import FlexBetween from "../../components/FlexBetween";
 import Friend from "../../components/Friend";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import StepsList from "../../components/StepsList";
-// import ImageBadge from "../../components/ImageBadge";
 import Notes from "../../components/Notes";
 import SocialShareButton from "../../components/SocialShareButton";
+import SpiceIcon from "../../components/svg/SpiceIcon";
 
 const RecipePostWidget = ({
     _id,
@@ -213,7 +214,7 @@ const RecipePostWidget = ({
             >
                 {/* Recipe Title */}
                 <Typography
-                    color={headingText}
+                    color={followerIconOutline}
                     variant="h5"
                     fontWeight="bold"
                     fontFamily="Montserrat"
@@ -241,22 +242,33 @@ const RecipePostWidget = ({
                         sx={{
                             // borderRadius: "3rem",
                             width: "4rem",
-                            color: headingText,
+                            // color: followerIconOutline ,
                             border: "0",
                             borderRadius: notesOpen
-                                ? "0 0.75rem 0rem 0rem"
-                                : "0 0.75rem 0.75rem 0",
+                                ? "0.5rem 0.5rem 0.5rem 0.5rem"
+                                : "0.5rem 0.5rem 0.5rem 0.5rem",
+                            p: "0.5rem",
+                            m: "0.5rem 0.5rem",
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
                         }}
                     >
-                        {/* <TextSnippetOutlinedIcon /> */}
-                        <NoteIcon sx={{ fill: headingText }} />
+                        <NoteIcon sx={{ fill: followerIconOutline }} />
                         {notesOpen ? (
-                            <RemoveIcon sx={{ fill: headingText }} />
+                            <RemoveIcon
+                                sx={{
+                                    fill: followerIconOutline,
+                                    fontSize: "medium",
+                                }}
+                            />
                         ) : (
-                            <AddIcon sx={{ fill: headingText }} />
+                            <AddIcon
+                                sx={{
+                                    fill: followerIconOutline,
+                                    fontSize: "medium",
+                                }}
+                            />
                         )}
                     </ToggleButton>
                 </Tooltip>
@@ -337,7 +349,7 @@ const RecipePostWidget = ({
                                         width: "1rem",
                                         height: "1rem",
                                         mr: "0.5rem",
-                                        fill: headingText,
+                                        fill: followerIconOutline,
                                     }}
                                 />
                                 <Typography
@@ -346,7 +358,7 @@ const RecipePostWidget = ({
                                         borderRadius: ".75rem",
                                         display: "flex",
                                         alignItems: "center",
-                                        color: headingText,
+                                        color: followerIconOutline,
                                     }}
                                 >
                                     {prepTime}
@@ -376,7 +388,7 @@ const RecipePostWidget = ({
                                         width: "1rem",
                                         height: "1rem",
                                         mr: "0.5rem",
-                                        fill: headingText,
+                                        fill: followerIconOutline,
                                     }}
                                 />
                                 <Typography
@@ -384,7 +396,7 @@ const RecipePostWidget = ({
                                         backgroundColor: "inherit",
                                         borderRadius: ".75rem",
                                         // padding: "0.5rem",
-                                        color: headingText,
+                                        color: followerIconOutline,
                                     }}
                                 >
                                     {cookTime}
@@ -410,9 +422,14 @@ const RecipePostWidget = ({
                                     justifyContent: "center",
                                 }}
                             >
-                                <PersonRoundedIcon sx={{ fill: headingText }} />
+                                <PersonOutlineOutlinedIcon
+                                    sx={{ fill: followerIconOutline }}
+                                />
                                 <Typography
-                                    sx={{ pl: "0.25rem", color: headingText }}
+                                    sx={{
+                                        pl: "0.25rem",
+                                        color: followerIconOutline,
+                                    }}
                                 >
                                     {servings}
                                 </Typography>
@@ -425,7 +442,10 @@ const RecipePostWidget = ({
                             placement="top"
                             title="Spice Level"
                             enterDelay="500"
-                            sx={{ fontSize: "1rem", color: headingText }}
+                            sx={{
+                                fontSize: "1rem",
+                                color: followerIconOutline,
+                            }}
                         >
                             <Box
                                 sx={{
@@ -437,11 +457,12 @@ const RecipePostWidget = ({
                                     alignItems: "center",
                                 }}
                             >
-                                <LocalFireDepartmentIcon
-                                    sx={{ fill: headingText }}
-                                />
+                                <SpiceIcon sx={{ fill: followerIconOutline }} />
                                 <Typography
-                                    sx={{ pl: "0.25rem", color: headingText }}
+                                    sx={{
+                                        pl: "0.25rem",
+                                        color: followerIconOutline,
+                                    }}
                                 >
                                     {spiceLevel}
                                 </Typography>
@@ -499,17 +520,21 @@ const RecipePostWidget = ({
                                 borderRadius: "3rem",
                                 width: "6rem",
 
-                                color: headingText,
+                                color: followerIconOutline,
                                 "&:hover": {
-                                    color: headingText,
+                                    color: followerIconOutline,
                                     backgroundColor: buttonHover,
                                 },
                             }}
                         >
                             {isLiked ? (
-                                <FavoriteOutlined sx={{ color: headingText }} />
+                                <FavoriteOutlined
+                                    sx={{ color: followerIconOutline }}
+                                />
                             ) : (
-                                <FavoriteBorderOutlined />
+                                <FavoriteBorderOutlined
+                                    sx={{ color: followerIconOutline }}
+                                />
                             )}
                             <Typography pl="0.5rem">{likeCount}</Typography>
                         </Button>
@@ -534,17 +559,21 @@ const RecipePostWidget = ({
                                 borderRadius: "3rem",
                                 width: "6rem",
 
-                                color: headingText,
+                                color: followerIconOutline,
                                 "&:hover": {
-                                    color: headingText,
+                                    color: followerIconOutline,
                                     backgroundColor: buttonHover,
                                 },
                             }}
                         >
                             {isRecommended ? (
-                                <HowToRegIcon />
+                                <HowToRegIcon
+                                    sx={{ color: followerIconOutline }}
+                                />
                             ) : (
-                                <RecordVoiceOverIcon />
+                                <RecordVoiceOverIcon
+                                    sx={{ color: followerIconOutline }}
+                                />
                             )}
                             <Typography pl="0.5rem">
                                 {recommendationCount}
@@ -570,14 +599,14 @@ const RecipePostWidget = ({
                                 borderRadius: "3rem",
                                 width: "6rem",
 
-                                color: headingText,
+                                color: followerIconOutline,
                                 "&:hover": {
-                                    color: headingText,
+                                    color: followerIconOutline,
                                     backgroundColor: buttonHover,
                                 },
                             }}
                         >
-                            <CommentIcon />
+                            <CommentIcon sx={{ color: followerIconOutline }} />
                             <Typography pl="0.5rem">{commentCount}</Typography>
                         </Button>
                     </Tooltip>
@@ -600,17 +629,21 @@ const RecipePostWidget = ({
                                 borderRadius: "3rem",
                                 width: "6rem",
 
-                                color: headingText,
+                                color: followerIconOutline,
                                 "&:hover": {
-                                    color: headingText,
+                                    color: followerIconOutline,
                                     backgroundColor: buttonHover,
                                 },
                             }}
                         >
                             {isSaved ? (
-                                <PlaylistAddCheckIcon />
+                                <PlaylistAddCheckIcon
+                                    sx={{ color: followerIconOutline }}
+                                />
                             ) : (
-                                <PlaylistAddOutlinedIcon />
+                                <PlaylistAddOutlinedIcon
+                                    sx={{ color: followerIconOutline }}
+                                />
                             )}
                         </Button>
                     </Tooltip>
@@ -625,23 +658,7 @@ const RecipePostWidget = ({
                         enterDelay="500"
                         sx={{ fontSize: "1rem" }}
                     >
-                        {/* <Button
-                            size="medium"
-                            fullwidth
-                            sx={{
-                                borderRadius: "3rem",
-                                width: "6rem",
-
-                                color: headingText,
-                                "&:hover": {
-                                    color: headingText,
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        > */}
-                        {/* <ShareOutlined /> */}
                         <SocialShareButton themeColors={themeColors} />
-                        {/* </Button> */}
                     </Tooltip>
                 </FlexBetween>
             </FlexBetween>
@@ -652,7 +669,7 @@ const RecipePostWidget = ({
                             <Divider />
                             <Typography
                                 sx={{
-                                    color: headingText,
+                                    color: followerIconOutline,
                                     // my: "0.5rem 0",
                                     pl: "1rem",
                                     py: "0.5rem",
@@ -662,7 +679,6 @@ const RecipePostWidget = ({
                             </Typography>
                         </Box>
                     ))}
-                    {/* <Divider /> */}
                 </Box>
             )}
         </WidgetWrapper>
