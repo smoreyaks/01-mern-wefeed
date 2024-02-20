@@ -44,7 +44,8 @@ const ProfilePage = () => {
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.navbar;
+    const backgroundMain = palette.default.primaryOne.dark;
+    const navbarMain = palette.default.primaryOne.navbar;
 
     // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
