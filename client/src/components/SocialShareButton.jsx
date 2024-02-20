@@ -103,13 +103,13 @@ const SocialShareButton = ({ themeColors }) => {
                 sx={{
                     borderRadius: "3rem",
                     width: "6rem",
-                    color: headingText,
+                    color: followerIconOutline,
                     "&:hover": {
                         backgroundColor: buttonHover,
                     },
                 }}
             >
-                <ShareOutlined />
+                <ShareOutlined sx={{ fill: followerIconOutline }} />
                 {shareButtonOpen && (
                     <Box
                         transition
@@ -146,6 +146,7 @@ const SocialShareButton = ({ themeColors }) => {
                                         id="facebook"
                                         onClick={handleShare}
                                         sx={{
+                                            color: followerIconOutline,
                                             borderTopLeftRadius: "0.75rem",
                                             borderTopRightRadius: "0.75rem",
                                             "&:hover": {
@@ -154,7 +155,11 @@ const SocialShareButton = ({ themeColors }) => {
                                         }}
                                     >
                                         <ListItemIcon>
-                                            <FacebookIcon />
+                                            <FacebookIcon
+                                                sx={{
+                                                    fill: followerIconOutline,
+                                                }}
+                                            />
                                         </ListItemIcon>
                                         <ListItemText primary="Facebook" />
                                     </ListItem>
@@ -162,13 +167,18 @@ const SocialShareButton = ({ themeColors }) => {
                                         id="twitter"
                                         onClick={handleShare}
                                         sx={{
+                                            color: followerIconOutline,
                                             "&:hover": {
                                                 backgroundColor: buttonHover,
                                             },
                                         }}
                                     >
                                         <ListItemIcon>
-                                            <TwitterIcon />
+                                            <TwitterIcon
+                                                sx={{
+                                                    fill: followerIconOutline,
+                                                }}
+                                            />
                                         </ListItemIcon>
                                         <ListItemText primary="Twitter" />
                                     </ListItem>
@@ -176,13 +186,18 @@ const SocialShareButton = ({ themeColors }) => {
                                         id="reddit"
                                         onClick={handleShare}
                                         sx={{
+                                            color: followerIconOutline,
                                             "&:hover": {
                                                 backgroundColor: buttonHover,
                                             },
                                         }}
                                     >
                                         <ListItemIcon>
-                                            <RedditIcon />
+                                            <RedditIcon
+                                                sx={{
+                                                    fill: followerIconOutline,
+                                                }}
+                                            />
                                         </ListItemIcon>
                                         <ListItemText primary="Reddit" />
                                     </ListItem>
@@ -190,6 +205,7 @@ const SocialShareButton = ({ themeColors }) => {
                                         id="copy"
                                         onClick={handleShare}
                                         sx={{
+                                            color: followerIconOutline,
                                             borderBottomLeftRadius: "0.75rem",
                                             borderBottomRightRadius: "0.75rem",
 
@@ -199,7 +215,11 @@ const SocialShareButton = ({ themeColors }) => {
                                         }}
                                     >
                                         <ListItemIcon>
-                                            <LinkIcon />
+                                            <LinkIcon
+                                                sx={{
+                                                    fill: followerIconOutline,
+                                                }}
+                                            />
                                         </ListItemIcon>
                                         <ListItemText primary="Copy Link" />
                                     </ListItem>
