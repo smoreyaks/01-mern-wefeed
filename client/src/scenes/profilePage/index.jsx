@@ -32,7 +32,7 @@ const ProfilePage = () => {
     const recipeText = palette.default.neutral.main;
 
     // Follower Icon
-    const followerIconOutline = palette.default.primaryTwo.main;
+    const followerIconOutline = palette.default.neutralGrey.icon;
     const followerIconBack = palette.default.primaryOne.main;
     const followerIconBackHover = palette.default.primaryOne.light;
 
@@ -44,7 +44,7 @@ const ProfilePage = () => {
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.dark;
+    const backgroundMain = palette.default.primaryOne.navbar;
 
     // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
