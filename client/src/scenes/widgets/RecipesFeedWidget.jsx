@@ -46,6 +46,7 @@ const RecipesFeedWidget = ({
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     // State

@@ -20,10 +20,11 @@ const AdvertWidget = ({ themeColors }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        widgetBorder,
     } = themeColors || {};
 
     return (
-        <WidgetWrapper>
+        <WidgetWrapper borderColor={widgetBorder}>
             <FlexBetween>
                 <Typography
                     color={followerIconOutline}

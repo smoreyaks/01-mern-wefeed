@@ -15,6 +15,7 @@ const ImageBadge = ({ badgeData, themeColors, BadgeIcon }) => {
         followerIconBackHover,
         recipeTextPanel,
         mainBackPanel,
+        widgetBorder,
     } = themeColors || {};
 
     // const CookIcon = badgeIcon || {};

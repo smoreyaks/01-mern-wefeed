@@ -70,6 +70,7 @@ const Friend = ({
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     const isFriend = friends.find((friend) => friend._id === friendId);

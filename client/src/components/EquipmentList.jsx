@@ -50,6 +50,7 @@ const EquipmentList = ({ equipment, themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     /* Capitalise First Letter of Equipment Item */

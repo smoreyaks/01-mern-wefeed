@@ -66,6 +66,7 @@ const FeedSelect = ({ themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     return (
@@ -76,6 +77,7 @@ const FeedSelect = ({ themeColors }) => {
                         display: "flex",
                         backgroundColor: buttonLight2,
                         borderRadius: "3rem",
+                        border: `2px solid ${followerIconOutline}`,
                         padding: "0",
                     }}
                 >

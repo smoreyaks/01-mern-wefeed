@@ -80,6 +80,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     const getUser = async () => {
@@ -133,7 +134,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     const recipesPosted = userRecipeList.length;
 
     return (
-        <WidgetWrapper>
+        <WidgetWrapper borderColor={widgetBorder}>
             {/* First Row */}
 
             <FlexBetween

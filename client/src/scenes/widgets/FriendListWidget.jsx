@@ -19,7 +19,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
 
-    const { headingText } = themeColors || {};
+    const { headingText, widgetBorder } = themeColors || {};
 
     const getUserFriends = async () => {
         const response = await fetch(
@@ -41,7 +41,10 @@ const FriendListWidget = ({ userId, themeColors }) => {
     console.log("FRIENDS TEST:", friends);
 
     return (
-        <WidgetWrapper sx={{ minWidth: "16.7915rem" }}>
+        <WidgetWrapper
+            borderColor={widgetBorder}
+            sx={{ minWidth: "16.7915rem" }}
+        >
             <Typography
                 color={headingText}
                 variant="h4"

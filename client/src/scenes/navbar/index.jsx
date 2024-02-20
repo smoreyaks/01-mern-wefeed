@@ -97,6 +97,7 @@ const Navbar = ({ userId, themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     // Swap Hard Code for Dynamic String

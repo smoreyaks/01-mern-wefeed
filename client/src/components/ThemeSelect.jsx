@@ -48,6 +48,7 @@ const ThemeSelect = ({ themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     // Theme Menu Toggle

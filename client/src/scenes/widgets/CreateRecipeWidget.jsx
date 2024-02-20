@@ -74,6 +74,7 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     // Redux State
@@ -105,7 +106,7 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
     };
 
     return (
-        <WidgetWrapper>
+        <WidgetWrapper borderColor={widgetBorder}>
             <FlexBetween gap="1.5rem">
                 <UserImage image={picturePath} />
                 <InputBase

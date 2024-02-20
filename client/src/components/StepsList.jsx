@@ -45,6 +45,7 @@ const StepsList = ({ steps, themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     return (

@@ -30,6 +30,7 @@ const Notes = ({ notes, themeColors, recipeId, notesOpen }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     return (

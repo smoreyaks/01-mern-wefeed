@@ -9,7 +9,8 @@ import { useSelector } from "react-redux";
 
 const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
     // Theme Destructure
-    const { headingText, textHover, buttonLight2 } = themeColors || {};
+    const { headingText, textHover, buttonLight2, widgetBorder } =
+        themeColors || {};
 
     const navigate = useNavigate();
 

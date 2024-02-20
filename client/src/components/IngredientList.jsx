@@ -37,6 +37,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
         buttonLight2,
         buttonHover,
         followerIconOutline,
+        widgetBorder,
     } = themeColors || {};
 
     // Homogenize Quantities to Lower Case

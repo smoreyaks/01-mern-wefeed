@@ -32,6 +32,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
         recipeTextPanel,
         mainBackPanel,
         buttonHover,
+        widgetBorder,
     } = themeColors || {};
 
     const getUser = async () => {
@@ -68,7 +69,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     } = user;
 
     return (
-        <WidgetWrapper>
+        <WidgetWrapper borderColor={widgetBorder}>
             {/* First Row */}
             <FlexBetween
                 gap="0.5rem"

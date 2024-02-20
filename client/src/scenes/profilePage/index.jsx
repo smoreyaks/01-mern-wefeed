@@ -56,6 +56,9 @@ const ProfilePage = () => {
     const recipeStepsPanelHover = palette.default.primaryTwo.light;
     const panelMainHover = palette.default.primaryTwo.light;
 
+    // Border
+    const widgetBorder = palette.default.neutralGrey.borderNeutral;
+
     const themeColors = {
         primary,
         whiteText,
@@ -78,6 +81,7 @@ const ProfilePage = () => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     };
 
     const { _id, picturePath } = useSelector((state) => state.user);

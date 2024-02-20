@@ -74,7 +74,19 @@ const CreatePostWidget = ({ picturePath, themeColors }) => {
     };
 
     return (
-        <WidgetWrapper>
+        <WidgetWrapper
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+            borderColor={widgetBorder}
+        >
             <FlexBetween gap="1.5rem">
                 <UserImage image={picturePath} />
                 <InputBase
