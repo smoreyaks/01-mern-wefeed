@@ -36,6 +36,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
         recipeStepsPanel,
         buttonLight2,
         buttonHover,
+        followerIconOutline,
     } = themeColors || {};
 
     // Homogenize Quantities to Lower Case
@@ -98,7 +99,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     justifyContent="space-between"
                     alignItems="center"
                     // borderRadius="1.75rem"
-                    sx={{ color: headingText }}
+                    sx={{ color: followerIconOutline }}
                 >
                     {ingredientCount} Ingredients
                     {/* INGREDIENTS */}
@@ -107,12 +108,12 @@ const IngredientList = ({ ingredients, themeColors }) => {
                 {ingredientListOpen ? (
                     <KeyboardArrowDownRoundedIcon
                         fontSize="large"
-                        sx={{ color: headingText }}
+                        sx={{ color: followerIconOutline }}
                     />
                 ) : (
                     <KeyboardArrowRightRoundedIcon
                         fontSize="large"
-                        sx={{ color: headingText }}
+                        sx={{ color: followerIconOutline }}
                     />
                 )}
             </ToggleButton>
@@ -139,7 +140,7 @@ const IngredientList = ({ ingredients, themeColors }) => {
                                     alignItems: "center",
                                     borderRadius: "0.5rem",
                                     width: "auto",
-                                    color: headingText,
+                                    color: followerIconOutline,
                                 }}
                             >
                                 {element}

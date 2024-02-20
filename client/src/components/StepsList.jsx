@@ -74,7 +74,7 @@ const StepsList = ({ steps, themeColors }) => {
                     variant="h6"
                     fontWeight="bold"
                     fontFamily="Montserrat"
-                    sx={{ color: headingText }}
+                    sx={{ color: followerIconOutline }}
                 >
                     {stepsCount} Steps
                 </Typography>
@@ -82,12 +82,12 @@ const StepsList = ({ steps, themeColors }) => {
                 {stepsListOpen ? (
                     <KeyboardArrowDownRoundedIcon
                         fontSize="large"
-                        sx={{ color: headingText }}
+                        sx={{ color: followerIconOutline }}
                     />
                 ) : (
                     <KeyboardArrowRightRoundedIcon
                         fontSize="large"
-                        sx={{ color: headingText }}
+                        sx={{ color: followerIconOutline }}
                     />
                 )}
             </ToggleButton>
@@ -126,7 +126,7 @@ const StepsList = ({ steps, themeColors }) => {
                                         background: buttonLight2,
                                         borderRadius: "50%",
                                         width: "1.75rem",
-                                        color: headingText,
+                                        color: followerIconOutline,
                                     }}
                                 >
                                     {step.stepNum}
@@ -140,7 +140,7 @@ const StepsList = ({ steps, themeColors }) => {
                                         display: "flex",
                                         justifyContent: "flex-start",
                                         alignItems: "center",
-                                        color: headingText,
+                                        color: followerIconOutline,
                                     }}
                                 >
                                     {step.stepMethod}
