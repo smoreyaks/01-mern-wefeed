@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import LogoDM from "../assets/logo/WE_FEED_LOGO_DM_20240219d.png";
-import LogoLM from "../assets/logo/WE_FEED_LOGO_LM_20240219b.png";
+import LogoLM from "../assets/logo/WE_FEED_LOGO_LM_20240219c.png";
 import { Image } from "@mui/icons-material";
 
 import { Box } from "@mui/material";
