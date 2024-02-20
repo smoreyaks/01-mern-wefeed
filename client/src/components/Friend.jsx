@@ -116,7 +116,7 @@ const Friend = ({
                     }}
                 >
                     <Typography
-                        color={headingText}
+                        color={followerIconOutline}
                         variant="h5"
                         fontWeight="bold"
                         sx={{
@@ -129,7 +129,7 @@ const Friend = ({
                     >
                         {name}
                     </Typography>
-                    <Typography color={headingText} fontSize="0.75rem">
+                    <Typography color={followerIconOutline} fontSize="0.75rem">
                         {occupation}
                     </Typography>
                 </Box>
@@ -146,7 +146,7 @@ const Friend = ({
                         justifyContent: "center",
                         alignItems: "center",
                         backgroundColor: buttonLight2,
-                        color: headingText,
+                        color: followerIconOutline,
                         p: "0.5rem",
                         m: "0.5rem",
                         minWidth: "3rem",
