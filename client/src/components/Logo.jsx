@@ -1,9 +1,11 @@
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import LogoIcon from "../assets/logo/WE_FEED_LOGO_DARK_20240220a.png";
+import LogoDM from "../assets/logo/WE_FEED_LOGO_DM_20240219c.png";
+import LogoLM from "../assets/logo/WE_FEED_LOGO_LM_20240219b.png";
 import { Image } from "@mui/icons-material";
 
 import { Box } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
     // Theme Destructure
@@ -11,6 +13,9 @@ const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
 
     const navigate = useNavigate();
 
+    const mode = useSelector((state) => state.mode);
+
+    const LogoIcon = mode === "dark" ? LogoDM : LogoLM;
     return (
         <Box
             width="8rem"
