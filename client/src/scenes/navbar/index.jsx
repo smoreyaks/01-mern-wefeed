@@ -151,7 +151,7 @@ const Navbar = ({ userId, themeColors }) => {
                                 >
                                     <DarkMode
                                         sx={{
-                                            color: headingText,
+                                            color: followerIconOutline,
                                             fontSize: "25px",
                                         }}
                                     />
@@ -247,6 +247,7 @@ const Navbar = ({ userId, themeColors }) => {
                             zIndex="10"
                             maxWidth="500px"
                             minWidth="300px"
+                            p="0rem"
                             backgroundColor={backgroundMain}
                             sx={{
                                 display: "flex",
@@ -255,9 +256,10 @@ const Navbar = ({ userId, themeColors }) => {
                                 borderLeft: `0.25rem solid #FFFFFF `,
                             }}
                         >
-                            <Container
+                            <Box
                                 sx={{
-                                    py: "1rem",
+                                    // py: "1rem",
+                                    m: "1rem",
                                     height: "100%",
                                 }}
                             >
@@ -272,7 +274,12 @@ const Navbar = ({ userId, themeColors }) => {
                                     }}
                                 >
                                     {/* Close Icon Section*/}
-                                    <Container sx={{ p: "2px" }}>
+                                    <Box
+                                        sx={{
+                                            px: "1rem",
+                                            width: "100%",
+                                        }}
+                                    >
                                         <Box
                                             display="flex"
                                             justifyContent="flex-end"
@@ -287,7 +294,9 @@ const Navbar = ({ userId, themeColors }) => {
                                                 }
                                             >
                                                 <Close
-                                                    sx={{ color: headingText }}
+                                                    sx={{
+                                                        color: followerIconOutline,
+                                                    }}
                                                 />
                                             </IconButton>
                                         </Box>
@@ -349,10 +358,10 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 backgroundColor:
                                                                     buttonLight2,
                                                                 borderRadius:
-                                                                    "0rem",
-                                                                color: headingText,
+                                                                    "3rem",
+                                                                color: followerIconOutline,
                                                                 "&:hover": {
-                                                                    // color: headingText,
+                                                                    // color: followerIconOutline,
                                                                     backgroundColor:
                                                                         buttonHover,
                                                                 },
@@ -361,13 +370,13 @@ const Navbar = ({ userId, themeColors }) => {
                                                             <PersonRoundedIcon
                                                                 size="25px"
                                                                 color={
-                                                                    headingText
+                                                                    followerIconOutline
                                                                 }
                                                             />
 
                                                             <Typography
                                                                 sx={{
-                                                                    color: headingText,
+                                                                    color: followerIconOutline,
                                                                     fontSize:
                                                                         "1rem",
                                                                 }}
@@ -400,16 +409,16 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 justifyContent:
                                                                     "space-between",
                                                                 borderRadius:
-                                                                    "0",
+                                                                    "3rem",
                                                                 width: "100%",
                                                                 // width: "8rem",
                                                                 backgroundColor:
                                                                     buttonLight2,
-                                                                color: headingText,
+                                                                color: followerIconOutline,
                                                                 fontSize:
                                                                     "25px",
                                                                 "&:hover": {
-                                                                    // color: headingText,
+                                                                    // color: followerIconOutline,
                                                                     backgroundColor:
                                                                         buttonHover,
                                                                 },
@@ -436,7 +445,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                                     >
                                                                         <DarkMode
                                                                             sx={{
-                                                                                color: headingText,
+                                                                                color: followerIconOutline,
                                                                                 fontSize:
                                                                                     "1rem",
                                                                             }}
@@ -497,10 +506,10 @@ const Navbar = ({ userId, themeColors }) => {
                                             </FlexBetween>
                                             {/* End of Top Section */}
                                         </Box>
-                                    </Container>
+                                    </Box>
 
                                     {/* Footer Section */}
-                                    <Container>
+                                    <Box sx={{ px: "1rem" }}>
                                         {/* LogOut Icon */}
                                         <Box
                                             sx={{
@@ -524,13 +533,13 @@ const Navbar = ({ userId, themeColors }) => {
                                                         display: "flex",
                                                         justifyContent:
                                                             "space-evenly",
-                                                        border: `1px solid ${headingText}`,
+                                                        border: `1px solid ${followerIconOutline}`,
                                                         borderRadius: "3rem",
-                                                        width: "8rem",
+                                                        width: "100%",
 
-                                                        color: headingText,
+                                                        color: followerIconOutline,
                                                         "&:hover": {
-                                                            color: headingText,
+                                                            color: followerIconOutline,
                                                             backgroundColor:
                                                                 buttonHover,
                                                         },
@@ -540,14 +549,14 @@ const Navbar = ({ userId, themeColors }) => {
                                                         sx={{
                                                             // size: "25px",
                                                             fontSize: "25px",
-                                                            color: headingText,
+                                                            color: followerIconOutline,
                                                         }}
                                                     />
 
                                                     <Typography
                                                         sx={{
                                                             pl: "1rem",
-                                                            color: headingText,
+                                                            color: followerIconOutline,
                                                         }}
                                                     >
                                                         Log Out
@@ -566,16 +575,16 @@ const Navbar = ({ userId, themeColors }) => {
                                         >
                                             <Typography
                                                 sx={{
-                                                    color: headingText,
+                                                    color: followerIconOutline,
                                                     fontWeight: "bold",
                                                 }}
                                             >
                                                 WeFeed 2024
                                             </Typography>
                                         </Box>
-                                    </Container>
+                                    </Box>
                                 </Box>
-                            </Container>
+                            </Box>
                         </Box>
                     </ClickAwayListener>
                 )}
