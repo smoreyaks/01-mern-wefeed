@@ -56,6 +56,7 @@ const RecipesFeedWidget = ({
     // Local State
     const recipes = useSelector((state) => state.recipes);
     const filter = useSelector((state) => state.filter);
+    const mode = useSelector((state) => state.mode);
 
     // Testing State
     // const [userTest, setUserTest] = useState(null);
@@ -181,64 +182,95 @@ const RecipesFeedWidget = ({
 
     // console.log("RFW - APPLY FILTER:", applyFilter(recipes, filter));
     // console.log("STATE RECIPES:", recipes.recipeId);
-
     return (
         <>
             {user ? (
                 <Box>
-                    {filteredRecipes.map(
-                        ({
-                            _id,
-                            user,
-                            userId,
-                            firstName,
-                            lastName,
-                            occupation,
-                            userPicturePath,
-                            recipeTitle,
-                            picturePath,
-                            ingredients,
-                            equipment,
-                            prepTime,
-                            cookTime,
-                            servings,
-                            spiceLevel,
-                            steps,
-                            notes,
-                            tags,
-                            likes,
-                            recommendations,
-                            saves,
-                            shares,
-                            comments,
-                        }) => (
-                            <RecipePostWidget
-                                key={_id}
-                                user={user}
-                                recipeId={_id}
-                                recipeUserId={userId}
-                                name={`${firstName} ${lastName}`}
-                                userPicturePath={userPicturePath}
-                                occupation={occupation}
-                                recipeTitle={recipeTitle}
-                                picturePath={picturePath}
-                                ingredients={ingredients}
-                                equipment={equipment}
-                                prepTime={prepTime}
-                                cookTime={cookTime}
-                                servings={servings}
-                                spiceLevel={spiceLevel}
-                                steps={steps}
-                                notes={notes}
-                                tags={tags}
-                                likes={likes}
-                                recommendations={recommendations}
-                                saves={saves}
-                                shares={shares}
-                                comments={comments}
-                                themeColors={themeColors}
-                            />
+                    {filteredRecipes.length > 0 ? (
+                        filteredRecipes.map(
+                            ({
+                                _id,
+                                user,
+                                userId,
+                                firstName,
+                                lastName,
+                                occupation,
+                                userPicturePath,
+                                recipeTitle,
+                                picturePath,
+                                ingredients,
+                                equipment,
+                                prepTime,
+                                cookTime,
+                                servings,
+                                spiceLevel,
+                                steps,
+                                notes,
+                                tags,
+                                likes,
+                                recommendations,
+                                saves,
+                                shares,
+                                comments,
+                            }) => (
+                                <RecipePostWidget
+                                    key={_id}
+                                    user={user}
+                                    recipeId={_id}
+                                    recipeUserId={userId}
+                                    name={`${firstName} ${lastName}`}
+                                    userPicturePath={userPicturePath}
+                                    occupation={occupation}
+                                    recipeTitle={recipeTitle}
+                                    picturePath={picturePath}
+                                    ingredients={ingredients}
+                                    equipment={equipment}
+                                    prepTime={prepTime}
+                                    cookTime={cookTime}
+                                    servings={servings}
+                                    spiceLevel={spiceLevel}
+                                    steps={steps}
+                                    notes={notes}
+                                    tags={tags}
+                                    likes={likes}
+                                    recommendations={recommendations}
+                                    saves={saves}
+                                    shares={shares}
+                                    comments={comments}
+                                    themeColors={themeColors}
+                                />
+                            )
                         )
+                    ) : (
+                        <Box
+                            backgroundColor={backgroundMain}
+                            borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
+                            p="1.5rem"
+                            my="1rem"
+                            sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                minWidth: "452px",
+                            }}
+                        >
+                            <Typography
+                                sx={{
+                                    fontWeight: "bold",
+                                    p: "1rem",
+                                    borderRadius:
+                                        "0.75rem 0.75rem 0.75rem 0.75rem",
+                                    backgroundColor: backgroundPrimary,
+                                    color: followerIconOutline,
+                                    width: "100%",
+                                    textAlign: "center",
+                                }}
+                            >
+                                Sorry! This user hasn't posted any{" "}
+                                {filter[0].toUpperCase() + filter.substring(1)}{" "}
+                                Recipes yet.
+                            </Typography>
+                        </Box>
                     )}
                 </Box>
             ) : (
@@ -251,6 +283,7 @@ const RecipesFeedWidget = ({
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
+                        minWidth: "452px",
                     }}
                 >
                     <CircularProgress
