@@ -34,7 +34,7 @@ const HomePage = () => {
 
     // Background Main Color
     const backgroundPrimary = palette.default.primaryOne.main;
-    const backgroundMain = palette.default.primaryOne.dark;
+    const backgroundMain = palette.default.primaryOne.navbar;
 
     // Panel / Subsection Main
     const recipeTextPanel = palette.default.neutral.main;
@@ -45,6 +45,9 @@ const HomePage = () => {
     // Panel / Subsection Hover
     const recipeStepsPanelHover = palette.default.primaryTwo.light;
     const panelMainHover = palette.default.primaryTwo.light;
+
+    // Border
+    const widgetBorder = palette.default.neutralGrey.borderNeutral;
 
     const themeColors = {
         primary,
@@ -68,6 +71,7 @@ const HomePage = () => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     };
 
     // Media Query
@@ -87,7 +91,7 @@ const HomePage = () => {
             />
             <Box
                 width="100%"
-                padding="7rem 6% 0 6%"
+                padding={isDesktopScreen ? "6.5rem 2% 0 2%" : "4.5rem 2% 0 2%"}
                 display={isDesktopScreen ? "flex" : "block"}
                 gap="0.5rem"
                 justifyContent="space-between"
