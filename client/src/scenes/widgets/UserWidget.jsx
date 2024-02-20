@@ -151,12 +151,12 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     <Box>
                         <Typography
                             variant="h4"
-                            color={whiteText}
+                            color={followerIconOutline}
                             fontWeight="bold"
                             fontSize="1rem"
                             sx={{
                                 "&:hover": {
-                                    color: whiteText,
+                                    color: followerIconOutline,
                                     cursor: "pointer",
                                 },
                             }}
@@ -179,7 +179,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     size="small"
                     sx={{
                         backgroundColor: buttonLight2,
-                        color: headingText,
+                        color: followerIconOutline,
                         width: "100%",
                         // p: "0.5rem",
                         // m: "0.5rem",
@@ -216,7 +216,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     sx={{ fontSize: "1rem" }}
                 >
                     <Box
-                        color={headingText}
+                        color={followerIconOutline}
                         display="flex"
                         justifyContent="flex-start"
                         gap="1rem"
@@ -235,7 +235,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     sx={{ fontSize: "1rem" }}
                 >
                     <Box
-                        color={headingText}
+                        color={followerIconOutline}
                         display="flex"
                         justifyContent="flex-start"
                         gap="1rem"
@@ -253,12 +253,12 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             {/* Third Row */}
             <Box p="0.5rem 0">
                 <FlexBetween my="0.25rem">
-                    <Typography fontWeight="bold" color={whiteText}>
+                    <Typography fontWeight="bold" color={followerIconOutline}>
                         Visitors
                     </Typography>
                     <Typography
                         fontWeight="bold"
-                        color={whiteText}
+                        color={followerIconOutline}
                         // fontWeight="500"
                     >
                         {viewedProfile}
@@ -266,8 +266,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 </FlexBetween>
 
                 {/* <FlexBetween>
-                    <Typography color={whiteText}>Score</Typography>
-                    <Typography color={whiteText} fontWeight="500">
+                    <Typography color={followerIconOutline}>Score</Typography>
+                    <Typography color={followerIconOutline} fontWeight="500">
                         {Math.ceil(Math.random() * 100)}
                     </Typography>
                 </FlexBetween> */}
@@ -294,10 +294,13 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             sx={{
                                 width: "1rem",
                                 height: "1rem",
-                                fill: headingText,
+                                fill: followerIconOutline,
                             }}
                         />
-                        <Typography fontWeight="bold" color={headingText}>
+                        <Typography
+                            fontWeight="bold"
+                            color={followerIconOutline}
+                        >
                             {recipesPosted}
                         </Typography>
                     </FlexBetween>
@@ -318,14 +321,17 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         pb="0.5rem"
                     >
                         <ChefHatIcon
-                            color={headingText}
+                            color={followerIconOutline}
                             sx={{
                                 width: "1rem",
                                 height: "1rem",
-                                fill: headingText,
+                                fill: followerIconOutline,
                             }}
                         />
-                        <Typography fontWeight="bold" color={headingText}>
+                        <Typography
+                            fontWeight="bold"
+                            color={followerIconOutline}
+                        >
                             {totalRecipeLikes || 0}
                         </Typography>
                     </FlexBetween>
@@ -342,7 +348,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     fontSize="medium"
                     my="0.5rem"
                     sx={{
-                        color: headingText,
+                        color: followerIconOutline,
                         width: "100%",
                         display: "flex-start",
                         justifyContent: "center",
@@ -361,18 +367,18 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
                     <LocationOnOutlinedIcon
                         fontSize="small"
-                        sx={{ color: whiteText }}
+                        sx={{ color: followerIconOutline }}
                     />
-                    <Typography fontWeight="bold" color={whiteText}>
+                    <Typography fontWeight="bold" color={followerIconOutline}>
                         {location}
                     </Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem">
                     <WorkOutlineOutlined
                         fontSize="small"
-                        sx={{ color: whiteText }}
+                        sx={{ color: followerIconOutline }}
                     />
-                    <Typography fontWeight="bold" color={whiteText}>
+                    <Typography fontWeight="bold" color={followerIconOutline}>
                         {occupation}
                     </Typography>
                 </Box>
@@ -384,7 +390,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             {/* <Box p="1rem 0">
                 <Typography
                     fontSize="1rem"
-                    color={whiteText}
+                    color={followerIconOutline}
                     fontWeight="bold"
                     mb="1rem"
                 >
@@ -395,10 +401,10 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     <FlexBetween gap="1rem">
                         <img src="../assets/twitter.png" alt="twitter" />
                         <Box>
-                            <Typography color={whiteText} fontWeight="500">
+                            <Typography color={followerIconOutline} fontWeight="500">
                                 Twitter
                             </Typography>
-                            <Typography color={whiteText}>
+                            <Typography color={followerIconOutline}>
                                 Social Network
                             </Typography>
                         </Box>
@@ -409,10 +415,10 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     <FlexBetween gap="1rem">
                         <img src="../assets/linkedin.png" alt="linkedin" />
                         <Box>
-                            <Typography color={whiteText} fontWeight="500">
+                            <Typography color={followerIconOutline} fontWeight="500">
                                 LinkedIn
                             </Typography>
-                            <Typography color={whiteText}>
+                            <Typography color={followerIconOutline}>
                                 Network Platform
                             </Typography>
                         </Box>
