@@ -92,6 +92,7 @@ const SocialShareButton = ({ themeColors }) => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     return (
@@ -102,7 +103,7 @@ const SocialShareButton = ({ themeColors }) => {
                 onClick={() => setShareButtonOpen(!shareButtonOpen)}
                 sx={{
                     borderRadius: "3rem",
-                    width: "6rem",
+                    width: "5rem",
                     color: followerIconOutline,
                     "&:hover": {
                         backgroundColor: buttonHover,

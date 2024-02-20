@@ -117,6 +117,7 @@ const RecipePostWidget = ({
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        widgetBorder,
     } = themeColors || {};
 
     //  -------- Prep Time Minimised  --------
@@ -180,6 +181,7 @@ const RecipePostWidget = ({
 
     return (
         <WidgetWrapper
+            borderColor={widgetBorder}
             // m="2rem 0"
             sx={{
                 p: isComments
@@ -518,7 +520,7 @@ const RecipePostWidget = ({
                             onClick={patchLike}
                             sx={{
                                 borderRadius: "3rem",
-                                width: "6rem",
+                                width: "5rem",
 
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -557,7 +559,7 @@ const RecipePostWidget = ({
                             // onClick={() => setIsRecommended(!isRecommended)}
                             sx={{
                                 borderRadius: "3rem",
-                                width: "6rem",
+                                width: "5rem",
 
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -597,7 +599,7 @@ const RecipePostWidget = ({
                             onClick={() => setIsComments(!isComments)}
                             sx={{
                                 borderRadius: "3rem",
-                                width: "6rem",
+                                width: "5rem",
 
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -627,7 +629,7 @@ const RecipePostWidget = ({
                             onClick={() => setIsSaved(!isSaved)}
                             sx={{
                                 borderRadius: "3rem",
-                                width: "6rem",
+                                width: "5rem",
 
                                 color: followerIconOutline,
                                 "&:hover": {
