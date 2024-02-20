@@ -66,6 +66,9 @@ export const colorTokens = {
     // Dark Mode Text Colour
     opaque: {
         10: "rgba(0, 0, 0, 10%)",
+        15: "rgba(0, 0, 0, 15%)",
+        20: "rgba(0, 0, 0, 20%)",
+        25: "rgba(0, 0, 0, 25%)",
         30: "rgba(0, 0, 0, 30%)",
         35: "rgba(0, 0, 0, 35%)",
         40: "rgba(0, 0, 0, 40%)",
@@ -80,6 +83,9 @@ export const colorTokens = {
     // Light Mode Text Colour
     whiteOpaque: {
         10: "rgba(255, 255, 255, 10%)",
+        15: "rgba(255, 255, 255, 15%)",
+        20: "rgba(255, 255, 255, 20%)",
+        25: "rgba(255, 255, 255, 25%)",
         30: "rgba(255, 255, 255, 30%)",
         35: "rgba(255, 255, 255, 35%)",
         40: "rgba(255, 255, 255, 40%)",
@@ -265,6 +271,7 @@ export const themeSettings = (mode) => {
                               white: colorTokens.whiteOpaque[70],
                               icon: colorTokens.whiteOpaque[70],
                               border: colorTokens.whiteOpaque[70],
+                              borderNeutral: colorTokens.whiteOpaque[60],
                               fade50: colorTokens.whiteOpaque[50],
                               fade30: colorTokens.whiteOpaque[30],
                               fade10: colorTokens.whiteOpaque[10],
@@ -323,6 +330,7 @@ export const themeSettings = (mode) => {
                               light: colorTokens.grey[100],
                               lightest: colorTokens.grey[0],
                               border: colorTokens.grey[0],
+                              borderNeutral: colorTokens.opaque[20],
                               white: colorTokens.opaque[70],
                               icon: colorTokens.opaque[60],
                               fade30: colorTokens.opaque[30],
