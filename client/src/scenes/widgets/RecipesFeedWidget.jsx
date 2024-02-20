@@ -260,7 +260,10 @@ const RecipesFeedWidget = ({
                                     p: "1rem",
                                     borderRadius:
                                         "0.75rem 0.75rem 0.75rem 0.75rem",
-                                    backgroundColor: backgroundPrimary,
+                                    backgroundColor:
+                                        mode === "dark"
+                                            ? recipeStepsPanel
+                                            : backgroundPrimary,
                                     color: followerIconOutline,
                                     width: "100%",
                                     textAlign: "center",
