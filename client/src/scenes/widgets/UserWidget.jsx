@@ -37,6 +37,7 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 // Custom Icons
 import ChefHatIcon from "../../components/svg/ChefHatIcon";
 import RecipeIcon from "../../components/svg/RecipeIcon";
+import RepStarIcon from "../../components/svg/RepStarIcon";
 
 // Local State
 import { setFriends } from "../../state";
@@ -351,14 +352,17 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     sx={{
                         color: followerIconOutline,
                         width: "100%",
-                        display: "flex-start",
-                        justifyContent: "center",
+                        display: "flex",
+                        justifyContent: "flex-start",
                         alignItems: "center",
+                        width: "100%",
                     }}
                 >
-                    <StarRateIcon fontSize="1rem" />
-                    <StarRateIcon fontSize="1rem" />
-                    <StarRateIcon fontSize="1rem" />
+                    {/* <FlexBetween> */}
+                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
+                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
+                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
+                    {/* </FlexBetween> */}
                 </Box>
             </Tooltip>
             <Divider />
