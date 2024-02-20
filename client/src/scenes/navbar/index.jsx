@@ -111,7 +111,7 @@ const Navbar = ({ userId, themeColors }) => {
     return (
         <Box
             position="fixed"
-            sx={{ width: "100%", zIndex: "100", boxShadow: 8 }}
+            sx={{ width: "100%", zIndex: "100", boxShadow: 3 }}
         >
             <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
                 {isDesktopScreen && (
