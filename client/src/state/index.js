@@ -41,6 +41,11 @@ export const authSlice = createSlice({
             state.mode = state.mode === "light" ? "dark" : "light";
         },
 
+        setIsFriendsListOpen: (state) => {
+            state.isFriendsListOpen =
+                state.isFriendsListOpen === true ? false : true;
+        },
+
         // Themes
         setThemeDefault: (state, action) => {
             state.theme = action.payload.theme.default;
@@ -196,6 +201,7 @@ export const {
     setAllRecipes,
     setRecipe,
     setFilter,
+    setIsFriendsListOpen,
     // setPosts,
     // setPost,
 } = authSlice.actions;
