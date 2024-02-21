@@ -70,183 +70,177 @@ const FeedSelect = ({ themeColors }) => {
     } = themeColors || {};
 
     return (
-        <Box>
-            <FlexBetween>
-                <Box
-                    sx={{
-                        display: "flex",
-                        backgroundColor: buttonLight2,
-                        borderRadius: "3rem",
-                        border: `2px solid ${followerIconOutline}`,
-                        padding: "0",
-                    }}
+        <FlexBetween>
+            <Box
+                sx={{
+                    display: "flex",
+                    backgroundColor: buttonLight2,
+                    borderRadius: "3rem",
+                    border: `2px solid ${widgetBorder}`,
+                    padding: "0",
+                }}
+            >
+                {/* All Recipes */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="All Recipes"
+                    enterDelay="500"
+                    fontSize="1rem"
                 >
-                    {/* All Recipes */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="All Recipes"
-                        enterDelay="500"
-                        fontSize="1rem"
-                    >
-                        {/* Clear Tags to Show ALl Recipe Types */}
-                        <Button
-                            onClick={() => handleFilterByRecipeType("all")}
-                            sx={{
-                                backgroundColor: buttonLight2,
+                    {/* Clear Tags to Show ALl Recipe Types */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("all")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            p: "0.5rem 0rem 0.5rem 0rem",
+                            m: "0.5rem 0rem 0.5rem 0.5rem",
+                            borderTopLeftRadius: "3rem",
+                            borderBottomLeftRadius: "3rem",
+                            borderTopRightRadius: "3rem",
+                            borderBottomRightRadius: "3rem",
+                            "&:hover": {
                                 color: headingText,
-                                p: "0.5rem 0rem 0.5rem 0rem",
-                                m: "0.5rem 0rem 0.5rem 0.5rem",
-                                borderTopLeftRadius: "3rem",
-                                borderBottomLeftRadius: "3rem",
-                                borderTopRightRadius: "3rem",
-                                borderBottomRightRadius: "3rem",
-                                "&:hover": {
-                                    color: headingText,
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <AllInclusiveOutlinedIcon
-                                sx={{ color: followerIconOutline }}
-                                fontSize="medium"
-                            />
-                        </Button>
-                    </Tooltip>
+                                backgroundColor: buttonHover,
+                            },
+                        }}
+                    >
+                        <AllInclusiveOutlinedIcon
+                            sx={{ color: followerIconOutline }}
+                            fontSize="medium"
+                        />
+                    </Button>
+                </Tooltip>
 
-                    {/* Main Dish Recipes */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="Main Dishes"
-                        enterDelay="500"
+                {/* Main Dish Recipes */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Main Dishes"
+                    enterDelay="500"
+                >
+                    {/* Filter by Main Recipe Type */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("main")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem 0.5rem 0rem",
+                            my: "0.5rem",
+                            "&:hover": {
+                                backgroundColor: buttonHover,
+                            },
+                        }}
                     >
-                        {/* Filter by Main Recipe Type */}
-                        <Button
-                            onClick={() => handleFilterByRecipeType("main")}
-                            sx={{
-                                backgroundColor: buttonLight2,
-                                color: headingText,
-                                borderRadius: "3rem",
-                                p: "0.5rem 0rem 0.5rem 0rem",
-                                my: "0.5rem",
-                                "&:hover": {
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <MainDishIcon sx={{ fill: followerIconOutline }} />
-                        </Button>
-                    </Tooltip>
+                        <MainDishIcon sx={{ fill: followerIconOutline }} />
+                    </Button>
+                </Tooltip>
 
-                    {/* Appetiser Recipes */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="Appetisers"
-                        enterDelay="500"
+                {/* Appetiser Recipes */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Appetisers"
+                    enterDelay="500"
+                >
+                    {/* Filter by Appetiser Recipe Type */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("appetiser")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem",
+                            my: "0.5rem",
+                            "&:hover": {
+                                backgroundColor: buttonHover,
+                            },
+                        }}
                     >
-                        {/* Filter by Appetiser Recipe Type */}
-                        <Button
-                            onClick={() =>
-                                handleFilterByRecipeType("appetiser")
-                            }
-                            sx={{
-                                backgroundColor: buttonLight2,
-                                color: headingText,
-                                borderRadius: "3rem",
-                                p: "0.5rem 0rem",
-                                my: "0.5rem",
-                                "&:hover": {
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <AppetiserIcon sx={{ fill: followerIconOutline }} />
-                        </Button>
-                    </Tooltip>
+                        <AppetiserIcon sx={{ fill: followerIconOutline }} />
+                    </Button>
+                </Tooltip>
 
-                    {/* Breakfast Recipes */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="Breakfast Dishes"
-                        enterDelay="500"
+                {/* Breakfast Recipes */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Breakfast Dishes"
+                    enterDelay="500"
+                >
+                    {/* Filter by Breakfast Recipe Type */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("breakfast")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem",
+                            my: "0.5rem",
+                            // borderRadius: "3rem",
+                            "&:hover": {
+                                backgroundColor: buttonHover,
+                            },
+                        }}
                     >
-                        {/* Filter by Breakfast Recipe Type */}
-                        <Button
-                            onClick={() =>
-                                handleFilterByRecipeType("breakfast")
-                            }
-                            sx={{
-                                backgroundColor: buttonLight2,
-                                color: headingText,
-                                borderRadius: "3rem",
-                                p: "0.5rem 0rem",
-                                my: "0.5rem",
-                                // borderRadius: "3rem",
-                                "&:hover": {
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <BreakfastIcon sx={{ fill: followerIconOutline }} />
-                        </Button>
-                    </Tooltip>
+                        <BreakfastIcon sx={{ fill: followerIconOutline }} />
+                    </Button>
+                </Tooltip>
 
-                    {/* Dessert Recipes */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="Desserts"
-                        enterDelay="500"
+                {/* Dessert Recipes */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Desserts"
+                    enterDelay="500"
+                >
+                    {/* Filter by Dessert Recipe Type */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("dessert")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem",
+                            my: "0.5rem",
+                            // borderRadius: "3rem",
+                            "&:hover": {
+                                backgroundColor: buttonHover,
+                            },
+                        }}
                     >
-                        {/* Filter by Dessert Recipe Type */}
-                        <Button
-                            onClick={() => handleFilterByRecipeType("dessert")}
-                            sx={{
-                                backgroundColor: buttonLight2,
-                                color: headingText,
-                                borderRadius: "3rem",
-                                p: "0.5rem 0rem",
-                                my: "0.5rem",
-                                // borderRadius: "3rem",
-                                "&:hover": {
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <DessertIcon sx={{ fill: followerIconOutline }} />
-                        </Button>
-                    </Tooltip>
+                        <DessertIcon sx={{ fill: followerIconOutline }} />
+                    </Button>
+                </Tooltip>
 
-                    {/* Drinks */}
-                    <Tooltip
-                        TransitionComponent={Zoom}
-                        placement="top"
-                        title="Drinks & Cocktails"
-                        enterDelay="500"
+                {/* Drinks */}
+                <Tooltip
+                    TransitionComponent={Zoom}
+                    placement="top"
+                    title="Drinks & Cocktails"
+                    enterDelay="500"
+                >
+                    {/* Filter by Drink Recipe Type */}
+                    <Button
+                        onClick={() => handleFilterByRecipeType("drink")}
+                        sx={{
+                            backgroundColor: buttonLight2,
+                            color: headingText,
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem",
+                            m: "0.5rem 0.5rem 0.5rem 0 ",
+                            "&:hover": {
+                                backgroundColor: buttonHover,
+                            },
+                        }}
                     >
-                        {/* Filter by Drink Recipe Type */}
-                        <Button
-                            onClick={() => handleFilterByRecipeType("drink")}
-                            sx={{
-                                backgroundColor: buttonLight2,
-                                color: headingText,
-                                borderRadius: "3rem",
-                                p: "0.5rem 0rem",
-                                m: "0.5rem 0.5rem 0.5rem 0 ",
-                                "&:hover": {
-                                    backgroundColor: buttonHover,
-                                },
-                            }}
-                        >
-                            <DrinkIcon sx={{ fill: followerIconOutline }} />
-                        </Button>
-                    </Tooltip>
-                </Box>
-            </FlexBetween>
-        </Box>
+                        <DrinkIcon sx={{ fill: followerIconOutline }} />
+                    </Button>
+                </Tooltip>
+            </Box>
+        </FlexBetween>
     );
 };
 
