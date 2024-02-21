@@ -63,7 +63,7 @@ export const colorTokens = {
         1000: "rgba(0, 0, 0, 70%)",
     },
 
-    // Dark Mode Text Colour
+    // Light Mode Text Colour
     opaque: {
         10: "rgba(0, 0, 0, 10%)",
         15: "rgba(0, 0, 0, 15%)",
@@ -80,7 +80,7 @@ export const colorTokens = {
         70: "rgba(0, 0, 0, 70%)",
     },
 
-    // Light Mode Text Colour
+    // Dark Mode Text Colour
     whiteOpaque: {
         10: "rgba(255, 255, 255, 10%)",
         15: "rgba(255, 255, 255, 15%)",
