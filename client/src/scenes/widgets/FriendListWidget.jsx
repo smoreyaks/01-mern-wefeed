@@ -8,6 +8,8 @@ import {
     useTheme,
     Divider,
     ToggleButton,
+    Tooltip,
+    Zoom,
 } from "@mui/material";
 
 // Custom Components
@@ -26,12 +28,11 @@ import { useDispatch, useSelector } from "react-redux";
 // State
 import { setFriends } from "../../state";
 import { setIsFriendsListOpen } from "../../state";
+import { useNavigate } from "react-router-dom";
 
 const FriendListWidget = ({ userId, themeColors }) => {
-    // State
-    // const [isFriendsListOpen, setIsFriendsListOpen] = useState(true);
-
-    const { palette } = useTheme();
+    // Navigate
+    const navigate = useNavigate();
 
     // Redux State
     const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
     const isFriendsListOpen = useSelector((state) => state.isFriendsListOpen);
 
     // Theme Destructure
+    const { palette } = useTheme();
     const { headingText, widgetBorder, followerIconOutline } =
         themeColors || {};
 
@@ -121,32 +123,60 @@ const FriendListWidget = ({ userId, themeColors }) => {
                     sx={{
                         display: "flex",
                         flexDirection: "column",
-                        gap: "1rem",
+                        gap: "0.5rem",
                         height: "100%",
                     }}
                 >
                     {isFriendsListOpen
                         ? friends.map((friend) => (
-                              <Box sx={{ height: "72px" }}>
-                                  <Friend
-                                      key={friend._id}
-                                      friendId={friend._id}
-                                      name={`${friend.firstName} ${friend.lastName}`}
-                                      occupation={friend.occupation}
-                                      userPicturePath={friend.picturePath}
-                                      themeColors={themeColors}
-                                      isProfile
-                                  />
-                              </Box>
+                              <Tooltip
+                                  TransitionComponent={Zoom}
+                                  placement="left"
+                                  title={`${friend.firstName}'s Profile`}
+                                  enterDelay="500"
+                                  sx={{ fontSize: "1rem" }}
+                              >
+                                  <Box
+                                      sx={{
+                                          height: "72px",
+                                      }}
+                                  >
+                                      <Friend
+                                          key={friend._id}
+                                          friendId={friend._id}
+                                          firstName={friend.firstName}
+                                          lastName={friend.lastName}
+                                          name={`${friend.firstName} ${friend.lastName}`}
+                                          occupation={friend.occupation}
+                                          userPicturePath={friend.picturePath}
+                                          themeColors={themeColors}
+                                          isProfile
+                                      />
+                                  </Box>
+                              </Tooltip>
                           ))
                         : friends.map((friend) => (
-                              <Box sx={{ height: "72px" }}>
-                                  <UserImage
-                                      key={friend.id}
-                                      image={friend.picturePath}
-                                      size="55px"
-                                  />
-                              </Box>
+                              <Tooltip
+                                  TransitionComponent={Zoom}
+                                  placement="left"
+                                  title={`${friend.firstName}'s Profile`}
+                                  enterDelay="500"
+                                  sx={{ fontSize: "1rem" }}
+                              >
+                                  <Box
+                                      sx={{ height: "72px", cursor: "pointer" }}
+                                      onClick={() => {
+                                          navigate(`/profile/${friend.id}`);
+                                          navigate(0);
+                                      }}
+                                  >
+                                      <UserImage
+                                          key={friend.id}
+                                          image={friend.picturePath}
+                                          size="55px"
+                                      />
+                                  </Box>
+                              </Tooltip>
                           ))}
                 </Box>
             ) : (
