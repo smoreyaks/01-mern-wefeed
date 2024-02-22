@@ -63,6 +63,8 @@ const RecipePostWidget = ({
     user,
     recipeId,
     recipeUserId,
+    firstName,
+    lastName,
     name,
     userPicturePath,
     occupation,
@@ -189,12 +191,13 @@ const RecipePostWidget = ({
                 p: isComments
                     ? "1rem 1.5rem 0 1.5rem"
                     : "1rem 1.5rem 0.5rem 1.5rem",
-                m: isComments ? "2rem 0" : "1rem 0",
+                m: isComments ? "2rem 0" : "0rem 0rem 2rem 0rem",
             }}
         >
             {/* ------------------------------- */}
             {/* -------- Recipe Author -------- */}
             {/* ------------------------------- */}
+
             <Friend
                 friendId={recipeUserId}
                 name={name}
@@ -202,7 +205,6 @@ const RecipePostWidget = ({
                 themeColors={themeColors}
                 occupation={occupation}
             />
-
             {/* ---------------------------------------- */}
             {/* -------- Recipe Heading Section -------- */}
             {/* ---------------------------------------- */}
