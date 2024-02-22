@@ -98,6 +98,7 @@ const Navbar = ({ userId, themeColors }) => {
         recipeStepsPanelHover,
         panelMainHover,
         widgetBorder,
+        navbarMain,
     } = themeColors || {};
 
     // Swap Hard Code for Dynamic String
@@ -112,17 +113,21 @@ const Navbar = ({ userId, themeColors }) => {
     return (
         <Box
             position="fixed"
-            sx={{ width: "100%", zIndex: "100", boxShadow: 3 }}
+            sx={{
+                width: "100%",
+                zIndex: "100",
+                boxShadow: 3,
+            }}
         >
-            <FlexBetween padding="1rem 6%" backgroundColor={backgroundMain}>
-                {isDesktopScreen && (
-                    <Logo
-                        themeColors={themeColors}
-                        isDesktopScreen={isDesktopScreen}
-                    />
-                )}
-
-                {!isDesktopScreen && (
+            <FlexBetween padding="1rem 6%" backgroundColor={navbarMain}>
+                {isDesktopScreen ? (
+                    <Box sx={{ width: "15%" }}>
+                        <Logo
+                            themeColors={themeColors}
+                            isDesktopScreen={isDesktopScreen}
+                        />
+                    </Box>
+                ) : (
                     <FlexBetween
                         width="10%"
                         sx={{
@@ -135,7 +140,7 @@ const Navbar = ({ userId, themeColors }) => {
 
                 {/* Desktop Navbar */}
                 {isDesktopScreen ? (
-                    <FlexBetween gap="1rem">
+                    <FlexBetween gap="1rem" width="15%">
                         {/* Dark & Light Mode Button */}
 
                         <IconButton onClick={() => dispatch(setMode())}>
