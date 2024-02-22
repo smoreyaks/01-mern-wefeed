@@ -34,20 +34,17 @@ const Friend = ({
     themeColors,
     isProfile = false,
 }) => {
-    const dispatch = useDispatch();
+    // Navigate
     const navigate = useNavigate();
-    const { _id } = useSelector((state) => state.user);
 
+    // Redux State
+    const dispatch = useDispatch();
+    const { _id } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
     const loggedInFriends = useSelector((state) => state.loggedInUser.friends);
 
     // Theme
-    // const { palette } = useTheme();
-    // const primaryLight = palette.default.primary.light;
-    // const primaryDark = palette.default.primary.dark;
-    // const main = palette.default.neutral.main;
-
     const {
         primary,
         whiteText,
@@ -109,30 +106,44 @@ const Friend = ({
     return (
         <FlexBetween>
             <FlexBetween gap="1rem">
-                <UserImage image={userPicturePath} size="55px" />
                 <Box
+                    sx={{ cursor: "pointer" }}
                     onClick={() => {
                         navigate(`/profile/${friendId}`);
                         navigate(0);
                     }}
                 >
-                    <Typography
-                        color={followerIconOutline}
-                        variant="h5"
-                        fontWeight="bold"
+                    <FlexBetween
                         sx={{
-                            "&:hover": {
-                                color: textHover,
-                                cursor: "pointer",
-                            },
-                            fontSize: "0.8rem",
+                            gap: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
                         }}
                     >
-                        {name}
-                    </Typography>
-                    <Typography color={followerIconOutline} fontSize="0.75rem">
-                        {occupation}
-                    </Typography>
+                        <UserImage image={userPicturePath} size="55px" />
+                        <Box>
+                            <Typography
+                                color={followerIconOutline}
+                                variant="h5"
+                                fontWeight="bold"
+                                sx={{
+                                    "&:hover": {
+                                        color: textHover,
+                                        cursor: "pointer",
+                                    },
+                                    fontSize: "0.8rem",
+                                }}
+                            >
+                                {name}
+                            </Typography>
+                            <Typography
+                                color={followerIconOutline}
+                                fontSize="0.75rem"
+                            >
+                                {occupation}
+                            </Typography>
+                        </Box>
+                    </FlexBetween>
                 </Box>
             </FlexBetween>
             {friendId === _id ? (
