@@ -1,24 +1,25 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+// React Packages
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+
+// Redux
+import { useSelector } from "react-redux";
+
+// MUI Components
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+
+// Custom Components
+import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
+import RecipesFeedWidget from "../widgets/RecipesFeedWidget";
+import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
+import FriendListWidget from "../widgets/FriendListWidget";
 import Navbar from "../navbar";
 import UserWidget from "../widgets/UserWidget";
-import FriendListWidget from "../widgets/FriendListWidget";
-
-// Posts
-// import CreatePostWidget from "../widgets/CreatePostWidget";
-// import PostsFeedWidget from "../widgets/PostsFeedWidget";
-
-// Recipes
-import RecipesFeedWidget from "../widgets/RecipesFeedWidget";
-import CreateRecipeWidget from "../widgets/CreateRecipeWidget";
-import RecipePostWidget from "../widgets/RecipePostWidget";
-
-import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
 
 const ProfilePage = () => {
+    // ---------------------------
     // ---------- Theme ----------
+    // ---------------------------
 
     const { palette } = useTheme();
 
@@ -82,16 +83,24 @@ const ProfilePage = () => {
         panelMain,
         recipeStepsPanelHover,
         panelMainHover,
+        navbarMain,
         widgetBorder,
     };
 
-    const { _id, picturePath } = useSelector((state) => state.user);
-
-    const [user, setUser] = useState(null);
+    // Params
     const { userId } = useParams();
+
+    // State
+    const [user, setUser] = useState(null);
+
+    // Redux State
+    const { _id, picturePath } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
+
+    // Media Query
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
 
+    // GET User API Request
     const getUser = async () => {
         const response = await fetch(
             `https://server-vukx.onrender.com/users/${userId}`,
@@ -103,6 +112,8 @@ const ProfilePage = () => {
         const data = await response.json();
         setUser(data);
     };
+
+    // Run Once On Page Load
     useEffect(() => {
         getUser();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -118,11 +129,16 @@ const ProfilePage = () => {
             />
             <Box
                 width="100%"
-                padding="7rem 6% 0 6%"
-                display={isDesktopScreen ? "flex" : "block"}
+                padding={
+                    isDesktopScreen
+                        ? "6.5rem 1rem 0 1rem"
+                        : "4.5rem 1rem 0 1rem"
+                }
+                display="flex"
                 gap="2rem"
-                justifyContent="center"
+                justifyContent={isDesktopScreen ? "space-between" : "center"}
             >
+                {/* User Column */}
                 <Box
                     // flexBasis={isDesktopScreen ? "26%" : undefined}
                     display={isDesktopScreen ? "26%" : "none"}
@@ -135,9 +151,13 @@ const ProfilePage = () => {
                     <Box m="2rem 0" />
                     <TopUserRecipesWidget themeColors={themeColors} />
                 </Box>
+
+                {/* Feed Column */}
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : undefined}
+                    maxWidth="730px"
                     mt={isDesktopScreen ? undefined : "2rem"}
+                    sx={{ justifyContent: "center" }}
                 >
                     <CreateRecipeWidget
                         picturePath={user.picturePath}
@@ -149,10 +169,15 @@ const ProfilePage = () => {
                         isProfile
                         themeColors={themeColors}
                     />
-                    {/* <RecipePostWidget userId={userId} isProfile /> */}
                 </Box>
+
+                {/* Friends & Ad Column */}
                 <Box
-                    display={isDesktopScreen ? "26%" : "none"}
+                    display={isDesktopScreen ? "flex" : "none"}
+                    justifyContent="center"
+                    width="300px"
+                    minWidth="270px"
+                    height="100%"
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <FriendListWidget
