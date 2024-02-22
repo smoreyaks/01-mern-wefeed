@@ -136,7 +136,7 @@ const HomePage = () => {
                     <Box
                         display={isDesktopScreen ? "flex" : "none"}
                         flexDirection="column"
-                        justifyContent="center"
+                        justifyContent="right"
                         width="300px"
                         minWidth="270px"
                         height="100%"

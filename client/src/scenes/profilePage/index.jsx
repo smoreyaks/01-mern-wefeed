@@ -174,7 +174,7 @@ const ProfilePage = () => {
                 {/* Friends & Ad Column */}
                 <Box
                     display={isDesktopScreen ? "flex" : "none"}
-                    justifyContent="center"
+                    justifyContent="right"
                     width="300px"
                     minWidth="270px"
                     height="100%"
