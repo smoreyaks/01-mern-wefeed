@@ -156,14 +156,14 @@ const ProfilePage = () => {
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : undefined}
                     maxWidth="730px"
-                    mt={isDesktopScreen ? undefined : "2rem"}
+                    mt={isDesktopScreen ? undefined : "0rem"}
                     sx={{ justifyContent: "center" }}
                 >
                     {/* <CreateRecipeWidget
                         picturePath={user.picturePath}
                         themeColors={themeColors}
                     /> */}
-                    <Box m="2rem 0" />
+                    <Box m="0rem 0" />
                     <RecipesFeedWidget
                         userId={userId}
                         isProfile

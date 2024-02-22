@@ -122,7 +122,7 @@ const HomePage = () => {
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
                     maxWidth="680px"
-                    mt={isDesktopScreen ? undefined : "2rem"}
+                    mt={isDesktopScreen ? undefined : "0rem"}
                 >
                     {/* <CreateRecipeWidget
                         picturePath={picturePath}

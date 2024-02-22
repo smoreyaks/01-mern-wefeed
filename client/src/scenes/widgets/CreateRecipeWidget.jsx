@@ -106,7 +106,9 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
     };
 
     return (
-        <WidgetWrapper borderColor={widgetBorder}>
+        <WidgetWrapper
+            sx={{ borderColor: widgetBorder, m: "0rem 0rem 2rem 0rem" }}
+        >
             <FlexBetween gap="1.5rem">
                 <UserImage image={picturePath} />
                 <InputBase
