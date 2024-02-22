@@ -159,10 +159,10 @@ const ProfilePage = () => {
                     mt={isDesktopScreen ? undefined : "2rem"}
                     sx={{ justifyContent: "center" }}
                 >
-                    <CreateRecipeWidget
+                    {/* <CreateRecipeWidget
                         picturePath={user.picturePath}
                         themeColors={themeColors}
-                    />
+                    /> */}
                     <Box m="2rem 0" />
                     <RecipesFeedWidget
                         userId={userId}

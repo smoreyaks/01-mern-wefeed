@@ -124,10 +124,10 @@ const HomePage = () => {
                     maxWidth="680px"
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
-                    <CreateRecipeWidget
+                    {/* <CreateRecipeWidget
                         picturePath={picturePath}
                         themeColors={themeColors}
-                    />
+                    /> */}
                     <RecipesFeedWidget userId={_id} themeColors={themeColors} />
                 </Box>
 
