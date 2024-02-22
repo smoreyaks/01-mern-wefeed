@@ -73,6 +73,7 @@ const HomePage = () => {
         recipeStepsPanelHover,
         panelMainHover,
         widgetBorder,
+        navbarMain,
     };
 
     // Media Query
@@ -92,20 +93,35 @@ const HomePage = () => {
             />
             <Box
                 width="100%"
-                padding={isDesktopScreen ? "6.5rem 2% 0 2%" : "4.5rem 2% 0 2%"}
-                display={isDesktopScreen ? "flex" : "block"}
+                padding={
+                    isDesktopScreen
+                        ? "6.5rem 1rem 0 1rem"
+                        : "4.5rem 1rem 0 1rem"
+                }
+                display="flex"
                 gap="0.5rem"
-                justifyContent="space-between"
+                justifyContent={isDesktopScreen ? "space-between" : "center"}
             >
-                <Box display={isDesktopScreen ? "26%" : "none"}>
+                {/* User Column */}
+                <Box
+                    display={isDesktopScreen ? "26%" : "none"}
+                    flexBasis="26%"
+                    maxWidth="300px"
+                    minWidth="15%"
+                >
                     <UserWidget
                         userId={_id}
                         picturePath={picturePath}
                         themeColors={themeColors}
                     />
+                    <Box m="2rem 0" />
+                    <AdvertWidget themeColors={themeColors} />
                 </Box>
+
+                {/* Feed Column */}
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
+                    maxWidth="680px"
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     <CreateRecipeWidget
@@ -114,14 +130,23 @@ const HomePage = () => {
                     />
                     <RecipesFeedWidget userId={_id} themeColors={themeColors} />
                 </Box>
+
+                {/* Friends & Ad Column */}
                 {isDesktopScreen && (
-                    <Box flexBasis="26%">
-                        <AdvertWidget themeColors={themeColors} />
-                        <Box m="2rem 0" />
-                        <FriendListWidget
-                            userId={_id}
-                            themeColors={themeColors}
-                        />
+                    <Box
+                        display={isDesktopScreen ? "flex" : "none"}
+                        flexDirection="column"
+                        justifyContent="center"
+                        width="300px"
+                        minWidth="270px"
+                        height="100%"
+                    >
+                        <Box sx={{ display: "flex", justifyContent: "right" }}>
+                            <FriendListWidget
+                                userId={_id}
+                                themeColors={themeColors}
+                            />
+                        </Box>
                     </Box>
                 )}
             </Box>
