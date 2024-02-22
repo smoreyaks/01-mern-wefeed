@@ -121,19 +121,19 @@ const RecipesFeedWidget = ({
     const applyFilter = (recipeList, recipeFilter) => {
         filteredRecipes = []; // Reset Filtered List before filter call
 
-        const recipeTypeFilterFunction = () => {
-            console.log(`FILTER - ${recipeFilter}`);
-            recipeList.filter((recipe) => {
-                recipe.recipeType.forEach((rt) => {
-                    if (rt === recipeFilter) {
-                        console.log("RECIPE TYPE:", recipe.recipeType);
-                        filteredRecipes.push(recipe);
-                        return filteredRecipes;
-                    }
-                });
-            });
-            console.log("NEW LIST RECIPE:", filteredRecipes);
-        };
+        // const recipeTypeFilterFunction = () => {
+        //     console.log(`FILTER - ${recipeFilter}`);
+        //     recipeList.filter((recipe) => {
+        //         recipe.recipeType.forEach((rt) => {
+        //             if (rt === recipeFilter) {
+        //                 console.log("RECIPE TYPE:", recipe.recipeType);
+        //                 filteredRecipes.push(recipe);
+        //                 return filteredRecipes;
+        //             }
+        //         });
+        //     });
+        //     console.log("NEW LIST RECIPE:", filteredRecipes);
+        // };
 
         switch (recipeFilter) {
             // Returns Updated Feed with all recipes
@@ -145,31 +145,31 @@ const RecipesFeedWidget = ({
 
             // Returns updated feed with Main Dishes
             case "main":
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Appetisers
             case "appetiser":
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Breakfast Dishes
             case "breakfast":
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Dessert Dishes
             case "dessert":
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
 
             // Returns updated feed with Drinks & Cocktails
             case "drink":
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
 
             default:
-                recipeTypeFilterFunction();
+                // recipeTypeFilterFunction();
                 return filteredRecipes;
         }
     };
@@ -218,6 +218,8 @@ const RecipesFeedWidget = ({
                                     user={user}
                                     recipeId={_id}
                                     recipeUserId={userId}
+                                    firstName={firstName}
+                                    lastName={lastName}
                                     name={`${firstName} ${lastName}`}
                                     userPicturePath={userPicturePath}
                                     occupation={occupation}
