@@ -34,6 +34,7 @@ import {
 } from "@mui/icons-material";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import LogoutIcon from "@mui/icons-material/Logout";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 
 // Redux Hooks
 import { useDispatch, useSelector } from "react-redux";
@@ -140,9 +141,13 @@ const Navbar = ({ userId, themeColors }) => {
 
                 {/* Desktop Navbar */}
                 {isDesktopScreen ? (
-                    <FlexBetween gap="1rem" width="15%">
+                    <FlexBetween
+                        gap="0.5rem"
+                        width="15%"
+                        sx={{ display: "flex", justifyContent: "flex-end" }}
+                    >
                         {/* Dark & Light Mode Button */}
-
+                        {/* <Box> */}
                         <IconButton onClick={() => dispatch(setMode())}>
                             {mode === "dark" ? (
                                 <Tooltip
@@ -331,7 +336,102 @@ const Navbar = ({ userId, themeColors }) => {
                                                             }
                                                         />
                                                     )}
-                                                <Box sx={{ width: "100%" }}>
+
+                                                {/* Mobile Nav Buttons Container*/}
+                                                <Box
+                                                    sx={{
+                                                        width: "100%",
+                                                        display: "flex",
+                                                        flexDirection: "column",
+                                                        justifyContent:
+                                                            "center",
+                                                        alignItems: "center",
+                                                        gap: "0.25rem",
+                                                    }}
+                                                >
+                                                    {/* Main Feed Button */}
+                                                    <Tooltip
+                                                        TransitionComponent={
+                                                            Zoom
+                                                        }
+                                                        placement="top"
+                                                        title="Main Feed"
+                                                        enterDelay="500"
+                                                        sx={{
+                                                            fontSize: "1rem",
+                                                            color: headingText,
+                                                        }}
+                                                    >
+                                                        <Button
+                                                            cursor="pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    `/home`
+                                                                );
+                                                                navigate(0);
+                                                            }}
+                                                            sx={{
+                                                                display: "flex",
+                                                                justifyContent:
+                                                                    "space-around",
+
+                                                                width: "100%",
+
+                                                                backgroundColor:
+                                                                    buttonLight2,
+                                                                borderRadius:
+                                                                    "3rem",
+                                                                color: followerIconOutline,
+                                                                "&:hover": {
+                                                                    // color: followerIconOutline,
+                                                                    backgroundColor:
+                                                                        buttonHover,
+                                                                },
+                                                            }}
+                                                        >
+                                                            <Box
+                                                                sx={{
+                                                                    width: "20%",
+                                                                    display:
+                                                                        "flex",
+                                                                    justifyContent:
+                                                                        "center",
+                                                                    alignItems:
+                                                                        "center",
+                                                                }}
+                                                            >
+                                                                <HomeRoundedIcon
+                                                                    size="25px"
+                                                                    color={
+                                                                        followerIconOutline
+                                                                    }
+                                                                />
+                                                            </Box>
+                                                            <Box
+                                                                sx={{
+                                                                    width: "45%",
+                                                                    display:
+                                                                        "flex",
+                                                                    justifyContent:
+                                                                        "flex-start",
+                                                                    alignItems:
+                                                                        "center",
+                                                                }}
+                                                            >
+                                                                <Typography
+                                                                    sx={{
+                                                                        color: followerIconOutline,
+                                                                        fontSize:
+                                                                            "1rem",
+                                                                    }}
+                                                                >
+                                                                    Main Feed
+                                                                </Typography>
+                                                            </Box>
+                                                        </Button>
+                                                    </Tooltip>
+
+                                                    {/* Profile Button */}
                                                     <Tooltip
                                                         TransitionComponent={
                                                             Zoom
@@ -344,7 +444,6 @@ const Navbar = ({ userId, themeColors }) => {
                                                             color: headingText,
                                                         }}
                                                     >
-                                                        {/* Profile Button */}
                                                         <Button
                                                             cursor="pointer"
                                                             onClick={() => {
@@ -373,81 +472,108 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 },
                                                             }}
                                                         >
-                                                            <PersonRoundedIcon
-                                                                size="25px"
-                                                                color={
-                                                                    followerIconOutline
-                                                                }
-                                                            />
-
-                                                            <Typography
+                                                            <Box
                                                                 sx={{
-                                                                    color: followerIconOutline,
-                                                                    fontSize:
-                                                                        "1rem",
+                                                                    width: "20%",
+                                                                    display:
+                                                                        "flex",
+                                                                    justifyContent:
+                                                                        "center",
+                                                                    alignItems:
+                                                                        "center",
                                                                 }}
                                                             >
-                                                                Profile
-                                                            </Typography>
-                                                        </Button>
-                                                    </Tooltip>
-
-                                                    <Divider
-                                                        fill={recipeStepsPanel}
-                                                        sx={{
-                                                            py: "1px",
-                                                            border: "0",
-                                                        }}
-                                                    />
-
-                                                    {/* Light & Dark Mode */}
-                                                    <Box sx={{ width: "100%" }}>
-                                                        <Button
-                                                            cursor="pointer"
-                                                            // fullWidth
-                                                            onClick={() =>
-                                                                dispatch(
-                                                                    setMode()
-                                                                )
-                                                            }
-                                                            sx={{
-                                                                display: "flex",
-                                                                justifyContent:
-                                                                    "space-between",
-                                                                borderRadius:
-                                                                    "3rem",
-                                                                width: "100%",
-                                                                // width: "8rem",
-                                                                backgroundColor:
-                                                                    buttonLight2,
-                                                                color: followerIconOutline,
-                                                                fontSize:
-                                                                    "25px",
-                                                                "&:hover": {
-                                                                    // color: followerIconOutline,
-                                                                    backgroundColor:
-                                                                        buttonHover,
-                                                                },
-                                                            }}
-                                                        >
-                                                            {mode === "dark" ? (
-                                                                <Tooltip
-                                                                    TransitionComponent={
-                                                                        Zoom
+                                                                <PersonRoundedIcon
+                                                                    size="25px"
+                                                                    color={
+                                                                        followerIconOutline
                                                                     }
-                                                                    placement="top"
-                                                                    title="Toggle Dark Mode"
-                                                                    enterDelay="500"
+                                                                />
+                                                            </Box>
+                                                            <Box
+                                                                sx={{
+                                                                    width: "45%",
+                                                                    display:
+                                                                        "flex",
+                                                                    justifyContent:
+                                                                        "flex-start",
+                                                                    alignItems:
+                                                                        "center",
+                                                                }}
+                                                            >
+                                                                <Typography
                                                                     sx={{
+                                                                        color: followerIconOutline,
                                                                         fontSize:
                                                                             "1rem",
                                                                     }}
                                                                 >
+                                                                    Profile
+                                                                </Typography>
+                                                            </Box>
+                                                        </Button>
+                                                    </Tooltip>
+
+                                                    {/* Light & Dark Mode */}
+                                                    {/* <Box sx={{ width: "100%" }}> */}
+                                                    <Button
+                                                        cursor="pointer"
+                                                        // fullWidth
+                                                        onClick={() =>
+                                                            dispatch(setMode())
+                                                        }
+                                                        sx={{
+                                                            display: "flex",
+                                                            justifyContent:
+                                                                "space-around",
+                                                            alignItems:
+                                                                "center",
+
+                                                            borderRadius:
+                                                                "3rem",
+                                                            width: "100%",
+                                                            // width: "8rem",
+                                                            backgroundColor:
+                                                                buttonLight2,
+                                                            color: followerIconOutline,
+                                                            fontSize: "25px",
+                                                            "&:hover": {
+                                                                // color: followerIconOutline,
+                                                                backgroundColor:
+                                                                    buttonHover,
+                                                            },
+                                                        }}
+                                                    >
+                                                        {mode === "dark" ? (
+                                                            <Tooltip
+                                                                TransitionComponent={
+                                                                    Zoom
+                                                                }
+                                                                placement="top"
+                                                                title="Toggle Dark Mode"
+                                                                enterDelay="500"
+                                                                sx={{
+                                                                    fontSize:
+                                                                        "1rem",
+                                                                }}
+                                                            >
+                                                                {/* Dark Mode Icon */}
+                                                                <Box
+                                                                    display="flex"
+                                                                    justifyContent="space-around"
+                                                                    alignItems="center"
+                                                                    width="100%"
+                                                                >
                                                                     <Box
-                                                                        display="flex"
-                                                                        justifyContent="space-evenly"
-                                                                        alignItems="center"
-                                                                        width="100%"
+                                                                        sx={{
+                                                                            width: "20%",
+                                                                            display:
+                                                                                "flex",
+                                                                            justifyContent:
+                                                                                "center",
+                                                                            alignItems:
+                                                                                "center",
+                                                                        }}
                                                                     >
                                                                         <DarkMode
                                                                             sx={{
@@ -456,6 +582,18 @@ const Navbar = ({ userId, themeColors }) => {
                                                                                     "1rem",
                                                                             }}
                                                                         />
+                                                                    </Box>
+                                                                    <Box
+                                                                        sx={{
+                                                                            width: "45%",
+                                                                            display:
+                                                                                "flex",
+                                                                            justifyContent:
+                                                                                "flex-start",
+                                                                            alignItems:
+                                                                                "center",
+                                                                        }}
+                                                                    >
                                                                         <Typography
                                                                             sx={{
                                                                                 fontSize:
@@ -466,25 +604,38 @@ const Navbar = ({ userId, themeColors }) => {
                                                                             Mode
                                                                         </Typography>
                                                                     </Box>
-                                                                </Tooltip>
-                                                            ) : (
-                                                                <Tooltip
-                                                                    TransitionComponent={
-                                                                        Zoom
-                                                                    }
-                                                                    placement="top"
-                                                                    title="Toggle Light Mode"
-                                                                    enterDelay="500"
-                                                                    sx={{
-                                                                        fontSize:
-                                                                            "1rem",
-                                                                    }}
+                                                                </Box>
+                                                            </Tooltip>
+                                                        ) : (
+                                                            <Tooltip
+                                                                TransitionComponent={
+                                                                    Zoom
+                                                                }
+                                                                placement="top"
+                                                                title="Toggle Light Mode"
+                                                                enterDelay="500"
+                                                                sx={{
+                                                                    fontSize:
+                                                                        "1rem",
+                                                                }}
+                                                            >
+                                                                {/*Light Mode Icon */}
+                                                                <Box
+                                                                    display="flex"
+                                                                    justifyContent="space-around"
+                                                                    alignItems="center"
+                                                                    width="100%"
                                                                 >
                                                                     <Box
-                                                                        display="flex"
-                                                                        justifyContent="space-evenly"
-                                                                        alignItems="center"
-                                                                        width="100%"
+                                                                        sx={{
+                                                                            width: "20%",
+                                                                            display:
+                                                                                "flex",
+                                                                            justifyContent:
+                                                                                "center",
+                                                                            alignItems:
+                                                                                "center",
+                                                                        }}
                                                                     >
                                                                         <LightMode
                                                                             sx={{
@@ -493,21 +644,33 @@ const Navbar = ({ userId, themeColors }) => {
                                                                                     "25px",
                                                                             }}
                                                                         />
+                                                                    </Box>
+                                                                    <Box
+                                                                        sx={{
+                                                                            width: "45%",
+                                                                            display:
+                                                                                "flex",
+                                                                            justifyContent:
+                                                                                "flex-start",
+                                                                            alignItems:
+                                                                                "center",
+                                                                        }}
+                                                                    >
                                                                         <Typography
-                                                                            sx={
-                                                                                {
-                                                                                    // pl: "0.25rem",
-                                                                                }
-                                                                            }
+                                                                            sx={{
+                                                                                fontSize:
+                                                                                    "1rem",
+                                                                            }}
                                                                         >
                                                                             Light
                                                                             Mode
                                                                         </Typography>
                                                                     </Box>
-                                                                </Tooltip>
-                                                            )}
-                                                        </Button>
-                                                    </Box>
+                                                                </Box>
+                                                            </Tooltip>
+                                                        )}
+                                                    </Button>
+                                                    {/* </Box> */}
                                                 </Box>
                                             </FlexBetween>
                                             {/* End of Top Section */}
