@@ -137,7 +137,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
     return (
         <WidgetWrapper borderColor={widgetBorder}>
             {/* First Row */}
-
             <FlexBetween
                 gap="0.5rem"
                 pb="1.1rem"
@@ -146,16 +145,19 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 }}
             >
                 <FlexBetween gap="1rem">
-                    <Box>
-                        <UserImage image={picturePath} />
-                    </Box>
+                    <UserImage image={picturePath} />
 
-                    <Box>
+                    <FlexBetween
+                        sx={{
+                            flexDirection: "column",
+                        }}
+                    >
                         <Typography
                             variant="h4"
                             color={followerIconOutline}
                             fontWeight="bold"
                             fontSize="1rem"
+                            pl="0.25rem"
                             sx={{
                                 "&:hover": {
                                     color: followerIconOutline,
@@ -165,13 +167,69 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         >
                             {firstName} {lastName}
                         </Typography>
-                    </Box>
+
+                        <Tooltip
+                            TransitionComponent={Zoom}
+                            placement="top"
+                            title="Reputation"
+                            enterDelay="500"
+                            sx={{ fontSize: "1rem" }}
+                        >
+                            <Box
+                                fontSize="medium"
+                                p="0.5rem 0.5rem 0.5rem 0rem"
+                                // mt="0.25rem"
+                                sx={{
+                                    // gap: "0.25rem",
+                                    display: "flex",
+                                    justifyContent: "flex-start",
+                                    alignItems: "center",
+                                    width: "100%",
+                                    color: followerIconOutline,
+                                }}
+                            >
+                                <Box
+                                    display="flex"
+                                    alignItems="center"
+                                    p="0.25rem"
+                                >
+                                    <RepStarIcon
+                                        fontSize="3rem"
+                                        fill={followerIconOutline}
+                                    />
+                                </Box>
+
+                                <Box
+                                    display="flex"
+                                    alignItems="center"
+                                    p="0.25rem"
+                                >
+                                    <RepStarIcon
+                                        fontSize="3rem"
+                                        fill={followerIconOutline}
+                                    />
+                                </Box>
+
+                                <Box
+                                    display="flex"
+                                    alignItems="center"
+                                    p="0.25rem"
+                                >
+                                    <RepStarIcon
+                                        fontSize="3rem"
+                                        fill={followerIconOutline}
+                                    />
+                                </Box>
+                            </Box>
+                        </Tooltip>
+                    </FlexBetween>
                 </FlexBetween>
             </FlexBetween>
+
             {/* Add Friend Button */}
             {/* {console.log("UW FRIEND ID:", friends._id)}
             {console.log("UW USER ID:", _id)}
-
+            
             {friends.id === _id ? (
                 <Box display="none" />
             ) : (
@@ -253,8 +311,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
             <Divider />
 
             {/* Third Row */}
-            <Box p="0.5rem 0">
-                <FlexBetween my="0.25rem">
+            <Box p="0.75rem 0">
+                <FlexBetween>
                     <Typography fontWeight="bold" color={followerIconOutline}>
                         Visitors
                     </Typography>
@@ -266,13 +324,6 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         {viewedProfile}
                     </Typography>
                 </FlexBetween>
-
-                {/* <FlexBetween>
-                    <Typography color={followerIconOutline}>Score</Typography>
-                    <Typography color={followerIconOutline} fontWeight="500">
-                        {Math.ceil(Math.random() * 100)}
-                    </Typography>
-                </FlexBetween> */}
             </Box>
 
             <Divider />
@@ -290,7 +341,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         display="flex"
                         justifyContent="flex-start"
                         gap="1rem"
-                        py="0.5rem"
+                        py="0.75rem"
                     >
                         <RecipeIcon
                             sx={{
@@ -320,7 +371,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                         justifyContent="space-between"
                         alignItems="center"
                         gap="1rem"
-                        pb="0.5rem"
+                        pb="0.75rem"
                     >
                         <ChefHatIcon
                             color={followerIconOutline}
@@ -339,37 +390,12 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                     </FlexBetween>
                 </Tooltip>
             </Box>
-            <Tooltip
-                TransitionComponent={Zoom}
-                placement="top"
-                title="Reputation"
-                enterDelay="500"
-                sx={{ fontSize: "1rem" }}
-            >
-                <Box
-                    fontSize="medium"
-                    my="0.5rem"
-                    sx={{
-                        color: followerIconOutline,
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                        width: "100%",
-                    }}
-                >
-                    {/* <FlexBetween> */}
-                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
-                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
-                    <RepStarIcon fontSize="small" fill={followerIconOutline} />
-                    {/* </FlexBetween> */}
-                </Box>
-            </Tooltip>
+
             <Divider />
 
             {/* Second Row */}
-            <Box p="0.5rem 0">
-                <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+            <Box p="0.75rem 0 0rem 0 ">
+                <Box display="flex" alignItems="center" gap="1rem" pb="0.5rem">
                     <LocationOnOutlinedIcon
                         fontSize="small"
                         sx={{ color: followerIconOutline }}
