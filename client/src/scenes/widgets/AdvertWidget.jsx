@@ -24,7 +24,12 @@ const AdvertWidget = ({ themeColors }) => {
     } = themeColors || {};
 
     return (
-        <WidgetWrapper borderColor={widgetBorder}>
+        <WidgetWrapper
+            borderColor={widgetBorder}
+            sx={{
+                maxWidth: "300px",
+            }}
+        >
             <FlexBetween>
                 <Typography
                     color={followerIconOutline}
