@@ -107,6 +107,7 @@ const HomePage = () => {
                     display={isDesktopScreen ? "26%" : "none"}
                     flexBasis="26%"
                     maxWidth="300px"
+                    // width="300px"
                     minWidth="15%"
                 >
                     <UserWidget

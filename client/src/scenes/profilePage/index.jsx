@@ -142,6 +142,10 @@ const ProfilePage = () => {
                 <Box
                     // flexBasis={isDesktopScreen ? "26%" : undefined}
                     display={isDesktopScreen ? "26%" : "none"}
+                    flexBasis="26%"
+                    maxWidth="300px"
+                    // width="300px"
+                    minWidth="15%"
                 >
                     <UserWidget
                         userId={userId}
