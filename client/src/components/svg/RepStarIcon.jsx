@@ -8,7 +8,7 @@ const RepStarIcon = (props) => {
                 width="100"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                viewBox="0 1 23 23"
                 // xmlns:xlink="http://www.w3.org/1999/xlink"
                 enable-background="new 0 0 268.333 268.333"
             >
