@@ -160,7 +160,8 @@ const ProfilePage = () => {
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : undefined}
                     maxWidth="730px"
-                    mt={isDesktopScreen ? undefined : "0rem"}
+                    minWidth="30%"
+                    mt={isDesktopScreen ? undefined : "2rem"}
                     sx={{ justifyContent: "center" }}
                 >
                     {/* <CreateRecipeWidget
