@@ -36,23 +36,8 @@ const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
                 },
             }}
         >
-            <img height="100%" width="100%" alt="WeFeed" src={LogoIcon} />
+            <img height="100%" width="90%" alt="WeFeed" src={LogoIcon} />
         </Box>
-
-        // <Typography
-        //     fontFamily="PrequelShadow"
-        //     // fontWeight="bold"
-        //     fontSize="clamp(1rem, 2rem, 2.25rem)"
-        //     color={headingText}
-        //     sx={{
-        // "&:hover": {
-        //     color: textHover,
-        //     cursor: "pointer",
-        // },
-        //     }}
-        // >
-        //     WeFeed
-        // </Typography>
     );
 };
 
