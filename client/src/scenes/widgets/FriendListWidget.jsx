@@ -167,7 +167,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
                                       sx={{ height: "72px", cursor: "pointer" }}
                                       onClick={() => {
                                           navigate(`/profile/${friend.id}`);
-                                          navigate(0);
+                                          //   navigate(0);
                                       }}
                                   >
                                       <UserImage
