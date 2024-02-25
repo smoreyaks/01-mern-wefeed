@@ -94,12 +94,9 @@ const FeedSelect = ({ themeColors }) => {
                         sx={{
                             backgroundColor: buttonLight2,
                             color: headingText,
-                            p: "0.5rem 0rem 0.5rem 0rem",
+                            borderRadius: "3rem",
+                            p: "0.5rem 0rem",
                             m: "0.5rem 0rem 0.5rem 0.5rem",
-                            borderTopLeftRadius: "3rem",
-                            borderBottomLeftRadius: "3rem",
-                            borderTopRightRadius: "3rem",
-                            borderBottomRightRadius: "3rem",
                             "&:hover": {
                                 color: headingText,
                                 backgroundColor: buttonHover,
@@ -134,7 +131,9 @@ const FeedSelect = ({ themeColors }) => {
                             },
                         }}
                     >
-                        <MainDishIcon sx={{ fill: followerIconOutline }} />
+                        <MainDishIcon
+                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                        />
                     </Button>
                 </Tooltip>
 
@@ -159,7 +158,9 @@ const FeedSelect = ({ themeColors }) => {
                             },
                         }}
                     >
-                        <AppetiserIcon sx={{ fill: followerIconOutline }} />
+                        <AppetiserIcon
+                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                        />
                     </Button>
                 </Tooltip>
 
@@ -185,7 +186,9 @@ const FeedSelect = ({ themeColors }) => {
                             },
                         }}
                     >
-                        <BreakfastIcon sx={{ fill: followerIconOutline }} />
+                        <BreakfastIcon
+                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                        />
                     </Button>
                 </Tooltip>
 
@@ -211,7 +214,12 @@ const FeedSelect = ({ themeColors }) => {
                             },
                         }}
                     >
-                        <DessertIcon sx={{ fill: followerIconOutline }} />
+                        <DessertIcon
+                            sx={{
+                                fill: followerIconOutline,
+                                fontSize: "24px",
+                            }}
+                        />
                     </Button>
                 </Tooltip>
 
@@ -236,7 +244,9 @@ const FeedSelect = ({ themeColors }) => {
                             },
                         }}
                     >
-                        <DrinkIcon sx={{ fill: followerIconOutline }} />
+                        <DrinkIcon
+                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                        />
                     </Button>
                 </Tooltip>
             </Box>
