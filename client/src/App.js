@@ -171,11 +171,11 @@ function App() {
                             background: `url(https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState})`,
                         }}
                     >
-                        <Navbar
+                        {/* <Navbar
                             userId={_id}
                             picturePath={picturePath}
                             themeColors={themeColors}
-                        />
+                        /> */}
                         <Routes>
                             <Route path="/" element={<LoginPage />} />
                             <Route
