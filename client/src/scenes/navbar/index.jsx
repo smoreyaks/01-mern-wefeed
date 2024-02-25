@@ -214,7 +214,7 @@ const Navbar = ({ userId, themeColors }) => {
                             <IconButton
                                 onClick={() => {
                                     navigate(`/profile/${userId}`);
-                                    // navigate(0);
+                                    navigate(0);
                                 }}
                                 sx={{
                                     m: "0.5rem 0rem",
@@ -406,7 +406,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 navigate(
                                                                     `/home`
                                                                 );
-                                                                // navigate(0);
+                                                                navigate(0);
                                                             }}
                                                             sx={{
                                                                 display: "flex",
@@ -488,7 +488,7 @@ const Navbar = ({ userId, themeColors }) => {
                                                                 navigate(
                                                                     `/profile/${userId}`
                                                                 );
-                                                                // navigate(0);
+                                                                navigate(0);
                                                             }}
                                                             sx={{
                                                                 display: "flex",

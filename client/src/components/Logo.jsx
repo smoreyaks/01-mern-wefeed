@@ -22,7 +22,7 @@ const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
             width="8rem"
             onClick={() => {
                 navigate("/home");
-                // navigate(0);
+                navigate(0);
             }}
             sx={{
                 height: "100%",
