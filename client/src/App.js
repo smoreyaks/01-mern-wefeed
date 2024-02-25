@@ -31,6 +31,7 @@ import { themeSettings } from "./theme";
 import HomePage from "./scenes/homePage";
 import LoginPage from "./scenes/loginPage";
 import ProfilePage from "./scenes/profilePage";
+import Navbar from "./scenes/navbar";
 
 function App() {
     const mode = useSelector((state) => state.mode);
@@ -41,6 +42,71 @@ function App() {
 
     // Theme
     const backgroundThemeColor = theme.palette.default.background.default;
+
+    // ---------- Theme ----------
+    const primary = theme.palette.default.primary.main; // ---- ! Need to remove, superseded
+
+    // Text
+    const whiteText = theme.palette.default.neutralGrey.white; // Delete
+    const headingText = theme.palette.default.neutralGrey.white; // Text Color
+    const textHover = theme.palette.default.neutralGrey.fade; // Text Hover Color
+    const textMain = theme.palette.default.neutralGrey.white; // Text Color
+    const recipeText = theme.palette.default.neutral.main;
+
+    // Follower Icon
+    const followerIconOutline = theme.palette.default.neutralGrey.icon;
+    const followerIconBack = theme.palette.default.primaryOne.main;
+    const followerIconBackHover = theme.palette.default.primaryOne.light;
+
+    // Button Main
+    const buttonLight = theme.palette.default.primaryTwo.light;
+    const buttonLight2 = theme.palette.default.primaryTwo.light2;
+    const buttonLight3 = theme.palette.default.primaryTwo.light3;
+    const buttonHover = theme.palette.default.primaryTwo.dark; // Button Hover Color
+
+    // Background Main Color
+    const backgroundPrimary = theme.palette.default.primaryOne.main;
+    const backgroundMain = theme.palette.default.primaryOne.dark;
+    const navbarMain = theme.palette.default.primaryOne.navbar;
+
+    // Panel / Subsection Main
+    const recipeTextPanel = theme.palette.default.neutral.main;
+    const mainBackPanel = theme.palette.default.neutral.main;
+    const recipeStepsPanel = theme.palette.default.primary.light;
+    const panelMain = theme.palette.default.primary.light;
+
+    // Panel / Subsection Hover
+    const recipeStepsPanelHover = theme.palette.default.primaryTwo.light;
+    const panelMainHover = theme.palette.default.primaryTwo.light;
+
+    // Border
+    const widgetBorder = theme.palette.default.neutralGrey.borderNeutral;
+
+    const themeColors = {
+        primary,
+        whiteText,
+        headingText,
+        textHover,
+        textMain,
+        recipeText,
+        followerIconOutline,
+        followerIconBack,
+        followerIconBackHover,
+        buttonLight,
+        buttonLight2,
+        buttonLight3,
+        buttonHover,
+        backgroundPrimary,
+        backgroundMain,
+        recipeTextPanel,
+        mainBackPanel,
+        recipeStepsPanel,
+        panelMain,
+        recipeStepsPanelHover,
+        panelMainHover,
+        widgetBorder,
+        navbarMain,
+    };
 
     // State
     const [userObject, setUserObject] = useState(null);
@@ -105,6 +171,11 @@ function App() {
                             background: `url(https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState})`,
                         }}
                     >
+                        <Navbar
+                            userId={_id}
+                            picturePath={picturePath}
+                            themeColors={themeColors}
+                        />
                         <Routes>
                             <Route path="/" element={<LoginPage />} />
                             <Route
