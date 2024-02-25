@@ -110,7 +110,7 @@ const Friend = ({
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                         navigate(`/profile/${friendId}`);
-                        navigate(0);
+                        // navigate(0);
                     }}
                 >
                     <FlexBetween
