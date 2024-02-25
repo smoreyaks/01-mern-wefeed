@@ -2,7 +2,13 @@
 import { useState, useEffect } from "react";
 import { useMemo } from "react";
 
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import {
+    BrowserRouter,
+    Navigate,
+    Routes,
+    Route,
+    HashRouter,
+} from "react-router-dom";
 
 // Redux
 import { useSelector } from "react-redux";
@@ -79,7 +85,7 @@ function App() {
         <CardMedia
         // src={`https://server-vukx.onrender.com/assets/bgThemeImg/${backgroundImgState}`}
         >
-            <BrowserRouter>
+            <HashRouter>
                 <ThemeProvider theme={theme}>
                     <GlobalStyles
                         styles={{
@@ -120,7 +126,7 @@ function App() {
                         </Routes>
                     </ScopedCssBaseline>
                 </ThemeProvider>
-            </BrowserRouter>
+            </HashRouter>
         </CardMedia>
     );
 }
