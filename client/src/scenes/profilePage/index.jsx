@@ -122,11 +122,11 @@ const ProfilePage = () => {
 
     return (
         <Box>
-            <Navbar
+            {/* <Navbar
                 userId={_id}
                 picturePath={picturePath}
                 themeColors={themeColors}
-            />
+            /> */}
             <Box
                 width="100%"
                 padding={
