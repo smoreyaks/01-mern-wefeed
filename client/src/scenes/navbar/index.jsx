@@ -143,12 +143,27 @@ const Navbar = ({ userId, themeColors }) => {
                 {isDesktopScreen ? (
                     <FlexBetween
                         gap="0.5rem"
-                        width="15%"
-                        sx={{ display: "flex", justifyContent: "flex-end" }}
+                        width="auto"
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            backgroundColor: buttonLight2,
+                            borderRadius: "3rem",
+                            border: `2px solid ${widgetBorder}`,
+                        }}
                     >
                         {/* Dark & Light Mode Button */}
                         {/* <Box> */}
-                        <IconButton onClick={() => dispatch(setMode())}>
+                        <IconButton
+                            onClick={() => dispatch(setMode())}
+                            sx={{
+                                m: "0.5rem 0rem 0.5rem 0.5rem",
+                                "&:hover": {
+                                    color: headingText,
+                                    backgroundColor: buttonHover,
+                                },
+                            }}
+                        >
                             {mode === "dark" ? (
                                 <Tooltip
                                     TransitionComponent={Zoom}
@@ -163,7 +178,7 @@ const Navbar = ({ userId, themeColors }) => {
                                     <DarkMode
                                         sx={{
                                             color: followerIconOutline,
-                                            fontSize: "25px",
+                                            fontSize: "24px",
                                         }}
                                     />
                                 </Tooltip>
@@ -181,7 +196,7 @@ const Navbar = ({ userId, themeColors }) => {
                                     <LightMode
                                         sx={{
                                             color: followerIconOutline,
-                                            fontSize: "25px",
+                                            fontSize: "24px",
                                         }}
                                     />
                                 </Tooltip>
@@ -201,10 +216,17 @@ const Navbar = ({ userId, themeColors }) => {
                                     navigate(`/profile/${userId}`);
                                     navigate(0);
                                 }}
+                                sx={{
+                                    m: "0.5rem 0rem",
+                                    "&:hover": {
+                                        color: headingText,
+                                        backgroundColor: buttonHover,
+                                    },
+                                }}
                             >
                                 <UserImage
                                     // height="25px"
-                                    size="30px"
+                                    size="24px"
                                     image={user.picturePath}
                                 />
                             </IconButton>
@@ -218,10 +240,21 @@ const Navbar = ({ userId, themeColors }) => {
                             enterDelay="500"
                             sx={{ fontSize: "1rem" }}
                         >
-                            <IconButton onClick={() => dispatch(setLogout())}>
+                            <IconButton
+                                onClick={() => dispatch(setLogout())}
+                                sx={{
+                                    // borderRadius: "3rem",
+                                    // p: "0.5rem 0rem",
+                                    m: "0.5rem 0.5rem 0.5rem 0rem",
+                                    "&:hover": {
+                                        color: headingText,
+                                        backgroundColor: buttonHover,
+                                    },
+                                }}
+                            >
                                 <LogoutIcon
                                     sx={{
-                                        fontSize: "25px",
+                                        fontSize: "24px",
                                         color: followerIconOutline,
                                     }}
                                 />
@@ -240,7 +273,12 @@ const Navbar = ({ userId, themeColors }) => {
                                 setIsMobileMenuToggled(!isMobileMenuToggled)
                             }
                         >
-                            <Menu sx={{ color: followerIconOutline }} />
+                            <Menu
+                                sx={{
+                                    color: followerIconOutline,
+                                    fontSize: "24px",
+                                }}
+                            />
                         </IconButton>
                     </FlexBetween>
                 )}
