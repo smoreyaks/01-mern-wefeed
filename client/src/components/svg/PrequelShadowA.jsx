@@ -10,7 +10,7 @@ const PrequelShadowA = (props) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="100 100 50 50"
                 // xmlns:xlink="http://www.w3.org/1999/xlink"
-                // enable-background="new 0 0 268.333 268.333"
+                // enableBackground="new 0 0 268.333 268.333"
             >
                 <glyph glyph-name="A" unicode="A" horiz-adv-x="729">
                     <g
