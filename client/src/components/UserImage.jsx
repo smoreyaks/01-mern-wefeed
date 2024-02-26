@@ -1,8 +1,27 @@
 import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const UserImage = ({ image, size = "60px" }) => {
+const UserImage = ({
+    image,
+    size = "55px",
+    friendId,
+    firstName,
+    lastName,
+    name,
+    occupation,
+    userPicturePath,
+    themeColors,
+}) => {
+    const navigate = useNavigate();
     return (
-        <Box width={size} height={size}>
+        <Box
+            width={size}
+            height={size}
+            onClick={() => {
+                navigate(`/profile/${friendId}`);
+                navigate(0);
+            }}
+        >
             <img
                 style={{
                     objectFit: "cover",
