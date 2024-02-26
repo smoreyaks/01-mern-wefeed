@@ -106,9 +106,9 @@ const HomePage = () => {
                 <Box
                     display={isDesktopScreen ? "26%" : "none"}
                     flexBasis="26%"
+                    width="300px"
                     maxWidth="300px"
-                    // width="300px"
-                    minWidth="15%"
+                    minWidth="10%"
                 >
                     <UserWidget
                         userId={_id}
@@ -122,7 +122,7 @@ const HomePage = () => {
                 {/* Feed Column */}
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
-                    maxWidth="680px"
+                    maxWidth="730px"
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     {/* <CreateRecipeWidget

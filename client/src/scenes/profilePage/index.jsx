@@ -143,9 +143,9 @@ const ProfilePage = () => {
                     // flexBasis={isDesktopScreen ? "26%" : undefined}
                     display={isDesktopScreen ? "26%" : "none"}
                     flexBasis="26%"
+                    width="300px"
                     maxWidth="300px"
-                    // width="300px"
-                    minWidth="15%"
+                    minWidth="10%"
                 >
                     <UserWidget
                         userId={userId}
@@ -158,7 +158,7 @@ const ProfilePage = () => {
 
                 {/* Feed Column */}
                 <Box
-                    flexBasis={isDesktopScreen ? "42%" : undefined}
+                    flexBasis={isDesktopScreen ? "42%" : "none"}
                     maxWidth="730px"
                     minWidth="30%"
                     mt={isDesktopScreen ? undefined : "2rem"}
