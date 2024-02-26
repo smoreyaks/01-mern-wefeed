@@ -151,7 +151,6 @@ const Friend = ({
             ) : (
                 <Button
                     onClick={() => patchFriend()}
-                    // fullwidth
                     size="small"
                     sx={{
                         display: "flex",
@@ -162,10 +161,9 @@ const Friend = ({
                         p: "0.5rem",
                         m: "0.5rem",
                         minWidth: "3rem",
-                        // border: `1px solid ${buttonLight}`,
+
                         borderRadius: "3rem",
                         "&:hover": {
-                            // border: `1px solid ${buttonHover}`,
                             backgroundColor: buttonHover,
                         },
                     }}
