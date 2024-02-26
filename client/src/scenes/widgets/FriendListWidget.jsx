@@ -165,14 +165,16 @@ const FriendListWidget = ({ userId, themeColors }) => {
                               >
                                   <Box
                                       sx={{ height: "72px", cursor: "pointer" }}
-                                      onClick={() => {
-                                          navigate(`/profile/${friend.id}`);
-                                          navigate(0);
-                                      }}
                                   >
                                       <UserImage
                                           key={friend.id}
                                           image={friend.picturePath}
+                                          friendId={friend._id}
+                                          firstName={friend.firstName}
+                                          lastName={friend.lastName}
+                                          name={`${friend.firstName} ${friend.lastName}`}
+                                          occupation={friend.occupation}
+                                          themeColors={themeColors}
                                           size="55px"
                                       />
                                   </Box>
