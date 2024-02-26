@@ -9,7 +9,6 @@ const UserImage = ({
     lastName,
     name,
     occupation,
-    userPicturePath,
     themeColors,
 }) => {
     const navigate = useNavigate();
