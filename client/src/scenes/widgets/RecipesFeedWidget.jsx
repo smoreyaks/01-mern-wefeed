@@ -271,9 +271,12 @@ const RecipesFeedWidget = ({
                                     textAlign: "center",
                                 }}
                             >
-                                Sorry! This user hasn't posted any{" "}
-                                {filter[0].toUpperCase() + filter.substring(1)}{" "}
-                                Recipes yet.
+                                Sorry! We couldn't find any{" "}
+                                {filter === "all"
+                                    ? ""
+                                    : filter[0].toUpperCase() +
+                                      filter.substring(1)}{" "}
+                                recipes. Come back another time!
                             </Typography>
                         </Box>
                     )}
