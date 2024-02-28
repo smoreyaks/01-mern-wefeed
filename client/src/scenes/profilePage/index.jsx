@@ -99,6 +99,8 @@ const ProfilePage = () => {
 
     // Media Query
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isSmallScreen = useMediaQuery("(min-width: 600px)");
+    const isMediumScreen = useMediaQuery("(min-width: 300px)");
 
     // GET User API Request
     const getUser = async () => {
@@ -159,7 +161,7 @@ const ProfilePage = () => {
                 {/* Feed Column */}
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
-                    maxWidth="730px"
+                    maxWidth={isDesktopScreen ? "730px" : "100%"}
                     minWidth="30%"
                     mt={isDesktopScreen ? undefined : "2rem"}
                     sx={{ justifyContent: "center" }}

@@ -78,6 +78,8 @@ const HomePage = () => {
 
     // Media Query
     const isDesktopScreen = useMediaQuery("(min-width:1000px)");
+    const isSmallScreen = useMediaQuery("(min-width: 600px)");
+    const isMediumScreen = useMediaQuery("(min-width: 300px)");
 
     // Local State
     const { _id, picturePath } = useSelector((state) => state.user);
@@ -122,7 +124,7 @@ const HomePage = () => {
                 {/* Feed Column */}
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
-                    maxWidth="730px"
+                    maxWidth={isDesktopScreen ? "730px" : "100%"}
                     mt={isDesktopScreen ? undefined : "2rem"}
                 >
                     {/* <CreateRecipeWidget
