@@ -112,7 +112,7 @@ const CreateRecipeWidget = ({ picturePath, themeColors }) => {
             <FlexBetween gap="1.5rem">
                 <UserImage image={picturePath} />
                 <InputBase
-                    placeholder="What's on your mind?"
+                    placeholder="New Recipe Title"
                     onChange={(e) => setRecipe(e.target.value)}
                     value={recipe}
                     sx={{
