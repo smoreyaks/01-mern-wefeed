@@ -42,6 +42,7 @@ import {
     SvgIcon,
     Badge,
     ToggleButton,
+    useMediaQuery,
 } from "@mui/material";
 
 // State
@@ -95,8 +96,15 @@ const RecipePostWidget = ({
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
 
-    // // Theme Destructure
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
+    console.log(
+        `DESK: ${isDesktopScreen}, MED: ${isMediumScreen}, SML: ${isSmallScreen}`
+    );
 
+    // Theme Destructure
     const {
         primary,
         whiteText,
@@ -510,7 +518,9 @@ const RecipePostWidget = ({
             {/* ------------------------------------- */}
             <FlexBetween mt="0.5rem">
                 {/* Likes */}
-                <FlexBetween gap="0.3rem">
+                <FlexBetween
+                // gap="0.3rem"
+                >
                     <Tooltip
                         TransitionComponent={Zoom}
                         placement="top"
@@ -524,9 +534,20 @@ const RecipePostWidget = ({
                             onClick={patchLike}
                             sx={{
                                 borderRadius: "3rem",
-                                width: "5rem",
+                                height: "2.25rem",
+                                minWidth: "0",
+                                width: isDesktopScreen
+                                    ? "5rem"
+                                    : isMediumScreen
+                                    ? "5rem"
+                                    : isSmallScreen
+                                    ? "3rem"
+                                    : "2rem",
 
                                 color: followerIconOutline,
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
                                 "&:hover": {
                                     color: followerIconOutline,
                                     backgroundColor: buttonHover,
@@ -535,11 +556,29 @@ const RecipePostWidget = ({
                         >
                             {isLiked ? (
                                 <FavoriteOutlined
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "0.75rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             ) : (
                                 <FavoriteBorderOutlined
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "0.75rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             )}
                             <Typography pl="0.5rem">{likeCount}</Typography>
@@ -562,9 +601,19 @@ const RecipePostWidget = ({
                             onClick={patchRecommendation}
                             // onClick={() => setIsRecommended(!isRecommended)}
                             sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
                                 borderRadius: "3rem",
-                                width: "5rem",
-
+                                height: "2.25rem",
+                                minWidth: "0",
+                                width: isDesktopScreen
+                                    ? "5rem"
+                                    : isMediumScreen
+                                    ? "5rem"
+                                    : isSmallScreen
+                                    ? "3rem"
+                                    : "2rem",
                                 color: followerIconOutline,
                                 "&:hover": {
                                     color: followerIconOutline,
@@ -574,11 +623,29 @@ const RecipePostWidget = ({
                         >
                             {isRecommended ? (
                                 <HowToRegIcon
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "0.75rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             ) : (
                                 <RecordVoiceOverIcon
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "0.75rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             )}
                             <Typography pl="0.5rem">
@@ -602,9 +669,19 @@ const RecipePostWidget = ({
                             fullwidth
                             onClick={() => setIsComments(!isComments)}
                             sx={{
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // alignItems: "center",
                                 borderRadius: "3rem",
-                                width: "5rem",
-
+                                height: "2.25rem",
+                                minWidth: "0",
+                                width: isDesktopScreen
+                                    ? "5rem"
+                                    : isMediumScreen
+                                    ? "5rem"
+                                    : isSmallScreen
+                                    ? "3rem"
+                                    : "2rem",
                                 color: followerIconOutline,
                                 "&:hover": {
                                     color: followerIconOutline,
@@ -612,7 +689,18 @@ const RecipePostWidget = ({
                                 },
                             }}
                         >
-                            <CommentIcon sx={{ color: followerIconOutline }} />
+                            <CommentIcon
+                                sx={{
+                                    color: followerIconOutline,
+                                    fontSize: isDesktopScreen
+                                        ? "1.25rem"
+                                        : isMediumScreen
+                                        ? "1.25rem"
+                                        : isSmallScreen
+                                        ? "0.75rem"
+                                        : "0.5rem",
+                                }}
+                            />
                             <Typography pl="0.5rem">{commentCount}</Typography>
                         </Button>
                     </Tooltip>
@@ -632,8 +720,19 @@ const RecipePostWidget = ({
                             fullwidth
                             onClick={() => setIsSaved(!isSaved)}
                             sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
                                 borderRadius: "3rem",
-                                width: "5rem",
+                                height: "2.25rem",
+                                minWidth: "0",
+                                width: isDesktopScreen
+                                    ? "5rem"
+                                    : isMediumScreen
+                                    ? "5rem"
+                                    : isSmallScreen
+                                    ? "3rem"
+                                    : "2rem",
 
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -644,11 +743,29 @@ const RecipePostWidget = ({
                         >
                             {isSaved ? (
                                 <PlaylistAddCheckIcon
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "1rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             ) : (
                                 <PlaylistAddOutlinedIcon
-                                    sx={{ color: followerIconOutline }}
+                                    sx={{
+                                        color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? "1.25rem"
+                                            : isMediumScreen
+                                            ? "1.25rem"
+                                            : isSmallScreen
+                                            ? "1rem"
+                                            : "0.5rem",
+                                    }}
                                 />
                             )}
                         </Button>
@@ -662,9 +779,27 @@ const RecipePostWidget = ({
                         placement="top"
                         title="Share Recipe"
                         enterDelay="500"
-                        sx={{ fontSize: "1rem" }}
+                        sx={{
+                            fontSize: "1rem",
+                        }}
                     >
-                        <SocialShareButton themeColors={themeColors} />
+                        <SocialShareButton
+                            themeColors={themeColors}
+                            sx={{
+                                // height: "2.25rem",
+                                color: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.25rem"
+                                    : isMediumScreen
+                                    ? "1.25rem"
+                                    : isSmallScreen
+                                    ? "0.75rem"
+                                    : "0.5rem",
+                            }}
+                            isDesktopScreen={isDesktopScreen}
+                            isMediumScreen={isMediumScreen}
+                            isSmallScreen={isSmallScreen}
+                        />
                     </Tooltip>
                 </FlexBetween>
             </FlexBetween>

@@ -62,7 +62,12 @@ const open = (socialLink) => {
     window.open(socialLink, "_blank");
 };
 
-const SocialShareButton = ({ themeColors }) => {
+const SocialShareButton = ({
+    themeColors,
+    isDesktopScreen,
+    isMediumScreen,
+    isSmallScreen,
+}) => {
     const [shareButtonOpen, setShareButtonOpen] = useState(false);
     //  CLick Away Function Handler
     const handleClickAway = () => {
@@ -98,19 +103,42 @@ const SocialShareButton = ({ themeColors }) => {
     return (
         <ClickAwayListener onClickAway={handleClickAway}>
             <Button
-                size="medium"
+                size="large"
                 fullwidth
                 onClick={() => setShareButtonOpen(!shareButtonOpen)}
                 sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     borderRadius: "3rem",
-                    width: "5rem",
+                    height: "2.25rem",
+                    minWidth: "0",
+                    width: isDesktopScreen
+                        ? "5rem"
+                        : isMediumScreen
+                        ? "5rem"
+                        : isSmallScreen
+                        ? "3rem"
+                        : "2rem",
                     color: followerIconOutline,
                     "&:hover": {
                         backgroundColor: buttonHover,
                     },
                 }}
             >
-                <ShareOutlined sx={{ fill: followerIconOutline }} />
+                <ShareOutlined
+                    sx={{
+                        fill: followerIconOutline,
+                        height: "100%",
+                        fontSize: isDesktopScreen
+                            ? "1.25rem"
+                            : isMediumScreen
+                            ? "1.25rem"
+                            : isSmallScreen
+                            ? "1rem"
+                            : "0.5rem",
+                    }}
+                />
                 {shareButtonOpen && (
                     <Box
                         transition
