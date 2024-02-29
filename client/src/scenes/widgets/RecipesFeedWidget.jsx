@@ -185,7 +185,11 @@ const RecipesFeedWidget = ({
     return (
         <>
             {user ? (
-                <Box>
+                <Box
+                    sx={{
+                        width: "100%",
+                    }}
+                >
                     {filteredRecipes.length > 0 ? (
                         filteredRecipes.map(
                             ({
