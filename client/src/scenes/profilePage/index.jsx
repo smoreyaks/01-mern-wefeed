@@ -97,10 +97,10 @@ const ProfilePage = () => {
     const { _id, picturePath } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
 
-    // Media Query
+    // Media Queries
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
-    const isSmallScreen = useMediaQuery("(min-width: 600px)");
-    const isMediumScreen = useMediaQuery("(min-width: 300px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     // GET User API Request
     const getUser = async () => {

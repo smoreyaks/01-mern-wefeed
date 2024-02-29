@@ -76,10 +76,10 @@ const HomePage = () => {
         navbarMain,
     };
 
-    // Media Query
-    const isDesktopScreen = useMediaQuery("(min-width:1000px)");
-    const isSmallScreen = useMediaQuery("(min-width: 600px)");
-    const isMediumScreen = useMediaQuery("(min-width: 300px)");
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     // Local State
     const { _id, picturePath } = useSelector((state) => state.user);
@@ -134,7 +134,7 @@ const HomePage = () => {
                     <RecipesFeedWidget userId={_id} themeColors={themeColors} />
                 </Box>
 
-                {/* Friends & Ad Column */}
+                {/* Following */}
                 {isDesktopScreen && (
                     <Box
                         display={isDesktopScreen ? "flex" : "none"}
