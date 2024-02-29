@@ -1,20 +1,22 @@
 
 .recipeBtn-l {
     border-radius: "3rem";
-    width: "5rem";  
+    width: "5rem";
+    
 }
 
-.recipeBtn-m {
+.recipeBtn.m {
 border-radius: "3rem";
 width: "5rem";
 }
 
-.recipeBtn-s {
+.recipeBtn.s {
 border-radius: "3rem";
 width: "3rem";
 }
 
-.recipeBtn-xs {
+.recipeBtn.xs {
 border-radius: "3rem";
 width: "2rem";
+
 }
