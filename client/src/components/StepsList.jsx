@@ -81,7 +81,14 @@ const StepsList = ({ steps, themeColors }) => {
                     variant="h6"
                     fontWeight="bold"
                     fontFamily="Montserrat"
-                    sx={{ color: followerIconOutline }}
+                    sx={{
+                        color: followerIconOutline,
+                        fontSize: isDesktopScreen
+                            ? undefined
+                            : isMediumScreen
+                            ? undefined
+                            : "0.75rem",
+                    }}
                 >
                     {stepsCount} Steps
                 </Typography>
@@ -134,6 +141,11 @@ const StepsList = ({ steps, themeColors }) => {
                                         borderRadius: "50%",
                                         width: "1.75rem",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {step.stepNum}

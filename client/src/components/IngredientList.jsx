@@ -105,8 +105,14 @@ const IngredientList = ({ ingredients, themeColors }) => {
                     display="flex"
                     justifyContent="space-between"
                     alignItems="center"
-                    // borderRadius="1.75rem"
-                    sx={{ color: followerIconOutline }}
+                    sx={{
+                        color: followerIconOutline,
+                        fontSize: isDesktopScreen
+                            ? undefined
+                            : isMediumScreen
+                            ? undefined
+                            : "0.75rem",
+                    }}
                 >
                     {ingredientCount} Ingredients
                     {/* INGREDIENTS */}
