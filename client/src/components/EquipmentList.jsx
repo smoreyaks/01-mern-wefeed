@@ -9,6 +9,7 @@ import {
     Typography,
     useTheme,
     ToggleButton,
+    useMediaQuery,
 } from "@mui/material";
 
 // MUI Icons
@@ -52,6 +53,11 @@ const EquipmentList = ({ equipment, themeColors }) => {
         panelMainHover,
         widgetBorder,
     } = themeColors || {};
+
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     /* Capitalise First Letter of Equipment Item */
     let equipListCorrected = equipment.map((e) => {
@@ -129,6 +135,11 @@ const EquipmentList = ({ equipment, themeColors }) => {
                                 justifyContent: "flex-start",
                                 width: "100%",
                                 color: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? undefined
+                                    : isMediumScreen
+                                    ? undefined
+                                    : "0.75rem",
                             }}
                         >
                             {equip}

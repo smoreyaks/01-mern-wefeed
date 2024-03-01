@@ -8,6 +8,7 @@ import {
     ToggleButton,
     Typography,
     useTheme,
+    useMediaQuery,
 } from "@mui/material";
 
 // MUI Icons
@@ -47,6 +48,11 @@ const StepsList = ({ steps, themeColors }) => {
         panelMainHover,
         widgetBorder,
     } = themeColors || {};
+
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     return (
         // Steps Back<Box>
@@ -142,6 +148,11 @@ const StepsList = ({ steps, themeColors }) => {
                                         justifyContent: "flex-start",
                                         alignItems: "center",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {step.stepMethod}

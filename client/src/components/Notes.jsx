@@ -1,5 +1,12 @@
 // MUI Components
-import { ToggleButton, Tooltip, Zoom, Box, Typography } from "@mui/material";
+import {
+    ToggleButton,
+    Tooltip,
+    Zoom,
+    Box,
+    Typography,
+    useMediaQuery,
+} from "@mui/material";
 
 // MUI Icons
 
@@ -33,6 +40,10 @@ const Notes = ({ notes, themeColors, recipeId, notesOpen }) => {
         widgetBorder,
     } = themeColors || {};
 
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
     return (
         <Box>
             {notesOpen ? (
@@ -69,6 +80,11 @@ const Notes = ({ notes, themeColors, recipeId, notesOpen }) => {
                                 justifyContent: "flex-start",
                                 width: "100%",
                                 color: headingText,
+                                fontSize: isDesktopScreen
+                                    ? undefined
+                                    : isMediumScreen
+                                    ? undefined
+                                    : "0.75rem",
                             }}
                         >
                             {notes}

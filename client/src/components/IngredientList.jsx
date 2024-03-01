@@ -10,6 +10,7 @@ import {
     ToggleButton,
     Typography,
     useTheme,
+    useMediaQuery,
 } from "@mui/material";
 
 // MUI Icons
@@ -39,6 +40,11 @@ const IngredientList = ({ ingredients, themeColors }) => {
         followerIconOutline,
         widgetBorder,
     } = themeColors || {};
+
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     // Homogenize Quantities to Lower Case
     let qtyListLower = ingredients.map((quantity) => {
@@ -142,6 +148,11 @@ const IngredientList = ({ ingredients, themeColors }) => {
                                     borderRadius: "0.5rem",
                                     width: "auto",
                                     color: followerIconOutline,
+                                    fontSize: isDesktopScreen
+                                        ? undefined
+                                        : isMediumScreen
+                                        ? undefined
+                                        : "0.75rem",
                                 }}
                             >
                                 {element}
