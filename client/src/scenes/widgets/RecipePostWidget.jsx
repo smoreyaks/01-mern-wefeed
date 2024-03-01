@@ -100,9 +100,6 @@ const RecipePostWidget = ({
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
     const isMediumScreen = useMediaQuery("(min-width: 600px)");
     const isSmallScreen = useMediaQuery("(min-width: 300px)");
-    console.log(
-        `DESK: ${isDesktopScreen}, MED: ${isMediumScreen}, SML: ${isSmallScreen}`
-    );
 
     // Theme Destructure
     const {
@@ -196,9 +193,14 @@ const RecipePostWidget = ({
             borderColor={widgetBorder}
             // m="2rem 0"
             sx={{
-                p: isComments
-                    ? "1rem 1.5rem 0 1.5rem"
-                    : "1rem 1.5rem 0.5rem 1.5rem",
+                p:
+                    isComments && isDesktopScreen
+                        ? "1rem 1.5rem 0 1.5rem"
+                        : isComments && isSmallScreen
+                        ? "1rem 0.75rem 0.5rem 0.75rem"
+                        : !isComments && isSmallScreen
+                        ? "0.5rem 0.5rem 0.5rem 0.5rem"
+                        : "1rem 1.5rem 0.5rem 1.5rem",
                 m: isComments ? "2rem 0" : "0rem 0rem 2rem 0rem",
             }}
         >
@@ -232,6 +234,13 @@ const RecipePostWidget = ({
                     variant="h5"
                     fontWeight="bold"
                     fontFamily="Montserrat"
+                    fontSize={
+                        isDesktopScreen
+                            ? undefined
+                            : isMediumScreen
+                            ? undefined
+                            : ".75rem"
+                    }
                     sx={{
                         "&:hover": {
                             color: textHover,
@@ -262,7 +271,11 @@ const RecipePostWidget = ({
                                 ? "0.5rem 0.5rem 0.5rem 0.5rem"
                                 : "0.5rem 0.5rem 0.5rem 0.5rem",
                             p: "0.5rem",
-                            m: "0.5rem 0.5rem",
+                            m: isDesktopScreen
+                                ? "0.5rem 0.5rem"
+                                : isMediumScreen
+                                ? "0.5rem 0.5rem"
+                                : "0.25rem 0.25rem",
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
@@ -529,7 +542,7 @@ const RecipePostWidget = ({
                         sx={{ fontSize: "1rem" }}
                     >
                         <Button
-                            size="medium"
+                            size={isDesktopScreen ? "medium" : "small"}
                             fullwidth
                             onClick={patchLike}
                             sx={{
@@ -537,7 +550,7 @@ const RecipePostWidget = ({
                                 height: "2.25rem",
                                 minWidth: "0",
                                 width: isDesktopScreen
-                                    ? "5rem"
+                                    ? "4rem"
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
@@ -596,7 +609,7 @@ const RecipePostWidget = ({
                         sx={{ fontSize: "1rem" }}
                     >
                         <Button
-                            size="medium"
+                            size={isDesktopScreen ? "medium" : "small"}
                             fullwidth
                             onClick={patchRecommendation}
                             // onClick={() => setIsRecommended(!isRecommended)}
@@ -608,7 +621,7 @@ const RecipePostWidget = ({
                                 height: "2.25rem",
                                 minWidth: "0",
                                 width: isDesktopScreen
-                                    ? "5rem"
+                                    ? "4rem"
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
@@ -665,7 +678,7 @@ const RecipePostWidget = ({
                         sx={{ fontSize: "1rem" }}
                     >
                         <Button
-                            size="medium"
+                            size={isDesktopScreen ? "medium" : "small"}
                             fullwidth
                             onClick={() => setIsComments(!isComments)}
                             sx={{
@@ -676,7 +689,7 @@ const RecipePostWidget = ({
                                 height: "2.25rem",
                                 minWidth: "0",
                                 width: isDesktopScreen
-                                    ? "5rem"
+                                    ? "4rem"
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
@@ -716,7 +729,7 @@ const RecipePostWidget = ({
                         sx={{ fontSize: "1rem" }}
                     >
                         <Button
-                            size="medium"
+                            size={isDesktopScreen ? "medium" : "small"}
                             fullwidth
                             onClick={() => setIsSaved(!isSaved)}
                             sx={{
@@ -727,7 +740,7 @@ const RecipePostWidget = ({
                                 height: "2.25rem",
                                 minWidth: "0",
                                 width: isDesktopScreen
-                                    ? "5rem"
+                                    ? "4rem"
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
