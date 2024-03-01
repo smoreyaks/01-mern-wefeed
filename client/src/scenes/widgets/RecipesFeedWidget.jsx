@@ -8,7 +8,12 @@ import { setFilter } from "../../state/filterReducer";
 import { connect } from "react-redux";
 
 // MUI Components
-import { Box, Typography, CircularProgress } from "@mui/material";
+import {
+    Box,
+    Typography,
+    CircularProgress,
+    useMediaQuery,
+} from "@mui/material";
 
 // Custom Components
 import RecipePostWidget from "./RecipePostWidget";
@@ -57,6 +62,11 @@ const RecipesFeedWidget = ({
     const recipes = useSelector((state) => state.recipes);
     const filter = useSelector((state) => state.filter);
     const mode = useSelector((state) => state.mode);
+
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     // Testing State
     // const [userTest, setUserTest] = useState(null);
@@ -290,12 +300,15 @@ const RecipesFeedWidget = ({
                     backgroundColor={backgroundMain}
                     borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
                     p="1.5rem"
-                    my="1rem"
                     sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        minWidth: "452px",
+                        width: isDesktopScreen
+                            ? undefined
+                            : isMediumScreen
+                            ? "28rem"
+                            : "20rem",
                     }}
                 >
                     <CircularProgress
