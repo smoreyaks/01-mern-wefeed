@@ -114,7 +114,7 @@ const SocialShareButton = ({
                     height: "2.25rem",
                     minWidth: "0",
                     width: isDesktopScreen
-                        ? "5rem"
+                        ? "4rem"
                         : isMediumScreen
                         ? "5rem"
                         : isSmallScreen
