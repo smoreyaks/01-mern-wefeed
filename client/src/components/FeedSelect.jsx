@@ -389,7 +389,7 @@ const FeedSelect = ({ themeColors }) => {
                             m:
                                 isDesktopScreen || isMediumScreen
                                     ? "0.5rem 0.5rem 0.5rem 0rem"
-                                    : "0.25rem 0rem 0.25rem 0.25rem",
+                                    : "0.25rem 0.25rem 0.25rem 0rem",
                             height: isDesktopScreen
                                 ? "2.25rem"
                                 : isMediumScreen
