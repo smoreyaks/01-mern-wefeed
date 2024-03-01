@@ -348,7 +348,6 @@ const RecipePostWidget = ({
                             alignItems: "center",
                             background: recipeStepsPanel,
                             width: "100%",
-                            // m: "0.5rem 0",
                             p: "0.5rem 0rem",
                             borderRadius: "0.75rem 0.75rem 0 0",
                             border: "0",
@@ -386,6 +385,11 @@ const RecipePostWidget = ({
                                         display: "flex",
                                         alignItems: "center",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {prepTime}
@@ -424,6 +428,11 @@ const RecipePostWidget = ({
                                         borderRadius: ".75rem",
                                         // padding: "0.5rem",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {cookTime}
@@ -456,6 +465,11 @@ const RecipePostWidget = ({
                                     sx={{
                                         pl: "0.25rem",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {servings}
@@ -489,6 +503,11 @@ const RecipePostWidget = ({
                                     sx={{
                                         pl: "0.25rem",
                                         color: followerIconOutline,
+                                        fontSize: isDesktopScreen
+                                            ? undefined
+                                            : isMediumScreen
+                                            ? undefined
+                                            : "0.75rem",
                                     }}
                                 >
                                     {spiceLevel}
@@ -554,7 +573,7 @@ const RecipePostWidget = ({
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
-                                    ? "3rem"
+                                    ? "3.25rem"
                                     : "2rem",
 
                                 color: followerIconOutline,
@@ -576,7 +595,7 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "0.75rem"
+                                            ? "1rem"
                                             : "0.5rem",
                                     }}
                                 />
@@ -589,12 +608,23 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "0.75rem"
+                                            ? "1rem"
                                             : "0.5rem",
                                     }}
                                 />
                             )}
-                            <Typography pl="0.5rem">{likeCount}</Typography>
+                            <Typography
+                                pl="0.5rem"
+                                sx={{
+                                    fontSize: isDesktopScreen
+                                        ? undefined
+                                        : isMediumScreen
+                                        ? undefined
+                                        : "0.75rem",
+                                }}
+                            >
+                                {likeCount}
+                            </Typography>
                         </Button>
                     </Tooltip>
                 </FlexBetween>
@@ -625,7 +655,7 @@ const RecipePostWidget = ({
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
-                                    ? "3rem"
+                                    ? "3.5rem"
                                     : "2rem",
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -643,7 +673,7 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "0.75rem"
+                                            ? "1rem"
                                             : "0.5rem",
                                     }}
                                 />
@@ -656,12 +686,21 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "0.75rem"
+                                            ? "1rem"
                                             : "0.5rem",
                                     }}
                                 />
                             )}
-                            <Typography pl="0.5rem">
+                            <Typography
+                                pl="0.5rem"
+                                sx={{
+                                    fontSize: isDesktopScreen
+                                        ? undefined
+                                        : isMediumScreen
+                                        ? undefined
+                                        : "0.75rem",
+                                }}
+                            >
                                 {recommendationCount}
                             </Typography>
                         </Button>
@@ -693,7 +732,7 @@ const RecipePostWidget = ({
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
-                                    ? "3rem"
+                                    ? "3.5rem"
                                     : "2rem",
                                 color: followerIconOutline,
                                 "&:hover": {
@@ -710,11 +749,22 @@ const RecipePostWidget = ({
                                         : isMediumScreen
                                         ? "1.25rem"
                                         : isSmallScreen
-                                        ? "0.75rem"
+                                        ? "1rem"
                                         : "0.5rem",
                                 }}
                             />
-                            <Typography pl="0.5rem">{commentCount}</Typography>
+                            <Typography
+                                pl="0.5rem"
+                                sx={{
+                                    fontSize: isDesktopScreen
+                                        ? undefined
+                                        : isMediumScreen
+                                        ? undefined
+                                        : "0.75rem",
+                                }}
+                            >
+                                {commentCount}
+                            </Typography>
                         </Button>
                     </Tooltip>
                 </FlexBetween>
@@ -744,7 +794,7 @@ const RecipePostWidget = ({
                                     : isMediumScreen
                                     ? "5rem"
                                     : isSmallScreen
-                                    ? "3rem"
+                                    ? "3.5rem"
                                     : "2rem",
 
                                 color: followerIconOutline,
@@ -763,7 +813,7 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "1rem"
+                                            ? "1.25rem"
                                             : "0.5rem",
                                     }}
                                 />
@@ -776,7 +826,7 @@ const RecipePostWidget = ({
                                             : isMediumScreen
                                             ? "1.25rem"
                                             : isSmallScreen
-                                            ? "1rem"
+                                            ? "1.25rem"
                                             : "0.5rem",
                                     }}
                                 />

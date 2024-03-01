@@ -118,7 +118,7 @@ const SocialShareButton = ({
                         : isMediumScreen
                         ? "5rem"
                         : isSmallScreen
-                        ? "3rem"
+                        ? "3.25rem"
                         : "2rem",
                     color: followerIconOutline,
                     "&:hover": {
