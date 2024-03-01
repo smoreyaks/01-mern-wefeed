@@ -134,7 +134,9 @@ const ProfilePage = () => {
                 padding={
                     isDesktopScreen
                         ? "6.5rem 1rem 0 1rem"
-                        : "4.5rem 1rem 0 1rem"
+                        : isMediumScreen
+                        ? "4rem 1rem 0 1rem"
+                        : "2.75rem 0.5rem 0 0.5rem"
                 }
                 display="flex"
                 gap="2rem"
