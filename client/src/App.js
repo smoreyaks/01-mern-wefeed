@@ -1,3 +1,5 @@
+import "./App.css";
+
 // React Packages
 import { useState, useEffect } from "react";
 import { useMemo } from "react";
