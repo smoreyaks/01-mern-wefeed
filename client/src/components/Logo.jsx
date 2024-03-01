@@ -29,6 +29,7 @@ const Logo = ({ themeColors, isDesktopScreen, isMobileMenuToggled }) => {
                 fontSize: "clamp(1rem, 2rem, 2.25rem)",
                 objectFit: "contain",
                 display: "flex",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 "&:hover": {
                     color: textHover,
