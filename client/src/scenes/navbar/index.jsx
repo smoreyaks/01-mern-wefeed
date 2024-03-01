@@ -68,8 +68,10 @@ const Navbar = ({ userId, themeColors }) => {
     const user = useSelector((state) => state.user);
     const mode = useSelector((state) => state.mode);
 
-    // Media Query
+    // Media Queries
     const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     // Theme
     const theme = useTheme();
@@ -120,9 +122,27 @@ const Navbar = ({ userId, themeColors }) => {
                 boxShadow: 3,
             }}
         >
-            <FlexBetween padding="1rem 6%" backgroundColor={navbarMain}>
+            <FlexBetween
+                // padding="1rem 6%"
+                backgroundColor={navbarMain}
+                sx={{
+                    p: isDesktopScreen
+                        ? "0.75rem 2.5rem"
+                        : isMediumScreen
+                        ? "0.75rem 1rem"
+                        : "0.75rem 0.25rem",
+                    // isMediumScreen ? "6%" : isSmallScreen ?
+                }}
+            >
                 {isDesktopScreen ? (
-                    <Box sx={{ width: "15%" }}>
+                    <Box
+                        sx={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "flex-start",
+                            alignItems: "center",
+                        }}
+                    >
                         <Logo
                             themeColors={themeColors}
                             isDesktopScreen={isDesktopScreen}
@@ -141,131 +161,143 @@ const Navbar = ({ userId, themeColors }) => {
 
                 {/* Desktop Navbar */}
                 {isDesktopScreen ? (
-                    <FlexBetween
-                        gap="0.5rem"
-                        width="auto"
+                    <Box
                         sx={{
+                            width: "100%",
                             display: "flex",
-                            justifyContent: "center",
-                            backgroundColor: buttonLight2,
-                            borderRadius: "3rem",
-                            border: `2px solid ${widgetBorder}`,
+                            justifyContent: "flex-end",
+                            alignItems: "center",
                         }}
                     >
-                        {/* Dark & Light Mode Button */}
-                        {/* <Box> */}
-                        <IconButton
-                            onClick={() => dispatch(setMode())}
+                        <FlexBetween
+                            gap="0.5rem"
+                            width="auto"
                             sx={{
-                                m: "0.5rem 0rem 0.5rem 0.5rem",
-                                "&:hover": {
-                                    color: headingText,
-                                    backgroundColor: buttonHover,
-                                },
+                                display: "flex",
+                                justifyContent: "space-between",
+                                height: "3.5rem",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "3rem",
+                                border: `2px solid ${widgetBorder}`,
                             }}
                         >
-                            {mode === "dark" ? (
-                                <Tooltip
-                                    TransitionComponent={Zoom}
-                                    placement="top"
-                                    title="Toggle Dark Mode"
-                                    enterDelay="500"
-                                    sx={{
-                                        fontSize: "1rem",
-                                        color: headingText,
-                                    }}
-                                >
-                                    <DarkMode
-                                        sx={{
-                                            color: followerIconOutline,
-                                            fontSize: "24px",
-                                        }}
-                                    />
-                                </Tooltip>
-                            ) : (
-                                <Tooltip
-                                    TransitionComponent={Zoom}
-                                    placement="top"
-                                    title="Toggle Light Mode"
-                                    enterDelay="500"
-                                    sx={{
-                                        fontSize: "1rem",
-                                        color: headingText,
-                                    }}
-                                >
-                                    <LightMode
-                                        sx={{
-                                            color: followerIconOutline,
-                                            fontSize: "24px",
-                                        }}
-                                    />
-                                </Tooltip>
-                            )}
-                        </IconButton>
-
-                        {/* User Profile */}
-                        <Tooltip
-                            TransitionComponent={Zoom}
-                            placement="top"
-                            title="User Profile"
-                            enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
-                        >
+                            {/* Dark & Light Mode Button */}
+                            {/* <Box> */}
                             <IconButton
-                                onClick={() => {
-                                    navigate(`/profile/${userId}`);
-                                    navigate(0);
-                                }}
+                                onClick={() => dispatch(setMode())}
                                 sx={{
-                                    m: "0.5rem 0rem",
+                                    m: "0.5rem 0rem 0.5rem 0.5rem",
+
                                     "&:hover": {
                                         color: headingText,
                                         backgroundColor: buttonHover,
                                     },
                                 }}
                             >
-                                <UserImage
-                                    // height="25px"
-                                    size="24px"
-                                    image={user.picturePath}
-                                />
+                                {mode === "dark" ? (
+                                    <Tooltip
+                                        TransitionComponent={Zoom}
+                                        placement="top"
+                                        title="Toggle Dark Mode"
+                                        enterDelay="500"
+                                        sx={{
+                                            fontSize: "1rem",
+                                            color: headingText,
+                                        }}
+                                    >
+                                        <DarkMode
+                                            sx={{
+                                                color: followerIconOutline,
+                                                fontSize: "24px",
+                                            }}
+                                        />
+                                    </Tooltip>
+                                ) : (
+                                    <Tooltip
+                                        TransitionComponent={Zoom}
+                                        placement="top"
+                                        title="Toggle Light Mode"
+                                        enterDelay="500"
+                                        sx={{
+                                            fontSize: "1rem",
+                                            color: headingText,
+                                        }}
+                                    >
+                                        <LightMode
+                                            sx={{
+                                                color: followerIconOutline,
+                                                fontSize: "24px",
+                                            }}
+                                        />
+                                    </Tooltip>
+                                )}
                             </IconButton>
-                        </Tooltip>
 
-                        {/* Log Out Icon */}
-                        <Tooltip
-                            TransitionComponent={Zoom}
-                            placement="top"
-                            title="Log Out"
-                            enterDelay="500"
-                            sx={{ fontSize: "1rem" }}
-                        >
-                            <IconButton
-                                onClick={() => dispatch(setLogout())}
-                                sx={{
-                                    // borderRadius: "3rem",
-                                    // p: "0.5rem 0rem",
-                                    m: "0.5rem 0.5rem 0.5rem 0rem",
-                                    "&:hover": {
-                                        color: headingText,
-                                        backgroundColor: buttonHover,
-                                    },
-                                }}
+                            {/* User Profile */}
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="User Profile"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
                             >
-                                <LogoutIcon
-                                    sx={{
-                                        fontSize: "24px",
-                                        color: followerIconOutline,
+                                <IconButton
+                                    onClick={() => {
+                                        navigate(`/profile/${userId}`);
+                                        navigate(0);
                                     }}
-                                />
-                            </IconButton>
-                        </Tooltip>
-                    </FlexBetween>
+                                    sx={{
+                                        m: "0.5rem 0rem",
+                                        // height: "2rem",
+                                        "&:hover": {
+                                            color: headingText,
+                                            backgroundColor: buttonHover,
+                                        },
+                                    }}
+                                >
+                                    <UserImage
+                                        // height="25px"
+                                        size="24px"
+                                        image={user.picturePath}
+                                    />
+                                </IconButton>
+                            </Tooltip>
+
+                            {/* Log Out Icon */}
+                            <Tooltip
+                                TransitionComponent={Zoom}
+                                placement="top"
+                                title="Log Out"
+                                enterDelay="500"
+                                sx={{ fontSize: "1rem" }}
+                            >
+                                <IconButton
+                                    onClick={() => dispatch(setLogout())}
+                                    sx={{
+                                        // borderRadius: "3rem",
+                                        // p: "0.5rem 0rem",
+                                        m: "0.5rem 0.5rem 0.5rem 0rem",
+                                        "&:hover": {
+                                            color: headingText,
+                                            backgroundColor: buttonHover,
+                                        },
+                                    }}
+                                >
+                                    <LogoutIcon
+                                        sx={{
+                                            fontSize: "24px",
+                                            color: followerIconOutline,
+                                        }}
+                                    />
+                                </IconButton>
+                            </Tooltip>
+                        </FlexBetween>
+                    </Box>
                 ) : (
                     <FlexBetween
                         width="10%"
                         sx={{
-                            justifyContent: "center",
+                            justifyContent: "flex-end",
                         }}
                     >
                         <IconButton
@@ -276,7 +308,13 @@ const Navbar = ({ userId, themeColors }) => {
                             <Menu
                                 sx={{
                                     color: followerIconOutline,
-                                    fontSize: "24px",
+                                    fontSize: isDesktopScreen
+                                        ? "1.5rem"
+                                        : isMediumScreen
+                                        ? "1.5rem"
+                                        : isSmallScreen
+                                        ? "1.25rem"
+                                        : "1rem",
                                 }}
                             />
                         </IconButton>
