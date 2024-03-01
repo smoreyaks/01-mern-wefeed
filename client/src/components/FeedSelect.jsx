@@ -27,12 +27,10 @@ import {
     useTheme,
     Tooltip,
     Zoom,
+    useMediaQuery,
 } from "@mui/material";
 
 const FeedSelect = ({ themeColors }) => {
-    // State
-    // const [filter, setFilter] = useState("");
-
     // Local State
     const dispatch = useDispatch();
     const recipes = useSelector((state) => state.recipes);
@@ -69,15 +67,31 @@ const FeedSelect = ({ themeColors }) => {
         widgetBorder,
     } = themeColors || {};
 
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
+
     return (
-        <FlexBetween>
+        <FlexBetween
+            sx={{
+                // flexBasis: isDesktopScreen ? "24rem" : "30rem",
+                width: isDesktopScreen ? "22rem" : "30rem",
+                maxWidth: isDesktopScreen ? "730px" : "100%",
+                // maxWidth: "100%",
+            }}
+        >
             <Box
                 sx={{
                     display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                     backgroundColor: buttonLight2,
                     borderRadius: "3rem",
                     border: `2px solid ${widgetBorder}`,
                     padding: "0",
+                    width: "100%",
+                    // gap: isDesktopScreen ? "0rem" : "0.5rem",
                 }}
             >
                 {/* All Recipes */}
@@ -97,6 +111,18 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
                             m: "0.5rem 0rem 0.5rem 0.5rem",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
                             "&:hover": {
                                 color: headingText,
                                 backgroundColor: buttonHover,
@@ -104,8 +130,17 @@ const FeedSelect = ({ themeColors }) => {
                         }}
                     >
                         <AllInclusiveOutlinedIcon
-                            sx={{ color: followerIconOutline }}
                             fontSize="medium"
+                            sx={{
+                                color: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
+                            }}
                         />
                     </Button>
                 </Tooltip>
@@ -126,13 +161,32 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem 0.5rem 0rem",
                             my: "0.5rem",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
+
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
                         }}
                     >
                         <MainDishIcon
-                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                            sx={{
+                                fill: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
+                            }}
                         />
                     </Button>
                 </Tooltip>
@@ -153,13 +207,32 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
                             my: "0.5rem",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
+
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
                         }}
                     >
                         <AppetiserIcon
-                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                            sx={{
+                                fill: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
+                            }}
                         />
                     </Button>
                 </Tooltip>
@@ -180,6 +253,16 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
                             my: "0.5rem",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
+
                             // borderRadius: "3rem",
                             "&:hover": {
                                 backgroundColor: buttonHover,
@@ -187,7 +270,16 @@ const FeedSelect = ({ themeColors }) => {
                         }}
                     >
                         <BreakfastIcon
-                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                            sx={{
+                                fill: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
+                            }}
                         />
                     </Button>
                 </Tooltip>
@@ -208,7 +300,15 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
                             my: "0.5rem",
-                            // borderRadius: "3rem",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
@@ -217,7 +317,13 @@ const FeedSelect = ({ themeColors }) => {
                         <DessertIcon
                             sx={{
                                 fill: followerIconOutline,
-                                fontSize: "24px",
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
                             }}
                         />
                     </Button>
@@ -239,13 +345,32 @@ const FeedSelect = ({ themeColors }) => {
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
                             m: "0.5rem 0.5rem 0.5rem 0 ",
+                            height: "2.25rem",
+                            minWidth: "1rem",
+                            width: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "4rem"
+                                : isSmallScreen
+                                ? "2rem"
+                                : "2rem",
+
                             "&:hover": {
                                 backgroundColor: buttonHover,
                             },
                         }}
                     >
                         <DrinkIcon
-                            sx={{ fill: followerIconOutline, fontSize: "24px" }}
+                            sx={{
+                                fill: followerIconOutline,
+                                fontSize: isDesktopScreen
+                                    ? "1.5rem"
+                                    : isMediumScreen
+                                    ? "1.5rem"
+                                    : isSmallScreen
+                                    ? "1rem"
+                                    : "0.5rem",
+                            }}
                         />
                     </Button>
                 </Tooltip>
