@@ -76,9 +76,14 @@ const FeedSelect = ({ themeColors }) => {
         <FlexBetween
             sx={{
                 // flexBasis: isDesktopScreen ? "24rem" : "30rem",
-                width: isDesktopScreen ? "22rem" : "30rem",
+                width: isDesktopScreen
+                    ? "22rem"
+                    : isMediumScreen
+                    ? "30rem"
+                    : "22rem",
                 maxWidth: isDesktopScreen ? "730px" : "100%",
-                // maxWidth: "100%",
+                maxWidth: "100%",
+                height: "100%",
             }}
         >
             <Box
@@ -91,6 +96,7 @@ const FeedSelect = ({ themeColors }) => {
                     border: `2px solid ${widgetBorder}`,
                     padding: "0",
                     width: "100%",
+                    height: "100%",
                     // gap: isDesktopScreen ? "0rem" : "0.5rem",
                 }}
             >
@@ -110,15 +116,23 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
-                            m: "0.5rem 0rem 0.5rem 0.5rem",
-                            height: "2.25rem",
+                            m:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem 0rem 0.5rem 0.5rem"
+                                    : "0.25rem 0rem 0.25rem 0.25rem",
+
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
                             display: "flex",
                             justifyContent: "center",
@@ -160,15 +174,22 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem 0.5rem 0rem",
-                            my: "0.5rem",
-                            height: "2.25rem",
+                            my:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem"
+                                    : "0.25rem",
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
 
                             "&:hover": {
@@ -206,15 +227,22 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
-                            my: "0.5rem",
-                            height: "2.25rem",
+                            my:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem"
+                                    : "0.25rem",
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
 
                             "&:hover": {
@@ -252,15 +280,22 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
-                            my: "0.5rem",
-                            height: "2.25rem",
+                            my:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem"
+                                    : "0.25rem",
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
 
                             // borderRadius: "3rem",
@@ -299,15 +334,22 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
-                            my: "0.5rem",
-                            height: "2.25rem",
+                            my:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem"
+                                    : "0.25rem",
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
                             "&:hover": {
                                 backgroundColor: buttonHover,
@@ -344,15 +386,22 @@ const FeedSelect = ({ themeColors }) => {
                             color: headingText,
                             borderRadius: "3rem",
                             p: "0.5rem 0rem",
-                            m: "0.5rem 0.5rem 0.5rem 0 ",
-                            height: "2.25rem",
+                            m:
+                                isDesktopScreen || isMediumScreen
+                                    ? "0.5rem 0.5rem 0.5rem 0rem"
+                                    : "0.25rem 0rem 0.25rem 0.25rem",
+                            height: isDesktopScreen
+                                ? "2.25rem"
+                                : isMediumScreen
+                                ? "2.25rem"
+                                : "100%",
                             minWidth: "1rem",
                             width: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "4rem"
                                 : isSmallScreen
-                                ? "2rem"
+                                ? "3rem"
                                 : "2rem",
 
                             "&:hover": {
