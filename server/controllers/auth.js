@@ -1,7 +1,7 @@
+import dotenv from "dotenv";
 import bcrypt from "bcrypt"; // Allows Password Encryption
 import jwt from "jsonwebtoken"; // Grants web token for auth
 import User from "../models/User.js";
-import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -87,13 +87,13 @@ export const guestLogin = async (req, res) => {
         // const { email, password } = req.body;
 
         // Mongoose tries to find specified email
-        const user = await User.findOne({ email: GUEST_EMAIL });
+        const user = await User.findOne({ email: process.env.GUEST_EMAIL });
 
         // User Error Handling
         if (!user) return res.status(400).json({ msg: "User does not exist." });
 
         // Validates user Email & Password Credentials
-        const isMatch = await bcrypt.compare(GUEST_PW, user.password);
+        const isMatch = bcrypt.compare(process.env.GUEST_PW, user.password);
 
         // Password Error Handling
         if (!isMatch)
