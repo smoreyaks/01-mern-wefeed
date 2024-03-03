@@ -195,13 +195,19 @@ const RecipePostWidget = ({
             sx={{
                 p:
                     isComments && isDesktopScreen
-                        ? "1rem 1.5rem 0 1.5rem"
+                        ? "1rem 1rem 0.5rem 1rem"
+                        : !isComments && isDesktopScreen
+                        ? "1rem 1rem 0.5rem 1rem"
+                        : isComments && isMediumScreen
+                        ? "1rem 1rem 0.5rem 1rem"
+                        : !isComments && isMediumScreen
+                        ? "1rem 1rem 0.5rem 1rem"
                         : isComments && isSmallScreen
-                        ? "1rem 0.75rem 0.5rem 0.75rem"
+                        ? "0.5rem 0.5rem 0.5rem 0.5rem"
                         : !isComments && isSmallScreen
                         ? "0.5rem 0.5rem 0.5rem 0.5rem"
                         : "1rem 1.5rem 0.5rem 1.5rem",
-                m: isComments ? "2rem 0" : "0rem 0rem 2rem 0rem",
+                m: isComments ? "0 0 2rem 0" : "0rem 0rem 2rem 0rem",
             }}
         >
             {/* ------------------------------- */}
