@@ -62,6 +62,7 @@ const initialValuesLogin = {
 const Form = (isDesktopScreen, isMediumScreen, isSmallScreen) => {
     // State
     const [pageType, setPageType] = useState("login");
+    const [isGuest, setIsGuest] = useState(false);
 
     // Local State
     const dispatch = useDispatch();
@@ -130,17 +131,15 @@ const Form = (isDesktopScreen, isMediumScreen, isSmallScreen) => {
     };
 
     // Guest User Login Function
-    const guestLogin = async (values, onSubmitProps) => {
+    const guestLogin = async () => {
         const loggedInResponse = await fetch(
             `https://server-vukx.onrender.com/auth/guestLogin`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(values),
             }
         );
         const loggedIn = await loggedInResponse.json();
-        onSubmitProps.resetForm();
         if (loggedIn) {
             dispatch(
                 setLogin({
@@ -420,6 +419,7 @@ const Form = (isDesktopScreen, isMediumScreen, isSmallScreen) => {
                                 // type="submit"
                                 fontFamily="Poppins"
                                 fontStyle="bold"
+                                onClick={() => guestLogin()}
                                 sx={{
                                     m: "1rem 0",
                                     p: "1rem",
