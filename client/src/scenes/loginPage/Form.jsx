@@ -59,7 +59,7 @@ const initialValuesLogin = {
     password: "",
 };
 
-const Form = () => {
+const Form = (isDesktopScreen, isMediumScreen, isSmallScreen) => {
     // State
     const [pageType, setPageType] = useState("login");
 
@@ -129,6 +129,29 @@ const Form = () => {
         }
     };
 
+    // Guest User Login Function
+    const guestLogin = async (values, onSubmitProps) => {
+        const loggedInResponse = await fetch(
+            `https://server-vukx.onrender.com/auth/guestLogin`,
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values),
+            }
+        );
+        const loggedIn = await loggedInResponse.json();
+        onSubmitProps.resetForm();
+        if (loggedIn) {
+            dispatch(
+                setLogin({
+                    user: loggedIn.user,
+                    token: loggedIn.token,
+                })
+            );
+            navigate("/home");
+        }
+    };
+
     // Form Data Submit Function
     const handleFormSubmit = async (values, onSubmitProps) => {
         if (isLogin) await login(values, onSubmitProps);
@@ -154,7 +177,7 @@ const Form = () => {
                 <form onSubmit={handleSubmit}>
                     <Box
                         display="grid"
-                        gap="30px"
+                        gap="0.75rem"
                         gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         sx={{
                             "& > div": {
@@ -370,7 +393,11 @@ const Form = () => {
                             fontFamily="Poppins"
                             fontStyle="bold"
                             sx={{
-                                m: "2rem 0",
+                                m: isDesktopScreen
+                                    ? "0.75rem 0"
+                                    : isMediumScreen
+                                    ? "2rem 0"
+                                    : "1rem 0",
                                 p: "1rem",
                                 border: `1px solid ${palette.default.primaryTwo.dark}`,
                                 backgroundColor:
@@ -386,6 +413,32 @@ const Form = () => {
                             {isLogin ? "LOGIN" : "REGISTER"}
                         </Button>
 
+                        {/* Guest Login Button */}
+                        {isLogin ? (
+                            <Button
+                                fullWidth
+                                // type="submit"
+                                fontFamily="Poppins"
+                                fontStyle="bold"
+                                sx={{
+                                    m: "1rem 0",
+                                    p: "1rem",
+                                    border: `1px solid ${palette.default.primaryTwo.dark}`,
+                                    backgroundColor:
+                                        palette.default.primaryTwo.light2,
+                                    color: palette.default.neutralGrey.white,
+                                    "&:hover": {
+                                        color: palette.default.neutralGrey
+                                            .white,
+                                        backgroundColor:
+                                            palette.default.primaryTwo.dark,
+                                    },
+                                }}
+                            >
+                                {isLogin && "GUEST LOGIN"}
+                            </Button>
+                        ) : null}
+
                         {/* New User Sign Up */}
                         <Typography
                             onClick={() => {
@@ -394,6 +447,9 @@ const Form = () => {
                             }}
                             sx={{
                                 textDecoration: "underline",
+                                textAlign: "center",
+                                p: "0",
+                                m: "0",
                                 color: palette.default.neutralGrey.white,
                                 "&:hover": {
                                     cursor: "pointer",
@@ -402,7 +458,7 @@ const Form = () => {
                             }}
                         >
                             {isLogin
-                                ? "Don't have an account? Sign up here!"
+                                ? "Need an account? Sign up here!"
                                 : "Already have an account? Log in here!"}
                         </Typography>
                     </Box>
