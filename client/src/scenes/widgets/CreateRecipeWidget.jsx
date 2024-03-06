@@ -27,11 +27,14 @@ import {
     MoreHorizOutlined,
 } from "@mui/icons-material";
 
+// Custom Icons
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+
 // Custom Components
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
-// import FeedSelect from "../../components/FeedSelect";
 
 // Image Upload
 import Dropzone from "react-dropzone";
@@ -129,7 +132,6 @@ const CreateRecipeWidget = ({
                         onClick={() =>
                             setCreateNewRecipeToggle(!createNewRecipeToggle)
                         }
-                        size="small"
                         sx={{
                             display: "flex",
                             justifyContent: "center",
@@ -147,7 +149,10 @@ const CreateRecipeWidget = ({
                             width: "100%",
                         }}
                     >
-                        Create New Recipe
+                        <Typography fontWeight="bold">
+                            Create New Recipe
+                        </Typography>
+                        <RemoveIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
                     <FlexBetween gap="1.5rem">
                         {/* <UserImage image={picturePath} /> */}
@@ -160,7 +165,7 @@ const CreateRecipeWidget = ({
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? "1rem 2rem"
+                                    ? ".5rem 2rem"
                                     : isMediumScreen
                                     ? "1rem 2rem"
                                     : "0.25rem 2rem",
@@ -320,7 +325,10 @@ const CreateRecipeWidget = ({
                             },
                         }}
                     >
-                        Create New Recipe
+                        <Typography fontWeight="bold">
+                            Create New Recipe
+                        </Typography>
+                        <AddIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
                 </WidgetWrapper>
             )}
