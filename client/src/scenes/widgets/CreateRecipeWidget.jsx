@@ -158,8 +158,28 @@ const CreateRecipeWidget = ({
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="New Recipe Title"
-                            onChange={(e) => setRecipe(e.target.value)}
-                            value={recipe}
+                            onChange={(e) => setRecipeTitle(e.target.value)}
+                            value={recipeTitle}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 2rem"
+                                    : isMediumScreen
+                                    ? "1rem 2rem"
+                                    : "0.25rem 2rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
+                            placeholder="Step Method"
+                            onChange={(e) =>
+                                setRecipeStepMethod(e.target.value)
+                            }
+                            value={recipeStepMethod}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
