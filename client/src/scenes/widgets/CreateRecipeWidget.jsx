@@ -53,13 +53,21 @@ const CreateRecipeWidget = ({
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
-    const [recipe, setRecipe] = useState("");
 
     // Create New Recipe State
     const [createNewRecipeToggle, setCreateNewRecipeToggle] = useState(false);
+
     const [inputRecipeTitle, setInputRecipeTitle] = useState("");
     const [inputEquipmentList, setInputEquipmentList] = useState("");
     const [inputIngredientList, setInputIngredientList] = useState([]);
+
+    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState("");
+    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState("");
+    const [inputRecipePrepTime, setInputRecipePrepTime] = useState("");
+    const [inputRecipeCookTime, setInputRecipeCookTime] = useState("");
+    const [inputRecipeEquipment, setInputRecipeEquipment] = useState("");
+    const [inputRecipeServings, setInputRecipeServings] = useState("");
+
     // const [recipe, setRecipe] = useState("");
     // const [recipe, setRecipe] = useState("");
 
@@ -102,7 +110,14 @@ const CreateRecipeWidget = ({
     const handleRecipe = async () => {
         const formData = new FormData();
         formData.append("userId", _id);
-        formData.append("description", recipe);
+        formData.append("Title", inputRecipeTitle);
+        formData.append("Step Method", inputRecipeStepMethod);
+        formData.append("Spice Level", inputRecipeSpiceLevel);
+        formData.append("Preparation Time", inputRecipePrepTime);
+        formData.append("Cook Time", inputRecipeCookTime);
+        formData.append("Equipment List", inputRecipeEquipment);
+        formData.append("Ingredient List", inputIngredientList);
+        formData.append("Servings", inputRecipeServings);
         if (image) {
             formData.append("picture", image);
             formData.append("picturePath", image.name);
@@ -119,7 +134,7 @@ const CreateRecipeWidget = ({
         const recipes = await response.json();
         dispatch(setAllRecipes({ recipes }));
         setImage(null);
-        setRecipe("");
+        setInputRecipeTitle("");
     };
 
     return (
@@ -158,8 +173,10 @@ const CreateRecipeWidget = ({
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="New Recipe Title"
-                            onChange={(e) => setRecipeTitle(e.target.value)}
-                            value={recipeTitle}
+                            onChange={(e) =>
+                                setInputRecipeTitle(e.target.value)
+                            }
+                            value={inputRecipeTitle}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
@@ -177,9 +194,9 @@ const CreateRecipeWidget = ({
                         <InputBase
                             placeholder="Step Method"
                             onChange={(e) =>
-                                setRecipeStepMethod(e.target.value)
+                                setInputRecipeStepMethod(e.target.value)
                             }
-                            value={recipeStepMethod}
+                            value={inputRecipeStepMethod}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
@@ -300,7 +317,7 @@ const CreateRecipeWidget = ({
                             sx={{ fontSize: "1rem" }}
                         >
                             <Button
-                                disabled={!recipe}
+                                disabled={!inputRecipeTitle}
                                 onClick={handleRecipe}
                                 sx={{
                                     color: headingText,
