@@ -192,6 +192,66 @@ const CreateRecipeWidget = ({
                     <FlexBetween gap="1.5rem">
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
+                            placeholder="Cooking Time"
+                            onChange={(e) =>
+                                setInputRecipeStepMethod(e.target.value)
+                            }
+                            value={inputRecipeStepMethod}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 2rem"
+                                    : isMediumScreen
+                                    ? "1rem 2rem"
+                                    : "0.25rem 2rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
+                            placeholder="Preparation Time"
+                            onChange={(e) =>
+                                setInputRecipeStepMethod(e.target.value)
+                            }
+                            value={inputRecipeStepMethod}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 2rem"
+                                    : isMediumScreen
+                                    ? "1rem 2rem"
+                                    : "0.25rem 2rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
+                            placeholder="Spice Level"
+                            onChange={(e) =>
+                                setInputRecipeStepMethod(e.target.value)
+                            }
+                            value={inputRecipeStepMethod}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 2rem"
+                                    : isMediumScreen
+                                    ? "1rem 2rem"
+                                    : "0.25rem 2rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
                             placeholder="Step Method"
                             onChange={(e) =>
                                 setInputRecipeStepMethod(e.target.value)
