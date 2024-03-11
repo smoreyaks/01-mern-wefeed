@@ -169,7 +169,7 @@ const CreateRecipeWidget = ({
                         </Typography>
                         <RemoveIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
-                    <FlexBetween gap="1.5rem">
+                    <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="New Recipe Title"
@@ -189,7 +189,7 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween gap="1.5rem">
+                    <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="Cooking Time"
@@ -209,7 +209,7 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween gap="1.5rem">
+                    <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="Preparation Time"
@@ -229,7 +229,7 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween gap="1.5rem">
+                    <FlexBetween gap="1.5rem" sx={{ pl: "0.25rem" }}>
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="Spice Level"
