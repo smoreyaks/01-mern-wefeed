@@ -173,6 +173,23 @@ const ProfilePage = () => {
                         themeColors={themeColors}
                     /> */}
                     <Box m="0rem 0" />
+                    <Box
+                        sx={{
+                            display: isDesktopScreen ? "none" : "100%",
+                        }}
+                    >
+                        <UserWidget
+                            userId={userId}
+                            picturePath={user.picturePath}
+                            themeColors={themeColors}
+                            // sx={{
+                            //     maxWidth: isDesktopScreen ? "0%" : "100%",
+                            // }}
+                        />
+                        <Box m="2rem 0" />
+                        <TopUserRecipesWidget themeColors={themeColors} />
+                        <Box m="2rem 0" />
+                    </Box>
                     <RecipesFeedWidget
                         userId={userId}
                         isProfile
