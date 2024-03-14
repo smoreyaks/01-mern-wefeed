@@ -20,3 +20,32 @@ border-radius: "3rem";
 width: "2rem";
 
 }
+
+
+/* external-scope.css */
+/* .external-section {
+} */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: 
+    rgba(0, 0, 0, 0)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* background: #4C5379; */
+    background: #acacac;
+    /* background-color: var(--mui-palette-primary-light); */
+    border-radius: 3rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
