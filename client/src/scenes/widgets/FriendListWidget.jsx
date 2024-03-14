@@ -10,6 +10,7 @@ import {
     ToggleButton,
     Tooltip,
     Zoom,
+    List,
 } from "@mui/material";
 
 // Custom Components
@@ -117,75 +118,83 @@ const FriendListWidget = ({ userId, themeColors }) => {
             </Box>
 
             <Divider sx={{ p: "0", m: "1rem 0" }} />
-
-            {friends.length > 0 ? (
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "0.5rem",
-                        height: "100%",
-                    }}
-                >
-                    {isFriendsListOpen
-                        ? friends.map((friend) => (
-                              <Tooltip
-                                  TransitionComponent={Zoom}
-                                  placement="left"
-                                  title={`${friend.firstName}'s Profile`}
-                                  enterDelay="500"
-                                  sx={{ fontSize: "1rem" }}
-                              >
-                                  <Box
-                                      sx={{
-                                          height: "72px",
-                                      }}
+            <List sx={{ maxHeight: "439.29px", overflow: "auto" }}>
+                {friends.length > 0 ? (
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.5rem",
+                            height: "100%",
+                        }}
+                    >
+                        {isFriendsListOpen
+                            ? friends.map((friend) => (
+                                  <Tooltip
+                                      TransitionComponent={Zoom}
+                                      placement="left"
+                                      title={`${friend.firstName}'s Profile`}
+                                      enterDelay="500"
+                                      sx={{ fontSize: "1rem" }}
                                   >
-                                      <Friend
-                                          key={friend._id}
-                                          friendId={friend._id}
-                                          firstName={friend.firstName}
-                                          lastName={friend.lastName}
-                                          name={`${friend.firstName} ${friend.lastName}`}
-                                          occupation={friend.occupation}
-                                          userPicturePath={friend.picturePath}
-                                          themeColors={themeColors}
-                                          isProfile
-                                      />
-                                  </Box>
-                              </Tooltip>
-                          ))
-                        : friends.map((friend) => (
-                              <Tooltip
-                                  TransitionComponent={Zoom}
-                                  placement="left"
-                                  title={`${friend.firstName}'s Profile`}
-                                  enterDelay="500"
-                                  sx={{ fontSize: "1rem" }}
-                              >
-                                  <Box
-                                      sx={{ height: "72px", cursor: "pointer" }}
+                                      <Box
+                                          sx={{
+                                              height: "72px",
+                                          }}
+                                      >
+                                          <Friend
+                                              key={friend._id}
+                                              friendId={friend._id}
+                                              firstName={friend.firstName}
+                                              lastName={friend.lastName}
+                                              name={`${friend.firstName} ${friend.lastName}`}
+                                              occupation={friend.occupation}
+                                              userPicturePath={
+                                                  friend.picturePath
+                                              }
+                                              themeColors={themeColors}
+                                              isProfile
+                                          />
+                                      </Box>
+                                  </Tooltip>
+                              ))
+                            : friends.map((friend) => (
+                                  <Tooltip
+                                      TransitionComponent={Zoom}
+                                      placement="left"
+                                      title={`${friend.firstName}'s Profile`}
+                                      enterDelay="500"
+                                      sx={{ fontSize: "1rem" }}
                                   >
-                                      <UserImage
-                                          key={friend.id}
-                                          image={friend.picturePath}
-                                          friendId={friend._id}
-                                          firstName={friend.firstName}
-                                          lastName={friend.lastName}
-                                          name={`${friend.firstName} ${friend.lastName}`}
-                                          occupation={friend.occupation}
-                                          themeColors={themeColors}
-                                          size="55px"
-                                      />
-                                  </Box>
-                              </Tooltip>
-                          ))}
-                </Box>
-            ) : (
-                <Box display="flex" flexDirection="column" gap="1.5rem">
-                    <Typography>This account doesn't follow anyone</Typography>
-                </Box>
-            )}
+                                      <Box
+                                          sx={{
+                                              height: "72px",
+                                              cursor: "pointer",
+                                          }}
+                                      >
+                                          <UserImage
+                                              key={friend.id}
+                                              image={friend.picturePath}
+                                              friendId={friend._id}
+                                              firstName={friend.firstName}
+                                              lastName={friend.lastName}
+                                              name={`${friend.firstName} ${friend.lastName}`}
+                                              occupation={friend.occupation}
+                                              themeColors={themeColors}
+                                              size="55px"
+                                          />
+                                      </Box>
+                                  </Tooltip>
+                              ))}
+                    </Box>
+                ) : (
+                    <Box display="flex" flexDirection="column" gap="1.5rem">
+                        <Typography>
+                            This account doesn't follow anyone
+                        </Typography>
+                    </Box>
+                )}
+            </List>
         </WidgetWrapper>
     );
 };
