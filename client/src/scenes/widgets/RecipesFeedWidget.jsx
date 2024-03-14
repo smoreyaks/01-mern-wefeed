@@ -261,13 +261,13 @@ const RecipesFeedWidget = ({
                         <Box
                             backgroundColor={backgroundMain}
                             borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
-                            p="1.5rem"
+                            p="1rem"
                             my="1rem"
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                minWidth: "452px",
+                                // minWidth: "452px",
                             }}
                         >
                             <Typography
@@ -282,6 +282,7 @@ const RecipesFeedWidget = ({
                                             : backgroundPrimary,
                                     color: followerIconOutline,
                                     width: "100%",
+                                    // width: "auto",
                                     textAlign: "center",
                                 }}
                             >
@@ -290,7 +291,14 @@ const RecipesFeedWidget = ({
                                     ? ""
                                     : filter[0].toUpperCase() +
                                       filter.substring(1)}{" "}
-                                recipes. Come back another time!
+                                recipes.
+                                <Typography
+                                    sx={{
+                                        fontWeight: "bold",
+                                    }}
+                                >
+                                    Come back another time!
+                                </Typography>
                             </Typography>
                         </Box>
                     )}
@@ -307,7 +315,9 @@ const RecipesFeedWidget = ({
                         width: isDesktopScreen
                             ? undefined
                             : isMediumScreen
-                            ? "28rem"
+                            ? // ? "100$"
+                              // : "100$",
+                              "28rem"
                             : "20rem",
                     }}
                 >
