@@ -164,7 +164,8 @@ const ProfilePage = () => {
                 <Box
                     flexBasis={isDesktopScreen ? "42%" : "none"}
                     maxWidth={isDesktopScreen ? "730px" : "100%"}
-                    minWidth="30%"
+                    minWidth={isDesktopScreen ? "auto" : "100%"}
+                    // minWidth="100%"
                     mt={isDesktopScreen ? undefined : "2rem"}
                     sx={{ justifyContent: "center" }}
                 >
