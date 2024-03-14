@@ -112,7 +112,10 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         <WidgetWrapper borderColor={widgetBorder}>
             {/* Top Recipe Stat Title */}
             {user ? (
-                <Box>
+                <Box
+                    // sx={{ width: "100%" }}
+                    width="100%"
+                >
                     <FlexBetween gap="0.5rem" pb="0rem">
                         <FlexBetween gap="1rem">
                             <Box>

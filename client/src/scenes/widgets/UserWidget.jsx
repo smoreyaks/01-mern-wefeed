@@ -143,6 +143,8 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 onClick={() => {
                     navigate(`/profile/${userId}`);
                 }}
+                // sx={{ width: "100%" }}
+                width="100%"
             >
                 <FlexBetween gap="1rem">
                     <UserImage image={picturePath} />
