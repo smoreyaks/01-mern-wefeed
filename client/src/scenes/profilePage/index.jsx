@@ -176,21 +176,47 @@ const ProfilePage = () => {
                     <Box m="0rem 0" />
                     <Box
                         sx={{
-                            display: isDesktopScreen ? "none" : "100%",
+                            display: isDesktopScreen
+                                ? "none"
+                                : isMediumScreen
+                                ? "flex"
+                                : "100%",
                         }}
                     >
                         <UserWidget
                             userId={userId}
                             picturePath={user.picturePath}
                             themeColors={themeColors}
-                            // sx={{
-                            //     maxWidth: isDesktopScreen ? "0%" : "100%",
-                            // }}
+                            sx={{
+                                width: isDesktopScreen
+                                    ? "100%"
+                                    : isMediumScreen
+                                    ? "50%"
+                                    : "100%",
+                            }}
+                        />
+                        <Box
+                            m="2rem 0"
+                            sx={{ display: isMediumScreen ? "none" : "block" }}
+                        />
+                        <TopUserRecipesWidget
+                            themeColors={themeColors}
+                            sx={{
+                                pl: isMediumScreen ? "0.5rem" : "0rem",
+                                width: isDesktopScreen
+                                    ? "100%"
+                                    : isMediumScreen
+                                    ? "50%"
+                                    : "100%",
+                            }}
                         />
                         <Box m="2rem 0" />
-                        <TopUserRecipesWidget themeColors={themeColors} />
-                        <Box m="2rem 0" />
                     </Box>
+
+                    <Box
+                        m="2rem 0"
+                        sx={{ display: isMediumScreen ? "block" : "none" }}
+                    />
                     <RecipesFeedWidget
                         userId={userId}
                         isProfile
