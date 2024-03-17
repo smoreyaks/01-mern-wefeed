@@ -142,6 +142,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 pb="1.1rem"
                 onClick={() => {
                     navigate(`/profile/${userId}`);
+                    navigate(0);
                 }}
                 // sx={{ width: "100%" }}
                 width="100%"
