@@ -15,6 +15,11 @@ import {
     Tooltip,
     Zoom,
 } from "@mui/material";
+import {
+    Unstable_NumberInput as BaseNumberInput,
+    numberInputClasses,
+} from "@mui/base/Unstable_NumberInput";
+import { styled } from "@mui/system";
 
 // MUI Icons
 import {
@@ -35,6 +40,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
+import NumberInput from "../../components/NumberInput";
 
 // Image Upload
 import Dropzone from "react-dropzone";
@@ -57,16 +63,16 @@ const CreateRecipeWidget = ({
     // Create New Recipe State
     const [createNewRecipeToggle, setCreateNewRecipeToggle] = useState(false);
 
-    const [inputRecipeTitle, setInputRecipeTitle] = useState("");
-    const [inputEquipmentList, setInputEquipmentList] = useState("");
-    const [inputIngredientList, setInputIngredientList] = useState([]);
+    const [inputRecipeTitle, setInputRecipeTitle] = useState(""); // Title
+    const [inputRecipeNotes, setInputRecipeNotes] = useState(""); // Notes
+    const [inputIngredientList, setInputIngredientList] = useState([]); // Ingredients
 
-    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState("");
-    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState("");
-    const [inputRecipePrepTime, setInputRecipePrepTime] = useState("");
-    const [inputRecipeCookTime, setInputRecipeCookTime] = useState("");
-    const [inputRecipeEquipment, setInputRecipeEquipment] = useState("");
-    const [inputRecipeServings, setInputRecipeServings] = useState("");
+    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState(""); // Method
+    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
+    const [inputRecipePrepTime, setInputRecipePrepTime] = useState(""); // Prep Time
+    const [inputRecipeCookTime, setInputRecipeCookTime] = useState(""); // Cook Time
+    const [inputRecipeEquipment, setInputRecipeEquipment] = useState(""); // Equipment
+    const [inputRecipeServings, setInputRecipeServings] = useState(""); // Servings
 
     // const [recipe, setRecipe] = useState("");
     // const [recipe, setRecipe] = useState("");
@@ -170,9 +176,9 @@ const CreateRecipeWidget = ({
                         <RemoveIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
                     <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
-                        {/* <UserImage image={picturePath} /> */}
+                        {/* Recipe Title Input Section */}
                         <InputBase
-                            placeholder="New Recipe Title"
+                            placeholder="Recipe Title"
                             onChange={(e) =>
                                 setInputRecipeTitle(e.target.value)
                             }
@@ -182,73 +188,120 @@ const CreateRecipeWidget = ({
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? ".5rem 2rem"
+                                    ? ".5rem 1rem"
                                     : isMediumScreen
-                                    ? "1rem 2rem"
-                                    : "0.25rem 2rem",
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
                             }}
                         />
                     </FlexBetween>
+                    {/* Recipe Notes */}
                     <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
-                        {/* <UserImage image={picturePath} /> */}
+                        {/* Recipe Notes Input Section */}
                         <InputBase
-                            placeholder="Cooking Time"
+                            placeholder="Notes"
                             onChange={(e) =>
-                                setInputRecipeStepMethod(e.target.value)
+                                setInputRecipeNotes(e.target.value)
                             }
-                            value={inputRecipeStepMethod}
+                            value={inputRecipeNotes}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? ".5rem 2rem"
+                                    ? ".5rem 1rem"
                                     : isMediumScreen
-                                    ? "1rem 2rem"
-                                    : "0.25rem 2rem",
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
-                        {/* <UserImage image={picturePath} /> */}
+                    <FlexBetween gap="0.5rem" sx={{ mb: "0.5rem" }}>
+                        {/* Preparation Time Input Section */}
                         <InputBase
-                            placeholder="Preparation Time"
-                            onChange={(e) =>
-                                setInputRecipeStepMethod(e.target.value)
+                            placeholder={
+                                isDesktopScreen
+                                    ? "Preparation Time"
+                                    : "Prep Time"
                             }
-                            value={inputRecipeStepMethod}
+                            onChange={(e) =>
+                                setInputRecipePrepTime(e.target.value)
+                            }
+                            value={inputRecipePrepTime}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? ".5rem 2rem"
+                                    ? ".5rem 1rem"
                                     : isMediumScreen
-                                    ? "1rem 2rem"
-                                    : "0.25rem 2rem",
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
+                            }}
+                        />
+
+                        {/* Cooking Time Input Section */}
+                        <InputBase
+                            placeholder={
+                                isDesktopScreen ? "Cooking Time" : "Cook Time"
+                            }
+                            onChange={(e) =>
+                                setInputRecipeCookTime(e.target.value)
+                            }
+                            value={inputRecipeCookTime}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 1rem"
+                                    : isMediumScreen
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween
-                        gap="1.5rem"
-                        sx={{ pl: "0.25rem", mb: "0.5rem" }}
-                    >
-                        {/* <UserImage image={picturePath} /> */}
+                    <FlexBetween gap="0.5rem" sx={{ mb: "0.5rem" }}>
+                        {/* <NumberInput
+                            aria-label="Quantity Input"
+                            min={1}
+                            max={99}
+                        /> */}
+
+                        {/* Preparation Time Input Section */}
+                        <InputBase
+                            placeholder="Servings"
+                            onChange={(e) =>
+                                setInputRecipeServings(e.target.value)
+                            }
+                            value={inputRecipeServings}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 1rem"
+                                    : isMediumScreen
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
+                            }}
+                        />
+
                         <InputBase
                             placeholder="Spice Level"
                             onChange={(e) =>
-                                setInputRecipeStepMethod(e.target.value)
+                                setInputRecipeSpiceLevel(e.target.value)
                             }
-                            value={inputRecipeStepMethod}
+                            value={inputRecipeSpiceLevel}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? ".5rem 2rem"
+                                    ? ".5rem 1rem"
                                     : isMediumScreen
-                                    ? "1rem 2rem"
-                                    : "0.25rem 2rem",
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
                             }}
                         />
                     </FlexBetween>
@@ -265,10 +318,10 @@ const CreateRecipeWidget = ({
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
                                 padding: isDesktopScreen
-                                    ? ".5rem 2rem"
+                                    ? ".5rem 1rem"
                                     : isMediumScreen
-                                    ? "1rem 2rem"
-                                    : "0.25rem 2rem",
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
                             }}
                         />
                     </FlexBetween>
