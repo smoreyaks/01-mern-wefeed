@@ -229,7 +229,10 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
-                    <FlexBetween gap="1.5rem" sx={{ pl: "0.25rem" }}>
+                    <FlexBetween
+                        gap="1.5rem"
+                        sx={{ pl: "0.25rem", mb: "0.5rem" }}
+                    >
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
                             placeholder="Spice Level"
