@@ -147,7 +147,15 @@ const CreateRecipeWidget = ({
         <>
             {createNewRecipeToggle ? (
                 <WidgetWrapper
-                    sx={{ borderColor: widgetBorder, m: "0rem 0rem 2rem 0rem" }}
+                    sx={{
+                        borderColor: widgetBorder,
+                        m: "0rem 0rem 2rem 0rem",
+                        p: isDesktopScreen
+                            ? "1rem 1rem"
+                            : isMediumScreen
+                            ? "1rem 1rem"
+                            : "0.5rem 0.5rem",
+                    }}
                 >
                     <Button
                         onClick={() =>
@@ -160,7 +168,7 @@ const CreateRecipeWidget = ({
                             backgroundColor: buttonLight2,
                             color: followerIconOutline,
                             p: "0.5rem",
-                            m: "0.5rem 0rem",
+                            mb: "0.5rem",
                             minWidth: "3rem",
 
                             borderRadius: "3rem",
@@ -455,7 +463,18 @@ const CreateRecipeWidget = ({
                 </WidgetWrapper>
             ) : (
                 <WidgetWrapper
-                    sx={{ borderColor: widgetBorder, m: "0rem 0rem 2rem 0rem" }}
+                    sx={{
+                        borderColor: widgetBorder,
+                        m: isDesktopScreen
+                            ? "0rem 0rem 2rem 0rem"
+                            : "0rem 0rem 1rem 0rem",
+                        p: isDesktopScreen
+                            ? "1rem 1rem"
+                            : isMediumScreen
+                            ? "1rem 1rem"
+                            : "0.5rem 0.5rem",
+                        // borderRadius: "3rem",
+                    }}
                 >
                     <Button
                         onClick={() =>
@@ -469,7 +488,7 @@ const CreateRecipeWidget = ({
                             backgroundColor: buttonLight2,
                             color: followerIconOutline,
                             p: "0.5rem",
-                            m: "0.5rem 0rem",
+                            // m: "0.5rem 0rem",
                             minWidth: "3rem",
                             width: "100%",
                             borderRadius: "3rem",
