@@ -276,7 +276,7 @@ const CreateRecipeWidget = ({
                             max={99}
                         /> */}
 
-                        {/* Preparation Time Input Section */}
+                        {/* Servings Input Section */}
                         <InputBase
                             placeholder="Servings"
                             onChange={(e) =>
@@ -294,7 +294,7 @@ const CreateRecipeWidget = ({
                                     : "0.25rem 1rem",
                             }}
                         />
-
+                        {/* Spice Level Input Section */}
                         <InputBase
                             placeholder="Spice Level"
                             onChange={(e) =>
@@ -316,7 +316,7 @@ const CreateRecipeWidget = ({
                     <FlexBetween gap="1.5rem">
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
-                            placeholder="Ingredients"
+                            placeholder="Ingredient List"
                             onChange={(e) =>
                                 setInputRecipeIngredients(e.target.value)
                             }
@@ -325,6 +325,7 @@ const CreateRecipeWidget = ({
                                 width: "100%",
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
+                                mb: "0.5rem",
                                 padding: isDesktopScreen
                                     ? ".5rem 1rem"
                                     : isMediumScreen
@@ -336,15 +337,16 @@ const CreateRecipeWidget = ({
                     <FlexBetween gap="1.5rem">
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
-                            placeholder="Step Method"
+                            placeholder="Equipment List"
                             onChange={(e) =>
-                                setInputRecipeStepMethod(e.target.value)
+                                setInputRecipeEquipment(e.target.value)
                             }
-                            value={inputRecipeStepMethod}
+                            value={inputRecipeEquipment}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
                                 borderRadius: "2rem",
+                                mb: "0.5rem",
                                 padding: isDesktopScreen
                                     ? ".5rem 1rem"
                                     : isMediumScreen
@@ -484,7 +486,13 @@ const CreateRecipeWidget = ({
                                 disabled={
                                     !inputRecipeTitle &&
                                     !inputRecipeNotes &&
-                                    !inputRecipeIngredients
+                                    !inputRecipeIngredients &&
+                                    !inputRecipeEquipment &&
+                                    !inputRecipePrepTime &&
+                                    !inputRecipeCookTime &&
+                                    !inputRecipeStepMethod &&
+                                    !inputRecipeServings &&
+                                    !inputRecipeSpiceLevel
                                 }
                                 onClick={handleRecipe}
                                 sx={{
