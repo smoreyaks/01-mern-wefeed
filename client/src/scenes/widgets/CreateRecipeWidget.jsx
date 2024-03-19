@@ -65,7 +65,7 @@ const CreateRecipeWidget = ({
 
     const [inputRecipeTitle, setInputRecipeTitle] = useState(""); // Title
     const [inputRecipeNotes, setInputRecipeNotes] = useState(""); // Notes
-    const [inputIngredientList, setInputIngredientList] = useState([]); // Ingredients
+    const [inputRecipeIngredients, setInputRecipeIngredients] = useState([]); // Ingredients
 
     const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState(""); // Method
     const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
@@ -122,7 +122,7 @@ const CreateRecipeWidget = ({
         formData.append("Preparation Time", inputRecipePrepTime);
         formData.append("Cook Time", inputRecipeCookTime);
         formData.append("Equipment List", inputRecipeEquipment);
-        formData.append("Ingredient List", inputIngredientList);
+        formData.append("Ingredient List", inputRecipeIngredients);
         formData.append("Servings", inputRecipeServings);
         if (image) {
             formData.append("picture", image);
@@ -316,6 +316,46 @@ const CreateRecipeWidget = ({
                     <FlexBetween gap="1.5rem">
                         {/* <UserImage image={picturePath} /> */}
                         <InputBase
+                            placeholder="Ingredients"
+                            onChange={(e) =>
+                                setInputRecipeIngredients(e.target.value)
+                            }
+                            value={inputRecipeIngredients}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 1rem"
+                                    : isMediumScreen
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
+                            placeholder="Step Method"
+                            onChange={(e) =>
+                                setInputRecipeStepMethod(e.target.value)
+                            }
+                            value={inputRecipeStepMethod}
+                            sx={{
+                                width: "100%",
+                                backgroundColor: buttonLight2,
+                                borderRadius: "2rem",
+                                padding: isDesktopScreen
+                                    ? ".5rem 1rem"
+                                    : isMediumScreen
+                                    ? "0.5rem 1rem"
+                                    : "0.25rem 1rem",
+                            }}
+                        />
+                    </FlexBetween>
+                    <FlexBetween gap="1.5rem">
+                        {/* <UserImage image={picturePath} /> */}
+                        <InputBase
                             placeholder="Step Method"
                             onChange={(e) =>
                                 setInputRecipeStepMethod(e.target.value)
@@ -441,7 +481,11 @@ const CreateRecipeWidget = ({
                             sx={{ fontSize: "1rem" }}
                         >
                             <Button
-                                disabled={!inputRecipeTitle}
+                                disabled={
+                                    !inputRecipeTitle &&
+                                    !inputRecipeNotes &&
+                                    !inputRecipeIngredients
+                                }
                                 onClick={handleRecipe}
                                 sx={{
                                     color: headingText,
