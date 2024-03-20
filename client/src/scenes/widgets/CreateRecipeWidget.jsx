@@ -65,14 +65,13 @@ const CreateRecipeWidget = ({
 
     const [inputRecipeTitle, setInputRecipeTitle] = useState(""); // Title
     const [inputRecipeNotes, setInputRecipeNotes] = useState(""); // Notes
-    const [inputRecipeIngredients, setInputRecipeIngredients] = useState([]); // Ingredients
-
-    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState(""); // Method
-    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
     const [inputRecipePrepTime, setInputRecipePrepTime] = useState(""); // Prep Time
     const [inputRecipeCookTime, setInputRecipeCookTime] = useState(""); // Cook Time
-    const [inputRecipeEquipment, setInputRecipeEquipment] = useState(""); // Equipment
     const [inputRecipeServings, setInputRecipeServings] = useState(""); // Servings
+    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
+    const [inputRecipeEquipment, setInputRecipeEquipment] = useState([]); // Equipment
+    const [inputRecipeIngredients, setInputRecipeIngredients] = useState([]); // Ingredients
+    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState([]); // Method
 
     // const [recipe, setRecipe] = useState("");
     // const [recipe, setRecipe] = useState("");
@@ -117,13 +116,14 @@ const CreateRecipeWidget = ({
         const formData = new FormData();
         formData.append("userId", _id);
         formData.append("Title", inputRecipeTitle);
-        formData.append("Step Method", inputRecipeStepMethod);
-        formData.append("Spice Level", inputRecipeSpiceLevel);
+        formData.append("Notes", inputRecipeNotes);
         formData.append("Preparation Time", inputRecipePrepTime);
         formData.append("Cook Time", inputRecipeCookTime);
+        formData.append("Servings", inputRecipeServings);
+        formData.append("Spice Level", inputRecipeSpiceLevel);
         formData.append("Equipment List", inputRecipeEquipment);
         formData.append("Ingredient List", inputRecipeIngredients);
-        formData.append("Servings", inputRecipeServings);
+        formData.append("Step Method", inputRecipeStepMethod);
         if (image) {
             formData.append("picture", image);
             formData.append("picturePath", image.name);
@@ -141,6 +141,14 @@ const CreateRecipeWidget = ({
         dispatch(setAllRecipes({ recipes }));
         setImage(null);
         setInputRecipeTitle("");
+        setInputRecipeNotes("");
+        setInputRecipePrepTime("");
+        setInputRecipeCookTime("");
+        setInputRecipeServings("");
+        setInputRecipeSpiceLevel("");
+        setInputRecipeEquipment("");
+        setInputRecipeIngredients("");
+        setInputRecipeStepMethod("");
     };
 
     return (
@@ -183,6 +191,8 @@ const CreateRecipeWidget = ({
                         </Typography>
                         <RemoveIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
+
+                    {/* 1st Row - Title */}
                     <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* Recipe Title Input Section */}
                         <InputBase
@@ -203,7 +213,8 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
-                    {/* Recipe Notes */}
+
+                    {/* 2nd Row - Notes */}
                     <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* Recipe Notes Input Section */}
                         <InputBase
@@ -224,6 +235,8 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
+
+                    {/* 3rd Row - Times */}
                     <FlexBetween gap="0.5rem" sx={{ mb: "0.5rem" }}>
                         {/* Preparation Time Input Section */}
                         <InputBase
@@ -269,6 +282,8 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
+
+                    {/* 4th Row - Servings & Spice */}
                     <FlexBetween gap="0.5rem" sx={{ mb: "0.5rem" }}>
                         {/* <NumberInput
                             aria-label="Quantity Input"
@@ -294,6 +309,7 @@ const CreateRecipeWidget = ({
                                     : "0.25rem 1rem",
                             }}
                         />
+
                         {/* Spice Level Input Section */}
                         <InputBase
                             placeholder="Spice Level"
@@ -313,8 +329,10 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
+
+                    {/* 5th Row - Ingredients */}
                     <FlexBetween gap="1.5rem">
-                        {/* <UserImage image={picturePath} /> */}
+                        {/* Ingredient List Input Section */}
                         <InputBase
                             placeholder="Ingredient List"
                             onChange={(e) =>
@@ -334,8 +352,10 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
+
+                    {/* 6th Row - Equipment */}
                     <FlexBetween gap="1.5rem">
-                        {/* <UserImage image={picturePath} /> */}
+                        {/* Equipment List Input Section */}
                         <InputBase
                             placeholder="Equipment List"
                             onChange={(e) =>
@@ -355,8 +375,10 @@ const CreateRecipeWidget = ({
                             }}
                         />
                     </FlexBetween>
+
+                    {/* 7th Row - Steps */}
                     <FlexBetween gap="1.5rem">
-                        {/* <UserImage image={picturePath} /> */}
+                        {/* Step Method Input Section */}
                         <InputBase
                             placeholder="Step Method"
                             onChange={(e) =>
