@@ -15,6 +15,7 @@ import TopUserRecipesWidget from "../widgets/TopUserRecipesWidget";
 import FriendListWidget from "../widgets/FriendListWidget";
 import Navbar from "../navbar";
 import UserWidget from "../widgets/UserWidget";
+import FlexBetween from "../../components/FlexBetween";
 
 const ProfilePage = () => {
     // ---------------------------
@@ -174,7 +175,10 @@ const ProfilePage = () => {
                         themeColors={themeColors}
                     /> */}
                     <Box m="0rem 0" />
-                    <Box
+                    <FlexBetween
+                        width="100%"
+                        height="100%"
+                        // gap={isMediumScreen ? "0.5rem" : "0"}
                         sx={{
                             display: isDesktopScreen
                                 ? "none"
@@ -191,8 +195,9 @@ const ProfilePage = () => {
                                 width: isDesktopScreen
                                     ? "100%"
                                     : isMediumScreen
-                                    ? "50%"
+                                    ? "100%"
                                     : "100%",
+                                height: isMediumScreen ? "100%" : "auto",
                             }}
                         />
                         <Box
@@ -202,16 +207,17 @@ const ProfilePage = () => {
                         <TopUserRecipesWidget
                             themeColors={themeColors}
                             sx={{
-                                pl: isMediumScreen ? "0.5rem" : "0rem",
+                                // pl: isMediumScreen ? "0.5rem" : "0rem",
                                 width: isDesktopScreen
                                     ? "100%"
                                     : isMediumScreen
-                                    ? "50%"
+                                    ? "100%"
                                     : "100%",
+                                height: isMediumScreen ? "100%" : "auto",
                             }}
                         />
                         <Box m="2rem 0" />
-                    </Box>
+                    </FlexBetween>
 
                     <Box
                         m="2rem 0"
