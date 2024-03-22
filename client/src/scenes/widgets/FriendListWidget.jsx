@@ -125,7 +125,12 @@ const FriendListWidget = ({ userId, themeColors }) => {
             </Box>
 
             <Divider sx={{ p: "0", m: "1rem 0" }} />
-            <List sx={{ maxHeight: "439.29px", overflow: "auto" }}>
+            <List
+                sx={{
+                    maxHeight: isDesktopScreen ? "439.29px" : "433.55px",
+                    overflow: "auto",
+                }}
+            >
                 {friends.length > 0 ? (
                     <Box
                         sx={{
