@@ -146,7 +146,12 @@ const HomePage = () => {
                         minWidth="270px"
                         height="100%"
                     >
-                        <Box sx={{ display: "flex", justifyContent: "right" }}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                justifyContent: "right",
+                            }}
+                        >
                             <FriendListWidget
                                 userId={_id}
                                 themeColors={themeColors}
