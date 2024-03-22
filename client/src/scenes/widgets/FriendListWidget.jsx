@@ -11,6 +11,7 @@ import {
     Tooltip,
     Zoom,
     List,
+    useMediaQuery,
 } from "@mui/material";
 
 // Custom Components
@@ -45,6 +46,11 @@ const FriendListWidget = ({ userId, themeColors }) => {
     const { palette } = useTheme();
     const { headingText, widgetBorder, followerIconOutline } =
         themeColors || {};
+
+    // Media Queries
+    const isDesktopScreen = useMediaQuery("(min-width: 1000px)");
+    const isMediumScreen = useMediaQuery("(min-width: 600px)");
+    const isSmallScreen = useMediaQuery("(min-width: 300px)");
 
     const getUserFriends = async () => {
         const response = await fetch(
@@ -101,6 +107,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
                         p: "0rem",
                         borderRadius: "3rem",
                         border: "0px",
+                        display: isDesktopScreen ? "block" : "none",
                     }}
                 >
                     {isFriendsListOpen ? (
