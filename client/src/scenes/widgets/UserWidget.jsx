@@ -146,7 +146,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 // sx={{ width: "100%" }}
                 width="100%"
             >
-                <FlexBetween gap="1rem">
+                <FlexBetween gap="1rem" sx={{ width: "100%" }}>
                     <UserImage image={picturePath} />
 
                     <FlexBetween
