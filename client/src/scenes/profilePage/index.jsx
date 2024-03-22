@@ -175,52 +175,79 @@ const ProfilePage = () => {
                         themeColors={themeColors}
                     /> */}
                     <Box m="0rem 0" />
-                    <FlexBetween
-                        width="100%"
-                        height="100%"
+                    <Box
+                        // width="100%"
+                        // height="100%"
                         // gap={isMediumScreen ? "0.5rem" : "0"}
                         sx={{
                             display: isDesktopScreen
                                 ? "none"
                                 : isMediumScreen
                                 ? "flex"
-                                : "100%",
+                                : "inline",
+                            justifyContent: "space-between",
                         }}
                     >
-                        <UserWidget
-                            userId={userId}
-                            picturePath={user.picturePath}
-                            themeColors={themeColors}
+                        <Box
                             sx={{
-                                width: isDesktopScreen
-                                    ? "100%"
-                                    : isMediumScreen
-                                    ? "100%"
-                                    : "100%",
+                                width: isMediumScreen ? "100%" : "auto",
                                 height: isMediumScreen ? "100%" : "auto",
                             }}
-                        />
+                        >
+                            <Box sx={{ height: "100%" }}>
+                                <UserWidget
+                                    userId={userId}
+                                    picturePath={user.picturePath}
+                                    themeColors={themeColors}
+                                    // width="100%"
+                                    // style={{
+                                    //     width: isDesktopScreen
+                                    //         ? "100%"
+                                    //         : isMediumScreen
+                                    //         ? "100%"
+                                    //         : "100%",
+                                    // height: isMediumScreen ? "100%" : "auto",
+                                    // }}
+                                />
+                            </Box>
+                            <Box m={"1rem 0"} height="100%" />
+                            <Box sx={{ height: "100%" }}>
+                                <TopUserRecipesWidget
+                                    themeColors={themeColors}
+                                    // sx={{
+                                    //     // pl: isMediumScreen ? "0.5rem" : "0rem",
+                                    //     width: isDesktopScreen
+                                    //         ? "100%"
+                                    //         : isMediumScreen
+                                    //         ? "100%"
+                                    //         : "100%",
+                                    //     height: isMediumScreen ? "100%" : "auto",
+                                    // }}
+                                />
+                            </Box>
+                        </Box>
                         <Box
-                            m="2rem 0"
+                            m="1rem 0"
                             sx={{ display: isMediumScreen ? "none" : "block" }}
                         />
-                        <TopUserRecipesWidget
-                            themeColors={themeColors}
+                        <Box
                             sx={{
-                                // pl: isMediumScreen ? "0.5rem" : "0rem",
-                                width: isDesktopScreen
-                                    ? "100%"
-                                    : isMediumScreen
-                                    ? "100%"
-                                    : "100%",
+                                width: isMediumScreen ? "100%" : "auto",
                                 height: isMediumScreen ? "100%" : "auto",
+                                // pl: isMediumScreen ? "0.5rem" : "0rem",
+                                ml: isMediumScreen ? "1rem" : "0rem",
                             }}
-                        />
+                        >
+                            <FriendListWidget
+                                userId={userId}
+                                themeColors={themeColors}
+                            />
+                        </Box>
                         <Box m="2rem 0" />
-                    </FlexBetween>
+                    </Box>
 
                     <Box
-                        m="2rem 0"
+                        m={isDesktopScreen ? "0" : "2rem 0"}
                         sx={{ display: isMediumScreen ? "block" : "none" }}
                     />
                     <RecipesFeedWidget
