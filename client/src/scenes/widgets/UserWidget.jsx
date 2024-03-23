@@ -147,11 +147,20 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                 // sx={{ width: "100%" }}
                 width="100%"
             >
-                <FlexBetween gap="1rem">
+                <Box
+                    gap="1rem"
+                    sx={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "flex-start",
+                    }}
+                >
                     <UserImage image={picturePath} />
 
                     <FlexBetween
                         sx={{
+                            // display: "flex",
+                            // justifyContent: "flex-start",
                             flexDirection: "column",
                         }}
                     >
@@ -226,7 +235,7 @@ const UserWidget = ({ userId, picturePath, themeColors }) => {
                             </Box>
                         </Tooltip>
                     </FlexBetween>
-                </FlexBetween>
+                </Box>
             </FlexBetween>
 
             {/* Add Friend Button */}
