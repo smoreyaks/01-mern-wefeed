@@ -12,6 +12,7 @@ import {
     Zoom,
     List,
     useMediaQuery,
+    IconButton,
 } from "@mui/material";
 
 // Custom Components
@@ -109,27 +110,32 @@ const FriendListWidget = ({ userId, themeColors }) => {
                     Following
                 </Typography>
 
-                <ToggleButton
+                <IconButton
                     onClick={() => dispatch(setIsFriendsListOpen())}
                     sx={{
-                        p: "0rem",
+                        p: "0.25rem",
                         borderRadius: "3rem",
                         border: "0px",
-                        display: isDesktopScreen ? "block" : "none",
+                        display: isDesktopScreen ? "flex" : "none",
+                        justifyContent: "center",
                     }}
                 >
                     {isFriendsListOpen ? (
                         <KeyboardArrowDownRoundedIcon
                             fontSize="large"
-                            sx={{ color: followerIconOutline }}
+                            sx={{
+                                color: followerIconOutline,
+                            }}
                         />
                     ) : (
                         <KeyboardArrowRightRoundedIcon
                             fontSize="large"
-                            sx={{ color: followerIconOutline }}
+                            sx={{
+                                color: followerIconOutline,
+                            }}
                         />
                     )}
-                </ToggleButton>
+                </IconButton>
             </Box>
 
             <Divider sx={{ p: "0", m: "1rem 0" }} />
