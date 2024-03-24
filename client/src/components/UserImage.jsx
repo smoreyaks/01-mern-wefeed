@@ -16,6 +16,8 @@ const UserImage = ({
         <Box
             width={size}
             height={size}
+            display="flex"
+            justifyContent="center"
             onClick={() => {
                 navigate(`/profile/${friendId}`);
                 navigate(0);

@@ -118,6 +118,7 @@ const Friend = ({
                             gap: "1rem",
                             display: "flex",
                             justifyContent: "center",
+                            alignItems: "center",
                         }}
                     >
                         <UserImage image={userPicturePath} size="55px" />
