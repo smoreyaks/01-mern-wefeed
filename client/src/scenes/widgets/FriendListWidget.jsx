@@ -40,7 +40,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
-    const isFriendsListOpen = useSelector((state) => state.isFriendsListOpen);
+    let isFriendsListOpen = useSelector((state) => state.isFriendsListOpen);
 
     // Theme Destructure
     const { palette } = useTheme();
@@ -71,11 +71,19 @@ const FriendListWidget = ({ userId, themeColors }) => {
     // THROUGHPUT TESTING
     console.log("FRIENDS TEST:", friends);
 
+    // Resolves Friend List Toggle
+    if (!isDesktopScreen) {
+        isFriendsListOpen = true;
+    }
+
     return (
         <WidgetWrapper
             borderColor={widgetBorder}
             sx={{
-                minWidth: isFriendsListOpen ? "100%" : "100px",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                minWidth: isFriendsListOpen ? "100%" : "110px",
                 maxWidth: "300px",
                 width: "100px",
             }}
