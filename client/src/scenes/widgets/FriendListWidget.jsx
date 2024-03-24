@@ -84,7 +84,7 @@ const FriendListWidget = ({ userId, themeColors }) => {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
-                minWidth: isFriendsListOpen ? "100%" : "110px",
+                minWidth: isFriendsListOpen ? "100%" : "103px",
                 maxWidth: "300px",
                 width: "100px",
             }}
