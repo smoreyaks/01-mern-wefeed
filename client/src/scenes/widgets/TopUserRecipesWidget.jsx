@@ -7,7 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
 import WidgetWrapper from "../../components/WidgetWrapper";
-
+import RecipeScore from "../../components/RecipeScore.js";
 // MUI
 import {
     Box,
@@ -30,6 +30,8 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     // State
     const [userRecipes, setUserRecipes] = useState(null);
     const [user, setUser] = useState(null);
+
+    const recipes = useSelector((state) => state.recipes);
 
     // Token
     const token = useSelector((state) => state.token);
@@ -105,10 +107,27 @@ const TopUserRecipesWidget = ({ themeColors }) => {
         return null;
     }
 
+    const { recipeTitle, likes, recommendations, recipeType } = recipes;
+    // const firstRecipe = recipes[0];
+    // const secondRecipe = recipes[1];
+    // const thirdRecipe = recipes[2];
+
+    let newArr = [];
+    // const likeCount = Object.keys(likes).length;
+    const likeCount = 0;
+    // const recommendationCount = Object.keys(recommendations).length;
+    let newScoreArr = [];
+
+    for (let i = 0; i < recipes.length; i++) {
+        newArr.push(recipes[i].recipeTitle);
+    }
+
+    console.log("NEW ARR:", newArr);
+
     console.log("totalRecipeLikes:", user);
     console.log("recipesPosted:", user.userRecipeList);
+    console.log("USER RECIPE LIST:", recipes);
     return (
-        // <>
         <WidgetWrapper borderColor={widgetBorder}>
             {/* Top Recipe Stat Title */}
             {user ? (
@@ -141,22 +160,31 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                     {/* Top Recipe Stats */}
                     <Box p="1rem 0">
                         {/* First Place */}
-                        <FlexBetween pb="0.5rem">
-                            <FlexBetween gap="0.5rem">
-                                <Icon>
-                                    <EmojiEventsIcon sx={{ color: gold }} />
-                                </Icon>
-                                <Typography color={followerIconOutline}>
-                                    First Recipe
-                                </Typography>
-                            </FlexBetween>
-                            <Typography sx={{ color: followerIconOutline }}>
-                                1ST
-                            </Typography>
-                        </FlexBetween>
+                        {/* {console.log("RECIPES")} */}
 
+                        {/* {newArr.push(recipes[0].recipeTitle)} */}
+
+                        {/* {recipes.map((r) => (
+                            <Typography _id={recipeTitle}>{}</Typography>
+                        ))} */}
+                        {recipes.map(
+                            ({
+                                recipeTitle,
+                                likes,
+                                recommendations,
+                                recipes,
+                            }) => (
+                                <RecipeScore
+                                    themeColors={themeColors}
+                                    recipeTitle={recipeTitle}
+                                    likes={likes}
+                                    recommendations={recommendations}
+                                    recipes={recipes}
+                                />
+                            )
+                        )}
                         {/* Second Place */}
-                        <FlexBetween pb="0.5rem">
+                        {/* <FlexBetween pb="0.5rem">
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: silver }} />
                                 <Typography color={followerIconOutline}>
@@ -166,10 +194,10 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                             <Typography sx={{ color: followerIconOutline }}>
                                 2ND
                             </Typography>
-                        </FlexBetween>
+                        </FlexBetween> */}
 
                         {/* Third Place */}
-                        <FlexBetween pb="0.5rem">
+                        {/* <FlexBetween pb="0.5rem">
                             <FlexBetween gap="0.5rem">
                                 <EmojiEventsIcon sx={{ color: bronze }} />
                                 <Typography sx={{ color: followerIconOutline }}>
@@ -179,7 +207,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                             <Typography sx={{ color: followerIconOutline }}>
                                 3RD
                             </Typography>
-                        </FlexBetween>
+                        </FlexBetween> */}
                     </Box>
                 </Box>
             ) : (
@@ -204,7 +232,6 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                 </Box>
             )}
         </WidgetWrapper>
-        // </>
     );
 };
 
