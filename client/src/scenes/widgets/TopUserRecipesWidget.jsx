@@ -31,9 +31,9 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     const [userRecipes, setUserRecipes] = useState(null);
     const [user, setUser] = useState(null);
 
+    /// Redux State
     const recipes = useSelector((state) => state.recipes);
-
-    // Token
+    const mode = useSelector((state) => state.mode);
     const token = useSelector((state) => state.token);
 
     // Theme Colors
@@ -71,41 +71,10 @@ const TopUserRecipesWidget = ({ themeColors }) => {
 
     // API Calls
     // Get User Data
-    const getUser = async () => {
-        const response = await fetch(
-            `https://server-vukx.onrender.com/users/${userId}`,
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
-        const data = await response.json();
-        setUser(data);
-        // console.log("UserWidget.js - DATA - ", data);
-    };
 
     // getUserRecipes API Call
-    const getUserRecipes = async () => {
-        const response = await fetch(
-            `https://server-vukx.onrender.com/users/${userId}/recipes`,
-            {
-                method: "GET",
-                headers: { Authorization: `Bearer ${token}` },
-            }
-        );
-        const data = await response.json();
-        setUserRecipes(data);
-    };
-
-    useEffect(() => {
-        getUser();
-        getUserRecipes();
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // Typically have loading component while user waits
-    if (!user) {
-        return null;
-    }
 
     const { recipeTitle, likes, recommendations, recipeType } = recipes;
     // const firstRecipe = recipes[0];
@@ -124,13 +93,11 @@ const TopUserRecipesWidget = ({ themeColors }) => {
 
     console.log("NEW ARR:", newArr);
 
-    console.log("totalRecipeLikes:", user);
-    console.log("recipesPosted:", user.userRecipeList);
     console.log("USER RECIPE LIST:", recipes);
     return (
         <WidgetWrapper borderColor={widgetBorder}>
             {/* Top Recipe Stat Title */}
-            {user ? (
+            {recipes ? (
                 <Box sx={{ width: "100%", height: "100%" }}>
                     <FlexBetween gap="0.5rem" pb="0rem">
                         <FlexBetween gap="1rem">
@@ -158,7 +125,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                     <Divider />
 
                     {/* Top Recipe Stats */}
-                    <Box p="1rem 0">
+                    <Box p="0rem 0">
                         {/* First Place */}
                         {/* {console.log("RECIPES")} */}
 
@@ -167,21 +134,62 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         {/* {recipes.map((r) => (
                             <Typography _id={recipeTitle}>{}</Typography>
                         ))} */}
-                        {recipes.map(
-                            ({
-                                recipeTitle,
-                                likes,
-                                recommendations,
-                                recipes,
-                            }) => (
-                                <RecipeScore
-                                    themeColors={themeColors}
-                                    recipeTitle={recipeTitle}
-                                    likes={likes}
-                                    recommendations={recommendations}
-                                    recipes={recipes}
-                                />
+                        {recipes.length > 0 ? (
+                            recipes.map(
+                                ({
+                                    recipeTitle,
+                                    likes,
+                                    recommendations,
+                                    recipes,
+                                }) => (
+                                    <RecipeScore
+                                        themeColors={themeColors}
+                                        recipeTitle={recipeTitle}
+                                        likes={likes}
+                                        recommendations={recommendations}
+                                        recipes={recipes}
+                                    />
+                                )
                             )
+                        ) : (
+                            <Box
+                                backgroundColor={backgroundMain}
+                                borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
+                                p="0rem"
+                                // my="0.5rem"
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    // minWidth: "452px",
+                                }}
+                            >
+                                <Typography
+                                    sx={{
+                                        fontWeight: "bold",
+                                        p: "0.5rem 0.5rem 0rem 0.5rem",
+                                        borderRadius:
+                                            "0.75rem 0.75rem 0.75rem 0.75rem",
+                                        // backgroundColor:
+                                        //     mode === "dark"
+                                        //         ? recipeStepsPanel
+                                        //         : backgroundPrimary,
+                                        color: followerIconOutline,
+                                        width: "100%",
+                                        // width: "auto",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    No recipes posted yet.
+                                    {/* <Typography
+                                        sx={{
+                                            fontWeight: "bold",
+                                        }}
+                                    >
+                                        Come back another time!
+                                    </Typography> */}
+                                </Typography>
+                            </Box>
                         )}
                         {/* Second Place */}
                         {/* <FlexBetween pb="0.5rem">
