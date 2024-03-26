@@ -262,7 +262,7 @@ const RecipesFeedWidget = ({
                             backgroundColor={backgroundMain}
                             borderRadius="0.75rem 0.75rem 0.75rem 0.75rem"
                             p="1rem"
-                            my="0.5rem"
+                            my={isSmallScreen ? "0.5rem" : "1rem"}
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
