@@ -210,24 +210,18 @@ const ProfilePage = () => {
                                     // }}
                                 />
                             </Box>
-                            <Box m={"1rem 0"} height="100%" />
+                            <Box
+                                m={isSmallScreen ? "0.5rem 0" : "1rem 0"}
+                                height="100%"
+                            />
                             <Box sx={{ height: "100%" }}>
                                 <TopUserRecipesWidget
                                     themeColors={themeColors}
-                                    // sx={{
-                                    //     // pl: isMediumScreen ? "0.5rem" : "0rem",
-                                    //     width: isDesktopScreen
-                                    //         ? "100%"
-                                    //         : isMediumScreen
-                                    //         ? "100%"
-                                    //         : "100%",
-                                    //     height: isMediumScreen ? "100%" : "auto",
-                                    // }}
                                 />
                             </Box>
                         </Box>
                         <Box
-                            m="1rem 0"
+                            m={isSmallScreen ? "0.5rem 0" : "1rem 0"}
                             sx={{ display: isMediumScreen ? "none" : "block" }}
                         />
                         <Box
@@ -243,11 +237,17 @@ const ProfilePage = () => {
                                 themeColors={themeColors}
                             />
                         </Box>
-                        <Box m="2rem 0" />
+                        <Box m={isSmallScreen ? "0.25rem 0rem" : "2rem 0rem"} />
                     </Box>
 
                     <Box
-                        m={isDesktopScreen ? "0" : "2rem 0"}
+                        m={
+                            isDesktopScreen
+                                ? "0"
+                                : isSmallScreen
+                                ? "0.5rem 0"
+                                : "2rem 0"
+                        }
                         sx={{ display: isMediumScreen ? "block" : "none" }}
                     />
                     <RecipesFeedWidget
