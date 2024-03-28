@@ -211,7 +211,15 @@ const ProfilePage = () => {
                                 />
                             </Box>
                             <Box
-                                m={isSmallScreen ? "0.5rem 0" : "1rem 0"}
+                                m={
+                                    isDesktopScreen
+                                        ? "1rem 0"
+                                        : isMediumScreen
+                                        ? "1rem 0"
+                                        : isSmallScreen
+                                        ? "0.5rem 0"
+                                        : "1rem 0"
+                                }
                                 height="100%"
                             />
                             <Box sx={{ height: "100%" }}>
@@ -244,6 +252,8 @@ const ProfilePage = () => {
                         m={
                             isDesktopScreen
                                 ? "0"
+                                : isMediumScreen
+                                ? "1rem 0"
                                 : isSmallScreen
                                 ? "0.5rem 0"
                                 : "2rem 0"
