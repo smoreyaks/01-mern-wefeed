@@ -77,9 +77,12 @@ const TopUserRecipesWidget = ({ themeColors }) => {
     // Typically have loading component while user waits
 
     const { recipeTitle, likes, recommendations, recipeType } = recipes;
-    // const firstRecipe = recipes[0];
-    // const secondRecipe = recipes[1];
-    // const thirdRecipe = recipes[2];
+    const firstRecipe = recipes.slice(0, 1);
+    const secondRecipe = recipes.slice(1, 2);
+    const thirdRecipe = recipes.slice(2, 3);
+    console.log("FIRST RECIPE:", firstRecipe);
+    console.log("SECOND RECIPE:", secondRecipe);
+    console.log("THIRD RECIPE:", thirdRecipe);
 
     let newArr = [];
     // const likeCount = Object.keys(likes).length;
@@ -134,23 +137,77 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         {/* {recipes.map((r) => (
                             <Typography _id={recipeTitle}>{}</Typography>
                         ))} */}
+
                         {recipes.length > 0 ? (
-                            recipes.map(
+                            (firstRecipe.map(
                                 ({
                                     recipeTitle,
                                     likes,
                                     recommendations,
                                     recipes,
                                 }) => (
-                                    <RecipeScore
-                                        themeColors={themeColors}
-                                        recipeTitle={recipeTitle}
-                                        likes={likes}
-                                        recommendations={recommendations}
-                                        recipes={recipes}
-                                    />
+                                    <>
+                                        <Icon>
+                                            <EmojiEventsIcon
+                                                sx={{ color: gold }}
+                                            />
+                                        </Icon>
+                                        <RecipeScore
+                                            themeColors={themeColors}
+                                            recipeTitle={recipeTitle}
+                                            likes={likes}
+                                            recommendations={recommendations}
+                                            recipes={recipes}
+                                        />
+                                    </>
                                 )
-                            )
+                            ),
+                            secondRecipe.map(
+                                ({
+                                    recipeTitle,
+                                    likes,
+                                    recommendations,
+                                    recipes,
+                                }) => (
+                                    <>
+                                        <Icon>
+                                            <EmojiEventsIcon
+                                                sx={{ color: silver }}
+                                            />
+                                        </Icon>
+                                        <RecipeScore
+                                            themeColors={themeColors}
+                                            recipeTitle={recipeTitle}
+                                            likes={likes}
+                                            recommendations={recommendations}
+                                            recipes={recipes}
+                                        />
+                                    </>
+                                )
+                            ),
+                            thirdRecipe.map(
+                                ({
+                                    recipeTitle,
+                                    likes,
+                                    recommendations,
+                                    recipes,
+                                }) => (
+                                    <>
+                                        <Icon>
+                                            <EmojiEventsIcon
+                                                sx={{ color: bronze }}
+                                            />
+                                        </Icon>
+                                        <RecipeScore
+                                            themeColors={themeColors}
+                                            recipeTitle={recipeTitle}
+                                            likes={likes}
+                                            recommendations={recommendations}
+                                            recipes={recipes}
+                                        />
+                                    </>
+                                )
+                            ))
                         ) : (
                             <Box
                                 backgroundColor={backgroundMain}
