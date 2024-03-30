@@ -137,7 +137,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                         {/* {recipes.map((r) => (
                             <Typography _id={recipeTitle}>{}</Typography>
                         ))} */}
-
+                        {console.log("TROPHY LIST:", recipes.length)}
                         {recipes.length > 0 ? (
                             (firstRecipe.map(
                                 ({
@@ -146,7 +146,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                     recommendations,
                                     recipes,
                                 }) => (
-                                    <>
+                                    <Box>
                                         <Icon>
                                             <EmojiEventsIcon
                                                 sx={{ color: gold }}
@@ -159,7 +159,7 @@ const TopUserRecipesWidget = ({ themeColors }) => {
                                             recommendations={recommendations}
                                             recipes={recipes}
                                         />
-                                    </>
+                                    </Box>
                                 )
                             ),
                             secondRecipe.map(
