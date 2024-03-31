@@ -14,12 +14,12 @@ import {
     useMediaQuery,
     Tooltip,
     Zoom,
+    TextField,
 } from "@mui/material";
-import {
-    Unstable_NumberInput as BaseNumberInput,
-    numberInputClasses,
-} from "@mui/base/Unstable_NumberInput";
-import { styled } from "@mui/system";
+
+// Form Packages
+import { Formik } from "formik";
+import * as yup from "yup";
 
 // MUI Icons
 import {
@@ -40,13 +40,44 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import FlexBetween from "../../components/FlexBetween";
 import UserImage from "../../components/UserImage";
 import WidgetWrapper from "../../components/WidgetWrapper";
-import NumberInput from "../../components/NumberInput";
 
 // Image Upload
 import Dropzone from "react-dropzone";
 
+import { useNavigate } from "react-router-dom";
+import { setLogin } from "../../state";
+
 // State
 import { setAllRecipes } from "../../state";
+
+// Register Form Data Schema
+const registerSchema = yup.object().shape({
+    userId: yup.string().required("Required"),
+    firstName: yup.string().required("Required"),
+    lastName: yup.string().email("Invalid Email").required("Required"),
+    recipeImage: yup.string().required("Required"),
+    occupation: yup.string().required("Required"),
+    recipeTitle: yup.string().required("Required"),
+    notes: yup.string().required("Required"),
+    recipeType: yup.string().required("Required"),
+    equipment: yup.string().required("Required"),
+    prepTime: yup.string().required("Required"),
+    cookTime: yup.string().required("Required"),
+    servings: yup.string().required("Required"),
+    spiceLevel: yup.string().required("Required"),
+    steps: yup.string().required("Required"),
+});
+
+// Blank Initial Values for Registration Form
+const initialValuesRegister = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    location: "",
+    occupation: "",
+    picture: "",
+};
 
 const CreateRecipeWidget = ({
     picturePath,
