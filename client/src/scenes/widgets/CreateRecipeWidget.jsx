@@ -50,33 +50,56 @@ import { setLogin } from "../../state";
 // State
 import { setAllRecipes } from "../../state";
 
-// Register Form Data Schema
-const registerSchema = yup.object().shape({
+// New Recipe Form Data Schema
+const newRecipeSchema = yup.object().shape({
     userId: yup.string().required("Required"),
     firstName: yup.string().required("Required"),
     lastName: yup.string().email("Invalid Email").required("Required"),
-    recipeImage: yup.string().required("Required"),
+    userPicturePath: yup.string().email("Invalid Email").required("Required"),
+    picturePath: yup.string().required("Required"),
     occupation: yup.string().required("Required"),
     recipeTitle: yup.string().required("Required"),
-    notes: yup.string().required("Required"),
-    recipeType: yup.string().required("Required"),
+
+    ingredients: yup.string().required("Required"),
     equipment: yup.string().required("Required"),
     prepTime: yup.string().required("Required"),
     cookTime: yup.string().required("Required"),
     servings: yup.string().required("Required"),
     spiceLevel: yup.string().required("Required"),
     steps: yup.string().required("Required"),
+    tags: yup.string().required("Required"),
+    recipeType: yup.string().required("Required"),
+    notes: yup.string().required("Required"),
+    tags: yup.string().required("Required"),
+    likes: yup.string().required("Required"),
+    recommendations: yup.string().required("Required"),
+    saves: yup.string().required("Required"),
+    shares: yup.string().required("Required"),
+    comments: yup.string().required("Required"),
 });
 
 // Blank Initial Values for Registration Form
-const initialValuesRegister = {
+const initialValuesNewRecipe = {
+    userId: "",
     firstName: "",
     lastName: "",
-    email: "",
-    password: "",
-    location: "",
+    userPicturePath: "",
+    picturePath: "",
     occupation: "",
-    picture: "",
+    recipeTitle: "",
+    ingredients: "",
+    equipment: "",
+    prepTime: "",
+    cookTime: "",
+    servings: "",
+    spiceLevel: "",
+    steps: "",
+    tags: "",
+    likes: "",
+    recommendations: "",
+    saves: "",
+    shares: "",
+    comments: "",
 };
 
 const CreateRecipeWidget = ({
@@ -91,18 +114,22 @@ const CreateRecipeWidget = ({
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
 
+    // Redux State
+    const { _id } = useSelector((state) => state.user);
+    const token = useSelector((state) => state.token);
+
     // Create New Recipe State
     const [createNewRecipeToggle, setCreateNewRecipeToggle] = useState(false);
 
-    const [inputRecipeTitle, setInputRecipeTitle] = useState(""); // Title
-    const [inputRecipeNotes, setInputRecipeNotes] = useState(""); // Notes
-    const [inputRecipePrepTime, setInputRecipePrepTime] = useState(""); // Prep Time
-    const [inputRecipeCookTime, setInputRecipeCookTime] = useState(""); // Cook Time
-    const [inputRecipeServings, setInputRecipeServings] = useState(""); // Servings
-    const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
-    const [inputRecipeEquipment, setInputRecipeEquipment] = useState([]); // Equipment
-    const [inputRecipeIngredients, setInputRecipeIngredients] = useState([]); // Ingredients
-    const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState([]); // Method
+    // const [inputRecipeTitle, setInputRecipeTitle] = useState(""); // Title
+    // const [inputRecipeNotes, setInputRecipeNotes] = useState(""); // Notes
+    // const [inputRecipePrepTime, setInputRecipePrepTime] = useState(""); // Prep Time
+    // const [inputRecipeCookTime, setInputRecipeCookTime] = useState(""); // Cook Time
+    // const [inputRecipeServings, setInputRecipeServings] = useState(""); // Servings
+    // const [inputRecipeSpiceLevel, setInputRecipeSpiceLevel] = useState(""); // Spice
+    // const [inputRecipeEquipment, setInputRecipeEquipment] = useState([]); // Equipment
+    // const [inputRecipeIngredients, setInputRecipeIngredients] = useState([]); // Ingredients
+    // const [inputRecipeStepMethod, setInputRecipeStepMethod] = useState([]); // Method
 
     // const [recipe, setRecipe] = useState("");
     // const [recipe, setRecipe] = useState("");
@@ -138,26 +165,24 @@ const CreateRecipeWidget = ({
         widgetBorder,
     } = themeColors || {};
 
-    // Redux State
-    const { _id } = useSelector((state) => state.user);
-    const token = useSelector((state) => state.token);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
     const handleRecipe = async () => {
-        const formData = new FormData();
-        formData.append("userId", _id);
-        formData.append("Title", inputRecipeTitle);
-        formData.append("Notes", inputRecipeNotes);
-        formData.append("Preparation Time", inputRecipePrepTime);
-        formData.append("Cook Time", inputRecipeCookTime);
-        formData.append("Servings", inputRecipeServings);
-        formData.append("Spice Level", inputRecipeSpiceLevel);
-        formData.append("Equipment List", inputRecipeEquipment);
-        formData.append("Ingredient List", inputRecipeIngredients);
-        formData.append("Step Method", inputRecipeStepMethod);
+        // const formData = new FormData();
+        // formData.append("userId", _id);
+        // formData.append("Title", inputRecipeTitle);
+        // formData.append("Notes", inputRecipeNotes);
+        // formData.append("Preparation Time", inputRecipePrepTime);
+        // formData.append("Cook Time", inputRecipeCookTime);
+        // formData.append("Servings", inputRecipeServings);
+        // formData.append("Spice Level", inputRecipeSpiceLevel);
+        // formData.append("Equipment List", inputRecipeEquipment);
+        // formData.append("Ingredient List", inputRecipeIngredients);
+        // formData.append("Step Method", inputRecipeStepMethod);
+
         if (image) {
-            formData.append("picture", image);
-            formData.append("picturePath", image.name);
+            // formData.append("picture", image);
+            // formData.append("picturePath", image.name);
         }
 
         const response = await fetch(
@@ -183,8 +208,35 @@ const CreateRecipeWidget = ({
     };
 
     return (
-        <>
-            {createNewRecipeToggle ? (
+        <Formik    
+            onSubmit={handleFormSubmit}
+            initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
+            validationSchema={isLogin ? loginSchema : registerSchema}
+        >
+            {({
+                values,
+                errors,
+                touched,
+                handleBlur,
+                handleChange,
+                handleSubmit,
+                setFieldValue,
+                resetForm,
+            })} => (
+                <form onSubmit={handleSubmit}>
+                    <Box
+                        display="grid"
+                        gap="0.75rem"
+                        gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+                        sx={{
+                            "& > div": {
+                                gridColumn: isNonMobile ? undefined : "span 4",
+                            },
+                        }}
+                    >
+        
+            {createNewRecipeToggle && (
+                
                 <WidgetWrapper
                     sx={{
                         borderColor: widgetBorder,
@@ -223,15 +275,28 @@ const CreateRecipeWidget = ({
                         <RemoveIcon fontSize="medium" sx={{ pl: "0.25rem" }} />
                     </Button>
 
-                    {/* 1st Row - Title */}
+                    {/* 1st Row - First Name */}
                     <FlexBetween gap="1.5rem" sx={{ mb: "0.5rem" }}>
                         {/* Recipe Title Input Section */}
-                        <InputBase
-                            placeholder="Recipe Title"
-                            onChange={(e) =>
-                                setInputRecipeTitle(e.target.value)
+                        <TextField
+                            label="First Name"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.firstName}
+                            name="firstName"
+                            error={
+                                Boolean(touched.firstName) &&
+                                Boolean(errors.firstName)
                             }
-                            value={inputRecipeTitle}
+                            helperText={
+                                touched.firstName && errors.firstName
+                            }
+                            sx={{ gridColumn: "span 2" }}
+                            // placeholder="Recipe Title"
+                            // onChange={(e) =>
+                            //     setInputRecipeTitle(e.target.value)
+                            // }
+                            // value={inputRecipeTitle}
                             sx={{
                                 width: "100%",
                                 backgroundColor: buttonLight2,
@@ -316,12 +381,6 @@ const CreateRecipeWidget = ({
 
                     {/* 4th Row - Servings & Spice */}
                     <FlexBetween gap="0.5rem" sx={{ mb: "0.5rem" }}>
-                        {/* <NumberInput
-                            aria-label="Quantity Input"
-                            min={1}
-                            max={99}
-                        /> */}
-
                         {/* Servings Input Section */}
                         <InputBase
                             placeholder="Servings"
@@ -609,7 +668,7 @@ const CreateRecipeWidget = ({
                     </Button>
                 </WidgetWrapper>
             )}
-        </>
+        </Formik>
     );
 };
 
