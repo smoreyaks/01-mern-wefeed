@@ -86,13 +86,15 @@ const initialValuesNewRecipe = {
     picturePath: "",
     occupation: "",
     recipeTitle: "",
-    ingredients: "",
-    equipment: "",
+    recipeType: "",
     prepTime: "",
     cookTime: "",
+    ingredients: "",
+    equipment: "",
     servings: "",
     spiceLevel: "",
     steps: "",
+    notes: "",
     tags: "",
     likes: "",
     recommendations: "",
@@ -313,59 +315,21 @@ const CreateRecipeWidget = ({
                                             }}
                                         />
 
-                                        {/* Ingredients */}
+                                        {/* Recipe Type */}
                                         <TextField
-                                            placeholder="Ingredients"
-                                            // label="Ingredients"
+                                            placeholder="Recipe Type"
+                                            // label="Recipe Type"
                                             onBlur={handleBlur}
                                             onChange={handleChange}
-                                            value={values.ingredients}
-                                            name="ingredients"
+                                            value={values.recipeType}
+                                            name="recipeType"
                                             error={
-                                                Boolean(touched.ingredients) &&
-                                                Boolean(errors.ingredients)
+                                                Boolean(touched.recipeType) &&
+                                                Boolean(errors.recipeType)
                                             }
                                             helperText={
-                                                touched.ingredients &&
-                                                errors.ingredients
-                                            }
-                                            InputProps={{
-                                                sx: {
-                                                    borderRadius: "3rem",
-                                                    backgroundColor:
-                                                        buttonLight2,
-                                                    // mb: "0.5rem",
-                                                },
-                                            }}
-                                            sx={{
-                                                gridColumn: "span 2",
-                                                width: "100%",
-                                                // backgroundColor: buttonLight2,
-                                                borderRadius: "2rem",
-                                                // padding: isDesktopScreen
-                                                //     ? ".5rem 1rem"
-                                                //     : isMediumScreen
-                                                //     ? "0.5rem 1rem"
-                                                //     : "0.25rem 1rem",
-                                                mb: "0.5rem",
-                                            }}
-                                        />
-
-                                        {/* Equipment */}
-                                        <TextField
-                                            placeholder="Equipment"
-                                            // label="Equipment"
-                                            onBlur={handleBlur}
-                                            onChange={handleChange}
-                                            value={values.equipment}
-                                            name="equipment"
-                                            error={
-                                                Boolean(touched.equipment) &&
-                                                Boolean(errors.equipment)
-                                            }
-                                            helperText={
-                                                touched.equipment &&
-                                                errors.equipment
+                                                touched.recipeType &&
+                                                errors.recipeType
                                             }
                                             InputProps={{
                                                 sx: {
@@ -442,6 +406,82 @@ const CreateRecipeWidget = ({
                                             helperText={
                                                 touched.cookTime &&
                                                 errors.cookTime
+                                            }
+                                            InputProps={{
+                                                sx: {
+                                                    borderRadius: "3rem",
+                                                    backgroundColor:
+                                                        buttonLight2,
+                                                    // mb: "0.5rem",
+                                                },
+                                            }}
+                                            sx={{
+                                                gridColumn: "span 2",
+                                                width: "100%",
+                                                // backgroundColor: buttonLight2,
+                                                borderRadius: "2rem",
+                                                // padding: isDesktopScreen
+                                                //     ? ".5rem 1rem"
+                                                //     : isMediumScreen
+                                                //     ? "0.5rem 1rem"
+                                                //     : "0.25rem 1rem",
+                                                mb: "0.5rem",
+                                            }}
+                                        />
+
+                                        {/* Equipment */}
+                                        <TextField
+                                            placeholder="Equipment"
+                                            // label="Equipment"
+                                            onBlur={handleBlur}
+                                            onChange={handleChange}
+                                            value={values.equipment}
+                                            name="equipment"
+                                            error={
+                                                Boolean(touched.equipment) &&
+                                                Boolean(errors.equipment)
+                                            }
+                                            helperText={
+                                                touched.equipment &&
+                                                errors.equipment
+                                            }
+                                            InputProps={{
+                                                sx: {
+                                                    borderRadius: "3rem",
+                                                    backgroundColor:
+                                                        buttonLight2,
+                                                    // mb: "0.5rem",
+                                                },
+                                            }}
+                                            sx={{
+                                                gridColumn: "span 2",
+                                                width: "100%",
+                                                // backgroundColor: buttonLight2,
+                                                borderRadius: "2rem",
+                                                // padding: isDesktopScreen
+                                                //     ? ".5rem 1rem"
+                                                //     : isMediumScreen
+                                                //     ? "0.5rem 1rem"
+                                                //     : "0.25rem 1rem",
+                                                mb: "0.5rem",
+                                            }}
+                                        />
+
+                                        {/* Ingredients */}
+                                        <TextField
+                                            placeholder="Ingredients"
+                                            // label="Ingredients"
+                                            onBlur={handleBlur}
+                                            onChange={handleChange}
+                                            value={values.ingredients}
+                                            name="ingredients"
+                                            error={
+                                                Boolean(touched.ingredients) &&
+                                                Boolean(errors.ingredients)
+                                            }
+                                            helperText={
+                                                touched.ingredients &&
+                                                errors.ingredients
                                             }
                                             InputProps={{
                                                 sx: {
@@ -592,44 +632,6 @@ const CreateRecipeWidget = ({
                                             }
                                             helperText={
                                                 touched.tags && errors.tags
-                                            }
-                                            InputProps={{
-                                                sx: {
-                                                    borderRadius: "3rem",
-                                                    backgroundColor:
-                                                        buttonLight2,
-                                                    // mb: "0.5rem",
-                                                },
-                                            }}
-                                            sx={{
-                                                gridColumn: "span 2",
-                                                width: "100%",
-                                                // backgroundColor: buttonLight2,
-                                                borderRadius: "2rem",
-                                                // padding: isDesktopScreen
-                                                //     ? ".5rem 1rem"
-                                                //     : isMediumScreen
-                                                //     ? "0.5rem 1rem"
-                                                //     : "0.25rem 1rem",
-                                                mb: "0.5rem",
-                                            }}
-                                        />
-
-                                        {/* Recipe Type */}
-                                        <TextField
-                                            placeholder="Recipe Type"
-                                            // label="Recipe Type"
-                                            onBlur={handleBlur}
-                                            onChange={handleChange}
-                                            value={values.recipeType}
-                                            name="recipeType"
-                                            error={
-                                                Boolean(touched.recipeType) &&
-                                                Boolean(errors.recipeType)
-                                            }
-                                            helperText={
-                                                touched.recipeType &&
-                                                errors.recipeType
                                             }
                                             InputProps={{
                                                 sx: {
