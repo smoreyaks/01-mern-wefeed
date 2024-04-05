@@ -238,7 +238,7 @@ const CreateRecipeWidget = ({
                 </Button>
 
                 <Formik
-                    // onSubmit={handleFormSubmit}
+                    onSubmit={handleFormSubmit}
                     initialValues={initialValuesNewRecipe}
                     validationSchema={newRecipeSchema}
                 >
