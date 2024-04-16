@@ -31,82 +31,112 @@ const LoginPage = () => {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    m: "0 0.75rem",
+                    pt: "5rem",
                 }}
             >
-                <Box sx={{ width: "auto", height: "auto" }} />
+                {/* Splash Graphic Container */}
                 <Box
-                    backgroundColor={palette.default.background.alt}
+                    // backgroundColor={palette.default.background.alt}
                     sx={{
-                        zIndex: "60",
                         display: "flex",
                         flex: "flex-row",
                         justifyContent: "center",
                         alignItems: "center",
                         position: "relative",
-                        // width: "10rem",
-                        bottom: "-.25rem",
-                        width: "36rem",
-                        height: "5rem",
-                        borderRadius: "6rem 6rem 0rem 0rem",
-                        borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                        borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                        borderRight: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                        // borderBottom: `0.25rem solid ${palette.default.neutralGrey.border}`,
-
-                        // border: solid,
                     }}
                 >
+                    {/* Splash Graphic */}
                     <Box
                         sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
+                            zIndex: "51",
+
+                            height: isDesktopScreen
+                                ? "20rem"
+                                : isMediumScreen
+                                ? "16rem"
+                                : "9rem",
+                            position: "absolute",
+                            top: isDesktopScreen
+                                ? "-15rem"
+                                : isMediumScreen
+                                ? "-11rem"
+                                : "-5.75rem",
                         }}
                     >
-                        <Box
-                            sx={{
-                                zIndex: "51",
-                                // width: "15rem",
-                                height: "20rem",
-                                position: "absolute",
-                                top: "-15.5rem",
-                                // right: "0rem",
-                            }}
-                        >
-                            <img src={splashImg} height="100%" />
-                        </Box>
-                        <Box
-                            sx={{
-                                zIndex: "51",
-                                // width: "15rem",
-                                height: "4.5rem",
-                                position: "absolute",
-                                // right: "16rem",
-                                top: "-6rem",
-                            }}
-                        >
-                            <img
-                                src={
-                                    mode === "dark"
-                                        ? WeFeedLogoDM
-                                        : WeFeedLogoLM
-                                }
-                                height="100%"
-                            />
-                        </Box>
+                        <img src={splashImg} height="100%" />
                     </Box>
+
+                    {/* We Feed Logo  */}
+                    <Box
+                        sx={{
+                            zIndex: "51",
+                            // width: "15rem",
+                            height: isDesktopScreen
+                                ? "4.5rem"
+                                : isMediumScreen
+                                ? "3.5rem"
+                                : "2rem",
+                            position: "absolute",
+                            // right: "16rem",
+                            top: isDesktopScreen
+                                ? "-5.5rem"
+                                : isMediumScreen
+                                ? "-3.5rem"
+                                : "-1.5rem",
+                        }}
+                    >
+                        <img
+                            src={mode === "dark" ? WeFeedLogoDM : WeFeedLogoLM}
+                            height="100%"
+                        />
+                    </Box>
+
+                    {/* Shoulder Graphic BG */}
+                    <Box
+                        backgroundColor={palette.default.background.alt}
+                        sx={{
+                            zIndex: "50",
+                            display: "flex",
+                            flex: "flex-row",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            position: "relative",
+                            bottom: isDesktopScreen
+                                ? "-.25rem"
+                                : isMediumScreen
+                                ? "-.25rem"
+                                : "-.25rem",
+                            width: isDesktopScreen
+                                ? "36rem"
+                                : isMediumScreen
+                                ? "30rem"
+                                : "15rem",
+                            height: isDesktopScreen
+                                ? "5rem"
+                                : isMediumScreen
+                                ? "5rem"
+                                : "3rem",
+                            borderRadius: "6rem 6rem 0rem 0rem",
+                            borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                            borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                            borderRight: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                            // borderBottom: `0.25rem solid ${palette.default.neutralGrey.border}`,
+
+                            // border: solid,
+                        }}
+                    />
                 </Box>
 
+                {/* Form BG Container */}
                 <Box
                     backgroundColor={palette.default.background.alt}
                     sx={{
-                        zIndex: "55",
+                        zIndex: "40",
                         width: isDesktopScreen
                             ? "40rem"
                             : isMediumScreen
-                            ? "80%"
-                            : "100%",
+                            ? "36rem"
+                            : "18rem",
                         mx: "1rem",
                         display: "flex",
                         justifyContent: "center",
@@ -114,14 +144,15 @@ const LoginPage = () => {
                         border: `0.25rem solid ${palette.default.neutralGrey.border}`,
                     }}
                 >
+                    {/* Form BG Left Column */}
                     <Box
                         sx={{
                             zIndex: "50",
                             width: isDesktopScreen
-                                ? "6rem"
+                                ? "4rem"
                                 : isMediumScreen
-                                ? "2rem"
-                                : "1rem",
+                                ? "4rem"
+                                : "0.5rem",
                             height: "auto",
                             // borderRadius: "1.5rem 0 0rem 1.5rem",
                             // borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
@@ -130,13 +161,14 @@ const LoginPage = () => {
                             // borderBottom: `0.25rem solid ${palette.default.neutralGrey.border}`,
                         }}
                     />
+                    {/* Form Container */}
                     <Box
                         width={
                             isDesktopScreen
                                 ? "40rem"
                                 : isMediumScreen
-                                ? "70%"
-                                : "100%"
+                                ? "34rem"
+                                : "22rem"
                         }
                         // borderRadius="1.5rem"
                         backgroundColor={palette.default.background.alt}
@@ -147,12 +179,12 @@ const LoginPage = () => {
                                 ? "2rem 0"
                                 : isMediumScreen
                                 ? "2rem 0"
-                                : "1rem",
+                                : "1rem 1rem",
                             m: isDesktopScreen
                                 ? "0rem 0rem"
                                 : isMediumScreen
                                 ? "0rem 0rem"
-                                : "1rem .75rem",
+                                : "1rem .5rem",
                             // borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
                             // borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
                             // borderRight: "none",
@@ -165,16 +197,17 @@ const LoginPage = () => {
                             isSmallScreen={isSmallScreen}
                         />
                     </Box>
+                    {/* Form BG Right Column */}
                     <Box
                         sx={{
                             width: "4rem",
                             height: "auto",
                             borderRadius: "0rem 1.5rem 1.5rem 0",
                             width: isDesktopScreen
-                                ? "6rem"
+                                ? "4rem"
                                 : isMediumScreen
-                                ? "2rem"
-                                : "1rem",
+                                ? "4rem"
+                                : "0.5rem",
                             // m: '0rem 2rem 0rem 0rem '
                             // borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
                             // borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
