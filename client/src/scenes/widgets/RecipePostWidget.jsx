@@ -29,6 +29,7 @@ import NoteOutlinedIcon from "@mui/icons-material/NoteOutlined";
 import CookIcon from "../../components/svg/CookIcon";
 import PrepIcon from "../../components/svg/PrepIcon";
 import NoteIcon from "../../components/svg/NoteIcon";
+import SpiceIcon from "../../components/svg/SpiceIcon";
 
 // Mui Components
 import {
@@ -57,7 +58,6 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import StepsList from "../../components/StepsList";
 import Notes from "../../components/Notes";
 import SocialShareButton from "../../components/SocialShareButton";
-import SpiceIcon from "../../components/svg/SpiceIcon";
 
 const RecipePostWidget = ({
     _id,

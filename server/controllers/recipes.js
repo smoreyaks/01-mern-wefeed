@@ -5,7 +5,25 @@ import Recipe from "../models/Recipe.js";
 /* Create */
 export const createRecipe = async (req, res) => {
     try {
-        const { userId, description, picturePath } = req.body;
+        const {
+            userId,
+            firstName,
+            lastName,
+            userPicturePath,
+            picturePath,
+            occupation,
+            recipeTitle,
+            recipeType,
+            prepTime,
+            cookTime,
+            ingredients,
+            equipment,
+            servings,
+            spiceLevel,
+            steps,
+            tags,
+            notes,
+        } = req.body;
         const user = await User.findById(userId);
         const newRecipe = new Recipe({
             userId,
@@ -15,7 +33,22 @@ export const createRecipe = async (req, res) => {
             description,
             userPicturePath: user.picturePath,
             picturePath,
+
+            occupation: user.occupation,
+            recipeTitle,
+            recipeType,
+            prepTime,
+            cookTime,
+            ingredients,
+            equipment,
+            servings,
+            spiceLevel,
+            steps,
+            tags,
+            notes,
+
             likes: {},
+            recommendations: {},
             comments: [],
         });
         // Save Recipe
