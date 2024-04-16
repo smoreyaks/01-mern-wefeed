@@ -36,38 +36,46 @@ const LoginPage = () => {
             >
                 <Box sx={{ width: "auto", height: "auto" }} />
                 <Box
+                    backgroundColor={palette.default.background.alt}
                     sx={{
+                        zIndex: "60",
                         display: "flex",
                         flex: "flex-row",
                         justifyContent: "center",
                         alignItems: "center",
                         position: "relative",
+                        // width: "10rem",
+                        bottom: "-.25rem",
+                        width: "36rem",
+                        height: "5rem",
+                        borderRadius: "6rem 6rem 0rem 0rem",
+                        borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                        borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                        borderRight: `0.25rem solid ${palette.default.neutralGrey.border}`,
+                        // borderBottom: `0.25rem solid ${palette.default.neutralGrey.border}`,
+
+                        // border: solid,
                     }}
                 >
-                    {/* Splash Graphics & Logo Container */}
                     <Box
                         sx={{
-                            zIndex: "60",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
                         }}
                     >
-                        {/* Splash Image */}
                         <Box
                             sx={{
                                 zIndex: "51",
                                 // width: "15rem",
                                 height: "20rem",
                                 position: "absolute",
-                                bottom: "0rem",
+                                top: "-15.5rem",
                                 // right: "0rem",
                             }}
                         >
                             <img src={splashImg} height="100%" />
                         </Box>
-
-                        {/* WeFeed Logo Text */}
                         <Box
                             sx={{
                                 zIndex: "51",
@@ -75,7 +83,7 @@ const LoginPage = () => {
                                 height: "4.5rem",
                                 position: "absolute",
                                 // right: "16rem",
-                                top: "-10rem",
+                                top: "-6rem",
                             }}
                         >
                             <img
@@ -87,115 +95,9 @@ const LoginPage = () => {
                                 height="100%"
                             />
                         </Box>
-                        {/* Cloud CSS Container*/}
-                        <Box
-                            sx={{
-                                zIndex: "50",
-                                display: "flex",
-                                flex: "flex-row",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                position: "relative",
-                            }}
-                        >
-                            {/* Far Left Cloud */}
-                            <Box
-                                // backgroundColor={palette.default.background.alt}
-                                backgroundColor="white"
-                                sx={{
-                                    zIndex: "60",
-                                    position: "absolute",
-                                    // width: "10rem",
-                                    bottom: "-1.25rem",
-                                    right: "9rem",
-                                    width: "11rem",
-                                    height: "10rem",
-                                    borderRadius: "10rem",
-                                    // border: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                                    borderLeft: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderTop: `0.5rem solid ${palette.default.background.alt}`,
-                                }}
-                            />
-                            {/* Left Cloud */}
-                            <Box
-                                // backgroundColor={palette.default.background.alt}
-                                backgroundColor="white"
-                                sx={{
-                                    zIndex: "62",
-                                    position: "absolute",
-                                    // width: "10rem",
-                                    bottom: "-2.25rem",
-                                    right: "2rem",
-                                    width: "12rem",
-                                    height: "14rem",
-                                    borderRadius: "10rem",
-                                    // border: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                                    // borderLeft: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderTop: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderBottom: `0.5rem solid ${palette.default.background.alt}`,
-                                }}
-                            />
-                            {/* Middle Cloud */}
-                            <Box
-                                // backgroundColor={palette.default.background.alt}
-                                backgroundColor="white"
-                                sx={{
-                                    zIndex: "62",
-                                    position: "absolute",
-                                    // width: "10rem",
-                                    bottom: "-2.5rem",
-                                    width: "18rem",
-                                    height: "18rem",
-                                    borderRadius: "10rem",
-                                    // border: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                                    // borderLeft: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderTop: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderBottom: `0.5rem solid ${palette.default.background.alt}`,
-                                }}
-                            />
-                            {/* Right Cloud */}
-                            <Box
-                                // backgroundColor={palette.default.background.alt}
-                                backgroundColor="white"
-                                sx={{
-                                    zIndex: "61",
-                                    position: "absolute",
-                                    // width: "10rem",
-                                    bottom: "-2.5rem",
-                                    left: "2rem",
-                                    width: "12rem",
-                                    height: "14rem",
-                                    borderRadius: "10rem",
-                                    // border: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                                    borderLeft: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderTop: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderBottom: `0.5rem solid ${palette.default.background.alt}`,
-                                }}
-                            />
-                            {/* Far Right Cloud */}
-                            <Box
-                                // backgroundColor={palette.default.background.alt}
-                                backgroundColor="white"
-                                sx={{
-                                    zIndex: "60",
-                                    position: "absolute",
-                                    // width: "10rem",
-                                    bottom: "-1.5rem",
-                                    left: "8rem",
-                                    width: "10rem",
-                                    height: "10rem",
-                                    borderRadius: "10rem",
-                                    // border: `0.25rem solid ${palette.default.neutralGrey.border}`,
-                                    borderLeft: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderTop: `0.5rem solid ${palette.default.background.alt}`,
-                                    borderBottom: `0.5rem solid ${palette.default.background.alt}`,
-                                }}
-                            />
-                        </Box>
                     </Box>
                 </Box>
 
-                {/* Form Background Container*/}
                 <Box
                     backgroundColor={palette.default.background.alt}
                     sx={{
@@ -212,7 +114,6 @@ const LoginPage = () => {
                         border: `0.25rem solid ${palette.default.neutralGrey.border}`,
                     }}
                 >
-                    {/* Form BG Container Left Column */}
                     <Box
                         sx={{
                             zIndex: "50",
@@ -229,7 +130,6 @@ const LoginPage = () => {
                             // borderBottom: `0.25rem solid ${palette.default.neutralGrey.border}`,
                         }}
                     />
-                    {/* Form Container */}
                     <Box
                         width={
                             isDesktopScreen
@@ -265,7 +165,6 @@ const LoginPage = () => {
                             isSmallScreen={isSmallScreen}
                         />
                     </Box>
-                    {/* Form BG Container Left Column */}
                     <Box
                         sx={{
                             width: "4rem",
