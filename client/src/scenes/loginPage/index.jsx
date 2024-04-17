@@ -31,7 +31,8 @@ const LoginPage = () => {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    pt: "5rem",
+                    // pt: "5.5rem",
+                    pt: "15vh",
                 }}
             >
                 {/* Splash Graphic Container */}
@@ -43,6 +44,7 @@ const LoginPage = () => {
                         justifyContent: "center",
                         alignItems: "center",
                         position: "relative",
+                        width: "100%",
                     }}
                 >
                     {/* Splash Graphic */}
@@ -54,13 +56,13 @@ const LoginPage = () => {
                                 ? "20rem"
                                 : isMediumScreen
                                 ? "16rem"
-                                : "9rem",
+                                : "42vw",
                             position: "absolute",
-                            top: isDesktopScreen
-                                ? "-15rem"
+                            bottom: isDesktopScreen
+                                ? "0rem"
                                 : isMediumScreen
-                                ? "-11rem"
-                                : "-5.75rem",
+                                ? "0rem"
+                                : "0rem",
                         }}
                     >
                         <img src={splashImg} height="100%" />
@@ -75,14 +77,14 @@ const LoginPage = () => {
                                 ? "4.5rem"
                                 : isMediumScreen
                                 ? "3.5rem"
-                                : "2rem",
+                                : "8vw",
                             position: "absolute",
                             // right: "16rem",
-                            top: isDesktopScreen
-                                ? "-5.5rem"
+                            bottom: isDesktopScreen
+                                ? "6rem"
                                 : isMediumScreen
-                                ? "-3.5rem"
-                                : "-1.5rem",
+                                ? "5rem"
+                                : "14vw",
                         }}
                     >
                         <img
@@ -110,12 +112,12 @@ const LoginPage = () => {
                                 ? "36rem"
                                 : isMediumScreen
                                 ? "30rem"
-                                : "15rem",
+                                : "80vw",
                             height: isDesktopScreen
                                 ? "5rem"
                                 : isMediumScreen
                                 ? "5rem"
-                                : "3rem",
+                                : "13vw",
                             borderRadius: "6rem 6rem 0rem 0rem",
                             borderLeft: `0.25rem solid ${palette.default.neutralGrey.border}`,
                             borderTop: `0.25rem solid ${palette.default.neutralGrey.border}`,
@@ -136,8 +138,8 @@ const LoginPage = () => {
                             ? "40rem"
                             : isMediumScreen
                             ? "36rem"
-                            : "18rem",
-                        mx: "1rem",
+                            : "95vw",
+                        // mx: "1rem",
                         display: "flex",
                         justifyContent: "center",
                         borderRadius: "1.5rem 1.5rem 1.5rem 1.5rem",
@@ -168,7 +170,7 @@ const LoginPage = () => {
                                 ? "40rem"
                                 : isMediumScreen
                                 ? "34rem"
-                                : "22rem"
+                                : "80vw"
                         }
                         // borderRadius="1.5rem"
                         backgroundColor={palette.default.background.alt}
